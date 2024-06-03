@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Introducation - FanL
+The frontend of this project is build based on React + Antd UI framework. Citation_Stacking/ folder contains all the scripts from Akshit.
+
 ## Available Scripts
 
 In the project directory, you can run:
