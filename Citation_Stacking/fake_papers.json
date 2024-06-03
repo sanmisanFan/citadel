@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Measurement of Particle Physics",
+    "Author": "Isaac Moore",
+    "abstract": "This is a fake abstract.",
+    "introduction": "This is a fake introduction.",
+    "body": "This is the main body of the paper.",
+    "conclusion": "This is a fake conclusion.",
+    "references": [
+      "Ronald Perez et al., Observation of Graphic Design, International Journal of Scientific Studies, 1995.",
+      "Margaret King et al., Analysis of Global Warming, Journal of Advanced Research, 1997.",
+      "Ethan Taylor et al., Assessment of Cryptography, Global Science Review, 2010.",
+      "Patricia Walker et al., Verification of Software Engineering, Journal of Advanced Research, 2018.",
+      "Julian Adams et al., Exploration of Quantum Mechanics, Global Science Review, 2012.",
+      "Jacob Thomas et al., Validation of Molecular Biology, Journal of Advanced Research, 2000.",
+      "Mark Gonzalez et al., Verification of Sociology, Global Science Review, 2003.",
+      "Anthony Jones et al., Survey of Cryptography, Global Science Review, 1998."
+    ]
+  },
+  {
+    "title": "Testing of Robotics",
+    "Author": "Patricia Walker",
+    "abstract": "This is a fake abstract.",
+    "introduction": "This is a fake introduction.",
+    "body": "This is the main body of the paper.",
+    "conclusion": "This is a fake conclusion.",
+    "references": [
+      "Henry Harris et al., Research of Public Health, International Journal of Scientific Studies, 2011.",
+      "Brian Wright et al., Validation of Particle Physics, Global Science Review, 1994.",
+      "Dylan Rivera et al., Verification of Quantum Mechanics, Journal of Advanced Research, 1992.",
+      "Julian Garcia et al., Comparison of Particle Physics, Global Science Review, 2016.",
+      "Linda Lee et al., Research of Global Warming, Global Science Review, 1992.",
+      "Richard Hernandez et al., Application of Environmental Science, Global Science Review, 2016.",
+      "Kevin Wilson et al., Verification of Environmental Science, International Journal of Scientific Studies, 2012.",
+      "Everett Ramirez et al., Comparison of Neuroscience, Global Science Review, 2010.",
+      "Coleman Nguyen et al., Examination of Neuroscience, Journal of Advanced Research, 1994.",
+      "Luke Harris et al., Assessment of Cryptography, International Journal of Scientific Studies, 1997.",
+      "William Lopez et al., Survey of Artificial Intelligence, International Journal of Scientific Studies, 1997.",
+      "Isaac Moore et al., Survey of Software Engineering, International Journal of Scientific Studies, 2018.",
+      "Jessica Nelson et al., Assessment of Software Engineering, Journal of Advanced Research, 2010.",
+      "Betty Thompson et al., Measurement of Sociology, Journal of Advanced Research, 2011.",
+      "Jacob Thomas et al., Validation of Molecular Biology, Journal of Advanced Research, 2000.",
+      "Mark Gonzalez et al., Verification of Sociology, Global Science Review, 2003.",
+      "Anthony Jones et al., Survey of Cryptography, Global Science Review, 1998."
+    ]
+  }
+]
