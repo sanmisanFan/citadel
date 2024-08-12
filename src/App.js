@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useState, useEffect, useCallback } from "react";
+import {Layout, Col, Row, Spin} from 'antd';
+import 'antd/dist/reset.css';
 import './App.css';
 
+/** React DOM Components */
+import { NavBar } from "./components/nav";
+
 function App() {
+  const { Header, Content } = Layout;
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout className="mainContainer">
+        <Header style={{height: 40}}>
+          <NavBar />
+        </Header>
+      </Layout>
     </div>
   );
 }
