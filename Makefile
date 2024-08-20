@@ -13,7 +13,7 @@ install:
 # Parse text
 parse: $(wildcard known_pdfs/*.pdf)
 	@echo "Parsing text"
-	python parse.py $(wildcard known_pdfs/*.pdf)
+	python parse_text.py $(wildcard known_pdfs/*.pdf)
 	@touch parse
 	@echo "Text parsed"
 
