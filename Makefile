@@ -11,16 +11,16 @@ install:
 	@echo "Packages installed"
 
 # Parse text
-parse: $(wildcard known_pdfs/*.pdf)
+parse: $(wildcard known_pdfs/*.pdf) parse_text.py
 	@echo "Parsing text"
 	python parse_text.py $(wildcard known_pdfs/*.pdf)
 	@touch parse
 	@echo "Text parsed"
 
 # Run the statcheck demo
-statcheck: statcheck/statcheckdemo.py parse
+statcheck: parse statcheck.py
 	@echo "Running statcheck"
-	cd statcheck && python statcheckdemo.py
+	python statcheck.py
 	@touch statcheck
 	@echo "statcheck done"
 
@@ -33,5 +33,6 @@ run: statcheck
 
 # Clean the project
 clean:
-	@touch statcheck/statcheckdemo.py
+	@rm -f statcheck
 	@rm -f parse
+	@rm -f ~/.flor/research_reviewer_main.db

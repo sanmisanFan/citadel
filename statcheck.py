@@ -1,32 +1,6 @@
 from scipy import stats
 import re
-import fitz
 import flor
-
-
-def convert_pdf_to_text(pdf_path):
-    """
-    Converts a PDF file to text with proper formatting.
-
-    Parameters:
-    - pdf_path (str): Path to the PDF file.
-
-    Returns:
-    - formatted_text (str): The extracted text from the PDF.
-    """
-    formatted_text = ""
-    # Open the PDF file
-    with fitz.open(pdf_path) as doc:
-        # Loop through pages in the PDF
-        for page_number, page in enumerate(doc):
-            # Extract text from the page
-            text = page.get_text()
-            # Add page number as header if not the first page
-            if page_number > 0:
-                formatted_text += f"\n\n--- Page {page_number + 1} ---\n\n"
-            # Append the text to the formatted text
-            formatted_text += text
-    return formatted_text
 
 
 # Function to round the computed p-value to the same number of decimals as the reported p-value
@@ -86,30 +60,33 @@ def check_t_test(df, t_statistic, reported_p):
 
 
 # Main function to process the PDF file and check tests
-def process_pdf_file(pdf_path):
-    with flor.iteration("pdf", value=pdf_path):
-        f_tests = find_tests(text, f_test_pattern)
-        t_tests = find_tests(text, t_test_pattern)
-        chi_tests = find_tests(text, chi_square_test_pattern)
+def process_pdf_file(page_text):
+    text = " ".join(page_text["page_text"].values)
+    f_tests = find_tests(text, f_test_pattern)
+    t_tests = find_tests(text, t_test_pattern)
+    chi_tests = find_tests(text, chi_square_test_pattern)
 
-        for test in f_tests:
-            dfn, dfd, f_statistic, inequality, reported_p = test
-            dfn, dfd, f_statistic = int(dfn), int(dfd), float(f_statistic)
-            print(check_f_test(dfn, dfd, f_statistic, inequality, reported_p))
+    for test in f_tests:
+        dfn, dfd, f_statistic, inequality, reported_p = test
+        dfn, dfd, f_statistic = int(dfn), int(dfd), float(f_statistic)
+        print(check_f_test(dfn, dfd, f_statistic, inequality, reported_p))
 
-        for test in chi_tests:
-            dof, chi_statistic, inequality, reported_p = test
-            dof, chi_statistic = int(dof), float(chi_statistic)
-            print(check_chi_square_test(dof, chi_statistic, inequality, reported_p))
+    for test in chi_tests:
+        dof, chi_statistic, inequality, reported_p = test
+        dof, chi_statistic = int(dof), float(chi_statistic)
+        print(check_chi_square_test(dof, chi_statistic, inequality, reported_p))
 
-        for test in t_tests:
-            df, t_statistic, reported_p = test
-            df = int(df)
-            t_statistic, reported_p = float(t_statistic), float(reported_p)
-            print(check_t_test(df, t_statistic, reported_p))
+    for test in t_tests:
+        df, t_statistic, reported_p = test
+        df = int(df)
+        t_statistic, reported_p = float(t_statistic), float(reported_p)
+        print(check_t_test(df, t_statistic, reported_p))
 
 
 if __name__ == "__main__":
-    # Example usage
-    pdf_path = "./p4045.pdf"
-    process_pdf_file(pdf_path)
+    page_text = flor.dataframe("page_text")
+    known_pdfs = page_text["pdf_value"].drop_duplicates().values
+    for pdf_path in flor.loop("pdf", known_pdfs):
+        print()
+        print(f"Checking Statistics on {pdf_path}")
+        process_pdf_file(page_text[page_text["pdf_value"] == pdf_path])
