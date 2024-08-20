@@ -1,8 +1,8 @@
-import fitz
-import flor
-
 import sys
 import os
+
+import fitz
+import flor
 
 
 def convert_pdf_to_text(pdf_path):
