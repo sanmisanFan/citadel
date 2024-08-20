@@ -12,6 +12,26 @@ The frontend of this project is build based on React + Antd UI framework. Citati
 ## Getting started
 Do I run the front-end after the python processing scripts?
 
+```
+make run
+```
+
+## PDF Statistical Test Validator
+
+This project converts PDF files to text, extracts statistical test results (F-tests, t-tests, and Chi-square tests), and validates the reported p-values.
+
+```
+make statcheck
+```
+
+To use the script, simply provide the path to a PDF file. The script will extract the text, find statistical tests, and validate the p-values.
+
+```
+pdf_path = 'path/to/your/pdf/p4045.pdf'
+process_pdf_file(pdf_path)
+```
+
+
 ## Available Scripts
 
 In the project directory, you can run:
