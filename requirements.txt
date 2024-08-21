@@ -1,2 +1,3 @@
 scipy
 pymupdf
+flordb>=3.4.0
