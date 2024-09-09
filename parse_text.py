@@ -25,7 +25,7 @@ def convert_pdf_to_text(pdf_path):
 
 
 if __name__ == "__main__":
-    for pdf_path in flor.loop("pdf", sys.argv[1:]):
+    for pdf_path in flor.loop("paper", sys.argv[1:]):
         assert os.path.exists(pdf_path), f"File not found: {pdf_path}"
         assert pdf_path.endswith(".pdf"), f"Invalid file format: {pdf_path}"
         convert_pdf_to_text(pdf_path)

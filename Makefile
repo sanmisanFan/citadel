@@ -24,6 +24,18 @@ statcheck: parse statcheck.py
 	@touch statcheck
 	@echo "statcheck done"
 
+# Generate citation network
+generate_citation_network: synthetic.py
+	@echo "Generating citation network"
+	python synthetic.py --kwargs num_papers=10
+	@touch generate_citation_network
+	@echo "Citation network generated"
+
+
+visualize_citation_network: generate_citation_network stackinggraph.py
+	@echo "Visualizing citation network"
+	python stackinggraph.py
+	@echo "Citation network visualized"
 
 # Run the Flask app
 run: statcheck
@@ -35,7 +47,8 @@ run: statcheck
 clean:
 	@rm -f statcheck
 	@rm -f parse
+	@rm -f generate_citation_network
 	@rm -f ~/.flor/research_reviewer_main.db
 
 
-.PHONY: install run clean
+.PHONY: install run clean visualize_citation_network

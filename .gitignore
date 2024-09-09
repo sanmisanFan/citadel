@@ -24,3 +24,4 @@ yarn-error.log*
 
 parse
 statcheck
+generate_citation_network

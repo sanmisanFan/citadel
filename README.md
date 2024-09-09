@@ -31,6 +31,30 @@ pdf_path = 'path/to/your/pdf/p4045.pdf'
 process_pdf_file(pdf_path)
 ```
 
+## Synthetic Paper Generator and Citation Network Visualisation
+
+This project generates synthetic research papers with random titles, authors, and references, and visualizes the citation network using NetworkX and Matplotlib.
+
+```
+make generate_citation_network
+```
+
+Then, run the following command to visualize the citation network:
+
+``` 
+make visualize_citation_network
+```
+
+### Reading the Citaion Network Graph
+* Nodes:
+    - Blue nodes: Represent the authors.
+    - Lightblue nodes: Represent the papers.
+* Edges:
+    - Blue edges: Connect an author to their own paper.
+    - Green edges: Represent citations from one paper to another author.
+    - Red edges: Indicate bidirectional citations between two authors (citation ring).
+
+
 
 ## Available Scripts
 
