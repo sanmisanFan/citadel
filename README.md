@@ -45,6 +45,16 @@ Then, run the following command to visualize the citation network:
 make visualize_citation_network
 ```
 
+### Reading the Citaion Network Graph
+* Nodes:
+    - Blue nodes: Represent the authors.
+    - Lightblue nodes: Represent the papers.
+* Edges:
+    - Blue edges: Connect an author to their own paper.
+    - Green edges: Represent citations from one paper to another author.
+    - Red edges: Indicate bidirectional citations between two authors (citation ring).
+
+
 
 ## Available Scripts
 
