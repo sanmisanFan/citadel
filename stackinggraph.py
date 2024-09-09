@@ -23,9 +23,9 @@ def extract_primary_author(citation):
 author_citations = {}
 
 # Iterate through each paper in the data
-for paper in synthetic_papers:
+for i, paper in synthetic_papers.iterrows():
     paper_title = paper["title"]
-    author = paper["Author"]
+    author = paper["author"]
 
     # Add nodes for the paper and the author
     G.add_node(paper_title, type="paper")
@@ -39,7 +39,7 @@ for paper in synthetic_papers:
         author_citations[author] = set()
 
     # Iterate through the references of the paper
-    for ref in paper["references"]:
+    for ref in eval(paper["references"]):
         cited_title = ref.split(",")[1].strip()  # Extract the title of the cited paper
         primary_author = extract_primary_author(
             ref
