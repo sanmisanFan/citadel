@@ -1,14 +1,12 @@
 import networkx as nx
-import json
 import matplotlib.pyplot as plt
 import flor
 
-# Path to the JSON file containing the fake papers
-file_path = "./fake_papers.json"
+synthetic_papers = flor.utils.latest(flor.dataframe("title", "author", "references"))
+synthetic_papers = synthetic_papers[
+    ["projid", "tstamp", "filename", "paper", "title", "author", "references"]
+]
 
-# Load the data from the JSON file
-with open(file_path, "r") as file:
-    data = json.load(file)  # Use json.load to read from a file object
 
 # Create a directed graph
 G = nx.DiGraph()
@@ -25,7 +23,7 @@ def extract_primary_author(citation):
 author_citations = {}
 
 # Iterate through each paper in the data
-for paper in data:
+for paper in synthetic_papers:
     paper_title = paper["title"]
     author = paper["Author"]
 
