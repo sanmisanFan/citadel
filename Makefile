@@ -36,3 +36,6 @@ clean:
 	@rm -f statcheck
 	@rm -f parse
 	@rm -f ~/.flor/research_reviewer_main.db
+
+
+.PHONY: install run clean
