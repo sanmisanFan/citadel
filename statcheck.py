@@ -85,8 +85,8 @@ def process_pdf_file(page_text):
 
 if __name__ == "__main__":
     page_text = flor.dataframe("page_text")
-    known_pdfs = page_text["pdf_value"].drop_duplicates().values
-    for pdf_path in flor.loop("pdf", known_pdfs):
+    known_pdfs = page_text["paper_value"].drop_duplicates().values
+    for pdf_path in flor.loop("paper", known_pdfs):
         print()
         print(f"Checking Statistics on {pdf_path}")
-        process_pdf_file(page_text[page_text["pdf_value"] == pdf_path])
+        process_pdf_file(page_text[page_text["paper_value"] == pdf_path])

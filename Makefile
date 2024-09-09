@@ -24,6 +24,11 @@ statcheck: parse statcheck.py
 	@touch statcheck
 	@echo "statcheck done"
 
+# Generate citation network
+generate_citation_network: synthetic.py
+	@echo "Generating citation network"
+	python synthetic.py --kwargs num_papers=10
+	@echo "Citation network generated"
 
 # Run the Flask app
 run: statcheck

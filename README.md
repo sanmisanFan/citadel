@@ -31,6 +31,20 @@ pdf_path = 'path/to/your/pdf/p4045.pdf'
 process_pdf_file(pdf_path)
 ```
 
+## Synthetic Paper Generator and Citation Network Visualisation
+
+This project generates synthetic research papers with random titles, authors, and references, and visualizes the citation network using NetworkX and Matplotlib.
+
+```
+make generate_citation_network
+```
+
+Then, run the following command to visualize the citation network:
+
+``` 
+make visualize_citation_network
+```
+
 
 ## Available Scripts
 
