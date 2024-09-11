@@ -1,0 +1,41 @@
+[
+  {
+    "projid": "research_reviewer_main",
+    "tstamp": "2024-09-11T13:14:50",
+    "filename": "pubmedPaperExtraction.py",
+    "ctx": {
+      "ctx_id": 3345479528285232564,
+      "p_ctx": null,
+      "name": "paper",
+      "iteration": 1,
+      "value": null
+    },
+    "name": "row",
+    "value": {
+      "pmid": "39258130",
+      "title": "Excitability Changes in Occipital Cortex After Continuous Theta-Burst Stimulation.",
+      "journal": "Noro psikiyatri arsivi",
+      "authors": "Aghamirzayeva, Khayala, Temu\u00e7in, \u00c7a\u011fr\u0131 Mesut, Y\u0131ld\u0131z, Fatma G\u00f6k\u00e7em",
+      "cited_pmids": ""
+    },
+    "type": 1
+  },
+  {
+    "projid": "research_reviewer_main",
+    "tstamp": "2024-09-11T13:14:50",
+    "filename": "pubmedPaperExtraction.py",
+    "ctx": null,
+    "name": "delta::loop",
+    "value": 0.020885208010440692,
+    "type": 3
+  },
+  {
+    "projid": "research_reviewer_main",
+    "tstamp": "2024-09-11T13:14:50",
+    "filename": "pubmedPaperExtraction.py",
+    "ctx": null,
+    "name": "delta::suffix",
+    "value": 1.6557058750040596,
+    "type": 3
+  }
+]

@@ -1,13 +1,15 @@
 import requests
 import xml.etree.ElementTree as ET
 import json
+import flor
+import pandas as pd
 from pymed import PubMed
 
 # Function to fetch PubMed IDs based on a keyword and year
 def fetch_pubmed_ids(keyword, year):
     pubmed = PubMed(tool="PubMedSearcher", email="akshitjain434303@gmail.com")
     query = f"{keyword} AND {year}[Date - Publication]"
-    results = pubmed.query(query, max_results=4)
+    results = pubmed.query(query, max_results=1)
     
     pubmed_ids = []
     for article in results:
@@ -19,7 +21,7 @@ def fetch_pubmed_ids(keyword, year):
 base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 
 # Function to fetch metadata for a list of PubMed IDs
-def fetch_metadata(pmids, batch_size=10):
+def fetch_metadata(pmids, batch_size=1):
     fetch_url = f"{base_url}efetch.fcgi"
     all_metadata = []
     all_references = set()  # Use a set to avoid duplicates
@@ -64,7 +66,7 @@ def fetch_metadata(pmids, batch_size=10):
     return extracted_data, list(all_references)
 
 # Define the keyword and year for the PubMed search
-keyword = "machine learning"
+keyword = "visualisation"
 year = "2023"
 
 # Fetch PubMed IDs based on the given keyword and year
@@ -83,6 +85,32 @@ print("Reference Metadata:", reference_metadata)
 # Combine initial and reference metadata
 combined_metadata = initial_metadata + reference_metadata
 
-# Save the combined metadata to a JSON file
-with open("papers_metadata.json", "w") as json_file:
-    json.dump(combined_metadata, json_file, indent=4)
+
+### Using FlorDB ###
+
+# Convert JSON data into a DataFrame
+combined_metadata_df = pd.DataFrame(combined_metadata)
+
+# Convert 'authors' and 'cited_pmids' lists to comma-separated strings
+combined_metadata_df['authors'] = combined_metadata_df['authors'].apply(lambda x: ', '.join(x) if isinstance(x, list) else '')
+combined_metadata_df['cited_pmids'] = combined_metadata_df['cited_pmids'].apply(lambda x: ', '.join(x) if isinstance(x, list) else '')
+
+# Ensure column names are unique
+if not combined_metadata_df.columns.is_unique:
+    print("Found duplicated columns, removing duplicates...")
+    combined_metadata_df = combined_metadata_df.loc[:, ~combined_metadata_df.columns.duplicated()]
+
+# Convert the entire DataFrame to strings to ensure compatibility
+combined_metadata_df = combined_metadata_df.astype(str)
+
+# Print column names to confirm
+print("Column names:", combined_metadata_df.columns)
+
+# Loop through each row in the DataFrame and log data to FlorDB
+for index, row in flor.loop("paper", combined_metadata_df.iterrows()):
+    row_dict = row.to_dict()  # Convert row into a dictionary
+    flor.log(f"row", row_dict)  # Log the dictionary to FlorDB with a unique name for each row
+    print(f"Stored row {index} in FlorDB.")
+
+print("Combined metadata has been stored in FlorDB.")
+

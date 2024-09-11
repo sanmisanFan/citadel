@@ -1,6 +1,7 @@
 import json
 import numpy as np
 import pandas as pd
+import flor
 
 # Function to load JSON data from a file
 def load_json(file_path):
@@ -43,9 +44,15 @@ for paper in papers:
 citation_df = pd.DataFrame(citation_matrix, index=pmids, columns=pmids)
 journal_df = pd.DataFrame(journal_matrix, index=journals, columns=journals)
 
-# Save to CSV
-citation_df.to_csv("citation_matrix.csv")
-journal_df.to_csv("journal_matrix.csv")
+# Store the citation DataFrame in FlorDB row-by-row
+for pmid, row in flor.loop("pmid", citation_df.iterrows()):
+    row_dict = row.to_dict()
+    flor.log("citation_matrix", row_dict)
+
+# Store the journal DataFrame in FlorDB row-by-row
+for journal, row in flor.loop("journal", journal_df.iterrows()):
+    row_dict = row.to_dict()
+    flor.log("journal_matrix", row_dict)
 
 # Find the pairs of journals with the highest citation counts
 max_journal_citations = np.max(journal_matrix)
@@ -85,11 +92,13 @@ for paper in papers:
             author_matrix[author1_index, author2_index] += 1
             author_matrix[author2_index, author1_index] += 1  # Matrix is symmetric
 
-# Step 6: Convert to DataFrame for visualization
+# Convert author matrix to DataFrame
 author_df = pd.DataFrame(author_matrix, index=unique_authors, columns=unique_authors)
 
-# Step 7: Save to CSV
-author_df.to_csv("author_matrix.csv")
+# Store the author matrix in FlorDB row-by-row
+for author, row in flor.loop("author", author_df.iterrows()):
+    row_dict = row.to_dict()
+    flor.log("author_matrix", row_dict)
 
 # Display some information about the author matrix
 print(f"\nAuthor Matrix saved with shape: {author_df.shape}")
