@@ -1,10 +1,10 @@
 [
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-11T13:38:20",
+    "tstamp": "2024-09-16T02:06:26",
     "filename": "pubmedPaperExtraction.py",
     "ctx": {
-      "ctx_id": -2529357097036512691,
+      "ctx_id": 757774554115533888,
       "p_ctx": null,
       "name": "paper",
       "iteration": 1,
@@ -12,30 +12,30 @@
     },
     "name": "row",
     "value": {
-      "pmid": "39258130",
-      "title": "Excitability Changes in Occipital Cortex After Continuous Theta-Burst Stimulation.",
-      "journal": "Noro psikiyatri arsivi",
-      "authors": "Aghamirzayeva, Khayala, Temu\u00e7in, \u00c7a\u011fr\u0131 Mesut, Y\u0131ld\u0131z, Fatma G\u00f6k\u00e7em",
+      "pmid": "39270116",
+      "title": "[Risk Factors for Cognitive Decline Among Elderly Chilean Adults: Insights from a National Study].",
+      "journal": "Revista medica de Chile",
+      "authors": "Felmer, Leslie, Nazar, Gabriela",
       "cited_pmids": ""
     },
     "type": 1
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-11T13:38:20",
+    "tstamp": "2024-09-16T02:06:26",
     "filename": "pubmedPaperExtraction.py",
     "ctx": null,
     "name": "delta::loop",
-    "value": 0.10715041700001393,
+    "value": 0.09307595799327828,
     "type": 3
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-11T13:38:20",
+    "tstamp": "2024-09-16T02:06:26",
     "filename": "pubmedPaperExtraction.py",
     "ctx": null,
     "name": "delta::suffix",
-    "value": 2.90457570800001,
+    "value": 2.999881708994508,
     "type": 3
   }
 ]
