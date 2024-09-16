@@ -1,41 +1,38 @@
 [
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-16T02:09:58",
-    "filename": "pubmedPaperExtraction.py",
-    "ctx": {
-      "ctx_id": 2290581299046955414,
-      "p_ctx": null,
-      "name": "paper",
-      "iteration": 1,
-      "value": null
-    },
-    "name": "row",
-    "value": {
-      "pmid": "39270116",
-      "title": "[Risk Factors for Cognitive Decline Among Elderly Chilean Adults: Insights from a National Study].",
-      "journal": "Revista medica de Chile",
-      "authors": "Felmer, Leslie, Nazar, Gabriela",
-      "cited_pmids": ""
-    },
+    "tstamp": "2024-09-16T02:10:21",
+    "filename": "florMatrix.py",
+    "ctx": null,
+    "name": "total_citations",
+    "value": "{'total': 99, 'unique_citing_papers': 14}",
     "type": 1
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-16T02:09:58",
-    "filename": "pubmedPaperExtraction.py",
+    "tstamp": "2024-09-16T02:10:21",
+    "filename": "florMatrix.py",
     "ctx": null,
-    "name": "delta::loop",
-    "value": 0.022742458997527137,
-    "type": 3
+    "name": "max_journal_citations",
+    "value": "{'max_citation_count': 8, 'max_journal_pairs': [{'citing_journal': 'Frontiers in neurology', 'cited_journal': 'Frontiers in neurology', 'count': 8}]}",
+    "type": 1
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-16T02:09:58",
-    "filename": "pubmedPaperExtraction.py",
+    "tstamp": "2024-09-16T02:10:21",
+    "filename": "florMatrix.py",
+    "ctx": null,
+    "name": "coauthorship_summary",
+    "value": "{'total_coauthorships': 1143, 'max_coauthorship_count': 10}",
+    "type": 1
+  },
+  {
+    "projid": "research_reviewer_main",
+    "tstamp": "2024-09-16T02:10:21",
+    "filename": "florMatrix.py",
     "ctx": null,
     "name": "delta::suffix",
-    "value": 1.5041356659785379,
+    "value": 0.038801874994533136,
     "type": 3
   }
 ]
