@@ -1,10 +1,10 @@
 [
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-16T02:06:26",
+    "tstamp": "2024-09-16T02:09:58",
     "filename": "pubmedPaperExtraction.py",
     "ctx": {
-      "ctx_id": 757774554115533888,
+      "ctx_id": 2290581299046955414,
       "p_ctx": null,
       "name": "paper",
       "iteration": 1,
@@ -22,20 +22,20 @@
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-16T02:06:26",
+    "tstamp": "2024-09-16T02:09:58",
     "filename": "pubmedPaperExtraction.py",
     "ctx": null,
     "name": "delta::loop",
-    "value": 0.09307595799327828,
+    "value": 0.022742458997527137,
     "type": 3
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-16T02:06:26",
+    "tstamp": "2024-09-16T02:09:58",
     "filename": "pubmedPaperExtraction.py",
     "ctx": null,
     "name": "delta::suffix",
-    "value": 2.999881708994508,
+    "value": 1.5041356659785379,
     "type": 3
   }
 ]
