@@ -1,7 +1,7 @@
 [
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-16T02:11:34",
+    "tstamp": "2024-09-16T02:12:03",
     "filename": "florMatrix.py",
     "ctx": null,
     "name": "total_citations",
@@ -10,7 +10,7 @@
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-16T02:11:34",
+    "tstamp": "2024-09-16T02:12:03",
     "filename": "florMatrix.py",
     "ctx": null,
     "name": "max_journal_citations",
@@ -19,7 +19,7 @@
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-16T02:11:34",
+    "tstamp": "2024-09-16T02:12:03",
     "filename": "florMatrix.py",
     "ctx": null,
     "name": "coauthorship_summary",
@@ -28,11 +28,11 @@
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2024-09-16T02:11:34",
+    "tstamp": "2024-09-16T02:12:03",
     "filename": "florMatrix.py",
     "ctx": null,
     "name": "delta::suffix",
-    "value": 0.04458362501463853,
+    "value": 0.03840737498831004,
     "type": 3
   }
 ]

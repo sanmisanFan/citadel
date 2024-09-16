@@ -118,6 +118,12 @@ most_cited_paper_index = np.argmax(cited_distribution)
 most_cited_paper = pmids[most_cited_paper_index]
 most_cited_paper_count = cited_distribution[most_cited_paper_index]
 
+citing_distribution = np.sum(citation_matrix, axis=1)  # Sum along rows
+cited_distribution = np.sum(citation_matrix, axis=0)  # Sum along columns
+
+flor.log("citing_distribution", citing_distribution.tolist())
+flor.log("cited_distribution", cited_distribution.tolist())
+
 flor.log("most_cited_paper", {
     "pmid": most_cited_paper,
     "citation_count": most_cited_paper_count
