@@ -112,3 +112,13 @@ flor.log("coauthorship_summary", {
 # Display some information about the author matrix
 print(f"\nTotal Co-authorships: {total_coauthorships}")
 print(f"Max Co-authorship Count between any two authors: {max_coauthorship_count}")
+
+
+most_cited_paper_index = np.argmax(cited_distribution)
+most_cited_paper = pmids[most_cited_paper_index]
+most_cited_paper_count = cited_distribution[most_cited_paper_index]
+
+flor.log("most_cited_paper", {
+    "pmid": most_cited_paper,
+    "citation_count": most_cited_paper_count
+})
