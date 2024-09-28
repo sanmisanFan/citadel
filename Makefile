@@ -43,6 +43,13 @@ run: statcheck
 	@flask run
 
 
+# Create a virtual environment
+create_venv:
+		@if [ ! -d ".venv" ]; then \
+				echo "Creating virtual environment..."; \
+				python3 -m venv .venv; \
+		fi
+
 # Clean the project
 clean:
 	@rm -f statcheck
