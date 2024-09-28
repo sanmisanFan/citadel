@@ -58,4 +58,4 @@ clean:
 	@rm -f ~/.flor/research_reviewer_main.db
 
 
-.PHONY: install run clean visualize_citation_network
+.PHONY: install run clean visualize_citation_network create_venv
