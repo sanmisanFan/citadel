@@ -1,6 +1,7 @@
 import json
 import numpy as np
 import pandas as pd
+import flor
 
 # Function to load JSON data from a file
 def load_json(file_path):
@@ -43,20 +44,31 @@ for paper in papers:
 citation_df = pd.DataFrame(citation_matrix, index=pmids, columns=pmids)
 journal_df = pd.DataFrame(journal_matrix, index=journals, columns=journals)
 
-# Save to CSV
-citation_df.to_csv("citation_matrix.csv")
-journal_df.to_csv("journal_matrix.csv")
+# Log summary statistics for citations
+total_citations = np.sum(citation_matrix)
+unique_citing_papers = np.count_nonzero(np.sum(citation_matrix, axis=1))
+
+flor.log("total_citations", {"total": total_citations, "unique_citing_papers": unique_citing_papers})
 
 # Find the pairs of journals with the highest citation counts
 max_journal_citations = np.max(journal_matrix)
 max_journal_citation_pairs = np.argwhere(journal_matrix == max_journal_citations)
 
-# Display the results for journals
-print(f"\nPairs of journals with the highest citation count ({max_journal_citations}):")
+# Log max citation journal pairs
+max_journal_pairs = []
 for pair in max_journal_citation_pairs:
     citing_journal = journals[pair[0]]
     cited_journal = journals[pair[1]]
-    print(f"Citing Journal: {citing_journal}, Cited Journal: {cited_journal}, Count: {journal_matrix[pair[0], pair[1]]}")
+    max_journal_pairs.append({
+        "citing_journal": citing_journal,
+        "cited_journal": cited_journal,
+        "count": journal_matrix[pair[0], pair[1]]
+    })
+
+flor.log("max_journal_citations", {
+    "max_citation_count": max_journal_citations,
+    "max_journal_pairs": max_journal_pairs
+})
 
 ### Additional Code for the Author Matrix ###
 
@@ -85,11 +97,29 @@ for paper in papers:
             author_matrix[author1_index, author2_index] += 1
             author_matrix[author2_index, author1_index] += 1  # Matrix is symmetric
 
-# Step 6: Convert to DataFrame for visualization
+# Convert author matrix to DataFrame
 author_df = pd.DataFrame(author_matrix, index=unique_authors, columns=unique_authors)
 
-# Step 7: Save to CSV
-author_df.to_csv("author_matrix.csv")
+# Log summary statistics for co-authorship
+total_coauthorships = np.sum(author_matrix) // 2  # Since matrix is symmetric, divide by 2
+max_coauthorship_count = np.max(author_matrix)
 
-# Display some information about the author matrix
-print(f"\nAuthor Matrix saved with shape: {author_df.shape}")
+flor.log("coauthorship_summary", {
+    "total_coauthorships": total_coauthorships,
+    "max_coauthorship_count": max_coauthorship_count
+})
+
+citing_distribution = np.sum(citation_matrix, axis=1)  # Sum along rows
+cited_distribution = np.sum(citation_matrix, axis=0)  # Sum along columns
+
+flor.log("citing_distribution", citing_distribution.tolist())
+flor.log("cited_distribution", cited_distribution.tolist())
+
+most_cited_paper_index = np.argmax(cited_distribution)
+most_cited_paper = pmids[most_cited_paper_index]
+most_cited_paper_count = cited_distribution[most_cited_paper_index]
+
+flor.log("most_cited_paper", {
+    "pmid": most_cited_paper,
+    "citation_count": most_cited_paper_count
+})

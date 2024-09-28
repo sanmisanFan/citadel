@@ -12,7 +12,7 @@ def round_to_reported(computed_p, reported_p):
 # Extract F-tests, t-tests, and Chi-square tests using regex
 f_test_pattern = r"[fF]\s*[\(\[]\s*(\d+),\s*(\d+)\s*[\)\]]\s*=\s*([\d.]+)[,;]\s*[pP]\s*(<|>|=)\s*(\d*(?:\.\d+)?)"
 t_test_pattern = r"[tT]\s*[\(\[]\s*(\d+)\s*[\)\]]\s*=\s*([\d.]+)\s*[;,]?\s*[pP]\s*=\s*(\d*(?:\.\d+)?)"
-chi_square_test_pattern = r"[Xx]\s*(?:²|\^2|2)?\s*[\(\[]\s*(\d+)\s*(?:,[Nn]\s*=\s*\d+)?\s*[\)\]]\s*=\s*([\d.]+)[,;]\s*[pP]\s*(<|>|=)\s*(\d*(?:\.\d+)?)"
+chi_square_test_pattern = r"[Xxχ]\s*(?:²|\^2|2)?\s*[\(\[]\s*(\d+)\s*(?:,[Nn]\s*=\s*\d+)?\s*[\)\]]\s*=\s*([\d.]+)[,;]\s*[pP]\s*(<|>|=)\s*(\d*(?:\.\d+)?)"
 
 
 def find_tests(text, pattern):
