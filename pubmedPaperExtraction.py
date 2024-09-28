@@ -1,13 +1,26 @@
+import os
 import requests
 import xml.etree.ElementTree as ET
 import flor
 import pandas as pd
 from pymed import PubMed
 
+# Base URL for NCBI Entrez utilities
+base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+
+# Get the right user email for the PubMed API
+user_name = os.getenv("USER")
+if "akshit" in user_name:
+    email = "akshitjain434303@gmail.com"
+elif "garci" in user_name:
+    email = "rolando.garcia@asu.edu"
+else:
+    email = input("Enter your email for the PubMed API: ").strip()
+
 
 # Function to fetch PubMed IDs based on a keyword and year
 def fetch_pubmed_ids(keyword, year):
-    pubmed = PubMed(tool="PubMedSearcher", email="akshitjain434303@gmail.com")
+    pubmed = PubMed(tool="PubMedSearcher", email=flor.arg("email", email))
     query = f"{keyword} AND {year}[Date - Publication]"
     results = pubmed.query(query, max_results=1)
 
@@ -16,10 +29,6 @@ def fetch_pubmed_ids(keyword, year):
         pubmed_ids.append(article.pubmed_id.split("\n")[0])
 
     return pubmed_ids
-
-
-# Base URL for NCBI Entrez utilities
-base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 
 
 # Function to fetch metadata for a list of PubMed IDs
@@ -74,7 +83,7 @@ def fetch_metadata(pmids, batch_size=1):
 
 
 # Define the keyword and year for the PubMed search
-keyword = "visualisation"
+keyword = "visualization"
 year = "2023"
 
 # Fetch PubMed IDs based on the given keyword and year
