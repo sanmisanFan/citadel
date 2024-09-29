@@ -24,6 +24,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+*.pyc
+__pycache__/
+
 parse
 statcheck
 generate_citation_network

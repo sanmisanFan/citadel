@@ -37,6 +37,8 @@ visualize_citation_network: generate_citation_network stackinggraph.py
 	python stackinggraph.py
 	@echo "Citation network visualized"
 
+
+
 # Run the Flask app
 run: statcheck
 	@echo "Running Flask app"

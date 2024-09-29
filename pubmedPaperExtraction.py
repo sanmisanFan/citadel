@@ -90,6 +90,10 @@ year = "2023"
 pmids = fetch_pubmed_ids(keyword, year)
 print("Fetched PubMed IDs:", pmids)
 
+"""
+DONE
+"""
+
 # Fetch initial metadata and extract references
 initial_metadata, reference_pmids = fetch_metadata(pmids)
 print("Initial Metadata:", initial_metadata)
