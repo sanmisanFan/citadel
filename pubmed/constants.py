@@ -2,6 +2,7 @@ import os
 
 # Base URL for NCBI Entrez utilities
 base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+fetch_url = f"{base_url}efetch.fcgi"
 
 # Get the right user email for the PubMed API
 user_name = os.getenv("USER")
@@ -12,4 +13,4 @@ elif "garci" in user_name:
 else:
     email = input("Enter your email for the PubMed API: ").strip()
 
-__all__ = ["base_url", "email"]
+__all__ = ["base_url", "fetch_url", "email"]

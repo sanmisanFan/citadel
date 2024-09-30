@@ -9,13 +9,7 @@ from pymed import PubMed
 base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 
 # Get the right user email for the PubMed API
-user_name = os.getenv("USER")
-if "akshit" in user_name:
-    email = "akshitjain434303@gmail.com"
-elif "garci" in user_name:
-    email = "rolando.garcia@asu.edu"
-else:
-    email = input("Enter your email for the PubMed API: ").strip()
+email = "akshitjain434303@gmail.com"
 
 
 # Function to fetch PubMed IDs based on a keyword and year
@@ -90,9 +84,6 @@ year = "2023"
 pmids = fetch_pubmed_ids(keyword, year)
 print("Fetched PubMed IDs:", pmids)
 
-"""
-DONE
-"""
 
 # Fetch initial metadata and extract references
 initial_metadata, reference_pmids = fetch_metadata(pmids)
@@ -106,7 +97,9 @@ print("Reference Metadata:", reference_metadata)
 # Combine initial and reference metadata
 combined_metadata = initial_metadata + reference_metadata
 
-
+"""
+DONE
+"""
 ### Using FlorDB ###
 
 # Convert JSON data into a DataFrame
