@@ -1,0 +1,21 @@
+GO number,Term,Ont,N,F+,M+,P-value
+GO:0008289,lipid binding,MF,50,6,1,1.92e-05
+GO:0048469,cell maturation,BP,13,3,0,0.000429
+GO:0021700,developmental maturation,BP,18,3,0,0.00118
+GO:0043178,alcohol binding,MF,7,2,0,0.00293
+GO:0033293,monocarboxylic acid binding,MF,8,2,0,0.00388
+GO:0014066,regulation of phosphatidylinositol 3-kinase signaling,BP,8,2,0,0.00388
+GO:0006869,lipid transport,BP,27,3,2,0.00392
+GO:0007548,sex differentiation,BP,27,3,0,0.00392
+GO:0010876,lipid localization,BP,29,3,2,0.00482
+GO:0048017,inositol lipid-mediated signaling,BP,9,2,0,0.00495
+GO:0014065,phosphatidylinositol 3-kinase signaling,BP,9,2,0,0.00495
+GO:0048015,phosphatidylinositol-mediated signaling,BP,9,2,0,0.00495
+GO:0005496,steroid binding,MF,9,2,0,0.00495
+GO:0005319,lipid transporter activity,MF,10,2,1,0.00614
+GO:0043627,response to estrogen,BP,10,2,0,0.00614
+GO:0004867,serine-type endopeptidase inhibitor activity,MF,12,2,0,0.00886
+GO:0042698,ovulation cycle,BP,13,2,0,0.0104
+GO:0022602,ovulation cycle process,BP,13,2,0,0.0104
+GO:0005102,receptor binding,MF,114,5,0,0.0107
+GO:0046545,development of primary female sexual characteristics,BP,14,2,0,0.012

@@ -1,0 +1,9 @@
+GO number,Term,Ont,N,F+,M+,P-value
+GO:0006936,muscle contraction,BP,21,0,4,0.00039
+GO:0006941,striated muscle contraction,BP,10,0,3,0.000553
+GO:0003012,muscle system process,BP,26,0,4,0.000915
+GO:0050879,multicellular organismal movement,BP,4,0,2,0.00177
+GO:0050881,musculoskeletal movement,BP,4,0,2,0.00177
+GO:0003009,skeletal muscle contraction,BP,4,0,2,0.00177
+GO:0008092,cytoskeletal protein binding,MF,101,1,6,0.0072
+GO:0003779,actin binding,MF,53,0,4,0.0128
