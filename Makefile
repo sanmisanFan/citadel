@@ -37,7 +37,11 @@ visualize_citation_network: generate_citation_network stackinggraph.py
 	python stackinggraph.py
 	@echo "Citation network visualized"
 
-
+fetch_pubmed: pubmed/fetch_IDs_metadata.py
+	@echo "Fetching PubMed metadata"
+	python pubmed/fetch_IDs_metadata.py
+	@touch fetch_pubmed
+	@echo "PubMed data fetched"
 
 # Run the Flask app
 run: statcheck
@@ -57,6 +61,7 @@ clean:
 	@rm -f statcheck
 	@rm -f parse
 	@rm -f generate_citation_network
+	@rm -f fetch_pubmed
 	@rm -f ~/.flor/research_reviewer_main.db
 
 

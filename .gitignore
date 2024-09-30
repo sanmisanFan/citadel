@@ -30,3 +30,4 @@ __pycache__/
 parse
 statcheck
 generate_citation_network
+fetch_pubmed
