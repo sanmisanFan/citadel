@@ -9,15 +9,12 @@ import time
 
 pubmed = PubMed(tool="PubMedSearcher", email=flor.arg("email", email))
 query = f"{flor.arg("kw", "visualization")} AND {flor.arg("year", 2023)}[Date - Publication]"
-results = pubmed.query(query, max_results=flor.arg("max_results", 5))
+results = pubmed.query(query, max_results=flor.arg("max_results", 1))
 
 pubmed_ids: Set[int] = set([])
 for article in results:
     all_ids = article.pubmed_id.split("\n")
-    if all_ids:
-        first_id = all_ids[0]
-        if first_id.isdigit():
-            pubmed_ids.add(int(first_id))
+    pubmed_ids |= set([int(pmid) for pmid in all_ids if pmid.isdigit()])
 
 for pmid in flor.loop("pmid", pubmed_ids):
     params = {"db": "pubmed", "id": str(pmid), "retmode": "xml"}
