@@ -5,11 +5,11 @@ import './App.css';
 
 /** React DOM Components */
 import { NavBar } from "./components/nav";
-import { PDFContainer } from "./components/pdfContainer";
+//import { PDFContainer } from "./components/pdfContainer";
 import { VisContainer } from "./components/visContainer";
 
 /** load test PDF - should be uploaded by user */
-const PDF_URL = "https://arxiv.org/pdf/2308.13588"; //https://arxiv.org/pdf/2203.11115
+const PDF_URL = "https://arxiv.org/pdf/2203.11115"; //https://arxiv.org/pdf/2203.11115
 
 function App() {
   const { Header, Content } = Layout;
@@ -26,9 +26,15 @@ function App() {
         }}>
           <Row>
             <Col span={13}>
-              <PDFContainer
+              {/*<PDFContainer
                 PDF_URL={PDF_URL}
-              />
+              />*/}
+              <div
+                style={{
+                  backgroundColor: "#9096a2",
+                  height: '100%',
+                }}
+              ></div>
             </Col>
             <Col span={11}>
               <VisContainer />

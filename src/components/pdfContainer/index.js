@@ -33,7 +33,7 @@ const getNextId = () => String(Math.random()).slice(2);
   return(
     <div
       style={{
-        //backgroundColor: "#ffffff",
+        backgroundColor: "#ffffff",
         //height: '94vh',
         width: '100%',
       }}
