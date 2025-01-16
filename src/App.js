@@ -5,13 +5,18 @@ import './App.css';
 
 /** React DOM Components */
 import { NavBar } from "./components/nav";
-//import { PDFContainer } from "./components/pdfContainer";
+import { PDFContainer } from "./components/pdfContainer";
 import { VisContainer } from "./components/visContainer";
+
+/** Import utilitie functions */
+import { loadPDF } from "./util/pdfLoader";
 
 /** load test PDF - should be uploaded by user */
 const PDF_URL = "https://arxiv.org/pdf/2203.11115"; //https://arxiv.org/pdf/2203.11115
 
 function App() {
+  // global init
+  const [pdfData, setPdfData] = useState(null);
   const { Header, Content } = Layout;
 
   return (
