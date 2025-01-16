@@ -5,7 +5,7 @@ import './App.css';
 
 /** React DOM Components */
 import { NavBar } from "./components/nav";
-import { PDFContainer } from "./components/pdfContainer";
+//import { PDFContainer } from "./components/pdfContainer";
 import { VisContainer } from "./components/visContainer";
 
 /** Import utilitie functions */
