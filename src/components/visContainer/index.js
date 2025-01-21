@@ -10,7 +10,7 @@ export const VisContainer = () => {
         <Col span={12}>
           <div
             style={{
-              height: '90vh',
+              height: '95vh',
               borderRight: '1px solid #9096a2'
             }}
           ></div>
