@@ -11,7 +11,7 @@ export const VisContainer = () => {
           <div
             style={{
               height: '95vh',
-              borderRight: '1px solid #9096a2'
+              borderRight: '1px solid #dddddd'
             }}
           ></div>
         </Col>

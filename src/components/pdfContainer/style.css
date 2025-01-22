@@ -1,11 +1,25 @@
+.pdf-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the pages */
+  align-items: flex-start; /* Align pages to the top */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  height: 96vh; /* Full viewport height */
+  background-color: #f9f9f9; /* Optional: Background color */
+  /*padding: 10px;*/
+}
+
 .pdf-document {
-  position: relative;
+  /*position: relative;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pdf-page {
-  position: relative;
-  margin: 0 auto;
-  border: 1px solid #ddd;
+  /*position: relative;*/
+  /*margin: 0 auto;*/
+  margin-bottom: 20px; /* Add space between pages */
+  border-bottom: 1px solid #ddd;
 }
 
 .highlight {

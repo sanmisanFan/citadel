@@ -9,20 +9,44 @@ import { PDFContainer } from "./components/pdfContainer";
 import { VisContainer } from "./components/visContainer";
 
 /** Import utilitie functions */
-//import { loadPDF } from "./util/pdfLoader";
-
-import samplePDF from "./data/test.pdf";
 
 /** load test PDF - should be uploaded by user */
-const PDF_URL = "https://arxiv.org/pdf/2203.11115"; //https://arxiv.org/pdf/2203.11115
+import samplePDF from "./data/test.pdf";
+
+const highlightsList = [
+  {
+    page: 1,
+    rect: { x: 0.1, y: 0.1, width: 0.1, height: 0.2 }, // Normalized coordinates
+    color: "rgba(255, 255, 0, 0.5)", // Highlight color
+  },
+  {
+    page: 1,
+    rect: { x: 0.08811928104575163, y: 0.35267171717171714, width: 0.39718679757352937, height: 0.012579545454545454+0.005 }, // Normalized coordinates
+    color: "rgba(255, 106, 0, 0.5)", // Highlight color
+  },
+  {
+    page: 2,
+    rect: { x: 0.2, y: 0.4, width: 0.5, height: 0.2 },
+    color: "rgba(0, 255, 0, 0.5)",
+  },
+];
 
 function App() {
-  const file = samplePDF; // Path to your PDF file
-  const highlights = [];
   // global init
   const [pdfData, setPdfData] = useState(null);
-  const { Header, Content } = Layout;
+  const [highlights, setHighlights] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
+  useEffect(() => {
+    setPdfData(samplePDF);
+  }, []);
+
+  useEffect(() => {
+    setHighlights(highlightsList);
+  }, []);
+
+  const { Header, Content } = Layout;
+  //console.log('currentPage', currentPage);
   return (
     <div className="App">
       <Layout className="mainContainer">
@@ -31,16 +55,16 @@ function App() {
         </Header>
         <Content style={{
           backgroundColor: '#ffffff'
-          //padding: 10
         }}>
           <Row>
-            <Col span={13}>
+            <Col span={16}>
               <PDFContainer
-                file={file}
+                file={pdfData}
                 highlights={highlights}
+                setCurrentPage={setCurrentPage}
               />
             </Col>
-            <Col span={11}>
+            <Col span={8}>
               <VisContainer />
             </Col>
           </Row>
