@@ -4,6 +4,7 @@
       "id": 0,
       "page": 1,
       "section": "abstract",
+      "sentence": "sentence with this issue",
       "bbox": { 
         "x": 0.08811928104575163, 
         "y": 0.35267171717171714, 
@@ -20,6 +21,7 @@
       "id": 1,
       "page": 1,
       "section": "introduction",
+      "sentence": "sentence with this issue",
       "bbox": { 
         "x": 0.5246633986928104, 
         "y": 0.4489015151515151, 
@@ -36,6 +38,7 @@
       "id": 2,
       "page": 2,
       "section": "related work",
+      "sentence": "sentence with this issue",
       "bbox": { 
         "x": 0.08, 
         "y": 0.45, 

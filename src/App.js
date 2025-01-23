@@ -62,7 +62,7 @@ function App() {
   }, []);
 
   const { Header, Content } = Layout;
-  //console.log('currentPage', currentPage);
+  
   return (
     <div className="App">
       <Layout className="mainContainer">
@@ -77,6 +77,7 @@ function App() {
               <PDFContainer
                 file={pdfData}
                 highlights={highlights}
+                currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
               />
             </Col>

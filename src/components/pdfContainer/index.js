@@ -4,6 +4,7 @@ import { pdfjs, Document, Page, Outline } from 'react-pdf';
 //import { extractTextFromPage, findSentenceCoordinates } from "../../util/pdfUtil";
 
 import { HighlightBbox } from "../issueComps/issueHighLighter";
+import { FloatingPanel } from "../issueComps/floatPanel";
 
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
@@ -19,6 +20,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 export const PDFContainer = ({ 
   file, 
   highlights,
+  currentPage,
   setCurrentPage
 }) => {
   //const targetSentence = "understand the experience of people that were there [3]";
@@ -198,6 +200,11 @@ export const PDFContainer = ({
         borderRight: "1px solid #ddd"
       }}
     >
+      {/* Floating Panel */}
+      <FloatingPanel
+        currentPage={currentPage}
+      />
+      {/* PDF Viewer */}
       <Document
         file={file}
         onLoadSuccess={onDocumentLoadSuccess}
@@ -209,7 +216,7 @@ export const PDFContainer = ({
             pageNumber={index + 1}
             className="pdf-page"
             width={width}
-            scale={1}
+            scale={0.8}
             onRenderSuccess={() => onPageRenderSuccess(index + 1)}
           />
         ))}
