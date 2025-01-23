@@ -1,6 +1,9 @@
 import { useEffect, useCallback, useState, useRef } from "react";
+import { createRoot } from "react-dom/client";
 import { pdfjs, Document, Page, Outline } from 'react-pdf';
 //import { extractTextFromPage, findSentenceCoordinates } from "../../util/pdfUtil";
+
+import { HighlightBbox } from "../issueComps/issueHighLighter";
 
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
@@ -74,7 +77,7 @@ export const PDFContainer = ({
   };
 
   // Function to apply highlights
-  const applyHighlights = () => {
+  /*const applyHighlights = () => {
     if (!viewerRef.current) return;
 
     // Clear existing highlights to prevent duplication
@@ -82,13 +85,14 @@ export const PDFContainer = ({
     existingHighlights.forEach((el) => el.remove());
 
     // Apply new highlights
-    highlights.forEach(({ page, bbox, color }) => {
+    highlights.forEach(({ page, bbox, color, id }) => {
       const pageElement = viewerRef.current.querySelector(
         `.react-pdf__Page[data-page-number="${page}"] .react-pdf__Page__textContent`
       );
 
       if (pageElement) {
         const highlightDiv = document.createElement("div");
+        highlightDiv.id = "highlight-bbox-"+id;
         highlightDiv.className = "highlight";
         highlightDiv.style.position = "absolute";
         highlightDiv.style.left = `${bbox.x * 100}%`;
@@ -97,14 +101,69 @@ export const PDFContainer = ({
         highlightDiv.style.height = `${(bbox.height + bboxHeightOffest) * 100}%`;
         highlightDiv.style.backgroundColor = color || "yellow";
         highlightDiv.style.opacity = "0.3";
+
         pageElement.appendChild(highlightDiv);
+      }
+    });
+  };*/
+
+  const applyHighlightsReact = () => {
+    if (!viewerRef.current) return;
+  
+    const viewer = viewerRef.current;
+    const pageElements = viewer.querySelectorAll(".react-pdf__Page");
+  
+    pageElements.forEach((pageElement) => {
+      const textContentLayer = pageElement.querySelector(".react-pdf__Page__textContent");
+  
+      if (textContentLayer) {
+        // Clear existing React Highlights
+        const existingContainers = textContentLayer.querySelectorAll(".react-highlight-container");
+        existingContainers.forEach((container) => container.remove());
+  
+        // Get the transformation scale from the text layer
+        const { width: layerWidth, height: layerHeight } = textContentLayer.getBoundingClientRect();
+        
+        // Filter highlights for the current page
+        highlights
+          .filter((highlight) => highlight.page === Number(pageElement.dataset.pageNumber))
+          .forEach(({ id, bbox, color, glyph }) => {
+            // Convert normalized coordinates to pixel values
+            const highlightX = bbox.x * layerWidth;
+            const highlightY = bbox.y * layerHeight;
+            const highlightWidth = bbox.width * layerWidth;
+            const highlightHeight = (bbox.height + bboxHeightOffest) * layerHeight;
+  
+            // Create a container for the individual highlight
+            const highlightContainer = document.createElement("div");
+            highlightContainer.className = "react-highlight-container";
+            highlightContainer.style.position = "absolute";
+            highlightContainer.style.left = `${highlightX}px`;
+            highlightContainer.style.top = `${highlightY}px`;
+            highlightContainer.style.width = `${highlightWidth}px`;
+            highlightContainer.style.height = `${highlightHeight}px`;
+  
+            // Mount the React Highlight component
+            const root = createRoot(highlightContainer);
+            root.render(
+              <HighlightBbox
+                glyph={glyph}
+                color={color}
+                id={id}
+                onClick={(highlightId) => console.log(highlightId)}
+              />
+            );
+            // Append the highlight container to the text layer
+            textContentLayer.appendChild(highlightContainer);
+          });
       }
     });
   };
 
   useEffect(() => {
     if (Object.keys(renderedPages).length === numPages) {
-      applyHighlights();
+      //applyHighlights();
+      applyHighlightsReact();
     }
   }, [renderedPages, highlights]);
 

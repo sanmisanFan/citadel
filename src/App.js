@@ -19,15 +19,15 @@ import samplePDF from "./data/test.pdf";
 
 const issueScheme = {
   citation_issue: {
-    themeColor: "rgb(221, 52, 151)",
+    themeColor: "rgba(221, 52, 151, 0.3)",
     glyph: {
       irrelevent_citation: 'IC'
     }
   },
   statistical_error: {
-    themeColor: "rgb(255, 106, 0)",
+    themeColor: "rgba(255, 106, 0, 0.3)",
     glyph: {
-      irrelevent_citation: 'FST'
+      failed_statistical_tests: 'FST'
     },
   }
 };
@@ -37,6 +37,7 @@ function App() {
   const [pdfData, setPdfData] = useState(null);
   const [highlights, setHighlights] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [activeHighlight, setActiveHighlight] = useState(null);
 
   const initHighlights = () => {
     const issueListRaw = JSON.parse(JSON.stringify(testData.identifiedIssue));
@@ -80,7 +81,12 @@ function App() {
               />
             </Col>
             <Col span={8}>
-              <VisContainer />
+              <VisContainer
+                highlights={highlights}
+                currentPage={currentPage}
+                activeHighlight={activeHighlight}
+                setActiveHighlight={setActiveHighlight}
+              />
             </Col>
           </Row>
         </Content>
