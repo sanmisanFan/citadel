@@ -9,27 +9,28 @@ import { PDFContainer } from "./components/pdfContainer";
 import { VisContainer } from "./components/visContainer";
 
 /** Import utilitie functions */
+//EMPTY
+
+/** Import TEST Data */
+import testData from "./data/test.json";
 
 /** load test PDF - should be uploaded by user */
 import samplePDF from "./data/test.pdf";
 
-const highlightsList = [
-  {
-    page: 1,
-    rect: { x: 0.1, y: 0.1, width: 0.1, height: 0.2 }, // Normalized coordinates
-    color: "rgba(255, 255, 0, 0.5)", // Highlight color
+const issueScheme = {
+  citation_issue: {
+    themeColor: "rgb(221, 52, 151)",
+    glyph: {
+      irrelevent_citation: 'IC'
+    }
   },
-  {
-    page: 1,
-    rect: { x: 0.08811928104575163, y: 0.35267171717171714, width: 0.39718679757352937, height: 0.012579545454545454+0.005 }, // Normalized coordinates
-    color: "rgba(255, 106, 0, 0.5)", // Highlight color
-  },
-  {
-    page: 2,
-    rect: { x: 0.2, y: 0.4, width: 0.5, height: 0.2 },
-    color: "rgba(0, 255, 0, 0.5)",
-  },
-];
+  statistical_error: {
+    themeColor: "rgb(255, 106, 0)",
+    glyph: {
+      irrelevent_citation: 'FST'
+    },
+  }
+};
 
 function App() {
   // global init
@@ -37,12 +38,26 @@ function App() {
   const [highlights, setHighlights] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
+  const initHighlights = () => {
+    const issueListRaw = JSON.parse(JSON.stringify(testData.identifiedIssue));
+    issueListRaw.forEach(e=>{
+      const issueCategory = e.redFlag.category;
+      const issueType = e.redFlag.type;
+      const color = issueScheme[issueCategory].themeColor;
+      const glyph = issueScheme[issueCategory].glyph[issueType];
+      e.color = color;
+      e.glyph = glyph;
+    });
+    //console.log(issueListRaw);
+    setHighlights(issueListRaw);
+  };
+
   useEffect(() => {
     setPdfData(samplePDF);
   }, []);
 
   useEffect(() => {
-    setHighlights(highlightsList);
+    initHighlights();
   }, []);
 
   const { Header, Content } = Layout;

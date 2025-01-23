@@ -18,7 +18,7 @@
 .pdf-page {
   /*position: relative;*/
   /*margin: 0 auto;*/
-  margin-bottom: 20px; /* Add space between pages */
+  margin-bottom: 10px; /* Add space between pages */
   border-bottom: 1px solid #ddd;
 }
 

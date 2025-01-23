@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useState, useRef } from "react";
-import { pdfjs, Document, Page } from 'react-pdf';
+import { pdfjs, Document, Page, Outline } from 'react-pdf';
 //import { extractTextFromPage, findSentenceCoordinates } from "../../util/pdfUtil";
 
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
@@ -18,7 +18,8 @@ export const PDFContainer = ({
   highlights,
   setCurrentPage
 }) => {
-  const targetSentence = "Interfaces for collaborative tasks";
+  //const targetSentence = "understand the experience of people that were there [3]";
+  const bboxHeightOffest = 0.005;
   const viewerRef = useRef(null);
 
   const [numPages, setNumPages] = useState(null);
@@ -81,7 +82,7 @@ export const PDFContainer = ({
     existingHighlights.forEach((el) => el.remove());
 
     // Apply new highlights
-    highlights.forEach(({ page, rect, color }) => {
+    highlights.forEach(({ page, bbox, color }) => {
       const pageElement = viewerRef.current.querySelector(
         `.react-pdf__Page[data-page-number="${page}"] .react-pdf__Page__textContent`
       );
@@ -90,12 +91,12 @@ export const PDFContainer = ({
         const highlightDiv = document.createElement("div");
         highlightDiv.className = "highlight";
         highlightDiv.style.position = "absolute";
-        highlightDiv.style.left = `${rect.x * 100}%`;
-        highlightDiv.style.top = `${rect.y * 100}%`;
-        highlightDiv.style.width = `${rect.width * 100}%`;
-        highlightDiv.style.height = `${rect.height * 100}%`;
+        highlightDiv.style.left = `${bbox.x * 100}%`;
+        highlightDiv.style.top = `${bbox.y * 100}%`;
+        highlightDiv.style.width = `${bbox.width * 100}%`;
+        highlightDiv.style.height = `${(bbox.height + bboxHeightOffest) * 100}%`;
         highlightDiv.style.backgroundColor = color || "yellow";
-        highlightDiv.style.opacity = "0.5";
+        highlightDiv.style.opacity = "0.3";
         pageElement.appendChild(highlightDiv);
       }
     });
