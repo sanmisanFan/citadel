@@ -1,0 +1,14 @@
+{
+  "venues": [
+    {
+      "id": "venue-0",
+      "type": "Journal",
+      "raw_name": ["TVCG", "IEEE Transactions on Visualization and Computer Graphics"],
+      "standardized_name": "IEEE Transactions on Visualization and Computer Graphics",
+      "year": ["2008", "2012", "2023"],
+      "author": ["author-0", "author-1"],
+      "citation": ["citation-0", "citation-1"],
+      "venue_graph": ["venue-graph-0"]
+    }
+  ]
+}

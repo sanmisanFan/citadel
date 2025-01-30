@@ -1,7 +1,7 @@
 {
   "identifiedIssue": [
     {
-      "id": 0,
+      "id": "issue-0",
       "page": 1,
       "section": "abstract",
       "sentence": "sentence with this issue",
@@ -18,7 +18,7 @@
       }
     },
     {
-      "id": 1,
+      "id": "issue-1",
       "page": 1,
       "section": "introduction",
       "sentence": "sentence with this issue",
@@ -35,7 +35,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "issue-2",
       "page": 2,
       "section": "related work",
       "sentence": "sentence with this issue",
