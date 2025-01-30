@@ -1,0 +1,14 @@
+{
+  "authors": [
+    {
+      "id": "author-0",
+      "raw_name": "F. Lei",
+      "standardized_name": "Fan Lei",
+      "openalex_link": "https://openalex.org/authors/A5100373606",
+      "orcid": "https://orcid.org/0000-0003-4244-0971",
+      "citation": ["citation-0", "citation-2"],
+      "venue": ["venue-1", "venue-2"],
+      "author_graph": ["author-graph-1"]
+    }
+  ]
+}

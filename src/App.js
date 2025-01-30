@@ -12,7 +12,7 @@ import { VisContainer } from "./components/visContainer";
 //EMPTY
 
 /** Import TEST Data */
-import testData from "./data/test.json";
+import testData from "./data/identifiedIssue.json";
 
 /** load test PDF - should be uploaded by user */
 import samplePDF from "./data/test.pdf";
@@ -62,7 +62,7 @@ function App() {
   }, []);
 
   const { Header, Content } = Layout;
-  //console.log('currentPage', currentPage);
+  
   return (
     <div className="App">
       <Layout className="mainContainer">
@@ -77,6 +77,7 @@ function App() {
               <PDFContainer
                 file={pdfData}
                 highlights={highlights}
+                currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
               />
             </Col>

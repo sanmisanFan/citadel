@@ -11,7 +11,7 @@ export const VisContainer = ({
   const handleCardClick = (id) => {
     id === activeHighlight ? setActiveHighlight(null) : setActiveHighlight(id);
   };
-  console.log('activeHighlight', activeHighlight);
+  //console.log('activeHighlight', activeHighlight);
   return(
     <div
       style={{
