@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import {Layout, Col, Row, Spin} from 'antd';
+import { Col, Row, Spin} from 'antd';
 import 'antd/dist/reset.css';
 import './App.css';
 
@@ -13,6 +13,7 @@ import { VisContainer } from "./components/visContainer";
 
 /** Import TEST Data */
 import testData from "./data/identifiedIssue.json";
+import citationRaw from "./data/citation.json";
 
 /** load test PDF - should be uploaded by user */
 import samplePDF from "./data/test.pdf";
@@ -35,9 +36,18 @@ const issueScheme = {
 function App() {
   // global init
   const [pdfData, setPdfData] = useState(null);
+
   const [highlights, setHighlights] = useState([]);
+  const [citation, setCitation] = useState([]);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [activeHighlight, setActiveHighlight] = useState(null);
+
+  /** init citation list */
+  const initCitations = () => {
+    const citationsList = JSON.parse(JSON.stringify(citationRaw.citations));
+    setCitation(citationsList);
+  };
 
   const initHighlights = () => {
     const issueListRaw = JSON.parse(JSON.stringify(testData.identifiedIssue));
@@ -61,22 +71,21 @@ function App() {
     initHighlights();
   }, []);
 
-  const { Header, Content } = Layout;
+  useEffect(() => {
+    initCitations();
+  }, [citationRaw]);
+
+  //const { Header, Content } = Layout;
   
   return (
     <div className="App">
-      <Layout className="mainContainer">
-        <Header style={{height: '43px'}}>
-          <NavBar />
-        </Header>
-        <Content style={{
-          backgroundColor: '#ffffff'
-        }}>
+      <div className="mainContainer">
           <Row>
             <Col span={16}>
               <PDFContainer
                 file={pdfData}
                 highlights={highlights}
+                citation={citation}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
               />
@@ -90,8 +99,7 @@ function App() {
               />
             </Col>
           </Row>
-        </Content>
-      </Layout>
+      </div>
     </div>
   );
 }

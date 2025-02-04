@@ -2,18 +2,18 @@ import { useState } from "react";
 
 import "./toolbar.css";
 
-export const ToolBar = ({ setPdfScaleValue }) => {
+export const ToolBar = ({ setPdfScale }) => {
   const [zoom, setZoom] = useState(null);
   const [isHighlightPen, setIsHighlightPen] = useState(false);
 
   const zoomIn = () => {
     if (zoom) {
       if (zoom < 4) {
-        setPdfScaleValue(zoom + 0.1);
+        setPdfScale(zoom + 0.1);
         setZoom(zoom + 0.1);
       }
     } else {
-      setPdfScaleValue(1);
+      setPdfScale(1);
       setZoom(1);
     }
   };
@@ -21,11 +21,11 @@ export const ToolBar = ({ setPdfScaleValue }) => {
   const zoomOut = () => {
     if (zoom) {
       if (zoom > 0.2) {
-        setPdfScaleValue(zoom - 0.1);
+        setPdfScale(zoom - 0.1);
         setZoom(zoom - 0.1);
       }
     } else {
-      setPdfScaleValue(1);
+      setPdfScale(1);
       setZoom(1);
     }
   };

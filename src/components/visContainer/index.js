@@ -15,8 +15,9 @@ export const VisContainer = ({
   return(
     <div
       style={{
-        height: '96vh',
+        height: '100vh',
         padding: 10,
+        backgroundColor: '#ffffff'
         //borderRight: '1px solid #dddddd'
       }}
     >
