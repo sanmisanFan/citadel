@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useState, useRef } from "react";
-import { Card } from 'antd';
+import { Card, Alert } from 'antd';
 
 export const VisContainer = ({
   highlights,
@@ -25,17 +25,19 @@ export const VisContainer = ({
         <Card
           key={'highlight-card-container-key-'+e.id}
           id={'highlight-card-container-'+e.id}
+          size="small"
           style={{
             width: "100%",
+            padding: 10,
             marginTop: 10,
             marginBottom: 10,
             backgroundColor: activeHighlight === e.id && e.color
           }}
           onClick={() => handleCardClick(e.id)}
         >
-          <h2>{e.redFlag.category}</h2>
-          <p>{e.redFlag.type} ({e.glyph})</p>
-          <p>{e.redFlag.explanation}</p>
+          <span>{e.redFlag.category}</span>
+          {/*<p>{e.redFlag.type} ({e.glyph})</p>
+          <p>{e.redFlag.explanation}</p>*/}
         </Card>
       )}
     </div>

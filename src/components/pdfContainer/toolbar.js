@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./toolbar.css";
 
 export const ToolBar = ({ setPdfScale }) => {
-  const [zoom, setZoom] = useState(null);
+  const [zoom, setZoom] = useState(0.9);
   const [isHighlightPen, setIsHighlightPen] = useState(false);
 
   const zoomIn = () => {
@@ -32,6 +32,9 @@ export const ToolBar = ({ setPdfScale }) => {
 
   return (
     <div className="Toolbar">
+      <span href="#">
+        <b>ReviewerAPP</b>
+      </span>
       <div className="ZoomControls">
         <button title="Zoom in" onClick={zoomIn}>+</button>
         <button title="Zoom out" onClick={zoomOut}>-</button>

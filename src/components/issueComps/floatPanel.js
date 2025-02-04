@@ -5,7 +5,7 @@ export const FloatingPanel = ({
     <div
       style={{
         position: "absolute",
-        top: "200px",
+        top: "50px",
         right: "10px",
         width: "200px",
         padding: "10px",

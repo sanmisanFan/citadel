@@ -196,7 +196,7 @@ export const PDFContainer = ({
               pageNumber={index + 1}
               className="pdf-page"
               width={width}
-              scale={0.8}
+              scale={pdfScale}
               onRenderSuccess={() => onPageRenderSuccess(index + 1)}
             />
           ))}
