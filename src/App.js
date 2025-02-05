@@ -4,7 +4,6 @@ import 'antd/dist/reset.css';
 import './App.css';
 
 /** React DOM Components */
-import { NavBar } from "./components/nav";
 import { PDFContainer } from "./components/pdfContainer";
 import { VisContainer } from "./components/visContainer";
 
@@ -81,7 +80,7 @@ function App() {
     <div className="App">
       <div className="mainContainer">
           <Row>
-            <Col span={16}>
+            <Col span={14}>
               <PDFContainer
                 file={pdfData}
                 highlights={highlights}
@@ -90,7 +89,7 @@ function App() {
                 setCurrentPage={setCurrentPage}
               />
             </Col>
-            <Col span={8}>
+            <Col span={10}>
               <VisContainer
                 highlights={highlights}
                 currentPage={currentPage}

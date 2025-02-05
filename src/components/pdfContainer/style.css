@@ -1,9 +1,10 @@
 .pdf-container {
   display: flex;
+  flex: 1; /* Takes up the remaining space */
   justify-content: center; /* Horizontally center the pages */
   align-items: flex-start; /* Align pages to the top */
   overflow-y: scroll; /* Enable vertical scrolling */
-  height: 96vh; /* Full viewport height */
+  /*height: 96vh;*/ /* Full viewport height */
   background-color: #f9f9f9; /* Optional: Background color */
   /*padding: 10px;*/
 }

@@ -167,7 +167,9 @@ export const PDFContainer = ({
     <div
       style={{
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
+        height: '100vh',
+        borderRight: "1px solid #ddd"
       }}
     >
       <ToolBar
@@ -177,7 +179,7 @@ export const PDFContainer = ({
         ref={viewerRef}
         className="pdf-container"
         style={{
-          borderRight: "1px solid #ddd"
+          
         }}
       >
         {/* Floating Panel */}
