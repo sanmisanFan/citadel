@@ -22,7 +22,7 @@ export const HighlightBbox = ({
       onClick={() => onClick(id)}
     >
       {/* Add a small square in the top-right corner */}
-      <div
+      {/*<div
         id={"highlight-bbox-square-"+id}
         className="highlight-square"
         style={{
@@ -41,7 +41,7 @@ export const HighlightBbox = ({
         }}
       >
         <b>{glyph}</b>
-      </div>
+      </div>*/}
     </div>
   );
 };

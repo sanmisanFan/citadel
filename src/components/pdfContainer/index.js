@@ -5,6 +5,7 @@ import { pdfjs, Document, Page, Outline } from 'react-pdf';
 
 import { HighlightBbox } from "../issueComps/issueHighLighter";
 import { FloatingPanel } from "../issueComps/floatPanel";
+import { ToolBar } from "./toolbar";
 
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
@@ -20,6 +21,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 export const PDFContainer = ({ 
   file, 
   highlights,
+  citation,
   currentPage,
   setCurrentPage
 }) => {
@@ -29,6 +31,7 @@ export const PDFContainer = ({
 
   const [numPages, setNumPages] = useState(null);
   const [width, setWidth] = useState(0);
+  const [pdfScale, setPdfScale] = useState(0.9);
   const [renderedPages, setRenderedPages] = useState({});
 
 
@@ -77,37 +80,6 @@ export const PDFContainer = ({
       }
     }
   };
-
-  // Function to apply highlights
-  /*const applyHighlights = () => {
-    if (!viewerRef.current) return;
-
-    // Clear existing highlights to prevent duplication
-    const existingHighlights = viewerRef.current.querySelectorAll(".highlight");
-    existingHighlights.forEach((el) => el.remove());
-
-    // Apply new highlights
-    highlights.forEach(({ page, bbox, color, id }) => {
-      const pageElement = viewerRef.current.querySelector(
-        `.react-pdf__Page[data-page-number="${page}"] .react-pdf__Page__textContent`
-      );
-
-      if (pageElement) {
-        const highlightDiv = document.createElement("div");
-        highlightDiv.id = "highlight-bbox-"+id;
-        highlightDiv.className = "highlight";
-        highlightDiv.style.position = "absolute";
-        highlightDiv.style.left = `${bbox.x * 100}%`;
-        highlightDiv.style.top = `${bbox.y * 100}%`;
-        highlightDiv.style.width = `${bbox.width * 100}%`;
-        highlightDiv.style.height = `${(bbox.height + bboxHeightOffest) * 100}%`;
-        highlightDiv.style.backgroundColor = color || "yellow";
-        highlightDiv.style.opacity = "0.3";
-
-        pageElement.appendChild(highlightDiv);
-      }
-    });
-  };*/
 
   const applyHighlightsReact = () => {
     if (!viewerRef.current) return;
@@ -164,7 +136,6 @@ export const PDFContainer = ({
 
   useEffect(() => {
     if (Object.keys(renderedPages).length === numPages) {
-      //applyHighlights();
       applyHighlightsReact();
     }
   }, [renderedPages, highlights]);
@@ -194,34 +165,45 @@ export const PDFContainer = ({
 
   return (
     <div
-      ref={viewerRef}
-      className="pdf-container"
       style={{
+        display: "flex",
+        flexDirection: "column",
+        height: '100vh',
         borderRight: "1px solid #ddd"
       }}
     >
-      {/* Floating Panel */}
-      <FloatingPanel
-        currentPage={currentPage}
+      <ToolBar
+        setPdfScale={setPdfScale}
       />
-      {/* PDF Viewer */}
-      <Document
-        file={file}
-        onLoadSuccess={onDocumentLoadSuccess}
-        className="pdf-document"
+      <div
+        ref={viewerRef}
+        className="pdf-container"
+        style={{
+          
+        }}
       >
-        {Array.from(new Array(numPages), (el, index) => (
-          <Page
-            key={`page_${index + 1}`}
-            pageNumber={index + 1}
-            className="pdf-page"
-            width={width}
-            scale={0.8}
-            onRenderSuccess={() => onPageRenderSuccess(index + 1)}
-          />
-        ))}
-      </Document>
-
+        {/* Floating Panel */}
+        <FloatingPanel
+          currentPage={currentPage}
+        />
+        {/* PDF Viewer */}
+        <Document
+          file={file}
+          onLoadSuccess={onDocumentLoadSuccess}
+          className="pdf-document"
+        >
+          {Array.from(new Array(numPages), (el, index) => (
+            <Page
+              key={`page_${index + 1}`}
+              pageNumber={index + 1}
+              className="pdf-page"
+              width={width}
+              scale={pdfScale}
+              onRenderSuccess={() => onPageRenderSuccess(index + 1)}
+            />
+          ))}
+        </Document>
+      </div>
     </div>
   );
 };

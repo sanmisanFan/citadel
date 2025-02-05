@@ -2,18 +2,18 @@ import { useState } from "react";
 
 import "./toolbar.css";
 
-export const ToolBar = ({ setPdfScaleValue }) => {
-  const [zoom, setZoom] = useState(null);
+export const ToolBar = ({ setPdfScale }) => {
+  const [zoom, setZoom] = useState(0.9);
   const [isHighlightPen, setIsHighlightPen] = useState(false);
 
   const zoomIn = () => {
     if (zoom) {
       if (zoom < 4) {
-        setPdfScaleValue(zoom + 0.1);
+        setPdfScale(zoom + 0.1);
         setZoom(zoom + 0.1);
       }
     } else {
-      setPdfScaleValue(1);
+      setPdfScale(1);
       setZoom(1);
     }
   };
@@ -21,17 +21,20 @@ export const ToolBar = ({ setPdfScaleValue }) => {
   const zoomOut = () => {
     if (zoom) {
       if (zoom > 0.2) {
-        setPdfScaleValue(zoom - 0.1);
+        setPdfScale(zoom - 0.1);
         setZoom(zoom - 0.1);
       }
     } else {
-      setPdfScaleValue(1);
+      setPdfScale(1);
       setZoom(1);
     }
   };
 
   return (
     <div className="Toolbar">
+      <span href="#">
+        <b>ReviewerAPP</b>
+      </span>
       <div className="ZoomControls">
         <button title="Zoom in" onClick={zoomIn}>+</button>
         <button title="Zoom out" onClick={zoomOut}>-</button>
