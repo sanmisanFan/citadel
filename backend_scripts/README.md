@@ -100,7 +100,7 @@ python second_hop.py
 ## Notes
 
 - Ensure you provide an **API key** for OpenAI in `raw_ref_to_json.py`.
-- Rate limits apply for OpenAI and Semantic Scholar APIs; avoid excessive queries.
+
 
 
 
