@@ -1,20 +1,87 @@
 import { useEffect, useCallback, useState, useRef } from "react";
 import { Card, Empty } from 'antd';
+import { pdfjs } from "react-pdf";
 
 import { ContentCard } from "./contentCard";
+import { SectionCard } from "./sectionCard";
+import { OverviewCard } from "./overviewCard";
+import { AnomalousListCard } from "./anomalousList";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url,
+).toString();
 
 export const VisContainer = ({
-  highlights,
+  file,
+  citation,
+  author,
+  venue,
+  anomalous,
+  anomalousColorScheme,
   currentPage,
   activeHighlight,
   setActiveHighlight
 }) => {
   const [selectedTarget, setSelectedTarget] = useState(null);
+  const [sections, setSections] = useState([]);
 
   const handleCardClick = (id) => {
     id === activeHighlight ? setActiveHighlight(null) : setActiveHighlight(id);
   };
-  //console.log('activeHighlight', activeHighlight);
+  
+
+  useEffect(() => {
+    if (!file) return; // Ensure file is loaded before calling pdfjs
+  
+    const loadSections = async () => {
+      try {
+        const loadingTask = pdfjs.getDocument(file);
+        const pdf = await loadingTask.promise;
+  
+        // Get document outline (sections)
+        const outline = await pdf.getOutline();
+        if (!outline) {
+          console.warn("No outline found in this PDF.");
+          return;
+        }
+  
+        // Resolve page numbers for each section
+        const sectionsWithPages = await Promise.all(
+          outline.map(async (item) => {
+            let pageNumber = null;
+  
+            if (item.dest) {
+              try {
+                const dest = Array.isArray(item.dest) ? item.dest[0] : item.dest;
+                const resolvedDest = await pdf.getDestination(dest);
+                const pageRef = resolvedDest ? resolvedDest[0] : dest;
+  
+                if (pageRef && pageRef.num) {
+                  const pageIndex = await pdf.getPageIndex(pageRef);
+                  pageNumber = pageIndex + 1;
+                }
+              } catch (error) {
+                console.warn(`Error resolving page for section: ${item.title}`, error);
+              }
+            }
+  
+            return {
+              title: item.title,
+              page: pageNumber,
+            };
+          })
+        );
+  
+        setSections(sectionsWithPages);
+      } catch (error) {
+        console.error("Error loading PDF sections:", error);
+      }
+    };
+  
+    loadSections();
+  }, [file]); // Runs only when `file` changes
+  
   return(
     <div
       style={{
@@ -35,15 +102,13 @@ export const VisContainer = ({
           gap: 5
         }}
       >
-       <ContentCard 
-        width={'40%'}
-        id={'sectionContainer-card'}
-        title={'Section Overview'}
+       <SectionCard 
+          sections={sections}
        />
-       <ContentCard 
-        width={'60%'}
-        id={'sectionContainer-card'}
-        title={'Information Overview'}
+       <OverviewCard 
+          anomalous={anomalous}
+          author={author}
+          venue={venue}
        />
       </div>
 
@@ -55,10 +120,11 @@ export const VisContainer = ({
           gap: 5
         }}
       >
-        <ContentCard 
-          width={'40%'}
-          id={'anomalousListContainer-card'}
-          title={'Anomalous List'}
+        <AnomalousListCard 
+          anomalous={anomalous}
+          anomalousColorScheme={anomalousColorScheme}
+          activeHighlight={activeHighlight}
+          setActiveHighlight={setActiveHighlight}
         />
         {
           selectedTarget === null ? 
@@ -83,24 +149,6 @@ export const VisContainer = ({
           />
         }
       </div>
-      
-      {/*highlights.map(e=>
-        <Card
-          key={'highlight-card-container-key-'+e.id}
-          id={'highlight-card-container-'+e.id}
-          size="small"
-          style={{
-            width: "100%",
-            padding: 10,
-            marginTop: 10,
-            marginBottom: 10,
-            backgroundColor: activeHighlight === e.id && e.color
-          }}
-          onClick={() => handleCardClick(e.id)}
-        >
-          <span>{e.redFlag.category}</span>
-        </Card>
-      )*/}
     </div>
   );
 }

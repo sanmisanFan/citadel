@@ -4,10 +4,44 @@
       "id": "venue-0",
       "type": "Journal",
       "raw_name": ["TVCG", "IEEE Transactions on Visualization and Computer Graphics"],
+      "short": "TVCG",
       "standardized_name": "IEEE Transactions on Visualization and Computer Graphics",
       "year": ["2008", "2012", "2023"],
-      "author": ["author-0", "author-1"],
-      "citation": ["citation-0", "citation-1"],
+      "author": ["author-0"],
+      "citation": ["citation-1"],
+      "venue_graph": ["venue-graph-0"]
+    },
+    {
+      "id": "venue-1",
+      "type": "Conference",
+      "raw_name": ["CHI", "ACM Conference on Human Factors in Computing Systems"],
+      "short": "CHI",
+      "standardized_name": "ACM Conference on Human Factors in Computing Systems",
+      "year": ["2008", "2012", "2023"],
+      "author": ["author-1"],
+      "citation": ["citation-2"],
+      "venue_graph": ["venue-graph-0"]
+    },
+    {
+      "id": "venue-2",
+      "type": "Conference",
+      "raw_name": ["VIS"],
+      "short": "VIS",
+      "standardized_name": "IEEE VIS",
+      "year": ["2008", "2012", "2023"],
+      "author": ["author-2"],
+      "citation": ["citation-3", "citation-5"],
+      "venue_graph": ["venue-graph-0"]
+    },
+    {
+      "id": "venue-3",
+      "type": "Journal",
+      "raw_name": ["journal-3"],
+      "short": "TiiS",
+      "standardized_name": "Journal-3",
+      "year": ["2008", "2012", "2023"],
+      "author": ["author-0", "author-1", "author-2"],
+      "citation": ["citation-4", "citation-6"],
       "venue_graph": ["venue-graph-0"]
     }
   ]

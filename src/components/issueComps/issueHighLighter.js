@@ -1,47 +1,49 @@
 export const HighlightBbox = ({
-  glyph,
-  color,
-  id,
+  issue,
+  cite,
+  anomalousColorScheme,
   onClick
 }) => {
+  const categoryColor = issue !== null 
+    ? anomalousColorScheme[issue.name]['category'][issue.category.name]['baseColor']
+    : null;
+
+  const boxColor = issue !== null 
+    ? anomalousColorScheme[issue.name]['category'][issue.category.name]['boxColor']
+    : null;
+
+  const annotationColor = issue !== null 
+    ? anomalousColorScheme[issue.name]['category'][issue.category.name]['annotationCss']
+    : null
+  
+
   return(
     <div
       className="highlight"
-      id={"highlight-bbox-"+id}
+      id={"citeAnnotation_"+cite.id}
       style={{
         position: "absolute",
         left: 0,
         top: 0,
         width: "100%",
         height: "100%",
-        backgroundColor: color,
-        //opacity: 0.3,
+        background: issue !== null ? annotationColor : '',
+        transition: "all 0.2s ease-in-out",
+        border: "2px solid transparent",
+        //opacity: 0.8,
         cursor: "pointer",
-        pointerEvents: "auto",
+        pointerEvents: "auto"
       }}
-      onClick={() => onClick(id)}
+      onClick={() => onClick(cite)}
+      onMouseEnter={(e) => {
+        e.target.style.border = "2px solid green";
+        //e.target.style.borderImage = annotationColor+" 1";
+        //e.target.style.background = "transparent";
+      }}
+      onMouseLeave={(e) => {
+        e.target.style.border = "2px solid transparent";
+      }}
     >
-      {/* Add a small square in the top-right corner */}
-      {/*<div
-        id={"highlight-bbox-square-"+id}
-        className="highlight-square"
-        style={{
-          position: "absolute",
-          top: "5px", // Position above the rect
-          right: "-25px", // Position to the right of the rect
-          width: "20px",
-          height: "15px",
-          backgroundColor: color, // Color of the square
-          borderRadius: "2px", // Optional: Rounded corners
-          cursor: "pointer",
-        }}
-        onClick={(e) => {
-          e.stopPropagation(); // Prevent the highlight click from triggering
-          alert(`Clicked on the square of highlight: ${id}`);
-        }}
-      >
-        <b>{glyph}</b>
-      </div>*/}
     </div>
   );
 };

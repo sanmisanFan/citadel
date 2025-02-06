@@ -12,10 +12,13 @@ import { VisContainer } from "./components/visContainer";
 
 /** Import TEST Data */
 import testData from "./data/identifiedIssue.json";
+import authorRaw from "./data/author.json";
+import venueRaw from "./data/venue.json";
 import citationRaw from "./data/citation.json";
+import anomalousRaw from "./data/anomalous.json";
 
 /** load test PDF - should be uploaded by user */
-import samplePDF from "./data/test.pdf";
+import samplePDF from "./data/testpaper.pdf";
 
 const issueScheme = {
   citation_issue: {
@@ -32,12 +35,57 @@ const issueScheme = {
   }
 };
 
+const anomalousColorScheme = {
+  citation: {
+    baseColor: "rgba(197,27,138,1)",
+    boxColor: "rgba(197,27,138,0.3)",
+    annotationCss: "rgba(197,27,138,0.3)",
+    category: {
+      lowRelevancy: {
+        baseColor: "rgba(247,104,161,1)",
+        boxColor: "rgba(247,104,161,0.3)",
+        annotationCss: "linear-gradient(135deg, rgba(197,27,138,0.5) 50%, rgba(247,104,161,0.5) 50%)",
+        divCss: "linear-gradient(135deg, rgba(197,27,138,1) 50%, rgba(247,104,161,1) 50%)"
+      },
+      retractedPaper: {
+        baseColor: "rgba(251,180,185,1)",
+        boxColor: "rgba(251,180,185,0.3)",
+        annotationCss: "linear-gradient(135deg, rgba(197,27,138,0.5) 50%, rgba(251,180,185,0.5) 50%)",
+        divCss: "linear-gradient(135deg, rgba(197,27,138,1) 50%, rgba(251,180,185,1) 50%)",
+      }
+    }
+  },
+  statistical: {
+    baseColor: "rgba(217,95,14,1)",
+    boxColor: "rgba(217,95,14,0.3)",
+    annotationCss: "rgba(217,95,14,0.3)",
+    category: {
+      testFailure: {
+        baseColor: "rgba(254,196,79,1)",
+        boxColor: "rgba(254,196,79,0.3)",
+        annotationCss: "linear-gradient(135deg, rgba(217,95,14,0.3) 50%, rgba(254,196,79,0.3) 50%)",
+        divCss: "linear-gradient(135deg, rgba(217,95,14,1) 50%, rgba(254,196,79,1) 50%)"
+      },
+      valueInconsistency: {
+        baseColor: "rgba(255,247,188,1)",
+        boxColor: "rgba(255,247,188,0.3)",
+        annotationCss: "linear-gradient(135deg, rgba(217,95,14,0.3) 50%, rgba(255,247,188,0.3) 50%)",
+        divCss: "linear-gradient(135deg, rgba(217,95,14,1) 50%, rgba(255,247,188,1) 50%)"
+      }
+    }
+  },
+  other: {} // other anomalous such as the figure that has never been referenced
+};
+
 function App() {
   // global init
   const [pdfData, setPdfData] = useState(null);
 
   const [highlights, setHighlights] = useState([]);
   const [citation, setCitation] = useState([]);
+  const [anomalous, setAnomalous] = useState([]);
+  const [author, setAuthor] = useState([]);
+  const [venue, setVenue] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [activeHighlight, setActiveHighlight] = useState(null);
@@ -46,6 +94,24 @@ function App() {
   const initCitations = () => {
     const citationsList = JSON.parse(JSON.stringify(citationRaw.citations));
     setCitation(citationsList);
+  };
+
+  /** init anomalous list */
+  const initAnomalous = () => {
+    const anomalousList = JSON.parse(JSON.stringify(anomalousRaw.identifiedIssue));
+    setAnomalous(anomalousList);
+  };
+
+  /** init author list */
+  const initAuthor = () => {
+    const authorList = JSON.parse(JSON.stringify(authorRaw.authors));
+    setAuthor(authorList);
+  };
+
+   /** init author list */
+   const initVenue = () => {
+    const venueList = JSON.parse(JSON.stringify(venueRaw.venues));
+    setVenue(venueList);
   };
 
   const initHighlights = () => {
@@ -74,6 +140,18 @@ function App() {
     initCitations();
   }, [citationRaw]);
 
+  useEffect(() => {
+    initAnomalous();
+  }, [anomalousRaw]);
+
+  useEffect(() => {
+    initAnomalous();
+  }, [authorRaw]);
+
+  useEffect(() => {
+    initVenue();
+  }, [venueRaw]);
+
   //const { Header, Content } = Layout;
   
   return (
@@ -85,13 +163,20 @@ function App() {
                 file={pdfData}
                 highlights={highlights}
                 citation={citation}
+                anomalous={anomalous}
+                anomalousColorScheme={anomalousColorScheme}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
               />
             </Col>
             <Col span={10}>
               <VisContainer
-                highlights={highlights}
+                file={pdfData}
+                citation={citation}
+                author={author}
+                venue={venue}
+                anomalous={anomalous}
+                anomalousColorScheme={anomalousColorScheme}
                 currentPage={currentPage}
                 activeHighlight={activeHighlight}
                 setActiveHighlight={setActiveHighlight}
