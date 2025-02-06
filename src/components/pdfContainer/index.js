@@ -1,7 +1,9 @@
 import { useEffect, useCallback, useState, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { pdfjs, Document, Page, Outline } from 'react-pdf';
-//import { extractTextFromPage, findSentenceCoordinates } from "../../util/pdfUtil";
+//import { extractAndHighlightCitation } from "../../util/pdfUtil";
+
+import { citationHighlight } from "../../util/annotationCtrl";
 
 import { HighlightBbox } from "../issueComps/issueHighLighter";
 import { FloatingPanel } from "../issueComps/floatPanel";
@@ -22,6 +24,8 @@ export const PDFContainer = ({
   file, 
   highlights,
   citation,
+  anomalous,
+  anomalousColorScheme,
   currentPage,
   setCurrentPage
 }) => {
@@ -31,7 +35,7 @@ export const PDFContainer = ({
 
   const [numPages, setNumPages] = useState(null);
   const [width, setWidth] = useState(0);
-  const [pdfScale, setPdfScale] = useState(0.9);
+  const [pdfScale, setPdfScale] = useState(1);
   const [renderedPages, setRenderedPages] = useState({});
 
 
@@ -135,10 +139,17 @@ export const PDFContainer = ({
   };
 
   useEffect(() => {
+    // render anomalous highlight
     if (Object.keys(renderedPages).length === numPages) {
-      applyHighlightsReact();
+      //applyHighlightsReact();
     }
   }, [renderedPages, highlights]);
+
+  useEffect(() => {
+    if (Object.keys(renderedPages).length === numPages) {
+      citationHighlight(viewerRef, citation, anomalous, anomalousColorScheme);
+    }
+  }, [citation]);
 
   useEffect(() => {
     if (viewerRef.current) {
@@ -158,7 +169,8 @@ export const PDFContainer = ({
     const loadAndExtract = async () => {
       const loadingTask = pdfjs.getDocument(file);
       const pdf = await loadingTask.promise;
-      await extractAndHighlight(pdf);
+      //await extractAndHighlight(pdf, "[14]");
+      await extractAndHighlightCitation(pdf, "[17]");
     };
     loadAndExtract();
   }, [file]);*/
@@ -199,6 +211,7 @@ export const PDFContainer = ({
               className="pdf-page"
               width={width}
               scale={pdfScale}
+              renderAnnotationLayer={false}
               onRenderSuccess={() => onPageRenderSuccess(index + 1)}
             />
           ))}

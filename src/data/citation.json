@@ -1,15 +1,16 @@
 {
   "citations": [
     {
-      "id": "citation-17",
-      "cite_number": 17,
-      "page": 1,
-      "author": ["author-0", "author-1", "author-2"],
+      "id": "citation-1",
+      "cite_number": 1,
+      "author": [
+        "author-0"
+      ],
       "venue": "venue-0",
       "year": 2008,
       "title": "paper title",
-      "source": "A. Aron, Aron E. N., and D. Smollan. 1992. Inclusion of other in the self scale and the structure of interpersonal closeness. Journal of Personality and Social Psychology 63, 4 (1992), 596-612",
-      "doi": "https://doi.org/10.1037/0022-3514.63.4.596",
+      "source": "citation source",
+      "doi": "doi link",
       "layer": 1,
       "cite_positions": [
         {
@@ -17,156 +18,199 @@
           "has_issue": true,
           "issues": ["issue-0"],
           "bbox": {
-            "x": 0.3539419735179228,
-            "y": 0.2664966775913431,
-            "width": 0.02657906526054432,
-            "height": 0.015158373900134154
+            "x": 0.1952340267073355,
+            "y": 0.6368908352322049,
+            "width": 0.020587995317247174,
+            "height": 0.014705773555871212
           }
         }
-      ], 
-      "has_issue": true, 
-      "citation_graph": ["citation-graph-0"]
+      ],
+      "has_issue": true,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
     },
     {
-      "id": "citation-11",
-      "cite_number": 11,
-      "page": 1,
-      "author": ["author-0", "author-1", "author-2"],
-      "venue": "venue-0",
+      "id": "citation-2",
+      "cite_number": 2,
+      "author": [
+        "author-1"
+      ],
+      "venue": "venue-1",
       "year": 2008,
       "title": "paper title",
-      "source": "A. Aron, Aron E. N., and D. Smollan. 1992. Inclusion of other in the self scale and the structure of interpersonal closeness. Journal of Personality and Social Psychology 63, 4 (1992), 596-612",
-      "doi": "https://doi.org/10.1037/0022-3514.63.4.596",
+      "source": "citation source",
+      "doi": "doi link",
       "layer": 1,
       "cite_positions": [
         {
           "page": 1,
           "has_issue": true,
-          "issues": ["issue-0"],
-          "x": 0.0881192824419807,
-          "y": 0.25266080914121686,
-          "width": 0.02687740949244281,
-          "height": 0.015158373900134154
+          "issues": [
+            "issue-0"
+          ],
+          "bbox": {
+            "x": 0.22154735223608077,
+            "y": 0.6368908352322049,
+            "width": 0.020587995317247174,
+            "height": 0.014705773555871212
+          }
         }
       ],
       "has_issue": true,
-      "issues": ["issue-0"],
-      "citation_graph": ["citation-graph-0"]
-    },
-    {
-      "id": "citation-30",
-      "cite_number": 30,
-      "page": 1,
-      "author": ["author-0", "author-1", "author-2"],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "A. Aron, Aron E. N., and D. Smollan. 1992. Inclusion of other in the self scale and the structure of interpersonal closeness. Journal of Personality and Social Psychology 63, 4 (1992), 596-612",
-      "doi": "https://doi.org/10.1037/0022-3514.63.4.596",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "x": 0.5246633891186683,
-          "y": 0.6318426806517322,
-          "width": 0.0276638853783701,
-          "height": 0.015158335367838541
-        }
-      ],
-      "has_issue": true,
-      "issues": ["issue-0"],
-      "citation_graph": ["citation-graph-0"]
-    },
-    {
-      "id": "citation-14",
-      "cite_number": 14,
-      "page": 1,
-      "author": ["author-0", "author-1", "author-2"],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "A. Aron, Aron E. N., and D. Smollan. 1992. Inclusion of other in the self scale and the structure of interpersonal closeness. Journal of Personality and Social Psychology 63, 4 (1992), 596-612",
-      "doi": "https://doi.org/10.1037/0022-3514.63.4.596",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "x": 0.7654985415390114,
-          "y": 0.5626570961692117,
-          "width": 0.026633368598090276,
-          "height": 0.015158335367838541
-        }
-      ],
-      "has_issue": true,
-      "issues": ["issue-0"],
-      "citation_graph": ["citation-graph-0"]
+      "citation_graph": [
+        "citation-graph-0"
+      ]
     },
     {
       "id": "citation-3",
       "cite_number": 3,
-      "page": 1,
-      "author": ["author-0", "author-1", "author-2"],
-      "venue": "venue-0",
+      "author": [
+        "author-2"
+      ],
+      "venue": "venue-2",
       "year": 2008,
       "title": "paper title",
-      "source": "A. Aron, Aron E. N., and D. Smollan. 1992. Inclusion of other in the self scale and the structure of interpersonal closeness. Journal of Personality and Social Psychology 63, 4 (1992), 596-612",
-      "doi": "https://doi.org/10.1037/0022-3514.63.4.596",
+      "source": "citation source",
+      "doi": "doi link",
       "layer": 1,
       "cite_positions": [
         {
-          "x": 0.8643664191750919,
-          "y": 0.5349840877032039,
-          "width": 0.018981833863102534,
-          "height": 0.015158335367838541
+          "page": 1,
+          "has_issue": true,
+          "issues": [
+            "issue-1"
+          ],
+          "bbox": {
+            "x": 0.6951920120244507,
+            "y": 0.7971686160925663,
+            "width": 0.01911519998367357,
+            "height": 0.014705773555871212
+          }
         }
       ],
       "has_issue": true,
-      "issues": ["issue-0"],
-      "citation_graph": ["citation-graph-0"]
+      "citation_graph": [
+        "citation-graph-0"
+      ]
     },
     {
-      "id": "citation-20",
-      "cite_number": 20,
-      "page": 1,
-      "author": ["author-0", "author-1", "author-2"],
-      "venue": "venue-0",
+      "id": "citation-4",
+      "cite_number": 4,
+      "author": [
+        "author-0",
+        "author-1",
+        "author-2"
+      ],
+      "venue": "venue-3",
       "year": 2008,
       "title": "paper title",
-      "source": "A. Aron, Aron E. N., and D. Smollan. 1992. Inclusion of other in the self scale and the structure of interpersonal closeness. Journal of Personality and Social Psychology 63, 4 (1992), 596-612",
-      "doi": "https://doi.org/10.1037/0022-3514.63.4.596",
+      "source": "citation source",
+      "doi": "doi link",
       "layer": 1,
       "cite_positions": [
         {
-          "x": 0.5588364943959354,
-          "y": 0.4720876289136482,
-          "width": 0.0276638853783701,
-          "height": 0.015158335367838541
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.7240506786639066,
+            "y": 0.7971686160925663,
+            "width": 0.01911519998367357,
+            "height": 0.014705773555871212
+          }
         }
       ],
-      "has_issue": true,
-      "issues": ["issue-0"],
-      "citation_graph": ["citation-graph-0"]
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
     },
     {
-      "id": "citation-8",
-      "cite_number": 8,
-      "page": 2,
-      "author": ["author-0", "author-1", "author-2"],
-      "venue": "venue-0",
+      "id": "citation-5",
+      "cite_number": 5,
+      "author": [
+        "author-2"
+      ],
+      "venue": "venue-2",
       "year": 2008,
       "title": "paper title",
-      "source": "A. Aron, Aron E. N., and D. Smollan. 1992. Inclusion of other in the self scale and the structure of interpersonal closeness. Journal of Personality and Social Psychology 63, 4 (1992), 596-612",
-      "doi": "https://doi.org/10.1037/0022-3514.63.4.596",
+      "source": "citation source",
+      "doi": "doi link",
       "layer": 1,
       "cite_positions": [
         {
-          "x": 0.42380743089065054,
-          "y": 0.3159246733694365,
-          "width": 0.0186970529992596,
-          "height": 0.015158373900134154
+          "page": 1,
+          "has_issue": false,
+          "issues": [
+          ],
+          "bbox": {
+            "x": 0.7559093453033626,
+            "y": 0.7971686160925663,
+            "width": 0.01911519998367357,
+            "height": 0.014705773555871212
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.3392125913000834,
+            "y": 0.18519862011225538,
+            "width": 0.020587990954031354,
+            "height": 0.014705812088166825
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-6",
+      "cite_number": 6,
+      "author": [
+        "author-0",
+        "author-1"
+      ],
+      "venue": "venue-3",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "layer": 1,
+      "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": true,
+          "issues": [
+            "issue-2"
+          ],
+          "bbox": {
+            "x": 0.24719421738625465,
+            "y": 0.7101749458698311,
+            "width": 0.02205856975053205,
+            "height": 0.014705773555871212
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.8812203667002827,
+            "y": 0.4347929906363439,
+            "width": 0.02017717216009668,
+            "height": 0.014705812088166825
+          }
         }
       ],
       "has_issue": true,
-      "issues": ["issue-0"],
-      "citation_graph": ["citation-graph-0"]
+      "citation_graph": [
+        "citation-graph-0"
+      ]
     }
   ]
 }
