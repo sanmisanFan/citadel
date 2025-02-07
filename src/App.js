@@ -167,6 +167,8 @@ function App() {
                 anomalousColorScheme={anomalousColorScheme}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
+                activeHighlight={activeHighlight}
+                setActiveHighlight={setActiveHighlight}
               />
             </Col>
             <Col span={10}>

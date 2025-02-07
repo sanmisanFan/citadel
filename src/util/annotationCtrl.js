@@ -3,9 +3,16 @@ import { HighlightBbox } from "../components/issueComps/issueHighLighter";
 
 
 
-export const citationHighlight = (viewerRef, citation, anomalous, anomalousColorScheme) => {
+export const citationHighlight = (
+  viewerRef, 
+  citation, 
+  anomalous, 
+  anomalousColorScheme,
+  activeHighlight,
+  setActiveHighlight
+) => {
   const bboxHeightOffest = 0.003;
-
+  console.log('activeHighlight', activeHighlight);
   if (!viewerRef.current) return;
 
   const viewer = viewerRef.current;
@@ -23,7 +30,6 @@ export const citationHighlight = (viewerRef, citation, anomalous, anomalousColor
         // get each citation
         const id = e.id;
         const citePos = e.cite_positions;
-        const anomalousFlag = e.has_issue;
 
         // Filter citations for the current page
         citePos
@@ -57,8 +63,9 @@ export const citationHighlight = (viewerRef, citation, anomalous, anomalousColor
             <HighlightBbox
               issue={issue}
               cite={cite}
+              citeObj={e}
               anomalousColorScheme={anomalousColorScheme}
-
+              activeHighlight={activeHighlight}
               onClick={(highlightId) => console.log(highlightId)}
             />
           );

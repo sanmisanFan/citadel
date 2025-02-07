@@ -27,7 +27,9 @@ export const PDFContainer = ({
   anomalous,
   anomalousColorScheme,
   currentPage,
-  setCurrentPage
+  setCurrentPage,
+  activeHighlight,
+  setActiveHighlight
 }) => {
   //const targetSentence = "understand the experience of people that were there [3]";
   const bboxHeightOffest = 0.005;
@@ -147,9 +149,16 @@ export const PDFContainer = ({
 
   useEffect(() => {
     if (Object.keys(renderedPages).length === numPages) {
-      citationHighlight(viewerRef, citation, anomalous, anomalousColorScheme);
+      citationHighlight(
+        viewerRef, 
+        citation, 
+        anomalous, 
+        anomalousColorScheme,
+        activeHighlight,
+        setActiveHighlight
+      );
     }
-  }, [citation]);
+  }, [renderedPages, citation]);
 
   useEffect(() => {
     if (viewerRef.current) {
