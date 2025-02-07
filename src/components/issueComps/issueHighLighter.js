@@ -1,7 +1,11 @@
+import { Popover } from "antd";
+
 export const HighlightBbox = ({
   issue,
   cite,
+  citeObj,
   anomalousColorScheme,
+  activeHighlight,
   onClick
 }) => {
   const categoryColor = issue !== null 
@@ -14,12 +18,26 @@ export const HighlightBbox = ({
 
   const annotationColor = issue !== null 
     ? anomalousColorScheme[issue.name]['category'][issue.category.name]['annotationCss']
-    : null
-  
+    : null;
+
+  const popContent = (
+    <div
+      style={{
+        maxWidth: 400
+      }}
+    >
+      <p style={{margin: 0}}>{citeObj.source}</p>
+    </div>
+  );
+
+  console.log(activeHighlight, cite.issues[0]);
 
   return(
+    <Popover 
+      content={popContent}
+    >
     <div
-      className="highlight"
+      //className="highlight"
       id={"citeAnnotation_"+cite.id}
       style={{
         position: "absolute",
@@ -28,22 +46,21 @@ export const HighlightBbox = ({
         width: "100%",
         height: "100%",
         background: issue !== null ? annotationColor : '',
-        transition: "all 0.2s ease-in-out",
-        border: "2px solid transparent",
-        //opacity: 0.8,
+        //transition: "all 0.2s ease-out",
+        border: activeHighlight === cite.issues[0] && "3px solid blue",
+        opacity: 0.8,
         cursor: "pointer",
         pointerEvents: "auto"
       }}
-      onClick={() => onClick(cite)}
+      onClick={() => onClick(cite.issues[0])}
       onMouseEnter={(e) => {
-        e.target.style.border = "2px solid green";
-        //e.target.style.borderImage = annotationColor+" 1";
-        //e.target.style.background = "transparent";
+        e.target.style.border = "3px solid blue";
       }}
       onMouseLeave={(e) => {
-        e.target.style.border = "2px solid transparent";
+        e.target.style.border = "";
       }}
     >
     </div>
+    </Popover>
   );
 };

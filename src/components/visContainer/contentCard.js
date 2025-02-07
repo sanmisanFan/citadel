@@ -7,9 +7,10 @@ export const ContentCard = ({
   width,
   id,
   title,
-  headComp=null
+  activeHighlight,
+  anomalous
 }) => {
-  
+  //console.log(activeHighlight);
   return(
     <Card
       id={id}
@@ -20,7 +21,7 @@ export const ContentCard = ({
       }}
       //className="custom-card"
     >
-
+    {JSON.stringify(anomalous.filter(e=>e.id === activeHighlight)[0])}
     </Card>
   );
 };

@@ -127,7 +127,7 @@ export const VisContainer = ({
           setActiveHighlight={setActiveHighlight}
         />
         {
-          selectedTarget === null ? 
+          activeHighlight === null ? 
           <Card
             size="small"
             style={{
@@ -145,7 +145,9 @@ export const VisContainer = ({
           <ContentCard 
             width={'60%'}
             id={'anomalousContainer-card'}
-            title={'Information Overview'}
+            title={'Citation Anomalous'}
+            activeHighlight={activeHighlight}
+            anomalous={anomalous}
           />
         }
       </div>
