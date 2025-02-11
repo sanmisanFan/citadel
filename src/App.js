@@ -55,7 +55,7 @@ const anomalousColorScheme = {
       }
     }
   },
-  statistical: {
+  statistic: {
     baseColor: "rgba(217,95,14,1)",
     boxColor: "rgba(217,95,14,0.3)",
     annotationCss: "rgba(217,95,14,0.3)",
