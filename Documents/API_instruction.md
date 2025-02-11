@@ -216,3 +216,10 @@ sequenceDiagram
     B->>F: Respond of the data objects
 ```
 
+### The API format:
+We have two choices for the API requests
+1. One API to wrap up all 4 data objects (recommend)
+e.g. `\getProcessedData` in a flask server
+
+2. Four APIs, each for one data object
+e.g. `\getAnomalous`, `\getAuthor`, `\getCitation`, `\getVenue`, etc.
