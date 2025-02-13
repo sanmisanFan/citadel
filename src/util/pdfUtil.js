@@ -98,22 +98,21 @@ export async function loadPDF(path) {
 };
 
 
-export const extractAndHighlight = async (pdf, targetSentence) => {
-  console.log(pdf);
-  const page = await pdf.getPage(1);
+export const extractAndHighlight = async (pdf, targetSentence, pageNumber = 1) => {
+  const page = await pdf.getPage(pageNumber);
   const viewport = page.getViewport({ scale: 1 });
 
-  const textItems = await extractTextFromPage(pdf, 1); // Extract text from the first page
+  const textItems = await extractTextFromPage(pdf, pageNumber); // Extract text from the first page
   const coordinates = findSentenceCoordinates(textItems, targetSentence);
 
-  const normalizedCoordinates = {
+  const normalizedCoordinates = coordinates!== null ? {
     x: coordinates.x / viewport.width,
     y: (viewport.height - coordinates.y - coordinates.height) / viewport.height, // Flip y-axis
     width: coordinates.width / viewport.width,
     height: coordinates.height / viewport.height,
-  };
-  console.log('normalizedCoordinates', normalizedCoordinates);
-  console.log('coordinates', coordinates);
+  } : null;
+  console.log('normalizedCoordinates', normalizedCoordinates, targetSentence, pageNumber);
+  
 };
 
 // Function to extract and highlight a specific citation on a given page
