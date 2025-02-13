@@ -148,6 +148,7 @@ export const PDFContainer = ({
   }, [renderedPages, highlights]);
 
   useEffect(() => {
+    console.log(activeHighlight);
     if (Object.keys(renderedPages).length === numPages) {
       citationHighlight(
         viewerRef, 

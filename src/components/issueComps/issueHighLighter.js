@@ -1,6 +1,7 @@
 import { Popover } from "antd";
 
 export const HighlightBbox = ({
+  boxid,
   issue,
   cite,
   citeObj,
@@ -30,25 +31,24 @@ export const HighlightBbox = ({
     </div>
   );
 
-  console.log(activeHighlight, cite.issues[0]);
-
   return(
     <Popover 
       content={popContent}
     >
     <div
       //className="highlight"
-      id={"citeAnnotation_"+cite.id}
+      id={"citeAnnotation_"+boxid}
       style={{
         position: "absolute",
         left: 0,
         top: 0,
         width: "100%",
         height: "100%",
-        background: issue !== null ? annotationColor : '',
+        background: issue !== null ? boxColor : '',
         //transition: "all 0.2s ease-out",
         border: activeHighlight === cite.issues[0] && "3px solid blue",
-        opacity: 0.8,
+        borderRadius: 8,
+        //opacity: 0.5,
         cursor: "pointer",
         pointerEvents: "auto"
       }}

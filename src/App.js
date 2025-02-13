@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { pdfjs } from "react-pdf";
 import { Col, Row, Spin} from 'antd';
 import 'antd/dist/reset.css';
 import './App.css';
@@ -8,7 +9,7 @@ import { PDFContainer } from "./components/pdfContainer";
 import { VisContainer } from "./components/visContainer";
 
 /** Import utilitie functions */
-//EMPTY
+import { extractAndHighlightCitation } from "./util/pdfUtil";
 
 /** Import TEST Data */
 import testData from "./data/identifiedIssue.json";
@@ -77,6 +78,11 @@ const anomalousColorScheme = {
   other: {} // other anomalous such as the figure that has never been referenced
 };
 
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url,
+).toString();
+
 function App() {
   // global init
   const [pdfData, setPdfData] = useState(null);
@@ -86,6 +92,7 @@ function App() {
   const [anomalous, setAnomalous] = useState([]);
   const [author, setAuthor] = useState([]);
   const [venue, setVenue] = useState([]);
+  const [sentenceAnnotationList, setSentenceAnnotationList] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [activeHighlight, setActiveHighlight] = useState(null);
@@ -96,9 +103,39 @@ function App() {
     setCitation(citationsList);
   };
 
+  const loadAndExtract = async (sentence, page) => {
+    const loadingTask = pdfjs.getDocument(pdfData);
+    const pdf = await loadingTask.promise;
+    //await extractAndHighlight(pdf, "[14]");
+    return await extractAndHighlightCitation(pdf, sentence, page);
+  };
+
   /** init anomalous list */
   const initAnomalous = () => {
     const anomalousList = JSON.parse(JSON.stringify(anomalousRaw.identifiedIssue));
+    const _sentenceHighlights = [];
+    anomalousList.forEach(e=>{
+      const issueID = e.id;
+      const issueName = e.displayName;
+      const issueCategory = e.category.displayName;
+      const page = e.page;
+      const baseColor = anomalousColorScheme[e.name]['category'][e.category.name]['baseColor'];
+      const boxColor = anomalousColorScheme[e.name]['category'][e.category.name]['boxColor'];
+      // construct sentence highlight object
+      const sentenceHighlight = {
+        issueID: issueID,
+        issueName: issueName,
+        issueCategory: issueCategory,
+        baseColor: baseColor,
+        boxColor: boxColor,
+      };
+      e.sentence.forEach((se, se_index)=>{
+        const sentenceCoords = loadAndExtract(se, page);
+        sentenceCoords.length > 0 && console.log(se_index, se, sentenceCoords)
+        
+      });
+
+    });
     setAnomalous(anomalousList);
   };
 
@@ -141,11 +178,11 @@ function App() {
   }, [citationRaw]);
 
   useEffect(() => {
-    initAnomalous();
-  }, [anomalousRaw]);
+    pdfData !== null && initAnomalous();
+  }, [anomalousRaw, pdfData]);
 
   useEffect(() => {
-    initAnomalous();
+    initAuthor();
   }, [authorRaw]);
 
   useEffect(() => {
