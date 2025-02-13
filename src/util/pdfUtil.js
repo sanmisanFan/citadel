@@ -134,7 +134,7 @@ export const extractAndHighlightCitation = async (pdf, targetCitation, pageNumbe
       height: citation.height / viewport.height,
     }));
   
-    console.log('Normalized citation coordinates:', normalizedCitations);
+    //console.log('Normalized citation coordinates:', normalizedCitations, targetCitation);
     return normalizedCitations;
   } catch (error) {
     console.error('Error in extractAndHighlightCitation:', error);

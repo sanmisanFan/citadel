@@ -1,8 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { HighlightBbox } from "../components/issueComps/issueHighLighter";
 
-
-
 export const citationHighlight = (
   viewerRef, 
   citation, 
@@ -61,6 +59,7 @@ export const citationHighlight = (
           const root = createRoot(highlightContainer);
           root.render(
             <HighlightBbox
+              boxid={id}
               issue={issue}
               cite={cite}
               citeObj={e}
@@ -75,4 +74,8 @@ export const citationHighlight = (
       });
     }
   });
+};
+
+export const anomalousAnnotation = () => {
+  
 };
