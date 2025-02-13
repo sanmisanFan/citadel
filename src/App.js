@@ -9,7 +9,7 @@ import { PDFContainer } from "./components/pdfContainer";
 import { VisContainer } from "./components/visContainer";
 
 /** Import utilitie functions */
-import { extractAndHighlightCitation } from "./util/pdfUtil";
+import { extractAndHighlight } from "./util/pdfUtil";
 
 /** Import TEST Data */
 import testData from "./data/identifiedIssue.json";
@@ -103,15 +103,20 @@ function App() {
     setCitation(citationsList);
   };
 
-  const loadAndExtract = async (sentence, page) => {
+  const loadAndExtract = async (sentenceList, page) => {
     const loadingTask = pdfjs.getDocument(pdfData);
     const pdf = await loadingTask.promise;
-    //await extractAndHighlight(pdf, "[14]");
-    return await extractAndHighlightCitation(pdf, sentence, page);
+    return await extractAndHighlight(pdf, sentenceList, page);
   };
 
   /** init anomalous list */
   const initAnomalous = () => {
+    const anomalousList = JSON.parse(JSON.stringify(anomalousRaw.identifiedIssue));
+    setAnomalous(anomalousList);
+  };
+
+  /** extract */
+  const initSentenceHightlights = () => {
     const anomalousList = JSON.parse(JSON.stringify(anomalousRaw.identifiedIssue));
     const _sentenceHighlights = [];
     anomalousList.forEach(e=>{
@@ -121,6 +126,7 @@ function App() {
       const page = e.page;
       const baseColor = anomalousColorScheme[e.name]['category'][e.category.name]['baseColor'];
       const boxColor = anomalousColorScheme[e.name]['category'][e.category.name]['boxColor'];
+      const sentenceList = e.sentence;
       // construct sentence highlight object
       const sentenceHighlight = {
         issueID: issueID,
@@ -129,14 +135,12 @@ function App() {
         baseColor: baseColor,
         boxColor: boxColor,
       };
-      e.sentence.forEach((se, se_index)=>{
-        const sentenceCoords = loadAndExtract(se, page);
-        sentenceCoords.length > 0 && console.log(se_index, se, sentenceCoords)
-        
+      e.sentence.forEach(ee=>{
+        loadAndExtract(ee, page);
       });
 
     });
-    setAnomalous(anomalousList);
+    //setSentenceAnnotationList(_sentenceHighlights);
   };
 
   /** init author list */
@@ -178,7 +182,11 @@ function App() {
   }, [citationRaw]);
 
   useEffect(() => {
-    pdfData !== null && initAnomalous();
+    initAnomalous();
+  }, [anomalousRaw]);
+
+  useEffect(() => {
+    pdfData !== null && initSentenceHightlights();
   }, [anomalousRaw, pdfData]);
 
   useEffect(() => {

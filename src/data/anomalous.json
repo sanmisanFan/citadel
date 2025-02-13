@@ -17,10 +17,42 @@
       "page": 1,
       "section": "Introduction",
       "sentence": [
-        "neural networks",
-        "data, where millions of images are labeled to train the deep",
-        "often hinges on the availability of a large number of labeled",
-        "The success of deep learning"
+        {
+          "sentence": "neural networks",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.41175980392156863,
+            "x": 0.0784313725490196,
+            "y": 0.6362070707070708
+          }
+        },
+        {
+          "sentence": "data, where millions of images are labeled to train the deep",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.4117598039215685,
+            "x": 0.0784313725490196,
+            "y": 0.6216363636363638
+          }
+        },
+        {
+          "sentence":  "often hinges on the availability of a large number of labeled",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.41175980392156863,
+            "x": 0.0784313725490196,
+            "y": 0.6070656565656566
+          }
+        },
+        {
+          "sentence":  "The success of deep learning",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.4117598039215684,
+            "x": 0.0784313725490196,
+            "y": 0.5924949494949495
+          }
+        }
       ]
     },
     {
@@ -40,9 +72,33 @@
       "page": 1,
       "section": "Introduction",
       "sentence": [
-        "e.g., meta-learning",
-        "semantic knowledge or the knowledge of learning",
-        "Both aim to transfer the"
+        {
+          "sentence":  "e.g., meta-learning",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.3631887254901959,
+            "x": 0.5583856209150326,
+            "y": 0.7964848484848486
+          }
+        },
+        {
+          "sentence": "semantic knowledge or the knowledge of learning",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.36318872549019593,
+            "x": 0.5583856209150326,
+            "y": 0.7819141414141415
+          }
+        },
+        {
+          "sentence": "Both aim to transfer the",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.36318872549019593,
+            "x": 0.5583856209150326,
+            "y": 0.7673434343434344
+          }
+        }
       ]
     },
     {
@@ -59,9 +115,33 @@
       "page": 2,
       "section": "Introduction",
       "sentence": [
-        "Hinton's seminal work",
-        "Transformation Equivariant Representations(TER) pioneered in",
-        "First, we will review the emerging principle of"
+        {
+          "sentence": "Hinton’s seminal work",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.4117598039215686,
+            "x": 0.0784313725490196,
+            "y": 0.7094911616161618
+          }
+        },
+        {
+          "sentence": "Transformation Equivariant Representations",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.28059150326797394,
+            "x": 0.0784313725490196,
+            "y": 0.6949204545454548
+          }
+        },
+        {
+          "sentence": "First, we will review the emerging principle of",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.41175980392156863,
+            "x": 0.0784313725490196,
+            "y": 0.6803497474747477
+          }
+        }
       ]
     }
   ]

@@ -48,10 +48,42 @@ There are **four** major objects that will be requested from the backend service
       "page": 1, // <int> the pape on paper PDF for this issue
       "section": "Introduction", // <string> the section in the paper this issue is identified
       "sentence": [ // Array<string> The sentences related to the detected issue, breaked based on lines in the PDF
-        "neural networks", // line 1
-        "data, where millions of images are labeled to train the deep", // line 2
-        "often hinges on the availability of a large number of labeled", // line 3
-        "The success of deep learning" // the last line before the detected issue
+       {
+          "sentence": "neural networks",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.41175980392156863,
+            "x": 0.0784313725490196,
+            "y": 0.6362070707070708
+          }
+        },
+        {
+          "sentence": "data, where millions of images are labeled to train the deep",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.4117598039215685,
+            "x": 0.0784313725490196,
+            "y": 0.6216363636363638
+          }
+        },
+        {
+          "sentence":  "often hinges on the availability of a large number of labeled",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.41175980392156863,
+            "x": 0.0784313725490196,
+            "y": 0.6070656565656566
+          }
+        },
+        {
+          "sentence":  "The success of deep learning",
+          "bbox": {
+            "height": 0.011994949494949494,
+            "width": 0.4117598039215684,
+            "x": 0.0784313725490196,
+            "y": 0.5924949494949495
+          }
+        }
       ]
     },
     // Append other detected anomalous object
