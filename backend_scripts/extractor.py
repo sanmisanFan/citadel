@@ -35,7 +35,7 @@ if __name__ == "__main__":
     # Define arguments
     pdf_path = "test.pdf"  # Replace with the path to your PDF
     output_dir = "outputs"  # Directory to save output files
-    output_format = "markdown"  # Desired output format
+    output_format = "json"  # Desired output format
 
     # Run the command
     run_marker_single(pdf_path, output_dir, output_format)

@@ -1,0 +1,3647 @@
+{
+  "citations": [
+    {
+      "id": "abd1c342495432171beb7ca8fd9551ef13cbd0ff",
+      "cite_number": 1,
+      "author": [
+        "2064160",
+        "1701686",
+        "1695689"
+      ],
+      "venue": "Communications of the ACM",
+      "year": 2012,
+      "title": "ImageNet classification with deep convolutional neural networks",
+      "source": "",
+      "doi": "10.1145/3065386",
+      "hop": 1,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "2c03df8b48bf3fa39054345bafabfeff15bfd11d",
+      "cite_number": 2,
+      "author": [
+        "39353098",
+        "1771551",
+        "3080683",
+        "J._Sun"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2015,
+      "title": "Deep Residual Learning for Image Recognition",
+      "source": "",
+      "doi": "10.1109/cvpr.2016.90",
+      "hop": 1,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
+      "cite_number": 3,
+      "author": [
+        "46881670",
+        "1689992",
+        "1736651"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2017,
+      "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+      "source": "",
+      "doi": "",
+      "hop": 1,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "06f0fe16fcb8f80bf88746c5ef6d3780531918ab",
+      "cite_number": 4,
+      "author": [
+        "34902211",
+        "2272096",
+        "145103012"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2018,
+      "title": "Task Agnostic Meta-Learning for Few-Shot Learning",
+      "source": "",
+      "doi": "10.1109/CVPR.2019.01199",
+      "hop": 1,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "2ff8c20ff38df9bfa2c89e8e3f8624598a7ea44f",
+      "cite_number": 5,
+      "author": [
+        "32222907",
+        "50080100",
+        "3035233",
+        "2071921",
+        "144078686",
+        "48920094"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2019,
+      "title": "Learning to Self-Train for Semi-Supervised Few-Shot Classification",
+      "source": "",
+      "doi": "",
+      "hop": 1,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "20f0357688876fa4662f806f985779dce6e24f3c",
+      "cite_number": 6,
+      "author": [
+        "1695689",
+        "2064160",
+        "8729431"
+      ],
+      "venue": "International Conference on Artificial Neural Networks",
+      "year": 2011,
+      "title": "Transforming Auto-Encoders",
+      "source": "",
+      "doi": "10.1007/978-3-642-21735-7_6",
+      "hop": 1,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "3a4a53fe47036ac89dad070ab87a9d8795b139b1",
+      "cite_number": 7,
+      "author": [
+        "1722052",
+        "1721683",
+        "1723883",
+        "1808423"
+      ],
+      "venue": "European Conference on Computer Vision",
+      "year": 2012,
+      "title": "Metric Learning for Large Scale Image Classification: Generalizing to New Classes at Near-Zero Cost",
+      "source": "",
+      "doi": "10.1007/978-3-642-33709-3_35",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "5bdfd78fb2285b9306e93bd3a4b534d19bf55f06",
+      "cite_number": 8,
+      "author": [
+        "1895356",
+        "2514691",
+        "2426718",
+        "145341374"
+      ],
+      "venue": "Neural Networks",
+      "year": 2012,
+      "title": "Multi-column deep neural network for traffic sign classification",
+      "source": "",
+      "doi": "10.1016/j.neunet.2012.02.023",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "0060745e006c5f14ec326904119dca19c6545e51",
+      "cite_number": 9,
+      "author": [
+        "1695689",
+        "2897313",
+        "2064160",
+        "1701686",
+        "145124475"
+      ],
+      "venue": "arXiv.org",
+      "year": 2012,
+      "title": "Improving neural networks by preventing co-adaptation of feature detectors",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "398c296d0cc7f9d180f84969f8937e6d3a413796",
+      "cite_number": 10,
+      "author": [
+        "1895356",
+        "2514691",
+        "145341374"
+      ],
+      "venue": "2012 IEEE Conference on Computer Vision and Pattern Recognition",
+      "year": 2012,
+      "title": "Multi-column deep neural networks for image classification",
+      "source": "",
+      "doi": "10.1109/CVPR.2012.6248110",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "eefcc7bcc05436dac9881acb4ff4e4a0b730e175",
+      "cite_number": 11,
+      "author": [
+        "143995438",
+        "1723883"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2011,
+      "title": "High-dimensional signature compression for large-scale image classification",
+      "source": "",
+      "doi": "10.1109/CVPR.2011.5995504",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "82b9099ddf092463f497bd48bb112c46ca52c4d1",
+      "cite_number": 12,
+      "author": [
+        "1895356",
+        "2514691",
+        "2426718",
+        "6803671",
+        "145341374"
+      ],
+      "venue": "arXiv.org",
+      "year": 2011,
+      "title": "High-Performance Neural Networks for Visual Object Classification",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d54cb764ce7e132eef60b5eced8752fe7d19377c",
+      "cite_number": 13,
+      "author": [
+        "144717723",
+        "8479301",
+        "1744553",
+        "1973124"
+      ],
+      "venue": "Mathematical and computer modelling",
+      "year": 2010,
+      "title": "Artificial neural networks applied to cancer detection in a breast screening programme",
+      "source": "",
+      "doi": "10.1016/j.mcm.2010.03.019",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "c43025c429b1fbf6f1379f61801a1b40834d62e7",
+      "cite_number": 14,
+      "author": [
+        "1688882",
+        "2645384",
+        "2256269"
+      ],
+      "venue": "Proceedings of 2010 IEEE International Symposium on Circuits and Systems",
+      "year": 2010,
+      "title": "Convolutional networks and applications in vision",
+      "source": "",
+      "doi": "10.1109/ISCAS.2010.5537907",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "a538b05ebb01a40323997629e171c91aa28b8e2f",
+      "cite_number": 15,
+      "author": [
+        "2073603971",
+        "1695689"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2010,
+      "title": "Rectified Linear Units Improve Restricted Boltzmann Machines",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "feacb4cf21eaf068197f80b164827db888ddd28d",
+      "cite_number": 16,
+      "author": [
+        "3178417",
+        "31052092",
+        "35086944",
+        "2061202596",
+        "2495450",
+        "1997979",
+        "144922222",
+        "144924970"
+      ],
+      "venue": "Neural Computation",
+      "year": 2010,
+      "title": "Convolutional Networks Can Learn to Generate Affinity Graphs for Image Segmentation",
+      "source": "",
+      "doi": "10.1162/neco.2009.10-08-881",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d46fd54609e09bcd135fd28750003185a5ee4125",
+      "cite_number": 17,
+      "author": [
+        "30017846",
+        "3250342",
+        "1865831",
+        "2042941"
+      ],
+      "venue": "PLoS Comput. Biol.",
+      "year": 2009,
+      "title": "A High-Throughput Screening Approach to Discovering Good Forms of Biologically Inspired Visual Representation",
+      "source": "",
+      "doi": "10.1371/journal.pcbi.1000579",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "1f88427d7aa8225e47f946ac41a0667d7b69ac52",
+      "cite_number": 18,
+      "author": [
+        "2077257730",
+        "2645384",
+        "1706809",
+        "1688882"
+      ],
+      "venue": "IEEE International Conference on Computer Vision",
+      "year": 2009,
+      "title": "What is the best multi-stage architecture for object recognition?",
+      "source": "",
+      "doi": "10.1109/ICCV.2009.5459469",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d2c733e34d48784a37d717fe43d9e93277a8c53e",
+      "cite_number": 19,
+      "author": [
+        "153302678",
+        "144847596",
+        "2166511",
+        "2040091191",
+        "94451829",
+        "48004138"
+      ],
+      "venue": "2009 IEEE Conference on Computer Vision and Pattern Recognition",
+      "year": 2009,
+      "title": "ImageNet: A large-scale hierarchical image database",
+      "source": "",
+      "doi": "10.1109/CVPR.2009.5206848",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "2a73a19dc5564e8fd3d734fe522e85fe979e8401",
+      "cite_number": 20,
+      "author": [
+        "1726415",
+        "2159982",
+        "1751586"
+      ],
+      "venue": "2009 IEEE Conference on Computer Vision and Pattern Recognition",
+      "year": 2009,
+      "title": "Shape-based object recognition in videos using 3D synthetic object models",
+      "source": "",
+      "doi": "10.1109/CVPR.2009.5206803",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "1e80f755bcbf10479afd2338cec05211fdbd325c",
+      "cite_number": 21,
+      "author": [
+        "1697141",
+        "1785346",
+        "2615814",
+        "34699434"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2009,
+      "title": "Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations",
+      "source": "",
+      "doi": "10.1145/1553374.1553453",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "092c275005ae49dc1303214f6d02d134457c7053",
+      "cite_number": 22,
+      "author": [
+        "145160921",
+        "143805211",
+        "2056417995",
+        "1768236"
+      ],
+      "venue": "International Journal of Computer Vision",
+      "year": 2008,
+      "title": "LabelMe: A Database and Web-Based Tool for Image Annotation",
+      "source": "",
+      "doi": "10.1007/s11263-007-0090-8",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "688b6fbc3c5c06e254961f70de9d855d3d008d09",
+      "cite_number": 23,
+      "author": [
+        "30017846",
+        "2042941",
+        "1865831"
+      ],
+      "venue": "PLoS Comput. Biol.",
+      "year": 2008,
+      "title": "Why is Real-World Visual Object Recognition Hard?",
+      "source": "",
+      "doi": "10.1371/journal.pcbi.0040027",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "a9b861ea10ec2acdebb0ee9bc29e3360cd09d9b6",
+      "cite_number": 24,
+      "author": [
+        "2113591957",
+        "1701121"
+      ],
+      "venue": "SKDD",
+      "year": 2007,
+      "title": "Lessons from the Netflix prize challenge",
+      "source": "",
+      "doi": "10.1145/1345448.1345465",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "5a5effa909cdeafaddbbb7855037e02f8e25d632",
+      "cite_number": 25,
+      "author": [
+        "47655614",
+        "144160673",
+        "1690922"
+      ],
+      "venue": "",
+      "year": 2007,
+      "title": "Caltech-256 Object Category Dataset",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "f354310098e09c1e1dc88758fca36767fd9d084d",
+      "cite_number": 26,
+      "author": [
+        "1688882",
+        "13919023",
+        "52184096"
+      ],
+      "venue": "Proceedings of the 2004 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, 2004. CVPR 2004.",
+      "year": 2004,
+      "title": "Learning methods for generic object recognition with invariance to pose and lighting",
+      "source": "",
+      "doi": "10.1109/CVPR.2004.144",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "ed9db7b20e019cdb1c7db8b7921221ee2d9f36e2",
+      "cite_number": 27,
+      "author": [
+        "48004138",
+        "2276554",
+        "1690922"
+      ],
+      "venue": "2004 Conference on Computer Vision and Pattern Recognition Workshop",
+      "year": 2004,
+      "title": "Learning Generative Visual Models from Few Training Examples: An Incremental Bayesian Approach Tested on 101 Object Categories",
+      "source": "",
+      "doi": "10.1016/j.cviu.2005.09.012",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "5562a56da3a96dae82add7de705e2bd841eb00fc",
+      "cite_number": 28,
+      "author": [
+        "2812486",
+        "38767254",
+        "144189092"
+      ],
+      "venue": "Seventh International Conference on Document Analysis and Recognition, 2003. Proceedings.",
+      "year": 2003,
+      "title": "Best practices for convolutional neural networks applied to visual document analysis",
+      "source": "",
+      "doi": "10.1109/ICDAR.2003.1227801",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "319f22bd5abfd67ac15988aa5c7f705f018c3ccd",
+      "cite_number": 29,
+      "author": [
+        "2681887",
+        "1695689",
+        "2116648700"
+      ],
+      "venue": "",
+      "year": 1986,
+      "title": "Learning internal representations by error propagation",
+      "source": "",
+      "doi": "10.1016/B978-1-4832-1446-7.50035-2",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "69e68bfaadf2dccff800158749f5a50fe82d173b",
+      "cite_number": 30,
+      "author": [
+        "3160228"
+      ],
+      "venue": "Biological cybernetics",
+      "year": 1980,
+      "title": "Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position",
+      "source": "",
+      "doi": "10.1007/BF00344251",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "f49101078fb25f714a9813259ece149581017782",
+      "cite_number": 31,
+      "author": [
+        "1773116"
+      ],
+      "venue": "",
+      "year": 1976,
+      "title": "Taylor expansion of the accumulated rounding error",
+      "source": "",
+      "doi": "10.1007/BF01931367",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "9952d4d5717afd4a27157ed8b98b0ee3dcb70d6c",
+      "cite_number": 32,
+      "author": [],
+      "venue": "",
+      "year": 2013,
+      "title": "ImageNet Classification with Deep Convolutional Neural",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "88080d28536f36588740737f3b7a1f6c1a409654",
+      "cite_number": 33,
+      "author": [
+        "2064160",
+        "1695689"
+      ],
+      "venue": "The European Symposium on Artificial Neural Networks",
+      "year": 2011,
+      "title": "Using very deep autoencoders for content-based image retrieval",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "bea5780d621e669e8069f05d0f2fc0db9df4b50f",
+      "cite_number": 34,
+      "author": [
+        "2064160"
+      ],
+      "venue": "",
+      "year": 2010,
+      "title": "Convolutional Deep Belief Networks on CIFAR-10",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "5d90f06bb70a0a3dced62413346235c02b1aa086",
+      "cite_number": 35,
+      "author": [
+        "2064160"
+      ],
+      "venue": "",
+      "year": 2009,
+      "title": "Learning Multiple Layers of Features from Tiny Images",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "8e0be569ea77b8cb29bb0e8b031887630fe7a96c",
+      "cite_number": 36,
+      "author": [
+        "2423230"
+      ],
+      "venue": "Machine-mediated learning",
+      "year": 2001,
+      "title": "Random Forests",
+      "source": "",
+      "doi": "10.1023/A:1010933404324",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "86ab4cae682fbd49c5a5bedb630e5a40fa7529f6",
+      "cite_number": 37,
+      "author": [
+        "1688882",
+        "2219581",
+        "1747317",
+        "37274089",
+        "2799635",
+        "34859193",
+        "2041866"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 1989,
+      "title": "Handwritten Digit Recognition with a Back-Propagation Network",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d007ed936c51a700d8c65d1bbfae7acc83783c31",
+      "cite_number": 38,
+      "author": [
+        "1688882"
+      ],
+      "venue": "",
+      "year": 1985,
+      "title": "Une procedure d'apprentissage pour reseau a seuil asymmetrique (A learning scheme for asymmetric threshold networks)",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "56623a496727d5c71491850e04512ddf4152b487",
+      "cite_number": 39,
+      "author": [
+        "2319833"
+      ],
+      "venue": "",
+      "year": 1974,
+      "title": "Beyond Regression : \"New Tools for Prediction and Analysis in the Behavioral Sciences",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "b92aa7024b87f50737b372e5df31ef091ab54e62",
+      "cite_number": 40,
+      "author": [
+        "2100612",
+        "3035541",
+        "145341374"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2015,
+      "title": "Training Very Deep Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "424561d8585ff8ebce7d5d07de8dbf7aae5e7270",
+      "cite_number": 41,
+      "author": [
+        "3080683",
+        "39353098",
+        "2983898",
+        "2032184078"
+      ],
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "year": 2015,
+      "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+      "source": "",
+      "doi": "10.1109/TPAMI.2016.2577031",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "020928259a848b91b7c36062e4bbc6df6398c02e",
+      "cite_number": 42,
+      "author": [
+        "2475428",
+        "2505902"
+      ],
+      "venue": "IEEE International Conference on Computer Vision",
+      "year": 2015,
+      "title": "Object Detection via a Multi-region and Semantic Segmentation-Aware CNN Model",
+      "source": "",
+      "doi": "10.1109/ICCV.2015.135",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "e0945081b5b87187a53d4329cf77cd8bff635795",
+      "cite_number": 43,
+      "author": [
+        "2100612",
+        "3035541",
+        "145341374"
+      ],
+      "venue": "arXiv.org",
+      "year": 2015,
+      "title": "Highway Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "7ffdbc358b63378f07311e883dddacc9faeeaf4b",
+      "cite_number": 44,
+      "author": [
+        "2983898"
+      ],
+      "venue": "",
+      "year": 2015,
+      "title": "Fast R-CNN",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "f075f89b4f4026748cbf2fb9f989a9934c42ee8f",
+      "cite_number": 45,
+      "author": [
+        "3080683",
+        "39353098",
+        "2983898",
+        "1771551"
+      ],
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "year": 2015,
+      "title": "Object Detection Networks on Convolutional Feature Maps",
+      "source": "",
+      "doi": "10.1109/TPAMI.2016.2601099",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "995c5f5e62614fcb4d2796ad2faab969da51713e",
+      "cite_number": 46,
+      "author": [
+        "2054165706",
+        "2574060"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2015,
+      "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d6f2f611da110b5b5061731be3fc4c7f45d8ee23",
+      "cite_number": 47,
+      "author": [
+        "39353098",
+        "1771551",
+        "3080683"
+      ],
+      "venue": "IEEE International Conference on Computer Vision",
+      "year": 2015,
+      "title": "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification",
+      "source": "",
+      "doi": "10.1109/ICCV.2015.123",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "8604f376633af8b347e31d84c6150a93b11e34c2",
+      "cite_number": 48,
+      "author": [
+        "2069136633",
+        "2482072",
+        "3127597",
+        "3186079",
+        "143706039",
+        "1751762"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2014,
+      "title": "FitNets: Hints for Thin Deep Nets",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "8ad35df17ae4064dd174690efb04d347428f1117",
+      "cite_number": 49,
+      "author": [
+        "39353098"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2014,
+      "title": "Convolutional neural networks at constrained time cost",
+      "source": "",
+      "doi": "10.1109/CVPR.2015.7299173",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "6fc6803df5f9ae505cae5b2f178ade4062c768d0",
+      "cite_number": 50,
+      "author": [
+        "1782282",
+        "2117314646",
+        "1753210"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2014,
+      "title": "Fully convolutional networks for semantic segmentation",
+      "source": "",
+      "doi": "10.1109/CVPR.2015.7298965",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "fb91db6aa4f710814f8aec28a7f3ecbc4e5ad4fd",
+      "cite_number": 51,
+      "author": [
+        "50521003",
+        "1817030",
+        "21561136",
+        "2148905709",
+        "144035504"
+      ],
+      "venue": "International Conference on Artificial Intelligence and Statistics",
+      "year": 2014,
+      "title": "Deeply-Supervised Nets",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "e15cf50aa89fee8535703b9f9512fca5bfc43327",
+      "cite_number": 52,
+      "author": [
+        "2574060",
+        "2157222093",
+        "39978391",
+        "3142556",
+        "144828948",
+        "1838674",
+        "1761978",
+        "2657155",
+        "39863668"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2014,
+      "title": "Going deeper with convolutions",
+      "source": "",
+      "doi": "10.1109/CVPR.2015.7298594",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "eb42cf88027de515750f230b23b1a057dc782108",
+      "cite_number": 53,
+      "author": [
+        "34838386",
+        "1688869"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2014,
+      "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd",
+      "cite_number": 54,
+      "author": [
+        "2314850892",
+        "153302678",
+        "144914140",
+        "2285165",
+        "145031342",
+        "2261887230",
+        "3109481",
+        "2354728",
+        "2556428",
+        "145879842",
+        "39668247",
+        "48004138"
+      ],
+      "venue": "International Journal of Computer Vision",
+      "year": 2014,
+      "title": "ImageNet Large Scale Visual Recognition Challenge",
+      "source": "",
+      "doi": "10.1007/s11263-015-0816-y",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "6bdb186ec4726e00a8051119636d4df3b94043b5",
+      "cite_number": 55,
+      "author": [
+        "39978391",
+        "1782282",
+        "7408951",
+        "3049736",
+        "2117314646",
+        "2983898",
+        "1687120",
+        "1753210"
+      ],
+      "venue": "ACM Multimedia",
+      "year": 2014,
+      "title": "Caffe: Convolutional Architecture for Fast Feature Embedding",
+      "source": "",
+      "doi": "10.1145/2647868.2654889",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "cbb19236820a96038d000dc629225d36e0b6294a",
+      "cite_number": 56,
+      "author": [
+        "39353098",
+        "1771551",
+        "3080683"
+      ],
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "year": 2014,
+      "title": "Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition",
+      "source": "",
+      "doi": "10.1007/978-3-319-10578-9_23",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "71b7178df5d2b112d07e45038cb5637208659ff7",
+      "cite_number": 57,
+      "author": [
+        "33493200",
+        "145854440",
+        "50172592",
+        "48966748",
+        "1690922",
+        "1770537",
+        "3127283",
+        "1699161"
+      ],
+      "venue": "European Conference on Computer Vision",
+      "year": 2014,
+      "title": "Microsoft COCO: Common Objects in Context",
+      "source": "",
+      "doi": "10.1007/978-3-319-10602-1_48",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "b034b5769ab94acf9fb8ae48c7edb560a300bb63",
+      "cite_number": 58,
+      "author": [
+        "1784667",
+        "1996134",
+        "1979489",
+        "1751762"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "title": "On the Number of Linear Regions of Deep Neural Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "1109b663453e78a59e4f66446d71720ac58cec25",
+      "cite_number": 59,
+      "author": [
+        "3142556",
+        "2060028",
+        "143949035",
+        "2276554",
+        "1688882"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2013,
+      "title": "OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "99c970348b8f70ce23d6641e201904ea49266b6e",
+      "cite_number": 60,
+      "author": [
+        "34927843",
+        "1701656",
+        "25769960"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2013,
+      "title": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "5e83ab70d0cbc003471e87ec306d27d9c80ecb16",
+      "cite_number": 61,
+      "author": [
+        "2115913164",
+        "35370244",
+        "143653681"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2013,
+      "title": "Network In Network",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "fc26b9c1afe81e1b20195123fe6f3ced9520abb6",
+      "cite_number": 62,
+      "author": [
+        "48799969",
+        "2276554"
+      ],
+      "venue": "",
+      "year": 2013,
+      "title": "Visualizing and Understanding Convolutional Neural Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "2f4df08d9072fc2ac181b7fced6a245315ce05c8",
+      "cite_number": 63,
+      "author": [
+        "2983898",
+        "7408951",
+        "1753210",
+        "153652147"
+      ],
+      "venue": "2014 IEEE Conference on Computer Vision and Pattern Recognition",
+      "year": 2013,
+      "title": "Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation",
+      "source": "",
+      "doi": "10.1109/CVPR.2014.81",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "b7b915d508987b73b61eccd2b237e7ed099a2d29",
+      "cite_number": 64,
+      "author": [
+        "153440022",
+        "1393680089",
+        "153583218",
+        "1760871",
+        "1751762"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2013,
+      "title": "Maxout Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "f72c079d9179cfaada1135a7e4c77d48b6309a30",
+      "cite_number": 65,
+      "author": [
+        "1837700",
+        "2785022",
+        "2132516",
+        "1688882"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2013,
+      "title": "Pushing Stochastic Gradient towards Second-Order Methods -- Backpropagation Learning with Transformations in Nonlinearities",
+      "source": "",
+      "doi": "10.1007/978-3-642-42054-2_55",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "abd1c342495432171beb7ca8fd9551ef13cbd0ff",
+      "cite_number": 66,
+      "author": [
+        "2064160",
+        "1701686",
+        "1695689"
+      ],
+      "venue": "Communications of the ACM",
+      "year": 2012,
+      "title": "ImageNet classification with deep convolutional neural networks",
+      "source": "",
+      "doi": "10.1145/3065386",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "5183230b706b72f6f6c19415c423d93c79ddde53",
+      "cite_number": 67,
+      "author": [
+        "1681054",
+        "1723883",
+        "3271933",
+        "143995443",
+        "144565371",
+        "2462253"
+      ],
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "year": 2012,
+      "title": "Aggregating Local Image Descriptors into Compact Codes",
+      "source": "",
+      "doi": "10.1109/TPAMI.2011.235",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "0060745e006c5f14ec326904119dca19c6545e51",
+      "cite_number": 68,
+      "author": [
+        "1695689",
+        "2897313",
+        "2064160",
+        "1701686",
+        "145124475"
+      ],
+      "venue": "arXiv.org",
+      "year": 2012,
+      "title": "Improving neural networks by preventing co-adaptation of feature detectors",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "b8ef1230a5cc9ea7cd8358f1ae7d1af97813ba14",
+      "cite_number": 69,
+      "author": [
+        "2785022",
+        "2132516",
+        "1688882"
+      ],
+      "venue": "International Conference on Artificial Intelligence and Statistics",
+      "year": 2012,
+      "title": "Deep Learning Made Easier by Linear Transformations in Perceptrons",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d720a95e1501922ea17ee31f299f43b2db5e15ef",
+      "cite_number": 70,
+      "author": [
+        "1687524",
+        "2487006"
+      ],
+      "venue": "ACM Multimedia",
+      "year": 2010,
+      "title": "Vlfeat: an open and portable library of computer vision algorithms",
+      "source": "",
+      "doi": "10.1145/1873951.1874249",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "a538b05ebb01a40323997629e171c91aa28b8e2f",
+      "cite_number": 71,
+      "author": [
+        "2073603971",
+        "1695689"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2010,
+      "title": "Rectified Linear Units Improve Restricted Boltzmann Machines",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "ea9d2a2b4ce11aaf85136840c65f3bc9c03ab649",
+      "cite_number": 72,
+      "author": [
+        "3119801",
+        "1751762"
+      ],
+      "venue": "International Conference on Artificial Intelligence and Statistics",
+      "year": 2010,
+      "title": "Understanding the difficulty of training deep feedforward neural networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "bc6dff14a130c57a91d5a21339c23471faf1d46f",
+      "cite_number": 73,
+      "author": [
+        "2059358552",
+        "13267685",
+        "2097644863"
+      ],
+      "venue": "Archives de pédiatrie",
+      "year": 2008,
+      "title": "Et al",
+      "source": "",
+      "doi": "10.1136/ebmh.11.4.102",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "23694b6d61668e62bb11f17c1d75dde3b4951948",
+      "cite_number": 74,
+      "author": [
+        "1723883",
+        "3344005"
+      ],
+      "venue": "2007 IEEE Conference on Computer Vision and Pattern Recognition",
+      "year": 2007,
+      "title": "Fisher Kernels on Visual Vocabularies for Image Categorization",
+      "source": "",
+      "doi": "10.1109/CVPR.2007.383266",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "4f04da90218f8ddfa3a758188edade8c7bd95ac1",
+      "cite_number": 75,
+      "author": [
+        "1717841"
+      ],
+      "venue": "ACM Transactions on Graphics",
+      "year": 2006,
+      "title": "Locally adapted hierarchical basis preconditioning",
+      "source": "",
+      "doi": "10.1145/1179352.1142005",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "1bd875676fe49f83d431500cea908da1bdf068da",
+      "cite_number": 76,
+      "author": [
+        "35180917",
+        "65844783",
+        "26529098"
+      ],
+      "venue": "",
+      "year": 2000,
+      "title": "A multigrid tutorial, Second Edition",
+      "source": "",
+      "doi": "10.1137/1.9780898719505",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "5763bd6b3f24a01c3bc7cd15d3c916b4840b759d",
+      "cite_number": 77,
+      "author": [
+        "1739396"
+      ],
+      "venue": "",
+      "year": 1998,
+      "title": "Accelerated Gradient Descent by Factor-Centering Decomposition",
+      "source": "",
+      "doi": "10.3929/ETHZ-A-004263473",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "2e9d221c206e9503ceb452302d68d10e293f2a10",
+      "cite_number": 78,
+      "author": [
+        "3308557",
+        "145341374"
+      ],
+      "venue": "Neural Computation",
+      "year": 1997,
+      "title": "Long Short-Term Memory",
+      "source": "",
+      "doi": "10.1162/neco.1997.9.8.1735",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "1f711685bfe9e67d6afe0d5a3cb6675c310237d6",
+      "cite_number": 79,
+      "author": [
+        "38883832",
+        "2122942"
+      ],
+      "venue": "",
+      "year": 1996,
+      "title": "Modern Applied Statistics with S-Plus.",
+      "source": "",
+      "doi": "10.2307/2532871",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d0be39ee052d246ae99c082a565aba25b811be2d",
+      "cite_number": 80,
+      "author": [
+        "1751762",
+        "2812486",
+        "1688235"
+      ],
+      "venue": "IEEE Trans. Neural Networks",
+      "year": 1994,
+      "title": "Learning long-term dependencies with gradient descent is difficult",
+      "source": "",
+      "doi": "10.1109/72.279181",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "a8e8f3c8d4418c8d62e306538c9c1292635e9d27",
+      "cite_number": 81,
+      "author": [
+        "1688882",
+        "2219581",
+        "1747317",
+        "37274089",
+        "2799635",
+        "34859193",
+        "2041866"
+      ],
+      "venue": "Neural Computation",
+      "year": 1989,
+      "title": "Backpropagation Applied to Handwritten Zip Code Recognition",
+      "source": "",
+      "doi": "10.1162/neco.1989.1.4.541",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "1efc5a54a4b3f4675bee194ee5842978e45a5bc2",
+      "cite_number": 82,
+      "author": [
+        "1717841"
+      ],
+      "venue": "Proceedings CVPR '89: IEEE Computer Society Conference on Computer Vision and Pattern Recognition",
+      "year": 1989,
+      "title": "Fast surface interpolation using hierarchical basis functions",
+      "source": "",
+      "doi": "10.1109/CVPR.1989.37853",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "b87274e6d9aa4e6ba5148898aa92941617d2b6ed",
+      "cite_number": 83,
+      "author": [
+        "1688882",
+        "52184096",
+        "34782608",
+        "145034054"
+      ],
+      "venue": "Neural Networks",
+      "year": 2012,
+      "title": "Efficient BackProp",
+      "source": "",
+      "doi": "10.1007/978-3-642-35289-8_3",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "4748d22348e72e6e06c2476486afddbc76e5eca7",
+      "cite_number": 84,
+      "author": [
+        "1681054",
+        "3271933",
+        "2462253"
+      ],
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "year": 2011,
+      "title": "Product Quantization for Nearest Neighbor Search",
+      "source": "",
+      "doi": "10.1109/TPAMI.2010.57",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "7b7908f71188b89adf62ce9126a0466e1a34338f",
+      "cite_number": 85,
+      "author": [
+        "1764761",
+        "1740145",
+        "1687524",
+        "1688869"
+      ],
+      "venue": "British Machine Vision Conference",
+      "year": 2011,
+      "title": "The devil is in the details: an evaluation of recent feature encoding methods",
+      "source": "",
+      "doi": "10.5244/C.25.76",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "5d90f06bb70a0a3dced62413346235c02b1aa086",
+      "cite_number": 86,
+      "author": [
+        "2064160"
+      ],
+      "venue": "",
+      "year": 2009,
+      "title": "Learning Multiple Layers of Features from Tiny Images",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "75a026ddfdd9c219d69fe8af816f085ea1b3877d",
+      "cite_number": 87,
+      "author": [
+        "1739396"
+      ],
+      "venue": "Neural Networks",
+      "year": 1996,
+      "title": "Centering Neural Network Gradient Factors",
+      "source": "",
+      "doi": "10.1007/3-540-49430-8_11",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "bf7e1b6997433dcb2121b07cce1de1c61471ff2d",
+      "cite_number": 88,
+      "author": [
+        "1688882",
+        "1751762"
+      ],
+      "venue": "",
+      "year": 1995,
+      "title": "Pattern Recognition and Neural Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "83b6755242f1cff6bacf270f65b4626d4d118f32",
+      "cite_number": 89,
+      "author": [
+        "2286966285"
+      ],
+      "venue": "Advances in Computing",
+      "year": 1993,
+      "title": "Neural Networks for Pattern Recognition",
+      "source": "",
+      "doi": "10.1016/S0065-2458(08)60404-0",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "3f3d13e95c25a8f6a753e38dfce88885097cbd43",
+      "cite_number": 90,
+      "author": [
+        "2066667188"
+      ],
+      "venue": "",
+      "year": 1991,
+      "title": "Untersuchungen zu dynamischen neuronalen Netzen",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "8a2384ff41dc2c337e6aaacbcfd13f74e0e2f1ea",
+      "cite_number": 91,
+      "author": [
+        "35180917"
+      ],
+      "venue": "",
+      "year": 1987,
+      "title": "A multigrid tutorial",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "3a9b175324ba11bc0e16c0633912d897b2fac4e2",
+      "cite_number": 92,
+      "author": [],
+      "venue": "",
+      "year": null,
+      "title": "International Journal of Computer Vision manuscript No. (will be inserted by the editor) The PASCAL Visual Object Classes (VOC) Challenge",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "239c033b4f5d935e3a0b469d9611823ccec7cb68",
+      "cite_number": 93,
+      "author": [
+        "2063959275",
+        "144632352",
+        "1728216"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2018,
+      "title": "How to train your MAML",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "a2e6ee708ef5b258415076c4f5484fa1e0f42afa",
+      "cite_number": 94,
+      "author": [
+        "50990874",
+        "2109374418",
+        "2804000",
+        "35198686"
+      ],
+      "venue": "",
+      "year": 2018,
+      "title": "Model-Agnostic Meta-Learning for Multimodal Task Distributions",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "90dc22818bd2d97d8deaff168b0137b75a962767",
+      "cite_number": 95,
+      "author": [
+        "38967461",
+        "3381809",
+        "47971768"
+      ],
+      "venue": "arXiv.org",
+      "year": 2018,
+      "title": "On First-Order Meta-Learning Algorithms",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d33ad6a25264ba1747d8c93f6621c7f90a7ec601",
+      "cite_number": 96,
+      "author": [
+        "7718952",
+        "22173351",
+        "117872156",
+        "2145571830"
+      ],
+      "venue": "arXiv.org",
+      "year": 2017,
+      "title": "Meta-SGD: Learning to Learn Quickly for Few Shot Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "c269858a7bb34e8350f2442ccf37797856ae9bca",
+      "cite_number": 97,
+      "author": [
+        "39770136",
+        "1754860",
+        "1804104"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2017,
+      "title": "Prototypical Networks for Few-shot Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "29092f0deaac3898e43b3f094bf15d82b6a99afd",
+      "cite_number": 98,
+      "author": [
+        "40527594",
+        "7624658",
+        "39788470",
+        "1751569"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2017,
+      "title": "Learning to Remember Rare Events",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "a3cd82aeecb75ef339889174706d168c40187d7d",
+      "cite_number": 99,
+      "author": [
+        "67311962",
+        "2118927417",
+        "2440174"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2017,
+      "title": "Attentive Recurrent Comparators",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "470d11b8ca4586c930adbbfc3f60bff08f2a0161",
+      "cite_number": 100,
+      "author": [
+        "2227827",
+        "2119120474"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2017,
+      "title": "Meta Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9",
+      "cite_number": 101,
+      "author": [
+        "2066516991",
+        "1996134",
+        "3422052",
+        "144056327",
+        "2755582",
+        "2228824",
+        "8181864",
+        "34660073",
+        "34505275",
+        "1398898827",
+        "48987704",
+        "2388737",
+        "2106164",
+        "2315504"
+      ],
+      "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+      "year": 2016,
+      "title": "Overcoming catastrophic forgetting in neural networks",
+      "source": "",
+      "doi": "10.1073/pnas.1611835114",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "282a380fb5ac26d99667224cef8c630f6882704f",
+      "cite_number": 102,
+      "author": [
+        "2116439278",
+        "1399114225",
+        "2794457",
+        "1700356",
+        "7794353",
+        "1708654",
+        "1723876",
+        "2106164",
+        "46378362"
+      ],
+      "venue": "Annual Meeting of the Cognitive Science Society",
+      "year": 2016,
+      "title": "Learning to reinforcement learn",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "cb1c0d6be4c22c1f18b0ba20dddd93890f17add6",
+      "cite_number": 103,
+      "author": [
+        "1413064976",
+        "2027105",
+        "1403171438",
+        "1388407684",
+        "1695302",
+        "1681236"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2016,
+      "title": "One-Shot Video Object Segmentation",
+      "source": "",
+      "doi": "10.1109/CVPR.2017.565",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "29c887794eed2ca9462638ff853e6fe1ab91d5d8",
+      "cite_number": 104,
+      "author": [
+        "49517463",
+        "1777528"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2016,
+      "title": "Optimization as a Model for Few-Shot Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "954b01151ff13aef416d27adc60cd9a076753b1a",
+      "cite_number": 105,
+      "author": [
+        "144581158",
+        "47971768",
+        "41192764",
+        "1745169",
+        "1701686",
+        "1689992"
+      ],
+      "venue": "arXiv.org",
+      "year": 2016,
+      "title": "RL$^2$: Fast Reinforcement Learning via Slow Reinforcement Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "c91ae35dbcb6d479580ecd235eabf98374acdb55",
+      "cite_number": 106,
+      "author": [
+        "2503659",
+        "1695689",
+        "3255983",
+        "1700356",
+        "2273228"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2016,
+      "title": "Using Fast Weights to Attend to the Recent Past",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "563783de03452683a9206e85fe6d661714436686",
+      "cite_number": 107,
+      "author": [
+        "1389041357",
+        "2555924",
+        "2827616"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2016,
+      "title": "HyperNetworks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "26ae046d8d8bf5b3721734a3cf441f6d204bb6d7",
+      "cite_number": 108,
+      "author": [
+        "3203568",
+        "39799304",
+        "2552141"
+      ],
+      "venue": "Annual Conference on Genetic and Evolutionary Computation",
+      "year": 2016,
+      "title": "Evolvability Search: Directly Selecting for Evolvability in order to Study and Produce It",
+      "source": "",
+      "doi": "10.1145/2908812.2908838",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "3904315e2eca50d0086e4b7273f7fd707c652230",
+      "cite_number": 109,
+      "author": [
+        "35030998",
+        "2258504",
+        "46378362",
+        "1688276",
+        "2542999"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2016,
+      "title": "Meta-Learning with Memory-Augmented Neural Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "71683e224ab91617950956b5005ed0439a733a71",
+      "cite_number": 110,
+      "author": [
+        "2206490",
+        "1715051",
+        "2016840",
+        "3243579",
+        "144846367",
+        "1725157",
+        "1737568"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2016,
+      "title": "Learning to learn by gradient descent by gradient descent",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "405c31c85a324942811f3c9dc53ce3528f9284df",
+      "cite_number": 111,
+      "author": [
+        "144632352",
+        "1728216"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2016,
+      "title": "Towards a Neural Statistician",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "1464776f20e2bccb6182f183b5ff2e15b0ae5e56",
+      "cite_number": 112,
+      "author": [
+        "144581158",
+        "41192764",
+        "3127100",
+        "47971768",
+        "1689992"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2016,
+      "title": "Benchmarking Deep Reinforcement Learning for Continuous Control",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "0811597b0851b7ebe21aadce7cb4daac4664b44f",
+      "cite_number": 113,
+      "author": [
+        "1748523",
+        "14594344",
+        "1841008",
+        "144717963",
+        "1688276"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2016,
+      "title": "One-Shot Generalization in Deep Generative Models",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d",
+      "cite_number": 114,
+      "author": [
+        "2057642721",
+        "2078528337",
+        "144758007",
+        "2445241",
+        "2545358",
+        "48738717",
+        "32131713",
+        "36347083",
+        "49959210",
+        "145139947",
+        "1780892",
+        "153440022",
+        "2064102917",
+        "2060655766",
+        "2090818",
+        "39978391",
+        "1944541",
+        "40527594",
+        "1942300",
+        "3369421",
+        "30415265",
+        "3089272",
+        "144375552",
+        "20154699",
+        "37232298",
+        "144927151",
+        "1789737",
+        "32163737",
+        "1701686",
+        "35210462",
+        "2080690",
+        "2657155",
+        "2053781980",
+        "1765169",
+        "1689108",
+        "47941411",
+        "145233583",
+        "35078078",
+        "2117163698",
+        "2152198093"
+      ],
+      "venue": "arXiv.org",
+      "year": 2016,
+      "title": "TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "3d2c6941a9b4608ba52b328369a3352db2092ae0",
+      "cite_number": 115,
+      "author": [
+        "2887364",
+        "1726807"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2016,
+      "title": "Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "1def5d3711ebd1d86787b1ed57c91832c5ddc90b",
+      "cite_number": 116,
+      "author": [
+        "3166516",
+        "2503659",
+        "145124475"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2015,
+      "title": "Actor-Mimic: Deep Multitask and Transfer Reinforcement Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "a40a55bfd25c8ef69c27a02073f34a194b4e9124",
+      "cite_number": 117,
+      "author": [
+        "145687301"
+      ],
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "year": 2015,
+      "title": "Online Representation Learning in Recurrent Neural Language Models",
+      "source": "",
+      "doi": "10.18653/v1/D15-1026",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "449532187c94af3dd3aa55e16d2c50f7854d2199",
+      "cite_number": 118,
+      "author": [
+        "47971768",
+        "1736651",
+        "1689992",
+        "1694621",
+        "29912342"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2015,
+      "title": "Trust Region Policy Optimization",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "e2820bffe5b42cb7d88b7f65c12171c62ab4aae2",
+      "cite_number": 119,
+      "author": [
+        "1683298",
+        "1704657",
+        "1722180"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2015,
+      "title": "Gradient-based Hyperparameter Optimization through Reversible Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "995c5f5e62614fcb4d2796ad2faab969da51713e",
+      "cite_number": 120,
+      "author": [
+        "2054165706",
+        "2574060"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2015,
+      "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "a6cb366736791bcccc5c8639de5a8f9636bf87e8",
+      "cite_number": 121,
+      "author": [
+        "1726807",
+        "2503659"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2014,
+      "title": "Adam: A Method for Stochastic Optimization",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "bee044c8e8903fb67523c1f8c105ab4718600cdb",
+      "cite_number": 122,
+      "author": [
+        "153440022",
+        "1789737",
+        "2574060"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2014,
+      "title": "Explaining and Harnessing Adversarial Examples",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "99c970348b8f70ce23d6641e201904ea49266b6e",
+      "cite_number": 123,
+      "author": [
+        "34927843",
+        "1701656",
+        "25769960"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2013,
+      "title": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "b8de958fead0d8a9619b55c7299df3257c624a96",
+      "cite_number": 124,
+      "author": [
+        "7408951",
+        "39978391",
+        "1689108",
+        "50196944",
+        "2152329702",
+        "2368132",
+        "1753210"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2013,
+      "title": "DeCAF: A Deep Convolutional Activation Feature for Generic Visual Recognition",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "b354ee518bfc1ac0d8ac447eece9edb69e92eae1",
+      "cite_number": 125,
+      "author": [
+        "144832491",
+        "1968210",
+        "2109481"
+      ],
+      "venue": "2012 IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "year": 2012,
+      "title": "MuJoCo: A physics engine for model-based control",
+      "source": "",
+      "doi": "10.1109/IROS.2012.6386109",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "b64e846fe88acaf302248249696c3b7badde41b5",
+      "cite_number": 126,
+      "author": [
+        "100925254",
+        "1872039"
+      ],
+      "venue": "[Proceedings 1992] IJCNN International Joint Conference on Neural Networks",
+      "year": 1992,
+      "title": "Meta-neural networks that learn by learning",
+      "source": "",
+      "doi": "10.1109/IJCNN.1992.287172",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "bc22e87a26d020215afe91c751e5bdaddd8e4922",
+      "cite_number": 127,
+      "author": [
+        "145341374"
+      ],
+      "venue": "Neural Computation",
+      "year": 1992,
+      "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks",
+      "source": "",
+      "doi": "10.1162/neco.1992.4.1.131",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d130325c41947a41a55a4431e9e8e15be89da8ea",
+      "cite_number": 128,
+      "author": [
+        "1751762",
+        "1751569",
+        "2909364"
+      ],
+      "venue": "IJCNN-91-Seattle International Joint Conference on Neural Networks",
+      "year": 1991,
+      "title": "Learning a synaptic learning rule",
+      "source": "",
+      "doi": "10.1109/IJCNN.1991.155621",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "44b6da0cd36c0fa2f7d3485c6dc0b6d2fbe379bb",
+      "cite_number": 129,
+      "author": [
+        "2273153017"
+      ],
+      "venue": "",
+      "year": 2019,
+      "title": "Learning how to learn",
+      "source": "",
+      "doi": "10.1007/978-1-4419-1428-6_4666",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "1b4995b61b60793866a59065f69f76f2f6571f09",
+      "cite_number": 130,
+      "author": [],
+      "venue": "",
+      "year": 2017,
+      "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "f1aeb751d9cefc9d784d8862562f5a3fe15821ae",
+      "cite_number": 131,
+      "author": [
+        "46421372",
+        "6245351",
+        "2785022"
+      ],
+      "venue": "",
+      "year": 2016,
+      "title": "International Conference on Learning Representations (ICLR)",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "f216444d4f2959b4520c61d20003fa30a199670a",
+      "cite_number": 132,
+      "author": [
+        "2054250597"
+      ],
+      "venue": "",
+      "year": 2015,
+      "title": "Siamese Neural Networks for One-Shot Image Recognition",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "100a038fdf29b4b20801887f0ec40e3f10d9a4f9",
+      "cite_number": 133,
+      "author": [
+        "2373318",
+        "145124475",
+        "145372150",
+        "1763295"
+      ],
+      "venue": "Annual Meeting of the Cognitive Science Society",
+      "year": 2011,
+      "title": "One shot learning of simple visual concepts",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "8784f905f4f9fb6fa4a3cc9b0faa5b5479c687ec",
+      "cite_number": 134,
+      "author": [
+        "1751569",
+        "1751762",
+        "2909364",
+        "3349607"
+      ],
+      "venue": "",
+      "year": 2007,
+      "title": "On the Optimization of a Synaptic Learning Rule",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "4c915c1eecb217c123a36dc6d3ce52d12c742614",
+      "cite_number": 135,
+      "author": [
+        "2116648700"
+      ],
+      "venue": "Machine-mediated learning",
+      "year": 2004,
+      "title": "Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning",
+      "source": "",
+      "doi": "10.1023/A:1022672621406",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "946ec39029db3ae6f9a1b3ce13fb3f4a7d37bb5e",
+      "cite_number": 136,
+      "author": [
+        "1722195",
+        "1680943"
+      ],
+      "venue": "Proceedings of the IEEE-INNS-ENNS International Joint Conference on Neural Networks. IJCNN 2000. Neural Computing: New Challenges and Perspectives for the New Millennium",
+      "year": 2000,
+      "title": "Fast learning for problem classes using knowledge based network initialization",
+      "source": "",
+      "doi": "10.1109/IJCNN.2000.859464",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "7257eacd80458e70c74494eb1b6759b52ff21399",
+      "cite_number": 137,
+      "author": [
+        "1695689"
+      ],
+      "venue": "",
+      "year": 1987,
+      "title": "Using fast weights to deblur old memories",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "bdaec1b3eb9a8f7a2b296be009a148c35236f3ce",
+      "cite_number": 138,
+      "author": [
+        "2260653300"
+      ],
+      "venue": "",
+      "year": 1987,
+      "title": "Evolutionary principles in self-referential learning, or on learning how to learn: The meta-meta-. hook",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "a6bcf0e9b5034c4c9cbea839baadd69a42b05cc1",
+      "cite_number": 139,
+      "author": [
+        "1742244",
+        "2285616446",
+        "2069968720",
+        "2115782995"
+      ],
+      "venue": "",
+      "year": null,
+      "title": "Learning curves for stochastic gradient descent in linear feedforward networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "554aabebf17b11046ac734aac8ef5a71872e93e3",
+      "cite_number": 140,
+      "author": [
+        "2340560442"
+      ],
+      "venue": "Encyclopedia of Database Systems",
+      "year": 2019,
+      "title": "Semi-Supervised Learning",
+      "source": "",
+      "doi": "10.1007/978-0-387-39940-9_609",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "761a1902b5e7758aaccc879c9ec190f99ba21c42",
+      "cite_number": 141,
+      "author": [
+        "3035233",
+        "32222907",
+        "143602033",
+        "2788104",
+        "48920094",
+        "144078686"
+      ],
+      "venue": "arXiv.org",
+      "year": 2019,
+      "title": "LCC: Learning to Customize and Combine Neural Networks for Few-Shot Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "fc437af6204008647ea49f81058d5fdaddf75ead",
+      "cite_number": 142,
+      "author": [
+        "2668978",
+        "35208858",
+        "2529423",
+        "1715959"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2019,
+      "title": "Meta-Learning With Differentiable Convex Optimization",
+      "source": "",
+      "doi": "10.1109/CVPR.2019.01091",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "441a95b80875c7fe0ae98c5d301e2c92feb4c191",
+      "cite_number": 143,
+      "author": [
+        "3370667",
+        "1956589",
+        "48920094",
+        "2893664"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2019,
+      "title": "F-VAEGAN-D2: A Feature Generating Framework for Any-Shot Learning",
+      "source": "",
+      "doi": "10.1109/CVPR.2019.01052",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d8d680aea59295c020b9d53d78dd8d954a876845",
+      "cite_number": 144,
+      "author": [
+        "32222907",
+        "3035233",
+        "144078686",
+        "48920094"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2018,
+      "title": "Meta-Transfer Learning for Few-Shot Learning",
+      "source": "",
+      "doi": "10.1109/CVPR.2019.00049",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "75dafecd481f134d4f8b9afb4923b35184d3c971",
+      "cite_number": 145,
+      "author": [
+        "2311636918",
+        "47828117",
+        "1744700",
+        "1751762",
+        "1809614"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2018,
+      "title": "MetaGAN: An Adversarial Approach to Few-Shot Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "239c033b4f5d935e3a0b469d9611823ccec7cb68",
+      "cite_number": 146,
+      "author": [
+        "2063959275",
+        "144632352",
+        "1728216"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2018,
+      "title": "How to train your MAML",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "04f739a0c29b75877243731aeead512bf0ed1dff",
+      "cite_number": 147,
+      "author": [
+        "2228824",
+        "143668237",
+        "3407592",
+        "1689108",
+        "1996134",
+        "2217144",
+        "2315504"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2018,
+      "title": "Meta-Learning with Latent Embedding Optimization",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "15561ab20c298e113b0008b7a029486a422e7ca3",
+      "cite_number": 148,
+      "author": [
+        "39883180",
+        "1688235",
+        "2212342",
+        "51004518",
+        "1704699"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2018,
+      "title": "Bilevel Programming for Hyperparameter Optimization and Meta-Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "77e8e3e578b8abd17303f13af1df22080fd6afbb",
+      "cite_number": 149,
+      "author": [
+        "1455047952",
+        "2428823",
+        "2636229",
+        "1879259",
+        "37239855",
+        "50333123",
+        "1723233",
+        "2711839",
+        "49791556"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2018,
+      "title": "Delta-encoder: an effective sample synthesis method for few-shot object recognition",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "38e2f851b705faa0d0a698ed9885bd6834440073",
+      "cite_number": 150,
+      "author": [
+        "46881670",
+        "36303818",
+        "1736651"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2018,
+      "title": "Probabilistic Model-Agnostic Meta-Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "9df950fd79304000dfd23c7c497e8912a613027c",
+      "cite_number": 151,
+      "author": [
+        "2108078469",
+        "2108550899",
+        "144568677",
+        "1898376",
+        "2048438762"
+      ],
+      "venue": "arXiv.org",
+      "year": 2018,
+      "title": "Transductive Propagation Network for Few-shot Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "e6a83abec5cffb0bf1669f2f2c1efdf2b15cb171",
+      "cite_number": 152,
+      "author": [
+        "3313242",
+        "117849477",
+        "8651990"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2018,
+      "title": "TADAM: Task dependent adaptive metric for improved few-shot learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "df093d69cd98cf4b26542f53614a79754754eb78",
+      "cite_number": 153,
+      "author": [
+        "2540599",
+        "2064782825",
+        "49517463",
+        "39770136",
+        "1754860",
+        "1763295",
+        "1777528",
+        "1804104"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2018,
+      "title": "Meta-Learning for Semi-Supervised Few-Shot Classification",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "46b072cf918ec6f50403568a73d4347ea86b7e66",
+      "cite_number": 154,
+      "author": [
+        "145557445",
+        "46881670",
+        "1736651",
+        "1753210",
+        "1799860"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2018,
+      "title": "Recasting Gradient-Based Meta-Learning as Hierarchical Bayes",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d4c4a5f0c71eba13d2827b24f70bbfdc3bd858ec",
+      "cite_number": 155,
+      "author": [
+        "2110392124",
+        "3960497"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2018,
+      "title": "Gradient-Based Meta-Learning with Learned Layerwise Metric and Subspace",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "cf42c89fe45e31cdd83be78c22c28508e335b9aa",
+      "cite_number": 156,
+      "author": [
+        "2302062",
+        "2983898",
+        "145670946",
+        "1790580"
+      ],
+      "venue": "2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2018,
+      "title": "Low-Shot Learning from Imaginary Data",
+      "source": "",
+      "doi": "10.1109/CVPR.2018.00760",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "2798df47acbeb89a9e044e43e747782ec05968af",
+      "cite_number": 157,
+      "author": [
+        "2227827",
+        "2854297",
+        "34719201",
+        "3382568"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2017,
+      "title": "Rapid Adaptation with Conditionally Shifted Neurons",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "bfe284e4338e62f0a61bb33398353efd687f206f",
+      "cite_number": 158,
+      "author": [
+        "40497013",
+        "2653152",
+        "2152835959",
+        "145406421",
+        "143635540",
+        "1697755"
+      ],
+      "venue": "2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": 2017,
+      "title": "Learning to Compare: Relation Network for Few-Shot Learning",
+      "source": "",
+      "doi": "10.1109/CVPR.2018.00131",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "7e9c1e0d247b20a0683f4797d9ea248c3b53d424",
+      "cite_number": 159,
+      "author": [
+        "3414570",
+        "22222033",
+        "41192764",
+        "1689992"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2017,
+      "title": "A Simple Neural Attentive Meta-Learner",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "c7efa5f7008132b7d81f550aeaae8fb589506a9c",
+      "cite_number": 160,
+      "author": [
+        "31842390",
+        "2440174"
+      ],
+      "venue": "arXiv.org",
+      "year": 2017,
+      "title": "Generative Adversarial Residual Pairwise Networks for One Shot Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "c269858a7bb34e8350f2442ccf37797856ae9bca",
+      "cite_number": 161,
+      "author": [
+        "39770136",
+        "1754860",
+        "1804104"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2017,
+      "title": "Prototypical Networks for Few-shot Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
+      "cite_number": 162,
+      "author": [
+        "46881670",
+        "1689992",
+        "1736651"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2017,
+      "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "470d11b8ca4586c930adbbfc3f60bff08f2a0161",
+      "cite_number": 163,
+      "author": [
+        "2227827",
+        "2119120474"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2017,
+      "title": "Meta Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "7493389667058116dbc7e808987f129325ee60d7",
+      "cite_number": 164,
+      "author": [
+        "9942966",
+        "2132516"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2017,
+      "title": "Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "54ddb00fa691728944fd8becea90a373d21597cf",
+      "cite_number": 165,
+      "author": [
+        "151505981",
+        "1751569",
+        "1775622",
+        "9229182",
+        "1689108"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2016,
+      "title": "Understanding deep learning requires rethinking generalization",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "29c887794eed2ca9462638ff853e6fe1ab91d5d8",
+      "cite_number": 166,
+      "author": [
+        "49517463",
+        "1777528"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2016,
+      "title": "Optimization as a Model for Few-Shot Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "d2e4587744a89bad95fea69e08842cad6c8ff0dd",
+      "cite_number": 167,
+      "author": [
+        "36436218",
+        "1761103"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2016,
+      "title": "Temporal Ensembling for Semi-Supervised Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "3904315e2eca50d0086e4b7273f7fd707c652230",
+      "cite_number": 168,
+      "author": [
+        "35030998",
+        "2258504",
+        "46378362",
+        "1688276",
+        "2542999"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2016,
+      "title": "Meta-Learning with Memory-Augmented Neural Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "be1bb4e4aa1fcf70281b4bd24d8cd31c04864bb6",
+      "cite_number": 169,
+      "author": [
+        "1689108",
+        "1723876",
+        "2542999",
+        "2645384",
+        "1688276"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2016,
+      "title": "Matching Networks for One Shot Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "93d8d45fe8101545ae6d9fab3dbb38f904ff7b4e",
+      "cite_number": 170,
+      "author": [
+        "3213400",
+        "2555924",
+        "153440022"
+      ],
+      "venue": "arXiv.org",
+      "year": 2016,
+      "title": "Virtual Adversarial Training for Semi-Supervised Text Classification",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "2c03df8b48bf3fa39054345bafabfeff15bfd11d",
+      "cite_number": 171,
+      "author": [
+        "39353098",
+        "1771551",
+        "3080683"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2015,
+      "title": "Deep Residual Learning for Image Recognition",
+      "source": "",
+      "doi": "10.1109/cvpr.2016.90",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "10a036204feac6fca7c558c6b9869abd63f20871",
+      "cite_number": 172,
+      "author": [
+        "1778602",
+        "39558258",
+        "1699069"
+      ],
+      "venue": "Knowledge and Information Systems",
+      "year": 2015,
+      "title": "Self-labeled techniques for semi-supervised learning: taxonomy, software and empirical study",
+      "source": "",
+      "doi": "10.1007/s10115-013-0706-y",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "6fc6803df5f9ae505cae5b2f178ade4062c768d0",
+      "cite_number": 173,
+      "author": [
+        "1782282",
+        "2117314646",
+        "1753210"
+      ],
+      "venue": "Computer Vision and Pattern Recognition",
+      "year": 2014,
+      "title": "Fully convolutional networks for semantic segmentation",
+      "source": "",
+      "doi": "10.1109/CVPR.2015.7298965",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd",
+      "cite_number": 174,
+      "author": [
+        "2314850892",
+        "153302678",
+        "144914140",
+        "2285165",
+        "145031342",
+        "2261887230",
+        "3109481",
+        "2354728",
+        "2556428",
+        "145879842",
+        "39668247",
+        "48004138"
+      ],
+      "venue": "International Journal of Computer Vision",
+      "year": 2014,
+      "title": "ImageNet Large Scale Visual Recognition Challenge",
+      "source": "",
+      "doi": "10.1007/s11263-015-0816-y",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "ab50e0fba1e7964d2686e90f9bed66a06ed6ff42",
+      "cite_number": 175,
+      "author": [
+        "34849128",
+        "144865216",
+        "48920094"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 2013,
+      "title": "Transfer Learning in a Transductive Setting",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "812355cec91fa30bb50e9e992a3549af39e4f6eb",
+      "cite_number": 176,
+      "author": [
+        "48004138",
+        "2276554",
+        "1690922"
+      ],
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "year": 2006,
+      "title": "One-shot learning of object categories",
+      "source": "",
+      "doi": "10.1109/TPAMI.2006.79",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "ad67ccee45b801b0138016e2f44a566344e77320",
+      "cite_number": 177,
+      "author": [
+        "1802711",
+        "1751762"
+      ],
+      "venue": "Conférence francophone sur l'apprentissage automatique",
+      "year": 2004,
+      "title": "Semi-supervised Learning by Entropy Minimization",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "944cba683d10d8c1a902e05cd68e32a9f47b372e",
+      "cite_number": 178,
+      "author": [
+        "1693517"
+      ],
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "year": 1995,
+      "title": "Unsupervised Word Sense Disambiguation Rivaling Supervised Methods",
+      "source": "",
+      "doi": "10.3115/981658.981684",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "99039a54fa3ee3aed9bb3781621068680be5cc3d",
+      "cite_number": 179,
+      "author": [
+        "35679876",
+        "2624088",
+        "2402716",
+        "8132903",
+        "153440022"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "year": 2018,
+      "title": "Realistic Evaluation of Semi-Supervised Learning Algorithms",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "2913c2bf3f92b5ae369400a42b2d27cc5bc05ecb",
+      "cite_number": 180,
+      "author": [
+        "1688882",
+        "1751762",
+        "1695689"
+      ],
+      "venue": "",
+      "year": 2015,
+      "title": "Deep Learning",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "798d9840d2439a0e5d47bcf5d164aa46d5e7dc26",
+      "cite_number": 181,
+      "author": [
+        "2115475379"
+      ],
+      "venue": "",
+      "year": 2013,
+      "title": "Pseudo-Label : The Simple and Efficient Semi-Supervised Learning Method for Deep Neural Networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "a538b05ebb01a40323997629e171c91aa28b8e2f",
+      "cite_number": 182,
+      "author": [
+        "2073603971",
+        "1695689"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2010,
+      "title": "Rectified Linear Units Improve Restricted Boltzmann Machines",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "0eb2e4a205a628ab059cab41d3b772f614ad29f2",
+      "cite_number": 183,
+      "author": [
+        "1710604",
+        "1695689"
+      ],
+      "venue": "Neural Computation",
+      "year": 2010,
+      "title": "Learning to Represent Spatial Transformations with Factored Higher-Order Boltzmann Machines",
+      "source": "",
+      "doi": "10.1162/neco.2010.01-09-953",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "ea9d2a2b4ce11aaf85136840c65f3bc9c03ab649",
+      "cite_number": 184,
+      "author": [
+        "3119801",
+        "1751762"
+      ],
+      "venue": "International Conference on Artificial Intelligence and Statistics",
+      "year": 2010,
+      "title": "Understanding the difficulty of training deep feedforward neural networks",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "4b25105f82cc372e0db5fb5b44a15b48cd6413cc",
+      "cite_number": 185,
+      "author": [
+        "2302379",
+        "143603695",
+        "2564067",
+        "145382202",
+        "49656006",
+        "145798235"
+      ],
+      "venue": "PLoS Comput. Biol.",
+      "year": 2009,
+      "title": "A Model Analysis of Arterial Oxygen Desaturation during Apnea in Preterm Infants",
+      "source": "",
+      "doi": "10.1371/journal.pcbi.1000588",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "a7e5f1c143329c30d2dff82e61328c484ac2d747",
+      "cite_number": 186,
+      "author": [
+        "3245558",
+        "145369890",
+        "2283363"
+      ],
+      "venue": "PLoS Comput. Biol.",
+      "year": 2009,
+      "title": "A Structured Model of Video Reproduces Primary Visual Cortical Organisation",
+      "source": "",
+      "doi": "10.1371/journal.pcbi.1000495",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "1e80f755bcbf10479afd2338cec05211fdbd325c",
+      "cite_number": 187,
+      "author": [
+        "1697141",
+        "1785346",
+        "2615814",
+        "34699434"
+      ],
+      "venue": "International Conference on Machine Learning",
+      "year": 2009,
+      "title": "Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations",
+      "source": "",
+      "doi": "10.1145/1553374.1553453",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "06adae42f8c6bf2cd733db8515b1711cfed67ad1",
+      "cite_number": 188,
+      "author": [
+        "5469799",
+        "1904050"
+      ],
+      "venue": "Nature Neuroscience",
+      "year": 2008,
+      "title": "The uncrowded window of object recognition",
+      "source": "",
+      "doi": "10.1038/nn.2187",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "ccd52aff02b0f902f4ce7247c4fee7273014c41c",
+      "cite_number": 189,
+      "author": [
+        "1706809",
+        "13919023",
+        "90841478",
+        "1688882"
+      ],
+      "venue": "2007 IEEE Conference on Computer Vision and Pattern Recognition",
+      "year": 2007,
+      "title": "Unsupervised Learning of Invariant Feature Hierarchies with Applications to Object Recognition",
+      "source": "",
+      "doi": "10.1109/CVPR.2007.383157",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "4d6109548fab119d5edfb7a77b63eb10ca58f4a4",
+      "cite_number": 190,
+      "author": [
+        "144936828",
+        "145297860",
+        "1852992",
+        "145624227",
+        "1774949"
+      ],
+      "venue": "Nature",
+      "year": 2005,
+      "title": "Invariant visual representation by single neurons in the human brain",
+      "source": "",
+      "doi": "10.1038/nature03687",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "85abadb689897997f1e37baa7b5fc6f7d497518b",
+      "cite_number": 191,
+      "author": [
+        "1996960",
+        "1685292"
+      ],
+      "venue": "Nature Neuroscience",
+      "year": 1999,
+      "title": "Hierarchical models of object recognition in cortex",
+      "source": "",
+      "doi": "10.1038/14819",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "f9f836d28f52ad260213d32224a6d227f8e8849a",
+      "cite_number": 192,
+      "author": [
+        "35238678"
+      ],
+      "venue": "Proceedings of the Seventh IEEE International Conference on Computer Vision",
+      "year": 1999,
+      "title": "Object recognition from local scale-invariant features",
+      "source": "",
+      "doi": "10.1109/ICCV.1999.790410",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "993b1083455b5c4d631eaf44f230b061994e75c3",
+      "cite_number": 193,
+      "author": [
+        "1768236",
+        "145358192"
+      ],
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "year": 1991,
+      "title": "The Design and Use of Steerable Filters",
+      "source": "",
+      "doi": "10.1109/34.93808",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "272cb3db246145e13f8db4acbe1d2eae088c7677",
+      "cite_number": 194,
+      "author": [
+        "1695689"
+      ],
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "year": 1981,
+      "title": "Shape Representation in Parallel Systems",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "162d958ff885f1462aeda91cd72582323fd6a1f4",
+      "cite_number": 195,
+      "author": [
+        "1688882",
+        "52184096",
+        "1751762",
+        "1721248"
+      ],
+      "venue": "Proceedings of the IEEE",
+      "year": 1998,
+      "title": "Gradient-based learning applied to document recognition",
+      "source": "",
+      "doi": "10.1109/5.726791",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "5b00ab8cc5a56ee934618bd7555965185a7f83ec",
+      "cite_number": 196,
+      "author": [
+        "1804104",
+        "144473519",
+        "1695689"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "year": 1989,
+      "title": "TRAFFIC: Recognizing Objects Using Hierarchical Reference Frame Transformations",
+      "source": "",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    }
+  ]
+}

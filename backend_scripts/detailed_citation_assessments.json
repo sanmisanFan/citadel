@@ -1,0 +1,39 @@
+{
+  "[]": [
+    {
+      "excerpt": "A variety of principles and models have been devoted to training unsupervised representations. As shown in Fig. C.3, available in the online supplemental material, we will review them from several different perspectives. First, we will review the emerging principle of Transformation Equivariant Representations(TER) pioneered in Hinton's seminal work [6] as well as the recent formulation of unsupervised training of such representations [7]. It follows by reviewing a number of generative networks representative in many recent models, including the variants of auto-encoders, Generative Adversarial Nets (GANs), Flow-based Generative Networks, and Transformers (See Fig. C.3, available in the online supplemental material). The principle of learning disentangling representationsfrom these generative models is also central to many unsupervised methods, and we will review them on how to extract interpretable generative factors from unlabeled data. Finally, self-supervised methods constitutes a large category of unsupervised models, and we will review autoregressive models as well as the selfsupervised training of image and video representations.",
+      "assessment": "Score: 0\nExplanation: Since there is no summary available for the cited paper, it is impossible to evaluate the contextual relevance of the citation within the provided text excerpt. Without knowing the content, methods, or results of the cited work, one cannot determine how substantively it is engaged with or its relevance to the discussion in the text.",
+      "score": 0
+    },
+    {
+      "excerpt": "- Transformation-Equivariant Representations. Recently, learning transformation-equivariant representations (TERs) from unlabeled data has attracted many attentions in both unsupervised and supervised methods. In particular, a good TER equivaries with different types of transformations so that the scene structure in an image can be compactly encoded into its representation. Then the successive problems for recognizing unseen visual concepts can be performed on top of the trained TER. The notion of TER was originally proposed by Hinton et al. [6] in introducing capsule nets and it has been formalized in various ways. We will review it in Section 2.2.",
+      "assessment": "Score: 0\nExplanation: Since there is no summary available for the cited paper, it is impossible to evaluate the contextual relevance of the citation within the provided text excerpt. Without information on the paper's content, methods, or results, no substantive assessment can be made regarding how the text engages with the paper.",
+      "score": 0
+    },
+    {
+      "excerpt": "Although a solid theory is still lacking, it is thought that both equivalence and invariance to image translations play a critical role in the success of CNNs, particularly for supervised classification tasks [1], [6]. A typical Convolutional Neural Network (CNN) consists of two parts: the feature maps of input images through multiple convolutional layers, and the classifier of fully connected layers mapping the feature maps to the target labels.",
+      "assessment": "Score: 0\nExplanation: Since there is no summary available for the cited paper, it is impossible to evaluate the contextual relevance of the citation within the provided text excerpt. Without information on the paper's content, methods, or results, no substantive discussion can be assessed.",
+      "score": 0
+    },
+    {
+      "excerpt": "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation – without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
+      "assessment": "Score: 0\nExplanation: Since there is no summary available for the cited paper, it is impossible to evaluate the contextual relevance of the citation within the provided text excerpt. Without specific details about the paper's content, methods, or results, any assessment of how substantively the text engages with the paper would be purely speculative.",
+      "score": 0
+    },
+    {
+      "excerpt": "The DC-IGN is semi-supervised to engineer inverse graphics as training images with various transformations are available from 3D face and chair datasets. We also note that a number of inverse graphics models [93], [94], [95] have been proposed to train disentangled representations. Among them are deep lambertian networks [96] that assume a Lambertian reflectance model and implicitly construct the 3D representation, and transforming auto-encoders [6], [97] that use a domain-specific decoder to reconstruct images, as well as [98] with an approximate differentiable renderer to explicitly capture the relationship between changes in model parameters and image observations.",
+      "assessment": "Score: 0\nExplanation: Since there is no summary available for the cited paper, it is impossible to evaluate the contextual relevance of the citation in the provided text excerpt. Without information on the paper's content, methods, or results, an assessment of how substantively the text engages with the paper cannot be made.",
+      "score": 0
+    },
+    {
+      "excerpt": "A more theoretical topic lies on revealing the intrinsic relation between transformation equivariance and invariance in learning representations. On the one hand, the pursuit of Transformation Equivariant Representation (TER) has been spotlighted as one of critical criteria [6] that achieves the state-of-the-art performances in unsupervised learning [7], [16]. However, it is also important and necessary to apply the transformation invariance to train discriminative networks with labeled data in supervised tasks for recognizing images and objects.",
+      "assessment": "Score: 0\nExplanation: Since there is no summary available for the cited paper, it is impossible to evaluate the contextual relevance of the citation in the provided text excerpt. Without knowing the content, methods, or results of the cited paper, we cannot determine how substantively or relevantly it is engaged with in the text.",
+      "score": 0
+    },
+    {
+      "excerpt": "- [6] G. E. Hinton, A. Krizhevsky, and S. D. Wang, \"Transforming auto-encoders,\" in Proc. Int. Conf. Artif. Neural Netw., 2011, pp. 44–51.",
+      "assessment": "Score: 0\nExplanation: The provided text excerpt is a reference list entry with no substantive discussion. It merely lists the publication details of the paper by G. E. Hinton, A. Krizhevsky, and S. D. Wang, without engaging with its content, methods, or results.",
+      "score": 0
+    }
+  ]
+}

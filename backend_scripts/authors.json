@@ -1,0 +1,6304 @@
+{
+  "authors": [
+    {
+      "id": "author-0",
+      "raw_name": "A. Krizhevsky",
+      "standardized_name": "A. Krizhevsky",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "88080d28536f36588740737f3b7a1f6c1a409654",
+        "abd1c342495432171beb7ca8fd9551ef13cbd0ff",
+        "20f0357688876fa4662f806f985779dce6e24f3c",
+        "0060745e006c5f14ec326904119dca19c6545e51",
+        "bea5780d621e669e8069f05d0f2fc0db9df4b50f",
+        "5d90f06bb70a0a3dced62413346235c02b1aa086"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-26",
+        "venue-49",
+        "venue-15"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-1",
+      "raw_name": "I. Sutskever",
+      "standardized_name": "I. Sutskever",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "0060745e006c5f14ec326904119dca19c6545e51",
+        "954b01151ff13aef416d27adc60cd9a076753b1a",
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d",
+        "abd1c342495432171beb7ca8fd9551ef13cbd0ff"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-15"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-2",
+      "raw_name": "G. E. Hinton",
+      "standardized_name": "Geoffrey E. Hinton",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "88080d28536f36588740737f3b7a1f6c1a409654",
+        "a538b05ebb01a40323997629e171c91aa28b8e2f",
+        "272cb3db246145e13f8db4acbe1d2eae088c7677",
+        "abd1c342495432171beb7ca8fd9551ef13cbd0ff",
+        "20f0357688876fa4662f806f985779dce6e24f3c",
+        "319f22bd5abfd67ac15988aa5c7f705f018c3ccd",
+        "0060745e006c5f14ec326904119dca19c6545e51",
+        "c91ae35dbcb6d479580ecd235eabf98374acdb55",
+        "7257eacd80458e70c74494eb1b6759b52ff21399",
+        "2913c2bf3f92b5ae369400a42b2d27cc5bc05ecb",
+        "0eb2e4a205a628ab059cab41d3b772f614ad29f2",
+        "5b00ab8cc5a56ee934618bd7555965185a7f83ec"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-26",
+        "venue-28",
+        "venue-37",
+        "venue-29",
+        "venue-15",
+        "venue-49",
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-3",
+      "raw_name": "K. He",
+      "standardized_name": "Kaiming He",
+      "openalex_link": "",
+      "orcid": "0000-0001-7318-9658",
+      "citation": [
+        "8ad35df17ae4064dd174690efb04d347428f1117",
+        "cbb19236820a96038d000dc629225d36e0b6294a",
+        "d6f2f611da110b5b5061731be3fc4c7f45d8ee23",
+        "2c03df8b48bf3fa39054345bafabfeff15bfd11d",
+        "424561d8585ff8ebce7d5d07de8dbf7aae5e7270",
+        "f075f89b4f4026748cbf2fb9f989a9934c42ee8f"
+      ],
+      "venue": [
+        "venue-21",
+        "venue-23",
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-4",
+      "raw_name": "X. Zhang",
+      "standardized_name": "X. Zhang",
+      "openalex_link": "",
+      "orcid": "0000-0003-2138-4608",
+      "citation": [
+        "2c03df8b48bf3fa39054345bafabfeff15bfd11d",
+        "d6f2f611da110b5b5061731be3fc4c7f45d8ee23",
+        "f075f89b4f4026748cbf2fb9f989a9934c42ee8f",
+        "cbb19236820a96038d000dc629225d36e0b6294a"
+      ],
+      "venue": [
+        "venue-21",
+        "venue-23",
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-5",
+      "raw_name": "S. Ren",
+      "standardized_name": "Shaoqing Ren",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "cbb19236820a96038d000dc629225d36e0b6294a",
+        "d6f2f611da110b5b5061731be3fc4c7f45d8ee23",
+        "2c03df8b48bf3fa39054345bafabfeff15bfd11d",
+        "424561d8585ff8ebce7d5d07de8dbf7aae5e7270",
+        "f075f89b4f4026748cbf2fb9f989a9934c42ee8f"
+      ],
+      "venue": [
+        "venue-21",
+        "venue-23",
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-6",
+      "raw_name": "J. Sun",
+      "standardized_name": "Jian Sun",
+      "openalex_link": "",
+      "orcid": "0000-0002-6178-4166",
+      "citation": [
+        "2c03df8b48bf3fa39054345bafabfeff15bfd11d"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-7",
+      "raw_name": "C. Finn",
+      "standardized_name": "Chelsea Finn",
+      "openalex_link": "",
+      "orcid": "0000-0001-6298-0874",
+      "citation": [
+        "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
+        "38e2f851b705faa0d0a698ed9885bd6834440073",
+        "46b072cf918ec6f50403568a73d4347ea86b7e66"
+      ],
+      "venue": [
+        "venue-28",
+        "venue-37",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-8",
+      "raw_name": "P. Abbeel",
+      "standardized_name": "P. Abbeel",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "7e9c1e0d247b20a0683f4797d9ea248c3b53d424",
+        "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
+        "449532187c94af3dd3aa55e16d2c50f7854d2199",
+        "1464776f20e2bccb6182f183b5ff2e15b0ae5e56",
+        "954b01151ff13aef416d27adc60cd9a076753b1a"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-28",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-9",
+      "raw_name": "S. Levine",
+      "standardized_name": "S. Levine",
+      "openalex_link": "",
+      "orcid": "0000-0001-6764-2743",
+      "citation": [
+        "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
+        "38e2f851b705faa0d0a698ed9885bd6834440073",
+        "449532187c94af3dd3aa55e16d2c50f7854d2199",
+        "46b072cf918ec6f50403568a73d4347ea86b7e66"
+      ],
+      "venue": [
+        "venue-28",
+        "venue-37",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-10",
+      "raw_name": "M. A. Jamal",
+      "standardized_name": "Muhammad Abdullah Jamal",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "06f0fe16fcb8f80bf88746c5ef6d3780531918ab"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-11",
+      "raw_name": "G.-J. Qi",
+      "standardized_name": "Guo-Jun Qi",
+      "openalex_link": "",
+      "orcid": "0000-0003-3508-1851",
+      "citation": [
+        "06f0fe16fcb8f80bf88746c5ef6d3780531918ab"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-12",
+      "raw_name": "M. Shah",
+      "standardized_name": "M. Shah",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "06f0fe16fcb8f80bf88746c5ef6d3780531918ab"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-13",
+      "raw_name": "X. Li",
+      "standardized_name": "Qianru Sun",
+      "openalex_link": "",
+      "orcid": "0000-0002-5547-8293",
+      "citation": [
+        "2ff8c20ff38df9bfa2c89e8e3f8624598a7ea44f"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-14",
+      "raw_name": null,
+      "standardized_name": "Xinzhe Li",
+      "openalex_link": "",
+      "orcid": "0000-0003-2689-317X",
+      "citation": [
+        "2ff8c20ff38df9bfa2c89e8e3f8624598a7ea44f"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-15",
+      "raw_name": null,
+      "standardized_name": "Yaoyao Liu",
+      "openalex_link": "",
+      "orcid": "0000-0002-5316-3028",
+      "citation": [
+        "2ff8c20ff38df9bfa2c89e8e3f8624598a7ea44f"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-16",
+      "raw_name": null,
+      "standardized_name": "Shibao Zheng",
+      "openalex_link": "",
+      "orcid": "0000-0002-0082-1330",
+      "citation": [
+        "2ff8c20ff38df9bfa2c89e8e3f8624598a7ea44f"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-17",
+      "raw_name": null,
+      "standardized_name": "Tat-Seng Chua",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "2ff8c20ff38df9bfa2c89e8e3f8624598a7ea44f"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-18",
+      "raw_name": null,
+      "standardized_name": "B. Schiele",
+      "openalex_link": "",
+      "orcid": "0000-0001-6097-7807",
+      "citation": [
+        "ab50e0fba1e7964d2686e90f9bed66a06ed6ff42",
+        "441a95b80875c7fe0ae98c5d301e2c92feb4c191",
+        "2ff8c20ff38df9bfa2c89e8e3f8624598a7ea44f"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-19",
+      "raw_name": "S. D. Wang",
+      "standardized_name": "Sida I. Wang",
+      "openalex_link": "",
+      "orcid": "0000-0003-3625-3459",
+      "citation": [
+        "20f0357688876fa4662f806f985779dce6e24f3c"
+      ],
+      "venue": [
+        "venue-26"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-20",
+      "raw_name": null,
+      "standardized_name": "Thomas Mensink",
+      "openalex_link": "",
+      "orcid": "0000-0002-5730-713X",
+      "citation": [
+        "3a4a53fe47036ac89dad070ab87a9d8795b139b1"
+      ],
+      "venue": [
+        "venue-20"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-21",
+      "raw_name": null,
+      "standardized_name": "J. Verbeek",
+      "openalex_link": "",
+      "orcid": "0000-0003-1419-1816",
+      "citation": [
+        "3a4a53fe47036ac89dad070ab87a9d8795b139b1"
+      ],
+      "venue": [
+        "venue-20"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-22",
+      "raw_name": null,
+      "standardized_name": "Florent Perronnin",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "23694b6d61668e62bb11f17c1d75dde3b4951948",
+        "3a4a53fe47036ac89dad070ab87a9d8795b139b1",
+        "eefcc7bcc05436dac9881acb4ff4e4a0b730e175"
+      ],
+      "venue": [
+        "venue-1",
+        "venue-20",
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-23",
+      "raw_name": null,
+      "standardized_name": "G. Csurka",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "3a4a53fe47036ac89dad070ab87a9d8795b139b1"
+      ],
+      "venue": [
+        "venue-20"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-24",
+      "raw_name": null,
+      "standardized_name": "D. Ciresan",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "82b9099ddf092463f497bd48bb112c46ca52c4d1",
+        "5bdfd78fb2285b9306e93bd3a4b534d19bf55f06",
+        "398c296d0cc7f9d180f84969f8937e6d3a413796"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-3",
+        "venue-38"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-25",
+      "raw_name": null,
+      "standardized_name": "U. Meier",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "82b9099ddf092463f497bd48bb112c46ca52c4d1",
+        "5bdfd78fb2285b9306e93bd3a4b534d19bf55f06",
+        "398c296d0cc7f9d180f84969f8937e6d3a413796"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-3",
+        "venue-38"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-26",
+      "raw_name": null,
+      "standardized_name": "Jonathan Masci",
+      "openalex_link": "",
+      "orcid": "0000-0001-6279-1918",
+      "citation": [
+        "82b9099ddf092463f497bd48bb112c46ca52c4d1",
+        "5bdfd78fb2285b9306e93bd3a4b534d19bf55f06"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-38"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-27",
+      "raw_name": null,
+      "standardized_name": "J. Schmidhuber",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "bc22e87a26d020215afe91c751e5bdaddd8e4922",
+        "5bdfd78fb2285b9306e93bd3a4b534d19bf55f06",
+        "e0945081b5b87187a53d4329cf77cd8bff635795",
+        "398c296d0cc7f9d180f84969f8937e6d3a413796",
+        "82b9099ddf092463f497bd48bb112c46ca52c4d1",
+        "2e9d221c206e9503ceb452302d68d10e293f2a10",
+        "b92aa7024b87f50737b372e5df31ef091ab54e62"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-37",
+        "venue-38",
+        "venue-3",
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-28",
+      "raw_name": null,
+      "standardized_name": "Nitish Srivastava",
+      "openalex_link": "",
+      "orcid": "0000-0002-3442-5352",
+      "citation": [
+        "0060745e006c5f14ec326904119dca19c6545e51"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-29",
+      "raw_name": null,
+      "standardized_name": "R. Salakhutdinov",
+      "openalex_link": "",
+      "orcid": "0000-0002-3752-2756",
+      "citation": [
+        "0060745e006c5f14ec326904119dca19c6545e51",
+        "100a038fdf29b4b20801887f0ec40e3f10d9a4f9",
+        "1def5d3711ebd1d86787b1ed57c91832c5ddc90b"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-11",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-30",
+      "raw_name": null,
+      "standardized_name": "Jorge Sánchez",
+      "openalex_link": "",
+      "orcid": "0000-0002-0150-7263",
+      "citation": [
+        "eefcc7bcc05436dac9881acb4ff4e4a0b730e175"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-31",
+      "raw_name": null,
+      "standardized_name": "L. Gambardella",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "82b9099ddf092463f497bd48bb112c46ca52c4d1"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-32",
+      "raw_name": null,
+      "standardized_name": "L. Menéndez",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "d54cb764ce7e132eef60b5eced8752fe7d19377c"
+      ],
+      "venue": [
+        "venue-33"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-33",
+      "raw_name": null,
+      "standardized_name": "F. J. D. C. Juez",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "d54cb764ce7e132eef60b5eced8752fe7d19377c"
+      ],
+      "venue": [
+        "venue-33"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-34",
+      "raw_name": null,
+      "standardized_name": "F. Lasheras",
+      "openalex_link": "",
+      "orcid": "0000-0002-7052-2811",
+      "citation": [
+        "d54cb764ce7e132eef60b5eced8752fe7d19377c"
+      ],
+      "venue": [
+        "venue-33"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-35",
+      "raw_name": null,
+      "standardized_name": "J. Á. Riesgo",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "d54cb764ce7e132eef60b5eced8752fe7d19377c"
+      ],
+      "venue": [
+        "venue-33"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-36",
+      "raw_name": null,
+      "standardized_name": "Yann LeCun",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "ccd52aff02b0f902f4ce7247c4fee7273014c41c",
+        "c43025c429b1fbf6f1379f61801a1b40834d62e7",
+        "b8ef1230a5cc9ea7cd8358f1ae7d1af97813ba14",
+        "1f88427d7aa8225e47f946ac41a0667d7b69ac52",
+        "d007ed936c51a700d8c65d1bbfae7acc83783c31",
+        "b87274e6d9aa4e6ba5148898aa92941617d2b6ed",
+        "162d958ff885f1462aeda91cd72582323fd6a1f4",
+        "bf7e1b6997433dcb2121b07cce1de1c61471ff2d",
+        "f354310098e09c1e1dc88758fca36767fd9d084d",
+        "a8e8f3c8d4418c8d62e306538c9c1292635e9d27",
+        "2913c2bf3f92b5ae369400a42b2d27cc5bc05ecb",
+        "86ab4cae682fbd49c5a5bedb630e5a40fa7529f6"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-42",
+        "venue-38",
+        "venue-1",
+        "venue-41",
+        "venue-25",
+        "venue-43",
+        "venue-36",
+        "venue-21"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-37",
+      "raw_name": null,
+      "standardized_name": "K. Kavukcuoglu",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1f88427d7aa8225e47f946ac41a0667d7b69ac52",
+        "c43025c429b1fbf6f1379f61801a1b40834d62e7",
+        "be1bb4e4aa1fcf70281b4bd24d8cd31c04864bb6"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-21",
+        "venue-41"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-38",
+      "raw_name": null,
+      "standardized_name": "C. Farabet",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "c43025c429b1fbf6f1379f61801a1b40834d62e7"
+      ],
+      "venue": [
+        "venue-41"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-39",
+      "raw_name": null,
+      "standardized_name": "Vinod Nair",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a538b05ebb01a40323997629e171c91aa28b8e2f"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-40",
+      "raw_name": null,
+      "standardized_name": "Srinivas C. Turaga",
+      "openalex_link": "",
+      "orcid": "0000-0003-3247-6487",
+      "citation": [
+        "feacb4cf21eaf068197f80b164827db888ddd28d"
+      ],
+      "venue": [
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-41",
+      "raw_name": null,
+      "standardized_name": "Joseph F. Murray",
+      "openalex_link": "",
+      "orcid": "0000-0003-2881-0606",
+      "citation": [
+        "feacb4cf21eaf068197f80b164827db888ddd28d"
+      ],
+      "venue": [
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-42",
+      "raw_name": null,
+      "standardized_name": "Viren Jain",
+      "openalex_link": "",
+      "orcid": "0000-0003-1488-3505",
+      "citation": [
+        "feacb4cf21eaf068197f80b164827db888ddd28d"
+      ],
+      "venue": [
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-43",
+      "raw_name": null,
+      "standardized_name": "Fabian Roth",
+      "openalex_link": "",
+      "orcid": "0000-0001-6106-3708",
+      "citation": [
+        "feacb4cf21eaf068197f80b164827db888ddd28d"
+      ],
+      "venue": [
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-44",
+      "raw_name": null,
+      "standardized_name": "M. Helmstaedter",
+      "openalex_link": "",
+      "orcid": "0000-0001-7973-0767",
+      "citation": [
+        "feacb4cf21eaf068197f80b164827db888ddd28d"
+      ],
+      "venue": [
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-45",
+      "raw_name": null,
+      "standardized_name": "K. Briggman",
+      "openalex_link": "",
+      "orcid": "0000-0003-2946-4661",
+      "citation": [
+        "feacb4cf21eaf068197f80b164827db888ddd28d"
+      ],
+      "venue": [
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-46",
+      "raw_name": null,
+      "standardized_name": "W. Denk",
+      "openalex_link": "",
+      "orcid": "0000-0002-0704-6998",
+      "citation": [
+        "feacb4cf21eaf068197f80b164827db888ddd28d"
+      ],
+      "venue": [
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-47",
+      "raw_name": null,
+      "standardized_name": "H. Seung",
+      "openalex_link": "",
+      "orcid": "0000-0002-8591-6733",
+      "citation": [
+        "feacb4cf21eaf068197f80b164827db888ddd28d"
+      ],
+      "venue": [
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-48",
+      "raw_name": null,
+      "standardized_name": "Nicolas Pinto",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "d46fd54609e09bcd135fd28750003185a5ee4125",
+        "688b6fbc3c5c06e254961f70de9d855d3d008d09"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-49",
+      "raw_name": null,
+      "standardized_name": "D. Doukhan",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "d46fd54609e09bcd135fd28750003185a5ee4125"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-50",
+      "raw_name": null,
+      "standardized_name": "J. DiCarlo",
+      "openalex_link": "",
+      "orcid": "0000-0002-1592-5896",
+      "citation": [
+        "d46fd54609e09bcd135fd28750003185a5ee4125",
+        "688b6fbc3c5c06e254961f70de9d855d3d008d09"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-51",
+      "raw_name": null,
+      "standardized_name": "David D. Cox",
+      "openalex_link": "",
+      "orcid": "0000-0002-2189-9743",
+      "citation": [
+        "d46fd54609e09bcd135fd28750003185a5ee4125",
+        "688b6fbc3c5c06e254961f70de9d855d3d008d09"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-52",
+      "raw_name": null,
+      "standardized_name": "Kevin Jarrett",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1f88427d7aa8225e47f946ac41a0667d7b69ac52"
+      ],
+      "venue": [
+        "venue-21"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-53",
+      "raw_name": null,
+      "standardized_name": "Marc'Aurelio Ranzato",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1f88427d7aa8225e47f946ac41a0667d7b69ac52",
+        "ccd52aff02b0f902f4ce7247c4fee7273014c41c"
+      ],
+      "venue": [
+        "venue-21",
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-54",
+      "raw_name": null,
+      "standardized_name": "Jia Deng",
+      "openalex_link": "",
+      "orcid": "0000-0001-9594-4554",
+      "citation": [
+        "d2c733e34d48784a37d717fe43d9e93277a8c53e",
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-30",
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-55",
+      "raw_name": null,
+      "standardized_name": "Wei Dong",
+      "openalex_link": "",
+      "orcid": "0000-0003-3067-8720",
+      "citation": [
+        "d2c733e34d48784a37d717fe43d9e93277a8c53e"
+      ],
+      "venue": [
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-56",
+      "raw_name": null,
+      "standardized_name": "R. Socher",
+      "openalex_link": "",
+      "orcid": "0000-0002-3577-639X",
+      "citation": [
+        "d2c733e34d48784a37d717fe43d9e93277a8c53e"
+      ],
+      "venue": [
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-57",
+      "raw_name": null,
+      "standardized_name": "Li-Jia Li",
+      "openalex_link": "",
+      "orcid": "0000-0001-5850-7013",
+      "citation": [
+        "d2c733e34d48784a37d717fe43d9e93277a8c53e"
+      ],
+      "venue": [
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-58",
+      "raw_name": null,
+      "standardized_name": "K. Li",
+      "openalex_link": "",
+      "orcid": "0000-0003-1560-0853",
+      "citation": [
+        "d2c733e34d48784a37d717fe43d9e93277a8c53e"
+      ],
+      "venue": [
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-59",
+      "raw_name": null,
+      "standardized_name": "Li Fei-Fei",
+      "openalex_link": "",
+      "orcid": "0000-0002-7481-0810",
+      "citation": [
+        "812355cec91fa30bb50e9e992a3549af39e4f6eb",
+        "ed9db7b20e019cdb1c7db8b7921221ee2d9f36e2",
+        "d2c733e34d48784a37d717fe43d9e93277a8c53e",
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-0",
+        "venue-23",
+        "venue-2",
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-60",
+      "raw_name": null,
+      "standardized_name": "Alexander Toshev",
+      "openalex_link": "",
+      "orcid": "0000-0003-0925-638X",
+      "citation": [
+        "2a73a19dc5564e8fd3d734fe522e85fe979e8401"
+      ],
+      "venue": [
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-61",
+      "raw_name": null,
+      "standardized_name": "A. Makadia",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "2a73a19dc5564e8fd3d734fe522e85fe979e8401"
+      ],
+      "venue": [
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-62",
+      "raw_name": null,
+      "standardized_name": "Kostas Daniilidis",
+      "openalex_link": "",
+      "orcid": "0000-0003-0498-0758",
+      "citation": [
+        "2a73a19dc5564e8fd3d734fe522e85fe979e8401"
+      ],
+      "venue": [
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-63",
+      "raw_name": null,
+      "standardized_name": "Honglak Lee",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1e80f755bcbf10479afd2338cec05211fdbd325c"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-64",
+      "raw_name": null,
+      "standardized_name": "R. Grosse",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1e80f755bcbf10479afd2338cec05211fdbd325c"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-65",
+      "raw_name": null,
+      "standardized_name": "R. Ranganath",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1e80f755bcbf10479afd2338cec05211fdbd325c"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-66",
+      "raw_name": null,
+      "standardized_name": "A. Ng",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1e80f755bcbf10479afd2338cec05211fdbd325c"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-67",
+      "raw_name": null,
+      "standardized_name": "Bryan C. Russell",
+      "openalex_link": "",
+      "orcid": "0000-0001-8656-543X",
+      "citation": [
+        "092c275005ae49dc1303214f6d02d134457c7053"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-68",
+      "raw_name": null,
+      "standardized_name": "A. Torralba",
+      "openalex_link": "",
+      "orcid": "0000-0003-4915-0256",
+      "citation": [
+        "092c275005ae49dc1303214f6d02d134457c7053"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-69",
+      "raw_name": null,
+      "standardized_name": "Kevin P. Murphy",
+      "openalex_link": "",
+      "orcid": "0000-0001-5196-7236",
+      "citation": [
+        "092c275005ae49dc1303214f6d02d134457c7053"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-70",
+      "raw_name": null,
+      "standardized_name": "W. Freeman",
+      "openalex_link": "",
+      "orcid": "0000-0002-2231-7995",
+      "citation": [
+        "993b1083455b5c4d631eaf44f230b061994e75c3",
+        "092c275005ae49dc1303214f6d02d134457c7053"
+      ],
+      "venue": [
+        "venue-30",
+        "venue-23"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-71",
+      "raw_name": null,
+      "standardized_name": "Robert M. Bell",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a9b861ea10ec2acdebb0ee9bc29e3360cd09d9b6"
+      ],
+      "venue": [
+        "venue-47"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-72",
+      "raw_name": null,
+      "standardized_name": "Y. Koren",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a9b861ea10ec2acdebb0ee9bc29e3360cd09d9b6"
+      ],
+      "venue": [
+        "venue-47"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-73",
+      "raw_name": null,
+      "standardized_name": "G. Griffin",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "5a5effa909cdeafaddbbb7855037e02f8e25d632"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-74",
+      "raw_name": null,
+      "standardized_name": "Alex Holub",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "5a5effa909cdeafaddbbb7855037e02f8e25d632"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-75",
+      "raw_name": null,
+      "standardized_name": "P. Perona",
+      "openalex_link": "",
+      "orcid": "0000-0002-7583-5809",
+      "citation": [
+        "812355cec91fa30bb50e9e992a3549af39e4f6eb",
+        "ed9db7b20e019cdb1c7db8b7921221ee2d9f36e2",
+        "5a5effa909cdeafaddbbb7855037e02f8e25d632",
+        "71b7178df5d2b112d07e45038cb5637208659ff7"
+      ],
+      "venue": [
+        "venue-0",
+        "venue-20",
+        "venue-23"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-76",
+      "raw_name": null,
+      "standardized_name": "Fu Jie Huang",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "ccd52aff02b0f902f4ce7247c4fee7273014c41c",
+        "f354310098e09c1e1dc88758fca36767fd9d084d"
+      ],
+      "venue": [
+        "venue-42",
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-77",
+      "raw_name": null,
+      "standardized_name": "L. Bottou",
+      "openalex_link": "",
+      "orcid": "0000-0002-9894-8128",
+      "citation": [
+        "162d958ff885f1462aeda91cd72582323fd6a1f4",
+        "b87274e6d9aa4e6ba5148898aa92941617d2b6ed",
+        "f354310098e09c1e1dc88758fca36767fd9d084d"
+      ],
+      "venue": [
+        "venue-42",
+        "venue-38",
+        "venue-43"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-78",
+      "raw_name": null,
+      "standardized_name": "R. Fergus",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "812355cec91fa30bb50e9e992a3549af39e4f6eb",
+        "ed9db7b20e019cdb1c7db8b7921221ee2d9f36e2"
+      ],
+      "venue": [
+        "venue-0",
+        "venue-23"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-79",
+      "raw_name": null,
+      "standardized_name": "Patrice Y. Simard",
+      "openalex_link": "",
+      "orcid": "0000-0001-8371-7450",
+      "citation": [
+        "d0be39ee052d246ae99c082a565aba25b811be2d",
+        "5562a56da3a96dae82add7de705e2bd841eb00fc"
+      ],
+      "venue": [
+        "venue-48",
+        "venue-22"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-80",
+      "raw_name": null,
+      "standardized_name": "David Steinkraus",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "5562a56da3a96dae82add7de705e2bd841eb00fc"
+      ],
+      "venue": [
+        "venue-48"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-81",
+      "raw_name": null,
+      "standardized_name": "John C. Platt",
+      "openalex_link": "",
+      "orcid": "0000-0002-5652-5303",
+      "citation": [
+        "5562a56da3a96dae82add7de705e2bd841eb00fc"
+      ],
+      "venue": [
+        "venue-48"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-82",
+      "raw_name": null,
+      "standardized_name": "D. Rumelhart",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "319f22bd5abfd67ac15988aa5c7f705f018c3ccd"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-83",
+      "raw_name": null,
+      "standardized_name": "Ronald J. Williams",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "319f22bd5abfd67ac15988aa5c7f705f018c3ccd",
+        "4c915c1eecb217c123a36dc6d3ce52d12c742614"
+      ],
+      "venue": [
+        "venue-32"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-84",
+      "raw_name": null,
+      "standardized_name": "K. Fukushima",
+      "openalex_link": "",
+      "orcid": "0000-0003-3025-7627",
+      "citation": [
+        "69e68bfaadf2dccff800158749f5a50fe82d173b"
+      ],
+      "venue": [
+        "venue-12"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-85",
+      "raw_name": null,
+      "standardized_name": "S. Linnainmaa",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "f49101078fb25f714a9813259ece149581017782"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-86",
+      "raw_name": null,
+      "standardized_name": "L. Breiman",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "8e0be569ea77b8cb29bb0e8b031887630fe7a96c"
+      ],
+      "venue": [
+        "venue-32"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-87",
+      "raw_name": null,
+      "standardized_name": "B. Boser",
+      "openalex_link": "",
+      "orcid": "0000-0003-3922-133X",
+      "citation": [
+        "86ab4cae682fbd49c5a5bedb630e5a40fa7529f6",
+        "a8e8f3c8d4418c8d62e306538c9c1292635e9d27"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-88",
+      "raw_name": null,
+      "standardized_name": "J. Denker",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "86ab4cae682fbd49c5a5bedb630e5a40fa7529f6",
+        "a8e8f3c8d4418c8d62e306538c9c1292635e9d27"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-89",
+      "raw_name": null,
+      "standardized_name": "D. Henderson",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "86ab4cae682fbd49c5a5bedb630e5a40fa7529f6",
+        "a8e8f3c8d4418c8d62e306538c9c1292635e9d27"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-90",
+      "raw_name": null,
+      "standardized_name": "R. Howard",
+      "openalex_link": "",
+      "orcid": "0009-0004-0979-4174",
+      "citation": [
+        "86ab4cae682fbd49c5a5bedb630e5a40fa7529f6",
+        "a8e8f3c8d4418c8d62e306538c9c1292635e9d27"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-91",
+      "raw_name": null,
+      "standardized_name": "W. Hubbard",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "86ab4cae682fbd49c5a5bedb630e5a40fa7529f6",
+        "a8e8f3c8d4418c8d62e306538c9c1292635e9d27"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-92",
+      "raw_name": null,
+      "standardized_name": "L. Jackel",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "86ab4cae682fbd49c5a5bedb630e5a40fa7529f6",
+        "a8e8f3c8d4418c8d62e306538c9c1292635e9d27"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-93",
+      "raw_name": null,
+      "standardized_name": "P. Werbos",
+      "openalex_link": "",
+      "orcid": "0000-0002-1288-3387",
+      "citation": [
+        "56623a496727d5c71491850e04512ddf4152b487"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-94",
+      "raw_name": null,
+      "standardized_name": "R. Srivastava",
+      "openalex_link": "",
+      "orcid": "0000-0002-3323-0713",
+      "citation": [
+        "e0945081b5b87187a53d4329cf77cd8bff635795",
+        "b92aa7024b87f50737b372e5df31ef091ab54e62"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-95",
+      "raw_name": null,
+      "standardized_name": "Klaus Greff",
+      "openalex_link": "",
+      "orcid": "0000-0001-6982-0937",
+      "citation": [
+        "e0945081b5b87187a53d4329cf77cd8bff635795",
+        "b92aa7024b87f50737b372e5df31ef091ab54e62"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-96",
+      "raw_name": null,
+      "standardized_name": "Ross B. Girshick",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "cf42c89fe45e31cdd83be78c22c28508e335b9aa",
+        "424561d8585ff8ebce7d5d07de8dbf7aae5e7270",
+        "6bdb186ec4726e00a8051119636d4df3b94043b5",
+        "7ffdbc358b63378f07311e883dddacc9faeeaf4b",
+        "f075f89b4f4026748cbf2fb9f989a9934c42ee8f"
+      ],
+      "venue": [
+        "venue-5",
+        "venue-23",
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-97",
+      "raw_name": null,
+      "standardized_name": "Jian Sun",
+      "openalex_link": "",
+      "orcid": "0000-0001-6270-2698",
+      "citation": [
+        "424561d8585ff8ebce7d5d07de8dbf7aae5e7270"
+      ],
+      "venue": [
+        "venue-23"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-98",
+      "raw_name": null,
+      "standardized_name": "Spyros Gidaris",
+      "openalex_link": "",
+      "orcid": "0000-0003-1515-3635",
+      "citation": [
+        "020928259a848b91b7c36062e4bbc6df6398c02e"
+      ],
+      "venue": [
+        "venue-21"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-99",
+      "raw_name": null,
+      "standardized_name": "N. Komodakis",
+      "openalex_link": "",
+      "orcid": "0009-0000-6767-5641",
+      "citation": [
+        "020928259a848b91b7c36062e4bbc6df6398c02e"
+      ],
+      "venue": [
+        "venue-21"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-100",
+      "raw_name": null,
+      "standardized_name": "Sergey Ioffe",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "995c5f5e62614fcb4d2796ad2faab969da51713e"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-101",
+      "raw_name": null,
+      "standardized_name": "Christian Szegedy",
+      "openalex_link": "",
+      "orcid": "0000-0003-4295-1851",
+      "citation": [
+        "e15cf50aa89fee8535703b9f9512fca5bfc43327",
+        "bee044c8e8903fb67523c1f8c105ab4718600cdb",
+        "995c5f5e62614fcb4d2796ad2faab969da51713e"
+      ],
+      "venue": [
+        "venue-28",
+        "venue-27",
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-102",
+      "raw_name": null,
+      "standardized_name": "Adriana Romero",
+      "openalex_link": "",
+      "orcid": "0000-0003-3604-6281",
+      "citation": [
+        "8604f376633af8b347e31d84c6150a93b11e34c2"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-103",
+      "raw_name": null,
+      "standardized_name": "Nicolas Ballas",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "8604f376633af8b347e31d84c6150a93b11e34c2"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-104",
+      "raw_name": null,
+      "standardized_name": "Samira Ebrahimi Kahou",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "8604f376633af8b347e31d84c6150a93b11e34c2"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-105",
+      "raw_name": null,
+      "standardized_name": "Antoine Chassang",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "8604f376633af8b347e31d84c6150a93b11e34c2"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-106",
+      "raw_name": null,
+      "standardized_name": "C. Gatta",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "8604f376633af8b347e31d84c6150a93b11e34c2"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-107",
+      "raw_name": null,
+      "standardized_name": "Yoshua Bengio",
+      "openalex_link": "",
+      "orcid": "0000-0002-9322-3515",
+      "citation": [
+        "ad67ccee45b801b0138016e2f44a566344e77320",
+        "8784f905f4f9fb6fa4a3cc9b0faa5b5479c687ec",
+        "ea9d2a2b4ce11aaf85136840c65f3bc9c03ab649",
+        "d130325c41947a41a55a4431e9e8e15be89da8ea",
+        "162d958ff885f1462aeda91cd72582323fd6a1f4",
+        "bf7e1b6997433dcb2121b07cce1de1c61471ff2d",
+        "d0be39ee052d246ae99c082a565aba25b811be2d",
+        "75dafecd481f134d4f8b9afb4923b35184d3c971",
+        "8604f376633af8b347e31d84c6150a93b11e34c2",
+        "2913c2bf3f92b5ae369400a42b2d27cc5bc05ecb"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-24",
+        "venue-18",
+        "venue-25",
+        "venue-43",
+        "venue-22",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-108",
+      "raw_name": null,
+      "standardized_name": "Evan Shelhamer",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "6bdb186ec4726e00a8051119636d4df3b94043b5",
+        "6fc6803df5f9ae505cae5b2f178ade4062c768d0"
+      ],
+      "venue": [
+        "venue-6",
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-109",
+      "raw_name": null,
+      "standardized_name": "Jonathan Long",
+      "openalex_link": "",
+      "orcid": "0000-0002-5228-3095",
+      "citation": [
+        "6bdb186ec4726e00a8051119636d4df3b94043b5",
+        "6fc6803df5f9ae505cae5b2f178ade4062c768d0"
+      ],
+      "venue": [
+        "venue-6",
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-110",
+      "raw_name": null,
+      "standardized_name": "Trevor Darrell",
+      "openalex_link": "",
+      "orcid": "0000-0001-5453-8533",
+      "citation": [
+        "46b072cf918ec6f50403568a73d4347ea86b7e66",
+        "6fc6803df5f9ae505cae5b2f178ade4062c768d0",
+        "6bdb186ec4726e00a8051119636d4df3b94043b5",
+        "b8de958fead0d8a9619b55c7299df3257c624a96",
+        "c3af47db3186691270192d5399bb5259e05c87a7"
+      ],
+      "venue": [
+        "venue-28",
+        "venue-27",
+        "venue-6",
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-111",
+      "raw_name": null,
+      "standardized_name": "Chen-Yu Lee",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "fb91db6aa4f710814f8aec28a7f3ecbc4e5ad4fd"
+      ],
+      "venue": [
+        "venue-25"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-112",
+      "raw_name": null,
+      "standardized_name": "Saining Xie",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "fb91db6aa4f710814f8aec28a7f3ecbc4e5ad4fd"
+      ],
+      "venue": [
+        "venue-25"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-113",
+      "raw_name": null,
+      "standardized_name": "Patrick W. Gallagher",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "fb91db6aa4f710814f8aec28a7f3ecbc4e5ad4fd"
+      ],
+      "venue": [
+        "venue-25"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-114",
+      "raw_name": null,
+      "standardized_name": "Zhengyou Zhang",
+      "openalex_link": "",
+      "orcid": "0000-0002-6606-2525",
+      "citation": [
+        "fb91db6aa4f710814f8aec28a7f3ecbc4e5ad4fd"
+      ],
+      "venue": [
+        "venue-25"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-115",
+      "raw_name": null,
+      "standardized_name": "Z. Tu",
+      "openalex_link": "",
+      "orcid": "0000-0002-1900-2124",
+      "citation": [
+        "fb91db6aa4f710814f8aec28a7f3ecbc4e5ad4fd"
+      ],
+      "venue": [
+        "venue-25"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-116",
+      "raw_name": null,
+      "standardized_name": "Wei Liu",
+      "openalex_link": "",
+      "orcid": "0000-0002-7409-0948",
+      "citation": [
+        "e15cf50aa89fee8535703b9f9512fca5bfc43327"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-117",
+      "raw_name": null,
+      "standardized_name": "Yangqing Jia",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "e15cf50aa89fee8535703b9f9512fca5bfc43327",
+        "b8de958fead0d8a9619b55c7299df3257c624a96",
+        "6bdb186ec4726e00a8051119636d4df3b94043b5",
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-28",
+        "venue-6",
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-118",
+      "raw_name": null,
+      "standardized_name": "P. Sermanet",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "e15cf50aa89fee8535703b9f9512fca5bfc43327"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-119",
+      "raw_name": null,
+      "standardized_name": "Scott E. Reed",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "e15cf50aa89fee8535703b9f9512fca5bfc43327"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-120",
+      "raw_name": null,
+      "standardized_name": "Dragomir Anguelov",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "e15cf50aa89fee8535703b9f9512fca5bfc43327"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-121",
+      "raw_name": null,
+      "standardized_name": "D. Erhan",
+      "openalex_link": "",
+      "orcid": "0000-0001-7650-1475",
+      "citation": [
+        "e15cf50aa89fee8535703b9f9512fca5bfc43327"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-122",
+      "raw_name": null,
+      "standardized_name": "Vincent Vanhoucke",
+      "openalex_link": "",
+      "orcid": "0000-0003-0544-2791",
+      "citation": [
+        "e15cf50aa89fee8535703b9f9512fca5bfc43327",
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-123",
+      "raw_name": null,
+      "standardized_name": "Andrew Rabinovich",
+      "openalex_link": "",
+      "orcid": "0000-0003-3078-6705",
+      "citation": [
+        "e15cf50aa89fee8535703b9f9512fca5bfc43327"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-124",
+      "raw_name": null,
+      "standardized_name": "K. Simonyan",
+      "openalex_link": "",
+      "orcid": "0000-0003-0787-5507",
+      "citation": [
+        "eb42cf88027de515750f230b23b1a057dc782108"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-125",
+      "raw_name": null,
+      "standardized_name": "Andrew Zisserman",
+      "openalex_link": "",
+      "orcid": "0000-0002-8945-8573",
+      "citation": [
+        "7b7908f71188b89adf62ce9126a0466e1a34338f",
+        "eb42cf88027de515750f230b23b1a057dc782108"
+      ],
+      "venue": [
+        "venue-14",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-126",
+      "raw_name": null,
+      "standardized_name": "Olga Russakovsky",
+      "openalex_link": "",
+      "orcid": "0000-0001-5272-3241",
+      "citation": [
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-127",
+      "raw_name": null,
+      "standardized_name": "Hao Su",
+      "openalex_link": "",
+      "orcid": "0009-0004-7679-7842",
+      "citation": [
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-128",
+      "raw_name": null,
+      "standardized_name": "J. Krause",
+      "openalex_link": "",
+      "orcid": "0000-0002-1952-3480",
+      "citation": [
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-129",
+      "raw_name": null,
+      "standardized_name": "S. Satheesh",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-130",
+      "raw_name": null,
+      "standardized_name": "Sean Ma",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-131",
+      "raw_name": null,
+      "standardized_name": "Zhiheng Huang",
+      "openalex_link": "",
+      "orcid": "0000-0001-5982-9778",
+      "citation": [
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-132",
+      "raw_name": null,
+      "standardized_name": "A. Karpathy",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-133",
+      "raw_name": null,
+      "standardized_name": "A. Khosla",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-134",
+      "raw_name": null,
+      "standardized_name": "Michael S. Bernstein",
+      "openalex_link": "",
+      "orcid": "0000-0001-8020-9434",
+      "citation": [
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-135",
+      "raw_name": null,
+      "standardized_name": "A. Berg",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd"
+      ],
+      "venue": [
+        "venue-30"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-136",
+      "raw_name": null,
+      "standardized_name": "Jeff Donahue",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "b8de958fead0d8a9619b55c7299df3257c624a96",
+        "6bdb186ec4726e00a8051119636d4df3b94043b5",
+        "c3af47db3186691270192d5399bb5259e05c87a7"
+      ],
+      "venue": [
+        "venue-28",
+        "venue-27",
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-137",
+      "raw_name": null,
+      "standardized_name": "Sergey Karayev",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "6bdb186ec4726e00a8051119636d4df3b94043b5"
+      ],
+      "venue": [
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-138",
+      "raw_name": null,
+      "standardized_name": "S. Guadarrama",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "6bdb186ec4726e00a8051119636d4df3b94043b5"
+      ],
+      "venue": [
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-139",
+      "raw_name": null,
+      "standardized_name": "Tsung-Yi Lin",
+      "openalex_link": "",
+      "orcid": "0000-0003-4819-0627",
+      "citation": [
+        "71b7178df5d2b112d07e45038cb5637208659ff7"
+      ],
+      "venue": [
+        "venue-20"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-140",
+      "raw_name": null,
+      "standardized_name": "M. Maire",
+      "openalex_link": "",
+      "orcid": "0000-0002-9778-6673",
+      "citation": [
+        "71b7178df5d2b112d07e45038cb5637208659ff7"
+      ],
+      "venue": [
+        "venue-20"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-141",
+      "raw_name": null,
+      "standardized_name": "Serge J. Belongie",
+      "openalex_link": "",
+      "orcid": "0000-0002-0388-5217",
+      "citation": [
+        "71b7178df5d2b112d07e45038cb5637208659ff7"
+      ],
+      "venue": [
+        "venue-20"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-142",
+      "raw_name": null,
+      "standardized_name": "James Hays",
+      "openalex_link": "",
+      "orcid": "0000-0001-7016-4252",
+      "citation": [
+        "71b7178df5d2b112d07e45038cb5637208659ff7"
+      ],
+      "venue": [
+        "venue-20"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-143",
+      "raw_name": null,
+      "standardized_name": "Deva Ramanan",
+      "openalex_link": "",
+      "orcid": "0009-0008-9180-8983",
+      "citation": [
+        "71b7178df5d2b112d07e45038cb5637208659ff7"
+      ],
+      "venue": [
+        "venue-20"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-144",
+      "raw_name": null,
+      "standardized_name": "Piotr Dollár",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "71b7178df5d2b112d07e45038cb5637208659ff7"
+      ],
+      "venue": [
+        "venue-20"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-145",
+      "raw_name": null,
+      "standardized_name": "C. L. Zitnick",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "71b7178df5d2b112d07e45038cb5637208659ff7"
+      ],
+      "venue": [
+        "venue-20"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-146",
+      "raw_name": null,
+      "standardized_name": "T. Raiko",
+      "openalex_link": "",
+      "orcid": "0000-0002-0321-304X",
+      "citation": [
+        "f1aeb751d9cefc9d784d8862562f5a3fe15821ae",
+        "b8ef1230a5cc9ea7cd8358f1ae7d1af97813ba14"
+      ],
+      "venue": [
+        "venue-25"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-147",
+      "raw_name": null,
+      "standardized_name": "Harri Valpola",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "7493389667058116dbc7e808987f129325ee60d7",
+        "b8ef1230a5cc9ea7cd8358f1ae7d1af97813ba14"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-25"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-148",
+      "raw_name": null,
+      "standardized_name": "C. Dance",
+      "openalex_link": "",
+      "orcid": "0009-0006-5355-9619",
+      "citation": [
+        "23694b6d61668e62bb11f17c1d75dde3b4951948"
+      ],
+      "venue": [
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-149",
+      "raw_name": null,
+      "standardized_name": "W. Briggs",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "8a2384ff41dc2c337e6aaacbcfd13f74e0e2f1ea",
+        "1bd875676fe49f83d431500cea908da1bdf068da"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-150",
+      "raw_name": null,
+      "standardized_name": "V. Henson",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1bd875676fe49f83d431500cea908da1bdf068da"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-151",
+      "raw_name": null,
+      "standardized_name": "S. McCormick",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1bd875676fe49f83d431500cea908da1bdf068da"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-152",
+      "raw_name": null,
+      "standardized_name": "N. Schraudolph",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "5763bd6b3f24a01c3bc7cd15d3c916b4840b759d",
+        "75a026ddfdd9c219d69fe8af816f085ea1b3877d"
+      ],
+      "venue": [
+        "venue-38"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-153",
+      "raw_name": null,
+      "standardized_name": "Sepp Hochreiter",
+      "openalex_link": "",
+      "orcid": "0000-0001-7449-2528",
+      "citation": [
+        "2e9d221c206e9503ceb452302d68d10e293f2a10"
+      ],
+      "venue": [
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-154",
+      "raw_name": null,
+      "standardized_name": "W. Venables",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1f711685bfe9e67d6afe0d5a3cb6675c310237d6"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-155",
+      "raw_name": null,
+      "standardized_name": "B. Ripley",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1f711685bfe9e67d6afe0d5a3cb6675c310237d6"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-156",
+      "raw_name": null,
+      "standardized_name": "P. Frasconi",
+      "openalex_link": "",
+      "orcid": "0000-0003-3117-9245",
+      "citation": [
+        "15561ab20c298e113b0008b7a029486a422e7ca3",
+        "d0be39ee052d246ae99c082a565aba25b811be2d"
+      ],
+      "venue": [
+        "venue-28",
+        "venue-22"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-157",
+      "raw_name": null,
+      "standardized_name": "R. Szeliski",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1efc5a54a4b3f4675bee194ee5842978e45a5bc2"
+      ],
+      "venue": [
+        "venue-40"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-158",
+      "raw_name": null,
+      "standardized_name": "G. Orr",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "b87274e6d9aa4e6ba5148898aa92941617d2b6ed"
+      ],
+      "venue": [
+        "venue-38"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-159",
+      "raw_name": null,
+      "standardized_name": "K. Müller",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "b87274e6d9aa4e6ba5148898aa92941617d2b6ed"
+      ],
+      "venue": [
+        "venue-38"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-160",
+      "raw_name": null,
+      "standardized_name": "H. Jégou",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "4748d22348e72e6e06c2476486afddbc76e5eca7"
+      ],
+      "venue": [
+        "venue-23"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-161",
+      "raw_name": null,
+      "standardized_name": "Matthijs Douze",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "4748d22348e72e6e06c2476486afddbc76e5eca7"
+      ],
+      "venue": [
+        "venue-23"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-162",
+      "raw_name": null,
+      "standardized_name": "C. Schmid",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "4748d22348e72e6e06c2476486afddbc76e5eca7"
+      ],
+      "venue": [
+        "venue-23"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-163",
+      "raw_name": null,
+      "standardized_name": "Ken Chatfield",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "7b7908f71188b89adf62ce9126a0466e1a34338f"
+      ],
+      "venue": [
+        "venue-14"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-164",
+      "raw_name": null,
+      "standardized_name": "V. Lempitsky",
+      "openalex_link": "",
+      "orcid": "0000-0003-4118-710X",
+      "citation": [
+        "7b7908f71188b89adf62ce9126a0466e1a34338f"
+      ],
+      "venue": [
+        "venue-14"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-165",
+      "raw_name": null,
+      "standardized_name": "A. Vedaldi",
+      "openalex_link": "",
+      "orcid": "0000-0003-1374-2858",
+      "citation": [
+        "7b7908f71188b89adf62ce9126a0466e1a34338f"
+      ],
+      "venue": [
+        "venue-14"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-166",
+      "raw_name": null,
+      "standardized_name": "Franziska Wulf",
+      "openalex_link": "",
+      "orcid": "0000-0002-0104-8626",
+      "citation": [
+        "83b6755242f1cff6bacf270f65b4626d4d118f32"
+      ],
+      "venue": [
+        "venue-8"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-167",
+      "raw_name": null,
+      "standardized_name": "Sepp Hochreiter",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "3f3d13e95c25a8f6a753e38dfce88885097cbd43"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-168",
+      "raw_name": null,
+      "standardized_name": "Antreas Antoniou",
+      "openalex_link": "",
+      "orcid": "0000-0001-5776-1204",
+      "citation": [
+        "239c033b4f5d935e3a0b469d9611823ccec7cb68"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-169",
+      "raw_name": null,
+      "standardized_name": "Harrison Edwards",
+      "openalex_link": "",
+      "orcid": "0000-0003-3971-9277",
+      "citation": [
+        "405c31c85a324942811f3c9dc53ce3528f9284df",
+        "239c033b4f5d935e3a0b469d9611823ccec7cb68"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-170",
+      "raw_name": null,
+      "standardized_name": "A. Storkey",
+      "openalex_link": "",
+      "orcid": "0000-0002-8100-506X",
+      "citation": [
+        "405c31c85a324942811f3c9dc53ce3528f9284df",
+        "239c033b4f5d935e3a0b469d9611823ccec7cb68"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-171",
+      "raw_name": null,
+      "standardized_name": "Risto Vuorio",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a2e6ee708ef5b258415076c4f5484fa1e0f42afa"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-172",
+      "raw_name": null,
+      "standardized_name": "Shao-Hua Sun",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a2e6ee708ef5b258415076c4f5484fa1e0f42afa"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-173",
+      "raw_name": null,
+      "standardized_name": "Hexiang Hu",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a2e6ee708ef5b258415076c4f5484fa1e0f42afa"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-174",
+      "raw_name": null,
+      "standardized_name": "Joseph J. Lim",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a2e6ee708ef5b258415076c4f5484fa1e0f42afa"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-175",
+      "raw_name": null,
+      "standardized_name": "Alex Nichol",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "90dc22818bd2d97d8deaff168b0137b75a962767"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-176",
+      "raw_name": null,
+      "standardized_name": "Joshua Achiam",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "90dc22818bd2d97d8deaff168b0137b75a962767"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-177",
+      "raw_name": null,
+      "standardized_name": "John Schulman",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1464776f20e2bccb6182f183b5ff2e15b0ae5e56",
+        "90dc22818bd2d97d8deaff168b0137b75a962767",
+        "954b01151ff13aef416d27adc60cd9a076753b1a",
+        "449532187c94af3dd3aa55e16d2c50f7854d2199"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-178",
+      "raw_name": null,
+      "standardized_name": "Zhenguo Li",
+      "openalex_link": "",
+      "orcid": "0000-0002-8492-3069",
+      "citation": [
+        "d33ad6a25264ba1747d8c93f6621c7f90a7ec601"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-179",
+      "raw_name": null,
+      "standardized_name": "Fengwei Zhou",
+      "openalex_link": "",
+      "orcid": "0000-0002-6404-6441",
+      "citation": [
+        "d33ad6a25264ba1747d8c93f6621c7f90a7ec601"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-180",
+      "raw_name": null,
+      "standardized_name": "Fei Chen",
+      "openalex_link": "",
+      "orcid": "0000-0001-8132-539X",
+      "citation": [
+        "d33ad6a25264ba1747d8c93f6621c7f90a7ec601"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-181",
+      "raw_name": null,
+      "standardized_name": "Hang Li",
+      "openalex_link": "",
+      "orcid": "0000-0002-1230-4007",
+      "citation": [
+        "d33ad6a25264ba1747d8c93f6621c7f90a7ec601"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-182",
+      "raw_name": null,
+      "standardized_name": "Jake Snell",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "c269858a7bb34e8350f2442ccf37797856ae9bca",
+        "df093d69cd98cf4b26542f53614a79754754eb78"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-183",
+      "raw_name": null,
+      "standardized_name": "Kevin Swersky",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "c269858a7bb34e8350f2442ccf37797856ae9bca",
+        "df093d69cd98cf4b26542f53614a79754754eb78"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-184",
+      "raw_name": null,
+      "standardized_name": "R. Zemel",
+      "openalex_link": "",
+      "orcid": "0000-0001-9353-7509",
+      "citation": [
+        "5b00ab8cc5a56ee934618bd7555965185a7f83ec",
+        "c269858a7bb34e8350f2442ccf37797856ae9bca",
+        "df093d69cd98cf4b26542f53614a79754754eb78"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-185",
+      "raw_name": null,
+      "standardized_name": "Lukasz Kaiser",
+      "openalex_link": "",
+      "orcid": "0000-0003-1092-6010",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d",
+        "29092f0deaac3898e43b3f094bf15d82b6a99afd"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-186",
+      "raw_name": null,
+      "standardized_name": "Ofir Nachum",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "29092f0deaac3898e43b3f094bf15d82b6a99afd"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-187",
+      "raw_name": null,
+      "standardized_name": "Aurko Roy",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "29092f0deaac3898e43b3f094bf15d82b6a99afd"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-188",
+      "raw_name": null,
+      "standardized_name": "Samy Bengio",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "54ddb00fa691728944fd8becea90a373d21597cf",
+        "8784f905f4f9fb6fa4a3cc9b0faa5b5479c687ec",
+        "d130325c41947a41a55a4431e9e8e15be89da8ea",
+        "29092f0deaac3898e43b3f094bf15d82b6a99afd"
+      ],
+      "venue": [
+        "venue-24",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-189",
+      "raw_name": null,
+      "standardized_name": "Pranav Shyam",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a3cd82aeecb75ef339889174706d168c40187d7d"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-190",
+      "raw_name": null,
+      "standardized_name": "Shubham Gupta",
+      "openalex_link": "",
+      "orcid": "0000-0001-9692-4096",
+      "citation": [
+        "a3cd82aeecb75ef339889174706d168c40187d7d"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-191",
+      "raw_name": null,
+      "standardized_name": "Ambedkar Dukkipati",
+      "openalex_link": "",
+      "orcid": "0000-0002-6352-6283",
+      "citation": [
+        "c7efa5f7008132b7d81f550aeaae8fb589506a9c",
+        "a3cd82aeecb75ef339889174706d168c40187d7d"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-192",
+      "raw_name": null,
+      "standardized_name": "Tsendsuren Munkhdalai",
+      "openalex_link": "",
+      "orcid": "0000-0001-6298-0874",
+      "citation": [
+        "470d11b8ca4586c930adbbfc3f60bff08f2a0161"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-193",
+      "raw_name": null,
+      "standardized_name": "Hong Yu",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "470d11b8ca4586c930adbbfc3f60bff08f2a0161"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-194",
+      "raw_name": null,
+      "standardized_name": "J. Kirkpatrick",
+      "openalex_link": "",
+      "orcid": "0000-0002-6344-8190",
+      "citation": [
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-195",
+      "raw_name": null,
+      "standardized_name": "Razvan Pascanu",
+      "openalex_link": "",
+      "orcid": "0000-0002-5470-1238",
+      "citation": [
+        "04f739a0c29b75877243731aeead512bf0ed1dff",
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-196",
+      "raw_name": null,
+      "standardized_name": "Neil C. Rabinowitz",
+      "openalex_link": "",
+      "orcid": "0000-0002-4030-1567",
+      "citation": [
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-197",
+      "raw_name": null,
+      "standardized_name": "J. Veness",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-198",
+      "raw_name": null,
+      "standardized_name": "Guillaume Desjardins",
+      "openalex_link": "",
+      "orcid": "0000-0002-5669-6671",
+      "citation": [
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-199",
+      "raw_name": null,
+      "standardized_name": "Andrei A. Rusu",
+      "openalex_link": "",
+      "orcid": "0000-0001-9395-8223",
+      "citation": [
+        "04f739a0c29b75877243731aeead512bf0ed1dff",
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-200",
+      "raw_name": null,
+      "standardized_name": "Kieran Milan",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-201",
+      "raw_name": null,
+      "standardized_name": "John Quan",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-202",
+      "raw_name": null,
+      "standardized_name": "Tiago Ramalho",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-203",
+      "raw_name": null,
+      "standardized_name": "A. Grabska-Barwinska",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-204",
+      "raw_name": null,
+      "standardized_name": "D. Hassabis",
+      "openalex_link": "",
+      "orcid": "0000-0003-2812-9917",
+      "citation": [
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-205",
+      "raw_name": null,
+      "standardized_name": "C. Clopath",
+      "openalex_link": "",
+      "orcid": "0000-0003-4507-8648",
+      "citation": [
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-206",
+      "raw_name": null,
+      "standardized_name": "D. Kumaran",
+      "openalex_link": "",
+      "orcid": "0000-0001-5995-5264",
+      "citation": [
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9",
+        "282a380fb5ac26d99667224cef8c630f6882704f"
+      ],
+      "venue": [
+        "venue-11",
+        "venue-45"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-207",
+      "raw_name": null,
+      "standardized_name": "R. Hadsell",
+      "openalex_link": "",
+      "orcid": "0000-0002-2390-1771",
+      "citation": [
+        "04f739a0c29b75877243731aeead512bf0ed1dff",
+        "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9"
+      ],
+      "venue": [
+        "venue-45",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-208",
+      "raw_name": null,
+      "standardized_name": "Jane X. Wang",
+      "openalex_link": "",
+      "orcid": "0000-0003-1339-5040",
+      "citation": [
+        "282a380fb5ac26d99667224cef8c630f6882704f"
+      ],
+      "venue": [
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-209",
+      "raw_name": null,
+      "standardized_name": "Z. Kurth-Nelson",
+      "openalex_link": "",
+      "orcid": "0000-0002-0119-1289",
+      "citation": [
+        "282a380fb5ac26d99667224cef8c630f6882704f"
+      ],
+      "venue": [
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-210",
+      "raw_name": null,
+      "standardized_name": "Hubert Soyer",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "282a380fb5ac26d99667224cef8c630f6882704f"
+      ],
+      "venue": [
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-211",
+      "raw_name": null,
+      "standardized_name": "Joel Z. Leibo",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "c91ae35dbcb6d479580ecd235eabf98374acdb55",
+        "282a380fb5ac26d99667224cef8c630f6882704f"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-212",
+      "raw_name": null,
+      "standardized_name": "Dhruva Tirumala",
+      "openalex_link": "",
+      "orcid": "0000-0002-3153-916X",
+      "citation": [
+        "282a380fb5ac26d99667224cef8c630f6882704f"
+      ],
+      "venue": [
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-213",
+      "raw_name": null,
+      "standardized_name": "R. Munos",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "282a380fb5ac26d99667224cef8c630f6882704f"
+      ],
+      "venue": [
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-214",
+      "raw_name": null,
+      "standardized_name": "C. Blundell",
+      "openalex_link": "",
+      "orcid": "0000-0003-0336-0696",
+      "citation": [
+        "be1bb4e4aa1fcf70281b4bd24d8cd31c04864bb6",
+        "282a380fb5ac26d99667224cef8c630f6882704f"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-215",
+      "raw_name": null,
+      "standardized_name": "M. Botvinick",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "3904315e2eca50d0086e4b7273f7fd707c652230",
+        "bbd0e204f48a45735e1065c8b90b298077b73192",
+        "282a380fb5ac26d99667224cef8c630f6882704f"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-28",
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-216",
+      "raw_name": null,
+      "standardized_name": "Sergi Caelles",
+      "openalex_link": "",
+      "orcid": "0000-0002-1372-1419",
+      "citation": [
+        "cb1c0d6be4c22c1f18b0ba20dddd93890f17add6"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-217",
+      "raw_name": null,
+      "standardized_name": "Kevis-Kokitsi Maninis",
+      "openalex_link": "",
+      "orcid": "0000-0003-3776-0049",
+      "citation": [
+        "cb1c0d6be4c22c1f18b0ba20dddd93890f17add6"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-218",
+      "raw_name": null,
+      "standardized_name": "J. Pont-Tuset",
+      "openalex_link": "",
+      "orcid": "0000-0001-7133-3724",
+      "citation": [
+        "cb1c0d6be4c22c1f18b0ba20dddd93890f17add6"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-219",
+      "raw_name": null,
+      "standardized_name": "L. Leal-Taixé",
+      "openalex_link": "",
+      "orcid": "0000-0001-8709-1133",
+      "citation": [
+        "cb1c0d6be4c22c1f18b0ba20dddd93890f17add6"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-220",
+      "raw_name": null,
+      "standardized_name": "D. Cremers",
+      "openalex_link": "",
+      "orcid": "0000-0002-3079-7984",
+      "citation": [
+        "cb1c0d6be4c22c1f18b0ba20dddd93890f17add6"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-221",
+      "raw_name": null,
+      "standardized_name": "L. Gool",
+      "openalex_link": "",
+      "orcid": "0000-0002-3445-5711",
+      "citation": [
+        "cb1c0d6be4c22c1f18b0ba20dddd93890f17add6"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-222",
+      "raw_name": null,
+      "standardized_name": "S. Ravi",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "df093d69cd98cf4b26542f53614a79754754eb78",
+        "29c887794eed2ca9462638ff853e6fe1ab91d5d8"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-223",
+      "raw_name": null,
+      "standardized_name": "H. Larochelle",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "df093d69cd98cf4b26542f53614a79754754eb78",
+        "29c887794eed2ca9462638ff853e6fe1ab91d5d8"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-224",
+      "raw_name": null,
+      "standardized_name": "Yan Duan",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1464776f20e2bccb6182f183b5ff2e15b0ae5e56",
+        "954b01151ff13aef416d27adc60cd9a076753b1a"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-225",
+      "raw_name": null,
+      "standardized_name": "Xi Chen",
+      "openalex_link": "",
+      "orcid": "0000-0003-4221-4288",
+      "citation": [
+        "7e9c1e0d247b20a0683f4797d9ea248c3b53d424",
+        "1464776f20e2bccb6182f183b5ff2e15b0ae5e56",
+        "954b01151ff13aef416d27adc60cd9a076753b1a"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-28",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-226",
+      "raw_name": null,
+      "standardized_name": "P. Bartlett",
+      "openalex_link": "",
+      "orcid": "0000-0002-8760-3140",
+      "citation": [
+        "954b01151ff13aef416d27adc60cd9a076753b1a"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-227",
+      "raw_name": null,
+      "standardized_name": "Jimmy Ba",
+      "openalex_link": "",
+      "orcid": "0009-0000-9062-4180",
+      "citation": [
+        "c91ae35dbcb6d479580ecd235eabf98374acdb55",
+        "a6cb366736791bcccc5c8639de5a8f9636bf87e8",
+        "1def5d3711ebd1d86787b1ed57c91832c5ddc90b"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-228",
+      "raw_name": null,
+      "standardized_name": "Volodymyr Mnih",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "c91ae35dbcb6d479580ecd235eabf98374acdb55"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-229",
+      "raw_name": null,
+      "standardized_name": "Catalin Ionescu",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "c91ae35dbcb6d479580ecd235eabf98374acdb55"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-230",
+      "raw_name": null,
+      "standardized_name": "David Ha",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "563783de03452683a9206e85fe6d661714436686"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-231",
+      "raw_name": null,
+      "standardized_name": "Andrew M. Dai",
+      "openalex_link": "",
+      "orcid": "0000-0002-7896-4964",
+      "citation": [
+        "93d8d45fe8101545ae6d9fab3dbb38f904ff7b4e",
+        "563783de03452683a9206e85fe6d661714436686"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-232",
+      "raw_name": null,
+      "standardized_name": "Quoc V. Le",
+      "openalex_link": "",
+      "orcid": "0000-0001-9526-6378",
+      "citation": [
+        "563783de03452683a9206e85fe6d661714436686"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-233",
+      "raw_name": null,
+      "standardized_name": "Henok Mengistu",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "26ae046d8d8bf5b3721734a3cf441f6d204bb6d7"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-234",
+      "raw_name": null,
+      "standardized_name": "J. Lehman",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "26ae046d8d8bf5b3721734a3cf441f6d204bb6d7"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-235",
+      "raw_name": null,
+      "standardized_name": "J. Clune",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "26ae046d8d8bf5b3721734a3cf441f6d204bb6d7"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-236",
+      "raw_name": null,
+      "standardized_name": "Adam Santoro",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "3904315e2eca50d0086e4b7273f7fd707c652230",
+        "bbd0e204f48a45735e1065c8b90b298077b73192"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-237",
+      "raw_name": null,
+      "standardized_name": "Sergey Bartunov",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "3904315e2eca50d0086e4b7273f7fd707c652230",
+        "bbd0e204f48a45735e1065c8b90b298077b73192"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-238",
+      "raw_name": null,
+      "standardized_name": "D. Wierstra",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "be1bb4e4aa1fcf70281b4bd24d8cd31c04864bb6",
+        "3904315e2eca50d0086e4b7273f7fd707c652230",
+        "bbd0e204f48a45735e1065c8b90b298077b73192",
+        "0811597b0851b7ebe21aadce7cb4daac4664b44f"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-28",
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-239",
+      "raw_name": null,
+      "standardized_name": "T. Lillicrap",
+      "openalex_link": "",
+      "orcid": "0000-0001-8918-486X",
+      "citation": [
+        "be1bb4e4aa1fcf70281b4bd24d8cd31c04864bb6",
+        "3904315e2eca50d0086e4b7273f7fd707c652230",
+        "bbd0e204f48a45735e1065c8b90b298077b73192"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-28",
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-240",
+      "raw_name": null,
+      "standardized_name": "Marcin Andrychowicz",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "71683e224ab91617950956b5005ed0439a733a71"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-241",
+      "raw_name": null,
+      "standardized_name": "Misha Denil",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "71683e224ab91617950956b5005ed0439a733a71"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-242",
+      "raw_name": null,
+      "standardized_name": "Sergio Gomez Colmenarejo",
+      "openalex_link": "",
+      "orcid": "0000-0003-4970-0502",
+      "citation": [
+        "71683e224ab91617950956b5005ed0439a733a71"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-243",
+      "raw_name": null,
+      "standardized_name": "Matthew W. Hoffman",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "71683e224ab91617950956b5005ed0439a733a71"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-244",
+      "raw_name": null,
+      "standardized_name": "David Pfau",
+      "openalex_link": "",
+      "orcid": "0000-0003-0834-8653",
+      "citation": [
+        "71683e224ab91617950956b5005ed0439a733a71"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-245",
+      "raw_name": null,
+      "standardized_name": "T. Schaul",
+      "openalex_link": "",
+      "orcid": "0000-0002-2961-8782",
+      "citation": [
+        "71683e224ab91617950956b5005ed0439a733a71"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-246",
+      "raw_name": null,
+      "standardized_name": "Nando de Freitas",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "71683e224ab91617950956b5005ed0439a733a71"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-247",
+      "raw_name": null,
+      "standardized_name": "O. Vinyals",
+      "openalex_link": "",
+      "orcid": "0000-0001-7848-7283",
+      "citation": [
+        "be1bb4e4aa1fcf70281b4bd24d8cd31c04864bb6",
+        "54ddb00fa691728944fd8becea90a373d21597cf",
+        "b8de958fead0d8a9619b55c7299df3257c624a96",
+        "04f739a0c29b75877243731aeead512bf0ed1dff",
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-37",
+        "venue-27",
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-248",
+      "raw_name": null,
+      "standardized_name": "Ke Li",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "ead9a671428631e44f6fe49324efe69da628bc47"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-249",
+      "raw_name": null,
+      "standardized_name": "Jitendra Malik",
+      "openalex_link": "",
+      "orcid": "0000-0003-3695-1580",
+      "citation": [
+        "ead9a671428631e44f6fe49324efe69da628bc47"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-250",
+      "raw_name": null,
+      "standardized_name": "Rein Houthooft",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1464776f20e2bccb6182f183b5ff2e15b0ae5e56"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-251",
+      "raw_name": null,
+      "standardized_name": "Danilo Jimenez Rezende",
+      "openalex_link": "",
+      "orcid": "0000-0003-3184-8509",
+      "citation": [
+        "0811597b0851b7ebe21aadce7cb4daac4664b44f"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-252",
+      "raw_name": null,
+      "standardized_name": "S. Mohamed",
+      "openalex_link": "",
+      "orcid": "0000-0002-1184-5776",
+      "citation": [
+        "0811597b0851b7ebe21aadce7cb4daac4664b44f"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-253",
+      "raw_name": null,
+      "standardized_name": "Ivo Danihelka",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "0811597b0851b7ebe21aadce7cb4daac4664b44f"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-254",
+      "raw_name": null,
+      "standardized_name": "Karol Gregor",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "0811597b0851b7ebe21aadce7cb4daac4664b44f"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-255",
+      "raw_name": null,
+      "standardized_name": "Martín Abadi",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-256",
+      "raw_name": null,
+      "standardized_name": "Ashish Agarwal",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-257",
+      "raw_name": null,
+      "standardized_name": "P. Barham",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-258",
+      "raw_name": null,
+      "standardized_name": "E. Brevdo",
+      "openalex_link": "",
+      "orcid": "0009-0005-7965-3534",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-259",
+      "raw_name": null,
+      "standardized_name": "Z. Chen",
+      "openalex_link": "",
+      "orcid": "0000-0001-8631-2424",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-260",
+      "raw_name": null,
+      "standardized_name": "C. Citro",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-261",
+      "raw_name": null,
+      "standardized_name": "G. Corrado",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-262",
+      "raw_name": null,
+      "standardized_name": "Andy Davis",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-263",
+      "raw_name": null,
+      "standardized_name": "J. Dean",
+      "openalex_link": "",
+      "orcid": "0000-0003-1362-0500",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-264",
+      "raw_name": null,
+      "standardized_name": "M. Devin",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-265",
+      "raw_name": null,
+      "standardized_name": "Sanjay Ghemawat",
+      "openalex_link": "",
+      "orcid": "0009-0005-6843-3093",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-266",
+      "raw_name": null,
+      "standardized_name": "I. Goodfellow",
+      "openalex_link": "",
+      "orcid": "0000-0003-3937-2322",
+      "citation": [
+        "93d8d45fe8101545ae6d9fab3dbb38f904ff7b4e",
+        "bee044c8e8903fb67523c1f8c105ab4718600cdb",
+        "99039a54fa3ee3aed9bb3781621068680be5cc3d",
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-267",
+      "raw_name": null,
+      "standardized_name": "A. Harp",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-268",
+      "raw_name": null,
+      "standardized_name": "G. Irving",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-269",
+      "raw_name": null,
+      "standardized_name": "M. Isard",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-270",
+      "raw_name": null,
+      "standardized_name": "R. Józefowicz",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-271",
+      "raw_name": null,
+      "standardized_name": "M. Kudlur",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-272",
+      "raw_name": null,
+      "standardized_name": "J. Levenberg",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-273",
+      "raw_name": null,
+      "standardized_name": "Dandelion Mané",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-274",
+      "raw_name": null,
+      "standardized_name": "R. Monga",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-275",
+      "raw_name": null,
+      "standardized_name": "Sherry Moore",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-276",
+      "raw_name": null,
+      "standardized_name": "D. Murray",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-277",
+      "raw_name": null,
+      "standardized_name": "C. Olah",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-278",
+      "raw_name": null,
+      "standardized_name": "M. Schuster",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-279",
+      "raw_name": null,
+      "standardized_name": "Jonathon Shlens",
+      "openalex_link": "",
+      "orcid": "0000-0001-9513-4244",
+      "citation": [
+        "bee044c8e8903fb67523c1f8c105ab4718600cdb",
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-280",
+      "raw_name": null,
+      "standardized_name": "Benoit Steiner",
+      "openalex_link": "",
+      "orcid": "0000-0002-5767-4976",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-281",
+      "raw_name": null,
+      "standardized_name": "Kunal Talwar",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-282",
+      "raw_name": null,
+      "standardized_name": "P. Tucker",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-283",
+      "raw_name": null,
+      "standardized_name": "Vijay Vasudevan",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-284",
+      "raw_name": null,
+      "standardized_name": "F. Viégas",
+      "openalex_link": "",
+      "orcid": "0000-0002-4951-4008",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-285",
+      "raw_name": null,
+      "standardized_name": "Pete Warden",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-286",
+      "raw_name": null,
+      "standardized_name": "M. Wattenberg",
+      "openalex_link": "",
+      "orcid": "0000-0003-0904-4862",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-287",
+      "raw_name": null,
+      "standardized_name": "M. Wicke",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-288",
+      "raw_name": null,
+      "standardized_name": "Yuan Yu",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-289",
+      "raw_name": null,
+      "standardized_name": "Xiaoqiang Zheng",
+      "openalex_link": "",
+      "orcid": "0000-0001-5151-8561",
+      "citation": [
+        "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-290",
+      "raw_name": null,
+      "standardized_name": "Tim Salimans",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "3d2c6941a9b4608ba52b328369a3352db2092ae0"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-291",
+      "raw_name": null,
+      "standardized_name": "Diederik P. Kingma",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "3d2c6941a9b4608ba52b328369a3352db2092ae0",
+        "a6cb366736791bcccc5c8639de5a8f9636bf87e8"
+      ],
+      "venue": [
+        "venue-37",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-292",
+      "raw_name": null,
+      "standardized_name": "Philipp Krähenbühl",
+      "openalex_link": "",
+      "orcid": "0000-0002-9846-4369",
+      "citation": [
+        "c3af47db3186691270192d5399bb5259e05c87a7"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-293",
+      "raw_name": null,
+      "standardized_name": "Carl Doersch",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "c3af47db3186691270192d5399bb5259e05c87a7"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-294",
+      "raw_name": null,
+      "standardized_name": "Emilio Parisotto",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "1def5d3711ebd1d86787b1ed57c91832c5ddc90b"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-295",
+      "raw_name": null,
+      "standardized_name": "Marek Rei",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a40a55bfd25c8ef69c27a02073f34a194b4e9124"
+      ],
+      "venue": [
+        "venue-17"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-296",
+      "raw_name": null,
+      "standardized_name": "Michael I. Jordan",
+      "openalex_link": "",
+      "orcid": "0000-0001-8935-817X",
+      "citation": [
+        "449532187c94af3dd3aa55e16d2c50f7854d2199"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-297",
+      "raw_name": null,
+      "standardized_name": "Philipp Moritz",
+      "openalex_link": "",
+      "orcid": "0000-0002-7582-101X",
+      "citation": [
+        "449532187c94af3dd3aa55e16d2c50f7854d2199"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-298",
+      "raw_name": null,
+      "standardized_name": "D. Maclaurin",
+      "openalex_link": "",
+      "orcid": "0000-0003-0122-1377",
+      "citation": [
+        "e2820bffe5b42cb7d88b7f65c12171c62ab4aae2"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-299",
+      "raw_name": null,
+      "standardized_name": "D. Duvenaud",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "e2820bffe5b42cb7d88b7f65c12171c62ab4aae2"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-300",
+      "raw_name": null,
+      "standardized_name": "Ryan P. Adams",
+      "openalex_link": "",
+      "orcid": "0000-0002-5704-6654",
+      "citation": [
+        "e2820bffe5b42cb7d88b7f65c12171c62ab4aae2"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-301",
+      "raw_name": null,
+      "standardized_name": "Andrew M. Saxe",
+      "openalex_link": "",
+      "orcid": "0000-0002-9831-8812",
+      "citation": [
+        "99c970348b8f70ce23d6641e201904ea49266b6e"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-302",
+      "raw_name": null,
+      "standardized_name": "James L. McClelland",
+      "openalex_link": "",
+      "orcid": "0000-0002-8217-405X",
+      "citation": [
+        "99c970348b8f70ce23d6641e201904ea49266b6e"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-303",
+      "raw_name": null,
+      "standardized_name": "S. Ganguli",
+      "openalex_link": "",
+      "orcid": "0000-0002-9264-7551",
+      "citation": [
+        "99c970348b8f70ce23d6641e201904ea49266b6e"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-304",
+      "raw_name": null,
+      "standardized_name": "Judy Hoffman",
+      "openalex_link": "",
+      "orcid": "0000-0003-1971-1606",
+      "citation": [
+        "b8de958fead0d8a9619b55c7299df3257c624a96"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-305",
+      "raw_name": null,
+      "standardized_name": "Ning Zhang",
+      "openalex_link": "",
+      "orcid": "0000-0002-8781-4925",
+      "citation": [
+        "b8de958fead0d8a9619b55c7299df3257c624a96"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-306",
+      "raw_name": null,
+      "standardized_name": "Eric Tzeng",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "b8de958fead0d8a9619b55c7299df3257c624a96"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-307",
+      "raw_name": null,
+      "standardized_name": "E. Todorov",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "b354ee518bfc1ac0d8ac447eece9edb69e92eae1"
+      ],
+      "venue": [
+        "venue-4"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-308",
+      "raw_name": null,
+      "standardized_name": "Tom Erez",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "b354ee518bfc1ac0d8ac447eece9edb69e92eae1"
+      ],
+      "venue": [
+        "venue-4"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-309",
+      "raw_name": null,
+      "standardized_name": "Yuval Tassa",
+      "openalex_link": "",
+      "orcid": "0000-0002-1197-288X",
+      "citation": [
+        "b354ee518bfc1ac0d8ac447eece9edb69e92eae1"
+      ],
+      "venue": [
+        "venue-4"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-310",
+      "raw_name": null,
+      "standardized_name": "D. Naik",
+      "openalex_link": "",
+      "orcid": "0000-0001-8243-8177",
+      "citation": [
+        "b64e846fe88acaf302248249696c3b7badde41b5"
+      ],
+      "venue": [
+        "venue-50"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-311",
+      "raw_name": null,
+      "standardized_name": "R. Mammone",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "b64e846fe88acaf302248249696c3b7badde41b5"
+      ],
+      "venue": [
+        "venue-50"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-312",
+      "raw_name": null,
+      "standardized_name": "J. Cloutier",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "d130325c41947a41a55a4431e9e8e15be89da8ea",
+        "8784f905f4f9fb6fa4a3cc9b0faa5b5479c687ec"
+      ],
+      "venue": [
+        "venue-24"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-313",
+      "raw_name": null,
+      "standardized_name": "Kyle Duffie",
+      "openalex_link": "",
+      "orcid": "0000-0002-8116-9486",
+      "citation": [
+        "44b6da0cd36c0fa2f7d3485c6dc0b6d2fbe379bb"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-314",
+      "raw_name": null,
+      "standardized_name": "M. Abbas",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "f1aeb751d9cefc9d784d8862562f5a3fe15821ae"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-315",
+      "raw_name": null,
+      "standardized_name": "Jyri J. Kivinen",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "f1aeb751d9cefc9d784d8862562f5a3fe15821ae"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-316",
+      "raw_name": null,
+      "standardized_name": "Gregory R. Koch",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "f216444d4f2959b4520c61d20003fa30a199670a"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-317",
+      "raw_name": null,
+      "standardized_name": "B. Lake",
+      "openalex_link": "",
+      "orcid": "0000-0001-8959-3401",
+      "citation": [
+        "100a038fdf29b4b20801887f0ec40e3f10d9a4f9"
+      ],
+      "venue": [
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-318",
+      "raw_name": null,
+      "standardized_name": "Jason Gross",
+      "openalex_link": "",
+      "orcid": "0000-0002-7771-2757",
+      "citation": [
+        "100a038fdf29b4b20801887f0ec40e3f10d9a4f9"
+      ],
+      "venue": [
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-319",
+      "raw_name": null,
+      "standardized_name": "J. Tenenbaum",
+      "openalex_link": "",
+      "orcid": "0000-0002-1925-2035",
+      "citation": [
+        "100a038fdf29b4b20801887f0ec40e3f10d9a4f9",
+        "df093d69cd98cf4b26542f53614a79754754eb78"
+      ],
+      "venue": [
+        "venue-11",
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-320",
+      "raw_name": null,
+      "standardized_name": "J. Gecsei",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "8784f905f4f9fb6fa4a3cc9b0faa5b5479c687ec"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-321",
+      "raw_name": null,
+      "standardized_name": "Michael Hüsken",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "946ec39029db3ae6f9a1b3ce13fb3f4a7d37bb5e"
+      ],
+      "venue": [
+        "venue-44"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-322",
+      "raw_name": null,
+      "standardized_name": "C. Goerick",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "946ec39029db3ae6f9a1b3ce13fb3f4a7d37bb5e"
+      ],
+      "venue": [
+        "venue-44"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-323",
+      "raw_name": null,
+      "standardized_name": "Jürgen Schmidhuber",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "bdaec1b3eb9a8f7a2b296be009a148c35236f3ce"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-324",
+      "raw_name": null,
+      "standardized_name": "Zhengxue Li",
+      "openalex_link": "",
+      "orcid": "0000-0002-2567-1172",
+      "citation": [
+        "a6bcf0e9b5034c4c9cbea839baadd69a42b05cc1"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-325",
+      "raw_name": null,
+      "standardized_name": "Wei Wu",
+      "openalex_link": "",
+      "orcid": "0000-0001-9413-4461",
+      "citation": [
+        "a6bcf0e9b5034c4c9cbea839baadd69a42b05cc1"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-326",
+      "raw_name": null,
+      "standardized_name": "Guorui Feng",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a6bcf0e9b5034c4c9cbea839baadd69a42b05cc1"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-327",
+      "raw_name": null,
+      "standardized_name": "Huifang Lu",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a6bcf0e9b5034c4c9cbea839baadd69a42b05cc1"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-328",
+      "raw_name": null,
+      "standardized_name": "Hassam Sheikh",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "2002a92a4a65e93a11448e5346cfbc893111ec8a"
+      ],
+      "venue": [
+        "venue-7"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-329",
+      "raw_name": null,
+      "standardized_name": "Ladislau Bölöni",
+      "openalex_link": "",
+      "orcid": "0000-0001-5336-9651",
+      "citation": [
+        "2002a92a4a65e93a11448e5346cfbc893111ec8a"
+      ],
+      "venue": [
+        "venue-7"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-330",
+      "raw_name": null,
+      "standardized_name": "Erin Grant",
+      "openalex_link": "",
+      "orcid": "0009-0002-8623-7254",
+      "citation": [
+        "46b072cf918ec6f50403568a73d4347ea86b7e66"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-331",
+      "raw_name": null,
+      "standardized_name": "T. Griffiths",
+      "openalex_link": "",
+      "orcid": "0000-0002-5138-7255",
+      "citation": [
+        "46b072cf918ec6f50403568a73d4347ea86b7e66"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-332",
+      "raw_name": null,
+      "standardized_name": "Flood Sung",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "bfe284e4338e62f0a61bb33398353efd687f206f"
+      ],
+      "venue": [
+        "venue-5"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-333",
+      "raw_name": null,
+      "standardized_name": "Yongxin Yang",
+      "openalex_link": "",
+      "orcid": "0000-0003-4134-8559",
+      "citation": [
+        "bfe284e4338e62f0a61bb33398353efd687f206f"
+      ],
+      "venue": [
+        "venue-5"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-334",
+      "raw_name": null,
+      "standardized_name": "Li Zhang",
+      "openalex_link": "",
+      "orcid": "0000-0003-1031-5420",
+      "citation": [
+        "bfe284e4338e62f0a61bb33398353efd687f206f"
+      ],
+      "venue": [
+        "venue-5"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-335",
+      "raw_name": null,
+      "standardized_name": "T. Xiang",
+      "openalex_link": "",
+      "orcid": "0000-0002-2530-1059",
+      "citation": [
+        "bfe284e4338e62f0a61bb33398353efd687f206f"
+      ],
+      "venue": [
+        "venue-5"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-336",
+      "raw_name": null,
+      "standardized_name": "Philip H. S. Torr",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "bfe284e4338e62f0a61bb33398353efd687f206f"
+      ],
+      "venue": [
+        "venue-5"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-337",
+      "raw_name": null,
+      "standardized_name": "Timothy M. Hospedales",
+      "openalex_link": "",
+      "orcid": "0000-0003-4867-7486",
+      "citation": [
+        "bfe284e4338e62f0a61bb33398353efd687f206f"
+      ],
+      "venue": [
+        "venue-5"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-338",
+      "raw_name": null,
+      "standardized_name": "Victor Garcia Satorras",
+      "openalex_link": "",
+      "orcid": "0000-0001-6099-4236",
+      "citation": [
+        "572a1f77306e160c3893299c18f3ed862fb5f6d9"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-339",
+      "raw_name": null,
+      "standardized_name": "Joan Bruna",
+      "openalex_link": "",
+      "orcid": "0000-0002-2847-1512",
+      "citation": [
+        "572a1f77306e160c3893299c18f3ed862fb5f6d9"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-340",
+      "raw_name": null,
+      "standardized_name": "Nikhil Mishra",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "7e9c1e0d247b20a0683f4797d9ea248c3b53d424"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-341",
+      "raw_name": null,
+      "standardized_name": "Mostafa Rohaninejad",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "7e9c1e0d247b20a0683f4797d9ea248c3b53d424"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-342",
+      "raw_name": null,
+      "standardized_name": "Tuncer Ören",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "3346e72b31399527d037d6ed091a2ab96225e0fd"
+      ],
+      "venue": [
+        "venue-13"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-343",
+      "raw_name": null,
+      "standardized_name": "Bernard P. Zeigler",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "3346e72b31399527d037d6ed091a2ab96225e0fd"
+      ],
+      "venue": [
+        "venue-13"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-344",
+      "raw_name": null,
+      "standardized_name": "T. Pawletta",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "3346e72b31399527d037d6ed091a2ab96225e0fd"
+      ],
+      "venue": [
+        "venue-13"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-345",
+      "raw_name": null,
+      "standardized_name": "Liyang Jiang",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "9ab43fcb51b17c127b960149b59ee6e767e37629"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-346",
+      "raw_name": null,
+      "standardized_name": "F. Bourguignon",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "d1354880f9395fec1eef9911c45fd6e5e509d37e"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-347",
+      "raw_name": null,
+      "standardized_name": "F. Cowell",
+      "openalex_link": "",
+      "orcid": "0000-0002-3778-2152",
+      "citation": [
+        "d74309294954deb8ea1b7a0972431add32af2469"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-348",
+      "raw_name": null,
+      "standardized_name": "M. H. Hoyle",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "42f1739aceb4348dbe0fe2a798d6ff8e991fbe18"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-349",
+      "raw_name": null,
+      "standardized_name": "E. Malinvaud",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "42f1739aceb4348dbe0fe2a798d6ff8e991fbe18"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-350",
+      "raw_name": null,
+      "standardized_name": "Mrs A. Silvey",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "42f1739aceb4348dbe0fe2a798d6ff8e991fbe18"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-351",
+      "raw_name": null,
+      "standardized_name": "Sugato Basu",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "554aabebf17b11046ac734aac8ef5a71872e93e3"
+      ],
+      "venue": [
+        "venue-19"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-352",
+      "raw_name": null,
+      "standardized_name": "Kwonjoon Lee",
+      "openalex_link": "",
+      "orcid": "0000-0002-7038-7736",
+      "citation": [
+        "fc437af6204008647ea49f81058d5fdaddf75ead"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-353",
+      "raw_name": null,
+      "standardized_name": "Subhransu Maji",
+      "openalex_link": "",
+      "orcid": "0000-0002-3869-9334",
+      "citation": [
+        "fc437af6204008647ea49f81058d5fdaddf75ead"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-354",
+      "raw_name": null,
+      "standardized_name": "Avinash Ravichandran",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "fc437af6204008647ea49f81058d5fdaddf75ead"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-355",
+      "raw_name": null,
+      "standardized_name": "Stefano Soatto",
+      "openalex_link": "",
+      "orcid": "0000-0003-2902-6362",
+      "citation": [
+        "fc437af6204008647ea49f81058d5fdaddf75ead"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-356",
+      "raw_name": null,
+      "standardized_name": "Yongqin Xian",
+      "openalex_link": "",
+      "orcid": "0000-0001-7186-1295",
+      "citation": [
+        "441a95b80875c7fe0ae98c5d301e2c92feb4c191"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-357",
+      "raw_name": null,
+      "standardized_name": "Saurabh Sharma",
+      "openalex_link": "",
+      "orcid": "0000-0002-2968-6574",
+      "citation": [
+        "441a95b80875c7fe0ae98c5d301e2c92feb4c191"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-358",
+      "raw_name": null,
+      "standardized_name": "Zeynep Akata",
+      "openalex_link": "",
+      "orcid": "0000-0002-1432-7747",
+      "citation": [
+        "441a95b80875c7fe0ae98c5d301e2c92feb4c191"
+      ],
+      "venue": [
+        "venue-16"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-359",
+      "raw_name": null,
+      "standardized_name": "Ruixiang Zhang",
+      "openalex_link": "",
+      "orcid": "0009-0009-3728-5170",
+      "citation": [
+        "75dafecd481f134d4f8b9afb4923b35184d3c971"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-360",
+      "raw_name": null,
+      "standardized_name": "Tong Che",
+      "openalex_link": "",
+      "orcid": "0000-0001-5354-6961",
+      "citation": [
+        "75dafecd481f134d4f8b9afb4923b35184d3c971"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-361",
+      "raw_name": null,
+      "standardized_name": "Zoubin Ghahramani",
+      "openalex_link": "",
+      "orcid": "0000-0002-7464-6475",
+      "citation": [
+        "75dafecd481f134d4f8b9afb4923b35184d3c971"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-362",
+      "raw_name": null,
+      "standardized_name": "Yangqiu Song",
+      "openalex_link": "",
+      "orcid": "0000-0002-7818-6090",
+      "citation": [
+        "75dafecd481f134d4f8b9afb4923b35184d3c971"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-363",
+      "raw_name": null,
+      "standardized_name": "Dushyant Rao",
+      "openalex_link": "",
+      "orcid": "0000-0002-1372-2884",
+      "citation": [
+        "04f739a0c29b75877243731aeead512bf0ed1dff"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-364",
+      "raw_name": null,
+      "standardized_name": "Jakub Sygnowski",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "04f739a0c29b75877243731aeead512bf0ed1dff"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-365",
+      "raw_name": null,
+      "standardized_name": "Simon Osindero",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "04f739a0c29b75877243731aeead512bf0ed1dff"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-366",
+      "raw_name": null,
+      "standardized_name": "Luca Franceschi",
+      "openalex_link": "",
+      "orcid": "0000-0002-1810-1016",
+      "citation": [
+        "15561ab20c298e113b0008b7a029486a422e7ca3"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-367",
+      "raw_name": null,
+      "standardized_name": "Saverio Salzo",
+      "openalex_link": "",
+      "orcid": "0000-0003-0494-9101",
+      "citation": [
+        "15561ab20c298e113b0008b7a029486a422e7ca3"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-368",
+      "raw_name": null,
+      "standardized_name": "Riccardo Grazzi",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "15561ab20c298e113b0008b7a029486a422e7ca3"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-369",
+      "raw_name": null,
+      "standardized_name": "M. Pontil",
+      "openalex_link": "",
+      "orcid": "0000-0001-9415-098X",
+      "citation": [
+        "15561ab20c298e113b0008b7a029486a422e7ca3"
+      ],
+      "venue": [
+        "venue-28"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-370",
+      "raw_name": null,
+      "standardized_name": "Eli Schwartz",
+      "openalex_link": "",
+      "orcid": "0000-0002-3393-8666",
+      "citation": [
+        "77e8e3e578b8abd17303f13af1df22080fd6afbb"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-371",
+      "raw_name": null,
+      "standardized_name": "Leonid Karlinsky",
+      "openalex_link": "",
+      "orcid": "0000-0003-2524-2068",
+      "citation": [
+        "77e8e3e578b8abd17303f13af1df22080fd6afbb"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-372",
+      "raw_name": null,
+      "standardized_name": "J. Shtok",
+      "openalex_link": "",
+      "orcid": "0000-0002-4083-542X",
+      "citation": [
+        "77e8e3e578b8abd17303f13af1df22080fd6afbb"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-373",
+      "raw_name": null,
+      "standardized_name": "Sivan Harary",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "77e8e3e578b8abd17303f13af1df22080fd6afbb"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-374",
+      "raw_name": null,
+      "standardized_name": "Mattias Marder",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "77e8e3e578b8abd17303f13af1df22080fd6afbb"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-375",
+      "raw_name": null,
+      "standardized_name": "Abhishek Kumar",
+      "openalex_link": "",
+      "orcid": "0000-0002-6022-3068",
+      "citation": [
+        "77e8e3e578b8abd17303f13af1df22080fd6afbb"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-376",
+      "raw_name": null,
+      "standardized_name": "R. Feris",
+      "openalex_link": "",
+      "orcid": "0000-0001-6399-0679",
+      "citation": [
+        "77e8e3e578b8abd17303f13af1df22080fd6afbb"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-377",
+      "raw_name": null,
+      "standardized_name": "R. Giryes",
+      "openalex_link": "",
+      "orcid": "0000-0002-2830-0297",
+      "citation": [
+        "77e8e3e578b8abd17303f13af1df22080fd6afbb"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-378",
+      "raw_name": null,
+      "standardized_name": "A. Bronstein",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "77e8e3e578b8abd17303f13af1df22080fd6afbb"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-379",
+      "raw_name": null,
+      "standardized_name": "Kelvin Xu",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "38e2f851b705faa0d0a698ed9885bd6834440073"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-380",
+      "raw_name": null,
+      "standardized_name": "Boris N. Oreshkin",
+      "openalex_link": "",
+      "orcid": "0000-0002-1869-2004",
+      "citation": [
+        "e6a83abec5cffb0bf1669f2f2c1efdf2b15cb171"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-381",
+      "raw_name": null,
+      "standardized_name": "Pau Rodríguez López",
+      "openalex_link": "",
+      "orcid": "0000-0002-1689-8084",
+      "citation": [
+        "e6a83abec5cffb0bf1669f2f2c1efdf2b15cb171"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-382",
+      "raw_name": null,
+      "standardized_name": "Alexandre Lacoste",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "e6a83abec5cffb0bf1669f2f2c1efdf2b15cb171"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-383",
+      "raw_name": null,
+      "standardized_name": "Mengye Ren",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "df093d69cd98cf4b26542f53614a79754754eb78"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-384",
+      "raw_name": null,
+      "standardized_name": "Eleni Triantafillou",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "df093d69cd98cf4b26542f53614a79754754eb78"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-385",
+      "raw_name": null,
+      "standardized_name": "Yu-Xiong Wang",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "cf42c89fe45e31cdd83be78c22c28508e335b9aa"
+      ],
+      "venue": [
+        "venue-5"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-386",
+      "raw_name": null,
+      "standardized_name": "M. Hebert",
+      "openalex_link": "",
+      "orcid": "0000-0003-4566-5930",
+      "citation": [
+        "cf42c89fe45e31cdd83be78c22c28508e335b9aa"
+      ],
+      "venue": [
+        "venue-5"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-387",
+      "raw_name": null,
+      "standardized_name": "Bharath Hariharan",
+      "openalex_link": "",
+      "orcid": "0000-0002-2309-4703",
+      "citation": [
+        "cf42c89fe45e31cdd83be78c22c28508e335b9aa"
+      ],
+      "venue": [
+        "venue-5"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-388",
+      "raw_name": null,
+      "standardized_name": "A. Mehrotra",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "c7efa5f7008132b7d81f550aeaae8fb589506a9c"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-389",
+      "raw_name": null,
+      "standardized_name": "Antti Tarvainen",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "7493389667058116dbc7e808987f129325ee60d7"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-390",
+      "raw_name": null,
+      "standardized_name": "Chiyuan Zhang",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "54ddb00fa691728944fd8becea90a373d21597cf"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-391",
+      "raw_name": null,
+      "standardized_name": "Moritz Hardt",
+      "openalex_link": "",
+      "orcid": "0009-0000-7694-3038",
+      "citation": [
+        "54ddb00fa691728944fd8becea90a373d21597cf"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-392",
+      "raw_name": null,
+      "standardized_name": "B. Recht",
+      "openalex_link": "",
+      "orcid": "0000-0002-0293-593X",
+      "citation": [
+        "54ddb00fa691728944fd8becea90a373d21597cf"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-393",
+      "raw_name": null,
+      "standardized_name": "S. Laine",
+      "openalex_link": "",
+      "orcid": "0000-0002-0903-3197",
+      "citation": [
+        "d2e4587744a89bad95fea69e08842cad6c8ff0dd"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-394",
+      "raw_name": null,
+      "standardized_name": "Timo Aila",
+      "openalex_link": "",
+      "orcid": "0000-0002-9437-4438",
+      "citation": [
+        "d2e4587744a89bad95fea69e08842cad6c8ff0dd"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-395",
+      "raw_name": null,
+      "standardized_name": "Takeru Miyato",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "93d8d45fe8101545ae6d9fab3dbb38f904ff7b4e"
+      ],
+      "venue": [
+        "venue-51"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-396",
+      "raw_name": null,
+      "standardized_name": "I. Triguero",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "10a036204feac6fca7c558c6b9869abd63f20871"
+      ],
+      "venue": [
+        "venue-31"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-397",
+      "raw_name": null,
+      "standardized_name": "S. García",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "10a036204feac6fca7c558c6b9869abd63f20871"
+      ],
+      "venue": [
+        "venue-31"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-398",
+      "raw_name": null,
+      "standardized_name": "F. Herrera",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "10a036204feac6fca7c558c6b9869abd63f20871"
+      ],
+      "venue": [
+        "venue-31"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-399",
+      "raw_name": null,
+      "standardized_name": "Marcus Rohrbach",
+      "openalex_link": "",
+      "orcid": "0000-0001-5908-7751",
+      "citation": [
+        "ab50e0fba1e7964d2686e90f9bed66a06ed6ff42"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-400",
+      "raw_name": null,
+      "standardized_name": "S. Ebert",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "ab50e0fba1e7964d2686e90f9bed66a06ed6ff42"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-401",
+      "raw_name": null,
+      "standardized_name": "Yves Grandvalet",
+      "openalex_link": "",
+      "orcid": "0000-0002-5645-5149",
+      "citation": [
+        "ad67ccee45b801b0138016e2f44a566344e77320"
+      ],
+      "venue": [
+        "venue-18"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-402",
+      "raw_name": null,
+      "standardized_name": "David Yarowsky",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "944cba683d10d8c1a902e05cd68e32a9f47b372e"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-403",
+      "raw_name": null,
+      "standardized_name": "Avital Oliver",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "99039a54fa3ee3aed9bb3781621068680be5cc3d"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-404",
+      "raw_name": null,
+      "standardized_name": "Augustus Odena",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "99039a54fa3ee3aed9bb3781621068680be5cc3d"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-405",
+      "raw_name": null,
+      "standardized_name": "Colin Raffel",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "99039a54fa3ee3aed9bb3781621068680be5cc3d"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-406",
+      "raw_name": null,
+      "standardized_name": "E. D. Cubuk",
+      "openalex_link": "",
+      "orcid": "0000-0003-0524-2837",
+      "citation": [
+        "99039a54fa3ee3aed9bb3781621068680be5cc3d"
+      ],
+      "venue": [
+        "venue-27"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-407",
+      "raw_name": null,
+      "standardized_name": "Dong-Hyun Lee",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "798d9840d2439a0e5d47bcf5d164aa46d5e7dc26"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-408",
+      "raw_name": null,
+      "standardized_name": "R. Memisevic",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "0eb2e4a205a628ab059cab41d3b772f614ad29f2"
+      ],
+      "venue": [
+        "venue-36"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-409",
+      "raw_name": null,
+      "standardized_name": "Xavier Glorot",
+      "openalex_link": "",
+      "orcid": "0000-0002-6729-2189",
+      "citation": [
+        "ea9d2a2b4ce11aaf85136840c65f3bc9c03ab649"
+      ],
+      "venue": [
+        "venue-25"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-410",
+      "raw_name": null,
+      "standardized_name": "S. Sands",
+      "openalex_link": "",
+      "orcid": "0000-0003-3752-0328",
+      "citation": [
+        "4b25105f82cc372e0db5fb5b44a15b48cd6413cc"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-411",
+      "raw_name": null,
+      "standardized_name": "B. Edwards",
+      "openalex_link": "",
+      "orcid": "0000-0001-9383-1644",
+      "citation": [
+        "4b25105f82cc372e0db5fb5b44a15b48cd6413cc"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-412",
+      "raw_name": null,
+      "standardized_name": "V. J. Kelly",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "4b25105f82cc372e0db5fb5b44a15b48cd6413cc"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-413",
+      "raw_name": null,
+      "standardized_name": "M. Davidson",
+      "openalex_link": "",
+      "orcid": "0000-0002-2173-2417",
+      "citation": [
+        "4b25105f82cc372e0db5fb5b44a15b48cd6413cc"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-414",
+      "raw_name": null,
+      "standardized_name": "M. Wilkinson",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "4b25105f82cc372e0db5fb5b44a15b48cd6413cc"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-415",
+      "raw_name": null,
+      "standardized_name": "P. Berger",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "4b25105f82cc372e0db5fb5b44a15b48cd6413cc"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-416",
+      "raw_name": null,
+      "standardized_name": "P. Berkes",
+      "openalex_link": "",
+      "orcid": "0000-0002-2827-3911",
+      "citation": [
+        "a7e5f1c143329c30d2dff82e61328c484ac2d747"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-417",
+      "raw_name": null,
+      "standardized_name": "Richard E. Turner",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "a7e5f1c143329c30d2dff82e61328c484ac2d747"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-418",
+      "raw_name": null,
+      "standardized_name": "M. Sahani",
+      "openalex_link": "",
+      "orcid": "0000-0001-5560-3341",
+      "citation": [
+        "a7e5f1c143329c30d2dff82e61328c484ac2d747"
+      ],
+      "venue": [
+        "venue-39"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-419",
+      "raw_name": null,
+      "standardized_name": "D. Pelli",
+      "openalex_link": "",
+      "orcid": "0000-0001-7100-5659",
+      "citation": [
+        "06adae42f8c6bf2cd733db8515b1711cfed67ad1"
+      ],
+      "venue": [
+        "venue-35"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-420",
+      "raw_name": null,
+      "standardized_name": "Katharine A. Tillman",
+      "openalex_link": "",
+      "orcid": "0000-0001-9440-7239",
+      "citation": [
+        "06adae42f8c6bf2cd733db8515b1711cfed67ad1"
+      ],
+      "venue": [
+        "venue-35"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-421",
+      "raw_name": null,
+      "standardized_name": "Y-Lan Boureau",
+      "openalex_link": "",
+      "orcid": "0009-0008-3990-5778",
+      "citation": [
+        "ccd52aff02b0f902f4ce7247c4fee7273014c41c"
+      ],
+      "venue": [
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-422",
+      "raw_name": null,
+      "standardized_name": "R. Quiroga",
+      "openalex_link": "",
+      "orcid": "0000-0001-6534-3993",
+      "citation": [
+        "4d6109548fab119d5edfb7a77b63eb10ca58f4a4"
+      ],
+      "venue": [
+        "venue-34"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-423",
+      "raw_name": null,
+      "standardized_name": "L. Reddy",
+      "openalex_link": "",
+      "orcid": "0000-0002-7078-1055",
+      "citation": [
+        "4d6109548fab119d5edfb7a77b63eb10ca58f4a4"
+      ],
+      "venue": [
+        "venue-34"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-424",
+      "raw_name": null,
+      "standardized_name": "Gabriel Kreiman",
+      "openalex_link": "",
+      "orcid": "0000-0003-3505-8475",
+      "citation": [
+        "4d6109548fab119d5edfb7a77b63eb10ca58f4a4"
+      ],
+      "venue": [
+        "venue-34"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-425",
+      "raw_name": null,
+      "standardized_name": "C. Koch",
+      "openalex_link": "",
+      "orcid": "0000-0001-6482-8067",
+      "citation": [
+        "4d6109548fab119d5edfb7a77b63eb10ca58f4a4"
+      ],
+      "venue": [
+        "venue-34"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-426",
+      "raw_name": null,
+      "standardized_name": "I. Fried",
+      "openalex_link": "",
+      "orcid": "0000-0002-5962-2678",
+      "citation": [
+        "4d6109548fab119d5edfb7a77b63eb10ca58f4a4"
+      ],
+      "venue": [
+        "venue-34"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-427",
+      "raw_name": null,
+      "standardized_name": "M. Riesenhuber",
+      "openalex_link": "",
+      "orcid": "0000-0002-5744-0408",
+      "citation": [
+        "85abadb689897997f1e37baa7b5fc6f7d497518b"
+      ],
+      "venue": [
+        "venue-35"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-428",
+      "raw_name": null,
+      "standardized_name": "T. Poggio",
+      "openalex_link": "",
+      "orcid": "0000-0002-3944-0455",
+      "citation": [
+        "85abadb689897997f1e37baa7b5fc6f7d497518b"
+      ],
+      "venue": [
+        "venue-35"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-429",
+      "raw_name": null,
+      "standardized_name": "D. Lowe",
+      "openalex_link": "",
+      "orcid": "0000-0003-3332-483X",
+      "citation": [
+        "f9f836d28f52ad260213d32224a6d227f8e8849a"
+      ],
+      "venue": [
+        "venue-46"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-430",
+      "raw_name": null,
+      "standardized_name": "E. Adelson",
+      "openalex_link": "",
+      "orcid": "",
+      "citation": [
+        "993b1083455b5c4d631eaf44f230b061994e75c3"
+      ],
+      "venue": [
+        "venue-23"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-431",
+      "raw_name": null,
+      "standardized_name": "P. Haffner",
+      "openalex_link": "",
+      "orcid": "0000-0002-2319-5109",
+      "citation": [
+        "162d958ff885f1462aeda91cd72582323fd6a1f4"
+      ],
+      "venue": [
+        "venue-43"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-432",
+      "raw_name": null,
+      "standardized_name": "M. Mozer",
+      "openalex_link": "",
+      "orcid": "0000-0002-9654-0575",
+      "citation": [
+        "5b00ab8cc5a56ee934618bd7555965185a7f83ec"
+      ],
+      "venue": [
+        "venue-37"
+      ],
+      "author_graph": []
+    }
+  ]
+}
