@@ -21,21 +21,6 @@ import anomalousRaw from "./data/anomalous.json";
 /** load test PDF - should be uploaded by user */
 import samplePDF from "./data/testpaper.pdf";
 
-const issueScheme = {
-  citation_issue: {
-    themeColor: "rgba(221, 52, 151, 0.3)",
-    glyph: {
-      irrelevent_citation: 'IC'
-    }
-  },
-  statistical_error: {
-    themeColor: "rgba(255, 106, 0, 0.3)",
-    glyph: {
-      failed_statistical_tests: 'FST'
-    },
-  }
-};
-
 const anomalousColorScheme = {
   citation: {
     baseColor: "rgba(197,27,138,1)",
@@ -86,8 +71,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 function App() {
   // global init
   const [pdfData, setPdfData] = useState(null);
-
-  const [highlights, setHighlights] = useState([]);
   const [citation, setCitation] = useState([]);
   const [anomalous, setAnomalous] = useState([]);
   const [author, setAuthor] = useState([]);
@@ -128,19 +111,21 @@ function App() {
       const boxColor = anomalousColorScheme[e.name]['category'][e.category.name]['boxColor'];
       const sentenceList = e.sentence;
       // construct sentence highlight object
-      const sentenceHighlight = {
-        issueID: issueID,
-        issueName: issueName,
-        issueCategory: issueCategory,
-        baseColor: baseColor,
-        boxColor: boxColor,
-      };
-      e.sentence.forEach(ee=>{
-        loadAndExtract(ee, page);
+      sentenceList.forEach(sentenceObj=>{
+        const sentenceHighlight = {
+          issueID: issueID,
+          issueName: issueName,
+          issueCategory: issueCategory,
+          page: page,
+          baseColor: baseColor,
+          boxColor: boxColor,
+          sentence: sentenceObj.sentence,
+          bbox: sentenceObj.bbox
+        };
+        _sentenceHighlights.push(sentenceHighlight);
       });
-
     });
-    //setSentenceAnnotationList(_sentenceHighlights);
+    setSentenceAnnotationList(_sentenceHighlights);
   };
 
   /** init author list */
@@ -155,26 +140,8 @@ function App() {
     setVenue(venueList);
   };
 
-  const initHighlights = () => {
-    const issueListRaw = JSON.parse(JSON.stringify(testData.identifiedIssue));
-    issueListRaw.forEach(e=>{
-      const issueCategory = e.redFlag.category;
-      const issueType = e.redFlag.type;
-      const color = issueScheme[issueCategory].themeColor;
-      const glyph = issueScheme[issueCategory].glyph[issueType];
-      e.color = color;
-      e.glyph = glyph;
-    });
-    //console.log(issueListRaw);
-    setHighlights(issueListRaw);
-  };
-
   useEffect(() => {
     setPdfData(samplePDF);
-  }, []);
-
-  useEffect(() => {
-    initHighlights();
   }, []);
 
   useEffect(() => {
@@ -186,8 +153,8 @@ function App() {
   }, [anomalousRaw]);
 
   useEffect(() => {
-    pdfData !== null && initSentenceHightlights();
-  }, [anomalousRaw, pdfData]);
+    initSentenceHightlights();
+  }, [anomalousRaw]);
 
   useEffect(() => {
     initAuthor();
@@ -206,10 +173,10 @@ function App() {
             <Col span={14}>
               <PDFContainer
                 file={pdfData}
-                highlights={highlights}
                 citation={citation}
                 anomalous={anomalous}
                 anomalousColorScheme={anomalousColorScheme}
+                sentenceAnnotationList={sentenceAnnotationList}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
                 activeHighlight={activeHighlight}

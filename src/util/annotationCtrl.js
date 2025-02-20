@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { HighlightBbox } from "../components/issueComps/issueHighLighter";
+import { HighlightBbox } from "../components/issueComps/highlightBox";
 
 export const citationHighlight = (
   viewerRef, 
