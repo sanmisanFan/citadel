@@ -5,7 +5,9 @@ export const SentenceAnnotation = ({
   issueName,
   issueCategory,
   baseColor,
-  boxColor
+  boxColor,
+  activeHighlight,
+  onClick
 }) => {
   return(
     <div
@@ -17,7 +19,7 @@ export const SentenceAnnotation = ({
         top: 0,
         width: "100%",
         height: "100%",
-        //background: issue !== null ? boxColor : '',
+        background: activeHighlight === issueID ? boxColor : "",
         //transition: "all 0.2s ease-out",
         //border: activeHighlight === cite.issues[0] && "3px solid blue",
         borderBottom: "3px solid",
@@ -27,7 +29,7 @@ export const SentenceAnnotation = ({
         cursor: "pointer",
         pointerEvents: "auto"
       }}
-      //onClick={() => onClick(cite.issues[0])}
+      onClick={() => onClick(activeHighlight === issueID ? null : issueID)}
       /*onMouseEnter={(e) => {
         e.target.style.border = "3px solid blue";
       }}

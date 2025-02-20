@@ -165,7 +165,7 @@ function App() {
   }, [venueRaw]);
 
   //const { Header, Content } = Layout;
-  
+  //console.log("activeHighlight", activeHighlight);
   return (
     <div className="App">
       <div className="mainContainer">

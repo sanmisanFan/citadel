@@ -70,6 +70,19 @@ export const PDFContainer = ({
     }
   };
 
+  // Function to scroll to the corresponding page
+  const scrollToPage = (pageNumber) => {
+    if (!viewerRef.current) return;
+
+    const pageElement = viewerRef.current.querySelector(
+      `.react-pdf__Page[data-page-number="${pageNumber}"]`
+    );
+
+    if (pageElement) {
+      pageElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   const applyHighlightsReact = () => {
     if (!viewerRef.current) return;
   
@@ -115,7 +128,8 @@ export const PDFContainer = ({
                 issueCategory={highlight.issueCategory}
                 baseColor={highlight.baseColor}
                 boxColor={highlight.boxColor}
-                //onClick={(highlightId) => console.log(highlightId)}
+                activeHighlight={activeHighlight}
+                onClick={(issueID) => setActiveHighlight(issueID)}
               />
             );
             // Append the highlight container to the text layer
@@ -128,12 +142,12 @@ export const PDFContainer = ({
   useEffect(() => {
     // render anomalous highlight
     if (Object.keys(renderedPages).length === numPages) {
+      console.log("activeHighlight:", activeHighlight);
       applyHighlightsReact();
     }
-  }, [renderedPages, sentenceAnnotationList]);
+  }, [renderedPages, sentenceAnnotationList, activeHighlight]);
 
   useEffect(() => {
-    console.log(activeHighlight);
     if (Object.keys(renderedPages).length === numPages) {
       citationHighlight(
         viewerRef, 
@@ -144,7 +158,7 @@ export const PDFContainer = ({
         setActiveHighlight
       );
     }
-  }, [renderedPages, citation]);
+  }, [renderedPages, citation, activeHighlight]);
 
   useEffect(() => {
     if (viewerRef.current) {
