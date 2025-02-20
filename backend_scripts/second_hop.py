@@ -114,7 +114,6 @@ class SecondHopProcessor:
     def _merge_authors(self, s2_authors, openalex_authors=None):
         """
         Merge author lists into the same structure as first-hop enriched data.
-        Returns a list of author dictionaries without assigning keys yet.
         """
         merged_authors = []
         max_length = max(len(s2_authors), len(openalex_authors) if openalex_authors else 0)
@@ -137,38 +136,55 @@ class SecondHopProcessor:
                 "name": name,
                 "s2_id": s2_id,
                 "orcid": orcid,
-                "raw_name": name  # For second hop, raw_name defaults to API name if no parsed data
+                "raw_name": name  # Default to API name for second hop
             })
         print("DEBUG: Merged authors:", merged_authors)
         return merged_authors
 
-    def _merge_data(self, s2, openalex_authors=None):
+    def _merge_data(self, s2=None, openalex=None):
         """
-        Merge Semantic Scholar details with optional OpenAlex data into the same format as first-hop enriched data.
+        Merge Semantic Scholar or OpenAlex data into the same format as first-hop enriched data.
+        Prioritizes Semantic Scholar if available, otherwise uses OpenAlex.
         """
-        merged = {
-            "title": s2.get('title'),
-            "authors": self._merge_authors(s2.get('authors', []), openalex_authors),
-            "year": s2.get('year'),
-            "venue": s2.get('venue'),
-            "citation_count": s2.get('citationCount', 0),
-            "fields_of_study": s2.get('fieldsOfStudy', []),
-            "external_ids": s2.get('externalIds', {}),
-            "semantic_scholar_id": s2.get('paperId'),
-            "arxiv_id": None,  # Not available from second-hop references typically
-            "doi": s2.get('externalIds', {}).get('DOI')
-        }
+        if s2:
+            merged = {
+                "title": s2.get('title'),
+                "authors": self._merge_authors(s2.get('authors', [])),
+                "year": s2.get('year'),
+                "venue": s2.get('venue'),
+                "citation_count": s2.get('citationCount', 0),
+                "fields_of_study": s2.get('fieldsOfStudy', []),
+                "external_ids": s2.get('externalIds', {}),
+                "semantic_scholar_id": s2.get('paperId'),
+                "arxiv_id": None,
+                "doi": s2.get('externalIds', {}).get('DOI')
+            }
+        elif openalex:
+            merged = {
+                "title": openalex.get("title"),
+                "authors": self._merge_authors([{"name": a["author"]["display_name"], "externalIds": {"ORCID": a["author"]["orcid"]}} for a in openalex.get("authorships", [])]),
+                "year": openalex.get("publication_year"),
+                "venue": openalex.get("host_venue", {}).get("display_name"),
+                "citation_count": openalex.get("cited_by_count", 0),
+                "fields_of_study": [c["display_name"] for c in openalex.get("concepts", [])],
+                "external_ids": {"DOI": openalex.get("doi"), "OpenAlex": openalex.get("id")},
+                "semantic_scholar_id": None,
+                "arxiv_id": None,
+                "doi": openalex.get("doi")
+            }
+        else:
+            merged = {}
         print("DEBUG: _merge_data output:", merged)
         return merged
 
     def assign_entity_keys(self, references_data, entity_keys):
         """
-        Assign unique keys for authors and venues in second-hop references.
-        Check existing entity_keys and update with new ones if needed.
-        Returns updated references_data and entity_keys.
+        Assign unique keys for authors, citations, and venues in second-hop references.
         """
         author_key_map = {k: v for k, v in entity_keys["authors"].items()}
         venue_key_map = {v: k for k, v in entity_keys["venues"].items()}
+        existing_citation_ids = [int(k.split('-')[1]) for k in entity_keys["citations"].keys() if k.startswith("citation-")]
+        citation_counter = max(existing_citation_ids) + 1 if existing_citation_ids else 1
         author_counter = max([int(k.split('-')[1]) for k in entity_keys["authors"].keys()] + [0]) + 1
         venue_counter = max([int(k.split('-')[1]) for k in entity_keys["venues"].keys()] + [0]) + 1
 
@@ -185,10 +201,10 @@ class SecondHopProcessor:
                         a_key = author_key_map[key_tuple]["key"]
                     else:
                         a_key = f"author-{author_counter}"
-                        author_counter += 1
                         author["key"] = a_key
                         author_key_map[key_tuple] = author
                         entity_keys["authors"][a_key] = author
+                        author_counter += 1
                     new_authors.append(a_key)
                 ref["authors"] = new_authors
 
@@ -200,21 +216,34 @@ class SecondHopProcessor:
                         v_key = venue_key_map[venue_str]
                     else:
                         v_key = f"venue-{venue_counter}"
-                        venue_counter += 1
                         venue_key_map[venue_str] = v_key
                         entity_keys["venues"][v_key] = venue_str
+                        venue_counter += 1
                     ref["venue"] = v_key
 
-                # Assign citation key (optional, for consistency with first hop)
-                citation_key = f"citation-{paper_id}-{len(enriched_refs)}"
+                # Assign citation key
+                citation_key = f"citation-{citation_counter}"
+                citation_counter += 1
                 ref["citation_key"] = citation_key
-                entity_keys["citations"][citation_key] = ref
+                entity_keys["citations"][citation_key] = {
+                    "title": ref["title"],
+                    "authors": ref["authors"],
+                    "venue": ref["venue"],
+                    "year": ref["year"],
+                    "citation_count": ref.get("citation_count", 0),
+                    "fields_of_study": ref.get("fields_of_study", []),
+                    "external_ids": ref.get("external_ids", {}),
+                    "semantic_scholar_id": ref["semantic_scholar_id"],
+                    "arxiv_id": ref.get("arxiv_id"),
+                    "doi": ref["doi"],
+                    "second_hop": "yes"
+                }
 
         return references_data, entity_keys
 
     def process_second_hop(self, input_file, output_file, entity_keys_file):
         """
-        Process second-hop references, assign entity keys, and save updated data and entity keys.
+        Process second-hop references, falling back to OpenAlex if Semantic Scholar fails.
         """
         papers = self.load_enriched_papers(input_file)
         entity_keys = self.load_entity_keys(entity_keys_file)
@@ -241,30 +270,35 @@ class SecondHopProcessor:
                     continue
                 print(f"DEBUG: Enriching reference with paperId: {ref_paper_id}")
                 details = self.retry_api_call(self.get_paper_details, ref_paper_id)
-                openalex_authors = None
-                if details:
-                    need_openalex = False
+                if details is None:
+                    print(f"DEBUG: Semantic Scholar failed for {ref_paper_id}, falling back to OpenAlex with title: {ref.get('title')}")
+                    openalex_data = self.retry_api_call(self.get_paper_details_openalex, ref.get("title"))
+                    if openalex_data:
+                        merged = self._merge_data(openalex=openalex_data)
+                    else:
+                        print(f"DEBUG: OpenAlex also failed for title {ref.get('title')}, skipping reference")
+                        continue
+                else:
+                    openalex_authors = None
+                    need_openalex_supplement = False
                     if "authors" in details:
                         for author in details.get("authors", []):
                             orcid = (author.get('externalIds') or {}).get('ORCID')
                             if not orcid:
-                                need_openalex = True
+                                need_openalex_supplement = True
                                 break
                     else:
-                        need_openalex = True
-                    if need_openalex:
-                        print("DEBUG: ORCID missing for reference, attempting fallback via OpenAlex")
-                        openalex_data = self.get_paper_details_openalex(details.get("title"))
+                        need_openalex_supplement = True
+                    if need_openalex_supplement:
+                        print("DEBUG: ORCID missing, supplementing with OpenAlex data")
+                        openalex_data = self.retry_api_call(self.get_paper_details_openalex, details.get("title"))
                         if openalex_data:
-                            openalex_authors = []
-                            for authorship in openalex_data.get("authorships", []):
-                                openalex_authors.append({
-                                    "name": authorship.get("author", {}).get("display_name"),
-                                    "orcid": authorship.get("author", {}).get("orcid")
-                                })
-                    merged = self._merge_data(details, openalex_authors)
-                    enriched_refs.append(merged)
-                    sleep(self.request_delay)
+                            openalex_authors = [{"name": a["author"]["display_name"], "orcid": a["author"]["orcid"]} for a in openalex_data.get("authorships", [])]
+                    merged = self._merge_data(s2=details, openalex=openalex_authors)
+                
+                enriched_refs.append(merged)
+                sleep(self.request_delay)
+
             all_references[paper_id] = {
                 "title": title,
                 "references": enriched_refs

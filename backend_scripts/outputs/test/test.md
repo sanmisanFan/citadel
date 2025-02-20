@@ -15,12 +15,12 @@ THIS paper aims at a comprehensive survey of recent progresses on unsupervised a
 However, in many cases, it is challenging to collect a sufficiently large number of labeled data, and this inspires many research efforts on exploring the unsupervised information beyond labeled data to train robust models for various learning tasks.
 
 - Unlabeled data. While the number of labeled data would be extremely small, unlabeled data could be remarkably big. The distribution of those unlabeled
-  Manuscript received 27 Mar. 2019; revised 6 Oct. 2020; accepted 13 Oct. 2020. Date of publication 19 Oct. 2020; date of current version 4 Mar. 2022. (Corresponding author: Guo-Jun Qi.) Recommended for acceptance by M. Fritz. Digital Object Identifier no. 10.1109/TPAMI.2020.3031898
+Manuscript received 27 Mar. 2019; revised 6 Oct. 2020; accepted 13 Oct. 2020. Date of publication 19 Oct. 2020; date of current version 4 Mar. 2022. (Corresponding author: Guo-Jun Qi.) Recommended for acceptance by M. Fritz. Digital Object Identifier no. 10.1109/TPAMI.2020.3031898
 
 data provides important clues on learning robust representations that are generalizable to new learning tasks. The unlabeled data can be leveraged in both an unsupervised and a semi-supervised fashion, depending on whether additional labeled examples are leveraged to train models. Unlabeled data can also assist models to close the domain gap between different tasks, and this leads to a large category of unsupervised and semi-supervised domain adaptation approaches.
 
 - Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.
-  The focus of this survey is on the unsupervised and semisupervised methods by exploring the unlabeled examples to address the small data problem. Although we will not review the ZSL and FSL methods that leverage the information from
+The focus of this survey is on the unsupervised and semisupervised methods by exploring the unlabeled examples to address the small data problem. Although we will not review the ZSL and FSL methods that leverage the information from
 
 Guo-Jun Qi is with the Futurewei Technologies, Bellevue, WA 98004 USA. E-mail: [guojunq@gmail.com](mailto:guojunq@gmail.com).
 
@@ -148,7 +148,7 @@ has been derived by introducing a surrogate transformation decoder qfðtjz; xÞ 
 
 z ¼ fuðtðxÞÞ þ suðtðxÞÞ -
 
-is drawn from a normal distribution N ð0;IÞ, denotes the element-wise product and u is the model
+ is drawn from a normal distribution N ð0;IÞ, denotes the element-wise product and u is the model
 
 With this probabilistic representation, the mutual infor-
 
@@ -363,9 +363,9 @@ $$p(y) = \text{Cat}(y|\mathfrak{m}),\\p(\mathbf{z}) = \mathcal{N}(\mathbf{z}|\ma
 
 where pðyÞ is a multinomial distribution for the class prior.
 
-Unlike the VAE, the M2 introduces a pair of variational properties to infer
+Unlike the VAE, the M2 introduces a pair of variational properties to infer 
 $$\mathbf{z}$$
-and
+ and 
 $$y$$
 :
 
@@ -612,7 +612,7 @@ Another aspect of unsupervised training is its ability of exploring both labeled
 TABLE 1 Error Rates on CIFAR-10 When Different Numbers of Labeled Examples Per Class are Used to Train the Supervised, the Semi-Supervised and the Downstream Classifiers for Unsupervised Representations
 
 |                          | 20    | 100   | 400   | 1000  | 5000 |
-| ------------------------ | ----- | ----- | ----- | ----- | ---- |
+|--------------------------|-------|-------|-------|-------|------|
 | Supervised conv          | 66.34 | 52.74 | 25.81 | 16.53 | 6.93 |
 | Supervised non-linear    | 65.03 | 51.13 | 27.17 | 16.13 | 7.92 |
 | Improved GAN [91]        | –     | –     | 18.63 | –     | –    |
@@ -692,7 +692,7 @@ In this paper, we review two large categories of small data methods—unsupervis
 
 Authorized licensed use limited to: Arizona State University. Downloaded on February 10,2025 at 20:54:49 UTC from IEEE Xplore. Restrictions apply.
 
--
+- 
 - [4] M. A. Jamal, G.-J. Qi, and M. Shah, "Task-agnostic meta-learning for few-shot learning," 2018, arXiv: 1805.07722.
 - [5] X. Li et al., "Learning to self-train for semi-supervised few-shot classification," in Proc. Advances Neural Inf. Process. Syst., 2019, pp. 10 276–10 286.
 - [6] G. E. Hinton, A. Krizhevsky, and S. D. Wang, "Transforming auto-encoders," in Proc. Int. Conf. Artif. Neural Netw., 2011, pp. 44–51.
