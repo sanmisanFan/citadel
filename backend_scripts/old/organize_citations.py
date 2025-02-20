@@ -1,7 +1,7 @@
 import json
 
 # Load the JSON data
-with open('reference_mentions.json', 'r') as f:
+with open('outputs/reference_mentions.json', 'r') as f:
     data = json.load(f)
 
 # Create a dictionary to store citations and their corresponding texts

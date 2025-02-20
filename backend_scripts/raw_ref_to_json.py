@@ -13,12 +13,16 @@ class PaperProcessor:
         print("DEBUG: Initialized PaperProcessor with Semantic Scholar base URL:", self.s2_base)
         
     def parse_reference_with_gpt(self, ref_text):
-        """Use GPT to extract structured data from reference text.
-           If the reference contains 'et al.', only include the explicitly mentioned author(s)."""
+        """
+        Use GPT to extract structured data from reference text.
+        If the reference contains 'et al.', only include the explicitly mentioned author(s).
+        In addition, if the venue appears abbreviated, expand it to its full name and store it in "venue",
+        while saving the originally mentioned venue in "raw_venue".
+        """
         prompt = f"""
-Parse this academic reference into JSON format with the following keys: authors (array), title, venue, year, 
-pages, arxiv_id, and doi. If the reference contains "et al.", ignore it and only include the author(s) explicitly mentioned.
-Handle incomplete information using null for missing fields.
+Parse this academic reference into JSON format with the following keys: authors (array), title, venue, raw_venue, year, pages, arxiv_id, and doi.
+If the venue name in the reference appears abbreviated, expand it to its full name and save the expanded version in "venue",
+while preserving the original text in "raw_venue". Handle incomplete information using null for missing fields.
 
 Reference: "{ref_text}"
 
@@ -27,7 +31,8 @@ Example:
 {{
   "authors": ["Author 1", "Author 2"],
   "title": "Paper Title",
-  "venue": "Conference Name",
+  "venue": "International Conference on Very Large Data Bases",
+  "raw_venue": "VLDB",
   "year": 2023,
   "pages": "123-145",
   "arxiv_id": "1234.5678",
@@ -191,12 +196,19 @@ Example:
         return enriched
 
     def _merge_data(self, parsed, s2, openalex_authors=None):
-        """Combine GPT parsing with Semantic Scholar data, using OpenAlex fallback for authors if needed"""
+        """
+        Combine GPT parsing with Semantic Scholar data, using OpenAlex fallback for authors if needed.
+        For venue, use the GPT-expanded full conference name from parsed["venue"] and preserve the original
+        as parsed["raw_venue"].
+        """
+        venue_full = parsed.get('venue') if 'venue' in parsed else s2.get('venue')
+        raw_venue = parsed.get('raw_venue') if 'raw_venue' in parsed else s2.get('venue', parsed.get('venue'))
         merged = {
             "title": s2.get('title', parsed.get('title')),
             "authors": self._merge_authors(parsed.get('authors', []), s2.get('authors', []), openalex_authors),
             "year": s2.get('year', parsed.get('year')),
-            "venue": s2.get('venue', parsed.get('venue')),
+            "venue": venue_full,       # GPT-expanded full conference name
+            "raw_venue": raw_venue,      # Venue as mentioned in the reference
             "citation_count": s2.get('citationCount', 0),
             "fields_of_study": s2.get('fieldsOfStudy', []),
             "external_ids": s2.get('externalIds', {}),
@@ -204,14 +216,17 @@ Example:
             "arxiv_id": parsed.get('arxiv_id'),
             "doi": s2.get('externalIds', {}).get('DOI', parsed.get('doi'))
         }
-        # Preserve reference id from the original parsed data
         if "ref_id" in parsed:
             merged["ref_id"] = parsed["ref_id"]
         print("DEBUG: _merge_data output:", merged)
         return merged
 
     def _merge_data_openalex(self, parsed, openalex):
-        """Merge data using OpenAlex response when Semantic Scholar data is not available"""
+        """
+        Merge data using OpenAlex response when Semantic Scholar data is not available.
+        For venue, use the GPT-expanded full conference name from parsed["venue"] and preserve the original
+        as parsed["raw_venue"].
+        """
         title = openalex.get("display_name", parsed.get("title"))
         openalex_authors = []
         for authorship in openalex.get("authorships", []):
@@ -219,11 +234,14 @@ Example:
                 "name": authorship.get("author", {}).get("display_name"),
                 "orcid": authorship.get("author", {}).get("orcid")
             })
+        venue_full = parsed.get('venue') if 'venue' in parsed else openalex.get("host_venue", {}).get("display_name")
+        raw_venue = parsed.get('raw_venue') if 'raw_venue' in parsed else openalex.get("host_venue", {}).get("display_name", parsed.get("venue"))
         merged = {
             "title": title,
             "authors": openalex_authors,
             "year": openalex.get("publication_year", parsed.get("year")),
-            "venue": openalex.get("host_venue", {}).get("display_name", parsed.get("venue")),
+            "venue": venue_full,       # GPT-expanded full venue
+            "raw_venue": raw_venue,      # Original venue from reference
             "citation_count": openalex.get("citation_count", 0),
             "fields_of_study": openalex.get("concepts", []),
             "external_ids": {"OpenAlex": openalex.get("id")},
@@ -245,9 +263,7 @@ Example:
         merged_authors = []
         max_length = max(len(parsed_authors), len(s2_authors))
         for i in range(max_length):
-            # raw_name from GPT parsed authors, if available
             raw_name = parsed_authors[i] if i < len(parsed_authors) else None
-            # Try to get API data from Semantic Scholar first, otherwise fallback to OpenAlex
             if i < len(s2_authors) and s2_authors[i]:
                 api_author = s2_authors[i]
             elif openalex_authors and i < len(openalex_authors):
@@ -256,7 +272,6 @@ Example:
                 api_author = {}
             name = api_author.get('name')
             s2_id = api_author.get('authorId')
-            # Attempt to get ORCID from API author data, fallback to OpenAlex if needed
             orcid = None
             if api_author:
                 ext_ids = api_author.get('externalIds') or {}
@@ -272,13 +287,64 @@ Example:
         print("DEBUG: Merged authors:", merged_authors)
         return merged_authors
 
+    def assign_entity_keys(self, enriched):
+        """
+        Assign unique keys for each author, citation, and venue.
+        Each unique author gets a key "author-<number>", each enriched paper gets a citation key "citation-<number>",
+        and each unique venue gets a key "venue-<number>".
+        The keys and associated details are stored in a dictionary that will be written to a separate JSON file.
+        Note: The unique venue key is generated based solely on the API venue (i.e. the GPT-expanded full venue).
+        """
+        entity_keys = {"authors": {}, "citations": {}, "venues": {}}
+        author_key_map = {}
+        venue_key_map = {}
+        citation_counter = 1
+        author_counter = 1
+        venue_counter = 1
+
+        for paper in enriched:
+            citation_key = f"citation-{citation_counter}"
+            citation_counter += 1
+            paper["citation_key"] = citation_key
+            entity_keys["citations"][citation_key] = paper
+
+            new_authors = []
+            for author in paper.get("authors", []):
+                if isinstance(author, str):
+                    new_authors.append(author)
+                    continue
+                author_name = author.get("name", "").strip()
+                orcid = author.get("orcid")
+                key_tuple = (author_name.lower(), orcid)
+                if key_tuple not in author_key_map:
+                    a_key = f"author-{author_counter}"
+                    author_counter += 1
+                    author_key_map[key_tuple] = a_key
+                    entity_keys["authors"][a_key] = author
+                else:
+                    a_key = author_key_map[key_tuple]
+                new_authors.append(a_key)
+            paper["authors"] = new_authors
+
+            venue = paper.get("venue")
+            if venue:
+                venue_str = venue if isinstance(venue, str) else str(venue)
+                if venue_str not in venue_key_map:
+                    v_key = f"venue-{venue_counter}"
+                    venue_counter += 1
+                    venue_key_map[venue_str] = v_key
+                    entity_keys["venues"][v_key] = venue_str
+                else:
+                    v_key = venue_key_map[venue_str]
+                paper["venue"] = v_key
+        return enriched, entity_keys
+
     def process_papers(self, input_file, output_file, reference_mentions_file=None):
         """End-to-end processing pipeline. Optionally merges reference mention data if a JSON file is provided."""
         print("DEBUG: Starting processing of papers")
         print("DEBUG: Parsing input file with GPT...")
         parsed = self.load_and_parse_input(input_file)
         
-        # Load the reference mentions if the file is provided
         ref_mentions = {}
         if reference_mentions_file:
             ref_mentions = self.load_reference_mentions(reference_mentions_file)
@@ -286,14 +352,18 @@ Example:
         print("DEBUG: Enriching with Semantic Scholar (and OpenAlex) data...")
         enriched = self.enrich_paper_data(parsed)
         
-        # Merge reference mentions into each enriched paper using the ref_id
         for paper in enriched:
             ref_id = paper.get("ref_id")
             if ref_id and ref_id in ref_mentions:
                 paper["reference_mentions"] = ref_mentions[ref_id]
         
+        print("DEBUG: Assigning entity keys for authors, citations, and venues...")
+        enriched, entity_keys = self.assign_entity_keys(enriched)
+        
         self._save_results(enriched, output_file)
-        print("DEBUG: Processing complete. Results saved to", output_file)
+        entity_keys_file = output_file.replace("enriched_papers.json", "entity_keys.json")
+        self._save_results(entity_keys, entity_keys_file)
+        print("DEBUG: Processing complete. Results saved to", output_file, "and", entity_keys_file)
 
     def retry_api_call(self, func, *args):
         """Retry mechanism for API calls"""
@@ -341,5 +411,4 @@ Example:
 
 if __name__ == "__main__":
     processor = PaperProcessor()
-    # Provide the reference mentions JSON file as the third parameter if available.
-    processor.process_papers("rawreferences.txt", "enriched_papers.json", "reference_mentions.json")
+    processor.process_papers("outputs/rawreferences.txt", "outputs/enriched_papers.json", "outputs/reference_mentions.json")

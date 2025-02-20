@@ -1,0 +1,2982 @@
+{
+  "authors": {
+    "author-1": {
+      "name": "Alex Krizhevsky",
+      "orcid": null
+    },
+    "author-2": {
+      "name": "Ilya Sutskever",
+      "orcid": null
+    },
+    "author-3": {
+      "name": "Geoffrey E. Hinton",
+      "orcid": null
+    },
+    "author-4": {
+      "name": "Kaiming He",
+      "s2_id": "39353098",
+      "orcid": "0000-0001-7318-9658",
+      "raw_name": "K. He"
+    },
+    "author-5": {
+      "name": "X. Zhang",
+      "s2_id": "1771551",
+      "orcid": "https://orcid.org/0000-0003-2138-4608",
+      "raw_name": "X. Zhang"
+    },
+    "author-6": {
+      "name": "Shaoqing Ren",
+      "s2_id": "3080683",
+      "orcid": null,
+      "raw_name": "S. Ren"
+    },
+    "author-7": {
+      "name": "Jian Sun",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0002-6178-4166",
+      "raw_name": "J. Sun"
+    },
+    "author-8": {
+      "name": "Chelsea Finn",
+      "s2_id": "46881670",
+      "orcid": "https://orcid.org/0000-0001-6298-0874",
+      "raw_name": "C. Finn"
+    },
+    "author-9": {
+      "name": "P. Abbeel",
+      "s2_id": "1689992",
+      "orcid": null,
+      "raw_name": "P. Abbeel"
+    },
+    "author-10": {
+      "name": "S. Levine",
+      "s2_id": "1736651",
+      "orcid": "https://orcid.org/0000-0001-6764-2743",
+      "raw_name": "S. Levine"
+    },
+    "author-11": {
+      "name": "Muhammad Abdullah Jamal",
+      "orcid": null
+    },
+    "author-12": {
+      "name": "Guo-Jun Qi",
+      "orcid": "https://orcid.org/0000-0003-3508-1851"
+    },
+    "author-13": {
+      "name": "Xinzhe Li",
+      "orcid": "https://orcid.org/0000-0002-5547-8293"
+    },
+    "author-14": {
+      "name": "Qianru Sun",
+      "orcid": "https://orcid.org/0000-0003-2689-317X"
+    },
+    "author-15": {
+      "name": "Yaoyao Liu",
+      "orcid": "https://orcid.org/0000-0002-5316-3028"
+    },
+    "author-16": {
+      "name": "Qin Zhou",
+      "orcid": "https://orcid.org/0000-0002-0082-1330"
+    },
+    "author-17": {
+      "name": "Shibao Zheng",
+      "orcid": null
+    },
+    "author-18": {
+      "name": "Tat‐Seng Chua",
+      "orcid": "https://orcid.org/0000-0001-6097-7807"
+    },
+    "author-19": {
+      "name": "Bernt Schiele",
+      "orcid": "https://orcid.org/0000-0001-9683-5237"
+    },
+    "author-20": {
+      "name": "A. Krizhevsky",
+      "s2_id": "2064160",
+      "orcid": null,
+      "raw_name": "A. Krizhevsky"
+    },
+    "author-21": {
+      "name": "Sida I. Wang",
+      "s2_id": "8729431",
+      "orcid": "https://orcid.org/0000-0003-3625-3459",
+      "raw_name": "S. D. Wang"
+    },
+    "author-22": {
+      "name": "R. Srivastava",
+      "s2_id": "2100612",
+      "orcid": "https://orcid.org/0000-0002-3323-0713",
+      "raw_name": "R. Srivastava",
+      "key": "author-22"
+    },
+    "author-23": {
+      "name": "Klaus Greff",
+      "s2_id": "3035541",
+      "orcid": "https://orcid.org/0000-0001-6982-0937",
+      "raw_name": "Klaus Greff",
+      "key": "author-23"
+    },
+    "author-24": {
+      "name": "J. Schmidhuber",
+      "s2_id": "145341374",
+      "orcid": null,
+      "raw_name": "J. Schmidhuber",
+      "key": "author-24"
+    },
+    "author-25": {
+      "name": "Shaoqing Ren",
+      "s2_id": "3080683",
+      "orcid": null,
+      "raw_name": "Shaoqing Ren",
+      "key": "author-25"
+    },
+    "author-26": {
+      "name": "Kaiming He",
+      "s2_id": "39353098",
+      "orcid": "0000-0001-7318-9658",
+      "raw_name": "Kaiming He",
+      "key": "author-26"
+    },
+    "author-27": {
+      "name": "Ross B. Girshick",
+      "s2_id": "2983898",
+      "orcid": null,
+      "raw_name": "Ross B. Girshick",
+      "key": "author-27"
+    },
+    "author-28": {
+      "name": "Jian Sun",
+      "s2_id": "2032184078",
+      "orcid": "https://orcid.org/0000-0001-6270-2698",
+      "raw_name": "Jian Sun",
+      "key": "author-28"
+    },
+    "author-29": {
+      "name": "Spyros Gidaris",
+      "s2_id": "2475428",
+      "orcid": "https://orcid.org/0000-0003-1515-3635",
+      "raw_name": "Spyros Gidaris",
+      "key": "author-29"
+    },
+    "author-30": {
+      "name": "N. Komodakis",
+      "s2_id": "2505902",
+      "orcid": "https://orcid.org/0009-0000-6767-5641",
+      "raw_name": "N. Komodakis",
+      "key": "author-30"
+    },
+    "author-31": {
+      "name": "X. Zhang",
+      "s2_id": "1771551",
+      "orcid": "https://orcid.org/0000-0003-2138-4608",
+      "raw_name": "X. Zhang",
+      "key": "author-31"
+    },
+    "author-32": {
+      "name": "Jian Sun",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0001-7206-0641",
+      "raw_name": "Jian Sun",
+      "key": "author-32"
+    },
+    "author-33": {
+      "name": "Sergey Ioffe",
+      "s2_id": "2054165706",
+      "orcid": null,
+      "raw_name": "Sergey Ioffe",
+      "key": "author-33"
+    },
+    "author-34": {
+      "name": "Christian Szegedy",
+      "s2_id": "2574060",
+      "orcid": "https://orcid.org/0000-0003-4295-1851",
+      "raw_name": "Christian Szegedy",
+      "key": "author-34"
+    },
+    "author-35": {
+      "name": "Adriana Romero",
+      "s2_id": "2069136633",
+      "orcid": "https://orcid.org/0000-0003-3604-6281",
+      "raw_name": "Adriana Romero",
+      "key": "author-35"
+    },
+    "author-36": {
+      "name": "Nicolas Ballas",
+      "s2_id": "2482072",
+      "orcid": null,
+      "raw_name": "Nicolas Ballas",
+      "key": "author-36"
+    },
+    "author-37": {
+      "name": "Samira Ebrahimi Kahou",
+      "s2_id": "3127597",
+      "orcid": null,
+      "raw_name": "Samira Ebrahimi Kahou",
+      "key": "author-37"
+    },
+    "author-38": {
+      "name": "Antoine Chassang",
+      "s2_id": "3186079",
+      "orcid": null,
+      "raw_name": "Antoine Chassang",
+      "key": "author-38"
+    },
+    "author-39": {
+      "name": "C. Gatta",
+      "s2_id": "143706039",
+      "orcid": null,
+      "raw_name": "C. Gatta",
+      "key": "author-39"
+    },
+    "author-40": {
+      "name": "Yoshua Bengio",
+      "s2_id": "1751762",
+      "orcid": "https://orcid.org/0000-0002-9322-3515",
+      "raw_name": "Yoshua Bengio",
+      "key": "author-40"
+    },
+    "author-41": {
+      "name": "Evan Shelhamer",
+      "s2_id": "1782282",
+      "orcid": null,
+      "raw_name": "Evan Shelhamer",
+      "key": "author-41"
+    },
+    "author-42": {
+      "name": "Jonathan Long",
+      "s2_id": "2117314646",
+      "orcid": "https://orcid.org/0000-0002-5228-3095",
+      "raw_name": "Jonathan Long",
+      "key": "author-42"
+    },
+    "author-43": {
+      "name": "Trevor Darrell",
+      "s2_id": "1753210",
+      "orcid": "https://orcid.org/0000-0001-5453-8533",
+      "raw_name": "Trevor Darrell",
+      "key": "author-43"
+    },
+    "author-44": {
+      "name": "Chen-Yu Lee",
+      "s2_id": "50521003",
+      "orcid": null,
+      "raw_name": "Chen-Yu Lee",
+      "key": "author-44"
+    },
+    "author-45": {
+      "name": "Saining Xie",
+      "s2_id": "1817030",
+      "orcid": null,
+      "raw_name": "Saining Xie",
+      "key": "author-45"
+    },
+    "author-46": {
+      "name": "Patrick W. Gallagher",
+      "s2_id": "21561136",
+      "orcid": null,
+      "raw_name": "Patrick W. Gallagher",
+      "key": "author-46"
+    },
+    "author-47": {
+      "name": "Zhengyou Zhang",
+      "s2_id": "2148905709",
+      "orcid": "https://orcid.org/0000-0002-6606-2525",
+      "raw_name": "Zhengyou Zhang",
+      "key": "author-47"
+    },
+    "author-48": {
+      "name": "Z. Tu",
+      "s2_id": "144035504",
+      "orcid": "https://orcid.org/0000-0002-1900-2124",
+      "raw_name": "Z. Tu",
+      "key": "author-48"
+    },
+    "author-49": {
+      "name": "Wei Liu",
+      "s2_id": "2157222093",
+      "orcid": "https://orcid.org/0000-0002-7409-0948",
+      "raw_name": "Wei Liu",
+      "key": "author-49"
+    },
+    "author-50": {
+      "name": "Yangqing Jia",
+      "s2_id": "39978391",
+      "orcid": null,
+      "raw_name": "Yangqing Jia",
+      "key": "author-50"
+    },
+    "author-51": {
+      "name": "P. Sermanet",
+      "s2_id": "3142556",
+      "orcid": null,
+      "raw_name": "P. Sermanet",
+      "key": "author-51"
+    },
+    "author-52": {
+      "name": "Scott E. Reed",
+      "s2_id": "144828948",
+      "orcid": null,
+      "raw_name": "Scott E. Reed",
+      "key": "author-52"
+    },
+    "author-53": {
+      "name": "Dragomir Anguelov",
+      "s2_id": "1838674",
+      "orcid": null,
+      "raw_name": "Dragomir Anguelov",
+      "key": "author-53"
+    },
+    "author-54": {
+      "name": "D. Erhan",
+      "s2_id": "1761978",
+      "orcid": "https://orcid.org/0000-0001-7650-1475",
+      "raw_name": "D. Erhan",
+      "key": "author-54"
+    },
+    "author-55": {
+      "name": "Vincent Vanhoucke",
+      "s2_id": "2657155",
+      "orcid": "0000-0003-0544-2791",
+      "raw_name": "Vincent Vanhoucke",
+      "key": "author-55"
+    },
+    "author-56": {
+      "name": "Andrew Rabinovich",
+      "s2_id": "39863668",
+      "orcid": "https://orcid.org/0000-0003-3078-6705",
+      "raw_name": "Andrew Rabinovich",
+      "key": "author-56"
+    },
+    "author-57": {
+      "name": "K. Simonyan",
+      "s2_id": "34838386",
+      "orcid": "https://orcid.org/0000-0003-0787-5507",
+      "raw_name": "K. Simonyan",
+      "key": "author-57"
+    },
+    "author-58": {
+      "name": "Andrew Zisserman",
+      "s2_id": "1688869",
+      "orcid": "https://orcid.org/0000-0002-8945-8573",
+      "raw_name": "Andrew Zisserman",
+      "key": "author-58"
+    },
+    "author-59": {
+      "name": "Olga Russakovsky",
+      "s2_id": "2314850892",
+      "orcid": "https://orcid.org/0000-0001-5272-3241",
+      "raw_name": "Olga Russakovsky",
+      "key": "author-59"
+    },
+    "author-60": {
+      "name": "Jia Deng",
+      "s2_id": "153302678",
+      "orcid": "https://orcid.org/0000-0001-9594-4554",
+      "raw_name": "Jia Deng",
+      "key": "author-60"
+    },
+    "author-61": {
+      "name": "Hao Su",
+      "s2_id": "144914140",
+      "orcid": "https://orcid.org/0009-0004-7679-7842",
+      "raw_name": "Hao Su",
+      "key": "author-61"
+    },
+    "author-62": {
+      "name": "J. Krause",
+      "s2_id": "2285165",
+      "orcid": "https://orcid.org/0000-0002-1952-3480",
+      "raw_name": "J. Krause",
+      "key": "author-62"
+    },
+    "author-63": {
+      "name": "S. Satheesh",
+      "s2_id": "145031342",
+      "orcid": null,
+      "raw_name": "S. Satheesh",
+      "key": "author-63"
+    },
+    "author-64": {
+      "name": "Sean Ma",
+      "s2_id": "2261887230",
+      "orcid": null,
+      "raw_name": "Sean Ma",
+      "key": "author-64"
+    },
+    "author-65": {
+      "name": "Zhiheng Huang",
+      "s2_id": "3109481",
+      "orcid": "https://orcid.org/0000-0001-5982-9778",
+      "raw_name": "Zhiheng Huang",
+      "key": "author-65"
+    },
+    "author-66": {
+      "name": "A. Karpathy",
+      "s2_id": "2354728",
+      "orcid": null,
+      "raw_name": "A. Karpathy",
+      "key": "author-66"
+    },
+    "author-67": {
+      "name": "A. Khosla",
+      "s2_id": "2556428",
+      "orcid": null,
+      "raw_name": "A. Khosla",
+      "key": "author-67"
+    },
+    "author-68": {
+      "name": "Michael S. Bernstein",
+      "s2_id": "145879842",
+      "orcid": "0000-0001-8020-9434",
+      "raw_name": "Michael S. Bernstein",
+      "key": "author-68"
+    },
+    "author-69": {
+      "name": "A. Berg",
+      "s2_id": "39668247",
+      "orcid": null,
+      "raw_name": "A. Berg",
+      "key": "author-69"
+    },
+    "author-70": {
+      "name": "Li Fei-Fei",
+      "s2_id": "48004138",
+      "orcid": "https://orcid.org/0000-0002-7481-0810",
+      "raw_name": "Li Fei-Fei",
+      "key": "author-70"
+    },
+    "author-71": {
+      "name": "Evan Shelhamer",
+      "s2_id": "1782282",
+      "orcid": "https://orcid.org/0000-0002-5228-3095",
+      "raw_name": "Evan Shelhamer",
+      "key": "author-71"
+    },
+    "author-72": {
+      "name": "Jeff Donahue",
+      "s2_id": "7408951",
+      "orcid": null,
+      "raw_name": "Jeff Donahue",
+      "key": "author-72"
+    },
+    "author-73": {
+      "name": "Sergey Karayev",
+      "s2_id": "3049736",
+      "orcid": null,
+      "raw_name": "Sergey Karayev",
+      "key": "author-73"
+    },
+    "author-74": {
+      "name": "Jonathan Long",
+      "s2_id": "2117314646",
+      "orcid": null,
+      "raw_name": "Jonathan Long",
+      "key": "author-74"
+    },
+    "author-75": {
+      "name": "S. Guadarrama",
+      "s2_id": "1687120",
+      "orcid": null,
+      "raw_name": "S. Guadarrama",
+      "key": "author-75"
+    },
+    "author-76": {
+      "name": "Tsung-Yi Lin",
+      "s2_id": "33493200",
+      "orcid": "https://orcid.org/0000-0003-4819-0627",
+      "raw_name": "Tsung-Yi Lin",
+      "key": "author-76"
+    },
+    "author-77": {
+      "name": "M. Maire",
+      "s2_id": "145854440",
+      "orcid": "https://orcid.org/0000-0002-9778-6673",
+      "raw_name": "M. Maire",
+      "key": "author-77"
+    },
+    "author-78": {
+      "name": "Serge J. Belongie",
+      "s2_id": "50172592",
+      "orcid": "https://orcid.org/0000-0002-0388-5217",
+      "raw_name": "Serge J. Belongie",
+      "key": "author-78"
+    },
+    "author-79": {
+      "name": "James Hays",
+      "s2_id": "48966748",
+      "orcid": "https://orcid.org/0000-0001-7016-4252",
+      "raw_name": "James Hays",
+      "key": "author-79"
+    },
+    "author-80": {
+      "name": "P. Perona",
+      "s2_id": "1690922",
+      "orcid": "https://orcid.org/0000-0002-7583-5809",
+      "raw_name": "P. Perona",
+      "key": "author-80"
+    },
+    "author-81": {
+      "name": "Deva Ramanan",
+      "s2_id": "1770537",
+      "orcid": "https://orcid.org/0009-0008-9180-8983",
+      "raw_name": "Deva Ramanan",
+      "key": "author-81"
+    },
+    "author-82": {
+      "name": "Piotr Dollár",
+      "s2_id": "3127283",
+      "orcid": null,
+      "raw_name": "Piotr Dollár",
+      "key": "author-82"
+    },
+    "author-83": {
+      "name": "C. L. Zitnick",
+      "s2_id": "1699161",
+      "orcid": null,
+      "raw_name": "C. L. Zitnick",
+      "key": "author-83"
+    },
+    "author-84": {
+      "name": "Guido Montúfar",
+      "s2_id": "1784667",
+      "orcid": "https://orcid.org/0000-0002-0131-2669",
+      "raw_name": "Guido Montúfar",
+      "key": "author-84"
+    },
+    "author-85": {
+      "name": "Razvan Pascanu",
+      "s2_id": "1996134",
+      "orcid": "0000-0002-5470-1238",
+      "raw_name": "Razvan Pascanu",
+      "key": "author-85"
+    },
+    "author-86": {
+      "name": "Kyunghyun Cho",
+      "s2_id": "1979489",
+      "orcid": "https://orcid.org/0000-0003-1669-3211",
+      "raw_name": "Kyunghyun Cho",
+      "key": "author-86"
+    },
+    "author-87": {
+      "name": "D. Eigen",
+      "s2_id": "2060028",
+      "orcid": null,
+      "raw_name": "D. Eigen",
+      "key": "author-87"
+    },
+    "author-88": {
+      "name": "Xiang Zhang",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Xiang Zhang",
+      "key": "author-88"
+    },
+    "author-89": {
+      "name": "Michaël Mathieu",
+      "s2_id": "143949035",
+      "orcid": null,
+      "raw_name": "Michaël Mathieu",
+      "key": "author-89"
+    },
+    "author-90": {
+      "name": "R. Fergus",
+      "s2_id": "2276554",
+      "orcid": null,
+      "raw_name": "R. Fergus",
+      "key": "author-90"
+    },
+    "author-91": {
+      "name": "Yann LeCun",
+      "s2_id": "1688882",
+      "orcid": null,
+      "raw_name": "Yann LeCun",
+      "key": "author-91"
+    },
+    "author-92": {
+      "name": "Andrew M. Saxe",
+      "s2_id": "34927843",
+      "orcid": "https://orcid.org/0000-0002-9831-8812",
+      "raw_name": "Andrew M. Saxe",
+      "key": "author-92"
+    },
+    "author-93": {
+      "name": "James L. McClelland",
+      "s2_id": "1701656",
+      "orcid": "https://orcid.org/0000-0002-8217-405X",
+      "raw_name": "James L. McClelland",
+      "key": "author-93"
+    },
+    "author-94": {
+      "name": "S. Ganguli",
+      "s2_id": "25769960",
+      "orcid": "https://orcid.org/0000-0002-9264-7551",
+      "raw_name": "S. Ganguli",
+      "key": "author-94"
+    },
+    "author-95": {
+      "name": "Min Lin",
+      "s2_id": "2115913164",
+      "orcid": null,
+      "raw_name": "Min Lin",
+      "key": "author-95"
+    },
+    "author-96": {
+      "name": "Qiang Chen",
+      "s2_id": "35370244",
+      "orcid": null,
+      "raw_name": "Qiang Chen",
+      "key": "author-96"
+    },
+    "author-97": {
+      "name": "Shuicheng Yan",
+      "s2_id": "143653681",
+      "orcid": null,
+      "raw_name": "Shuicheng Yan",
+      "key": "author-97"
+    },
+    "author-98": {
+      "name": "Matthew D. Zeiler",
+      "s2_id": "48799969",
+      "orcid": null,
+      "raw_name": "Matthew D. Zeiler",
+      "key": "author-98"
+    },
+    "author-99": {
+      "name": "J. Malik",
+      "s2_id": "153652147",
+      "orcid": "https://orcid.org/0000-0003-3695-1580",
+      "raw_name": "J. Malik",
+      "key": "author-99"
+    },
+    "author-100": {
+      "name": "I. Goodfellow",
+      "s2_id": "153440022",
+      "orcid": "https://orcid.org/0000-0003-3937-2322",
+      "raw_name": "I. Goodfellow",
+      "key": "author-100"
+    },
+    "author-101": {
+      "name": "David Warde-Farley",
+      "s2_id": "1393680089",
+      "orcid": null,
+      "raw_name": "David Warde-Farley",
+      "key": "author-101"
+    },
+    "author-102": {
+      "name": "Mehdi Mirza",
+      "s2_id": "153583218",
+      "orcid": "0000-0002-0969-9992",
+      "raw_name": "Mehdi Mirza",
+      "key": "author-102"
+    },
+    "author-103": {
+      "name": "Aaron C. Courville",
+      "s2_id": "1760871",
+      "orcid": "https://orcid.org/0000-0001-6223-0301",
+      "raw_name": "Aaron C. Courville",
+      "key": "author-103"
+    },
+    "author-104": {
+      "name": "T. Vatanen",
+      "s2_id": "1837700",
+      "orcid": "https://orcid.org/0000-0003-0949-1291",
+      "raw_name": "T. Vatanen",
+      "key": "author-104"
+    },
+    "author-105": {
+      "name": "T. Raiko",
+      "s2_id": "2785022",
+      "orcid": "https://orcid.org/0000-0002-0321-304X",
+      "raw_name": "T. Raiko",
+      "key": "author-105"
+    },
+    "author-106": {
+      "name": "Harri Valpola",
+      "s2_id": "2132516",
+      "orcid": null,
+      "raw_name": "Harri Valpola",
+      "key": "author-106"
+    },
+    "author-107": {
+      "name": "A. Krizhevsky",
+      "s2_id": "2064160",
+      "orcid": null,
+      "raw_name": "A. Krizhevsky",
+      "key": "author-107"
+    },
+    "author-108": {
+      "name": "I. Sutskever",
+      "s2_id": "1701686",
+      "orcid": null,
+      "raw_name": "I. Sutskever",
+      "key": "author-108"
+    },
+    "author-109": {
+      "name": "Geoffrey E. Hinton",
+      "s2_id": "1695689",
+      "orcid": null,
+      "raw_name": "Geoffrey E. Hinton",
+      "key": "author-109"
+    },
+    "author-110": {
+      "name": "H. Jégou",
+      "s2_id": "1681054",
+      "orcid": null,
+      "raw_name": "H. Jégou",
+      "key": "author-110"
+    },
+    "author-111": {
+      "name": "Florent Perronnin",
+      "s2_id": "1723883",
+      "orcid": null,
+      "raw_name": "Florent Perronnin",
+      "key": "author-111"
+    },
+    "author-112": {
+      "name": "Matthijs Douze",
+      "s2_id": "3271933",
+      "orcid": null,
+      "raw_name": "Matthijs Douze",
+      "key": "author-112"
+    },
+    "author-113": {
+      "name": "Jorge Sánchez",
+      "s2_id": "143995443",
+      "orcid": "https://orcid.org/0000-0002-0150-7263",
+      "raw_name": "Jorge Sánchez",
+      "key": "author-113"
+    },
+    "author-114": {
+      "name": "P. Pérez",
+      "s2_id": "144565371",
+      "orcid": "https://orcid.org/0000-0002-8124-1206",
+      "raw_name": "P. Pérez",
+      "key": "author-114"
+    },
+    "author-115": {
+      "name": "C. Schmid",
+      "s2_id": "2462253",
+      "orcid": null,
+      "raw_name": "C. Schmid",
+      "key": "author-115"
+    },
+    "author-116": {
+      "name": "Nitish Srivastava",
+      "s2_id": "2897313",
+      "orcid": "https://orcid.org/0000-0002-3442-5352",
+      "raw_name": "Nitish Srivastava",
+      "key": "author-116"
+    },
+    "author-117": {
+      "name": "R. Salakhutdinov",
+      "s2_id": "145124475",
+      "orcid": "https://orcid.org/0000-0002-3752-2756",
+      "raw_name": "R. Salakhutdinov",
+      "key": "author-117"
+    },
+    "author-118": {
+      "name": "A. Vedaldi",
+      "s2_id": "1687524",
+      "orcid": null,
+      "raw_name": "A. Vedaldi",
+      "key": "author-118"
+    },
+    "author-119": {
+      "name": "B. Fulkerson",
+      "s2_id": "2487006",
+      "orcid": null,
+      "raw_name": "B. Fulkerson",
+      "key": "author-119"
+    },
+    "author-120": {
+      "name": "Vinod Nair",
+      "s2_id": "2073603971",
+      "orcid": null,
+      "raw_name": "Vinod Nair",
+      "key": "author-120"
+    },
+    "author-121": {
+      "name": "Xavier Glorot",
+      "s2_id": "3119801",
+      "orcid": "https://orcid.org/0000-0002-6729-2189",
+      "raw_name": "Xavier Glorot",
+      "key": "author-121"
+    },
+    "author-122": {
+      "name": "P. Cochat",
+      "s2_id": "2059358552",
+      "orcid": "https://orcid.org/0000-0002-6872-2574",
+      "raw_name": "P. Cochat",
+      "key": "author-122"
+    },
+    "author-123": {
+      "name": "L. Vaucoret",
+      "s2_id": "13267685",
+      "orcid": null,
+      "raw_name": "L. Vaucoret",
+      "key": "author-123"
+    },
+    "author-124": {
+      "name": "J. Sarles",
+      "s2_id": "2097644863",
+      "orcid": null,
+      "raw_name": "J. Sarles",
+      "key": "author-124"
+    },
+    "author-125": {
+      "name": "C. Dance",
+      "s2_id": "3344005",
+      "orcid": "https://orcid.org/0009-0006-5355-9619",
+      "raw_name": "C. Dance",
+      "key": "author-125"
+    },
+    "author-126": {
+      "name": "R. Szeliski",
+      "s2_id": "1717841",
+      "orcid": null,
+      "raw_name": "R. Szeliski",
+      "key": "author-126"
+    },
+    "author-127": {
+      "name": "W. Briggs",
+      "s2_id": "35180917",
+      "orcid": null,
+      "raw_name": "W. Briggs",
+      "key": "author-127"
+    },
+    "author-128": {
+      "name": "V. Henson",
+      "s2_id": "65844783",
+      "orcid": null,
+      "raw_name": "V. Henson",
+      "key": "author-128"
+    },
+    "author-129": {
+      "name": "S. McCormick",
+      "s2_id": "26529098",
+      "orcid": null,
+      "raw_name": "S. McCormick",
+      "key": "author-129"
+    },
+    "author-130": {
+      "name": "N. Schraudolph",
+      "s2_id": "1739396",
+      "orcid": null,
+      "raw_name": "N. Schraudolph",
+      "key": "author-130"
+    },
+    "author-131": {
+      "name": "Sepp Hochreiter",
+      "s2_id": "3308557",
+      "orcid": "https://orcid.org/0000-0001-7449-2528",
+      "raw_name": "Sepp Hochreiter",
+      "key": "author-131"
+    },
+    "author-132": {
+      "name": "W. Venables",
+      "s2_id": "38883832",
+      "orcid": null,
+      "raw_name": "W. Venables",
+      "key": "author-132"
+    },
+    "author-133": {
+      "name": "B. Ripley",
+      "s2_id": "2122942",
+      "orcid": null,
+      "raw_name": "B. Ripley",
+      "key": "author-133"
+    },
+    "author-134": {
+      "name": "Patrice Y. Simard",
+      "s2_id": "2812486",
+      "orcid": "https://orcid.org/0000-0001-8371-7450",
+      "raw_name": "Patrice Y. Simard",
+      "key": "author-134"
+    },
+    "author-135": {
+      "name": "P. Frasconi",
+      "s2_id": "1688235",
+      "orcid": "https://orcid.org/0000-0003-3117-9245",
+      "raw_name": "P. Frasconi",
+      "key": "author-135"
+    },
+    "author-136": {
+      "name": "B. Boser",
+      "s2_id": "2219581",
+      "orcid": "https://orcid.org/0000-0003-3922-133X",
+      "raw_name": "B. Boser",
+      "key": "author-136"
+    },
+    "author-137": {
+      "name": "J. Denker",
+      "s2_id": "1747317",
+      "orcid": null,
+      "raw_name": "J. Denker",
+      "key": "author-137"
+    },
+    "author-138": {
+      "name": "D. Henderson",
+      "s2_id": "37274089",
+      "orcid": null,
+      "raw_name": "D. Henderson",
+      "key": "author-138"
+    },
+    "author-139": {
+      "name": "R. Howard",
+      "s2_id": "2799635",
+      "orcid": "https://orcid.org/0009-0004-0979-4174",
+      "raw_name": "R. Howard",
+      "key": "author-139"
+    },
+    "author-140": {
+      "name": "W. Hubbard",
+      "s2_id": "34859193",
+      "orcid": null,
+      "raw_name": "W. Hubbard",
+      "key": "author-140"
+    },
+    "author-141": {
+      "name": "L. Jackel",
+      "s2_id": "2041866",
+      "orcid": "https://orcid.org/0000-0002-9994-6554",
+      "raw_name": "L. Jackel",
+      "key": "author-141"
+    },
+    "author-142": {
+      "name": "L. Bottou",
+      "s2_id": "52184096",
+      "orcid": "https://orcid.org/0000-0002-9894-8128",
+      "raw_name": "L. Bottou",
+      "key": "author-142"
+    },
+    "author-143": {
+      "name": "G. Orr",
+      "s2_id": "34782608",
+      "orcid": null,
+      "raw_name": "G. Orr",
+      "key": "author-143"
+    },
+    "author-144": {
+      "name": "K. Müller",
+      "s2_id": "145034054",
+      "orcid": null,
+      "raw_name": "K. Müller",
+      "key": "author-144"
+    },
+    "author-145": {
+      "name": "Ken Chatfield",
+      "s2_id": "1764761",
+      "orcid": null,
+      "raw_name": "Ken Chatfield",
+      "key": "author-145"
+    },
+    "author-146": {
+      "name": "V. Lempitsky",
+      "s2_id": "1740145",
+      "orcid": "https://orcid.org/0000-0003-4118-710X",
+      "raw_name": "V. Lempitsky",
+      "key": "author-146"
+    },
+    "author-147": {
+      "name": "A. Vedaldi",
+      "s2_id": "1687524",
+      "orcid": "https://orcid.org/0000-0003-1374-2858",
+      "raw_name": "A. Vedaldi",
+      "key": "author-147"
+    },
+    "author-148": {
+      "name": "Yoshua Bengio",
+      "s2_id": "1751762",
+      "orcid": null,
+      "raw_name": "Yoshua Bengio",
+      "key": "author-148"
+    },
+    "author-149": {
+      "name": "Sepp Hochreiter",
+      "s2_id": "2066667188",
+      "orcid": null,
+      "raw_name": "Sepp Hochreiter",
+      "key": "author-149"
+    },
+    "author-150": {
+      "name": "Antreas Antoniou",
+      "s2_id": "2063959275",
+      "orcid": "https://orcid.org/0000-0001-5776-1204",
+      "raw_name": "Antreas Antoniou",
+      "key": "author-150"
+    },
+    "author-151": {
+      "name": "Harrison Edwards",
+      "s2_id": "144632352",
+      "orcid": "https://orcid.org/0000-0003-3971-9277",
+      "raw_name": "Harrison Edwards",
+      "key": "author-151"
+    },
+    "author-152": {
+      "name": "A. Storkey",
+      "s2_id": "1728216",
+      "orcid": "https://orcid.org/0000-0002-8100-506X",
+      "raw_name": "A. Storkey",
+      "key": "author-152"
+    },
+    "author-153": {
+      "name": "Alex Nichol",
+      "s2_id": "38967461",
+      "orcid": null,
+      "raw_name": "Alex Nichol",
+      "key": "author-153"
+    },
+    "author-154": {
+      "name": "Joshua Achiam",
+      "s2_id": "3381809",
+      "orcid": null,
+      "raw_name": "Joshua Achiam",
+      "key": "author-154"
+    },
+    "author-155": {
+      "name": "John Schulman",
+      "s2_id": "47971768",
+      "orcid": null,
+      "raw_name": "John Schulman",
+      "key": "author-155"
+    },
+    "author-156": {
+      "name": "Zhenguo Li",
+      "s2_id": "7718952",
+      "orcid": "https://orcid.org/0000-0002-8492-3069",
+      "raw_name": "Zhenguo Li",
+      "key": "author-156"
+    },
+    "author-157": {
+      "name": "Fengwei Zhou",
+      "s2_id": "22173351",
+      "orcid": "https://orcid.org/0000-0002-6404-6441",
+      "raw_name": "Fengwei Zhou",
+      "key": "author-157"
+    },
+    "author-158": {
+      "name": "Fei Chen",
+      "s2_id": "117872156",
+      "orcid": "https://orcid.org/0000-0001-8132-539X",
+      "raw_name": "Fei Chen",
+      "key": "author-158"
+    },
+    "author-159": {
+      "name": "Hang Li",
+      "s2_id": "2145571830",
+      "orcid": "https://orcid.org/0000-0002-1230-4007",
+      "raw_name": "Hang Li",
+      "key": "author-159"
+    },
+    "author-160": {
+      "name": "Jake Snell",
+      "s2_id": "39770136",
+      "orcid": null,
+      "raw_name": "Jake Snell",
+      "key": "author-160"
+    },
+    "author-161": {
+      "name": "Kevin Swersky",
+      "s2_id": "1754860",
+      "orcid": null,
+      "raw_name": "Kevin Swersky",
+      "key": "author-161"
+    },
+    "author-162": {
+      "name": "R. Zemel",
+      "s2_id": "1804104",
+      "orcid": "https://orcid.org/0000-0001-9353-7509",
+      "raw_name": "R. Zemel",
+      "key": "author-162"
+    },
+    "author-163": {
+      "name": "Lukasz Kaiser",
+      "s2_id": "40527594",
+      "orcid": "https://orcid.org/0000-0003-1092-6010",
+      "raw_name": "Lukasz Kaiser",
+      "key": "author-163"
+    },
+    "author-164": {
+      "name": "Ofir Nachum",
+      "s2_id": "7624658",
+      "orcid": null,
+      "raw_name": "Ofir Nachum",
+      "key": "author-164"
+    },
+    "author-165": {
+      "name": "Aurko Roy",
+      "s2_id": "39788470",
+      "orcid": null,
+      "raw_name": "Aurko Roy",
+      "key": "author-165"
+    },
+    "author-166": {
+      "name": "Samy Bengio",
+      "s2_id": "1751569",
+      "orcid": null,
+      "raw_name": "Samy Bengio",
+      "key": "author-166"
+    },
+    "author-167": {
+      "name": "Pranav Shyam",
+      "s2_id": "67311962",
+      "orcid": null,
+      "raw_name": "Pranav Shyam",
+      "key": "author-167"
+    },
+    "author-168": {
+      "name": "Shubham Gupta",
+      "s2_id": "2118927417",
+      "orcid": "https://orcid.org/0000-0001-9692-4096",
+      "raw_name": "Shubham Gupta",
+      "key": "author-168"
+    },
+    "author-169": {
+      "name": "Ambedkar Dukkipati",
+      "s2_id": "2440174",
+      "orcid": "https://orcid.org/0000-0002-6352-6283",
+      "raw_name": "Ambedkar Dukkipati",
+      "key": "author-169"
+    },
+    "author-170": {
+      "name": "Tsendsuren Munkhdalai",
+      "s2_id": "2227827",
+      "orcid": "https://orcid.org/0000-0001-6298-0874",
+      "raw_name": "Tsendsuren Munkhdalai",
+      "key": "author-170"
+    },
+    "author-171": {
+      "name": "Hong Yu",
+      "s2_id": "2119120474",
+      "orcid": null,
+      "raw_name": "Hong Yu",
+      "key": "author-171"
+    },
+    "author-172": {
+      "name": "Sergey Levine",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0001-6764-2743",
+      "raw_name": "Sergey Levine",
+      "key": "author-172"
+    },
+    "author-173": {
+      "name": "J. Kirkpatrick",
+      "s2_id": "2066516991",
+      "orcid": "https://orcid.org/0000-0002-6344-8190",
+      "raw_name": "J. Kirkpatrick",
+      "key": "author-173"
+    },
+    "author-174": {
+      "name": "Neil C. Rabinowitz",
+      "s2_id": "3422052",
+      "orcid": "https://orcid.org/0000-0002-4030-1567",
+      "raw_name": "Neil C. Rabinowitz",
+      "key": "author-174"
+    },
+    "author-175": {
+      "name": "J. Veness",
+      "s2_id": "144056327",
+      "orcid": null,
+      "raw_name": "J. Veness",
+      "key": "author-175"
+    },
+    "author-176": {
+      "name": "Guillaume Desjardins",
+      "s2_id": "2755582",
+      "orcid": "https://orcid.org/0000-0002-5669-6671",
+      "raw_name": "Guillaume Desjardins",
+      "key": "author-176"
+    },
+    "author-177": {
+      "name": "Andrei A. Rusu",
+      "s2_id": "2228824",
+      "orcid": "https://orcid.org/0000-0001-9395-8223",
+      "raw_name": "Andrei A. Rusu",
+      "key": "author-177"
+    },
+    "author-178": {
+      "name": "Kieran Milan",
+      "s2_id": "8181864",
+      "orcid": null,
+      "raw_name": "Kieran Milan",
+      "key": "author-178"
+    },
+    "author-179": {
+      "name": "John Quan",
+      "s2_id": "34660073",
+      "orcid": null,
+      "raw_name": "John Quan",
+      "key": "author-179"
+    },
+    "author-180": {
+      "name": "Tiago Ramalho",
+      "s2_id": "34505275",
+      "orcid": null,
+      "raw_name": "Tiago Ramalho",
+      "key": "author-180"
+    },
+    "author-181": {
+      "name": "A. Grabska-Barwinska",
+      "s2_id": "1398898827",
+      "orcid": null,
+      "raw_name": "A. Grabska-Barwinska",
+      "key": "author-181"
+    },
+    "author-182": {
+      "name": "D. Hassabis",
+      "s2_id": "48987704",
+      "orcid": "https://orcid.org/0000-0003-2812-9917",
+      "raw_name": "D. Hassabis",
+      "key": "author-182"
+    },
+    "author-183": {
+      "name": "C. Clopath",
+      "s2_id": "2388737",
+      "orcid": "https://orcid.org/0000-0003-4507-8648",
+      "raw_name": "C. Clopath",
+      "key": "author-183"
+    },
+    "author-184": {
+      "name": "D. Kumaran",
+      "s2_id": "2106164",
+      "orcid": "https://orcid.org/0000-0001-5995-5264",
+      "raw_name": "D. Kumaran",
+      "key": "author-184"
+    },
+    "author-185": {
+      "name": "R. Hadsell",
+      "s2_id": "2315504",
+      "orcid": "https://orcid.org/0000-0002-2390-1771",
+      "raw_name": "R. Hadsell",
+      "key": "author-185"
+    },
+    "author-186": {
+      "name": "Jane X. Wang",
+      "s2_id": "2116439278",
+      "orcid": "https://orcid.org/0000-0003-1339-5040",
+      "raw_name": "Jane X. Wang",
+      "key": "author-186"
+    },
+    "author-187": {
+      "name": "Z. Kurth-Nelson",
+      "s2_id": "1399114225",
+      "orcid": "https://orcid.org/0000-0002-0119-1289",
+      "raw_name": "Z. Kurth-Nelson",
+      "key": "author-187"
+    },
+    "author-188": {
+      "name": "Hubert Soyer",
+      "s2_id": "2794457",
+      "orcid": null,
+      "raw_name": "Hubert Soyer",
+      "key": "author-188"
+    },
+    "author-189": {
+      "name": "Joel Z. Leibo",
+      "s2_id": "1700356",
+      "orcid": null,
+      "raw_name": "Joel Z. Leibo",
+      "key": "author-189"
+    },
+    "author-190": {
+      "name": "Dhruva Tirumala",
+      "s2_id": "7794353",
+      "orcid": "https://orcid.org/0000-0002-3153-916X",
+      "raw_name": "Dhruva Tirumala",
+      "key": "author-190"
+    },
+    "author-191": {
+      "name": "R. Munos",
+      "s2_id": "1708654",
+      "orcid": null,
+      "raw_name": "R. Munos",
+      "key": "author-191"
+    },
+    "author-192": {
+      "name": "C. Blundell",
+      "s2_id": "1723876",
+      "orcid": "https://orcid.org/0000-0003-0336-0696",
+      "raw_name": "C. Blundell",
+      "key": "author-192"
+    },
+    "author-193": {
+      "name": "M. Botvinick",
+      "s2_id": "46378362",
+      "orcid": null,
+      "raw_name": "M. Botvinick",
+      "key": "author-193"
+    },
+    "author-194": {
+      "name": "Sergi Caelles",
+      "s2_id": "1413064976",
+      "orcid": "https://orcid.org/0000-0002-1372-1419",
+      "raw_name": "Sergi Caelles",
+      "key": "author-194"
+    },
+    "author-195": {
+      "name": "Kevis-Kokitsi Maninis",
+      "s2_id": "2027105",
+      "orcid": "https://orcid.org/0000-0003-3776-0049",
+      "raw_name": "Kevis-Kokitsi Maninis",
+      "key": "author-195"
+    },
+    "author-196": {
+      "name": "J. Pont-Tuset",
+      "s2_id": "1403171438",
+      "orcid": "https://orcid.org/0000-0001-7133-3724",
+      "raw_name": "J. Pont-Tuset",
+      "key": "author-196"
+    },
+    "author-197": {
+      "name": "L. Leal-Taixé",
+      "s2_id": "1388407684",
+      "orcid": "https://orcid.org/0000-0001-8709-1133",
+      "raw_name": "L. Leal-Taixé",
+      "key": "author-197"
+    },
+    "author-198": {
+      "name": "D. Cremers",
+      "s2_id": "1695302",
+      "orcid": "https://orcid.org/0000-0002-3079-7984",
+      "raw_name": "D. Cremers",
+      "key": "author-198"
+    },
+    "author-199": {
+      "name": "L. Gool",
+      "s2_id": "1681236",
+      "orcid": "https://orcid.org/0000-0002-3445-5711",
+      "raw_name": "L. Gool",
+      "key": "author-199"
+    },
+    "author-200": {
+      "name": "S. Ravi",
+      "s2_id": "49517463",
+      "orcid": null,
+      "raw_name": "S. Ravi",
+      "key": "author-200"
+    },
+    "author-201": {
+      "name": "H. Larochelle",
+      "s2_id": "1777528",
+      "orcid": null,
+      "raw_name": "H. Larochelle",
+      "key": "author-201"
+    },
+    "author-202": {
+      "name": "Yan Duan",
+      "s2_id": "144581158",
+      "orcid": null,
+      "raw_name": "Yan Duan",
+      "key": "author-202"
+    },
+    "author-203": {
+      "name": "Xi Chen",
+      "s2_id": "41192764",
+      "orcid": "https://orcid.org/0000-0003-4221-4288",
+      "raw_name": "Xi Chen",
+      "key": "author-203"
+    },
+    "author-204": {
+      "name": "P. Bartlett",
+      "s2_id": "1745169",
+      "orcid": "https://orcid.org/0000-0002-8760-3140",
+      "raw_name": "P. Bartlett",
+      "key": "author-204"
+    },
+    "author-205": {
+      "name": "P. Abbeel",
+      "s2_id": "1689992",
+      "orcid": null,
+      "raw_name": "P. Abbeel",
+      "key": "author-205"
+    },
+    "author-206": {
+      "name": "Jimmy Ba",
+      "s2_id": "2503659",
+      "orcid": "https://orcid.org/0009-0000-9062-4180",
+      "raw_name": "Jimmy Ba",
+      "key": "author-206"
+    },
+    "author-207": {
+      "name": "Volodymyr Mnih",
+      "s2_id": "3255983",
+      "orcid": null,
+      "raw_name": "Volodymyr Mnih",
+      "key": "author-207"
+    },
+    "author-208": {
+      "name": "Joel Z. Leibo",
+      "s2_id": "1700356",
+      "orcid": "https://orcid.org/0000-0002-3153-916X",
+      "raw_name": "Joel Z. Leibo",
+      "key": "author-208"
+    },
+    "author-209": {
+      "name": "Catalin Ionescu",
+      "s2_id": "2273228",
+      "orcid": null,
+      "raw_name": "Catalin Ionescu",
+      "key": "author-209"
+    },
+    "author-210": {
+      "name": "David Ha",
+      "s2_id": "1389041357",
+      "orcid": null,
+      "raw_name": "David Ha",
+      "key": "author-210"
+    },
+    "author-211": {
+      "name": "Andrew M. Dai",
+      "s2_id": "2555924",
+      "orcid": "https://orcid.org/0000-0002-7896-4964",
+      "raw_name": "Andrew M. Dai",
+      "key": "author-211"
+    },
+    "author-212": {
+      "name": "Quoc V. Le",
+      "s2_id": "2827616",
+      "orcid": "https://orcid.org/0000-0001-9526-6378",
+      "raw_name": "Quoc V. Le",
+      "key": "author-212"
+    },
+    "author-213": {
+      "name": "Nick Weston",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Nick Weston",
+      "key": "author-213"
+    },
+    "author-214": {
+      "name": "Henok Mengistu",
+      "s2_id": "3203568",
+      "orcid": null,
+      "raw_name": "Henok Mengistu",
+      "key": "author-214"
+    },
+    "author-215": {
+      "name": "J. Lehman",
+      "s2_id": "39799304",
+      "orcid": null,
+      "raw_name": "J. Lehman",
+      "key": "author-215"
+    },
+    "author-216": {
+      "name": "J. Clune",
+      "s2_id": "2552141",
+      "orcid": null,
+      "raw_name": "J. Clune",
+      "key": "author-216"
+    },
+    "author-217": {
+      "name": "Adam Santoro",
+      "s2_id": "35030998",
+      "orcid": null,
+      "raw_name": "Adam Santoro",
+      "key": "author-217"
+    },
+    "author-218": {
+      "name": "Sergey Bartunov",
+      "s2_id": "2258504",
+      "orcid": null,
+      "raw_name": "Sergey Bartunov",
+      "key": "author-218"
+    },
+    "author-219": {
+      "name": "M. Botvinick",
+      "s2_id": "46378362",
+      "orcid": "https://orcid.org/0000-0001-7758-6896",
+      "raw_name": "M. Botvinick",
+      "key": "author-219"
+    },
+    "author-220": {
+      "name": "D. Wierstra",
+      "s2_id": "1688276",
+      "orcid": null,
+      "raw_name": "D. Wierstra",
+      "key": "author-220"
+    },
+    "author-221": {
+      "name": "T. Lillicrap",
+      "s2_id": "2542999",
+      "orcid": "https://orcid.org/0000-0001-8918-486X",
+      "raw_name": "T. Lillicrap",
+      "key": "author-221"
+    },
+    "author-222": {
+      "name": "Marcin Andrychowicz",
+      "s2_id": "2206490",
+      "orcid": null,
+      "raw_name": "Marcin Andrychowicz",
+      "key": "author-222"
+    },
+    "author-223": {
+      "name": "Misha Denil",
+      "s2_id": "1715051",
+      "orcid": null,
+      "raw_name": "Misha Denil",
+      "key": "author-223"
+    },
+    "author-224": {
+      "name": "Sergio Gomez Colmenarejo",
+      "s2_id": "2016840",
+      "orcid": "https://orcid.org/0000-0003-4970-0502",
+      "raw_name": "Sergio Gomez Colmenarejo",
+      "key": "author-224"
+    },
+    "author-225": {
+      "name": "Matthew W. Hoffman",
+      "s2_id": "3243579",
+      "orcid": null,
+      "raw_name": "Matthew W. Hoffman",
+      "key": "author-225"
+    },
+    "author-226": {
+      "name": "David Pfau",
+      "s2_id": "144846367",
+      "orcid": "https://orcid.org/0000-0003-0834-8653",
+      "raw_name": "David Pfau",
+      "key": "author-226"
+    },
+    "author-227": {
+      "name": "T. Schaul",
+      "s2_id": "1725157",
+      "orcid": "https://orcid.org/0000-0002-2961-8782",
+      "raw_name": "T. Schaul",
+      "key": "author-227"
+    },
+    "author-228": {
+      "name": "Nando de Freitas",
+      "s2_id": "1737568",
+      "orcid": null,
+      "raw_name": "Nando de Freitas",
+      "key": "author-228"
+    },
+    "author-229": {
+      "name": "Nando de Freitas",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0003-4770-7217",
+      "raw_name": "Nando de Freitas",
+      "key": "author-229"
+    },
+    "author-230": {
+      "name": "O. Vinyals",
+      "s2_id": "1689108",
+      "orcid": "https://orcid.org/0000-0001-7848-7283",
+      "raw_name": "O. Vinyals",
+      "key": "author-230"
+    },
+    "author-231": {
+      "name": "K. Kavukcuoglu",
+      "s2_id": "2645384",
+      "orcid": null,
+      "raw_name": "K. Kavukcuoglu",
+      "key": "author-231"
+    },
+    "author-232": {
+      "name": "Ke Li",
+      "s2_id": "2149140383",
+      "orcid": null,
+      "raw_name": "Ke Li",
+      "key": "author-232"
+    },
+    "author-233": {
+      "name": "Jitendra Malik",
+      "s2_id": "143751119",
+      "orcid": "0000-0003-3695-1580",
+      "raw_name": "Jitendra Malik",
+      "key": "author-233"
+    },
+    "author-234": {
+      "name": "Xi Chen",
+      "s2_id": "41192764",
+      "orcid": "https://orcid.org/0000-0002-3135-4114",
+      "raw_name": "Xi Chen",
+      "key": "author-234"
+    },
+    "author-235": {
+      "name": "Rein Houthooft",
+      "s2_id": "3127100",
+      "orcid": null,
+      "raw_name": "Rein Houthooft",
+      "key": "author-235"
+    },
+    "author-236": {
+      "name": "Danilo Jimenez Rezende",
+      "s2_id": "1748523",
+      "orcid": "0000-0003-3184-8509",
+      "raw_name": "Danilo Jimenez Rezende",
+      "key": "author-236"
+    },
+    "author-237": {
+      "name": "S. Mohamed",
+      "s2_id": "14594344",
+      "orcid": "https://orcid.org/0000-0002-1184-5776",
+      "raw_name": "S. Mohamed",
+      "key": "author-237"
+    },
+    "author-238": {
+      "name": "Ivo Danihelka",
+      "s2_id": "1841008",
+      "orcid": null,
+      "raw_name": "Ivo Danihelka",
+      "key": "author-238"
+    },
+    "author-239": {
+      "name": "Karol Gregor",
+      "s2_id": "144717963",
+      "orcid": null,
+      "raw_name": "Karol Gregor",
+      "key": "author-239"
+    },
+    "author-240": {
+      "name": "Martín Abadi",
+      "s2_id": "2057642721",
+      "orcid": null,
+      "raw_name": "Martín Abadi",
+      "key": "author-240"
+    },
+    "author-241": {
+      "name": "Ashish Agarwal",
+      "s2_id": "2078528337",
+      "orcid": null,
+      "raw_name": "Ashish Agarwal",
+      "key": "author-241"
+    },
+    "author-242": {
+      "name": "P. Barham",
+      "s2_id": "144758007",
+      "orcid": null,
+      "raw_name": "P. Barham",
+      "key": "author-242"
+    },
+    "author-243": {
+      "name": "E. Brevdo",
+      "s2_id": "2445241",
+      "orcid": "https://orcid.org/0009-0005-7965-3534",
+      "raw_name": "E. Brevdo",
+      "key": "author-243"
+    },
+    "author-244": {
+      "name": "Z. Chen",
+      "s2_id": "2545358",
+      "orcid": "https://orcid.org/0000-0001-8631-2424",
+      "raw_name": "Z. Chen",
+      "key": "author-244"
+    },
+    "author-245": {
+      "name": "C. Citro",
+      "s2_id": "48738717",
+      "orcid": null,
+      "raw_name": "C. Citro",
+      "key": "author-245"
+    },
+    "author-246": {
+      "name": "G. Corrado",
+      "s2_id": "32131713",
+      "orcid": null,
+      "raw_name": "G. Corrado",
+      "key": "author-246"
+    },
+    "author-247": {
+      "name": "Andy Davis",
+      "s2_id": "36347083",
+      "orcid": null,
+      "raw_name": "Andy Davis",
+      "key": "author-247"
+    },
+    "author-248": {
+      "name": "J. Dean",
+      "s2_id": "49959210",
+      "orcid": "https://orcid.org/0000-0003-1362-0500",
+      "raw_name": "J. Dean",
+      "key": "author-248"
+    },
+    "author-249": {
+      "name": "M. Devin",
+      "s2_id": "145139947",
+      "orcid": null,
+      "raw_name": "M. Devin",
+      "key": "author-249"
+    },
+    "author-250": {
+      "name": "Sanjay Ghemawat",
+      "s2_id": "1780892",
+      "orcid": "https://orcid.org/0009-0005-6843-3093",
+      "raw_name": "Sanjay Ghemawat",
+      "key": "author-250"
+    },
+    "author-251": {
+      "name": "A. Harp",
+      "s2_id": "2064102917",
+      "orcid": null,
+      "raw_name": "A. Harp",
+      "key": "author-251"
+    },
+    "author-252": {
+      "name": "G. Irving",
+      "s2_id": "2060655766",
+      "orcid": null,
+      "raw_name": "G. Irving",
+      "key": "author-252"
+    },
+    "author-253": {
+      "name": "M. Isard",
+      "s2_id": "2090818",
+      "orcid": null,
+      "raw_name": "M. Isard",
+      "key": "author-253"
+    },
+    "author-254": {
+      "name": "R. Józefowicz",
+      "s2_id": "1944541",
+      "orcid": null,
+      "raw_name": "R. Józefowicz",
+      "key": "author-254"
+    },
+    "author-255": {
+      "name": "M. Kudlur",
+      "s2_id": "1942300",
+      "orcid": null,
+      "raw_name": "M. Kudlur",
+      "key": "author-255"
+    },
+    "author-256": {
+      "name": "J. Levenberg",
+      "s2_id": "3369421",
+      "orcid": null,
+      "raw_name": "J. Levenberg",
+      "key": "author-256"
+    },
+    "author-257": {
+      "name": "Dandelion Mané",
+      "s2_id": "30415265",
+      "orcid": null,
+      "raw_name": "Dandelion Mané",
+      "key": "author-257"
+    },
+    "author-258": {
+      "name": "R. Monga",
+      "s2_id": "3089272",
+      "orcid": null,
+      "raw_name": "R. Monga",
+      "key": "author-258"
+    },
+    "author-259": {
+      "name": "Sherry Moore",
+      "s2_id": "144375552",
+      "orcid": null,
+      "raw_name": "Sherry Moore",
+      "key": "author-259"
+    },
+    "author-260": {
+      "name": "D. Murray",
+      "s2_id": "20154699",
+      "orcid": null,
+      "raw_name": "D. Murray",
+      "key": "author-260"
+    },
+    "author-261": {
+      "name": "C. Olah",
+      "s2_id": "37232298",
+      "orcid": null,
+      "raw_name": "C. Olah",
+      "key": "author-261"
+    },
+    "author-262": {
+      "name": "M. Schuster",
+      "s2_id": "144927151",
+      "orcid": null,
+      "raw_name": "M. Schuster",
+      "key": "author-262"
+    },
+    "author-263": {
+      "name": "Jonathon Shlens",
+      "s2_id": "1789737",
+      "orcid": "https://orcid.org/0000-0001-9513-4244",
+      "raw_name": "Jonathon Shlens",
+      "key": "author-263"
+    },
+    "author-264": {
+      "name": "Benoit Steiner",
+      "s2_id": "32163737",
+      "orcid": "https://orcid.org/0000-0002-5767-4976",
+      "raw_name": "Benoit Steiner",
+      "key": "author-264"
+    },
+    "author-265": {
+      "name": "Kunal Talwar",
+      "s2_id": "35210462",
+      "orcid": null,
+      "raw_name": "Kunal Talwar",
+      "key": "author-265"
+    },
+    "author-266": {
+      "name": "P. Tucker",
+      "s2_id": "2080690",
+      "orcid": null,
+      "raw_name": "P. Tucker",
+      "key": "author-266"
+    },
+    "author-267": {
+      "name": "Vijay Vasudevan",
+      "s2_id": "2053781980",
+      "orcid": null,
+      "raw_name": "Vijay Vasudevan",
+      "key": "author-267"
+    },
+    "author-268": {
+      "name": "F. Viégas",
+      "s2_id": "1765169",
+      "orcid": "https://orcid.org/0000-0002-4951-4008",
+      "raw_name": "F. Viégas",
+      "key": "author-268"
+    },
+    "author-269": {
+      "name": "Pete Warden",
+      "s2_id": "47941411",
+      "orcid": null,
+      "raw_name": "Pete Warden",
+      "key": "author-269"
+    },
+    "author-270": {
+      "name": "M. Wattenberg",
+      "s2_id": "145233583",
+      "orcid": "https://orcid.org/0000-0003-0904-4862",
+      "raw_name": "M. Wattenberg",
+      "key": "author-270"
+    },
+    "author-271": {
+      "name": "M. Wicke",
+      "s2_id": "35078078",
+      "orcid": null,
+      "raw_name": "M. Wicke",
+      "key": "author-271"
+    },
+    "author-272": {
+      "name": "Yuan Yu",
+      "s2_id": "2117163698",
+      "orcid": null,
+      "raw_name": "Yuan Yu",
+      "key": "author-272"
+    },
+    "author-273": {
+      "name": "Xiaoqiang Zheng",
+      "s2_id": "2152198093",
+      "orcid": "https://orcid.org/0000-0001-5151-8561",
+      "raw_name": "Xiaoqiang Zheng",
+      "key": "author-273"
+    },
+    "author-274": {
+      "name": "Tim Salimans",
+      "s2_id": "2887364",
+      "orcid": null,
+      "raw_name": "Tim Salimans",
+      "key": "author-274"
+    },
+    "author-275": {
+      "name": "Diederik P. Kingma",
+      "s2_id": "1726807",
+      "orcid": null,
+      "raw_name": "Diederik P. Kingma",
+      "key": "author-275"
+    },
+    "author-276": {
+      "name": "Philipp Krähenbühl",
+      "s2_id": "2562966",
+      "orcid": "https://orcid.org/0000-0002-9846-4369",
+      "raw_name": "Philipp Krähenbühl",
+      "key": "author-276"
+    },
+    "author-277": {
+      "name": "Carl Doersch",
+      "s2_id": "2786693",
+      "orcid": null,
+      "raw_name": "Carl Doersch",
+      "key": "author-277"
+    },
+    "author-278": {
+      "name": "Emilio Parisotto",
+      "s2_id": "3166516",
+      "orcid": null,
+      "raw_name": "Emilio Parisotto",
+      "key": "author-278"
+    },
+    "author-279": {
+      "name": "Marek Rei",
+      "s2_id": "145687301",
+      "orcid": null,
+      "raw_name": "Marek Rei",
+      "key": "author-279"
+    },
+    "author-280": {
+      "name": "S. Levine",
+      "s2_id": "1736651",
+      "orcid": "https://orcid.org/0000-0001-6764-2743",
+      "raw_name": "S. Levine",
+      "key": "author-280"
+    },
+    "author-281": {
+      "name": "Michael I. Jordan",
+      "s2_id": "1694621",
+      "orcid": "https://orcid.org/0000-0001-8935-817X",
+      "raw_name": "Michael I. Jordan",
+      "key": "author-281"
+    },
+    "author-282": {
+      "name": "Philipp Moritz",
+      "s2_id": "29912342",
+      "orcid": "https://orcid.org/0000-0002-7582-101X",
+      "raw_name": "Philipp Moritz",
+      "key": "author-282"
+    },
+    "author-283": {
+      "name": "D. Maclaurin",
+      "s2_id": "1683298",
+      "orcid": "https://orcid.org/0000-0003-0122-1377",
+      "raw_name": "D. Maclaurin",
+      "key": "author-283"
+    },
+    "author-284": {
+      "name": "D. Duvenaud",
+      "s2_id": "1704657",
+      "orcid": null,
+      "raw_name": "D. Duvenaud",
+      "key": "author-284"
+    },
+    "author-285": {
+      "name": "Ryan P. Adams",
+      "s2_id": "1722180",
+      "orcid": "https://orcid.org/0000-0002-5704-6654",
+      "raw_name": "Ryan P. Adams",
+      "key": "author-285"
+    },
+    "author-286": {
+      "name": "Judy Hoffman",
+      "s2_id": "50196944",
+      "orcid": "https://orcid.org/0000-0003-1971-1606",
+      "raw_name": "Judy Hoffman",
+      "key": "author-286"
+    },
+    "author-287": {
+      "name": "Ning Zhang",
+      "s2_id": "2152329702",
+      "orcid": "https://orcid.org/0000-0002-8781-4925",
+      "raw_name": "Ning Zhang",
+      "key": "author-287"
+    },
+    "author-288": {
+      "name": "Eric Tzeng",
+      "s2_id": "2368132",
+      "orcid": null,
+      "raw_name": "Eric Tzeng",
+      "key": "author-288"
+    },
+    "author-289": {
+      "name": "E. Todorov",
+      "s2_id": "144832491",
+      "orcid": null,
+      "raw_name": "E. Todorov",
+      "key": "author-289"
+    },
+    "author-290": {
+      "name": "Tom Erez",
+      "s2_id": "1968210",
+      "orcid": null,
+      "raw_name": "Tom Erez",
+      "key": "author-290"
+    },
+    "author-291": {
+      "name": "Yuval Tassa",
+      "s2_id": "2109481",
+      "orcid": "https://orcid.org/0000-0002-1197-288X",
+      "raw_name": "Yuval Tassa",
+      "key": "author-291"
+    },
+    "author-292": {
+      "name": "D. Naik",
+      "s2_id": "100925254",
+      "orcid": "https://orcid.org/0000-0001-8243-8177",
+      "raw_name": "D. Naik",
+      "key": "author-292"
+    },
+    "author-293": {
+      "name": "R. Mammone",
+      "s2_id": "1872039",
+      "orcid": null,
+      "raw_name": "R. Mammone",
+      "key": "author-293"
+    },
+    "author-294": {
+      "name": "J. Cloutier",
+      "s2_id": "2909364",
+      "orcid": null,
+      "raw_name": "J. Cloutier",
+      "key": "author-294"
+    },
+    "author-295": {
+      "name": "Kyle Duffie",
+      "s2_id": "2273153017",
+      "orcid": "https://orcid.org/0000-0002-8116-9486",
+      "raw_name": "Kyle Duffie",
+      "key": "author-295"
+    },
+    "author-296": {
+      "name": "D. Bob Gowin",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "D. Bob Gowin",
+      "key": "author-296"
+    },
+    "author-297": {
+      "name": "Jàne Butler Kahle",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Jàne Butler Kahle",
+      "key": "author-297"
+    },
+    "author-298": {
+      "name": "M. Abbas",
+      "s2_id": "46421372",
+      "orcid": null,
+      "raw_name": "M. Abbas",
+      "key": "author-298"
+    },
+    "author-299": {
+      "name": "Jyri J. Kivinen",
+      "s2_id": "6245351",
+      "orcid": null,
+      "raw_name": "Jyri J. Kivinen",
+      "key": "author-299"
+    },
+    "author-300": {
+      "name": "T. Raiko",
+      "s2_id": "2785022",
+      "orcid": null,
+      "raw_name": "T. Raiko",
+      "key": "author-300"
+    },
+    "author-301": {
+      "name": "Gregory R. Koch",
+      "s2_id": "2054250597",
+      "orcid": null,
+      "raw_name": "Gregory R. Koch",
+      "key": "author-301"
+    },
+    "author-302": {
+      "name": "Richard S. Zemel",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0001-9353-7509",
+      "raw_name": "Richard S. Zemel",
+      "key": "author-302"
+    },
+    "author-303": {
+      "name": "Ruslan Salakhutdinov",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0002-3752-2756",
+      "raw_name": "Ruslan Salakhutdinov",
+      "key": "author-303"
+    },
+    "author-304": {
+      "name": "B. Lake",
+      "s2_id": "2373318",
+      "orcid": "https://orcid.org/0000-0001-8959-3401",
+      "raw_name": "B. Lake",
+      "key": "author-304"
+    },
+    "author-305": {
+      "name": "Jason Gross",
+      "s2_id": "145372150",
+      "orcid": "https://orcid.org/0000-0002-7771-2757",
+      "raw_name": "Jason Gross",
+      "key": "author-305"
+    },
+    "author-306": {
+      "name": "J. Tenenbaum",
+      "s2_id": "1763295",
+      "orcid": "https://orcid.org/0000-0002-1925-2035",
+      "raw_name": "J. Tenenbaum",
+      "key": "author-306"
+    },
+    "author-307": {
+      "name": "J. Gecsei",
+      "s2_id": "3349607",
+      "orcid": null,
+      "raw_name": "J. Gecsei",
+      "key": "author-307"
+    },
+    "author-308": {
+      "name": "Michael Hüsken",
+      "s2_id": "1722195",
+      "orcid": null,
+      "raw_name": "Michael Hüsken",
+      "key": "author-308"
+    },
+    "author-309": {
+      "name": "C. Goerick",
+      "s2_id": "1680943",
+      "orcid": null,
+      "raw_name": "C. Goerick",
+      "key": "author-309"
+    },
+    "author-310": {
+      "name": "Jürgen Schmidhuber",
+      "s2_id": "2260653300",
+      "orcid": null,
+      "raw_name": "Jürgen Schmidhuber",
+      "key": "author-310"
+    },
+    "author-311": {
+      "name": "Zhengxue Li",
+      "s2_id": "1742244",
+      "orcid": "https://orcid.org/0000-0002-2567-1172",
+      "raw_name": "Zhengxue Li",
+      "key": "author-311"
+    },
+    "author-312": {
+      "name": "Wei Wu",
+      "s2_id": "2285616446",
+      "orcid": "https://orcid.org/0000-0001-9413-4461",
+      "raw_name": "Wei Wu",
+      "key": "author-312"
+    },
+    "author-313": {
+      "name": "Guorui Feng",
+      "s2_id": "2069968720",
+      "orcid": null,
+      "raw_name": "Guorui Feng",
+      "key": "author-313"
+    },
+    "author-314": {
+      "name": "Huifang Lu",
+      "s2_id": "2115782995",
+      "orcid": null,
+      "raw_name": "Huifang Lu",
+      "key": "author-314"
+    },
+    "author-315": {
+      "name": "R. Memisevic",
+      "s2_id": "1710604",
+      "orcid": null,
+      "raw_name": "R. Memisevic",
+      "key": "author-315"
+    },
+    "author-316": {
+      "name": "S. Sands",
+      "s2_id": "2302379",
+      "orcid": "https://orcid.org/0000-0003-3752-0328",
+      "raw_name": "S. Sands",
+      "key": "author-316"
+    },
+    "author-317": {
+      "name": "B. Edwards",
+      "s2_id": "143603695",
+      "orcid": "https://orcid.org/0000-0001-9383-1644",
+      "raw_name": "B. Edwards",
+      "key": "author-317"
+    },
+    "author-318": {
+      "name": "V. J. Kelly",
+      "s2_id": "2564067",
+      "orcid": null,
+      "raw_name": "V. J. Kelly",
+      "key": "author-318"
+    },
+    "author-319": {
+      "name": "M. Davidson",
+      "s2_id": "145382202",
+      "orcid": "https://orcid.org/0000-0002-2173-2417",
+      "raw_name": "M. Davidson",
+      "key": "author-319"
+    },
+    "author-320": {
+      "name": "M. Wilkinson",
+      "s2_id": "49656006",
+      "orcid": null,
+      "raw_name": "M. Wilkinson",
+      "key": "author-320"
+    },
+    "author-321": {
+      "name": "P. Berger",
+      "s2_id": "145798235",
+      "orcid": null,
+      "raw_name": "P. Berger",
+      "key": "author-321"
+    },
+    "author-322": {
+      "name": "P. Berkes",
+      "s2_id": "3245558",
+      "orcid": "https://orcid.org/0000-0002-2827-3911",
+      "raw_name": "P. Berkes",
+      "key": "author-322"
+    },
+    "author-323": {
+      "name": "Richard E. Turner",
+      "s2_id": "145369890",
+      "orcid": null,
+      "raw_name": "Richard E. Turner",
+      "key": "author-323"
+    },
+    "author-324": {
+      "name": "M. Sahani",
+      "s2_id": "2283363",
+      "orcid": "https://orcid.org/0000-0001-5560-3341",
+      "raw_name": "M. Sahani",
+      "key": "author-324"
+    },
+    "author-325": {
+      "name": "Honglak Lee",
+      "s2_id": "1697141",
+      "orcid": null,
+      "raw_name": "Honglak Lee",
+      "key": "author-325"
+    },
+    "author-326": {
+      "name": "R. Grosse",
+      "s2_id": "1785346",
+      "orcid": null,
+      "raw_name": "R. Grosse",
+      "key": "author-326"
+    },
+    "author-327": {
+      "name": "R. Ranganath",
+      "s2_id": "2615814",
+      "orcid": null,
+      "raw_name": "R. Ranganath",
+      "key": "author-327"
+    },
+    "author-328": {
+      "name": "A. Ng",
+      "s2_id": "34699434",
+      "orcid": null,
+      "raw_name": "A. Ng",
+      "key": "author-328"
+    },
+    "author-329": {
+      "name": "D. Pelli",
+      "s2_id": "5469799",
+      "orcid": "https://orcid.org/0000-0001-7100-5659",
+      "raw_name": "D. Pelli",
+      "key": "author-329"
+    },
+    "author-330": {
+      "name": "Katharine A. Tillman",
+      "s2_id": "1904050",
+      "orcid": "https://orcid.org/0000-0001-9440-7239",
+      "raw_name": "Katharine A. Tillman",
+      "key": "author-330"
+    },
+    "author-331": {
+      "name": "Marc'Aurelio Ranzato",
+      "s2_id": "1706809",
+      "orcid": null,
+      "raw_name": "Marc'Aurelio Ranzato",
+      "key": "author-331"
+    },
+    "author-332": {
+      "name": "Fu Jie Huang",
+      "s2_id": "13919023",
+      "orcid": null,
+      "raw_name": "Fu Jie Huang",
+      "key": "author-332"
+    },
+    "author-333": {
+      "name": "Y-Lan Boureau",
+      "s2_id": "90841478",
+      "orcid": "https://orcid.org/0009-0008-3990-5778",
+      "raw_name": "Y-Lan Boureau",
+      "key": "author-333"
+    },
+    "author-334": {
+      "name": "R. Quiroga",
+      "s2_id": "144936828",
+      "orcid": "https://orcid.org/0000-0001-6534-3993",
+      "raw_name": "R. Quiroga",
+      "key": "author-334"
+    },
+    "author-335": {
+      "name": "L. Reddy",
+      "s2_id": "145297860",
+      "orcid": "https://orcid.org/0000-0002-7078-1055",
+      "raw_name": "L. Reddy",
+      "key": "author-335"
+    },
+    "author-336": {
+      "name": "Gabriel Kreiman",
+      "s2_id": "1852992",
+      "orcid": "0000-0003-3505-8475",
+      "raw_name": "Gabriel Kreiman",
+      "key": "author-336"
+    },
+    "author-337": {
+      "name": "C. Koch",
+      "s2_id": "145624227",
+      "orcid": "https://orcid.org/0000-0001-6482-8067",
+      "raw_name": "C. Koch",
+      "key": "author-337"
+    },
+    "author-338": {
+      "name": "I. Fried",
+      "s2_id": "1774949",
+      "orcid": "https://orcid.org/0000-0002-5962-2678",
+      "raw_name": "I. Fried",
+      "key": "author-338"
+    },
+    "author-339": {
+      "name": "M. Riesenhuber",
+      "s2_id": "1996960",
+      "orcid": "https://orcid.org/0000-0002-5744-0408",
+      "raw_name": "M. Riesenhuber",
+      "key": "author-339"
+    },
+    "author-340": {
+      "name": "T. Poggio",
+      "s2_id": "1685292",
+      "orcid": "https://orcid.org/0000-0002-3944-0455",
+      "raw_name": "T. Poggio",
+      "key": "author-340"
+    },
+    "author-341": {
+      "name": "D. Lowe",
+      "s2_id": "35238678",
+      "orcid": "https://orcid.org/0000-0003-3332-483X",
+      "raw_name": "D. Lowe",
+      "key": "author-341"
+    },
+    "author-342": {
+      "name": "W. Freeman",
+      "s2_id": "1768236",
+      "orcid": "https://orcid.org/0000-0002-2231-7995",
+      "raw_name": "W. Freeman",
+      "key": "author-342"
+    },
+    "author-343": {
+      "name": "E. Adelson",
+      "s2_id": "145358192",
+      "orcid": null,
+      "raw_name": "E. Adelson",
+      "key": "author-343"
+    },
+    "author-344": {
+      "name": "P. Haffner",
+      "s2_id": "1721248",
+      "orcid": "https://orcid.org/0000-0002-2319-5109",
+      "raw_name": "P. Haffner",
+      "key": "author-344"
+    },
+    "author-345": {
+      "name": "M. Mozer",
+      "s2_id": "144473519",
+      "orcid": "https://orcid.org/0000-0002-9654-0575",
+      "raw_name": "M. Mozer",
+      "key": "author-345"
+    }
+  },
+  "citations": {
+    "citation-1": {
+      "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+      "authors": [
+        "author-1",
+        "author-2",
+        "author-3"
+      ],
+      "year": 2012,
+      "venue": "venue-1",
+      "raw_venue": "Proc. Advances Neural Inf. Process. Syst.",
+      "citation_count": 0,
+      "fields_of_study": [
+        {
+          "id": "https://openalex.org/C188441871",
+          "wikidata": "https://www.wikidata.org/wiki/Q7554146",
+          "display_name": "Softmax function",
+          "level": 3,
+          "score": 0.88170564
+        },
+        {
+          "id": "https://openalex.org/C81363708",
+          "wikidata": "https://www.wikidata.org/wiki/Q17084460",
+          "display_name": "Convolutional neural network",
+          "level": 2,
+          "score": 0.8117933
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.789114
+        },
+        {
+          "id": "https://openalex.org/C70437156",
+          "wikidata": "https://www.wikidata.org/wiki/Q7228652",
+          "display_name": "Pooling",
+          "level": 2,
+          "score": 0.68981254
+        },
+        {
+          "id": "https://openalex.org/C2776145597",
+          "wikidata": "https://www.wikidata.org/wiki/Q25339462",
+          "display_name": "Dropout (neural networks)",
+          "level": 2,
+          "score": 0.62921965
+        },
+        {
+          "id": "https://openalex.org/C154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "level": 1,
+          "score": 0.61589855
+        },
+        {
+          "id": "https://openalex.org/C45347329",
+          "wikidata": "https://www.wikidata.org/wiki/Q5166604",
+          "display_name": "Convolution (computer science)",
+          "level": 3,
+          "score": 0.6064652
+        },
+        {
+          "id": "https://openalex.org/C2776135515",
+          "wikidata": "https://www.wikidata.org/wiki/Q17143721",
+          "display_name": "Regularization (linguistics)",
+          "level": 2,
+          "score": 0.5937029
+        },
+        {
+          "id": "https://openalex.org/C153180895",
+          "wikidata": "https://www.wikidata.org/wiki/Q7148389",
+          "display_name": "Pattern recognition (psychology)",
+          "level": 2,
+          "score": 0.58283216
+        },
+        {
+          "id": "https://openalex.org/C2984842247",
+          "wikidata": "https://www.wikidata.org/wiki/Q197536",
+          "display_name": "Deep neural networks",
+          "level": 3,
+          "score": 0.48869804
+        },
+        {
+          "id": "https://openalex.org/C40969351",
+          "wikidata": "https://www.wikidata.org/wiki/Q3516228",
+          "display_name": "Word error rate",
+          "level": 2,
+          "score": 0.45401564
+        },
+        {
+          "id": "https://openalex.org/C136886441",
+          "wikidata": "https://www.wikidata.org/wiki/Q926129",
+          "display_name": "Normalization (sociology)",
+          "level": 2,
+          "score": 0.44189316
+        },
+        {
+          "id": "https://openalex.org/C50644808",
+          "wikidata": "https://www.wikidata.org/wiki/Q192776",
+          "display_name": "Artificial neural network",
+          "level": 2,
+          "score": 0.44072217
+        },
+        {
+          "id": "https://openalex.org/C119857082",
+          "wikidata": "https://www.wikidata.org/wiki/Q2539",
+          "display_name": "Machine learning",
+          "level": 1,
+          "score": 0.3099594
+        },
+        {
+          "id": "https://openalex.org/C144024400",
+          "wikidata": "https://www.wikidata.org/wiki/Q21201",
+          "display_name": "Sociology",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C19165224",
+          "wikidata": "https://www.wikidata.org/wiki/Q23404",
+          "display_name": "Anthropology",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "external_ids": {
+        "OpenAlex": "https://openalex.org/W2163605009"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "ref_id": 1,
+      "reference_mentions": [
+        "THIS paper aims at a comprehensive survey of recent progresses on unsupervised and semi-supervised methods addressing the challenges of training models with a small number or none of labeled data when a large volume of unlabeled data are available. The success of deep learning often hinges on the availability of a large number of labeled data, where millions of images are labeled to train the deep neural networks [1], [2] to enable these models to be on par with or even surpass the human performances.",
+        "Although a solid theory is still lacking, it is thought that both equivalence and invariance to image translations play a critical role in the success of CNNs, particularly for supervised classification tasks [1], [6]. A typical Convolutional Neural Network (CNN) consists of two parts: the feature maps of input images through multiple convolutional layers, and the classifier of fully connected layers mapping the feature maps to the target labels.",
+        "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation – without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
+        "Thus, it is a natural choice to adopt the transformation equivariance as the criterion to train an unsupervised representation, hoping it could be generalizable to unseen tasks without knowledge their labels. This is contrary to the criterion of transformation invariance that tends to tailor the learned representations more specialized to the labels of given tasks. Indeed, it is straightforward to see that the feature maps generated through convolutional layers equivary with the translations – the feature maps of translated images are also shifted in the same way subject to edge padding effect [1]. This inspires many works to generalize this idea to consider more types of transformations beyond translations (e.g., general image warping and projective transformations) [23]. This can learn a good representation of images by encoding their intrinsic visual structures that equivary with many transformations.",
+        "At first glance, it looks like a dilemma to enforce two criteria simultaneously, but they actually co-exist well in the celebrated convolutional neural networks underpinning the great success of deep learning—the convolutional feature maps equivary to the translations while the output predictions should be invariant under various transformations [1]. The recent efforts [23] on generalizing translation equivariance to generic transformations also present great potentials of training more powerful representations and discriminative models atop to address small data challenges [7], [16], [23].",
+        "Data augmentation has become a standard preprocessing step in training deep networks since the introduction of Alexnet [1]. It aims to augment the training set with more variations through different transformations such as spatial augmentations (e.g., random crops, mirror flips, random translations), color jittering, and random noises.",
+        "- [1] A. Krizhevsky, I. Sutskever, and G. E. Hinton, \"Imagenet classification with deep convolutional neural networks,\" in Proc. Advances Neural Inf. Process. Syst., 2012, pp. 1097–1105."
+      ],
+      "citation_key": "citation-1"
+    },
+    "citation-2": {
+      "title": "Deep Residual Learning for Image Recognition",
+      "authors": [
+        "author-4",
+        "author-5",
+        "author-6",
+        "author-7"
+      ],
+      "year": 2015,
+      "venue": "venue-2",
+      "raw_venue": "Proc. IEEE Conf. Comput. Vis. Pattern Recognit.",
+      "citation_count": 181618,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "DBLP": "conf/cvpr/HeZRS16",
+        "MAG": "2949650786",
+        "ArXiv": "1512.03385",
+        "DOI": "10.1109/cvpr.2016.90",
+        "CorpusId": 206594692
+      },
+      "semantic_scholar_id": "2c03df8b48bf3fa39054345bafabfeff15bfd11d",
+      "arxiv_id": null,
+      "doi": "10.1109/cvpr.2016.90",
+      "ref_id": 2,
+      "reference_mentions": [
+        "THIS paper aims at a comprehensive survey of recent progresses on unsupervised and semi-supervised methods addressing the challenges of training models with a small number or none of labeled data when a large volume of unlabeled data are available. The success of deep learning often hinges on the availability of a large number of labeled data, where millions of images are labeled to train the deep neural networks [1], [2] to enable these models to be on par with or even surpass the human performances.",
+        "- [2] K. He, X. Zhang, S. Ren, and J. Sun, \"Deep residual learning for image recognition,\" in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2016, pp. 770–778."
+      ],
+      "citation_key": "citation-2"
+    },
+    "citation-3": {
+      "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+      "authors": [
+        "author-8",
+        "author-9",
+        "author-10"
+      ],
+      "year": 2017,
+      "venue": "venue-3",
+      "raw_venue": "Proc. 34th Int. Conf. Mach. Learn.",
+      "citation_count": 11068,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2604763608",
+        "DBLP": "journals/corr/FinnAL17",
+        "ArXiv": "1703.03400",
+        "CorpusId": 6719686
+      },
+      "semantic_scholar_id": "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
+      "arxiv_id": null,
+      "doi": null,
+      "ref_id": 3,
+      "reference_mentions": [
+        "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
+        "- [3] C. Finn, P. Abbeel, and S. Levine, \"Model-agnostic meta-learning for fast adaptation of deep networks,\" in Proc. 34th Int. Conf. Mach. Learn., 2017, pp. 1126–1135."
+      ],
+      "citation_key": "citation-3"
+    },
+    "citation-4": {
+      "title": "Task Agnostic Meta-Learning for Few-Shot Learning",
+      "authors": [
+        "author-11",
+        "author-12"
+      ],
+      "year": 2019,
+      "venue": null,
+      "raw_venue": "arXiv",
+      "citation_count": 0,
+      "fields_of_study": [
+        {
+          "id": "https://openalex.org/C27158222",
+          "wikidata": "https://www.wikidata.org/wiki/Q5532422",
+          "display_name": "Generalizability theory",
+          "level": 2,
+          "score": 0.85108197
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.8161372
+        },
+        {
+          "id": "https://openalex.org/C154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "level": 1,
+          "score": 0.71901155
+        },
+        {
+          "id": "https://openalex.org/C97541855",
+          "wikidata": "https://www.wikidata.org/wiki/Q830687",
+          "display_name": "Reinforcement learning",
+          "level": 2,
+          "score": 0.7122396
+        },
+        {
+          "id": "https://openalex.org/C2781002164",
+          "wikidata": "https://www.wikidata.org/wiki/Q6822311",
+          "display_name": "Meta learning (computer science)",
+          "level": 3,
+          "score": 0.7115202
+        },
+        {
+          "id": "https://openalex.org/C119857082",
+          "wikidata": "https://www.wikidata.org/wiki/Q2539",
+          "display_name": "Machine learning",
+          "level": 1,
+          "score": 0.6751487
+        },
+        {
+          "id": "https://openalex.org/C2780451532",
+          "wikidata": "https://www.wikidata.org/wiki/Q759676",
+          "display_name": "Task (project management)",
+          "level": 2,
+          "score": 0.57723683
+        },
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.07580492
+        },
+        {
+          "id": "https://openalex.org/C105795698",
+          "wikidata": "https://www.wikidata.org/wiki/Q12483",
+          "display_name": "Statistics",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C187736073",
+          "wikidata": "https://www.wikidata.org/wiki/Q2920921",
+          "display_name": "Management",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C162324750",
+          "wikidata": "https://www.wikidata.org/wiki/Q8134",
+          "display_name": "Economics",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "external_ids": {
+        "OpenAlex": "https://openalex.org/W2962799101"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": "1805.07722",
+      "doi": "https://doi.org/10.1109/cvpr.2019.01199",
+      "ref_id": 4,
+      "reference_mentions": [
+        "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
+        "In the spectrum of semi-supervised methods also resides Few-Shot Learning (FSL) when auxiliary tasks on a disjoint set of concepts are leveraged to improve the model training. On one hand, it is like zero-shot learning when conceptual correlations can be used to share information between different concepts through their embedded representations. On the other hand, a group of auxiliary tasks can be sampled from a collection of base concepts, and a meta-model can be trained to distill the knowledge of how to update models with few examples (e.g., the initial point, and the rule of updating model parameters) [4] along with the unlabeled examples in a semi-supervised fashion [5], [12], [13]. Thus, the FSL can be viewed as a semi-supervised problem that has few labeled examples available on the target concepts, along with many examples labeled on auxiliary concepts (which thus should be viewed as unlabeled on the target concepts). For a comprehensive review of FSL, the interested readers can refer to [14].",
+        "- [4] M. A. Jamal, G.-J. Qi, and M. Shah, \"Task-agnostic meta-learning for few-shot learning,\" 2018, arXiv: 1805.07722."
+      ],
+      "citation_key": "citation-4"
+    },
+    "citation-5": {
+      "title": "Learning to Self-Train for Semi-Supervised Few-Shot Classification",
+      "authors": [
+        "author-13",
+        "author-14",
+        "author-15",
+        "author-16",
+        "author-17",
+        "author-18",
+        "author-19"
+      ],
+      "year": 2019,
+      "venue": "venue-1",
+      "raw_venue": "Proc. Advances Neural Inf. Process. Syst.",
+      "citation_count": 0,
+      "fields_of_study": [
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.79255915
+        },
+        {
+          "id": "https://openalex.org/C154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "level": 1,
+          "score": 0.7212893
+        },
+        {
+          "id": "https://openalex.org/C183115368",
+          "wikidata": "https://www.wikidata.org/wiki/Q856577",
+          "display_name": "Weighting",
+          "level": 2,
+          "score": 0.70160925
+        },
+        {
+          "id": "https://openalex.org/C2776145971",
+          "wikidata": "https://www.wikidata.org/wiki/Q30673951",
+          "display_name": "Labeled data",
+          "level": 2,
+          "score": 0.64106256
+        },
+        {
+          "id": "https://openalex.org/C2781002164",
+          "wikidata": "https://www.wikidata.org/wiki/Q6822311",
+          "display_name": "Meta learning (computer science)",
+          "level": 3,
+          "score": 0.5952497
+        },
+        {
+          "id": "https://openalex.org/C119857082",
+          "wikidata": "https://www.wikidata.org/wiki/Q2539",
+          "display_name": "Machine learning",
+          "level": 1,
+          "score": 0.59161747
+        },
+        {
+          "id": "https://openalex.org/C58973888",
+          "wikidata": "https://www.wikidata.org/wiki/Q1041418",
+          "display_name": "Semi-supervised learning",
+          "level": 2,
+          "score": 0.55613637
+        },
+        {
+          "id": "https://openalex.org/C2780451532",
+          "wikidata": "https://www.wikidata.org/wiki/Q759676",
+          "display_name": "Task (project management)",
+          "level": 2,
+          "score": 0.5544518
+        },
+        {
+          "id": "https://openalex.org/C136389625",
+          "wikidata": "https://www.wikidata.org/wiki/Q334384",
+          "display_name": "Supervised learning",
+          "level": 3,
+          "score": 0.5152898
+        },
+        {
+          "id": "https://openalex.org/C2777212361",
+          "wikidata": "https://www.wikidata.org/wiki/Q5127848",
+          "display_name": "Class (philosophy)",
+          "level": 2,
+          "score": 0.4554538
+        },
+        {
+          "id": "https://openalex.org/C2778344882",
+          "wikidata": "https://www.wikidata.org/wiki/Q278938",
+          "display_name": "Shot (pellet)",
+          "level": 2,
+          "score": 0.4168254
+        },
+        {
+          "id": "https://openalex.org/C153180895",
+          "wikidata": "https://www.wikidata.org/wiki/Q7148389",
+          "display_name": "Pattern recognition (psychology)",
+          "level": 2,
+          "score": 0.3935628
+        },
+        {
+          "id": "https://openalex.org/C50644808",
+          "wikidata": "https://www.wikidata.org/wiki/Q192776",
+          "display_name": "Artificial neural network",
+          "level": 2,
+          "score": 0.26195642
+        },
+        {
+          "id": "https://openalex.org/C71924100",
+          "wikidata": "https://www.wikidata.org/wiki/Q11190",
+          "display_name": "Medicine",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C185592680",
+          "wikidata": "https://www.wikidata.org/wiki/Q2329",
+          "display_name": "Chemistry",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C187736073",
+          "wikidata": "https://www.wikidata.org/wiki/Q2920921",
+          "display_name": "Management",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C178790620",
+          "wikidata": "https://www.wikidata.org/wiki/Q11351",
+          "display_name": "Organic chemistry",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C162324750",
+          "wikidata": "https://www.wikidata.org/wiki/Q8134",
+          "display_name": "Economics",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C126838900",
+          "wikidata": "https://www.wikidata.org/wiki/Q77604",
+          "display_name": "Radiology",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "external_ids": {
+        "OpenAlex": "https://openalex.org/W2971071159"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "ref_id": 5,
+      "reference_mentions": [
+        "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
+        "In the spectrum of semi-supervised methods also resides Few-Shot Learning (FSL) when auxiliary tasks on a disjoint set of concepts are leveraged to improve the model training. On one hand, it is like zero-shot learning when conceptual correlations can be used to share information between different concepts through their embedded representations. On the other hand, a group of auxiliary tasks can be sampled from a collection of base concepts, and a meta-model can be trained to distill the knowledge of how to update models with few examples (e.g., the initial point, and the rule of updating model parameters) [4] along with the unlabeled examples in a semi-supervised fashion [5], [12], [13]. Thus, the FSL can be viewed as a semi-supervised problem that has few labeled examples available on the target concepts, along with many examples labeled on auxiliary concepts (which thus should be viewed as unlabeled on the target concepts). For a comprehensive review of FSL, the interested readers can refer to [14].",
+        "- [5] X. Li et al., \"Learning to self-train for semi-supervised few-shot classification,\" in Proc. Advances Neural Inf. Process. Syst., 2019, pp. 10 276–10 286."
+      ],
+      "citation_key": "citation-5"
+    },
+    "citation-6": {
+      "title": "Transforming Auto-Encoders",
+      "authors": [
+        "author-3",
+        "author-20",
+        "author-21"
+      ],
+      "year": 2011,
+      "venue": "venue-4",
+      "raw_venue": "Proc. Int. Conf. Artif. Neural Netw.",
+      "citation_count": 1227,
+      "fields_of_study": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2966661",
+        "DBLP": "conf/icann/HintonKW11",
+        "DOI": "10.1007/978-3-642-21735-7_6",
+        "CorpusId": 6138085
+      },
+      "semantic_scholar_id": "20f0357688876fa4662f806f985779dce6e24f3c",
+      "arxiv_id": null,
+      "doi": "10.1007/978-3-642-21735-7_6",
+      "ref_id": 6,
+      "reference_mentions": [
+        "A variety of principles and models have been devoted to training unsupervised representations. As shown in Fig. C.3, available in the online supplemental material, we will review them from several different perspectives. First, we will review the emerging principle of Transformation Equivariant Representations(TER) pioneered in Hinton's seminal work [6] as well as the recent formulation of unsupervised training of such representations [7]. It follows by reviewing a number of generative networks representative in many recent models, including the variants of auto-encoders, Generative Adversarial Nets (GANs), Flow-based Generative Networks, and Transformers (See Fig. C.3, available in the online supplemental material). The principle of learning disentangling representationsfrom these generative models is also central to many unsupervised methods, and we will review them on how to extract interpretable generative factors from unlabeled data. Finally, self-supervised methods constitutes a large category of unsupervised models, and we will review autoregressive models as well as the selfsupervised training of image and video representations.",
+        "- Transformation-Equivariant Representations. Recently, learning transformation-equivariant representations (TERs) from unlabeled data has attracted many attentions in both unsupervised and supervised methods. In particular, a good TER equivaries with different types of transformations so that the scene structure in an image can be compactly encoded into its representation. Then the successive problems for recognizing unseen visual concepts can be performed on top of the trained TER. The notion of TER was originally proposed by Hinton et al. [6] in introducing capsule nets and it has been formalized in various ways. We will review it in Section 2.2.",
+        "Although a solid theory is still lacking, it is thought that both equivalence and invariance to image translations play a critical role in the success of CNNs, particularly for supervised classification tasks [1], [6]. A typical Convolutional Neural Network (CNN) consists of two parts: the feature maps of input images through multiple convolutional layers, and the classifier of fully connected layers mapping the feature maps to the target labels.",
+        "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation – without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
+        "The DC-IGN is semi-supervised to engineer inverse graphics as training images with various transformations are available from 3D face and chair datasets. We also note that a number of inverse graphics models [93], [94], [95] have been proposed to train disentangled representations. Among them are deep lambertian networks [96] that assume a Lambertian reflectance model and implicitly construct the 3D representation, and transforming auto-encoders [6], [97] that use a domain-specific decoder to reconstruct images, as well as [98] with an approximate differentiable renderer to explicitly capture the relationship between changes in model parameters and image observations.",
+        "A more theoretical topic lies on revealing the intrinsic relation between transformation equivariance and invariance in learning representations. On the one hand, the pursuit of Transformation Equivariant Representation (TER) has been spotlighted as one of critical criteria [6] that achieves the state-of-the-art performances in unsupervised learning [7], [16]. However, it is also important and necessary to apply the transformation invariance to train discriminative networks with labeled data in supervised tasks for recognizing images and objects.",
+        "- [6] G. E. Hinton, A. Krizhevsky, and S. D. Wang, \"Transforming auto-encoders,\" in Proc. Int. Conf. Artif. Neural Netw., 2011, pp. 44–51."
+      ],
+      "citation_key": "citation-6"
+    },
+    "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51": {
+      "title": "International Journal of Computer Vision manuscript No. (will be inserted by the editor) The PASCAL Visual Object Classes (VOC) Challenge",
+      "authors": [],
+      "year": null,
+      "venue": "",
+      "citation_count": 15000,
+      "fields_of_study": null,
+      "external_ids": {
+        "CorpusId": 4246903
+      },
+      "semantic_scholar_id": "3a9b175324ba11bc0e16c0633912d897b2fac4e2",
+      "arxiv_id": null,
+      "doi": null,
+      "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+    },
+    "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48": {
+      "title": "Learning curves for stochastic gradient descent in linear feedforward networks",
+      "authors": [
+        "author-311",
+        "author-312",
+        "author-313",
+        "author-314"
+      ],
+      "year": null,
+      "venue": "",
+      "citation_count": 412,
+      "fields_of_study": null,
+      "external_ids": {
+        "CorpusId": 52872549
+      },
+      "semantic_scholar_id": "a6bcf0e9b5034c4c9cbea839baadd69a42b05cc1",
+      "arxiv_id": null,
+      "doi": null,
+      "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+    },
+    "citation-20f0357688876fa4662f806f985779dce6e24f3c-15": {
+      "title": "TRAFFIC: Recognizing Objects Using Hierarchical Reference Frame Transformations",
+      "authors": [
+        "author-162",
+        "author-345",
+        "author-109"
+      ],
+      "year": 1989,
+      "venue": "venue-5",
+      "citation_count": 24,
+      "fields_of_study": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "external_ids": {
+        "DBLP": "conf/nips/ZemelMH89",
+        "MAG": "2110803095",
+        "CorpusId": 15353397
+      },
+      "semantic_scholar_id": "5b00ab8cc5a56ee934618bd7555965185a7f83ec",
+      "arxiv_id": null,
+      "doi": null,
+      "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+    }
+  },
+  "venues": {
+    "venue-1": "Advances in Neural Information Processing Systems",
+    "venue-2": "IEEE Conference on Computer Vision and Pattern Recognition",
+    "venue-3": "International Conference on Machine Learning",
+    "venue-4": "International Conference on Artificial Neural Networks",
+    "venue-5": "Neural Information Processing Systems",
+    "venue-6": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "venue-7": "IEEE International Conference on Computer Vision",
+    "venue-8": "arXiv.org",
+    "venue-9": "International Conference on Learning Representations",
+    "venue-10": "Computer Vision and Pattern Recognition",
+    "venue-11": "International Conference on Artificial Intelligence and Statistics",
+    "venue-12": "International Journal of Computer Vision",
+    "venue-13": "ACM Multimedia",
+    "venue-14": "European Conference on Computer Vision",
+    "venue-15": "2014 IEEE Conference on Computer Vision and Pattern Recognition",
+    "venue-16": "Communications of the ACM",
+    "venue-17": "Archives de pédiatrie",
+    "venue-18": "2007 IEEE Conference on Computer Vision and Pattern Recognition",
+    "venue-19": "ACM Transactions on Graphics",
+    "venue-20": "Neural Computation",
+    "venue-21": "IEEE Trans. Neural Networks",
+    "venue-22": "Neural Networks",
+    "venue-23": "British Machine Vision Conference",
+    "venue-24": "Proceedings of the National Academy of Sciences of the United States of America",
+    "venue-25": "Annual Meeting of the Cognitive Science Society",
+    "venue-26": "Annual Conference on Genetic and Evolutionary Computation",
+    "venue-27": "Conference on Empirical Methods in Natural Language Processing",
+    "venue-28": "2012 IEEE/RSJ International Conference on Intelligent Robots and Systems",
+    "venue-29": "[Proceedings 1992] IJCNN International Joint Conference on Neural Networks",
+    "venue-30": "IJCNN-91-Seattle International Joint Conference on Neural Networks",
+    "venue-31": "Proceedings of the IEEE-INNS-ENNS International Joint Conference on Neural Networks. IJCNN 2000. Neural Computing: New Challenges and Perspectives for the New Millennium",
+    "venue-32": "PLoS Comput. Biol.",
+    "venue-33": "Nature Neuroscience",
+    "venue-34": "Nature",
+    "venue-35": "Proceedings of the Seventh IEEE International Conference on Computer Vision",
+    "venue-36": "International Joint Conference on Artificial Intelligence",
+    "venue-37": "Proceedings of the IEEE"
+  }
+}

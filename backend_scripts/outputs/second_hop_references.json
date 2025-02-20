@@ -1,0 +1,2880 @@
+{
+  "2c03df8b48bf3fa39054345bafabfeff15bfd11d": {
+    "title": "Deep Residual Learning for Image Recognition",
+    "references": [
+      {
+        "title": "Training Very Deep Networks",
+        "authors": [
+          "author-22",
+          "author-23",
+          "author-24"
+        ],
+        "year": 2015,
+        "venue": "venue-5",
+        "citation_count": 1644,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2950621961",
+          "DBLP": "journals/corr/SrivastavaGS15a",
+          "ArXiv": "1507.06228",
+          "CorpusId": 2722012
+        },
+        "semantic_scholar_id": "b92aa7024b87f50737b372e5df31ef091ab54e62",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+        "authors": [
+          "author-25",
+          "author-26",
+          "author-27",
+          "author-28"
+        ],
+        "year": 2015,
+        "venue": "venue-6",
+        "citation_count": 58565,
+        "fields_of_study": [
+          "Computer Science",
+          "Medicine"
+        ],
+        "external_ids": {
+          "MAG": "2953106684",
+          "ArXiv": "1506.01497",
+          "DBLP": "journals/pami/RenHG017",
+          "DOI": "10.1109/TPAMI.2016.2577031",
+          "CorpusId": 10328909,
+          "PubMed": "27295650"
+        },
+        "semantic_scholar_id": "424561d8585ff8ebce7d5d07de8dbf7aae5e7270",
+        "arxiv_id": null,
+        "doi": "10.1109/TPAMI.2016.2577031",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Object Detection via a Multi-region and Semantic Segmentation-Aware CNN Model",
+        "authors": [
+          "author-29",
+          "author-30"
+        ],
+        "year": 2015,
+        "venue": "venue-7",
+        "citation_count": 725,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "conf/iccv/GidarisK15",
+          "MAG": "1932624639",
+          "ArXiv": "1505.01749",
+          "DOI": "10.1109/ICCV.2015.135",
+          "CorpusId": 215824235
+        },
+        "semantic_scholar_id": "020928259a848b91b7c36062e4bbc6df6398c02e",
+        "arxiv_id": null,
+        "doi": "10.1109/ICCV.2015.135",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Highway Networks",
+        "authors": [
+          "author-22",
+          "author-23",
+          "author-24"
+        ],
+        "year": 2015,
+        "venue": "venue-8",
+        "citation_count": 1737,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "ArXiv": "1505.00387",
+          "DBLP": "journals/corr/SrivastavaGS15",
+          "CorpusId": 14786967
+        },
+        "semantic_scholar_id": "e0945081b5b87187a53d4329cf77cd8bff635795",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Fast R-CNN",
+        "authors": [
+          "author-27"
+        ],
+        "year": 2015,
+        "venue": "",
+        "citation_count": 23814,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "ArXiv": "1504.08083",
+          "CorpusId": 206770307
+        },
+        "semantic_scholar_id": "7ffdbc358b63378f07311e883dddacc9faeeaf4b",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Object Detection Networks on Convolutional Feature Maps",
+        "authors": [
+          "author-25",
+          "author-26",
+          "author-27",
+          "author-31",
+          "author-32"
+        ],
+        "year": 2015,
+        "venue": "venue-6",
+        "citation_count": 400,
+        "fields_of_study": [
+          "Computer Science",
+          "Medicine"
+        ],
+        "external_ids": {
+          "DBLP": "journals/pami/RenHGZS17",
+          "MAG": "2952009708",
+          "ArXiv": "1504.06066",
+          "DOI": "10.1109/TPAMI.2016.2601099",
+          "CorpusId": 5919483,
+          "PubMed": "27541490"
+        },
+        "semantic_scholar_id": "f075f89b4f4026748cbf2fb9f989a9934c42ee8f",
+        "arxiv_id": null,
+        "doi": "10.1109/TPAMI.2016.2601099",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+        "authors": [
+          "author-33",
+          "author-34"
+        ],
+        "year": 2015,
+        "venue": "venue-3",
+        "citation_count": 41969,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2949117887",
+          "DBLP": "journals/corr/IoffeS15",
+          "ArXiv": "1502.03167",
+          "CorpusId": 5808102
+        },
+        "semantic_scholar_id": "995c5f5e62614fcb4d2796ad2faab969da51713e",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification",
+        "authors": [
+          "author-26",
+          "author-31",
+          "author-25",
+          "author-28"
+        ],
+        "year": 2015,
+        "venue": "venue-7",
+        "citation_count": 17885,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1677182931",
+          "DBLP": "conf/iccv/HeZRS15",
+          "ArXiv": "1502.01852",
+          "DOI": "10.1109/ICCV.2015.123",
+          "CorpusId": 13740328
+        },
+        "semantic_scholar_id": "d6f2f611da110b5b5061731be3fc4c7f45d8ee23",
+        "arxiv_id": null,
+        "doi": "10.1109/ICCV.2015.123",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "FitNets: Hints for Thin Deep Nets",
+        "authors": [
+          "author-35",
+          "author-36",
+          "author-37",
+          "author-38",
+          "author-39",
+          "author-40"
+        ],
+        "year": 2014,
+        "venue": "venue-9",
+        "citation_count": 3665,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "journals/corr/RomeroBKCGB14",
+          "MAG": "2964118293",
+          "ArXiv": "1412.6550",
+          "CorpusId": 2723173
+        },
+        "semantic_scholar_id": "8604f376633af8b347e31d84c6150a93b11e34c2",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Convolutional neural networks at constrained time cost",
+        "authors": [
+          "author-26",
+          "author-28"
+        ],
+        "year": 2014,
+        "venue": "venue-10",
+        "citation_count": 1261,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1932847118",
+          "DBLP": "journals/corr/He014",
+          "ArXiv": "1412.1710",
+          "DOI": "10.1109/CVPR.2015.7299173",
+          "CorpusId": 2141952
+        },
+        "semantic_scholar_id": "8ad35df17ae4064dd174690efb04d347428f1117",
+        "arxiv_id": null,
+        "doi": "10.1109/CVPR.2015.7299173",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Fully convolutional networks for semantic segmentation",
+        "authors": [
+          "author-41",
+          "author-42",
+          "author-43"
+        ],
+        "year": 2014,
+        "venue": "venue-10",
+        "citation_count": 36343,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "journals/corr/LongSD14",
+          "ArXiv": "1605.06211",
+          "MAG": "2952632681",
+          "DOI": "10.1109/CVPR.2015.7298965",
+          "CorpusId": 1629541
+        },
+        "semantic_scholar_id": "6fc6803df5f9ae505cae5b2f178ade4062c768d0",
+        "arxiv_id": null,
+        "doi": "10.1109/CVPR.2015.7298965",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Deeply-Supervised Nets",
+        "authors": [
+          "author-44",
+          "author-45",
+          "author-46",
+          "author-47",
+          "author-48"
+        ],
+        "year": 2014,
+        "venue": "venue-11",
+        "citation_count": 2172,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "DBLP": "journals/corr/LeeXGZT14",
+          "ArXiv": "1409.5185",
+          "MAG": "2168894214",
+          "CorpusId": 1289873
+        },
+        "semantic_scholar_id": "fb91db6aa4f710814f8aec28a7f3ecbc4e5ad4fd",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Going deeper with convolutions",
+        "authors": [
+          "author-34",
+          "author-49",
+          "author-50",
+          "author-51",
+          "author-52",
+          "author-53",
+          "author-54",
+          "author-55",
+          "author-56"
+        ],
+        "year": 2014,
+        "venue": "venue-10",
+        "citation_count": 42195,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "journals/corr/SzegedyLJSRAEVR14",
+          "MAG": "2097117768",
+          "ArXiv": "1409.4842",
+          "DOI": "10.1109/CVPR.2015.7298594",
+          "CorpusId": 206592484
+        },
+        "semantic_scholar_id": "e15cf50aa89fee8535703b9f9512fca5bfc43327",
+        "arxiv_id": null,
+        "doi": "10.1109/CVPR.2015.7298594",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+        "authors": [
+          "author-57",
+          "author-58"
+        ],
+        "year": 2014,
+        "venue": "venue-9",
+        "citation_count": 96179,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2949429431",
+          "ArXiv": "1409.1556",
+          "DBLP": "journals/corr/SimonyanZ14a",
+          "CorpusId": 14124313
+        },
+        "semantic_scholar_id": "eb42cf88027de515750f230b23b1a057dc782108",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "ImageNet Large Scale Visual Recognition Challenge",
+        "authors": [
+          "author-59",
+          "author-60",
+          "author-61",
+          "author-62",
+          "author-63",
+          "author-64",
+          "author-65",
+          "author-66",
+          "author-67",
+          "author-68",
+          "author-69",
+          "author-70"
+        ],
+        "year": 2014,
+        "venue": "venue-12",
+        "citation_count": 38110,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "ArXiv": "1409.0575",
+          "DBLP": "journals/corr/RussakovskyDSKSMHKKBBF14",
+          "MAG": "2546241758",
+          "DOI": "10.1007/s11263-015-0816-y",
+          "CorpusId": 2930547
+        },
+        "semantic_scholar_id": "e74f9b7f8eec6ba4704c206b93bc8079af3da4bd",
+        "arxiv_id": null,
+        "doi": "10.1007/s11263-015-0816-y",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Caffe: Convolutional Architecture for Fast Feature Embedding",
+        "authors": [
+          "author-50",
+          "author-71",
+          "author-72",
+          "author-73",
+          "author-74",
+          "author-27",
+          "author-75",
+          "author-43"
+        ],
+        "year": 2014,
+        "venue": "venue-13",
+        "citation_count": 14625,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2950094539",
+          "DBLP": "journals/corr/JiaSDKLGGD14",
+          "ArXiv": "1408.5093",
+          "DOI": "10.1145/2647868.2654889",
+          "CorpusId": 1799558
+        },
+        "semantic_scholar_id": "6bdb186ec4726e00a8051119636d4df3b94043b5",
+        "arxiv_id": null,
+        "doi": "10.1145/2647868.2654889",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition",
+        "authors": [
+          "author-26",
+          "author-31",
+          "author-25",
+          "author-32"
+        ],
+        "year": 2014,
+        "venue": "venue-6",
+        "citation_count": 10671,
+        "fields_of_study": [
+          "Computer Science",
+          "Medicine"
+        ],
+        "external_ids": {
+          "MAG": "2179352600",
+          "DBLP": "journals/pami/HeZR015",
+          "ArXiv": "1406.4729",
+          "DOI": "10.1007/978-3-319-10578-9_23",
+          "CorpusId": 436933,
+          "PubMed": "26353135"
+        },
+        "semantic_scholar_id": "cbb19236820a96038d000dc629225d36e0b6294a",
+        "arxiv_id": null,
+        "doi": "10.1007/978-3-319-10578-9_23",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Microsoft COCO: Common Objects in Context",
+        "authors": [
+          "author-76",
+          "author-77",
+          "author-78",
+          "author-79",
+          "author-80",
+          "author-81",
+          "author-82",
+          "author-83"
+        ],
+        "year": 2014,
+        "venue": "venue-14",
+        "citation_count": 40384,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "ArXiv": "1405.0312",
+          "DBLP": "conf/eccv/LinMBHPRDZ14",
+          "MAG": "2952122856",
+          "DOI": "10.1007/978-3-319-10602-1_48",
+          "CorpusId": 14113767
+        },
+        "semantic_scholar_id": "71b7178df5d2b112d07e45038cb5637208659ff7",
+        "arxiv_id": null,
+        "doi": "10.1007/978-3-319-10602-1_48",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "On the Number of Linear Regions of Deep Neural Networks",
+        "authors": [
+          "author-84",
+          "author-85",
+          "author-86",
+          "author-40"
+        ],
+        "year": 2014,
+        "venue": "venue-5",
+        "citation_count": 1209,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "DBLP": "conf/nips/MontufarPCB14",
+          "ArXiv": "1402.1869",
+          "MAG": "2161388792",
+          "CorpusId": 5941770
+        },
+        "semantic_scholar_id": "b034b5769ab94acf9fb8ae48c7edb560a300bb63",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks",
+        "authors": [
+          "author-51",
+          "author-87",
+          "author-88",
+          "author-89",
+          "author-90",
+          "author-91"
+        ],
+        "year": 2013,
+        "venue": "venue-9",
+        "citation_count": 4941,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1487583988",
+          "DBLP": "journals/corr/SermanetEZMFL13",
+          "ArXiv": "1312.6229",
+          "CorpusId": 4071727
+        },
+        "semantic_scholar_id": "1109b663453e78a59e4f66446d71720ac58cec25",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+        "authors": [
+          "author-92",
+          "author-93",
+          "author-94"
+        ],
+        "year": 2013,
+        "venue": "venue-9",
+        "citation_count": 1775,
+        "fields_of_study": [
+          "Computer Science",
+          "Physics",
+          "Biology",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "ArXiv": "1312.6120",
+          "MAG": "2953334419",
+          "DBLP": "journals/corr/SaxeMG13",
+          "CorpusId": 17272965
+        },
+        "semantic_scholar_id": "99c970348b8f70ce23d6641e201904ea49266b6e",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Network In Network",
+        "authors": [
+          "author-95",
+          "author-96",
+          "author-97"
+        ],
+        "year": 2013,
+        "venue": "venue-9",
+        "citation_count": 6128,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1799366690",
+          "DBLP": "journals/corr/LinCY13",
+          "ArXiv": "1312.4400",
+          "CorpusId": 16636683
+        },
+        "semantic_scholar_id": "5e83ab70d0cbc003471e87ec306d27d9c80ecb16",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Visualizing and Understanding Convolutional Neural Networks",
+        "authors": [
+          "author-98",
+          "author-90"
+        ],
+        "year": 2013,
+        "venue": "",
+        "citation_count": 538,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2206858481",
+          "CorpusId": 62099841
+        },
+        "semantic_scholar_id": "fc26b9c1afe81e1b20195123fe6f3ced9520abb6",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation",
+        "authors": [
+          "author-27",
+          "author-72",
+          "author-43",
+          "author-99"
+        ],
+        "year": 2013,
+        "venue": "venue-15",
+        "citation_count": 25142,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "journals/corr/GirshickDDM13",
+          "MAG": "2951638509",
+          "ArXiv": "1311.2524",
+          "DOI": "10.1109/CVPR.2014.81",
+          "CorpusId": 215827080
+        },
+        "semantic_scholar_id": "2f4df08d9072fc2ac181b7fced6a245315ce05c8",
+        "arxiv_id": null,
+        "doi": "10.1109/CVPR.2014.81",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Maxout Networks",
+        "authors": [
+          "author-100",
+          "author-101",
+          "author-102",
+          "author-103",
+          "author-40"
+        ],
+        "year": 2013,
+        "venue": "venue-3",
+        "citation_count": 2152,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "3037950864",
+          "DBLP": "conf/icml/GoodfellowWMCB13",
+          "ArXiv": "1302.4389",
+          "CorpusId": 10600578
+        },
+        "semantic_scholar_id": "b7b915d508987b73b61eccd2b237e7ed099a2d29",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Pushing Stochastic Gradient towards Second-Order Methods -- Backpropagation Learning with Transformations in Nonlinearities",
+        "authors": [
+          "author-104",
+          "author-105",
+          "author-106",
+          "author-91"
+        ],
+        "year": 2013,
+        "venue": "venue-9",
+        "citation_count": 33,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2953236079",
+          "ArXiv": "1301.3476",
+          "DBLP": "journals/corr/abs-1301-3476",
+          "DOI": "10.1007/978-3-642-42054-2_55",
+          "CorpusId": 8739352
+        },
+        "semantic_scholar_id": "f72c079d9179cfaada1135a7e4c77d48b6309a30",
+        "arxiv_id": null,
+        "doi": "10.1007/978-3-642-42054-2_55",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "ImageNet classification with deep convolutional neural networks",
+        "authors": [
+          "author-107",
+          "author-108",
+          "author-109"
+        ],
+        "year": 2012,
+        "venue": "venue-16",
+        "citation_count": 115800,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2618530766",
+          "DBLP": "conf/nips/KrizhevskySH12",
+          "DOI": "10.1145/3065386",
+          "CorpusId": 195908774
+        },
+        "semantic_scholar_id": "abd1c342495432171beb7ca8fd9551ef13cbd0ff",
+        "arxiv_id": null,
+        "doi": "10.1145/3065386",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Aggregating Local Image Descriptors into Compact Codes",
+        "authors": [
+          "author-110",
+          "author-111",
+          "author-112",
+          "author-113",
+          "author-114",
+          "author-115"
+        ],
+        "year": 2012,
+        "venue": "venue-6",
+        "citation_count": 1598,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science",
+          "Medicine"
+        ],
+        "external_ids": {
+          "DBLP": "journals/pami/JegouPDSPS12",
+          "MAG": "1984309565",
+          "DOI": "10.1109/TPAMI.2011.235",
+          "CorpusId": 9437674,
+          "PubMed": "22156101"
+        },
+        "semantic_scholar_id": "5183230b706b72f6f6c19415c423d93c79ddde53",
+        "arxiv_id": null,
+        "doi": "10.1109/TPAMI.2011.235",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Improving neural networks by preventing co-adaptation of feature detectors",
+        "authors": [
+          "author-109",
+          "author-116",
+          "author-107",
+          "author-108",
+          "author-117"
+        ],
+        "year": 2012,
+        "venue": "venue-8",
+        "citation_count": 7510,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "ArXiv": "1207.0580",
+          "MAG": "1904365287",
+          "DBLP": "journals/corr/abs-1207-0580",
+          "CorpusId": 14832074
+        },
+        "semantic_scholar_id": "0060745e006c5f14ec326904119dca19c6545e51",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Deep Learning Made Easier by Linear Transformations in Perceptrons",
+        "authors": [
+          "author-105",
+          "author-106",
+          "author-91"
+        ],
+        "year": 2012,
+        "venue": "venue-11",
+        "citation_count": 198,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2152424459",
+          "DBLP": "journals/jmlr/RaikoVL12",
+          "CorpusId": 2204994
+        },
+        "semantic_scholar_id": "b8ef1230a5cc9ea7cd8358f1ae7d1af97813ba14",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Vlfeat: an open and portable library of computer vision algorithms",
+        "authors": [
+          "author-118",
+          "author-119"
+        ],
+        "year": 2010,
+        "venue": "venue-13",
+        "citation_count": 3495,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "conf/mm/VedaldiF10",
+          "MAG": "2066941820",
+          "DOI": "10.1145/1873951.1874249",
+          "CorpusId": 1458265
+        },
+        "semantic_scholar_id": "d720a95e1501922ea17ee31f299f43b2db5e15ef",
+        "arxiv_id": null,
+        "doi": "10.1145/1873951.1874249",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Rectified Linear Units Improve Restricted Boltzmann Machines",
+        "authors": [
+          "author-120",
+          "author-109"
+        ],
+        "year": 2010,
+        "venue": "venue-3",
+        "citation_count": 17054,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1665214252",
+          "DBLP": "conf/icml/NairH10",
+          "CorpusId": 15539264
+        },
+        "semantic_scholar_id": "a538b05ebb01a40323997629e171c91aa28b8e2f",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Understanding the difficulty of training deep feedforward neural networks",
+        "authors": [
+          "author-121",
+          "author-40"
+        ],
+        "year": 2010,
+        "venue": "venue-11",
+        "citation_count": 17016,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2606251538",
+          "DBLP": "journals/jmlr/GlorotB10",
+          "CorpusId": 5575601
+        },
+        "semantic_scholar_id": "ea9d2a2b4ce11aaf85136840c65f3bc9c03ab649",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Et al",
+        "authors": [
+          "author-122",
+          "author-123",
+          "author-124"
+        ],
+        "year": 2008,
+        "venue": "venue-17",
+        "citation_count": 71243,
+        "fields_of_study": [
+          "Medicine"
+        ],
+        "external_ids": {
+          "DOI": "10.1136/ebmh.11.4.102",
+          "CorpusId": 11759366,
+          "PubMed": "22365577"
+        },
+        "semantic_scholar_id": "bc6dff14a130c57a91d5a21339c23471faf1d46f",
+        "arxiv_id": null,
+        "doi": "10.1136/ebmh.11.4.102",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Fisher Kernels on Visual Vocabularies for Image Categorization",
+        "authors": [
+          "author-111",
+          "author-125"
+        ],
+        "year": 2007,
+        "venue": "venue-18",
+        "citation_count": 1739,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "2147238549",
+          "DBLP": "conf/cvpr/PerronninD07",
+          "DOI": "10.1109/CVPR.2007.383266",
+          "CorpusId": 12795415
+        },
+        "semantic_scholar_id": "23694b6d61668e62bb11f17c1d75dde3b4951948",
+        "arxiv_id": null,
+        "doi": "10.1109/CVPR.2007.383266",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Locally adapted hierarchical basis preconditioning",
+        "authors": [
+          "author-126"
+        ],
+        "year": 2006,
+        "venue": "venue-19",
+        "citation_count": 122,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "journals/tog/Szeliski06",
+          "MAG": "2022532533",
+          "DOI": "10.1145/1179352.1142005",
+          "CorpusId": 835779
+        },
+        "semantic_scholar_id": "4f04da90218f8ddfa3a758188edade8c7bd95ac1",
+        "arxiv_id": null,
+        "doi": "10.1145/1179352.1142005",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "A multigrid tutorial, Second Edition",
+        "authors": [
+          "author-127",
+          "author-128",
+          "author-129"
+        ],
+        "year": 2000,
+        "venue": "",
+        "citation_count": 1256,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "books/daglib/0002128",
+          "MAG": "1997542937",
+          "DOI": "10.1137/1.9780898719505",
+          "CorpusId": 58982102
+        },
+        "semantic_scholar_id": "1bd875676fe49f83d431500cea908da1bdf068da",
+        "arxiv_id": null,
+        "doi": "10.1137/1.9780898719505",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Accelerated Gradient Descent by Factor-Centering Decomposition",
+        "authors": [
+          "author-130"
+        ],
+        "year": 1998,
+        "venue": "",
+        "citation_count": 31,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2139398462",
+          "DOI": "10.3929/ETHZ-A-004263473",
+          "CorpusId": 14135490
+        },
+        "semantic_scholar_id": "5763bd6b3f24a01c3bc7cd15d3c916b4840b759d",
+        "arxiv_id": null,
+        "doi": "10.3929/ETHZ-A-004263473",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Long Short-Term Memory",
+        "authors": [
+          "author-131",
+          "author-24"
+        ],
+        "year": 1997,
+        "venue": "venue-20",
+        "citation_count": 85705,
+        "fields_of_study": [
+          "Computer Science",
+          "Medicine"
+        ],
+        "external_ids": {
+          "MAG": "2064675550",
+          "DBLP": "journals/neco/HochreiterS97",
+          "DOI": "10.1162/neco.1997.9.8.1735",
+          "CorpusId": 1915014,
+          "PubMed": "9377276"
+        },
+        "semantic_scholar_id": "2e9d221c206e9503ceb452302d68d10e293f2a10",
+        "arxiv_id": null,
+        "doi": "10.1162/neco.1997.9.8.1735",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Modern Applied Statistics with S-Plus.",
+        "authors": [
+          "author-132",
+          "author-133"
+        ],
+        "year": 1996,
+        "venue": "",
+        "citation_count": 4431,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2797624385",
+          "DOI": "10.2307/2532871",
+          "CorpusId": 61844108
+        },
+        "semantic_scholar_id": "1f711685bfe9e67d6afe0d5a3cb6675c310237d6",
+        "arxiv_id": null,
+        "doi": "10.2307/2532871",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Learning long-term dependencies with gradient descent is difficult",
+        "authors": [
+          "author-40",
+          "author-134",
+          "author-135"
+        ],
+        "year": 1994,
+        "venue": "venue-21",
+        "citation_count": 8100,
+        "fields_of_study": [
+          "Medicine",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2107878631",
+          "DBLP": "journals/tnn/BengioSF94",
+          "DOI": "10.1109/72.279181",
+          "CorpusId": 206457500,
+          "PubMed": "18267787"
+        },
+        "semantic_scholar_id": "d0be39ee052d246ae99c082a565aba25b811be2d",
+        "arxiv_id": null,
+        "doi": "10.1109/72.279181",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Backpropagation Applied to Handwritten Zip Code Recognition",
+        "authors": [
+          "author-91",
+          "author-136",
+          "author-137",
+          "author-138",
+          "author-139",
+          "author-140",
+          "author-141"
+        ],
+        "year": 1989,
+        "venue": "venue-20",
+        "citation_count": 10863,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2147800946",
+          "DBLP": "journals/neco/LeCunBDHHHJ89",
+          "DOI": "10.1162/neco.1989.1.4.541",
+          "CorpusId": 41312633
+        },
+        "semantic_scholar_id": "a8e8f3c8d4418c8d62e306538c9c1292635e9d27",
+        "arxiv_id": null,
+        "doi": "10.1162/neco.1989.1.4.541",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Efficient BackProp",
+        "authors": [
+          "author-91",
+          "author-142",
+          "author-143",
+          "author-144"
+        ],
+        "year": 2012,
+        "venue": "venue-22",
+        "citation_count": 3180,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "series/lncs/LeCunBOM12",
+          "MAG": "2783747228",
+          "DOI": "10.1007/978-3-642-35289-8_3",
+          "CorpusId": 20158889
+        },
+        "semantic_scholar_id": "b87274e6d9aa4e6ba5148898aa92941617d2b6ed",
+        "arxiv_id": null,
+        "doi": "10.1007/978-3-642-35289-8_3",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Product Quantization for Nearest Neighbor Search",
+        "authors": [
+          "author-110",
+          "author-112",
+          "author-115"
+        ],
+        "year": 2011,
+        "venue": "venue-6",
+        "citation_count": 2751,
+        "fields_of_study": [
+          "Mathematics",
+          "Medicine",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2124509324",
+          "DBLP": "journals/pami/JegouDS11",
+          "DOI": "10.1109/TPAMI.2010.57",
+          "CorpusId": 5850884,
+          "PubMed": "21088323"
+        },
+        "semantic_scholar_id": "4748d22348e72e6e06c2476486afddbc76e5eca7",
+        "arxiv_id": null,
+        "doi": "10.1109/TPAMI.2010.57",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "The devil is in the details: an evaluation of recent feature encoding methods",
+        "authors": [
+          "author-145",
+          "author-146",
+          "author-147",
+          "author-58"
+        ],
+        "year": 2011,
+        "venue": "venue-23",
+        "citation_count": 948,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1976921161",
+          "DBLP": "conf/bmvc/ChatfieldLVZ11",
+          "DOI": "10.5244/C.25.76",
+          "CorpusId": 13126996
+        },
+        "semantic_scholar_id": "7b7908f71188b89adf62ce9126a0466e1a34338f",
+        "arxiv_id": null,
+        "doi": "10.5244/C.25.76",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Learning Multiple Layers of Features from Tiny Images",
+        "authors": [
+          "author-107"
+        ],
+        "year": 2009,
+        "venue": "",
+        "citation_count": 33181,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2945315962",
+          "CorpusId": 18268744
+        },
+        "semantic_scholar_id": "5d90f06bb70a0a3dced62413346235c02b1aa086",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Centering Neural Network Gradient Factors",
+        "authors": [
+          "author-130"
+        ],
+        "year": 1996,
+        "venue": "venue-22",
+        "citation_count": 62,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2986790716",
+          "DBLP": "conf/nips/Schraudolph96",
+          "DOI": "10.1007/3-540-49430-8_11",
+          "CorpusId": 2226276
+        },
+        "semantic_scholar_id": "75a026ddfdd9c219d69fe8af816f085ea1b3877d",
+        "arxiv_id": null,
+        "doi": "10.1007/3-540-49430-8_11",
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Pattern Recognition and Neural Networks",
+        "authors": [
+          "author-91",
+          "author-148"
+        ],
+        "year": 1995,
+        "venue": "",
+        "citation_count": 4471,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1538142388",
+          "CorpusId": 9584248
+        },
+        "semantic_scholar_id": "bf7e1b6997433dcb2121b07cce1de1c61471ff2d",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "Untersuchungen zu dynamischen neuronalen Netzen",
+        "authors": [
+          "author-149"
+        ],
+        "year": 1991,
+        "venue": "",
+        "citation_count": 766,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "194249466",
+          "CorpusId": 60091947
+        },
+        "semantic_scholar_id": "3f3d13e95c25a8f6a753e38dfce88885097cbd43",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "A multigrid tutorial",
+        "authors": [
+          "author-127"
+        ],
+        "year": 1987,
+        "venue": "",
+        "citation_count": 2648,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "books/daglib/0000904",
+          "MAG": "1530872699",
+          "CorpusId": 33704151
+        },
+        "semantic_scholar_id": "8a2384ff41dc2c337e6aaacbcfd13f74e0e2f1ea",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      },
+      {
+        "title": "International Journal of Computer Vision manuscript No. (will be inserted by the editor) The PASCAL Visual Object Classes (VOC) Challenge",
+        "authors": [],
+        "year": null,
+        "venue": "",
+        "citation_count": 15000,
+        "fields_of_study": null,
+        "external_ids": {
+          "CorpusId": 4246903
+        },
+        "semantic_scholar_id": "3a9b175324ba11bc0e16c0633912d897b2fac4e2",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-2c03df8b48bf3fa39054345bafabfeff15bfd11d-51"
+      }
+    ]
+  },
+  "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518": {
+    "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+    "references": [
+      {
+        "title": "How to train your MAML",
+        "authors": [
+          "author-150",
+          "author-151",
+          "author-152"
+        ],
+        "year": 2018,
+        "venue": "venue-9",
+        "citation_count": 745,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2949277209",
+          "DBLP": "journals/corr/abs-1810-09502",
+          "ArXiv": "1810.09502",
+          "CorpusId": 53036488
+        },
+        "semantic_scholar_id": "239c033b4f5d935e3a0b469d9611823ccec7cb68",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "On First-Order Meta-Learning Algorithms",
+        "authors": [
+          "author-153",
+          "author-154",
+          "author-155"
+        ],
+        "year": 2018,
+        "venue": "venue-8",
+        "citation_count": 2122,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2795900505",
+          "ArXiv": "1803.02999",
+          "DBLP": "journals/corr/abs-1803-02999",
+          "CorpusId": 4587331
+        },
+        "semantic_scholar_id": "90dc22818bd2d97d8deaff168b0137b75a962767",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Meta-SGD: Learning to Learn Quickly for Few Shot Learning",
+        "authors": [
+          "author-156",
+          "author-157",
+          "author-158",
+          "author-159"
+        ],
+        "year": 2017,
+        "venue": "venue-8",
+        "citation_count": 1082,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2742093937",
+          "ArXiv": "1707.09835",
+          "DBLP": "journals/corr/LiZCL17",
+          "CorpusId": 25316837
+        },
+        "semantic_scholar_id": "d33ad6a25264ba1747d8c93f6621c7f90a7ec601",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Prototypical Networks for Few-shot Learning",
+        "authors": [
+          "author-160",
+          "author-161",
+          "author-162"
+        ],
+        "year": 2017,
+        "venue": "venue-5",
+        "citation_count": 7575,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "DBLP": "conf/nips/SnellSZ17",
+          "ArXiv": "1703.05175",
+          "MAG": "2950537964",
+          "CorpusId": 309759
+        },
+        "semantic_scholar_id": "c269858a7bb34e8350f2442ccf37797856ae9bca",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Learning to Remember Rare Events",
+        "authors": [
+          "author-163",
+          "author-164",
+          "author-165",
+          "author-166"
+        ],
+        "year": 2017,
+        "venue": "venue-9",
+        "citation_count": 356,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "ArXiv": "1703.03129",
+          "DBLP": "journals/corr/KaiserNRB17",
+          "MAG": "2583010282",
+          "CorpusId": 12122362
+        },
+        "semantic_scholar_id": "29092f0deaac3898e43b3f094bf15d82b6a99afd",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Attentive Recurrent Comparators",
+        "authors": [
+          "author-167",
+          "author-168",
+          "author-169"
+        ],
+        "year": 2017,
+        "venue": "venue-3",
+        "citation_count": 102,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "journals/corr/ShyamGD17",
+          "ArXiv": "1703.00767",
+          "MAG": "2593331594",
+          "CorpusId": 10939199
+        },
+        "semantic_scholar_id": "a3cd82aeecb75ef339889174706d168c40187d7d",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Meta Networks",
+        "authors": [
+          "author-170",
+          "author-171",
+          "author-172"
+        ],
+        "year": 2017,
+        "venue": "venue-3",
+        "citation_count": 1039,
+        "fields_of_study": [
+          "Medicine",
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "2948974578",
+          "DBLP": "conf/icml/MunkhdalaiY17",
+          "ArXiv": "1703.00837",
+          "CorpusId": 18702258,
+          "PubMed": "31106300"
+        },
+        "semantic_scholar_id": "470d11b8ca4586c930adbbfc3f60bff08f2a0161",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Overcoming catastrophic forgetting in neural networks",
+        "authors": [
+          "author-173",
+          "author-85",
+          "author-174",
+          "author-175",
+          "author-176",
+          "author-177",
+          "author-178",
+          "author-179",
+          "author-180",
+          "author-181",
+          "author-182",
+          "author-183",
+          "author-184",
+          "author-185"
+        ],
+        "year": 2016,
+        "venue": "venue-24",
+        "citation_count": 6737,
+        "fields_of_study": [
+          "Computer Science",
+          "Medicine",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "2560647685",
+          "ArXiv": "1612.00796",
+          "DBLP": "journals/corr/KirkpatrickPRVD16",
+          "DOI": "10.1073/pnas.1611835114",
+          "CorpusId": 4704285,
+          "PubMed": "28292907"
+        },
+        "semantic_scholar_id": "2e55ba6c97ce5eb55abd959909403fe8da7e9fe9",
+        "arxiv_id": null,
+        "doi": "10.1073/pnas.1611835114",
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Learning to reinforcement learn",
+        "authors": [
+          "author-186",
+          "author-187",
+          "author-188",
+          "author-189",
+          "author-190",
+          "author-191",
+          "author-192",
+          "author-184",
+          "author-193"
+        ],
+        "year": 2016,
+        "venue": "venue-25",
+        "citation_count": 946,
+        "fields_of_study": [
+          "Mathematics",
+          "Psychology",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2550182557",
+          "DBLP": "journals/corr/WangKTSLMBKB16",
+          "ArXiv": "1611.05763",
+          "CorpusId": 13623631
+        },
+        "semantic_scholar_id": "282a380fb5ac26d99667224cef8c630f6882704f",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "One-Shot Video Object Segmentation",
+        "authors": [
+          "author-194",
+          "author-195",
+          "author-196",
+          "author-197",
+          "author-198",
+          "author-199"
+        ],
+        "year": 2016,
+        "venue": "venue-10",
+        "citation_count": 887,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "journals/corr/CaellesMPLCG16",
+          "MAG": "2952498040",
+          "ArXiv": "1611.05198",
+          "DOI": "10.1109/CVPR.2017.565",
+          "CorpusId": 5381099
+        },
+        "semantic_scholar_id": "cb1c0d6be4c22c1f18b0ba20dddd93890f17add6",
+        "arxiv_id": null,
+        "doi": "10.1109/CVPR.2017.565",
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Optimization as a Model for Few-Shot Learning",
+        "authors": [
+          "author-200",
+          "author-201"
+        ],
+        "year": 2016,
+        "venue": "venue-9",
+        "citation_count": 3309,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2753160622",
+          "DBLP": "conf/iclr/RaviL17",
+          "CorpusId": 67413369
+        },
+        "semantic_scholar_id": "29c887794eed2ca9462638ff853e6fe1ab91d5d8",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "RL$^2$: Fast Reinforcement Learning via Slow Reinforcement Learning",
+        "authors": [
+          "author-202",
+          "author-155",
+          "author-203",
+          "author-204",
+          "author-108",
+          "author-205"
+        ],
+        "year": 2016,
+        "venue": "venue-8",
+        "citation_count": 977,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "2578206533",
+          "DBLP": "journals/corr/DuanSCBSA16",
+          "ArXiv": "1611.02779",
+          "CorpusId": 14763001
+        },
+        "semantic_scholar_id": "954b01151ff13aef416d27adc60cd9a076753b1a",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Using Fast Weights to Attend to the Recent Past",
+        "authors": [
+          "author-206",
+          "author-109",
+          "author-207",
+          "author-208",
+          "author-209"
+        ],
+        "year": 2016,
+        "venue": "venue-5",
+        "citation_count": 254,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "2535697732",
+          "DBLP": "conf/nips/BaHMLI16",
+          "ArXiv": "1610.06258",
+          "CorpusId": 568305
+        },
+        "semantic_scholar_id": "c91ae35dbcb6d479580ecd235eabf98374acdb55",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "HyperNetworks",
+        "authors": [
+          "author-210",
+          "author-211",
+          "author-212",
+          "author-213"
+        ],
+        "year": 2016,
+        "venue": "venue-9",
+        "citation_count": 1487,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2884340900",
+          "ArXiv": "1609.09106",
+          "DBLP": "conf/iclr/HaDL17",
+          "CorpusId": 208981547
+        },
+        "semantic_scholar_id": "563783de03452683a9206e85fe6d661714436686",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Evolvability Search: Directly Selecting for Evolvability in order to Study and Produce It",
+        "authors": [
+          "author-214",
+          "author-215",
+          "author-216"
+        ],
+        "year": 2016,
+        "venue": "venue-26",
+        "citation_count": 32,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2482817076",
+          "DBLP": "conf/gecco/MengistuLC16",
+          "DOI": "10.1145/2908812.2908838",
+          "CorpusId": 14987344
+        },
+        "semantic_scholar_id": "26ae046d8d8bf5b3721734a3cf441f6d204bb6d7",
+        "arxiv_id": null,
+        "doi": "10.1145/2908812.2908838",
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Meta-Learning with Memory-Augmented Neural Networks",
+        "authors": [
+          "author-217",
+          "author-218",
+          "author-219",
+          "author-220",
+          "author-221"
+        ],
+        "year": 2016,
+        "venue": "venue-3",
+        "citation_count": 1731,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "conf/icml/SantoroBBWL16",
+          "MAG": "2472819217",
+          "CorpusId": 6466088
+        },
+        "semantic_scholar_id": "3904315e2eca50d0086e4b7273f7fd707c652230",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Learning to learn by gradient descent by gradient descent",
+        "authors": [
+          "author-222",
+          "author-223",
+          "author-224",
+          "author-225",
+          "author-226",
+          "author-227",
+          "author-228",
+          "author-229"
+        ],
+        "year": 2016,
+        "venue": "venue-5",
+        "citation_count": 1935,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2427497464",
+          "DBLP": "conf/nips/AndrychowiczDCH16",
+          "ArXiv": "1606.04474",
+          "CorpusId": 2928017
+        },
+        "semantic_scholar_id": "71683e224ab91617950956b5005ed0439a733a71",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Matching Networks for One Shot Learning",
+        "authors": [
+          "author-230",
+          "author-192",
+          "author-221",
+          "author-231",
+          "author-220"
+        ],
+        "year": 2016,
+        "venue": "venue-5",
+        "citation_count": 6952,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "2432717477",
+          "DBLP": "journals/corr/VinyalsBLKW16",
+          "ArXiv": "1606.04080",
+          "CorpusId": 8909022
+        },
+        "semantic_scholar_id": "be1bb4e4aa1fcf70281b4bd24d8cd31c04864bb6",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Towards a Neural Statistician",
+        "authors": [
+          "author-151",
+          "author-152"
+        ],
+        "year": 2016,
+        "venue": "venue-9",
+        "citation_count": 416,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "DBLP": "journals/corr/EdwardsS16",
+          "MAG": "2412589713",
+          "ArXiv": "1606.02185",
+          "CorpusId": 4994434
+        },
+        "semantic_scholar_id": "405c31c85a324942811f3c9dc53ce3528f9284df",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Learning to Optimize",
+        "authors": [
+          "author-232",
+          "author-233"
+        ],
+        "year": 2016,
+        "venue": "venue-9",
+        "citation_count": 229,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "3093116395",
+          "ArXiv": "1606.01885",
+          "DBLP": "conf/iclr/LiM17",
+          "CorpusId": 13395552
+        },
+        "semantic_scholar_id": "ead9a671428631e44f6fe49324efe69da628bc47",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Benchmarking Deep Reinforcement Learning for Continuous Control",
+        "authors": [
+          "author-202",
+          "author-234",
+          "author-235",
+          "author-155",
+          "author-205"
+        ],
+        "year": 2016,
+        "venue": "venue-3",
+        "citation_count": 1650,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "2342662072",
+          "DBLP": "conf/icml/DuanCHSA16",
+          "ArXiv": "1604.06778",
+          "CorpusId": 12296499
+        },
+        "semantic_scholar_id": "1464776f20e2bccb6182f183b5ff2e15b0ae5e56",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "One-Shot Generalization in Deep Generative Models",
+        "authors": [
+          "author-236",
+          "author-237",
+          "author-238",
+          "author-239",
+          "author-220"
+        ],
+        "year": 2016,
+        "venue": "venue-3",
+        "citation_count": 252,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "2949247522",
+          "DBLP": "journals/corr/RezendeMDGW16",
+          "ArXiv": "1603.05106",
+          "CorpusId": 5985692
+        },
+        "semantic_scholar_id": "0811597b0851b7ebe21aadce7cb4daac4664b44f",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems",
+        "authors": [
+          "author-240",
+          "author-241",
+          "author-242",
+          "author-243",
+          "author-244",
+          "author-245",
+          "author-246",
+          "author-247",
+          "author-248",
+          "author-249",
+          "author-250",
+          "author-100",
+          "author-251",
+          "author-252",
+          "author-253",
+          "author-50",
+          "author-254",
+          "author-163",
+          "author-255",
+          "author-256",
+          "author-257",
+          "author-258",
+          "author-259",
+          "author-260",
+          "author-261",
+          "author-262",
+          "author-263",
+          "author-264",
+          "author-108",
+          "author-265",
+          "author-266",
+          "author-55",
+          "author-267",
+          "author-268",
+          "author-230",
+          "author-269",
+          "author-270",
+          "author-271",
+          "author-272",
+          "author-273"
+        ],
+        "year": 2016,
+        "venue": "venue-8",
+        "citation_count": 10925,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2271840356",
+          "DBLP": "journals/corr/AbadiABBCCCDDDG16",
+          "ArXiv": "1603.04467",
+          "CorpusId": 5707386
+        },
+        "semantic_scholar_id": "9c9d7247f8c51ec5a02b0d911d1d7b9e8160495d",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks",
+        "authors": [
+          "author-274",
+          "author-275"
+        ],
+        "year": 2016,
+        "venue": "venue-5",
+        "citation_count": 1864,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2284050935",
+          "DBLP": "conf/nips/SalimansK16",
+          "ArXiv": "1602.07868",
+          "CorpusId": 151231
+        },
+        "semantic_scholar_id": "3d2c6941a9b4608ba52b328369a3352db2092ae0",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Data-dependent Initializations of Convolutional Neural Networks",
+        "authors": [
+          "author-276",
+          "author-277",
+          "author-72",
+          "author-43"
+        ],
+        "year": 2015,
+        "venue": "venue-9",
+        "citation_count": 201,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2287334441",
+          "ArXiv": "1511.06856",
+          "DBLP": "journals/corr/KrahenbuhlDDD15",
+          "CorpusId": 9665723
+        },
+        "semantic_scholar_id": "c3af47db3186691270192d5399bb5259e05c87a7",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Actor-Mimic: Deep Multitask and Transfer Reinforcement Learning",
+        "authors": [
+          "author-278",
+          "author-206",
+          "author-117"
+        ],
+        "year": 2015,
+        "venue": "venue-9",
+        "citation_count": 578,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "2174786457",
+          "ArXiv": "1511.06342",
+          "DBLP": "journals/corr/ParisottoBS15",
+          "CorpusId": 8241258
+        },
+        "semantic_scholar_id": "1def5d3711ebd1d86787b1ed57c91832c5ddc90b",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Online Representation Learning in Recurrent Neural Language Models",
+        "authors": [
+          "author-279"
+        ],
+        "year": 2015,
+        "venue": "venue-27",
+        "citation_count": 12,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1801199632",
+          "ArXiv": "1508.03854",
+          "ACL": "D15-1026",
+          "DBLP": "journals/corr/Rei15",
+          "DOI": "10.18653/v1/D15-1026",
+          "CorpusId": 10915836
+        },
+        "semantic_scholar_id": "a40a55bfd25c8ef69c27a02073f34a194b4e9124",
+        "arxiv_id": null,
+        "doi": "10.18653/v1/D15-1026",
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Trust Region Policy Optimization",
+        "authors": [
+          "author-155",
+          "author-280",
+          "author-205",
+          "author-281",
+          "author-282"
+        ],
+        "year": 2015,
+        "venue": "venue-3",
+        "citation_count": 6418,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "1771410628",
+          "DBLP": "journals/corr/SchulmanLMJA15",
+          "ArXiv": "1502.05477",
+          "CorpusId": 16046818
+        },
+        "semantic_scholar_id": "449532187c94af3dd3aa55e16d2c50f7854d2199",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Gradient-based Hyperparameter Optimization through Reversible Learning",
+        "authors": [
+          "author-283",
+          "author-284",
+          "author-285"
+        ],
+        "year": 2015,
+        "venue": "venue-3",
+        "citation_count": 921,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1868018859",
+          "DBLP": "conf/icml/MaclaurinDA15",
+          "ArXiv": "1502.03492",
+          "CorpusId": 8540522
+        },
+        "semantic_scholar_id": "e2820bffe5b42cb7d88b7f65c12171c62ab4aae2",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+        "authors": [
+          "author-33",
+          "author-34"
+        ],
+        "year": 2015,
+        "venue": "venue-3",
+        "citation_count": 41969,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2949117887",
+          "DBLP": "journals/corr/IoffeS15",
+          "ArXiv": "1502.03167",
+          "CorpusId": 5808102
+        },
+        "semantic_scholar_id": "995c5f5e62614fcb4d2796ad2faab969da51713e",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Adam: A Method for Stochastic Optimization",
+        "authors": [
+          "author-275",
+          "author-206"
+        ],
+        "year": 2014,
+        "venue": "venue-9",
+        "citation_count": 144285,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2964121744",
+          "DBLP": "journals/corr/KingmaB14",
+          "ArXiv": "1412.6980",
+          "CorpusId": 6628106
+        },
+        "semantic_scholar_id": "a6cb366736791bcccc5c8639de5a8f9636bf87e8",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Explaining and Harnessing Adversarial Examples",
+        "authors": [
+          "author-100",
+          "author-263",
+          "author-34"
+        ],
+        "year": 2014,
+        "venue": "venue-9",
+        "citation_count": 17926,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "2952181735",
+          "DBLP": "journals/corr/GoodfellowSS14",
+          "ArXiv": "1412.6572",
+          "CorpusId": 6706414
+        },
+        "semantic_scholar_id": "bee044c8e8903fb67523c1f8c105ab4718600cdb",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+        "authors": [
+          "author-92",
+          "author-93",
+          "author-94"
+        ],
+        "year": 2013,
+        "venue": "venue-9",
+        "citation_count": 1775,
+        "fields_of_study": [
+          "Computer Science",
+          "Physics",
+          "Biology",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "ArXiv": "1312.6120",
+          "MAG": "2953334419",
+          "DBLP": "journals/corr/SaxeMG13",
+          "CorpusId": 17272965
+        },
+        "semantic_scholar_id": "99c970348b8f70ce23d6641e201904ea49266b6e",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "DeCAF: A Deep Convolutional Activation Feature for Generic Visual Recognition",
+        "authors": [
+          "author-72",
+          "author-50",
+          "author-230",
+          "author-286",
+          "author-287",
+          "author-288",
+          "author-43"
+        ],
+        "year": 2013,
+        "venue": "venue-3",
+        "citation_count": 4892,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "journals/corr/DonahueJVHZTD13",
+          "MAG": "2155541015",
+          "ArXiv": "1310.1531",
+          "CorpusId": 6161478
+        },
+        "semantic_scholar_id": "b8de958fead0d8a9619b55c7299df3257c624a96",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "MuJoCo: A physics engine for model-based control",
+        "authors": [
+          "author-289",
+          "author-290",
+          "author-291"
+        ],
+        "year": 2012,
+        "venue": "venue-28",
+        "citation_count": 5273,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "conf/iros/TodorovET12",
+          "MAG": "2158782408",
+          "DOI": "10.1109/IROS.2012.6386109",
+          "CorpusId": 5230692
+        },
+        "semantic_scholar_id": "b354ee518bfc1ac0d8ac447eece9edb69e92eae1",
+        "arxiv_id": null,
+        "doi": "10.1109/IROS.2012.6386109",
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Meta-neural networks that learn by learning",
+        "authors": [
+          "author-292",
+          "author-293"
+        ],
+        "year": 1992,
+        "venue": "venue-29",
+        "citation_count": 202,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2140804329",
+          "DOI": "10.1109/IJCNN.1992.287172",
+          "CorpusId": 61444551
+        },
+        "semantic_scholar_id": "b64e846fe88acaf302248249696c3b7badde41b5",
+        "arxiv_id": null,
+        "doi": "10.1109/IJCNN.1992.287172",
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks",
+        "authors": [
+          "author-24"
+        ],
+        "year": 1992,
+        "venue": "venue-20",
+        "citation_count": 452,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "tr/tum/FKI-147-91",
+          "MAG": "2089217417",
+          "DOI": "10.1162/neco.1992.4.1.131",
+          "CorpusId": 16683347
+        },
+        "semantic_scholar_id": "bc22e87a26d020215afe91c751e5bdaddd8e4922",
+        "arxiv_id": null,
+        "doi": "10.1162/neco.1992.4.1.131",
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Learning a synaptic learning rule",
+        "authors": [
+          "author-148",
+          "author-166",
+          "author-294"
+        ],
+        "year": 1991,
+        "venue": "venue-30",
+        "citation_count": 371,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2123399796",
+          "DOI": "10.1109/IJCNN.1991.155621",
+          "CorpusId": 1734973
+        },
+        "semantic_scholar_id": "d130325c41947a41a55a4431e9e8e15be89da8ea",
+        "arxiv_id": null,
+        "doi": "10.1109/IJCNN.1991.155621",
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Learning how to learn",
+        "authors": [
+          "author-295",
+          "author-296",
+          "author-297"
+        ],
+        "year": 2019,
+        "venue": "",
+        "citation_count": 2109,
+        "fields_of_study": [
+          "Psychology"
+        ],
+        "external_ids": {
+          "MAG": "2955591235",
+          "DOI": "10.1007/978-1-4419-1428-6_4666",
+          "CorpusId": 11974053
+        },
+        "semantic_scholar_id": "44b6da0cd36c0fa2f7d3485c6dc0b6d2fbe379bb",
+        "arxiv_id": null,
+        "doi": "10.1007/978-1-4419-1428-6_4666",
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+        "authors": [],
+        "year": 2017,
+        "venue": "",
+        "citation_count": 66,
+        "fields_of_study": null,
+        "external_ids": {
+          "CorpusId": 260456700
+        },
+        "semantic_scholar_id": "1b4995b61b60793866a59065f69f76f2f6571f09",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "International Conference on Learning Representations (ICLR)",
+        "authors": [
+          "author-298",
+          "author-299",
+          "author-300"
+        ],
+        "year": 2016,
+        "venue": "",
+        "citation_count": 598,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2593390416",
+          "CorpusId": 63450092
+        },
+        "semantic_scholar_id": "f1aeb751d9cefc9d784d8862562f5a3fe15821ae",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Siamese Neural Networks for One-Shot Image Recognition",
+        "authors": [
+          "author-301",
+          "author-302",
+          "author-303"
+        ],
+        "year": 2015,
+        "venue": "",
+        "citation_count": 4023,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "3091905774",
+          "CorpusId": 13874643
+        },
+        "semantic_scholar_id": "f216444d4f2959b4520c61d20003fa30a199670a",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "One shot learning of simple visual concepts",
+        "authors": [
+          "author-304",
+          "author-117",
+          "author-305",
+          "author-306"
+        ],
+        "year": 2011,
+        "venue": "venue-25",
+        "citation_count": 829,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "conf/cogsci/LakeSGT11",
+          "MAG": "2401823607",
+          "CorpusId": 15373038
+        },
+        "semantic_scholar_id": "100a038fdf29b4b20801887f0ec40e3f10d9a4f9",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "On the Optimization of a Synaptic Learning Rule",
+        "authors": [
+          "author-166",
+          "author-40",
+          "author-294",
+          "author-307"
+        ],
+        "year": 2007,
+        "venue": "",
+        "citation_count": 279,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1598377843",
+          "CorpusId": 28783413
+        },
+        "semantic_scholar_id": "8784f905f4f9fb6fa4a3cc9b0faa5b5479c687ec",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Fast learning for problem classes using knowledge based network initialization",
+        "authors": [
+          "author-308",
+          "author-309"
+        ],
+        "year": 2000,
+        "venue": "venue-31",
+        "citation_count": 24,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "conf/ijcnn/HuskenG00",
+          "MAG": "2137310197",
+          "DOI": "10.1109/IJCNN.2000.859464",
+          "CorpusId": 11171160
+        },
+        "semantic_scholar_id": "946ec39029db3ae6f9a1b3ce13fb3f4a7d37bb5e",
+        "arxiv_id": null,
+        "doi": "10.1109/IJCNN.2000.859464",
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Using fast weights to deblur old memories",
+        "authors": [
+          "author-109"
+        ],
+        "year": 1987,
+        "venue": "",
+        "citation_count": 257,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1525859397",
+          "CorpusId": 16710884
+        },
+        "semantic_scholar_id": "7257eacd80458e70c74494eb1b6759b52ff21399",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Evolutionary principles in self-referential learning, or on learning how to learn: The meta-meta-. hook",
+        "authors": [
+          "author-310"
+        ],
+        "year": 1987,
+        "venue": "",
+        "citation_count": 722,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "phd/de/Schmidhuber09",
+          "CorpusId": 264351059
+        },
+        "semantic_scholar_id": "bdaec1b3eb9a8f7a2b296be009a148c35236f3ce",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      },
+      {
+        "title": "Learning curves for stochastic gradient descent in linear feedforward networks",
+        "authors": [
+          "author-311",
+          "author-312",
+          "author-313",
+          "author-314"
+        ],
+        "year": null,
+        "venue": "",
+        "citation_count": 412,
+        "fields_of_study": null,
+        "external_ids": {
+          "CorpusId": 52872549
+        },
+        "semantic_scholar_id": "a6bcf0e9b5034c4c9cbea839baadd69a42b05cc1",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-c889d6f98e6d79b89c3a6adf8a921f88fa6ba518-48"
+      }
+    ]
+  },
+  "20f0357688876fa4662f806f985779dce6e24f3c": {
+    "title": "Transforming Auto-Encoders",
+    "references": [
+      {
+        "title": "Rectified Linear Units Improve Restricted Boltzmann Machines",
+        "authors": [
+          "author-120",
+          "author-109"
+        ],
+        "year": 2010,
+        "venue": "venue-3",
+        "citation_count": 17054,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "1665214252",
+          "DBLP": "conf/icml/NairH10",
+          "CorpusId": 15539264
+        },
+        "semantic_scholar_id": "a538b05ebb01a40323997629e171c91aa28b8e2f",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "Learning to Represent Spatial Transformations with Factored Higher-Order Boltzmann Machines",
+        "authors": [
+          "author-315",
+          "author-109"
+        ],
+        "year": 2010,
+        "venue": "venue-20",
+        "citation_count": 283,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science",
+          "Medicine"
+        ],
+        "external_ids": {
+          "DBLP": "journals/neco/MemisevicH10",
+          "MAG": "2136163184",
+          "DOI": "10.1162/neco.2010.01-09-953",
+          "CorpusId": 1413690,
+          "PubMed": "20141471"
+        },
+        "semantic_scholar_id": "0eb2e4a205a628ab059cab41d3b772f614ad29f2",
+        "arxiv_id": null,
+        "doi": "10.1162/neco.2010.01-09-953",
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "Understanding the difficulty of training deep feedforward neural networks",
+        "authors": [
+          "author-121",
+          "author-40"
+        ],
+        "year": 2010,
+        "venue": "venue-11",
+        "citation_count": 17016,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2606251538",
+          "DBLP": "journals/jmlr/GlorotB10",
+          "CorpusId": 5575601
+        },
+        "semantic_scholar_id": "ea9d2a2b4ce11aaf85136840c65f3bc9c03ab649",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "A Model Analysis of Arterial Oxygen Desaturation during Apnea in Preterm Infants",
+        "authors": [
+          "author-316",
+          "author-317",
+          "author-318",
+          "author-319",
+          "author-320",
+          "author-321"
+        ],
+        "year": 2009,
+        "venue": "venue-32",
+        "citation_count": 125,
+        "fields_of_study": [
+          "Medicine",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "PubMedCentral": "2778953",
+          "MAG": "2025266810",
+          "DBLP": "journals/ploscb/SandsEKDWB09",
+          "DOI": "10.1371/journal.pcbi.1000588",
+          "CorpusId": 5921352,
+          "PubMed": "19997495"
+        },
+        "semantic_scholar_id": "4b25105f82cc372e0db5fb5b44a15b48cd6413cc",
+        "arxiv_id": null,
+        "doi": "10.1371/journal.pcbi.1000588",
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "A Structured Model of Video Reproduces Primary Visual Cortical Organisation",
+        "authors": [
+          "author-322",
+          "author-323",
+          "author-324"
+        ],
+        "year": 2009,
+        "venue": "venue-32",
+        "citation_count": 45,
+        "fields_of_study": [
+          "Medicine",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "PubMedCentral": "2726939",
+          "MAG": "2059277419",
+          "DBLP": "journals/ploscb/BerkesTS09",
+          "DOI": "10.1371/journal.pcbi.1000495",
+          "CorpusId": 376997,
+          "PubMed": "19730679"
+        },
+        "semantic_scholar_id": "a7e5f1c143329c30d2dff82e61328c484ac2d747",
+        "arxiv_id": null,
+        "doi": "10.1371/journal.pcbi.1000495",
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations",
+        "authors": [
+          "author-325",
+          "author-326",
+          "author-327",
+          "author-328"
+        ],
+        "year": 2009,
+        "venue": "venue-3",
+        "citation_count": 2673,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2130325614",
+          "DBLP": "conf/icml/LeeGRN09",
+          "DOI": "10.1145/1553374.1553453",
+          "CorpusId": 12008458
+        },
+        "semantic_scholar_id": "1e80f755bcbf10479afd2338cec05211fdbd325c",
+        "arxiv_id": null,
+        "doi": "10.1145/1553374.1553453",
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "The uncrowded window of object recognition",
+        "authors": [
+          "author-329",
+          "author-330"
+        ],
+        "year": 2008,
+        "venue": "venue-33",
+        "citation_count": 653,
+        "fields_of_study": [
+          "Psychology",
+          "Medicine"
+        ],
+        "external_ids": {
+          "MAG": "1994166112",
+          "DOI": "10.1038/nn.2187",
+          "CorpusId": 6042921,
+          "PubMed": "18828191"
+        },
+        "semantic_scholar_id": "06adae42f8c6bf2cd733db8515b1711cfed67ad1",
+        "arxiv_id": null,
+        "doi": "10.1038/nn.2187",
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "Unsupervised Learning of Invariant Feature Hierarchies with Applications to Object Recognition",
+        "authors": [
+          "author-331",
+          "author-332",
+          "author-333",
+          "author-91"
+        ],
+        "year": 2007,
+        "venue": "venue-18",
+        "citation_count": 1171,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "conf/cvpr/RanzatoHBL07",
+          "MAG": "2139427956",
+          "DOI": "10.1109/CVPR.2007.383157",
+          "CorpusId": 11398758
+        },
+        "semantic_scholar_id": "ccd52aff02b0f902f4ce7247c4fee7273014c41c",
+        "arxiv_id": null,
+        "doi": "10.1109/CVPR.2007.383157",
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "Invariant visual representation by single neurons in the human brain",
+        "authors": [
+          "author-334",
+          "author-335",
+          "author-336",
+          "author-337",
+          "author-338"
+        ],
+        "year": 2005,
+        "venue": "venue-34",
+        "citation_count": 1782,
+        "fields_of_study": [
+          "Physics",
+          "Medicine"
+        ],
+        "external_ids": {
+          "MAG": "2101295242",
+          "DOI": "10.1038/nature03687",
+          "CorpusId": 1234637,
+          "PubMed": "15973409"
+        },
+        "semantic_scholar_id": "4d6109548fab119d5edfb7a77b63eb10ca58f4a4",
+        "arxiv_id": null,
+        "doi": "10.1038/nature03687",
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "Hierarchical models of object recognition in cortex",
+        "authors": [
+          "author-339",
+          "author-340"
+        ],
+        "year": 1999,
+        "venue": "venue-33",
+        "citation_count": 3577,
+        "fields_of_study": [
+          "Psychology",
+          "Medicine"
+        ],
+        "external_ids": {
+          "MAG": "2149194912",
+          "DOI": "10.1038/14819",
+          "CorpusId": 8920227,
+          "PubMed": "10526343"
+        },
+        "semantic_scholar_id": "85abadb689897997f1e37baa7b5fc6f7d497518b",
+        "arxiv_id": null,
+        "doi": "10.1038/14819",
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "Object recognition from local scale-invariant features",
+        "authors": [
+          "author-341"
+        ],
+        "year": 1999,
+        "venue": "venue-35",
+        "citation_count": 17977,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "conf/iccv/Lowe99",
+          "MAG": "2124386111",
+          "DOI": "10.1109/ICCV.1999.790410",
+          "CorpusId": 5258236
+        },
+        "semantic_scholar_id": "f9f836d28f52ad260213d32224a6d227f8e8849a",
+        "arxiv_id": null,
+        "doi": "10.1109/ICCV.1999.790410",
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "The Design and Use of Steerable Filters",
+        "authors": [
+          "author-342",
+          "author-343"
+        ],
+        "year": 1991,
+        "venue": "venue-6",
+        "citation_count": 3461,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "1991605728",
+          "DBLP": "journals/pami/FreemanA91",
+          "DOI": "10.1109/34.93808",
+          "CorpusId": 29187618
+        },
+        "semantic_scholar_id": "993b1083455b5c4d631eaf44f230b061994e75c3",
+        "arxiv_id": null,
+        "doi": "10.1109/34.93808",
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "Shape Representation in Parallel Systems",
+        "authors": [
+          "author-109"
+        ],
+        "year": 1981,
+        "venue": "venue-36",
+        "citation_count": 111,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "179212727",
+          "DBLP": "conf/ijcai/Hinton81",
+          "CorpusId": 9041037
+        },
+        "semantic_scholar_id": "272cb3db246145e13f8db4acbe1d2eae088c7677",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "Gradient-based learning applied to document recognition",
+        "authors": [
+          "author-91",
+          "author-142",
+          "author-40",
+          "author-344"
+        ],
+        "year": 1998,
+        "venue": "venue-37",
+        "citation_count": 51812,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2112796928",
+          "DBLP": "journals/pieee/LeCunBBH98",
+          "DOI": "10.1109/5.726791",
+          "CorpusId": 14542261
+        },
+        "semantic_scholar_id": "162d958ff885f1462aeda91cd72582323fd6a1f4",
+        "arxiv_id": null,
+        "doi": "10.1109/5.726791",
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      },
+      {
+        "title": "TRAFFIC: Recognizing Objects Using Hierarchical Reference Frame Transformations",
+        "authors": [
+          "author-162",
+          "author-345",
+          "author-109"
+        ],
+        "year": 1989,
+        "venue": "venue-5",
+        "citation_count": 24,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "DBLP": "conf/nips/ZemelMH89",
+          "MAG": "2110803095",
+          "CorpusId": 15353397
+        },
+        "semantic_scholar_id": "5b00ab8cc5a56ee934618bd7555965185a7f83ec",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-20f0357688876fa4662f806f985779dce6e24f3c-15"
+      }
+    ]
+  }
+}

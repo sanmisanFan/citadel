@@ -74,7 +74,7 @@ def summarize_pdf(pdf_path):
 
 def main():
     pdf_folder = "reference_papers"
-    output_file = "pdf_summaries.json"
+    output_file = "outputs/pdf_summaries.json"
     
     # Gather all PDF files in the folder.
     pdf_files = [f for f in os.listdir(pdf_folder) if f.lower().endswith(".pdf")]
@@ -87,8 +87,11 @@ def main():
         
         summary = summarize_pdf(pdf_path)
         
+        # Remove .pdf extension for reference name
+        reference_name = os.path.splitext(pdf_file)[0]
+        
         results.append({
-            "file_name": pdf_file,
+            "reference": reference_name,
             "summary": summary
         })
     

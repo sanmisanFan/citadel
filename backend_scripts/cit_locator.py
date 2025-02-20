@@ -125,7 +125,7 @@ def annotate_pdf(pdf_path, results, output_pdf_path):
 if __name__ == "__main__":
     # Define your file paths.
     pdf_path = "test.pdf"                   # Path to your PDF file
-    json_path = "reference_mentions.json"   # Path to your JSON file (new format)
+    json_path = "outputs/reference_mentions.json"   # Path to your JSON file (new format)
     output_pdf_path = "annotated_test.pdf"    # Path for the annotated PDF output
 
     # Load the JSON file.
