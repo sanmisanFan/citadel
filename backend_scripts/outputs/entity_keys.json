@@ -1,0 +1,3096 @@
+{
+  "authors": {
+    "author-1": {
+      "name": "Alex Krizhevsky",
+      "orcid": null
+    },
+    "author-2": {
+      "name": "Ilya Sutskever",
+      "orcid": null
+    },
+    "author-3": {
+      "name": "Geoffrey E. Hinton",
+      "orcid": null
+    },
+    "author-4": {
+      "name": "Kaiming He",
+      "orcid": "https://orcid.org/0000-0001-7318-9658"
+    },
+    "author-5": {
+      "name": "Xiangyu Zhang",
+      "orcid": "https://orcid.org/0000-0003-2138-4608"
+    },
+    "author-6": {
+      "name": "Shaoqing Ren",
+      "orcid": null
+    },
+    "author-7": {
+      "name": "Jian Sun",
+      "orcid": "https://orcid.org/0000-0002-6178-4166"
+    },
+    "author-8": {
+      "name": "Chelsea Finn",
+      "orcid": "https://orcid.org/0000-0001-6298-0874"
+    },
+    "author-9": {
+      "name": "Pieter Abbeel",
+      "orcid": null
+    },
+    "author-10": {
+      "name": "Sergey Levine",
+      "orcid": "https://orcid.org/0000-0001-6764-2743"
+    },
+    "author-11": {
+      "name": "Muhammad Abdullah Jamal",
+      "s2_id": "34902211",
+      "orcid": null,
+      "raw_name": "M. A. Jamal"
+    },
+    "author-12": {
+      "name": "Guo-Jun Qi",
+      "s2_id": "2272096",
+      "orcid": "https://orcid.org/0000-0003-3508-1851",
+      "raw_name": "G.-J. Qi"
+    },
+    "author-13": {
+      "name": "M. Shah",
+      "s2_id": "145103012",
+      "orcid": null,
+      "raw_name": "M. Shah"
+    },
+    "author-14": {
+      "name": "Xinzhe Li",
+      "orcid": "https://orcid.org/0000-0002-5547-8293"
+    },
+    "author-15": {
+      "name": "Qianru Sun",
+      "orcid": "https://orcid.org/0000-0003-2689-317X"
+    },
+    "author-16": {
+      "name": "Yaoyao Liu",
+      "orcid": "https://orcid.org/0000-0002-5316-3028"
+    },
+    "author-17": {
+      "name": "Qin Zhou",
+      "orcid": "https://orcid.org/0000-0002-0082-1330"
+    },
+    "author-18": {
+      "name": "Shibao Zheng",
+      "orcid": null
+    },
+    "author-19": {
+      "name": "Tat‐Seng Chua",
+      "orcid": "https://orcid.org/0000-0001-6097-7807"
+    },
+    "author-20": {
+      "name": "Bernt Schiele",
+      "orcid": "https://orcid.org/0000-0001-9683-5237"
+    },
+    "author-21": {
+      "name": "A. Krizhevsky",
+      "s2_id": "2064160",
+      "orcid": null,
+      "raw_name": "A. Krizhevsky"
+    },
+    "author-22": {
+      "name": "Sida I. Wang",
+      "s2_id": "8729431",
+      "orcid": "https://orcid.org/0000-0003-3625-3459",
+      "raw_name": "S. D. Wang"
+    },
+    "author-23": {
+      "name": "Hassam Sheikh",
+      "s2_id": "21479306",
+      "orcid": null,
+      "raw_name": "Hassam Sheikh",
+      "key": "author-23"
+    },
+    "author-24": {
+      "name": "Ladislau Bölöni",
+      "s2_id": "1701593",
+      "orcid": null,
+      "raw_name": "Ladislau Bölöni",
+      "key": "author-24"
+    },
+    "author-25": {
+      "name": "Alex Nichol",
+      "s2_id": "38967461",
+      "orcid": null,
+      "raw_name": "Alex Nichol",
+      "key": "author-25"
+    },
+    "author-26": {
+      "name": "Joshua Achiam",
+      "s2_id": "3381809",
+      "orcid": null,
+      "raw_name": "Joshua Achiam",
+      "key": "author-26"
+    },
+    "author-27": {
+      "name": "John Schulman",
+      "s2_id": "47971768",
+      "orcid": null,
+      "raw_name": "John Schulman",
+      "key": "author-27"
+    },
+    "author-28": {
+      "name": "Erin Grant",
+      "s2_id": "145557445",
+      "orcid": null,
+      "raw_name": "Erin Grant",
+      "key": "author-28"
+    },
+    "author-29": {
+      "name": "Chelsea Finn",
+      "s2_id": "46881670",
+      "orcid": null,
+      "raw_name": "Chelsea Finn",
+      "key": "author-29"
+    },
+    "author-30": {
+      "name": "S. Levine",
+      "s2_id": "1736651",
+      "orcid": null,
+      "raw_name": "S. Levine",
+      "key": "author-30"
+    },
+    "author-31": {
+      "name": "Trevor Darrell",
+      "s2_id": "1753210",
+      "orcid": null,
+      "raw_name": "Trevor Darrell",
+      "key": "author-31"
+    },
+    "author-32": {
+      "name": "T. Griffiths",
+      "s2_id": "1799860",
+      "orcid": null,
+      "raw_name": "T. Griffiths",
+      "key": "author-32"
+    },
+    "author-33": {
+      "name": "Flood Sung",
+      "s2_id": "40497013",
+      "orcid": null,
+      "raw_name": "Flood Sung",
+      "key": "author-33"
+    },
+    "author-34": {
+      "name": "Yongxin Yang",
+      "s2_id": "2653152",
+      "orcid": null,
+      "raw_name": "Yongxin Yang",
+      "key": "author-34"
+    },
+    "author-35": {
+      "name": "Li Zhang",
+      "s2_id": "2152835959",
+      "orcid": null,
+      "raw_name": "Li Zhang",
+      "key": "author-35"
+    },
+    "author-36": {
+      "name": "T. Xiang",
+      "s2_id": "145406421",
+      "orcid": null,
+      "raw_name": "T. Xiang",
+      "key": "author-36"
+    },
+    "author-37": {
+      "name": "Philip H. S. Torr",
+      "s2_id": "143635540",
+      "orcid": null,
+      "raw_name": "Philip H. S. Torr",
+      "key": "author-37"
+    },
+    "author-38": {
+      "name": "Timothy M. Hospedales",
+      "s2_id": "1697755",
+      "orcid": null,
+      "raw_name": "Timothy M. Hospedales",
+      "key": "author-38"
+    },
+    "author-39": {
+      "name": "Victor Garcia Satorras",
+      "s2_id": "73240341",
+      "orcid": null,
+      "raw_name": "Victor Garcia Satorras",
+      "key": "author-39"
+    },
+    "author-40": {
+      "name": "Joan Bruna",
+      "s2_id": "143627859",
+      "orcid": null,
+      "raw_name": "Joan Bruna",
+      "key": "author-40"
+    },
+    "author-41": {
+      "name": "Zhenguo Li",
+      "s2_id": "7718952",
+      "orcid": null,
+      "raw_name": "Zhenguo Li",
+      "key": "author-41"
+    },
+    "author-42": {
+      "name": "Fengwei Zhou",
+      "s2_id": "22173351",
+      "orcid": null,
+      "raw_name": "Fengwei Zhou",
+      "key": "author-42"
+    },
+    "author-43": {
+      "name": "Fei Chen",
+      "s2_id": "117872156",
+      "orcid": null,
+      "raw_name": "Fei Chen",
+      "key": "author-43"
+    },
+    "author-44": {
+      "name": "Hang Li",
+      "s2_id": "2145571830",
+      "orcid": null,
+      "raw_name": "Hang Li",
+      "key": "author-44"
+    },
+    "author-45": {
+      "name": "Nikhil Mishra",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Nikhil Mishra",
+      "key": "author-45"
+    },
+    "author-46": {
+      "name": "Mostafa Rohaninejad",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Mostafa Rohaninejad",
+      "key": "author-46"
+    },
+    "author-47": {
+      "name": "Xi Chen",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0001-9223-0302",
+      "raw_name": "Xi Chen",
+      "key": "author-47"
+    },
+    "author-48": {
+      "name": "Pieter Abbeel",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Pieter Abbeel",
+      "key": "author-48"
+    },
+    "author-49": {
+      "name": "Jake Snell",
+      "s2_id": "39770136",
+      "orcid": null,
+      "raw_name": "Jake Snell",
+      "key": "author-49"
+    },
+    "author-50": {
+      "name": "Kevin Swersky",
+      "s2_id": "1754860",
+      "orcid": null,
+      "raw_name": "Kevin Swersky",
+      "key": "author-50"
+    },
+    "author-51": {
+      "name": "R. Zemel",
+      "s2_id": "1804104",
+      "orcid": null,
+      "raw_name": "R. Zemel",
+      "key": "author-51"
+    },
+    "author-52": {
+      "name": "P. Abbeel",
+      "s2_id": "1689992",
+      "orcid": null,
+      "raw_name": "P. Abbeel",
+      "key": "author-52"
+    },
+    "author-53": {
+      "name": "Łukasz Kaiser",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0003-1092-6010",
+      "raw_name": "Łukasz Kaiser",
+      "key": "author-53"
+    },
+    "author-54": {
+      "name": "Ofir Nachum",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Ofir Nachum",
+      "key": "author-54"
+    },
+    "author-55": {
+      "name": "Aurko Roy",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Aurko Roy",
+      "key": "author-55"
+    },
+    "author-56": {
+      "name": "Samy Bengio",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Samy Bengio",
+      "key": "author-56"
+    },
+    "author-57": {
+      "name": "Tsendsuren Munkhdalai",
+      "s2_id": "2227827",
+      "orcid": null,
+      "raw_name": "Tsendsuren Munkhdalai",
+      "key": "author-57"
+    },
+    "author-58": {
+      "name": "Hong Yu",
+      "s2_id": "2119120474",
+      "orcid": null,
+      "raw_name": "Hong Yu",
+      "key": "author-58"
+    },
+    "author-59": {
+      "name": "Sachin Ravi",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Sachin Ravi",
+      "key": "author-59"
+    },
+    "author-60": {
+      "name": "Hugo Larochelle",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Hugo Larochelle",
+      "key": "author-60"
+    },
+    "author-61": {
+      "name": "Marcin Andrychowicz",
+      "s2_id": "2206490",
+      "orcid": null,
+      "raw_name": "Marcin Andrychowicz",
+      "key": "author-61"
+    },
+    "author-62": {
+      "name": "Misha Denil",
+      "s2_id": "1715051",
+      "orcid": null,
+      "raw_name": "Misha Denil",
+      "key": "author-62"
+    },
+    "author-63": {
+      "name": "Sergio Gomez Colmenarejo",
+      "s2_id": "2016840",
+      "orcid": null,
+      "raw_name": "Sergio Gomez Colmenarejo",
+      "key": "author-63"
+    },
+    "author-64": {
+      "name": "Matthew W. Hoffman",
+      "s2_id": "3243579",
+      "orcid": null,
+      "raw_name": "Matthew W. Hoffman",
+      "key": "author-64"
+    },
+    "author-65": {
+      "name": "David Pfau",
+      "s2_id": "144846367",
+      "orcid": null,
+      "raw_name": "David Pfau",
+      "key": "author-65"
+    },
+    "author-66": {
+      "name": "T. Schaul",
+      "s2_id": "1725157",
+      "orcid": null,
+      "raw_name": "T. Schaul",
+      "key": "author-66"
+    },
+    "author-67": {
+      "name": "Nando de Freitas",
+      "s2_id": "1737568",
+      "orcid": null,
+      "raw_name": "Nando de Freitas",
+      "key": "author-67"
+    },
+    "author-68": {
+      "name": "O. Vinyals",
+      "s2_id": "1689108",
+      "orcid": null,
+      "raw_name": "O. Vinyals",
+      "key": "author-68"
+    },
+    "author-69": {
+      "name": "C. Blundell",
+      "s2_id": "1723876",
+      "orcid": null,
+      "raw_name": "C. Blundell",
+      "key": "author-69"
+    },
+    "author-70": {
+      "name": "T. Lillicrap",
+      "s2_id": "2542999",
+      "orcid": null,
+      "raw_name": "T. Lillicrap",
+      "key": "author-70"
+    },
+    "author-71": {
+      "name": "K. Kavukcuoglu",
+      "s2_id": "2645384",
+      "orcid": null,
+      "raw_name": "K. Kavukcuoglu",
+      "key": "author-71"
+    },
+    "author-72": {
+      "name": "D. Wierstra",
+      "s2_id": "1688276",
+      "orcid": null,
+      "raw_name": "D. Wierstra",
+      "key": "author-72"
+    },
+    "author-73": {
+      "name": "Harrison Edwards",
+      "s2_id": "144632352",
+      "orcid": null,
+      "raw_name": "Harrison Edwards",
+      "key": "author-73"
+    },
+    "author-74": {
+      "name": "A. Storkey",
+      "s2_id": "1728216",
+      "orcid": null,
+      "raw_name": "A. Storkey",
+      "key": "author-74"
+    },
+    "author-75": {
+      "name": "Adam Santoro",
+      "s2_id": "35030998",
+      "orcid": null,
+      "raw_name": "Adam Santoro",
+      "key": "author-75"
+    },
+    "author-76": {
+      "name": "Sergey Bartunov",
+      "s2_id": "2258504",
+      "orcid": null,
+      "raw_name": "Sergey Bartunov",
+      "key": "author-76"
+    },
+    "author-77": {
+      "name": "M. Botvinick",
+      "s2_id": "46378362",
+      "orcid": null,
+      "raw_name": "M. Botvinick",
+      "key": "author-77"
+    },
+    "author-78": {
+      "name": "Yan Duan",
+      "s2_id": "144581158",
+      "orcid": null,
+      "raw_name": "Yan Duan",
+      "key": "author-78"
+    },
+    "author-79": {
+      "name": "Xi Chen",
+      "s2_id": "41192764",
+      "orcid": null,
+      "raw_name": "Xi Chen",
+      "key": "author-79"
+    },
+    "author-80": {
+      "name": "Rein Houthooft",
+      "s2_id": "3127100",
+      "orcid": null,
+      "raw_name": "Rein Houthooft",
+      "key": "author-80"
+    },
+    "author-81": {
+      "name": "Volodymyr Mnih",
+      "s2_id": "3255983",
+      "orcid": null,
+      "raw_name": "Volodymyr Mnih",
+      "key": "author-81"
+    },
+    "author-82": {
+      "name": "David Silver",
+      "s2_id": "145824029",
+      "orcid": null,
+      "raw_name": "David Silver",
+      "key": "author-82"
+    },
+    "author-83": {
+      "name": "Andrei A. Rusu",
+      "s2_id": "2228824",
+      "orcid": null,
+      "raw_name": "Andrei A. Rusu",
+      "key": "author-83"
+    },
+    "author-84": {
+      "name": "J. Veness",
+      "s2_id": "144056327",
+      "orcid": null,
+      "raw_name": "J. Veness",
+      "key": "author-84"
+    },
+    "author-85": {
+      "name": "Marc G. Bellemare",
+      "s2_id": "1792298",
+      "orcid": null,
+      "raw_name": "Marc G. Bellemare",
+      "key": "author-85"
+    },
+    "author-86": {
+      "name": "Alex Graves",
+      "s2_id": "1753223",
+      "orcid": null,
+      "raw_name": "Alex Graves",
+      "key": "author-86"
+    },
+    "author-87": {
+      "name": "Martin A. Riedmiller",
+      "s2_id": "3137672",
+      "orcid": null,
+      "raw_name": "Martin A. Riedmiller",
+      "key": "author-87"
+    },
+    "author-88": {
+      "name": "A. Fidjeland",
+      "s2_id": "145600108",
+      "orcid": null,
+      "raw_name": "A. Fidjeland",
+      "key": "author-88"
+    },
+    "author-89": {
+      "name": "Georg Ostrovski",
+      "s2_id": "2273072",
+      "orcid": null,
+      "raw_name": "Georg Ostrovski",
+      "key": "author-89"
+    },
+    "author-90": {
+      "name": "Stig Petersen",
+      "s2_id": "48348688",
+      "orcid": null,
+      "raw_name": "Stig Petersen",
+      "key": "author-90"
+    },
+    "author-91": {
+      "name": "Charlie Beattie",
+      "s2_id": "50388928",
+      "orcid": null,
+      "raw_name": "Charlie Beattie",
+      "key": "author-91"
+    },
+    "author-92": {
+      "name": "Amir Sadik",
+      "s2_id": "49813280",
+      "orcid": null,
+      "raw_name": "Amir Sadik",
+      "key": "author-92"
+    },
+    "author-93": {
+      "name": "Ioannis Antonoglou",
+      "s2_id": "2460849",
+      "orcid": null,
+      "raw_name": "Ioannis Antonoglou",
+      "key": "author-93"
+    },
+    "author-94": {
+      "name": "Helen King",
+      "s2_id": "143776287",
+      "orcid": null,
+      "raw_name": "Helen King",
+      "key": "author-94"
+    },
+    "author-95": {
+      "name": "D. Kumaran",
+      "s2_id": "2106164",
+      "orcid": null,
+      "raw_name": "D. Kumaran",
+      "key": "author-95"
+    },
+    "author-96": {
+      "name": "S. Legg",
+      "s2_id": "34313265",
+      "orcid": null,
+      "raw_name": "S. Legg",
+      "key": "author-96"
+    },
+    "author-97": {
+      "name": "D. Hassabis",
+      "s2_id": "48987704",
+      "orcid": null,
+      "raw_name": "D. Hassabis",
+      "key": "author-97"
+    },
+    "author-98": {
+      "name": "Michael I. Jordan",
+      "s2_id": "1694621",
+      "orcid": null,
+      "raw_name": "Michael I. Jordan",
+      "key": "author-98"
+    },
+    "author-99": {
+      "name": "Philipp Moritz",
+      "s2_id": "29912342",
+      "orcid": null,
+      "raw_name": "Philipp Moritz",
+      "key": "author-99"
+    },
+    "author-100": {
+      "name": "Tuncer Ören",
+      "s2_id": "2286317280",
+      "orcid": null,
+      "raw_name": "Tuncer Ören",
+      "key": "author-100"
+    },
+    "author-101": {
+      "name": "Bernard P. Zeigler",
+      "s2_id": "2069913608",
+      "orcid": null,
+      "raw_name": "Bernard P. Zeigler",
+      "key": "author-101"
+    },
+    "author-102": {
+      "name": "T. Pawletta",
+      "s2_id": "2097862308",
+      "orcid": null,
+      "raw_name": "T. Pawletta",
+      "key": "author-102"
+    },
+    "author-103": {
+      "name": "J. Foster",
+      "s2_id": "3208582",
+      "orcid": null,
+      "raw_name": "J. Foster",
+      "key": "author-103"
+    },
+    "author-104": {
+      "name": "Efe A. Ok",
+      "s2_id": "35215259",
+      "orcid": null,
+      "raw_name": "Efe A. Ok",
+      "key": "author-104"
+    },
+    "author-105": {
+      "name": "D. Naik",
+      "s2_id": "100925254",
+      "orcid": null,
+      "raw_name": "D. Naik",
+      "key": "author-105"
+    },
+    "author-106": {
+      "name": "R. Mammone",
+      "s2_id": "1872039",
+      "orcid": null,
+      "raw_name": "R. Mammone",
+      "key": "author-106"
+    },
+    "author-107": {
+      "name": "P. Allison",
+      "s2_id": "40619959",
+      "orcid": null,
+      "raw_name": "P. Allison",
+      "key": "author-107"
+    },
+    "author-108": {
+      "name": "W. Silver",
+      "s2_id": "145981456",
+      "orcid": null,
+      "raw_name": "W. Silver",
+      "key": "author-108"
+    },
+    "author-109": {
+      "name": "Kyle Duffie",
+      "s2_id": "2273153017",
+      "orcid": null,
+      "raw_name": "Kyle Duffie",
+      "key": "author-109"
+    },
+    "author-110": {
+      "name": "Liyang Jiang",
+      "s2_id": "2112525602",
+      "orcid": null,
+      "raw_name": "Liyang Jiang",
+      "key": "author-110"
+    },
+    "author-111": {
+      "name": "Gregory R. Koch",
+      "s2_id": "2054250597",
+      "orcid": null,
+      "raw_name": "Gregory R. Koch",
+      "key": "author-111"
+    },
+    "author-112": {
+      "name": "Ronald J. Williams",
+      "s2_id": "2116648700",
+      "orcid": null,
+      "raw_name": "Ronald J. Williams",
+      "key": "author-112"
+    },
+    "author-113": {
+      "name": "F. Bourguignon",
+      "s2_id": "50881329",
+      "orcid": null,
+      "raw_name": "F. Bourguignon",
+      "key": "author-113"
+    },
+    "author-114": {
+      "name": "Jürgen Schmidhuber",
+      "s2_id": "2260653300",
+      "orcid": null,
+      "raw_name": "Jürgen Schmidhuber",
+      "key": "author-114"
+    },
+    "author-115": {
+      "name": "F. Cowell",
+      "s2_id": "2121551",
+      "orcid": null,
+      "raw_name": "F. Cowell",
+      "key": "author-115"
+    },
+    "author-116": {
+      "name": "M. H. Hoyle",
+      "s2_id": "2260815062",
+      "orcid": null,
+      "raw_name": "M. H. Hoyle",
+      "key": "author-116"
+    },
+    "author-117": {
+      "name": "E. Malinvaud",
+      "s2_id": "69391331",
+      "orcid": null,
+      "raw_name": "E. Malinvaud",
+      "key": "author-117"
+    },
+    "author-118": {
+      "name": "Mrs A. Silvey",
+      "s2_id": "2260813258",
+      "orcid": null,
+      "raw_name": "Mrs A. Silvey",
+      "key": "author-118"
+    },
+    "author-119": {
+      "name": "Vinod Nair",
+      "s2_id": "2073603971",
+      "orcid": null,
+      "raw_name": "Vinod Nair",
+      "key": "author-119"
+    },
+    "author-120": {
+      "name": "Geoffrey E. Hinton",
+      "s2_id": "1695689",
+      "orcid": null,
+      "raw_name": "Geoffrey E. Hinton",
+      "key": "author-120"
+    },
+    "author-121": {
+      "name": "R. Memisevic",
+      "s2_id": "1710604",
+      "orcid": null,
+      "raw_name": "R. Memisevic",
+      "key": "author-121"
+    },
+    "author-122": {
+      "name": "Xavier Glorot",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0002-6729-2189",
+      "raw_name": "Xavier Glorot",
+      "key": "author-122"
+    },
+    "author-123": {
+      "name": "Yoshua Bengio",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0002-9322-3515",
+      "raw_name": "Yoshua Bengio",
+      "key": "author-123"
+    },
+    "author-124": {
+      "name": "S. Sands",
+      "s2_id": "2302379",
+      "orcid": null,
+      "raw_name": "S. Sands",
+      "key": "author-124"
+    },
+    "author-125": {
+      "name": "B. Edwards",
+      "s2_id": "143603695",
+      "orcid": null,
+      "raw_name": "B. Edwards",
+      "key": "author-125"
+    },
+    "author-126": {
+      "name": "V. J. Kelly",
+      "s2_id": "2564067",
+      "orcid": null,
+      "raw_name": "V. J. Kelly",
+      "key": "author-126"
+    },
+    "author-127": {
+      "name": "M. Davidson",
+      "s2_id": "145382202",
+      "orcid": null,
+      "raw_name": "M. Davidson",
+      "key": "author-127"
+    },
+    "author-128": {
+      "name": "M. Wilkinson",
+      "s2_id": "49656006",
+      "orcid": null,
+      "raw_name": "M. Wilkinson",
+      "key": "author-128"
+    },
+    "author-129": {
+      "name": "P. Berger",
+      "s2_id": "145798235",
+      "orcid": null,
+      "raw_name": "P. Berger",
+      "key": "author-129"
+    },
+    "author-130": {
+      "name": "P. Berkes",
+      "s2_id": "3245558",
+      "orcid": null,
+      "raw_name": "P. Berkes",
+      "key": "author-130"
+    },
+    "author-131": {
+      "name": "Richard E. Turner",
+      "s2_id": "145369890",
+      "orcid": null,
+      "raw_name": "Richard E. Turner",
+      "key": "author-131"
+    },
+    "author-132": {
+      "name": "M. Sahani",
+      "s2_id": "2283363",
+      "orcid": null,
+      "raw_name": "M. Sahani",
+      "key": "author-132"
+    },
+    "author-133": {
+      "name": "Honglak Lee",
+      "s2_id": "1697141",
+      "orcid": null,
+      "raw_name": "Honglak Lee",
+      "key": "author-133"
+    },
+    "author-134": {
+      "name": "R. Grosse",
+      "s2_id": "1785346",
+      "orcid": null,
+      "raw_name": "R. Grosse",
+      "key": "author-134"
+    },
+    "author-135": {
+      "name": "R. Ranganath",
+      "s2_id": "2615814",
+      "orcid": null,
+      "raw_name": "R. Ranganath",
+      "key": "author-135"
+    },
+    "author-136": {
+      "name": "A. Ng",
+      "s2_id": "34699434",
+      "orcid": null,
+      "raw_name": "A. Ng",
+      "key": "author-136"
+    },
+    "author-137": {
+      "name": "Denis G. Pelli",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0001-7100-5659",
+      "raw_name": "Denis G. Pelli",
+      "key": "author-137"
+    },
+    "author-138": {
+      "name": "Katharine A. Tillman",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0001-9440-7239",
+      "raw_name": "Katharine A. Tillman",
+      "key": "author-138"
+    },
+    "author-139": {
+      "name": "Marc’Aurelio Ranzato",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Marc’Aurelio Ranzato",
+      "key": "author-139"
+    },
+    "author-140": {
+      "name": "Fu Jie Huang",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Fu Jie Huang",
+      "key": "author-140"
+    },
+    "author-141": {
+      "name": "Y-Lan Boureau",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0009-0008-3990-5778",
+      "raw_name": "Y-Lan Boureau",
+      "key": "author-141"
+    },
+    "author-142": {
+      "name": "Yann LeCun",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Yann LeCun",
+      "key": "author-142"
+    },
+    "author-143": {
+      "name": "Rodrigo Quian Quiroga",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0001-6534-3993",
+      "raw_name": "Rodrigo Quian Quiroga",
+      "key": "author-143"
+    },
+    "author-144": {
+      "name": "Leila Reddy",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0002-7078-1055",
+      "raw_name": "Leila Reddy",
+      "key": "author-144"
+    },
+    "author-145": {
+      "name": "Gabriel Kreiman",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0003-3505-8475",
+      "raw_name": "Gabriel Kreiman",
+      "key": "author-145"
+    },
+    "author-146": {
+      "name": "Christof Koch",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0001-6482-8067",
+      "raw_name": "Christof Koch",
+      "key": "author-146"
+    },
+    "author-147": {
+      "name": "Itzhak Fried",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0002-5962-2678",
+      "raw_name": "Itzhak Fried",
+      "key": "author-147"
+    },
+    "author-148": {
+      "name": "Maximilian Riesenhuber",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0002-5744-0408",
+      "raw_name": "Maximilian Riesenhuber",
+      "key": "author-148"
+    },
+    "author-149": {
+      "name": "Tomaso Poggio",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0002-3944-0455",
+      "raw_name": "Tomaso Poggio",
+      "key": "author-149"
+    },
+    "author-150": {
+      "name": "David Lowe",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0003-3332-483X",
+      "raw_name": "David Lowe",
+      "key": "author-150"
+    },
+    "author-151": {
+      "name": "William T. Freeman",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0002-2231-7995",
+      "raw_name": "William T. Freeman",
+      "key": "author-151"
+    },
+    "author-152": {
+      "name": "Edward H. Adelson",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Edward H. Adelson",
+      "key": "author-152"
+    },
+    "author-153": {
+      "name": "Geoffrey F. Hinton",
+      "s2_id": null,
+      "orcid": null,
+      "raw_name": "Geoffrey F. Hinton",
+      "key": "author-153"
+    },
+    "author-154": {
+      "name": "Léon Bottou",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0002-9894-8128",
+      "raw_name": "Léon Bottou",
+      "key": "author-154"
+    },
+    "author-155": {
+      "name": "Patrick Haffner",
+      "s2_id": null,
+      "orcid": "https://orcid.org/0000-0002-2319-5109",
+      "raw_name": "Patrick Haffner",
+      "key": "author-155"
+    },
+    "author-156": {
+      "name": "M. Mozer",
+      "s2_id": "144473519",
+      "orcid": null,
+      "raw_name": "M. Mozer",
+      "key": "author-156"
+    }
+  },
+  "citations": {
+    "citation-1": {
+      "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+      "authors": [
+        "author-1",
+        "author-2",
+        "author-3"
+      ],
+      "year": 2012,
+      "venue": "venue-1",
+      "raw_venue": "Proc. Advances Neural Inf. Process. Syst.",
+      "citation_count": 0,
+      "fields_of_study": [
+        {
+          "id": "https://openalex.org/C188441871",
+          "wikidata": "https://www.wikidata.org/wiki/Q7554146",
+          "display_name": "Softmax function",
+          "level": 3,
+          "score": 0.88170564
+        },
+        {
+          "id": "https://openalex.org/C81363708",
+          "wikidata": "https://www.wikidata.org/wiki/Q17084460",
+          "display_name": "Convolutional neural network",
+          "level": 2,
+          "score": 0.8117933
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.789114
+        },
+        {
+          "id": "https://openalex.org/C70437156",
+          "wikidata": "https://www.wikidata.org/wiki/Q7228652",
+          "display_name": "Pooling",
+          "level": 2,
+          "score": 0.68981254
+        },
+        {
+          "id": "https://openalex.org/C2776145597",
+          "wikidata": "https://www.wikidata.org/wiki/Q25339462",
+          "display_name": "Dropout (neural networks)",
+          "level": 2,
+          "score": 0.62921965
+        },
+        {
+          "id": "https://openalex.org/C154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "level": 1,
+          "score": 0.61589855
+        },
+        {
+          "id": "https://openalex.org/C45347329",
+          "wikidata": "https://www.wikidata.org/wiki/Q5166604",
+          "display_name": "Convolution (computer science)",
+          "level": 3,
+          "score": 0.6064652
+        },
+        {
+          "id": "https://openalex.org/C2776135515",
+          "wikidata": "https://www.wikidata.org/wiki/Q17143721",
+          "display_name": "Regularization (linguistics)",
+          "level": 2,
+          "score": 0.5937029
+        },
+        {
+          "id": "https://openalex.org/C153180895",
+          "wikidata": "https://www.wikidata.org/wiki/Q7148389",
+          "display_name": "Pattern recognition (psychology)",
+          "level": 2,
+          "score": 0.58283216
+        },
+        {
+          "id": "https://openalex.org/C2984842247",
+          "wikidata": "https://www.wikidata.org/wiki/Q197536",
+          "display_name": "Deep neural networks",
+          "level": 3,
+          "score": 0.48869804
+        },
+        {
+          "id": "https://openalex.org/C40969351",
+          "wikidata": "https://www.wikidata.org/wiki/Q3516228",
+          "display_name": "Word error rate",
+          "level": 2,
+          "score": 0.45401564
+        },
+        {
+          "id": "https://openalex.org/C136886441",
+          "wikidata": "https://www.wikidata.org/wiki/Q926129",
+          "display_name": "Normalization (sociology)",
+          "level": 2,
+          "score": 0.44189316
+        },
+        {
+          "id": "https://openalex.org/C50644808",
+          "wikidata": "https://www.wikidata.org/wiki/Q192776",
+          "display_name": "Artificial neural network",
+          "level": 2,
+          "score": 0.44072217
+        },
+        {
+          "id": "https://openalex.org/C119857082",
+          "wikidata": "https://www.wikidata.org/wiki/Q2539",
+          "display_name": "Machine learning",
+          "level": 1,
+          "score": 0.3099594
+        },
+        {
+          "id": "https://openalex.org/C144024400",
+          "wikidata": "https://www.wikidata.org/wiki/Q21201",
+          "display_name": "Sociology",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C19165224",
+          "wikidata": "https://www.wikidata.org/wiki/Q23404",
+          "display_name": "Anthropology",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "external_ids": {
+        "OpenAlex": "https://openalex.org/W2163605009"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "ref_id": 1,
+      "reference_mentions": [
+        "THIS paper aims at a comprehensive survey of recent progresses on unsupervised and semi-supervised methods addressing the challenges of training models with a small number or none of labeled data when a large volume of unlabeled data are available. The success of deep learning often hinges on the availability of a large number of labeled data, where millions of images are labeled to train the deep neural networks [1], [2] to enable these models to be on par with or even surpass the human performances.",
+        "Although a solid theory is still lacking, it is thought that both equivalence and invariance to image translations play a critical role in the success of CNNs, particularly for supervised classification tasks [1], [6]. A typical Convolutional Neural Network (CNN) consists of two parts: the feature maps of input images through multiple convolutional layers, and the classifier of fully connected layers mapping the feature maps to the target labels.",
+        "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation – without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
+        "Thus, it is a natural choice to adopt the transformation equivariance as the criterion to train an unsupervised representation, hoping it could be generalizable to unseen tasks without knowledge their labels. This is contrary to the criterion of transformation invariance that tends to tailor the learned representations more specialized to the labels of given tasks. Indeed, it is straightforward to see that the feature maps generated through convolutional layers equivary with the translations – the feature maps of translated images are also shifted in the same way subject to edge padding effect [1]. This inspires many works to generalize this idea to consider more types of transformations beyond translations (e.g., general image warping and projective transformations) [23]. This can learn a good representation of images by encoding their intrinsic visual structures that equivary with many transformations.",
+        "At first glance, it looks like a dilemma to enforce two criteria simultaneously, but they actually co-exist well in the celebrated convolutional neural networks underpinning the great success of deep learning—the convolutional feature maps equivary to the translations while the output predictions should be invariant under various transformations [1]. The recent efforts [23] on generalizing translation equivariance to generic transformations also present great potentials of training more powerful representations and discriminative models atop to address small data challenges [7], [16], [23].",
+        "Data augmentation has become a standard preprocessing step in training deep networks since the introduction of Alexnet [1]. It aims to augment the training set with more variations through different transformations such as spatial augmentations (e.g., random crops, mirror flips, random translations), color jittering, and random noises.",
+        "- [1] A. Krizhevsky, I. Sutskever, and G. E. Hinton, \"Imagenet classification with deep convolutional neural networks,\" in Proc. Advances Neural Inf. Process. Syst., 2012, pp. 1097–1105."
+      ],
+      "citation_key": "citation-1"
+    },
+    "citation-2": {
+      "title": "Deep Residual Learning for Image Recognition",
+      "authors": [
+        "author-4",
+        "author-5",
+        "author-6",
+        "author-7"
+      ],
+      "year": 2016,
+      "venue": "venue-2",
+      "raw_venue": "Proc. IEEE Conf. Comput. Vis. Pattern Recognit.",
+      "citation_count": 0,
+      "fields_of_study": [
+        {
+          "id": "https://openalex.org/C155512373",
+          "wikidata": "https://www.wikidata.org/wiki/Q287450",
+          "display_name": "Residual",
+          "level": 2,
+          "score": 0.91328824
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.7827219
+        },
+        {
+          "id": "https://openalex.org/C21780288",
+          "wikidata": "https://www.wikidata.org/wiki/Q5139731",
+          "display_name": "Coco",
+          "level": 2,
+          "score": 0.7302752
+        },
+        {
+          "id": "https://openalex.org/C154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "level": 1,
+          "score": 0.7211458
+        },
+        {
+          "id": "https://openalex.org/C2776151529",
+          "wikidata": "https://www.wikidata.org/wiki/Q3045304",
+          "display_name": "Object detection",
+          "level": 3,
+          "score": 0.60773295
+        },
+        {
+          "id": "https://openalex.org/C108583219",
+          "wikidata": "https://www.wikidata.org/wiki/Q197536",
+          "display_name": "Deep learning",
+          "level": 2,
+          "score": 0.57282454
+        },
+        {
+          "id": "https://openalex.org/C89600930",
+          "wikidata": "https://www.wikidata.org/wiki/Q1423946",
+          "display_name": "Segmentation",
+          "level": 2,
+          "score": 0.5636843
+        },
+        {
+          "id": "https://openalex.org/C153180895",
+          "wikidata": "https://www.wikidata.org/wiki/Q7148389",
+          "display_name": "Pattern recognition (psychology)",
+          "level": 2,
+          "score": 0.56021905
+        },
+        {
+          "id": "https://openalex.org/C177264268",
+          "wikidata": "https://www.wikidata.org/wiki/Q1514741",
+          "display_name": "Set (abstract data type)",
+          "level": 2,
+          "score": 0.4790636
+        },
+        {
+          "id": "https://openalex.org/C2779227376",
+          "wikidata": "https://www.wikidata.org/wiki/Q6505497",
+          "display_name": "Layer (electronics)",
+          "level": 2,
+          "score": 0.47214726
+        },
+        {
+          "id": "https://openalex.org/C50644808",
+          "wikidata": "https://www.wikidata.org/wiki/Q192776",
+          "display_name": "Artificial neural network",
+          "level": 2,
+          "score": 0.45602506
+        },
+        {
+          "id": "https://openalex.org/C2780451532",
+          "wikidata": "https://www.wikidata.org/wiki/Q759676",
+          "display_name": "Task (project management)",
+          "level": 2,
+          "score": 0.45123157
+        },
+        {
+          "id": "https://openalex.org/C119857082",
+          "wikidata": "https://www.wikidata.org/wiki/Q2539",
+          "display_name": "Machine learning",
+          "level": 1,
+          "score": 0.44327608
+        },
+        {
+          "id": "https://openalex.org/C2944601119",
+          "wikidata": "https://www.wikidata.org/wiki/Q43744058",
+          "display_name": "Residual neural network",
+          "level": 3,
+          "score": 0.431252
+        },
+        {
+          "id": "https://openalex.org/C2984842247",
+          "wikidata": "https://www.wikidata.org/wiki/Q197536",
+          "display_name": "Deep neural networks",
+          "level": 3,
+          "score": 0.41046202
+        },
+        {
+          "id": "https://openalex.org/C11413529",
+          "wikidata": "https://www.wikidata.org/wiki/Q8366",
+          "display_name": "Algorithm",
+          "level": 1,
+          "score": 0.11133298
+        },
+        {
+          "id": "https://openalex.org/C185592680",
+          "wikidata": "https://www.wikidata.org/wiki/Q2329",
+          "display_name": "Chemistry",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C187736073",
+          "wikidata": "https://www.wikidata.org/wiki/Q2920921",
+          "display_name": "Management",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C178790620",
+          "wikidata": "https://www.wikidata.org/wiki/Q11351",
+          "display_name": "Organic chemistry",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C162324750",
+          "wikidata": "https://www.wikidata.org/wiki/Q8134",
+          "display_name": "Economics",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C199360897",
+          "wikidata": "https://www.wikidata.org/wiki/Q9143",
+          "display_name": "Programming language",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "external_ids": {
+        "OpenAlex": "https://openalex.org/W2194775991"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": "https://doi.org/10.1109/cvpr.2016.90",
+      "ref_id": 2,
+      "reference_mentions": [
+        "THIS paper aims at a comprehensive survey of recent progresses on unsupervised and semi-supervised methods addressing the challenges of training models with a small number or none of labeled data when a large volume of unlabeled data are available. The success of deep learning often hinges on the availability of a large number of labeled data, where millions of images are labeled to train the deep neural networks [1], [2] to enable these models to be on par with or even surpass the human performances.",
+        "- [2] K. He, X. Zhang, S. Ren, and J. Sun, \"Deep residual learning for image recognition,\" in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2016, pp. 770–778."
+      ],
+      "citation_key": "citation-2"
+    },
+    "citation-3": {
+      "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+      "authors": [
+        "author-8",
+        "author-9",
+        "author-10"
+      ],
+      "year": 2017,
+      "venue": "venue-3",
+      "raw_venue": "Proc. 34th Int. Conf. Mach. Learn.",
+      "citation_count": 0,
+      "fields_of_study": [
+        {
+          "id": "https://openalex.org/C97541855",
+          "wikidata": "https://www.wikidata.org/wiki/Q830687",
+          "display_name": "Reinforcement learning",
+          "level": 2,
+          "score": 0.8412299
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.80826104
+        },
+        {
+          "id": "https://openalex.org/C2781002164",
+          "wikidata": "https://www.wikidata.org/wiki/Q6822311",
+          "display_name": "Meta learning (computer science)",
+          "level": 3,
+          "score": 0.77618754
+        },
+        {
+          "id": "https://openalex.org/C154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "level": 1,
+          "score": 0.7171711
+        },
+        {
+          "id": "https://openalex.org/C177148314",
+          "wikidata": "https://www.wikidata.org/wiki/Q170084",
+          "display_name": "Generalization",
+          "level": 2,
+          "score": 0.6701946
+        },
+        {
+          "id": "https://openalex.org/C119857082",
+          "wikidata": "https://www.wikidata.org/wiki/Q2539",
+          "display_name": "Machine learning",
+          "level": 1,
+          "score": 0.6426681
+        },
+        {
+          "id": "https://openalex.org/C2780451532",
+          "wikidata": "https://www.wikidata.org/wiki/Q759676",
+          "display_name": "Task (project management)",
+          "level": 2,
+          "score": 0.55539167
+        },
+        {
+          "id": "https://openalex.org/C153258448",
+          "wikidata": "https://www.wikidata.org/wiki/Q1199743",
+          "display_name": "Gradient descent",
+          "level": 3,
+          "score": 0.53816366
+        },
+        {
+          "id": "https://openalex.org/C136197465",
+          "wikidata": "https://www.wikidata.org/wiki/Q1729295",
+          "display_name": "Variety (cybernetics)",
+          "level": 2,
+          "score": 0.5328392
+        },
+        {
+          "id": "https://openalex.org/C50644808",
+          "wikidata": "https://www.wikidata.org/wiki/Q192776",
+          "display_name": "Artificial neural network",
+          "level": 2,
+          "score": 0.51136845
+        },
+        {
+          "id": "https://openalex.org/C139807058",
+          "wikidata": "https://www.wikidata.org/wiki/Q352374",
+          "display_name": "Adaptation (eye)",
+          "level": 2,
+          "score": 0.50203824
+        },
+        {
+          "id": "https://openalex.org/C83546350",
+          "wikidata": "https://www.wikidata.org/wiki/Q1139051",
+          "display_name": "Regression",
+          "level": 2,
+          "score": 0.47046766
+        },
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.08769077
+        },
+        {
+          "id": "https://openalex.org/C134306372",
+          "wikidata": "https://www.wikidata.org/wiki/Q7754",
+          "display_name": "Mathematical analysis",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C105795698",
+          "wikidata": "https://www.wikidata.org/wiki/Q12483",
+          "display_name": "Statistics",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C121332964",
+          "wikidata": "https://www.wikidata.org/wiki/Q413",
+          "display_name": "Physics",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C187736073",
+          "wikidata": "https://www.wikidata.org/wiki/Q2920921",
+          "display_name": "Management",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C120665830",
+          "wikidata": "https://www.wikidata.org/wiki/Q14620",
+          "display_name": "Optics",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C162324750",
+          "wikidata": "https://www.wikidata.org/wiki/Q8134",
+          "display_name": "Economics",
+          "level": 0,
+          "score": 0.0
+        }
+      ],
+      "external_ids": {
+        "OpenAlex": "https://openalex.org/W2604763608"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": "https://doi.org/10.48550/arxiv.1703.03400",
+      "ref_id": 3,
+      "reference_mentions": [
+        "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
+        "- [3] C. Finn, P. Abbeel, and S. Levine, \"Model-agnostic meta-learning for fast adaptation of deep networks,\" in Proc. 34th Int. Conf. Mach. Learn., 2017, pp. 1126–1135."
+      ],
+      "citation_key": "citation-3"
+    },
+    "citation-4": {
+      "title": "Task Agnostic Meta-Learning for Few-Shot Learning",
+      "authors": [
+        "author-11",
+        "author-12",
+        "author-13"
+      ],
+      "year": 2018,
+      "venue": null,
+      "raw_venue": "arXiv",
+      "citation_count": 441,
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "external_ids": {
+        "ArXiv": "1805.07722",
+        "DBLP": "journals/corr/abs-1805-07722",
+        "MAG": "2804962156",
+        "DOI": "10.1109/CVPR.2019.01199",
+        "CorpusId": 29156972
+      },
+      "semantic_scholar_id": "06f0fe16fcb8f80bf88746c5ef6d3780531918ab",
+      "arxiv_id": "1805.07722",
+      "doi": "10.1109/CVPR.2019.01199",
+      "ref_id": 4,
+      "reference_mentions": [
+        "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
+        "In the spectrum of semi-supervised methods also resides Few-Shot Learning (FSL) when auxiliary tasks on a disjoint set of concepts are leveraged to improve the model training. On one hand, it is like zero-shot learning when conceptual correlations can be used to share information between different concepts through their embedded representations. On the other hand, a group of auxiliary tasks can be sampled from a collection of base concepts, and a meta-model can be trained to distill the knowledge of how to update models with few examples (e.g., the initial point, and the rule of updating model parameters) [4] along with the unlabeled examples in a semi-supervised fashion [5], [12], [13]. Thus, the FSL can be viewed as a semi-supervised problem that has few labeled examples available on the target concepts, along with many examples labeled on auxiliary concepts (which thus should be viewed as unlabeled on the target concepts). For a comprehensive review of FSL, the interested readers can refer to [14].",
+        "- [4] M. A. Jamal, G.-J. Qi, and M. Shah, \"Task-agnostic meta-learning for few-shot learning,\" 2018, arXiv: 1805.07722."
+      ],
+      "citation_key": "citation-4"
+    },
+    "citation-5": {
+      "title": "Learning to Self-Train for Semi-Supervised Few-Shot Classification",
+      "authors": [
+        "author-14",
+        "author-15",
+        "author-16",
+        "author-17",
+        "author-18",
+        "author-19",
+        "author-20"
+      ],
+      "year": 2019,
+      "venue": "venue-1",
+      "raw_venue": "Proc. Advances Neural Inf. Process. Syst.",
+      "citation_count": 0,
+      "fields_of_study": [
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.79255915
+        },
+        {
+          "id": "https://openalex.org/C154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "level": 1,
+          "score": 0.7212893
+        },
+        {
+          "id": "https://openalex.org/C183115368",
+          "wikidata": "https://www.wikidata.org/wiki/Q856577",
+          "display_name": "Weighting",
+          "level": 2,
+          "score": 0.70160925
+        },
+        {
+          "id": "https://openalex.org/C2776145971",
+          "wikidata": "https://www.wikidata.org/wiki/Q30673951",
+          "display_name": "Labeled data",
+          "level": 2,
+          "score": 0.64106256
+        },
+        {
+          "id": "https://openalex.org/C2781002164",
+          "wikidata": "https://www.wikidata.org/wiki/Q6822311",
+          "display_name": "Meta learning (computer science)",
+          "level": 3,
+          "score": 0.5952497
+        },
+        {
+          "id": "https://openalex.org/C119857082",
+          "wikidata": "https://www.wikidata.org/wiki/Q2539",
+          "display_name": "Machine learning",
+          "level": 1,
+          "score": 0.59161747
+        },
+        {
+          "id": "https://openalex.org/C58973888",
+          "wikidata": "https://www.wikidata.org/wiki/Q1041418",
+          "display_name": "Semi-supervised learning",
+          "level": 2,
+          "score": 0.55613637
+        },
+        {
+          "id": "https://openalex.org/C2780451532",
+          "wikidata": "https://www.wikidata.org/wiki/Q759676",
+          "display_name": "Task (project management)",
+          "level": 2,
+          "score": 0.5544518
+        },
+        {
+          "id": "https://openalex.org/C136389625",
+          "wikidata": "https://www.wikidata.org/wiki/Q334384",
+          "display_name": "Supervised learning",
+          "level": 3,
+          "score": 0.5152898
+        },
+        {
+          "id": "https://openalex.org/C2777212361",
+          "wikidata": "https://www.wikidata.org/wiki/Q5127848",
+          "display_name": "Class (philosophy)",
+          "level": 2,
+          "score": 0.4554538
+        },
+        {
+          "id": "https://openalex.org/C2778344882",
+          "wikidata": "https://www.wikidata.org/wiki/Q278938",
+          "display_name": "Shot (pellet)",
+          "level": 2,
+          "score": 0.4168254
+        },
+        {
+          "id": "https://openalex.org/C153180895",
+          "wikidata": "https://www.wikidata.org/wiki/Q7148389",
+          "display_name": "Pattern recognition (psychology)",
+          "level": 2,
+          "score": 0.3935628
+        },
+        {
+          "id": "https://openalex.org/C50644808",
+          "wikidata": "https://www.wikidata.org/wiki/Q192776",
+          "display_name": "Artificial neural network",
+          "level": 2,
+          "score": 0.26195642
+        },
+        {
+          "id": "https://openalex.org/C71924100",
+          "wikidata": "https://www.wikidata.org/wiki/Q11190",
+          "display_name": "Medicine",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C185592680",
+          "wikidata": "https://www.wikidata.org/wiki/Q2329",
+          "display_name": "Chemistry",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C187736073",
+          "wikidata": "https://www.wikidata.org/wiki/Q2920921",
+          "display_name": "Management",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C178790620",
+          "wikidata": "https://www.wikidata.org/wiki/Q11351",
+          "display_name": "Organic chemistry",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C162324750",
+          "wikidata": "https://www.wikidata.org/wiki/Q8134",
+          "display_name": "Economics",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C126838900",
+          "wikidata": "https://www.wikidata.org/wiki/Q77604",
+          "display_name": "Radiology",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "external_ids": {
+        "OpenAlex": "https://openalex.org/W2971071159"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "ref_id": 5,
+      "reference_mentions": [
+        "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
+        "In the spectrum of semi-supervised methods also resides Few-Shot Learning (FSL) when auxiliary tasks on a disjoint set of concepts are leveraged to improve the model training. On one hand, it is like zero-shot learning when conceptual correlations can be used to share information between different concepts through their embedded representations. On the other hand, a group of auxiliary tasks can be sampled from a collection of base concepts, and a meta-model can be trained to distill the knowledge of how to update models with few examples (e.g., the initial point, and the rule of updating model parameters) [4] along with the unlabeled examples in a semi-supervised fashion [5], [12], [13]. Thus, the FSL can be viewed as a semi-supervised problem that has few labeled examples available on the target concepts, along with many examples labeled on auxiliary concepts (which thus should be viewed as unlabeled on the target concepts). For a comprehensive review of FSL, the interested readers can refer to [14].",
+        "- [5] X. Li et al., \"Learning to self-train for semi-supervised few-shot classification,\" in Proc. Advances Neural Inf. Process. Syst., 2019, pp. 10 276–10 286."
+      ],
+      "citation_key": "citation-5"
+    },
+    "citation-6": {
+      "title": "Transforming Auto-Encoders",
+      "authors": [
+        "author-3",
+        "author-21",
+        "author-22"
+      ],
+      "year": 2011,
+      "venue": "venue-4",
+      "raw_venue": "Proc. Int. Conf. Artif. Neural Netw.",
+      "citation_count": 1227,
+      "fields_of_study": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2966661",
+        "DBLP": "conf/icann/HintonKW11",
+        "DOI": "10.1007/978-3-642-21735-7_6",
+        "CorpusId": 6138085
+      },
+      "semantic_scholar_id": "20f0357688876fa4662f806f985779dce6e24f3c",
+      "arxiv_id": null,
+      "doi": "10.1007/978-3-642-21735-7_6",
+      "ref_id": 6,
+      "reference_mentions": [
+        "A variety of principles and models have been devoted to training unsupervised representations. As shown in Fig. C.3, available in the online supplemental material, we will review them from several different perspectives. First, we will review the emerging principle of Transformation Equivariant Representations(TER) pioneered in Hinton's seminal work [6] as well as the recent formulation of unsupervised training of such representations [7]. It follows by reviewing a number of generative networks representative in many recent models, including the variants of auto-encoders, Generative Adversarial Nets (GANs), Flow-based Generative Networks, and Transformers (See Fig. C.3, available in the online supplemental material). The principle of learning disentangling representationsfrom these generative models is also central to many unsupervised methods, and we will review them on how to extract interpretable generative factors from unlabeled data. Finally, self-supervised methods constitutes a large category of unsupervised models, and we will review autoregressive models as well as the selfsupervised training of image and video representations.",
+        "- Transformation-Equivariant Representations. Recently, learning transformation-equivariant representations (TERs) from unlabeled data has attracted many attentions in both unsupervised and supervised methods. In particular, a good TER equivaries with different types of transformations so that the scene structure in an image can be compactly encoded into its representation. Then the successive problems for recognizing unseen visual concepts can be performed on top of the trained TER. The notion of TER was originally proposed by Hinton et al. [6] in introducing capsule nets and it has been formalized in various ways. We will review it in Section 2.2.",
+        "Although a solid theory is still lacking, it is thought that both equivalence and invariance to image translations play a critical role in the success of CNNs, particularly for supervised classification tasks [1], [6]. A typical Convolutional Neural Network (CNN) consists of two parts: the feature maps of input images through multiple convolutional layers, and the classifier of fully connected layers mapping the feature maps to the target labels.",
+        "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation – without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
+        "The DC-IGN is semi-supervised to engineer inverse graphics as training images with various transformations are available from 3D face and chair datasets. We also note that a number of inverse graphics models [93], [94], [95] have been proposed to train disentangled representations. Among them are deep lambertian networks [96] that assume a Lambertian reflectance model and implicitly construct the 3D representation, and transforming auto-encoders [6], [97] that use a domain-specific decoder to reconstruct images, as well as [98] with an approximate differentiable renderer to explicitly capture the relationship between changes in model parameters and image observations.",
+        "A more theoretical topic lies on revealing the intrinsic relation between transformation equivariance and invariance in learning representations. On the one hand, the pursuit of Transformation Equivariant Representation (TER) has been spotlighted as one of critical criteria [6] that achieves the state-of-the-art performances in unsupervised learning [7], [16]. However, it is also important and necessary to apply the transformation invariance to train discriminative networks with labeled data in supervised tasks for recognizing images and objects.",
+        "- [6] G. E. Hinton, A. Krizhevsky, and S. D. Wang, \"Transforming auto-encoders,\" in Proc. Int. Conf. Artif. Neural Netw., 2011, pp. 44–51."
+      ],
+      "citation_key": "citation-6"
+    },
+    "citation-7": {
+      "title": "Emergence of Scenario-Appropriate Collaborative Behaviors for Teams of Robotic Bodyguards",
+      "authors": [
+        "author-23",
+        "author-24"
+      ],
+      "venue": "venue-5",
+      "year": 2018,
+      "citation_count": 3,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2890509590",
+        "DBLP": "conf/atal/SheikhB19",
+        "ArXiv": "1809.04500",
+        "CorpusId": 52196126
+      },
+      "semantic_scholar_id": "2002a92a4a65e93a11448e5346cfbc893111ec8a",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-8": {
+      "title": "On First-Order Meta-Learning Algorithms",
+      "authors": [
+        "author-25",
+        "author-26",
+        "author-27"
+      ],
+      "venue": "venue-6",
+      "year": 2018,
+      "citation_count": 2124,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2795900505",
+        "ArXiv": "1803.02999",
+        "DBLP": "journals/corr/abs-1803-02999",
+        "CorpusId": 4587331
+      },
+      "semantic_scholar_id": "90dc22818bd2d97d8deaff168b0137b75a962767",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-9": {
+      "title": "Recasting Gradient-Based Meta-Learning as Hierarchical Bayes",
+      "authors": [
+        "author-28",
+        "author-29",
+        "author-30",
+        "author-31",
+        "author-32"
+      ],
+      "venue": "venue-7",
+      "year": 2018,
+      "citation_count": 499,
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "external_ids": {
+        "DBLP": "journals/corr/abs-1801-08930",
+        "ArXiv": "1801.08930",
+        "MAG": "2963547174",
+        "CorpusId": 3484654
+      },
+      "semantic_scholar_id": "46b072cf918ec6f50403568a73d4347ea86b7e66",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-10": {
+      "title": "Learning to Compare: Relation Network for Few-Shot Learning",
+      "authors": [
+        "author-33",
+        "author-34",
+        "author-35",
+        "author-36",
+        "author-37",
+        "author-38"
+      ],
+      "venue": "venue-8",
+      "year": 2017,
+      "citation_count": 3853,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2768228940",
+        "DBLP": "journals/corr/abs-1711-06025",
+        "ArXiv": "1711.06025",
+        "DOI": "10.1109/CVPR.2018.00131",
+        "CorpusId": 4412459
+      },
+      "semantic_scholar_id": "bfe284e4338e62f0a61bb33398353efd687f206f",
+      "arxiv_id": null,
+      "doi": "10.1109/CVPR.2018.00131",
+      "second_hop": "yes"
+    },
+    "citation-11": {
+      "title": "Few-Shot Learning with Graph Neural Networks",
+      "authors": [
+        "author-39",
+        "author-40"
+      ],
+      "venue": "venue-7",
+      "year": 2017,
+      "citation_count": 1194,
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "external_ids": {
+        "MAG": "2770468159",
+        "DBLP": "journals/corr/abs-1711-04043",
+        "ArXiv": "1711.04043",
+        "CorpusId": 3431470
+      },
+      "semantic_scholar_id": "572a1f77306e160c3893299c18f3ed862fb5f6d9",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-12": {
+      "title": "Meta-SGD: Learning to Learn Quickly for Few Shot Learning",
+      "authors": [
+        "author-41",
+        "author-42",
+        "author-43",
+        "author-44"
+      ],
+      "venue": "venue-6",
+      "year": 2017,
+      "citation_count": 1082,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2742093937",
+        "ArXiv": "1707.09835",
+        "DBLP": "journals/corr/LiZCL17",
+        "CorpusId": 25316837
+      },
+      "semantic_scholar_id": "d33ad6a25264ba1747d8c93f6621c7f90a7ec601",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-13": {
+      "title": "A Simple Neural Attentive Meta-Learner",
+      "authors": [
+        "author-45",
+        "author-46",
+        "author-47",
+        "author-48"
+      ],
+      "venue": null,
+      "year": 2017,
+      "citation_count": 815,
+      "fields_of_study": [
+        "Simple (philosophy)",
+        "Computer science",
+        "Psychology",
+        "Artificial intelligence",
+        "Epistemology",
+        "Philosophy"
+      ],
+      "external_ids": {
+        "DOI": "https://doi.org/10.48550/arxiv.1707.03141",
+        "OpenAlex": "https://openalex.org/W2787501667"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": "https://doi.org/10.48550/arxiv.1707.03141",
+      "second_hop": "yes"
+    },
+    "citation-14": {
+      "title": "Prototypical Networks for Few-shot Learning",
+      "authors": [
+        "author-49",
+        "author-50",
+        "author-51"
+      ],
+      "venue": "venue-9",
+      "year": 2017,
+      "citation_count": 7578,
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "external_ids": {
+        "DBLP": "conf/nips/SnellSZ17",
+        "ArXiv": "1703.05175",
+        "MAG": "2950537964",
+        "CorpusId": 309759
+      },
+      "semantic_scholar_id": "c269858a7bb34e8350f2442ccf37797856ae9bca",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-15": {
+      "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+      "authors": [
+        "author-29",
+        "author-52",
+        "author-30"
+      ],
+      "venue": "venue-3",
+      "year": 2017,
+      "citation_count": 11073,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2604763608",
+        "DBLP": "journals/corr/FinnAL17",
+        "ArXiv": "1703.03400",
+        "CorpusId": 6719686
+      },
+      "semantic_scholar_id": "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-16": {
+      "title": "Learning to Remember Rare Events",
+      "authors": [
+        "author-53",
+        "author-54",
+        "author-55",
+        "author-56"
+      ],
+      "venue": null,
+      "year": 2017,
+      "citation_count": 255,
+      "fields_of_study": [
+        "Computer science",
+        "Artificial intelligence",
+        "Deep learning",
+        "Convolutional neural network",
+        "Task (project management)",
+        "Exploit",
+        "Recurrent neural network",
+        "Sequence (biology)",
+        "Sequence learning",
+        "Reset (finance)",
+        "Set (abstract data type)",
+        "Simple (philosophy)",
+        "Differentiable function",
+        "Shot (pellet)",
+        "One shot",
+        "Memory model",
+        "Machine learning",
+        "Artificial neural network",
+        "Parallel computing",
+        "Mathematics",
+        "Philosophy",
+        "Computer security",
+        "Mathematical analysis",
+        "Chemistry",
+        "Financial economics",
+        "Engineering",
+        "Biology",
+        "Genetics",
+        "Management",
+        "Epistemology",
+        "Programming language",
+        "Mechanical engineering",
+        "Organic chemistry",
+        "Shared memory",
+        "Economics"
+      ],
+      "external_ids": {
+        "DOI": "https://doi.org/10.48550/arxiv.1703.03129",
+        "OpenAlex": "https://openalex.org/W2953044442"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": "https://doi.org/10.48550/arxiv.1703.03129",
+      "second_hop": "yes"
+    },
+    "citation-17": {
+      "title": "Meta Networks",
+      "authors": [
+        "author-57",
+        "author-58"
+      ],
+      "venue": "venue-3",
+      "year": 2017,
+      "citation_count": 1039,
+      "fields_of_study": [
+        "Medicine",
+        "Computer Science",
+        "Mathematics"
+      ],
+      "external_ids": {
+        "MAG": "2948974578",
+        "DBLP": "conf/icml/MunkhdalaiY17",
+        "ArXiv": "1703.00837",
+        "CorpusId": 18702258,
+        "PubMed": "31106300"
+      },
+      "semantic_scholar_id": "470d11b8ca4586c930adbbfc3f60bff08f2a0161",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-18": {
+      "title": "Optimization as a Model for Few-Shot Learning",
+      "authors": [
+        "author-59",
+        "author-60"
+      ],
+      "venue": null,
+      "year": 2017,
+      "citation_count": 2613,
+      "fields_of_study": [
+        "Computer science",
+        "Initialization",
+        "Artificial intelligence",
+        "Meta learning (computer science)",
+        "Convergence (economics)",
+        "Deep learning",
+        "Metric (unit)",
+        "Artificial neural network",
+        "Machine learning",
+        "Set (abstract data type)",
+        "Parametrization (atmospheric modeling)",
+        "Competitive learning",
+        "Class (philosophy)",
+        "Domain (mathematical analysis)",
+        "Learning to learn",
+        "Mathematics",
+        "Task (project management)",
+        "Mathematical analysis",
+        "Operations management",
+        "Physics",
+        "Mathematics education",
+        "Management",
+        "Quantum mechanics",
+        "Radiative transfer",
+        "Economic growth",
+        "Economics",
+        "Programming language"
+      ],
+      "external_ids": {
+        "DOI": null,
+        "OpenAlex": "https://openalex.org/W2753160622"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-19": {
+      "title": "Learning to learn by gradient descent by gradient descent",
+      "authors": [
+        "author-61",
+        "author-62",
+        "author-63",
+        "author-64",
+        "author-65",
+        "author-66",
+        "author-67"
+      ],
+      "venue": "venue-9",
+      "year": 2016,
+      "citation_count": 1935,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2427497464",
+        "DBLP": "conf/nips/AndrychowiczDCH16",
+        "ArXiv": "1606.04474",
+        "CorpusId": 2928017
+      },
+      "semantic_scholar_id": "71683e224ab91617950956b5005ed0439a733a71",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-20": {
+      "title": "Matching Networks for One Shot Learning",
+      "authors": [
+        "author-68",
+        "author-69",
+        "author-70",
+        "author-71",
+        "author-72"
+      ],
+      "venue": "venue-9",
+      "year": 2016,
+      "citation_count": 6957,
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "external_ids": {
+        "MAG": "2432717477",
+        "DBLP": "journals/corr/VinyalsBLKW16",
+        "ArXiv": "1606.04080",
+        "CorpusId": 8909022
+      },
+      "semantic_scholar_id": "be1bb4e4aa1fcf70281b4bd24d8cd31c04864bb6",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-21": {
+      "title": "Towards a Neural Statistician",
+      "authors": [
+        "author-73",
+        "author-74"
+      ],
+      "venue": "venue-7",
+      "year": 2016,
+      "citation_count": 416,
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "external_ids": {
+        "DBLP": "journals/corr/EdwardsS16",
+        "MAG": "2412589713",
+        "ArXiv": "1606.02185",
+        "CorpusId": 4994434
+      },
+      "semantic_scholar_id": "405c31c85a324942811f3c9dc53ce3528f9284df",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-22": {
+      "title": "One-shot Learning with Memory-Augmented Neural Networks",
+      "authors": [
+        "author-75",
+        "author-76",
+        "author-77",
+        "author-72",
+        "author-70"
+      ],
+      "venue": "venue-6",
+      "year": 2016,
+      "citation_count": 523,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "ArXiv": "1605.06065",
+        "MAG": "2399033357",
+        "DBLP": "journals/corr/SantoroBBWL16",
+        "CorpusId": 16660179
+      },
+      "semantic_scholar_id": "bbd0e204f48a45735e1065c8b90b298077b73192",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-23": {
+      "title": "Benchmarking Deep Reinforcement Learning for Continuous Control",
+      "authors": [
+        "author-78",
+        "author-79",
+        "author-80",
+        "author-27",
+        "author-52"
+      ],
+      "venue": "venue-3",
+      "year": 2016,
+      "citation_count": 1651,
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "external_ids": {
+        "MAG": "2342662072",
+        "DBLP": "conf/icml/DuanCHSA16",
+        "ArXiv": "1604.06778",
+        "CorpusId": 12296499
+      },
+      "semantic_scholar_id": "1464776f20e2bccb6182f183b5ff2e15b0ae5e56",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-24": {
+      "title": "Human-level control through deep reinforcement learning",
+      "authors": [
+        "author-81",
+        "author-71",
+        "author-82",
+        "author-83",
+        "author-84",
+        "author-85",
+        "author-86",
+        "author-87",
+        "author-88",
+        "author-89",
+        "author-90",
+        "author-91",
+        "author-92",
+        "author-93",
+        "author-94",
+        "author-95",
+        "author-72",
+        "author-96",
+        "author-97"
+      ],
+      "venue": "venue-10",
+      "year": 2015,
+      "citation_count": 26321,
+      "fields_of_study": [
+        "Medicine",
+        "Computer Science"
+      ],
+      "external_ids": {
+        "DBLP": "journals/nature/MnihKSRVBGRFOPB15",
+        "MAG": "2145339207",
+        "DOI": "10.1038/nature14236",
+        "CorpusId": 205242740,
+        "PubMed": "25719670"
+      },
+      "semantic_scholar_id": "340f48901f72278f6bf78a04ee5b01df208cc508",
+      "arxiv_id": null,
+      "doi": "10.1038/nature14236",
+      "second_hop": "yes"
+    },
+    "citation-25": {
+      "title": "Trust Region Policy Optimization",
+      "authors": [
+        "author-27",
+        "author-30",
+        "author-52",
+        "author-98",
+        "author-99"
+      ],
+      "venue": "venue-3",
+      "year": 2015,
+      "citation_count": 6418,
+      "fields_of_study": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "external_ids": {
+        "MAG": "1771410628",
+        "DBLP": "journals/corr/SchulmanLMJA15",
+        "ArXiv": "1502.05477",
+        "CorpusId": 16046818
+      },
+      "semantic_scholar_id": "449532187c94af3dd3aa55e16d2c50f7854d2199",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-26": {
+      "title": "Preliminary",
+      "authors": [
+        "author-100",
+        "author-101",
+        "author-102"
+      ],
+      "venue": "venue-11",
+      "year": 2014,
+      "citation_count": 362,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "DBLP": "reference/sp/OrenZP23",
+        "DOI": "10.1016/s0167-5648(08)70939-0",
+        "CorpusId": 4940101
+      },
+      "semantic_scholar_id": "3346e72b31399527d037d6ed091a2ab96225e0fd",
+      "arxiv_id": null,
+      "doi": "10.1016/s0167-5648(08)70939-0",
+      "second_hop": "yes"
+    },
+    "citation-27": {
+      "title": "Lorenz Dominance and the Variance of Logarithms",
+      "authors": [
+        "author-103",
+        "author-104"
+      ],
+      "venue": "",
+      "year": 1999,
+      "citation_count": 110,
+      "fields_of_study": [
+        "Mathematics"
+      ],
+      "external_ids": {
+        "MAG": "2117388862",
+        "DOI": "10.1111/1468-0262.00057",
+        "CorpusId": 5780271
+      },
+      "semantic_scholar_id": "9744818146c045e54a3bee85b379aca940c44d6d",
+      "arxiv_id": null,
+      "doi": "10.1111/1468-0262.00057",
+      "second_hop": "yes"
+    },
+    "citation-28": {
+      "title": "Meta-neural networks that learn by learning",
+      "authors": [
+        "author-105",
+        "author-106"
+      ],
+      "venue": "venue-12",
+      "year": 1992,
+      "citation_count": 202,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2140804329",
+        "DOI": "10.1109/IJCNN.1992.287172",
+        "CorpusId": 61444551
+      },
+      "semantic_scholar_id": "b64e846fe88acaf302248249696c3b7badde41b5",
+      "arxiv_id": null,
+      "doi": "10.1109/IJCNN.1992.287172",
+      "second_hop": "yes"
+    },
+    "citation-29": {
+      "title": "Measures of Inequality",
+      "authors": [
+        "author-107"
+      ],
+      "venue": "",
+      "year": 1978,
+      "citation_count": 1223,
+      "fields_of_study": [
+        "Sociology"
+      ],
+      "external_ids": {
+        "MAG": "2326943757",
+        "DOI": "10.2307/2094626",
+        "CorpusId": 147059247
+      },
+      "semantic_scholar_id": "502fdcf7b7cb1d42e19891db5460d294a3820700",
+      "arxiv_id": null,
+      "doi": "10.2307/2094626",
+      "second_hop": "yes"
+    },
+    "citation-30": {
+      "title": "Economics and Information Theory",
+      "authors": [
+        "author-108"
+      ],
+      "venue": "",
+      "year": 1967,
+      "citation_count": 1063,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2285020383",
+        "DOI": "10.1057/JORS.1967.59",
+        "CorpusId": 61551581
+      },
+      "semantic_scholar_id": "6dbdebc64cf3792b72b6bd0b8f7c3914af7d9c53",
+      "arxiv_id": null,
+      "doi": "10.1057/JORS.1967.59",
+      "second_hop": "yes"
+    },
+    "citation-31": {
+      "title": "Learning how to learn",
+      "authors": [
+        "author-109"
+      ],
+      "venue": "",
+      "year": 2019,
+      "citation_count": 2110,
+      "fields_of_study": [
+        "Psychology"
+      ],
+      "external_ids": {
+        "MAG": "2955591235",
+        "DOI": "10.1007/978-1-4419-1428-6_4666",
+        "CorpusId": 11974053
+      },
+      "semantic_scholar_id": "44b6da0cd36c0fa2f7d3485c6dc0b6d2fbe379bb",
+      "arxiv_id": null,
+      "doi": "10.1007/978-1-4419-1428-6_4666",
+      "second_hop": "yes"
+    },
+    "citation-32": {
+      "title": "Learning to learn by gradient descent by gradient descent",
+      "authors": [
+        "author-110"
+      ],
+      "venue": "",
+      "year": 2019,
+      "citation_count": 137,
+      "fields_of_study": null,
+      "external_ids": {
+        "CorpusId": 221741465
+      },
+      "semantic_scholar_id": "9ab43fcb51b17c127b960149b59ee6e767e37629",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-33": {
+      "title": "Siamese Neural Networks for One-Shot Image Recognition",
+      "authors": [
+        "author-111"
+      ],
+      "venue": "",
+      "year": 2015,
+      "citation_count": 4025,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "3091905774",
+        "CorpusId": 13874643
+      },
+      "semantic_scholar_id": "f216444d4f2959b4520c61d20003fa30a199670a",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-34": {
+      "title": "Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning",
+      "authors": [
+        "author-112"
+      ],
+      "venue": "venue-13",
+      "year": 2004,
+      "citation_count": 8472,
+      "fields_of_study": null,
+      "external_ids": {
+        "DOI": "10.1023/A:1022672621406",
+        "CorpusId": 2332513
+      },
+      "semantic_scholar_id": "4c915c1eecb217c123a36dc6d3ce52d12c742614",
+      "arxiv_id": null,
+      "doi": "10.1023/A:1022672621406",
+      "second_hop": "yes"
+    },
+    "citation-35": {
+      "title": "On the Measurement of Inequality",
+      "authors": [
+        "author-113"
+      ],
+      "venue": "",
+      "year": 2003,
+      "citation_count": 3090,
+      "fields_of_study": null,
+      "external_ids": {
+        "CorpusId": 48266795
+      },
+      "semantic_scholar_id": "d1354880f9395fec1eef9911c45fd6e5e509d37e",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-36": {
+      "title": "Evolutionary principles in self-referential learning, or on learning how to learn: The meta-meta-. hook",
+      "authors": [
+        "author-114"
+      ],
+      "venue": "",
+      "year": 1987,
+      "citation_count": 722,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "DBLP": "phd/de/Schmidhuber09",
+        "CorpusId": 264351059
+      },
+      "semantic_scholar_id": "bdaec1b3eb9a8f7a2b296be009a148c35236f3ce",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-37": {
+      "title": "Generalized entropy and the measurement of distributional change",
+      "authors": [
+        "author-115"
+      ],
+      "venue": "",
+      "year": 1980,
+      "citation_count": 131,
+      "fields_of_study": [
+        "Economics"
+      ],
+      "external_ids": {
+        "MAG": "2038666705",
+        "DOI": "10.1016/0014-2921(80)90051-3",
+        "CorpusId": 154248141
+      },
+      "semantic_scholar_id": "d74309294954deb8ea1b7a0972431add32af2469",
+      "arxiv_id": null,
+      "doi": "10.1016/0014-2921(80)90051-3",
+      "second_hop": "yes"
+    },
+    "citation-38": {
+      "title": "Statistical Methods of Econometrics. Volume 6 of Studies in Mathematical and Managerial Economics.",
+      "authors": [
+        "author-116",
+        "author-117",
+        "author-118"
+      ],
+      "venue": "",
+      "year": 1968,
+      "citation_count": 7,
+      "fields_of_study": [
+        "Economics"
+      ],
+      "external_ids": {
+        "MAG": "2800553494",
+        "DOI": "10.2307/2985278",
+        "CorpusId": 158480190
+      },
+      "semantic_scholar_id": "42f1739aceb4348dbe0fe2a798d6ff8e991fbe18",
+      "arxiv_id": null,
+      "doi": "10.2307/2985278",
+      "second_hop": "yes"
+    },
+    "citation-39": {
+      "title": "Rectified Linear Units Improve Restricted Boltzmann Machines",
+      "authors": [
+        "author-119",
+        "author-120"
+      ],
+      "venue": "venue-3",
+      "year": 2010,
+      "citation_count": 17061,
+      "fields_of_study": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "1665214252",
+        "DBLP": "conf/icml/NairH10",
+        "CorpusId": 15539264
+      },
+      "semantic_scholar_id": "a538b05ebb01a40323997629e171c91aa28b8e2f",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-40": {
+      "title": "Learning to Represent Spatial Transformations with Factored Higher-Order Boltzmann Machines",
+      "authors": [
+        "author-121",
+        "author-120"
+      ],
+      "venue": "venue-14",
+      "year": 2010,
+      "citation_count": 283,
+      "fields_of_study": [
+        "Mathematics",
+        "Computer Science",
+        "Medicine"
+      ],
+      "external_ids": {
+        "DBLP": "journals/neco/MemisevicH10",
+        "MAG": "2136163184",
+        "DOI": "10.1162/neco.2010.01-09-953",
+        "CorpusId": 1413690,
+        "PubMed": "20141471"
+      },
+      "semantic_scholar_id": "0eb2e4a205a628ab059cab41d3b772f614ad29f2",
+      "arxiv_id": null,
+      "doi": "10.1162/neco.2010.01-09-953",
+      "second_hop": "yes"
+    },
+    "citation-41": {
+      "title": "Understanding the difficulty of training deep feedforward neural networks",
+      "authors": [
+        "author-122",
+        "author-123"
+      ],
+      "venue": null,
+      "year": 2010,
+      "citation_count": 11893,
+      "fields_of_study": [
+        "Initialization",
+        "Computer science",
+        "Artificial neural network",
+        "Artificial intelligence",
+        "Deep neural networks",
+        "Deep learning",
+        "Gradient descent",
+        "Jacobian matrix and determinant",
+        "Sigmoid function",
+        "Machine learning",
+        "Mathematics",
+        "Applied mathematics",
+        "Programming language"
+      ],
+      "external_ids": {
+        "DOI": null,
+        "OpenAlex": "https://openalex.org/W1533861849"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-42": {
+      "title": "A Model Analysis of Arterial Oxygen Desaturation during Apnea in Preterm Infants",
+      "authors": [
+        "author-124",
+        "author-125",
+        "author-126",
+        "author-127",
+        "author-128",
+        "author-129"
+      ],
+      "venue": "venue-15",
+      "year": 2009,
+      "citation_count": 125,
+      "fields_of_study": [
+        "Medicine",
+        "Computer Science"
+      ],
+      "external_ids": {
+        "PubMedCentral": "2778953",
+        "MAG": "2025266810",
+        "DBLP": "journals/ploscb/SandsEKDWB09",
+        "DOI": "10.1371/journal.pcbi.1000588",
+        "CorpusId": 5921352,
+        "PubMed": "19997495"
+      },
+      "semantic_scholar_id": "4b25105f82cc372e0db5fb5b44a15b48cd6413cc",
+      "arxiv_id": null,
+      "doi": "10.1371/journal.pcbi.1000588",
+      "second_hop": "yes"
+    },
+    "citation-43": {
+      "title": "A Structured Model of Video Reproduces Primary Visual Cortical Organisation",
+      "authors": [
+        "author-130",
+        "author-131",
+        "author-132"
+      ],
+      "venue": "venue-15",
+      "year": 2009,
+      "citation_count": 45,
+      "fields_of_study": [
+        "Medicine",
+        "Computer Science"
+      ],
+      "external_ids": {
+        "PubMedCentral": "2726939",
+        "MAG": "2059277419",
+        "DBLP": "journals/ploscb/BerkesTS09",
+        "DOI": "10.1371/journal.pcbi.1000495",
+        "CorpusId": 376997,
+        "PubMed": "19730679"
+      },
+      "semantic_scholar_id": "a7e5f1c143329c30d2dff82e61328c484ac2d747",
+      "arxiv_id": null,
+      "doi": "10.1371/journal.pcbi.1000495",
+      "second_hop": "yes"
+    },
+    "citation-44": {
+      "title": "Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations",
+      "authors": [
+        "author-133",
+        "author-134",
+        "author-135",
+        "author-136"
+      ],
+      "venue": "venue-3",
+      "year": 2009,
+      "citation_count": 2673,
+      "fields_of_study": [
+        "Computer Science"
+      ],
+      "external_ids": {
+        "MAG": "2130325614",
+        "DBLP": "conf/icml/LeeGRN09",
+        "DOI": "10.1145/1553374.1553453",
+        "CorpusId": 12008458
+      },
+      "semantic_scholar_id": "1e80f755bcbf10479afd2338cec05211fdbd325c",
+      "arxiv_id": null,
+      "doi": "10.1145/1553374.1553453",
+      "second_hop": "yes"
+    },
+    "citation-45": {
+      "title": "The uncrowded window of object recognition",
+      "authors": [
+        "author-137",
+        "author-138"
+      ],
+      "venue": null,
+      "year": 2008,
+      "citation_count": 656,
+      "fields_of_study": [
+        "Computer vision",
+        "Crowding",
+        "Cognitive neuroscience of visual object recognition",
+        "Artificial intelligence",
+        "Object (grammar)",
+        "Computer science",
+        "Percept",
+        "Fixation (population genetics)",
+        "Perception",
+        "Psychology",
+        "Cognitive psychology",
+        "Population",
+        "Demography",
+        "Neuroscience",
+        "Sociology"
+      ],
+      "external_ids": {
+        "DOI": "https://doi.org/10.1038/nn.2187",
+        "OpenAlex": "https://openalex.org/W1994166112"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": "https://doi.org/10.1038/nn.2187",
+      "second_hop": "yes"
+    },
+    "citation-46": {
+      "title": "Unsupervised Learning of Invariant Feature Hierarchies with Applications to Object Recognition",
+      "authors": [
+        "author-139",
+        "author-140",
+        "author-141",
+        "author-142"
+      ],
+      "venue": null,
+      "year": 2007,
+      "citation_count": 1111,
+      "fields_of_study": [
+        "Pattern recognition (psychology)",
+        "Artificial intelligence",
+        "MNIST database",
+        "Computer science",
+        "Classifier (UML)",
+        "Unsupervised learning",
+        "Invariant (physics)",
+        "Convolutional neural network",
+        "Cognitive neuroscience of visual object recognition",
+        "Sigmoid function",
+        "Feature extraction",
+        "Mathematics",
+        "Deep learning",
+        "Artificial neural network",
+        "Mathematical physics"
+      ],
+      "external_ids": {
+        "DOI": "https://doi.org/10.1109/cvpr.2007.383157",
+        "OpenAlex": "https://openalex.org/W2139427956"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": "https://doi.org/10.1109/cvpr.2007.383157",
+      "second_hop": "yes"
+    },
+    "citation-47": {
+      "title": "Invariant visual representation by single neurons in the human brain",
+      "authors": [
+        "author-143",
+        "author-144",
+        "author-145",
+        "author-146",
+        "author-147"
+      ],
+      "venue": null,
+      "year": 2005,
+      "citation_count": 1894,
+      "fields_of_study": [
+        "Stimulus (psychology)",
+        "Invariant (physics)",
+        "Neuroscience",
+        "Temporal lobe",
+        "Artificial intelligence",
+        "Representation (politics)",
+        "Computer science",
+        "Human brain",
+        "Visual system",
+        "Computer vision",
+        "Psychology",
+        "Pattern recognition (psychology)",
+        "Communication",
+        "Visual cortex",
+        "Mathematics",
+        "Cognitive psychology",
+        "Politics",
+        "Epilepsy",
+        "Political science",
+        "Law",
+        "Mathematical physics"
+      ],
+      "external_ids": {
+        "DOI": "https://doi.org/10.1038/nature03687",
+        "OpenAlex": "https://openalex.org/W2101295242"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": "https://doi.org/10.1038/nature03687",
+      "second_hop": "yes"
+    },
+    "citation-48": {
+      "title": "Hierarchical models of object recognition in cortex",
+      "authors": [
+        "author-148",
+        "author-149"
+      ],
+      "venue": null,
+      "year": 1999,
+      "citation_count": 3339,
+      "fields_of_study": [
+        "Visual cortex",
+        "Neuroscience",
+        "Cognitive neuroscience of visual object recognition",
+        "Hierarchy",
+        "Hierarchical database model",
+        "Computer science",
+        "Object (grammar)",
+        "Cortex (anatomy)",
+        "Artificial intelligence",
+        "Visual processing",
+        "Task (project management)",
+        "Function (biology)",
+        "Psychology",
+        "Cognitive science",
+        "Pattern recognition (psychology)",
+        "Biology",
+        "Perception",
+        "Data mining",
+        "Management",
+        "Evolutionary biology",
+        "Economics",
+        "Market economy"
+      ],
+      "external_ids": {
+        "DOI": "https://doi.org/10.1038/14819",
+        "OpenAlex": "https://openalex.org/W2149194912"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": "https://doi.org/10.1038/14819",
+      "second_hop": "yes"
+    },
+    "citation-49": {
+      "title": "Object recognition from local scale-invariant features",
+      "authors": [
+        "author-150"
+      ],
+      "venue": null,
+      "year": 1999,
+      "citation_count": 15679,
+      "fields_of_study": [
+        "Artificial intelligence",
+        "Computer vision",
+        "Cognitive neuroscience of visual object recognition",
+        "Pattern recognition (psychology)",
+        "Invariant (physics)",
+        "3D single-object recognition",
+        "Computer science",
+        "Affine transformation",
+        "Computation",
+        "Search engine indexing",
+        "Feature extraction",
+        "Mathematics",
+        "Algorithm",
+        "Pure mathematics",
+        "Mathematical physics"
+      ],
+      "external_ids": {
+        "DOI": "https://doi.org/10.1109/iccv.1999.790410",
+        "OpenAlex": "https://openalex.org/W2124386111"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": "https://doi.org/10.1109/iccv.1999.790410",
+      "second_hop": "yes"
+    },
+    "citation-50": {
+      "title": "The design and use of steerable filters",
+      "authors": [
+        "author-151",
+        "author-152"
+      ],
+      "venue": null,
+      "year": 1991,
+      "citation_count": 2932,
+      "fields_of_study": [
+        "Orientation (vector space)",
+        "Artificial intelligence",
+        "Computer science",
+        "Pyramid (geometry)",
+        "Filter (signal processing)",
+        "Adaptive filter",
+        "Computer vision",
+        "Prototype filter",
+        "Representation (politics)",
+        "Filter design",
+        "Algorithm",
+        "Mathematics",
+        "Geometry",
+        "Politics",
+        "Political science",
+        "Law"
+      ],
+      "external_ids": {
+        "DOI": "https://doi.org/10.1109/34.93808",
+        "OpenAlex": "https://openalex.org/W1991605728"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": "https://doi.org/10.1109/34.93808",
+      "second_hop": "yes"
+    },
+    "citation-51": {
+      "title": "Shape representation in parallel systems",
+      "authors": [
+        "author-153"
+      ],
+      "venue": null,
+      "year": 1981,
+      "citation_count": 97,
+      "fields_of_study": [
+        "Gestalt psychology",
+        "ENCODE",
+        "Computer science",
+        "Representation (politics)",
+        "Artificial intelligence",
+        "Computation",
+        "Simple (philosophy)",
+        "Slogan",
+        "Perception",
+        "Interpretation (philosophy)",
+        "Theoretical computer science",
+        "Visual processing",
+        "Visual perception",
+        "Algorithm",
+        "Neuroscience",
+        "Psychology",
+        "Biochemistry",
+        "Chemistry",
+        "Philosophy",
+        "Epistemology",
+        "Politics",
+        "Political science",
+        "Law",
+        "Gene",
+        "Programming language"
+      ],
+      "external_ids": {
+        "DOI": null,
+        "OpenAlex": "https://openalex.org/W179212727"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    },
+    "citation-52": {
+      "title": "Gradient-based learning applied to document recognition",
+      "authors": [
+        "author-142",
+        "author-154",
+        "author-123",
+        "author-155"
+      ],
+      "venue": null,
+      "year": 1998,
+      "citation_count": 50396,
+      "fields_of_study": [
+        "Computer science",
+        "Artificial intelligence",
+        "Convolutional neural network",
+        "Intelligent character recognition",
+        "Handwriting recognition",
+        "Transformer",
+        "Artificial neural network",
+        "Pattern recognition (psychology)",
+        "Handwriting",
+        "Preprocessor",
+        "Deep learning",
+        "Graph",
+        "Speech recognition",
+        "Machine learning",
+        "Feature extraction",
+        "Character recognition",
+        "Theoretical computer science",
+        "Physics",
+        "Quantum mechanics",
+        "Voltage",
+        "Image (mathematics)"
+      ],
+      "external_ids": {
+        "DOI": "https://doi.org/10.1109/5.726791",
+        "OpenAlex": "https://openalex.org/W2112796928"
+      },
+      "semantic_scholar_id": null,
+      "arxiv_id": null,
+      "doi": "https://doi.org/10.1109/5.726791",
+      "second_hop": "yes"
+    },
+    "citation-53": {
+      "title": "TRAFFIC: Recognizing Objects Using Hierarchical Reference Frame Transformations",
+      "authors": [
+        "author-51",
+        "author-156",
+        "author-120"
+      ],
+      "venue": "venue-9",
+      "year": 1989,
+      "citation_count": 24,
+      "fields_of_study": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "external_ids": {
+        "DBLP": "conf/nips/ZemelMH89",
+        "MAG": "2110803095",
+        "CorpusId": 15353397
+      },
+      "semantic_scholar_id": "5b00ab8cc5a56ee934618bd7555965185a7f83ec",
+      "arxiv_id": null,
+      "doi": null,
+      "second_hop": "yes"
+    }
+  },
+  "venues": {
+    "venue-1": "Advances in Neural Information Processing Systems",
+    "venue-2": "IEEE Conference on Computer Vision and Pattern Recognition",
+    "venue-3": "International Conference on Machine Learning",
+    "venue-4": "International Conference on Artificial Neural Networks",
+    "venue-5": "Adaptive Agents and Multi-Agent Systems",
+    "venue-6": "arXiv.org",
+    "venue-7": "International Conference on Learning Representations",
+    "venue-8": "2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "venue-9": "Neural Information Processing Systems",
+    "venue-10": "Nature",
+    "venue-11": "Body of Knowledge for Modeling and Simulation",
+    "venue-12": "[Proceedings 1992] IJCNN International Joint Conference on Neural Networks",
+    "venue-13": "Machine-mediated learning",
+    "venue-14": "Neural Computation",
+    "venue-15": "PLoS Comput. Biol."
+  }
+}
