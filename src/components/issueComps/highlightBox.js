@@ -44,21 +44,22 @@ export const HighlightBbox = ({
         top: 0,
         width: "100%",
         height: "100%",
-        background: issue !== null ? boxColor : '',
+        background: activeHighlight === cite.issues[0] ? boxColor : "",
         //transition: "all 0.2s ease-out",
-        border: activeHighlight === cite.issues[0] && "3px solid blue",
+        border: categoryColor !== null ? "3px solid" : "",
+        borderColor: categoryColor !== null ? categoryColor : "",
         borderRadius: 8,
         //opacity: 0.5,
         cursor: "pointer",
         pointerEvents: "auto"
       }}
       onClick={() => onClick(cite.issues[0])}
-      onMouseEnter={(e) => {
+      /*onMouseEnter={(e) => {
         e.target.style.border = "3px solid blue";
       }}
       onMouseLeave={(e) => {
         e.target.style.border = "";
-      }}
+      }}*/
     >
     </div>
     </Popover>

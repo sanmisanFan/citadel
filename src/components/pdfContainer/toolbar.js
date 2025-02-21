@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./toolbar.css";
 
 export const ToolBar = ({ setPdfScale }) => {
-  const [zoom, setZoom] = useState(0.9);
+  const [zoom, setZoom] = useState(1);
   const [isHighlightPen, setIsHighlightPen] = useState(false);
 
   const zoomIn = () => {

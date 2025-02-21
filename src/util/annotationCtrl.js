@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { HighlightBbox } from "../components/issueComps/issueHighLighter";
+import { HighlightBbox } from "../components/issueComps/highlightBox";
 
 export const citationHighlight = (
   viewerRef, 
@@ -10,7 +10,7 @@ export const citationHighlight = (
   setActiveHighlight
 ) => {
   const bboxHeightOffest = 0.003;
-  console.log('activeHighlight', activeHighlight);
+  //console.log('activeHighlight', activeHighlight);
   if (!viewerRef.current) return;
 
   const viewer = viewerRef.current;
@@ -65,7 +65,7 @@ export const citationHighlight = (
               citeObj={e}
               anomalousColorScheme={anomalousColorScheme}
               activeHighlight={activeHighlight}
-              onClick={(highlightId) => console.log(highlightId)}
+              onClick={(highlightId) => highlightId !== undefined && console.log(highlightId)}
             />
           );
           // Append the highlight container to the text layer

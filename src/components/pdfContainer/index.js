@@ -5,7 +5,8 @@ import { pdfjs, Document, Page, Outline } from 'react-pdf';
 
 import { citationHighlight } from "../../util/annotationCtrl";
 
-import { HighlightBbox } from "../issueComps/issueHighLighter";
+import { HighlightBbox } from "../issueComps/highlightBox";
+import { SentenceAnnotation } from "../issueComps/sentenceAnnotate";
 import { FloatingPanel } from "../issueComps/floatPanel";
 import { ToolBar } from "./toolbar";
 
@@ -21,11 +22,11 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 export const PDFContainer = ({ 
-  file, 
-  highlights,
+  file,
   citation,
   anomalous,
   anomalousColorScheme,
+  sentenceAnnotationList,
   currentPage,
   setCurrentPage,
   activeHighlight,
@@ -39,24 +40,6 @@ export const PDFContainer = ({
   const [width, setWidth] = useState(0);
   const [pdfScale, setPdfScale] = useState(1);
   const [renderedPages, setRenderedPages] = useState({});
-
-
-  /*const extractAndHighlight = async (pdf) => {
-    const page = await pdf.getPage(1);
-    const viewport = page.getViewport({ scale: 1 });
-
-    const textItems = await extractTextFromPage(pdf, 1); // Extract text from the first page
-    const coordinates = findSentenceCoordinates(textItems, targetSentence);
-
-    const normalizedCoordinates = {
-      x: coordinates.x / viewport.width,
-      y: (viewport.height - coordinates.y - coordinates.height) / viewport.height, // Flip y-axis
-      width: coordinates.width / viewport.width,
-      height: coordinates.height / viewport.height,
-    };
-    console.log('normalizedCoordinates', normalizedCoordinates);
-    console.log('coordinates', coordinates);
-  };*/
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
@@ -87,6 +70,19 @@ export const PDFContainer = ({
     }
   };
 
+  // Function to scroll to the corresponding page
+  const scrollToPage = (pageNumber) => {
+    if (!viewerRef.current) return;
+
+    const pageElement = viewerRef.current.querySelector(
+      `.react-pdf__Page[data-page-number="${pageNumber}"]`
+    );
+
+    if (pageElement) {
+      pageElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   const applyHighlightsReact = () => {
     if (!viewerRef.current) return;
   
@@ -98,25 +94,25 @@ export const PDFContainer = ({
   
       if (textContentLayer) {
         // Clear existing React Highlights
-        const existingContainers = textContentLayer.querySelectorAll(".react-highlight-container");
+        const existingContainers = textContentLayer.querySelectorAll(".sentence-highlight-container");
         existingContainers.forEach((container) => container.remove());
   
         // Get the transformation scale from the text layer
         const { width: layerWidth, height: layerHeight } = textContentLayer.getBoundingClientRect();
         
         // Filter highlights for the current page
-        highlights
+        sentenceAnnotationList
           .filter((highlight) => highlight.page === Number(pageElement.dataset.pageNumber))
-          .forEach(({ id, bbox, color, glyph }) => {
+          .forEach((highlight) => {
             // Convert normalized coordinates to pixel values
-            const highlightX = bbox.x * layerWidth;
-            const highlightY = bbox.y * layerHeight;
-            const highlightWidth = bbox.width * layerWidth;
-            const highlightHeight = (bbox.height + bboxHeightOffest) * layerHeight;
+            const highlightX = highlight.bbox.x * layerWidth;
+            const highlightY = highlight.bbox.y * layerHeight;
+            const highlightWidth = highlight.bbox.width * layerWidth;
+            const highlightHeight = (highlight.bbox.height + bboxHeightOffest) * layerHeight;
   
             // Create a container for the individual highlight
             const highlightContainer = document.createElement("div");
-            highlightContainer.className = "react-highlight-container";
+            highlightContainer.className = "sentence-highlight-container";
             highlightContainer.style.position = "absolute";
             highlightContainer.style.left = `${highlightX}px`;
             highlightContainer.style.top = `${highlightY}px`;
@@ -126,11 +122,14 @@ export const PDFContainer = ({
             // Mount the React Highlight component
             const root = createRoot(highlightContainer);
             root.render(
-              <HighlightBbox
-                glyph={glyph}
-                color={color}
-                id={id}
-                onClick={(highlightId) => console.log(highlightId)}
+              <SentenceAnnotation
+                issueID={highlight.issueID}
+                issueName={highlight.issueName}
+                issueCategory={highlight.issueCategory}
+                baseColor={highlight.baseColor}
+                boxColor={highlight.boxColor}
+                activeHighlight={activeHighlight}
+                onClick={(issueID) => setActiveHighlight(issueID)}
               />
             );
             // Append the highlight container to the text layer
@@ -143,12 +142,12 @@ export const PDFContainer = ({
   useEffect(() => {
     // render anomalous highlight
     if (Object.keys(renderedPages).length === numPages) {
-      //applyHighlightsReact();
+      console.log("activeHighlight:", activeHighlight);
+      applyHighlightsReact();
     }
-  }, [renderedPages, highlights]);
+  }, [renderedPages, sentenceAnnotationList, activeHighlight]);
 
   useEffect(() => {
-    console.log(activeHighlight);
     if (Object.keys(renderedPages).length === numPages) {
       citationHighlight(
         viewerRef, 
@@ -159,7 +158,7 @@ export const PDFContainer = ({
         setActiveHighlight
       );
     }
-  }, [renderedPages, citation]);
+  }, [renderedPages, citation, activeHighlight]);
 
   useEffect(() => {
     if (viewerRef.current) {
@@ -174,16 +173,6 @@ export const PDFContainer = ({
       return () => viewer.removeEventListener("scroll", handleScroll);
     }
   }, []);
-
-  /*useEffect(() => {
-    const loadAndExtract = async () => {
-      const loadingTask = pdfjs.getDocument(file);
-      const pdf = await loadingTask.promise;
-      //await extractAndHighlight(pdf, "[14]");
-      await extractAndHighlightCitation(pdf, "[17]");
-    };
-    loadAndExtract();
-  }, [file]);*/
 
   return (
     <div
