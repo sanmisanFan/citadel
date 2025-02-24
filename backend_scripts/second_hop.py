@@ -6,6 +6,7 @@ import os
 class SecondHopProcessor:
     def __init__(self):
         self.s2_base = "https://api.semanticscholar.org/graph/v1"
+        self.openalex_base = "https://api.openalex.org/works"
         self.max_retries = 3
         self.request_delay = 1
         print("DEBUG: Initialized SecondHopProcessor with Semantic Scholar base URL:", self.s2_base)
@@ -31,11 +32,7 @@ class SecondHopProcessor:
         return entity_keys
 
     def get_references_for_paper(self, paper_id):
-        """
-        Fetches the references (papers cited) for a given paper using Semantic Scholar.
-        Requests basic fields for each reference.
-        If a 429 (Too Many Requests) response is received, sleeps for 30 seconds before returning.
-        """
+        """Fetches the references for a given paper using Semantic Scholar."""
         fields = "references.paperId,references.title,references.authors,references.venue,references.year"
         url = f"{self.s2_base}/paper/{paper_id}"
         params = {"fields": fields}
@@ -56,9 +53,7 @@ class SecondHopProcessor:
             return None
 
     def get_paper_details(self, paper_id):
-        """
-        Fetch full details for a paper from Semantic Scholar.
-        """
+        """Fetch full details for a paper from Semantic Scholar."""
         fields = (
             "title,authors.name,authors.authorId,authors.externalIds,"
             "venue,year,citationCount,fieldsOfStudy,externalIds,paperId"
@@ -78,25 +73,49 @@ class SecondHopProcessor:
             return None
 
     def get_paper_details_openalex(self, title):
-        """Fetch paper details from OpenAlex by title."""
-        openalex_url = "https://api.openalex.org/works"
+        """Fetch paper details from OpenAlex by title and return its references."""
         params = {
             "filter": f"title.search:{title}",
             "per-page": 1  # Only get the top result
         }
         print(f"DEBUG: Fetching OpenAlex details for title: {title}")
         try:
-            response = requests.get(openalex_url, params=params, timeout=15)
+            response = requests.get(self.openalex_base, params=params, timeout=15)
+            print(f"DEBUG: OpenAlex response status for title {title}: {response.status_code}")
+            print(f"DEBUG: Raw OpenAlex response: {response.text[:500]}")
             response.raise_for_status()
             data = response.json()
             if "results" in data and len(data["results"]) > 0:
-                print("DEBUG: Received OpenAlex data:", data["results"][0])
-                return data["results"][0]
+                result = data["results"][0]
+                print("DEBUG: Received OpenAlex data:", result)
+                refs = result.get("referenced_works", [])
+                print(f"DEBUG: Found {len(refs)} referenced works for title: {title}")
+                return refs
             else:
                 print("DEBUG: No results found on OpenAlex for title:", title)
                 return None
         except Exception as e:
             print(f"DEBUG: OpenAlex API request failed for title {title}: {e}")
+            return None
+
+    def get_openalex_work_details(self, work_id):
+        """Fetch details for a specific OpenAlex work by ID using the API endpoint."""
+        work_id_short = work_id.split('/')[-1]  # Extracts "W2169805405"
+        url = f"{self.openalex_base}/{work_id_short}"
+        print(f"DEBUG: Fetching OpenAlex work details for ID: {url}")
+        try:
+            response = requests.get(url, timeout=15)
+            print(f"DEBUG: OpenAlex response status for {url}: {response.status_code}")
+            print(f"DEBUG: Raw OpenAlex response: {response.text[:500]}")
+            response.raise_for_status()
+            data = response.json()
+            print(f"DEBUG: Received OpenAlex work details for {url}:", data)
+            return data
+        except json.JSONDecodeError as e:
+            print(f"DEBUG: JSON decode error for {url}: {e}, Response content: {response.text}")
+            return None
+        except Exception as e:
+            print(f"DEBUG: Error fetching OpenAlex work details for {url}: {e}")
             return None
 
     def retry_api_call(self, func, *args):
@@ -111,21 +130,17 @@ class SecondHopProcessor:
             sleep(self.request_delay)
         return None
 
-    def _merge_authors(self, s2_authors, openalex_authors=None):
-        """
-        Merge author lists into the same structure as first-hop enriched data.
-        """
+    def _merge_authors(self, s2_authors=None, openalex_authors=None):
+        """Merge author lists into the same structure as first-hop enriched data."""
+        if s2_authors is None and openalex_authors is None:
+            return []
         merged_authors = []
-        max_length = max(len(s2_authors), len(openalex_authors) if openalex_authors else 0)
+        authors = s2_authors if s2_authors is not None else openalex_authors
+        max_length = len(authors) if authors else 0
         for i in range(max_length):
-            if i < len(s2_authors) and s2_authors[i]:
-                api_author = s2_authors[i]
-            elif openalex_authors and i < len(openalex_authors):
-                api_author = openalex_authors[i]
-            else:
-                api_author = {}
+            api_author = authors[i] if i < len(authors) else {}
             name = api_author.get('name')
-            s2_id = api_author.get('authorId')
+            s2_id = api_author.get('authorId') if s2_authors else None
             orcid = None
             if api_author:
                 ext_ids = api_author.get('externalIds') or {}
@@ -136,20 +151,17 @@ class SecondHopProcessor:
                 "name": name,
                 "s2_id": s2_id,
                 "orcid": orcid,
-                "raw_name": name  # Default to API name for second hop
+                "raw_name": name
             })
         print("DEBUG: Merged authors:", merged_authors)
         return merged_authors
 
     def _merge_data(self, s2=None, openalex=None):
-        """
-        Merge Semantic Scholar or OpenAlex data into the same format as first-hop enriched data.
-        Prioritizes Semantic Scholar if available, otherwise uses OpenAlex.
-        """
+        """Merge Semantic Scholar or OpenAlex data into the same format as first-hop enriched data."""
         if s2:
             merged = {
                 "title": s2.get('title'),
-                "authors": self._merge_authors(s2.get('authors', [])),
+                "authors": self._merge_authors(s2_authors=s2.get('authors', [])),
                 "year": s2.get('year'),
                 "venue": s2.get('venue'),
                 "citation_count": s2.get('citationCount', 0),
@@ -162,7 +174,7 @@ class SecondHopProcessor:
         elif openalex:
             merged = {
                 "title": openalex.get("title"),
-                "authors": self._merge_authors([{"name": a["author"]["display_name"], "externalIds": {"ORCID": a["author"]["orcid"]}} for a in openalex.get("authorships", [])]),
+                "authors": self._merge_authors(openalex_authors=[{"name": a["author"]["display_name"], "externalIds": {"ORCID": a["author"]["orcid"]}} for a in openalex.get("authorships", [])]),
                 "year": openalex.get("publication_year"),
                 "venue": openalex.get("host_venue", {}).get("display_name"),
                 "citation_count": openalex.get("cited_by_count", 0),
@@ -178,9 +190,7 @@ class SecondHopProcessor:
         return merged
 
     def assign_entity_keys(self, references_data, entity_keys):
-        """
-        Assign unique keys for authors, citations, and venues in second-hop references.
-        """
+        """Assign unique keys for authors, citations, and venues in second-hop references."""
         author_key_map = {k: v for k, v in entity_keys["authors"].items()}
         venue_key_map = {v: k for k, v in entity_keys["venues"].items()}
         existing_citation_ids = [int(k.split('-')[1]) for k in entity_keys["citations"].keys() if k.startswith("citation-")]
@@ -191,7 +201,6 @@ class SecondHopProcessor:
         for paper_id, data in references_data.items():
             enriched_refs = data["references"]
             for ref in enriched_refs:
-                # Process authors
                 new_authors = []
                 for author in ref.get("authors", []):
                     author_name = author.get("name", "").strip()
@@ -208,7 +217,6 @@ class SecondHopProcessor:
                     new_authors.append(a_key)
                 ref["authors"] = new_authors
 
-                # Process venue
                 venue = ref.get("venue")
                 if venue:
                     venue_str = str(venue)
@@ -221,7 +229,6 @@ class SecondHopProcessor:
                         venue_counter += 1
                     ref["venue"] = v_key
 
-                # Assign citation key
                 citation_key = f"citation-{citation_counter}"
                 citation_counter += 1
                 ref["citation_key"] = citation_key
@@ -242,9 +249,7 @@ class SecondHopProcessor:
         return references_data, entity_keys
 
     def process_second_hop(self, input_file, output_file, entity_keys_file):
-        """
-        Process second-hop references, falling back to OpenAlex if Semantic Scholar fails.
-        """
+        """Process second-hop references, using OpenAlex referenced_works if Semantic Scholar ID is missing."""
         papers = self.load_enriched_papers(input_file)
         entity_keys = self.load_entity_keys(entity_keys_file)
         all_references = {}
@@ -252,14 +257,25 @@ class SecondHopProcessor:
         for idx, paper in enumerate(papers, 1):
             paper_id = paper.get("semantic_scholar_id")
             title = paper.get("title")
-            if not paper_id:
-                print(f"DEBUG: Paper {idx} with title '{title}' has no semantic_scholar_id. Skipping second hop.")
+            if not title:
+                print(f"DEBUG: Paper {idx} has no title. Skipping second hop.")
                 continue
             print(f"DEBUG: Processing second hop for paper {idx} with title: {title} (ID: {paper_id})")
 
-            refs = self.retry_api_call(self.get_references_for_paper, paper_id)
+            if paper_id:
+                refs = self.retry_api_call(self.get_references_for_paper, paper_id)
+                source = "Semantic Scholar"
+            else:
+                print(f"DEBUG: No Semantic Scholar ID for paper {idx}, using OpenAlex title search")
+                openalex_refs = self.retry_api_call(self.get_paper_details_openalex, title)
+                if openalex_refs is None:
+                    print(f"DEBUG: OpenAlex failed to fetch references for title {title}, skipping.")
+                    continue
+                refs = [{"paperId": ref} for ref in openalex_refs]
+                source = "OpenAlex"
+
             if refs is None:
-                print(f"DEBUG: Skipping paper {paper_id} due to failure in fetching references.")
+                print(f"DEBUG: Failed to fetch references for paper {idx}, skipping.")
                 continue
 
             enriched_refs = []
@@ -269,37 +285,26 @@ class SecondHopProcessor:
                     print("DEBUG: Reference without paperId, skipping")
                     continue
                 print(f"DEBUG: Enriching reference with paperId: {ref_paper_id}")
-                details = self.retry_api_call(self.get_paper_details, ref_paper_id)
-                if details is None:
-                    print(f"DEBUG: Semantic Scholar failed for {ref_paper_id}, falling back to OpenAlex with title: {ref.get('title')}")
-                    openalex_data = self.retry_api_call(self.get_paper_details_openalex, ref.get("title"))
-                    if openalex_data:
-                        merged = self._merge_data(openalex=openalex_data)
+
+                if source == "Semantic Scholar":
+                    details = self.retry_api_call(self.get_paper_details, ref_paper_id)
+                    if details:
+                        merged = self._merge_data(s2=details)
                     else:
-                        print(f"DEBUG: OpenAlex also failed for title {ref.get('title')}, skipping reference")
+                        print(f"DEBUG: Semantic Scholar failed for {ref_paper_id}, skipping reference")
                         continue
-                else:
-                    openalex_authors = None
-                    need_openalex_supplement = False
-                    if "authors" in details:
-                        for author in details.get("authors", []):
-                            orcid = (author.get('externalIds') or {}).get('ORCID')
-                            if not orcid:
-                                need_openalex_supplement = True
-                                break
+                else:  # OpenAlex source
+                    details = self.retry_api_call(self.get_openalex_work_details, ref_paper_id)
+                    if details:
+                        merged = self._merge_data(openalex=details)
                     else:
-                        need_openalex_supplement = True
-                    if need_openalex_supplement:
-                        print("DEBUG: ORCID missing, supplementing with OpenAlex data")
-                        openalex_data = self.retry_api_call(self.get_paper_details_openalex, details.get("title"))
-                        if openalex_data:
-                            openalex_authors = [{"name": a["author"]["display_name"], "orcid": a["author"]["orcid"]} for a in openalex_data.get("authorships", [])]
-                    merged = self._merge_data(s2=details, openalex=openalex_authors)
-                
+                        print(f"DEBUG: OpenAlex failed for work ID {ref_paper_id}, skipping reference")
+                        continue
+
                 enriched_refs.append(merged)
                 sleep(self.request_delay)
 
-            all_references[paper_id] = {
+            all_references[paper_id or title] = {
                 "title": title,
                 "references": enriched_refs
             }

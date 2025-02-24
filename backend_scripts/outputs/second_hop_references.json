@@ -1,242 +1,4134 @@
 {
-  "06f0fe16fcb8f80bf88746c5ef6d3780531918ab": {
-    "title": "Task Agnostic Meta-Learning for Few-Shot Learning",
+  "ImageNet Classification with Deep Convolutional Neural Networks": {
+    "title": "ImageNet Classification with Deep Convolutional Neural Networks",
     "references": [
       {
-        "title": "Emergence of Scenario-Appropriate Collaborative Behaviors for Teams of Robotic Bodyguards",
+        "title": "Metric Learning for Large Scale Image Classification: Generalizing to New Classes at Near-Zero Cost",
         "authors": [
-          "author-23",
-          "author-24"
+          "author-288",
+          "author-289",
+          "author-290",
+          "author-291"
         ],
-        "year": 2018,
-        "venue": "venue-5",
-        "citation_count": 3,
-        "fields_of_study": [
-          "Computer Science"
-        ],
-        "external_ids": {
-          "MAG": "2890509590",
-          "DBLP": "conf/atal/SheikhB19",
-          "ArXiv": "1809.04500",
-          "CorpusId": 52196126
-        },
-        "semantic_scholar_id": "2002a92a4a65e93a11448e5346cfbc893111ec8a",
-        "arxiv_id": null,
-        "doi": null,
-        "citation_key": "citation-7"
-      },
-      {
-        "title": "On First-Order Meta-Learning Algorithms",
-        "authors": [
-          "author-25",
-          "author-26",
-          "author-27"
-        ],
-        "year": 2018,
-        "venue": "venue-6",
-        "citation_count": 2124,
-        "fields_of_study": [
-          "Computer Science"
-        ],
-        "external_ids": {
-          "MAG": "2795900505",
-          "ArXiv": "1803.02999",
-          "DBLP": "journals/corr/abs-1803-02999",
-          "CorpusId": 4587331
-        },
-        "semantic_scholar_id": "90dc22818bd2d97d8deaff168b0137b75a962767",
-        "arxiv_id": null,
-        "doi": null,
-        "citation_key": "citation-8"
-      },
-      {
-        "title": "Recasting Gradient-Based Meta-Learning as Hierarchical Bayes",
-        "authors": [
-          "author-28",
-          "author-29",
-          "author-30",
-          "author-31",
-          "author-32"
-        ],
-        "year": 2018,
-        "venue": "venue-7",
-        "citation_count": 499,
-        "fields_of_study": [
-          "Computer Science",
-          "Mathematics"
-        ],
-        "external_ids": {
-          "DBLP": "journals/corr/abs-1801-08930",
-          "ArXiv": "1801.08930",
-          "MAG": "2963547174",
-          "CorpusId": 3484654
-        },
-        "semantic_scholar_id": "46b072cf918ec6f50403568a73d4347ea86b7e66",
-        "arxiv_id": null,
-        "doi": null,
-        "citation_key": "citation-9"
-      },
-      {
-        "title": "Learning to Compare: Relation Network for Few-Shot Learning",
-        "authors": [
-          "author-33",
-          "author-34",
-          "author-35",
-          "author-36",
-          "author-37",
-          "author-38"
-        ],
-        "year": 2017,
-        "venue": "venue-8",
-        "citation_count": 3853,
-        "fields_of_study": [
-          "Computer Science"
-        ],
-        "external_ids": {
-          "MAG": "2768228940",
-          "DBLP": "journals/corr/abs-1711-06025",
-          "ArXiv": "1711.06025",
-          "DOI": "10.1109/CVPR.2018.00131",
-          "CorpusId": 4412459
-        },
-        "semantic_scholar_id": "bfe284e4338e62f0a61bb33398353efd687f206f",
-        "arxiv_id": null,
-        "doi": "10.1109/CVPR.2018.00131",
-        "citation_key": "citation-10"
-      },
-      {
-        "title": "Few-Shot Learning with Graph Neural Networks",
-        "authors": [
-          "author-39",
-          "author-40"
-        ],
-        "year": 2017,
-        "venue": "venue-7",
-        "citation_count": 1194,
-        "fields_of_study": [
-          "Computer Science",
-          "Mathematics"
-        ],
-        "external_ids": {
-          "MAG": "2770468159",
-          "DBLP": "journals/corr/abs-1711-04043",
-          "ArXiv": "1711.04043",
-          "CorpusId": 3431470
-        },
-        "semantic_scholar_id": "572a1f77306e160c3893299c18f3ed862fb5f6d9",
-        "arxiv_id": null,
-        "doi": null,
-        "citation_key": "citation-11"
-      },
-      {
-        "title": "Meta-SGD: Learning to Learn Quickly for Few Shot Learning",
-        "authors": [
-          "author-41",
-          "author-42",
-          "author-43",
-          "author-44"
-        ],
-        "year": 2017,
-        "venue": "venue-6",
-        "citation_count": 1082,
-        "fields_of_study": [
-          "Computer Science"
-        ],
-        "external_ids": {
-          "MAG": "2742093937",
-          "ArXiv": "1707.09835",
-          "DBLP": "journals/corr/LiZCL17",
-          "CorpusId": 25316837
-        },
-        "semantic_scholar_id": "d33ad6a25264ba1747d8c93f6621c7f90a7ec601",
-        "arxiv_id": null,
-        "doi": null,
-        "citation_key": "citation-12"
-      },
-      {
-        "title": "A Simple Neural Attentive Meta-Learner",
-        "authors": [
-          "author-45",
-          "author-46",
-          "author-47",
-          "author-48"
-        ],
-        "year": 2017,
+        "year": 2012,
         "venue": null,
-        "citation_count": 815,
+        "citation_count": 288,
         "fields_of_study": [
-          "Simple (philosophy)",
-          "Computer science",
-          "Psychology",
+          "Classifier (UML)",
+          "k-nearest neighbors algorithm",
           "Artificial intelligence",
-          "Epistemology",
-          "Philosophy"
+          "Pattern recognition (psychology)",
+          "Computer science",
+          "Generalization",
+          "Metric (unit)",
+          "Training set",
+          "Machine learning",
+          "Zero (linguistics)",
+          "Support vector machine",
+          "Contextual image classification",
+          "Class (philosophy)",
+          "Image (mathematics)",
+          "Mathematics",
+          "Engineering",
+          "Linguistics",
+          "Philosophy",
+          "Mathematical analysis",
+          "Operations management"
         ],
         "external_ids": {
-          "DOI": "https://doi.org/10.48550/arxiv.1707.03141",
-          "OpenAlex": "https://openalex.org/W2787501667"
+          "DOI": "https://doi.org/10.1007/978-3-642-33709-3_35",
+          "OpenAlex": "https://openalex.org/W1499991161"
         },
         "semantic_scholar_id": null,
         "arxiv_id": null,
-        "doi": "https://doi.org/10.48550/arxiv.1707.03141",
-        "citation_key": "citation-13"
+        "doi": "https://doi.org/10.1007/978-3-642-33709-3_35",
+        "citation_key": "citation-101"
+      },
+      {
+        "title": "Caltech-256 Object Category Dataset",
+        "authors": [
+          "author-292",
+          "author-293",
+          "author-294"
+        ],
+        "year": 2007,
+        "venue": null,
+        "citation_count": 2476,
+        "fields_of_study": [
+          "Clutter",
+          "Artificial intelligence",
+          "Benchmark (surveying)",
+          "Object (grammar)",
+          "Set (abstract data type)",
+          "Computer science",
+          "Object detection",
+          "Pattern recognition (psychology)",
+          "Matching (statistics)",
+          "Pyramid (geometry)",
+          "Image (mathematics)",
+          "Computer vision",
+          "Mathematics",
+          "Statistics",
+          "Geography",
+          "Cartography",
+          "Telecommunications",
+          "Radar",
+          "Geometry",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W1576445103"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-102"
+      },
+      {
+        "title": "Rectified Linear Units Improve Restricted Boltzmann Machines",
+        "authors": [
+          "author-295",
+          "author-296"
+        ],
+        "year": 2010,
+        "venue": null,
+        "citation_count": 11773,
+        "fields_of_study": [
+          "Boltzmann machine",
+          "Binary number",
+          "Sigmoid function",
+          "Computer science",
+          "Object (grammar)",
+          "Restricted Boltzmann machine",
+          "Artificial intelligence",
+          "Inference",
+          "Pattern recognition (psychology)",
+          "Feature (linguistics)",
+          "Cognitive neuroscience of visual object recognition",
+          "Algorithm",
+          "Mathematics",
+          "Computer vision",
+          "Deep learning",
+          "Arithmetic",
+          "Artificial neural network",
+          "Linguistics",
+          "Philosophy"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W1665214252"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-103"
+      },
+      {
+        "title": "Improving neural networks by preventing co-adaptation of feature detectors",
+        "authors": [
+          "author-296",
+          "author-297",
+          "author-298",
+          "author-299",
+          "author-300"
+        ],
+        "year": 2012,
+        "venue": null,
+        "citation_count": 6529,
+        "fields_of_study": [
+          "Overfitting",
+          "Feature (linguistics)",
+          "Dropout (neural networks)",
+          "Computer science",
+          "Benchmark (surveying)",
+          "Adaptation (eye)",
+          "Context (archaeology)",
+          "Detector",
+          "Set (abstract data type)",
+          "Artificial intelligence",
+          "Artificial neural network",
+          "Pattern recognition (psychology)",
+          "Variety (cybernetics)",
+          "Feed forward",
+          "Feedforward neural network",
+          "Machine learning",
+          "Engineering",
+          "Psychology",
+          "Telecommunications",
+          "Linguistics",
+          "Philosophy",
+          "Neuroscience",
+          "Paleontology",
+          "Geodesy",
+          "Control engineering",
+          "Biology",
+          "Programming language",
+          "Geography"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1207.0580",
+          "OpenAlex": "https://openalex.org/W1904365287"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1207.0580",
+        "citation_key": "citation-104"
+      },
+      {
+        "title": "Convolutional networks and applications in vision",
+        "authors": [
+          "author-301",
+          "author-302",
+          "author-303"
+        ],
+        "year": 2010,
+        "venue": null,
+        "citation_count": 2040,
+        "fields_of_study": [
+          "Computer science",
+          "Artificial intelligence",
+          "Pooling",
+          "Convolutional neural network",
+          "Cognitive neuroscience of visual object recognition",
+          "Perception",
+          "Invariant (physics)",
+          "Feature extraction",
+          "Object detection",
+          "Computer vision",
+          "Pattern recognition (psychology)",
+          "Mobile robot",
+          "Robot",
+          "Feature (linguistics)",
+          "Machine learning",
+          "Physics",
+          "Neuroscience",
+          "Mathematical physics",
+          "Biology",
+          "Linguistics",
+          "Philosophy"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/iscas.2010.5537907",
+          "OpenAlex": "https://openalex.org/W2015861736"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/iscas.2010.5537907",
+        "citation_key": "citation-105"
+      },
+      {
+        "title": "Why is Real-World Visual Object Recognition Hard?",
+        "authors": [
+          "author-304",
+          "author-305",
+          "author-306"
+        ],
+        "year": 2008,
+        "venue": null,
+        "citation_count": 552,
+        "fields_of_study": [
+          "Artificial intelligence",
+          "Computer science",
+          "Object (grammar)",
+          "Natural (archaeology)",
+          "Cognitive neuroscience of visual object recognition",
+          "Computer vision",
+          "Focus (optics)",
+          "Machine learning",
+          "Physics",
+          "Archaeology",
+          "Optics",
+          "History"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1371/journal.pcbi.0040027",
+          "OpenAlex": "https://openalex.org/W2026942141"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1371/journal.pcbi.0040027",
+        "citation_key": "citation-106"
+      },
+      {
+        "title": "High-dimensional signature compression for large-scale image classification",
+        "authors": [
+          "author-307",
+          "author-290"
+        ],
+        "year": 2011,
+        "venue": null,
+        "citation_count": 259,
+        "fields_of_study": [
+          "Computer science",
+          "Curse of dimensionality",
+          "Hash function",
+          "Scalability",
+          "Dimensionality reduction",
+          "Lossy compression",
+          "Artificial intelligence",
+          "Classifier (UML)",
+          "Pattern recognition (psychology)",
+          "Kernel (algebra)",
+          "Image compression",
+          "Set (abstract data type)",
+          "Training set",
+          "Image (mathematics)",
+          "Image processing",
+          "Mathematics",
+          "Database",
+          "Computer security",
+          "Combinatorics",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/cvpr.2011.5995504",
+          "OpenAlex": "https://openalex.org/W2053229256"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/cvpr.2011.5995504",
+        "citation_key": "citation-107"
+      },
+      {
+        "title": "Lessons from the Netflix prize challenge",
+        "authors": [
+          "author-308",
+          "author-309"
+        ],
+        "year": 2007,
+        "venue": null,
+        "citation_count": 704,
+        "fields_of_study": [
+          "Computer science",
+          "Data science"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1145/1345448.1345465",
+          "OpenAlex": "https://openalex.org/W2061212083"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1145/1345448.1345465",
+        "citation_key": "citation-108"
+      },
+      {
+        "title": "High-Performance Neural Networks for Visual Object Classification",
+        "authors": [
+          "author-310",
+          "author-311",
+          "author-312",
+          "author-313",
+          "author-314"
+        ],
+        "year": 2011,
+        "venue": null,
+        "citation_count": 228,
+        "fields_of_study": [
+          "MNIST database",
+          "Computer science",
+          "Convolutional neural network",
+          "Artificial intelligence",
+          "Pattern recognition (psychology)",
+          "Feature (linguistics)",
+          "Artificial neural network",
+          "Deep learning",
+          "Object (grammar)",
+          "Cognitive neuroscience of visual object recognition",
+          "Word error rate",
+          "Deep neural networks",
+          "Machine learning",
+          "Linguistics",
+          "Philosophy"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1102.0183",
+          "OpenAlex": "https://openalex.org/W2097356275"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1102.0183",
+        "citation_key": "citation-109"
+      },
+      {
+        "title": "Multi-column deep neural network for traffic sign classification",
+        "authors": [
+          "author-310",
+          "author-311",
+          "author-315",
+          "author-316"
+        ],
+        "year": 2012,
+        "venue": null,
+        "citation_count": 1006,
+        "fields_of_study": [
+          "Computer science",
+          "Traffic sign recognition",
+          "Benchmark (surveying)",
+          "Artificial neural network",
+          "Artificial intelligence",
+          "Column (typography)",
+          "Sign (mathematics)",
+          "Feature (linguistics)",
+          "Pattern recognition (psychology)",
+          "Deep neural networks",
+          "Contrast (vision)",
+          "Deep learning",
+          "Traffic sign",
+          "Mathematics",
+          "Telecommunications",
+          "Mathematical analysis",
+          "Linguistics",
+          "Philosophy",
+          "Geodesy",
+          "Frame (networking)",
+          "Geography"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1016/j.neunet.2012.02.023",
+          "OpenAlex": "https://openalex.org/W2108069432"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1016/j.neunet.2012.02.023",
+        "citation_key": "citation-110"
+      },
+      {
+        "title": "ImageNet: A large-scale hierarchical image database",
+        "authors": [
+          "author-317",
+          "author-318",
+          "author-319",
+          "author-320",
+          "author-321",
+          "author-322"
+        ],
+        "year": 2009,
+        "venue": null,
+        "citation_count": 53325,
+        "fields_of_study": [
+          "Computer science",
+          "WordNet",
+          "Hierarchy",
+          "Cluster analysis",
+          "Artificial intelligence",
+          "Information retrieval",
+          "Scale (ratio)",
+          "Object (grammar)",
+          "Image (mathematics)",
+          "Ontology",
+          "Data mining",
+          "Machine learning",
+          "Pattern recognition (psychology)",
+          "Philosophy",
+          "Physics",
+          "Epistemology",
+          "Quantum mechanics",
+          "Economics",
+          "Market economy"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/cvpr.2009.5206848",
+          "OpenAlex": "https://openalex.org/W2108598243"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/cvpr.2009.5206848",
+        "citation_key": "citation-111"
+      },
+      {
+        "title": "LabelMe: A Database and Web-Based Tool for Image Annotation",
+        "authors": [
+          "author-323",
+          "author-324",
+          "author-325",
+          "author-326"
+        ],
+        "year": 2007,
+        "venue": null,
+        "citation_count": 3619,
+        "fields_of_study": [
+          "Computer science",
+          "Annotation",
+          "WordNet",
+          "Automatic image annotation",
+          "Object (grammar)",
+          "Ground truth",
+          "Artificial intelligence",
+          "Variety (cybernetics)",
+          "Image retrieval",
+          "Information retrieval",
+          "Image (mathematics)",
+          "Cognitive neuroscience of visual object recognition",
+          "Pattern recognition (psychology)"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/s11263-007-0090-8",
+          "OpenAlex": "https://openalex.org/W2110764733"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/s11263-007-0090-8",
+        "citation_key": "citation-112"
+      },
+      {
+        "title": "Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations",
+        "authors": [
+          "author-327",
+          "author-328",
+          "author-329",
+          "author-330"
+        ],
+        "year": 2009,
+        "venue": null,
+        "citation_count": 2459,
+        "fields_of_study": [
+          "Computer science",
+          "Artificial intelligence",
+          "Pooling",
+          "Inference",
+          "Deep belief network",
+          "Generative model",
+          "Deep learning",
+          "Probabilistic logic",
+          "Convolutional neural network",
+          "Pattern recognition (psychology)",
+          "Scalability",
+          "Unsupervised learning",
+          "Machine learning",
+          "Generative grammar",
+          "Database"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1145/1553374.1553453",
+          "OpenAlex": "https://openalex.org/W2130325614"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1145/1553374.1553453",
+        "citation_key": "citation-113"
+      },
+      {
+        "title": "Learning methods for generic object recognition with invariance to pose and lighting",
+        "authors": [
+          "author-301",
+          "author-331",
+          "author-332"
+        ],
+        "year": 2004,
+        "venue": null,
+        "citation_count": 1327,
+        "fields_of_study": [
+          "Artificial intelligence",
+          "Clutter",
+          "Computer science",
+          "Computer vision",
+          "Support vector machine",
+          "Pattern recognition (psychology)",
+          "Grayscale",
+          "Segmentation",
+          "Object detection",
+          "Cognitive neuroscience of visual object recognition",
+          "Pixel",
+          "Convolutional neural network",
+          "Object (grammar)",
+          "Radar",
+          "Telecommunications"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/cvpr.2004.1315150",
+          "OpenAlex": "https://openalex.org/W2134557905"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/cvpr.2004.1315150",
+        "citation_key": "citation-114"
+      },
+      {
+        "title": "A High-Throughput Screening Approach to Discovering Good Forms of Biologically Inspired Visual Representation",
+        "authors": [
+          "author-304",
+          "author-333",
+          "author-306",
+          "author-305"
+        ],
+        "year": 2009,
+        "venue": null,
+        "citation_count": 259,
+        "fields_of_study": [
+          "Computer science",
+          "Pooling",
+          "Throughput",
+          "Variety (cybernetics)",
+          "Set (abstract data type)",
+          "Artificial intelligence",
+          "Normalization (sociology)",
+          "Representation (politics)",
+          "IBM",
+          "Machine learning",
+          "Theoretical computer science",
+          "Programming language",
+          "Politics",
+          "Political science",
+          "Telecommunications",
+          "Law",
+          "Wireless",
+          "Materials science",
+          "Sociology",
+          "Anthropology",
+          "Nanotechnology"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1371/journal.pcbi.1000579",
+          "OpenAlex": "https://openalex.org/W2144161366"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1371/journal.pcbi.1000579",
+        "citation_key": "citation-115"
+      },
+      {
+        "title": "Handwritten Digit Recognition with a Back-Propagation Network",
+        "authors": [
+          "author-301",
+          "author-334",
+          "author-335",
+          "author-336",
+          "author-337",
+          "author-338",
+          "author-339"
+        ],
+        "year": 1989,
+        "venue": null,
+        "citation_count": 3265,
+        "fields_of_study": [
+          "Numerical digit",
+          "Computer science",
+          "Preprocessor",
+          "Word error rate",
+          "Task (project management)",
+          "Speech recognition",
+          "Artificial intelligence",
+          "Postal service",
+          "Pattern recognition (psychology)",
+          "Arithmetic",
+          "Mathematics",
+          "Engineering",
+          "Systems engineering",
+          "Public administration",
+          "Political science"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2154579312"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-116"
+      },
+      {
+        "title": "Best practices for convolutional neural networks applied to visual document analysis",
+        "authors": [
+          "author-340",
+          "author-341",
+          "author-342"
+        ],
+        "year": 2005,
+        "venue": null,
+        "citation_count": 2604,
+        "fields_of_study": [
+          "MNIST database",
+          "Convolutional neural network",
+          "Computer science",
+          "Set (abstract data type)",
+          "Simple (philosophy)",
+          "Architecture",
+          "Artificial neural network",
+          "Artificial intelligence",
+          "Machine learning",
+          "Information retrieval",
+          "Art",
+          "Philosophy",
+          "Epistemology",
+          "Visual arts",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/icdar.2003.1227801",
+          "OpenAlex": "https://openalex.org/W2156163116"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/icdar.2003.1227801",
+        "citation_key": "citation-117"
+      },
+      {
+        "title": "Learning generative visual models from few training examples: An incremental Bayesian approach tested on 101 object categories",
+        "authors": [
+          "author-322",
+          "author-343",
+          "author-294"
+        ],
+        "year": 2007,
+        "venue": null,
+        "citation_count": 2015,
+        "fields_of_study": [
+          "Artificial intelligence",
+          "Computer science",
+          "Object (grammar)",
+          "Machine learning",
+          "Bayesian probability",
+          "Generative model",
+          "Generative grammar",
+          "Pattern recognition (psychology)",
+          "Incremental learning",
+          "Cognitive neuroscience of visual object recognition",
+          "Process (computing)",
+          "Probabilistic logic",
+          "Operating system"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1016/j.cviu.2005.09.012",
+          "OpenAlex": "https://openalex.org/W2166049352"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1016/j.cviu.2005.09.012",
+        "citation_key": "citation-118"
+      },
+      {
+        "title": "Convolutional Networks Can Learn to Generate Affinity Graphs for Image Segmentation",
+        "authors": [
+          "author-344",
+          "author-345",
+          "author-346",
+          "author-347",
+          "author-348",
+          "author-349",
+          "author-350",
+          "author-351"
+        ],
+        "year": 2009,
+        "venue": null,
+        "citation_count": 382,
+        "fields_of_study": [
+          "Segmentation",
+          "Artificial intelligence",
+          "Computer science",
+          "Pattern recognition (psychology)",
+          "Graph",
+          "Image segmentation",
+          "Preprocessor",
+          "Graph partition",
+          "Image (mathematics)",
+          "Algorithm",
+          "Theoretical computer science"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1162/neco.2009.10-08-881",
+          "OpenAlex": "https://openalex.org/W2169805405"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1162/neco.2009.10-08-881",
+        "citation_key": "citation-119"
+      },
+      {
+        "title": "Using very deep autoencoders for content-based image retrieval.",
+        "authors": [
+          "author-298",
+          "author-296"
+        ],
+        "year": 2011,
+        "venue": null,
+        "citation_count": 367,
+        "fields_of_study": [
+          "Computer science",
+          "Artificial intelligence",
+          "Image retrieval",
+          "Binary code",
+          "Hash function",
+          "Pattern recognition (psychology)",
+          "Content-based image retrieval",
+          "Set (abstract data type)",
+          "Binary number",
+          "Image (mathematics)",
+          "Matching (statistics)",
+          "Deep learning",
+          "Binary image",
+          "Computer vision",
+          "Image processing",
+          "Mathematics",
+          "Statistics",
+          "Arithmetic",
+          "Computer security",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2396976214"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-120"
+      },
+      {
+        "title": "What is the best multi-stage architecture for object recognition?",
+        "authors": [
+          "author-352",
+          "author-302",
+          "author-353",
+          "author-301"
+        ],
+        "year": 2009,
+        "venue": null,
+        "citation_count": 2142,
+        "fields_of_study": [
+          "Artificial intelligence",
+          "Computer science",
+          "Pattern recognition (psychology)",
+          "Pooling",
+          "MNIST database",
+          "Feature extraction",
+          "Normalization (sociology)",
+          "Filter (signal processing)",
+          "Word error rate",
+          "Feature (linguistics)",
+          "Cognitive neuroscience of visual object recognition",
+          "Filter bank",
+          "Computer vision",
+          "Artificial neural network",
+          "Linguistics",
+          "Philosophy",
+          "Sociology",
+          "Anthropology"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/iccv.2009.5459469",
+          "OpenAlex": "https://openalex.org/W2546302380"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/iccv.2009.5459469",
+        "citation_key": "citation-121"
+      },
+      {
+        "title": null,
+        "authors": [
+          "author-354"
+        ],
+        "year": 2001,
+        "venue": null,
+        "citation_count": 100283,
+        "fields_of_study": [
+          "Random forest",
+          "Mathematics",
+          "AdaBoost",
+          "Statistics",
+          "Tree (set theory)",
+          "Generalization",
+          "Support vector machine",
+          "Generalization error",
+          "Measure (data warehouse)",
+          "Artificial intelligence",
+          "Pattern recognition (psychology)",
+          "Computer science",
+          "Artificial neural network",
+          "Data mining",
+          "Combinatorics",
+          "Mathematical analysis"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1023/a:1010933404324",
+          "OpenAlex": "https://openalex.org/W2911964244"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1023/a:1010933404324",
+        "citation_key": "citation-122"
+      },
+      {
+        "title": "Learning Multiple Layers of Features from Tiny Images",
+        "authors": [
+          "author-298"
+        ],
+        "year": 2009,
+        "venue": null,
+        "citation_count": 24118,
+        "fields_of_study": [
+          "Boltzmann machine",
+          "Artificial intelligence",
+          "Classifier (UML)",
+          "Computer science",
+          "Generative grammar",
+          "Deep learning",
+          "Pattern recognition (psychology)",
+          "Pixel",
+          "Deep belief network",
+          "Focus (optics)",
+          "Machine learning",
+          "Generative model",
+          "Restricted Boltzmann machine",
+          "Computer vision",
+          "Physics",
+          "Optics"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W3118608800"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-123"
+      }
+    ]
+  },
+  "Deep Residual Learning for Image Recognition": {
+    "title": "Deep Residual Learning for Image Recognition",
+    "references": [
+      {
+        "title": "A multigrid tutorial",
+        "authors": [
+          "author-355"
+        ],
+        "year": 1987,
+        "venue": null,
+        "citation_count": 1950,
+        "fields_of_study": [
+          "Multigrid method",
+          "Computer science",
+          "Nonlinear system",
+          "Applied mathematics",
+          "Bibliography",
+          "Iterative method",
+          "Index (typography)",
+          "Mathematics",
+          "Algorithm",
+          "Physics",
+          "Programming language",
+          "Library science",
+          "Quantum mechanics"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W1530872699"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-124"
+      },
+      {
+        "title": "Understanding the difficulty of training deep feedforward neural networks",
+        "authors": [
+          "author-356",
+          "author-357"
+        ],
+        "year": 2010,
+        "venue": null,
+        "citation_count": 11893,
+        "fields_of_study": [
+          "Initialization",
+          "Computer science",
+          "Artificial neural network",
+          "Artificial intelligence",
+          "Deep neural networks",
+          "Deep learning",
+          "Gradient descent",
+          "Jacobian matrix and determinant",
+          "Sigmoid function",
+          "Machine learning",
+          "Mathematics",
+          "Applied mathematics",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W1533861849"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-125"
+      },
+      {
+        "title": "Fast R-CNN",
+        "authors": [
+          "author-358"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 23290,
+        "fields_of_study": [
+          "Computer science",
+          "Convolutional neural network",
+          "Pascal (unit)",
+          "Python (programming language)",
+          "Artificial intelligence",
+          "Object detection",
+          "Deep learning",
+          "Pattern recognition (psychology)",
+          "Programming language",
+          "Operating system"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/iccv.2015.169",
+          "OpenAlex": "https://openalex.org/W1536680647"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/iccv.2015.169",
+        "citation_key": "citation-126"
+      },
+      {
+        "title": "Neural networks for pattern recognition",
+        "authors": [
+          "author-359"
+        ],
+        "year": 1994,
+        "venue": null,
+        "citation_count": 19304,
+        "fields_of_study": [
+          "Computer science",
+          "Pattern recognition (psychology)",
+          "Artificial intelligence"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.5860/choice.31-5500",
+          "OpenAlex": "https://openalex.org/W1554663460"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.5860/choice.31-5500",
+        "citation_key": "citation-127"
+      },
+      {
+        "title": "Rectified Linear Units Improve Restricted Boltzmann Machines",
+        "authors": [
+          "author-295",
+          "author-296"
+        ],
+        "year": 2010,
+        "venue": null,
+        "citation_count": 11773,
+        "fields_of_study": [
+          "Boltzmann machine",
+          "Binary number",
+          "Sigmoid function",
+          "Computer science",
+          "Object (grammar)",
+          "Restricted Boltzmann machine",
+          "Artificial intelligence",
+          "Inference",
+          "Pattern recognition (psychology)",
+          "Feature (linguistics)",
+          "Cognitive neuroscience of visual object recognition",
+          "Algorithm",
+          "Mathematics",
+          "Computer vision",
+          "Deep learning",
+          "Arithmetic",
+          "Artificial neural network",
+          "Linguistics",
+          "Philosophy"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W1665214252"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-128"
+      },
+      {
+        "title": "Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification",
+        "authors": [
+          "author-360",
+          "author-361",
+          "author-362",
+          "author-363"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 17042,
+        "fields_of_study": [
+          "Overfitting",
+          "Initialization",
+          "Computer science",
+          "Scratch",
+          "Artificial intelligence",
+          "Rectifier (neural networks)",
+          "Artificial neural network",
+          "Contextual image classification",
+          "Parametric statistics",
+          "Deep neural networks",
+          "Machine learning",
+          "Convolutional neural network",
+          "Deep learning",
+          "Pattern recognition (psychology)",
+          "Image (mathematics)",
+          "Recurrent neural network",
+          "Mathematics",
+          "Types of artificial neural networks",
+          "Statistics",
+          "Programming language",
+          "Operating system"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/iccv.2015.123",
+          "OpenAlex": "https://openalex.org/W1677182931"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/iccv.2015.123",
+        "citation_key": "citation-129"
+      },
+      {
+        "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+        "authors": [
+          "author-364",
+          "author-365"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 71776,
+        "fields_of_study": [
+          "Computer science",
+          "Convolution (computer science)",
+          "Convolutional neural network",
+          "Artificial intelligence",
+          "Deep learning",
+          "Image (mathematics)",
+          "Scale (ratio)",
+          "Architecture",
+          "Contextual image classification",
+          "Pattern recognition (psychology)",
+          "Machine learning",
+          "Computer vision",
+          "Artificial neural network",
+          "Cartography",
+          "Art",
+          "Visual arts",
+          "Geography"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W1686810756"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-130"
+      },
+      {
+        "title": "FitNets: Hints for Thin Deep Nets",
+        "authors": [
+          "author-366",
+          "author-367",
+          "author-368",
+          "author-369",
+          "author-370",
+          "author-357"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 2066,
+        "fields_of_study": [
+          "Computer science",
+          "Layer (electronics)",
+          "Process (computing)",
+          "State (computer science)",
+          "Training (meteorology)",
+          "Artificial intelligence",
+          "Mathematics education",
+          "Algorithm",
+          "Mathematics",
+          "Programming language",
+          "Physics",
+          "Chemistry",
+          "Organic chemistry",
+          "Meteorology"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W1690739335"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-131"
+      },
+      {
+        "title": "Network In Network",
+        "authors": [
+          "author-371",
+          "author-372",
+          "author-373"
+        ],
+        "year": 2013,
+        "venue": null,
+        "citation_count": 2061,
+        "fields_of_study": [
+          "MNIST database",
+          "Overfitting",
+          "Computer science",
+          "Artificial intelligence",
+          "Pooling",
+          "Convolutional neural network",
+          "Activation function",
+          "Pattern recognition (psychology)",
+          "Feature (linguistics)",
+          "Field (mathematics)",
+          "Layer (electronics)",
+          "Artificial neural network",
+          "Deep learning",
+          "Dropout (neural networks)",
+          "Perceptron",
+          "Machine learning",
+          "Mathematics",
+          "Linguistics",
+          "Philosophy",
+          "Chemistry",
+          "Organic chemistry",
+          "Pure mathematics"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W1799366690"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-132"
+      },
+      {
+        "title": "Centering Neural Network Gradient Factors",
+        "authors": [
+          "author-374"
+        ],
+        "year": 2012,
+        "venue": null,
+        "citation_count": 41,
+        "fields_of_study": [
+          "Computer science",
+          "Benchmark (surveying)",
+          "Artificial neural network",
+          "Generalization",
+          "Artificial intelligence",
+          "Unit (ring theory)",
+          "Component (thermodynamics)",
+          "Algorithm",
+          "Mathematics",
+          "Mathematical analysis",
+          "Physics",
+          "Mathematics education",
+          "Geodesy",
+          "Thermodynamics",
+          "Geography"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/978-3-642-35289-8_14",
+          "OpenAlex": "https://openalex.org/W1811843574"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/978-3-642-35289-8_14",
+        "citation_key": "citation-133"
+      },
+      {
+        "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+        "authors": [
+          "author-375",
+          "author-376"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 21284,
+        "fields_of_study": [
+          "Covariate",
+          "Normalization (sociology)",
+          "Computer science",
+          "Training (meteorology)",
+          "Econometrics",
+          "Statistics",
+          "Artificial intelligence",
+          "Mathematics",
+          "Geography",
+          "Sociology",
+          "Meteorology",
+          "Anthropology"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1502.03167",
+          "OpenAlex": "https://openalex.org/W1836465849"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1502.03167",
+        "citation_key": "citation-134"
+      },
+      {
+        "title": "Microsoft COCO: Common Objects in Context",
+        "authors": [
+          "author-377",
+          "author-378",
+          "author-379",
+          "author-380",
+          "author-294",
+          "author-381",
+          "author-382",
+          "author-383"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 35703,
+        "fields_of_study": [
+          "Computer science",
+          "Pascal (unit)",
+          "Spotting",
+          "Artificial intelligence",
+          "Segmentation",
+          "Minimum bounding box",
+          "Bounding overwatch",
+          "Object detection",
+          "Object (grammar)",
+          "Context (archaeology)",
+          "Computer vision",
+          "Image segmentation",
+          "Baseline (sea)",
+          "Pattern recognition (psychology)",
+          "Image (mathematics)",
+          "Geography",
+          "Archaeology",
+          "Programming language",
+          "Oceanography",
+          "Geology"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/978-3-319-10602-1_48",
+          "OpenAlex": "https://openalex.org/W1861492603"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/978-3-319-10602-1_48",
+        "citation_key": "citation-135"
+      },
+      {
+        "title": "Fully convolutional networks for semantic segmentation",
+        "authors": [
+          "author-384",
+          "author-385",
+          "author-386"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 31449,
+        "fields_of_study": [
+          "Computer science",
+          "Artificial intelligence",
+          "Segmentation",
+          "Convolutional neural network",
+          "Pattern recognition (psychology)",
+          "Inference",
+          "Pixel",
+          "Pascal (unit)",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/cvpr.2015.7298965",
+          "OpenAlex": "https://openalex.org/W1903029394"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/cvpr.2015.7298965",
+        "citation_key": "citation-136"
+      },
+      {
+        "title": "Improving neural networks by preventing co-adaptation of feature detectors",
+        "authors": [
+          "author-296",
+          "author-297",
+          "author-298",
+          "author-299",
+          "author-300"
+        ],
+        "year": 2012,
+        "venue": null,
+        "citation_count": 6529,
+        "fields_of_study": [
+          "Overfitting",
+          "Feature (linguistics)",
+          "Dropout (neural networks)",
+          "Computer science",
+          "Benchmark (surveying)",
+          "Adaptation (eye)",
+          "Context (archaeology)",
+          "Detector",
+          "Set (abstract data type)",
+          "Artificial intelligence",
+          "Artificial neural network",
+          "Pattern recognition (psychology)",
+          "Variety (cybernetics)",
+          "Feed forward",
+          "Feedforward neural network",
+          "Machine learning",
+          "Engineering",
+          "Psychology",
+          "Telecommunications",
+          "Linguistics",
+          "Philosophy",
+          "Neuroscience",
+          "Paleontology",
+          "Geodesy",
+          "Control engineering",
+          "Biology",
+          "Programming language",
+          "Geography"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1207.0580",
+          "OpenAlex": "https://openalex.org/W1904365287"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1207.0580",
+        "citation_key": "citation-137"
+      },
+      {
+        "title": "Object Detection via a Multi-region and Semantic Segmentation-Aware CNN Model",
+        "authors": [
+          "author-387",
+          "author-388"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 780,
+        "fields_of_study": [
+          "Pascal (unit)",
+          "Computer science",
+          "Convolutional neural network",
+          "Artificial intelligence",
+          "Discriminative model",
+          "Object detection",
+          "Segmentation",
+          "Margin (machine learning)",
+          "Pattern recognition (psychology)",
+          "Exploit",
+          "Deep learning",
+          "Representation (politics)",
+          "Object (grammar)",
+          "Computer vision",
+          "Machine learning",
+          "Computer security",
+          "Politics",
+          "Political science",
+          "Law",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/iccv.2015.135",
+          "OpenAlex": "https://openalex.org/W1932624639"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/iccv.2015.135",
+        "citation_key": "citation-138"
+      },
+      {
+        "title": "Convolutional neural networks at constrained time cost",
+        "authors": [
+          "author-360",
+          "author-363"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 1426,
+        "fields_of_study": [
+          "Computer science",
+          "Convolutional neural network",
+          "Constraint (computer-aided design)",
+          "Time constraint",
+          "Artificial intelligence",
+          "Filter (signal processing)",
+          "Machine learning",
+          "Artificial neural network",
+          "Architecture",
+          "Baseline (sea)",
+          "Network architecture",
+          "Computer engineering",
+          "Computer vision",
+          "Mechanical engineering",
+          "Engineering",
+          "Oceanography",
+          "Computer security",
+          "Geology",
+          "Art",
+          "Political science",
+          "Law",
+          "Visual arts"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/cvpr.2015.7299173",
+          "OpenAlex": "https://openalex.org/W1932847118"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/cvpr.2015.7299173",
+        "citation_key": "citation-139"
+      },
+      {
+        "title": "Deleted Work",
+        "authors": [],
+        "year": 1955,
+        "venue": null,
+        "citation_count": 0,
+        "fields_of_study": [],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W4285719527"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-140"
+      },
+      {
+        "title": "The devil is in the details: an evaluation of recent feature encoding methods",
+        "authors": [
+          "author-389",
+          "author-390",
+          "author-391",
+          "author-365"
+        ],
+        "year": 2011,
+        "venue": null,
+        "citation_count": 861,
+        "fields_of_study": [
+          "Computer science",
+          "Encoding (memory)",
+          "Codebook",
+          "Pascal (unit)",
+          "Artificial intelligence",
+          "Locality",
+          "Histogram",
+          "Pattern recognition (psychology)",
+          "Kernel (algebra)",
+          "Feature (linguistics)",
+          "Computation",
+          "Vector quantization",
+          "Pipeline (software)",
+          "Machine learning",
+          "Algorithm",
+          "Image (mathematics)",
+          "Mathematics",
+          "Philosophy",
+          "Linguistics",
+          "Combinatorics",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.5244/c.25.76",
+          "OpenAlex": "https://openalex.org/W1976921161"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.5244/c.25.76",
+        "citation_key": "citation-141"
+      },
+      {
+        "title": "Aggregating Local Image Descriptors into Compact Codes",
+        "authors": [
+          "author-392",
+          "author-290",
+          "author-393",
+          "author-307",
+          "author-394",
+          "author-395"
+        ],
+        "year": 2011,
+        "venue": null,
+        "citation_count": 1537,
+        "fields_of_study": [
+          "Fisher kernel",
+          "Search engine indexing",
+          "Kernel (algebra)",
+          "Computer science",
+          "Artificial intelligence",
+          "Dimensionality reduction",
+          "Pattern recognition (psychology)",
+          "Representation (politics)",
+          "Byte",
+          "Dimension (graph theory)",
+          "Image (mathematics)",
+          "Support vector machine",
+          "Set (abstract data type)",
+          "Curse of dimensionality",
+          "Kernel method",
+          "Computer vision",
+          "Mathematics",
+          "Combinatorics",
+          "Kernel Fisher discriminant analysis",
+          "Politics",
+          "Political science",
+          "Pure mathematics",
+          "Law",
+          "Programming language",
+          "Operating system"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/tpami.2011.235",
+          "OpenAlex": "https://openalex.org/W1984309565"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/tpami.2011.235",
+        "citation_key": "citation-142"
+      },
+      {
+        "title": "A Multigrid Tutorial, Second Edition",
+        "authors": [
+          "author-355",
+          "author-396",
+          "author-397"
+        ],
+        "year": 2000,
+        "venue": null,
+        "citation_count": 1396,
+        "fields_of_study": [
+          "Multigrid method",
+          "Computer science",
+          "Mathematics",
+          "Mathematical analysis",
+          "Partial differential equation"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1137/1.9780898719505",
+          "OpenAlex": "https://openalex.org/W1997542937"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1137/1.9780898719505",
+        "citation_key": "citation-143"
+      },
+      {
+        "title": "Locally adapted hierarchical basis preconditioning",
+        "authors": [
+          "author-398"
+        ],
+        "year": 2006,
+        "venue": null,
+        "citation_count": 125,
+        "fields_of_study": [
+          "Computer science",
+          "Interpolation (computer graphics)",
+          "Basis (linear algebra)",
+          "Basis function",
+          "Smoothness",
+          "Graphics",
+          "Computer graphics",
+          "Algorithm",
+          "Set (abstract data type)",
+          "Variable (mathematics)",
+          "Mathematics",
+          "Artificial intelligence",
+          "Image (mathematics)",
+          "Computer graphics (images)",
+          "Mathematical analysis",
+          "Programming language",
+          "Geometry"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1145/1141911.1142005",
+          "OpenAlex": "https://openalex.org/W2022532533"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1145/1141911.1142005",
+        "citation_key": "citation-144"
+      },
+      {
+        "title": "Neural networks for pattern recognition",
+        "authors": [
+          "author-399"
+        ],
+        "year": 1995,
+        "venue": null,
+        "citation_count": 1794,
+        "fields_of_study": [
+          "Structural health monitoring",
+          "Vibration",
+          "Computer science",
+          "Adhesive",
+          "Aerospace",
+          "Materials science",
+          "Electrical impedance",
+          "Piezoelectric sensor",
+          "Structural engineering",
+          "Artificial neural network",
+          "Piezoelectricity",
+          "Acoustics",
+          "Artificial intelligence",
+          "Composite material",
+          "Engineering",
+          "Aerospace engineering",
+          "Physics",
+          "Electrical engineering",
+          "Layer (electronics)"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1016/0893-6080(95)90002-0",
+          "OpenAlex": "https://openalex.org/W2025357764"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1016/0893-6080(95)90002-0",
+        "citation_key": "citation-145"
+      },
+      {
+        "title": "The Pascal Visual Object Classes (VOC) Challenge",
+        "authors": [
+          "author-400",
+          "author-401",
+          "author-402",
+          "author-403",
+          "author-365"
+        ],
+        "year": 2009,
+        "venue": null,
+        "citation_count": 16996,
+        "fields_of_study": [
+          "Pascal (unit)",
+          "Benchmark (surveying)",
+          "Artificial intelligence",
+          "Computer science",
+          "Object detection",
+          "Cognitive neuroscience of visual object recognition",
+          "Machine learning",
+          "Visual inspection",
+          "Context (archaeology)",
+          "Object (grammar)",
+          "Annotation",
+          "Pattern recognition (psychology)",
+          "Computer vision",
+          "Paleontology",
+          "Geodesy",
+          "Biology",
+          "Geography",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/s11263-009-0275-4",
+          "OpenAlex": "https://openalex.org/W2031489346"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/s11263-009-0275-4",
+        "citation_key": "citation-146"
+      },
+      {
+        "title": "Long Short-Term Memory",
+        "authors": [
+          "author-404",
+          "author-316"
+        ],
+        "year": 1997,
+        "venue": null,
+        "citation_count": 80539,
+        "fields_of_study": [
+          "Term (time)",
+          "Short-term memory",
+          "Computer science",
+          "Mathematics",
+          "Psychology",
+          "Neuroscience",
+          "Cognition",
+          "Working memory",
+          "Physics",
+          "Quantum mechanics"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1162/neco.1997.9.8.1735",
+          "OpenAlex": "https://openalex.org/W2064675550"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1162/neco.1997.9.8.1735",
+        "citation_key": "citation-147"
+      },
+      {
+        "title": "Vlfeat",
+        "authors": [
+          "author-391",
+          "author-405"
+        ],
+        "year": 2010,
+        "venue": null,
+        "citation_count": 2758,
+        "fields_of_study": [
+          "Computer science",
+          "Implementation",
+          "Cluster analysis",
+          "MATLAB",
+          "Source code",
+          "Feature (linguistics)",
+          "Open source",
+          "Tree (set theory)",
+          "Code (set theory)",
+          "Artificial intelligence",
+          "Computer vision",
+          "Programming language",
+          "Software",
+          "Mathematical analysis",
+          "Philosophy",
+          "Linguistics",
+          "Mathematics",
+          "Set (abstract data type)"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1145/1873951.1874249",
+          "OpenAlex": "https://openalex.org/W2066941820"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1145/1873951.1874249",
+        "citation_key": "citation-148"
+      },
+      {
+        "title": "Going deeper with convolutions",
+        "authors": [
+          "author-376",
+          "author-406",
+          "author-407",
+          "author-408",
+          "author-409",
+          "author-410",
+          "author-411",
+          "author-412",
+          "author-413"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 43601,
+        "fields_of_study": [
+          "Computer science",
+          "Architecture",
+          "Convolutional neural network",
+          "Intuition",
+          "Artificial intelligence",
+          "Deep learning",
+          "Network architecture",
+          "Context (archaeology)",
+          "Artificial neural network",
+          "Scale (ratio)",
+          "Pattern recognition (psychology)",
+          "Machine learning",
+          "Computer network",
+          "Biology",
+          "Art",
+          "Paleontology",
+          "Philosophy",
+          "Physics",
+          "Epistemology",
+          "Quantum mechanics",
+          "Visual arts"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/cvpr.2015.7298594",
+          "OpenAlex": "https://openalex.org/W2097117768"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/cvpr.2015.7298594",
+        "citation_key": "citation-149"
+      },
+      {
+        "title": "Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation",
+        "authors": [
+          "author-358",
+          "author-414",
+          "author-386",
+          "author-415"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 27746,
+        "fields_of_study": [
+          "Pascal (unit)",
+          "Computer science",
+          "Convolutional neural network",
+          "Object detection",
+          "Artificial intelligence",
+          "Pattern recognition (psychology)",
+          "Segmentation",
+          "Scalability",
+          "Context (archaeology)",
+          "Image (mathematics)",
+          "Machine learning",
+          "Paleontology",
+          "Database",
+          "Biology",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/cvpr.2014.81",
+          "OpenAlex": "https://openalex.org/W2102605133"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/cvpr.2014.81",
+        "citation_key": "citation-150"
+      },
+      {
+        "title": "Learning long-term dependencies with gradient descent is difficult",
+        "authors": [
+          "author-357",
+          "author-340",
+          "author-416"
+        ],
+        "year": 1994,
+        "venue": null,
+        "citation_count": 7613,
+        "fields_of_study": [
+          "Gradient descent",
+          "Computer science",
+          "Term (time)",
+          "Artificial intelligence",
+          "Stochastic gradient descent",
+          "Artificial neural network",
+          "Recurrent neural network",
+          "Deep learning",
+          "Machine learning",
+          "Face (sociological concept)",
+          "Pattern recognition (psychology)",
+          "Social science",
+          "Physics",
+          "Quantum mechanics",
+          "Sociology"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/72.279181",
+          "OpenAlex": "https://openalex.org/W2107878631"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/72.279181",
+        "citation_key": "citation-151"
+      },
+      {
+        "title": "ImageNet Large Scale Visual Recognition Challenge",
+        "authors": [
+          "author-417",
+          "author-317",
+          "author-418",
+          "author-419",
+          "author-420",
+          "author-421",
+          "author-422",
+          "author-423",
+          "author-424",
+          "author-425",
+          "author-426",
+          "author-322"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 36957,
+        "fields_of_study": [
+          "Benchmark (surveying)",
+          "Artificial intelligence",
+          "Computer science",
+          "Categorical variable",
+          "Cognitive neuroscience of visual object recognition",
+          "Scale (ratio)",
+          "Object (grammar)",
+          "Object detection",
+          "Field (mathematics)",
+          "Pattern recognition (psychology)",
+          "Machine learning",
+          "3D single-object recognition",
+          "Annotation",
+          "Computer vision",
+          "Geography",
+          "Cartography",
+          "Mathematics",
+          "Pure mathematics"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/s11263-015-0816-y",
+          "OpenAlex": "https://openalex.org/W2117539524"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/s11263-015-0816-y",
+        "citation_key": "citation-152"
+      },
+      {
+        "title": "Pattern Recognition and Neural Networks",
+        "authors": [
+          "author-427"
+        ],
+        "year": 1996,
+        "venue": null,
+        "citation_count": 6526,
+        "fields_of_study": [
+          "Computer science",
+          "Artificial intelligence",
+          "Subject (documents)",
+          "Data science",
+          "Artificial neural network",
+          "Style (visual arts)",
+          "Machine learning",
+          "World Wide Web",
+          "Geography",
+          "Archaeology"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1017/cbo9780511812651",
+          "OpenAlex": "https://openalex.org/W2117812871"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1017/cbo9780511812651",
+        "citation_key": "citation-153"
+      },
+      {
+        "title": "Product Quantization for Nearest Neighbor Search",
+        "authors": [
+          "author-392",
+          "author-393",
+          "author-428"
+        ],
+        "year": 2010,
+        "venue": null,
+        "citation_count": 2530,
+        "fields_of_study": [
+          "Nearest neighbor search",
+          "Computer science",
+          "Cartesian product",
+          "Linear subspace",
+          "Vector quantization",
+          "Subspace topology",
+          "Euclidean distance",
+          "Best bin first",
+          "k-nearest neighbors algorithm",
+          "Quantization (signal processing)",
+          "Scalability",
+          "Algorithm",
+          "Dot product",
+          "Pattern recognition (psychology)",
+          "Artificial intelligence",
+          "Mathematics",
+          "Discrete mathematics",
+          "Geometry",
+          "Database"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/tpami.2010.57",
+          "OpenAlex": "https://openalex.org/W2124509324"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/tpami.2010.57",
+        "citation_key": "citation-154"
+      },
+      {
+        "title": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+        "authors": [
+          "author-429",
+          "author-430",
+          "author-431"
+        ],
+        "year": 2013,
+        "venue": null,
+        "citation_count": 1000,
+        "fields_of_study": [
+          "Nonlinear system",
+          "Deep learning",
+          "Artificial neural network",
+          "Computer science",
+          "Artificial intelligence",
+          "Convergence (economics)",
+          "Unsupervised learning",
+          "Gradient descent",
+          "Gaussian",
+          "Mathematics",
+          "Applied mathematics",
+          "Statistical physics",
+          "Physics",
+          "Quantum mechanics",
+          "Economics",
+          "Economic growth"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1312.6120",
+          "OpenAlex": "https://openalex.org/W2125930537"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1312.6120",
+        "citation_key": "citation-155"
+      },
+      {
+        "title": "Accelerated Gradient Descent by Factor-Centering Decomposition",
+        "authors": [
+          "author-374"
+        ],
+        "year": 1998,
+        "venue": null,
+        "citation_count": 29,
+        "fields_of_study": [
+          "Gradient descent",
+          "Benchmark (surveying)",
+          "Factor (programming language)",
+          "Decomposition",
+          "Generalization",
+          "Computer science",
+          "Artificial neural network",
+          "Feature (linguistics)",
+          "Artificial intelligence",
+          "Network architecture",
+          "Gradient method",
+          "Algorithm",
+          "Mathematics",
+          "Ecology",
+          "Mathematical analysis",
+          "Linguistics",
+          "Philosophy",
+          "Computer security",
+          "Geodesy",
+          "Biology",
+          "Programming language",
+          "Geography"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.3929/ethz-a-004263473",
+          "OpenAlex": "https://openalex.org/W2139398462"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.3929/ethz-a-004263473",
+        "citation_key": "citation-156"
+      },
+      {
+        "title": "Fisher Kernels on Visual Vocabularies for Image Categorization",
+        "authors": [
+          "author-290",
+          "author-432"
+        ],
+        "year": 2007,
+        "venue": null,
+        "citation_count": 1648,
+        "fields_of_study": [
+          "Discriminative model",
+          "Fisher kernel",
+          "Artificial intelligence",
+          "Categorization",
+          "Computer science",
+          "Pattern recognition (psychology)",
+          "Generative model",
+          "Bag-of-words model in computer vision",
+          "Kernel (algebra)",
+          "Vocabulary",
+          "Classifier (UML)",
+          "Generative grammar",
+          "Representation (politics)",
+          "Support vector machine",
+          "Cognitive neuroscience of visual object recognition",
+          "Machine learning",
+          "Set (abstract data type)",
+          "Contextual image classification",
+          "Object (grammar)",
+          "Image (mathematics)",
+          "Kernel method",
+          "Mathematics",
+          "Visual Word",
+          "Image retrieval",
+          "Kernel Fisher discriminant analysis",
+          "Linguistics",
+          "Philosophy",
+          "Combinatorics",
+          "Politics",
+          "Political science",
+          "Law",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/cvpr.2007.383266",
+          "OpenAlex": "https://openalex.org/W2147238549"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/cvpr.2007.383266",
+        "citation_key": "citation-157"
+      },
+      {
+        "title": "Backpropagation Applied to Handwritten Zip Code Recognition",
+        "authors": [
+          "author-301",
+          "author-334",
+          "author-433",
+          "author-336",
+          "author-337",
+          "author-434",
+          "author-435"
+        ],
+        "year": 1989,
+        "venue": null,
+        "citation_count": 10713,
+        "fields_of_study": [
+          "Backpropagation",
+          "Computer science",
+          "Code (set theory)",
+          "Artificial neural network",
+          "Artificial intelligence",
+          "Pattern recognition (psychology)",
+          "Domain (mathematical analysis)",
+          "Task (project management)",
+          "Character recognition",
+          "Zip code",
+          "Machine learning",
+          "Speech recognition",
+          "Image (mathematics)",
+          "Mathematics",
+          "Engineering",
+          "Database",
+          "Set (abstract data type)",
+          "Systems engineering",
+          "Programming language",
+          "Mathematical analysis"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1162/neco.1989.1.4.541",
+          "OpenAlex": "https://openalex.org/W2147800946"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1162/neco.1989.1.4.541",
+        "citation_key": "citation-158"
+      },
+      {
+        "title": "Deep Learning Made Easier by Linear Transformations in Perceptrons",
+        "authors": [
+          "author-436",
+          "author-437",
+          "author-301"
+        ],
+        "year": 2012,
+        "venue": null,
+        "citation_count": 177,
+        "fields_of_study": [
+          "Computer science",
+          "Perceptron",
+          "Artificial intelligence",
+          "Transformation matrix",
+          "Deep learning",
+          "Transformation (genetics)",
+          "Regularization (linguistics)",
+          "Diagonal",
+          "Nonlinear system",
+          "Linear map",
+          "Artificial neural network",
+          "Representation (politics)",
+          "Algorithm",
+          "Pattern recognition (psychology)",
+          "Feature learning",
+          "Mathematics",
+          "Biochemistry",
+          "Chemistry",
+          "Physics",
+          "Geometry",
+          "Kinematics",
+          "Classical mechanics",
+          "Quantum mechanics",
+          "Politics",
+          "Political science",
+          "Pure mathematics",
+          "Law",
+          "Gene"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2152424459"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-159"
+      },
+      {
+        "title": "Caffe",
+        "authors": [
+          "author-407",
+          "author-385",
+          "author-414",
+          "author-438",
+          "author-384",
+          "author-358",
+          "author-439",
+          "author-386"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 11108,
+        "fields_of_study": [
+          "Computer science",
+          "Deep learning",
+          "Python (programming language)",
+          "CUDA",
+          "Artificial intelligence",
+          "Titan (rocket family)",
+          "Convolutional neural network",
+          "Software deployment",
+          "Cloud computing",
+          "Artificial neural network",
+          "MATLAB",
+          "Computer architecture",
+          "Software engineering",
+          "Parallel computing",
+          "Operating system",
+          "Engineering",
+          "Aerospace engineering"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1145/2647868.2654889",
+          "OpenAlex": "https://openalex.org/W2155893237"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1145/2647868.2654889",
+        "citation_key": "citation-160"
+      },
+      {
+        "title": "Fast surface interpolation using hierarchical basis functions",
+        "authors": [
+          "author-398"
+        ],
+        "year": 1990,
+        "venue": null,
+        "citation_count": 172,
+        "fields_of_study": [
+          "Interpolation (computer graphics)",
+          "Basis (linear algebra)",
+          "Smoothing",
+          "Basis function",
+          "Pyramid (geometry)",
+          "Computer science",
+          "Algorithm",
+          "Convergence (economics)",
+          "Representation (politics)",
+          "Gradient descent",
+          "Residual",
+          "Relaxation (psychology)",
+          "Set (abstract data type)",
+          "Conjugate gradient method",
+          "Multigrid method",
+          "Artificial intelligence",
+          "Multiresolution analysis",
+          "Mathematics",
+          "Applied mathematics",
+          "Computer vision",
+          "Image (mathematics)",
+          "Partial differential equation",
+          "Mathematical analysis",
+          "Geometry",
+          "Artificial neural network",
+          "Law",
+          "Economic growth",
+          "Wavelet transform",
+          "Psychology",
+          "Social psychology",
+          "Political science",
+          "Programming language",
+          "Discrete wavelet transform",
+          "Politics",
+          "Wavelet",
+          "Economics"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/34.56188",
+          "OpenAlex": "https://openalex.org/W2159979951"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/34.56188",
+        "citation_key": "citation-161"
+      },
+      {
+        "title": "On the Number of Linear Regions of Deep Neural Networks",
+        "authors": [
+          "author-440",
+          "author-441",
+          "author-442",
+          "author-357"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 486,
+        "fields_of_study": [
+          "Rectifier (neural networks)",
+          "Piecewise linear function",
+          "Computer science",
+          "Computation",
+          "Artificial neural network",
+          "Feedforward neural network",
+          "Feed forward",
+          "Deep learning",
+          "Activation function",
+          "Homogeneous space",
+          "Artificial intelligence",
+          "Algorithm",
+          "Mathematics",
+          "Stochastic neural network",
+          "Recurrent neural network",
+          "Geometry",
+          "Control engineering",
+          "Engineering"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1402.1869",
+          "OpenAlex": "https://openalex.org/W2161388792"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1402.1869",
+        "citation_key": "citation-162"
+      },
+      {
+        "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+        "authors": [
+          "author-298",
+          "author-299",
+          "author-296"
+        ],
+        "year": 2012,
+        "venue": null,
+        "citation_count": 68130,
+        "fields_of_study": [
+          "Softmax function",
+          "Convolutional neural network",
+          "Computer science",
+          "Pooling",
+          "Dropout (neural networks)",
+          "Artificial intelligence",
+          "Convolution (computer science)",
+          "Regularization (linguistics)",
+          "Pattern recognition (psychology)",
+          "Deep neural networks",
+          "Word error rate",
+          "Normalization (sociology)",
+          "Artificial neural network",
+          "Machine learning",
+          "Sociology",
+          "Anthropology"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2163605009"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-163"
+      },
+      {
+        "title": "Deeply-Supervised Nets",
+        "authors": [
+          "author-443",
+          "author-444",
+          "author-445",
+          "author-446",
+          "author-447"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 1096,
+        "fields_of_study": [
+          "MNIST database",
+          "Computer science",
+          "Benchmark (surveying)",
+          "Robustness (evolution)",
+          "Artificial intelligence",
+          "Convolutional neural network",
+          "Machine learning",
+          "Stochastic gradient descent",
+          "Layer (electronics)",
+          "Deep learning",
+          "Transparency (behavior)",
+          "Artificial neural network",
+          "Biochemistry",
+          "Chemistry",
+          "Computer security",
+          "Geodesy",
+          "Organic chemistry",
+          "Gene",
+          "Geography"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1409.5185",
+          "OpenAlex": "https://openalex.org/W2168894214"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1409.5185",
+        "citation_key": "citation-164"
+      },
+      {
+        "title": "Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition",
+        "authors": [
+          "author-360",
+          "author-361",
+          "author-362",
+          "author-448"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 2460,
+        "fields_of_study": [
+          "Pooling",
+          "Computer science",
+          "Artificial intelligence",
+          "Pyramid (geometry)",
+          "Convolutional neural network",
+          "Pattern recognition (psychology)",
+          "Deep learning",
+          "Computer vision",
+          "Mathematics",
+          "Geometry"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/978-3-319-10578-9_23",
+          "OpenAlex": "https://openalex.org/W2179352600"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/978-3-319-10578-9_23",
+        "citation_key": "citation-165"
+      },
+      {
+        "title": "Visualizing and Understanding Convolutional Neural Networks",
+        "authors": [
+          "author-449",
+          "author-343"
+        ],
+        "year": 2013,
+        "venue": null,
+        "citation_count": 450,
+        "fields_of_study": [
+          "Softmax function",
+          "Computer science",
+          "Benchmark (surveying)",
+          "Convolutional neural network",
+          "Classifier (UML)",
+          "Artificial intelligence",
+          "Machine learning",
+          "Visualization",
+          "Artificial neural network",
+          "Pattern recognition (psychology)",
+          "Geodesy",
+          "Geography"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2206858481"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-166"
+      },
+      {
+        "title": "Modern Applied Statistics with S-Plus.",
+        "authors": [
+          "author-450",
+          "author-427"
+        ],
+        "year": 1996,
+        "venue": null,
+        "citation_count": 3123,
+        "fields_of_study": [
+          "Statistics",
+          "Mathematics",
+          "Computer science"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.2307/2532871",
+          "OpenAlex": "https://openalex.org/W2328425223"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.2307/2532871",
+        "citation_key": "citation-167"
+      },
+      {
+        "title": "Faster R-CNN: towards real-time object detection with region proposal networks",
+        "authors": [
+          "author-362",
+          "author-360",
+          "author-358",
+          "author-363"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 13295,
+        "fields_of_study": [
+          "Computer science",
+          "Pascal (unit)",
+          "Object detection",
+          "Convolutional neural network",
+          "Bottleneck",
+          "Artificial intelligence",
+          "Frame rate",
+          "Computation",
+          "Frame (networking)",
+          "Pattern recognition (psychology)",
+          "Computer vision",
+          "Algorithm",
+          "Computer network",
+          "Programming language",
+          "Embedded system"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2613718673"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-168"
+      },
+      {
+        "title": "Efficient BackProp",
+        "authors": [
+          "author-301",
+          "author-332",
+          "author-451",
+          "author-452"
+        ],
+        "year": 1998,
+        "venue": null,
+        "citation_count": 1508,
+        "fields_of_study": [
+          "Computer science"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2914484425"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-169"
+      },
+      {
+        "title": "Caffe: Convolutional Architecture for Fast Feature Embedding",
+        "authors": [
+          "author-407",
+          "author-385",
+          "author-414",
+          "author-438",
+          "author-384",
+          "author-358",
+          "author-439",
+          "author-386"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 4394,
+        "fields_of_study": [
+          "Deep learning",
+          "Computer science",
+          "Python (programming language)",
+          "Convolutional neural network",
+          "Artificial intelligence",
+          "CUDA",
+          "Software deployment",
+          "Cloud computing",
+          "Titan (rocket family)",
+          "Computer architecture",
+          "Software engineering",
+          "Operating system",
+          "Engineering",
+          "Aerospace engineering"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1408.5093",
+          "OpenAlex": "https://openalex.org/W2950094539"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1408.5093",
+        "citation_key": "citation-170"
+      },
+      {
+        "title": "Training Very Deep Networks",
+        "authors": [
+          "author-453",
+          "author-454",
+          "author-316"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 1164,
+        "fields_of_study": [
+          "Computer science",
+          "Training (meteorology)",
+          "Simple (philosophy)",
+          "Deep neural networks",
+          "Artificial intelligence",
+          "Artificial neural network",
+          "Information flow",
+          "Architecture",
+          "Deep learning",
+          "Gradient descent",
+          "Flow (mathematics)",
+          "Distributed computing",
+          "Geography",
+          "Philosophy",
+          "Linguistics",
+          "Geometry",
+          "Mathematics",
+          "Archaeology",
+          "Epistemology",
+          "Meteorology"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2950621961"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-171"
+      },
+      {
+        "title": "On the Number of Linear Regions of Deep Neural Networks",
+        "authors": [
+          "author-440",
+          "author-441",
+          "author-442",
+          "author-357"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 539,
+        "fields_of_study": [
+          "Rectifier (neural networks)",
+          "Piecewise linear function",
+          "Computation",
+          "Artificial neural network",
+          "Computer science",
+          "Feedforward neural network",
+          "Feed forward",
+          "Deep learning",
+          "Activation function",
+          "Homogeneous space",
+          "Piecewise",
+          "Algorithm",
+          "Artificial intelligence",
+          "Mathematics",
+          "Stochastic neural network",
+          "Recurrent neural network",
+          "Geometry",
+          "Mathematical analysis",
+          "Control engineering",
+          "Engineering"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2951603627"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-172"
+      },
+      {
+        "title": "Object Detection Networks on Convolutional Feature Maps",
+        "authors": [
+          "author-362",
+          "author-360",
+          "author-358",
+          "author-361",
+          "author-448"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 37,
+        "fields_of_study": [
+          "Classifier (UML)",
+          "Computer science",
+          "Extractor",
+          "Convolutional neural network",
+          "Artificial intelligence",
+          "Pattern recognition (psychology)",
+          "Object detection",
+          "Deep learning",
+          "Perceptron",
+          "Feature extraction",
+          "Feature (linguistics)",
+          "Artificial neural network",
+          "Engineering",
+          "Linguistics",
+          "Philosophy",
+          "Process engineering"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1504.06066",
+          "OpenAlex": "https://openalex.org/W2952009708"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1504.06066",
+        "citation_key": "citation-173"
+      },
+      {
+        "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+        "authors": [
+          "author-364",
+          "author-365"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 17468,
+        "fields_of_study": [
+          "Computer science",
+          "Convolutional neural network",
+          "Artificial intelligence",
+          "Scale (ratio)",
+          "Pattern recognition (psychology)",
+          "Deep learning",
+          "Image (mathematics)",
+          "Cartography",
+          "Geography"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1409.1556",
+          "OpenAlex": "https://openalex.org/W2962835968"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1409.1556",
+        "citation_key": "citation-174"
+      },
+      {
+        "title": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+        "authors": [
+          "author-429",
+          "author-430",
+          "author-431"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 383,
+        "fields_of_study": [
+          "Deep learning",
+          "Nonlinear system",
+          "Artificial neural network",
+          "Computer science",
+          "Artificial intelligence",
+          "Convergence (economics)",
+          "Unsupervised learning",
+          "Gradient descent",
+          "Gaussian",
+          "Stochastic gradient descent",
+          "Applied mathematics",
+          "Mathematics",
+          "Algorithm",
+          "Physics",
+          "Quantum mechanics",
+          "Economics",
+          "Economic growth"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2963504252"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-175"
+      },
+      {
+        "title": "OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks",
+        "authors": [
+          "author-408",
+          "author-455",
+          "author-456",
+          "author-457",
+          "author-343",
+          "author-301"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 3563,
+        "fields_of_study": [
+          "Computer science",
+          "Bounding overwatch",
+          "Artificial intelligence",
+          "Object detection",
+          "Sliding window protocol",
+          "Task (project management)",
+          "Convolutional neural network",
+          "Extractor",
+          "Pattern recognition (psychology)",
+          "Feature extraction",
+          "Deep learning",
+          "Minimum bounding box",
+          "Feature (linguistics)",
+          "Machine learning",
+          "Window (computing)",
+          "Image (mathematics)",
+          "Engineering",
+          "Linguistics",
+          "Philosophy",
+          "Systems engineering",
+          "Process engineering",
+          "Operating system"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2963542991"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-176"
+      },
+      {
+        "title": "Pushing Stochastic Gradient towards Second-Order Methods – Backpropagation Learning with Transformations in Nonlinearities",
+        "authors": [
+          "author-458",
+          "author-436",
+          "author-437",
+          "author-301"
+        ],
+        "year": 2013,
+        "venue": null,
+        "citation_count": 23,
+        "fields_of_study": [
+          "Computer science",
+          "Backpropagation",
+          "Perceptron",
+          "Transformation (genetics)",
+          "Artificial neural network",
+          "Artificial intelligence",
+          "Zero (linguistics)",
+          "Algorithm",
+          "Simple (philosophy)",
+          "Mathematical optimization",
+          "Mathematics",
+          "Biochemistry",
+          "Chemistry",
+          "Linguistics",
+          "Philosophy",
+          "Epistemology",
+          "Gene"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/978-3-642-42054-2_55",
+          "OpenAlex": "https://openalex.org/W2964103341"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/978-3-642-42054-2_55",
+        "citation_key": "citation-177"
+      },
+      {
+        "title": "FitNets: Hints for Thin Deep Nets",
+        "authors": [
+          "author-366",
+          "author-367",
+          "author-368",
+          "author-369",
+          "author-370",
+          "author-357"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 1133,
+        "fields_of_study": [
+          "Computer science",
+          "Layer (electronics)",
+          "Process (computing)",
+          "Training (meteorology)",
+          "State (computer science)",
+          "Mathematics education",
+          "Artificial intelligence",
+          "Algorithm",
+          "Mathematics",
+          "Programming language",
+          "Physics",
+          "Chemistry",
+          "Organic chemistry",
+          "Meteorology"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1412.6550",
+          "OpenAlex": "https://openalex.org/W2964118293"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1412.6550",
+        "citation_key": "citation-178"
+      },
+      {
+        "title": "Maxout Networks",
+        "authors": [
+          "author-459",
+          "author-460",
+          "author-461",
+          "author-462",
+          "author-357"
+        ],
+        "year": 2013,
+        "venue": null,
+        "citation_count": 478,
+        "fields_of_study": [
+          "MNIST database",
+          "Dropout (neural networks)",
+          "Leverage (statistics)",
+          "Computer science",
+          "Benchmark (surveying)",
+          "Artificial intelligence",
+          "Machine learning",
+          "Set (abstract data type)",
+          "Simple (philosophy)",
+          "Deep learning",
+          "Philosophy",
+          "Geodesy",
+          "Epistemology",
+          "Programming language",
+          "Geography"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W3037950864"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-179"
+      },
+      {
+        "title": "Highway Networks",
+        "authors": [
+          "author-453",
+          "author-454",
+          "author-316"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 317,
+        "fields_of_study": [
+          "Computer science",
+          "Architecture",
+          "Stochastic gradient descent",
+          "Information flow",
+          "Network architecture",
+          "Variety (cybernetics)",
+          "Artificial intelligence",
+          "Artificial neural network",
+          "Gradient descent",
+          "Deep neural networks",
+          "Distributed computing",
+          "Computer architecture",
+          "Computer network",
+          "Geography",
+          "Linguistics",
+          "Philosophy",
+          "Archaeology"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W3038058348"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-180"
+      },
+      {
+        "title": "Learning Multiple Layers of Features from Tiny Images",
+        "authors": [
+          "author-298"
+        ],
+        "year": 2009,
+        "venue": null,
+        "citation_count": 24118,
+        "fields_of_study": [
+          "Boltzmann machine",
+          "Artificial intelligence",
+          "Classifier (UML)",
+          "Computer science",
+          "Generative grammar",
+          "Deep learning",
+          "Pattern recognition (psychology)",
+          "Pixel",
+          "Deep belief network",
+          "Focus (optics)",
+          "Machine learning",
+          "Generative model",
+          "Restricted Boltzmann machine",
+          "Computer vision",
+          "Physics",
+          "Optics"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W3118608800"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-181"
+      },
+      {
+        "title": "Centering Neural Network Gradient Factors",
+        "authors": [
+          "author-374"
+        ],
+        "year": 1998,
+        "venue": null,
+        "citation_count": 24,
+        "fields_of_study": [
+          "Artificial neural network",
+          "Computer science",
+          "Artificial intelligence"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/3-540-49430-8_11",
+          "OpenAlex": "https://openalex.org/W4212915314"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/3-540-49430-8_11",
+        "citation_key": "citation-182"
+      },
+      {
+        "title": "Locally adapted hierarchical basis preconditioning",
+        "authors": [
+          "author-398"
+        ],
+        "year": 2006,
+        "venue": null,
+        "citation_count": 27,
+        "fields_of_study": [
+          "Interpolation (computer graphics)",
+          "Computer science",
+          "Smoothness",
+          "Basis function",
+          "Basis (linear algebra)",
+          "Graphics",
+          "Algorithm",
+          "Variable (mathematics)",
+          "Set (abstract data type)",
+          "Sparse matrix",
+          "Domain (mathematical analysis)",
+          "Computer graphics",
+          "Mathematics",
+          "Artificial intelligence",
+          "Image (mathematics)",
+          "Computer graphics (images)",
+          "Mathematical analysis",
+          "Physics",
+          "Geometry",
+          "Quantum mechanics",
+          "Gaussian",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1145/1179352.1142005",
+          "OpenAlex": "https://openalex.org/W4231990273"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1145/1179352.1142005",
+        "citation_key": "citation-183"
+      },
+      {
+        "title": "Efficient BackProp",
+        "authors": [
+          "author-301",
+          "author-332",
+          "author-451",
+          "author-463"
+        ],
+        "year": 1998,
+        "venue": null,
+        "citation_count": 754,
+        "fields_of_study": [
+          "Computer science",
+          "Algorithm"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/3-540-49430-8_2",
+          "OpenAlex": "https://openalex.org/W4238404964"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/3-540-49430-8_2",
+        "citation_key": "citation-184"
+      },
+      {
+        "title": "Modern Applied Statistics with S-PLUS",
+        "authors": [
+          "author-450",
+          "author-427"
+        ],
+        "year": 1999,
+        "venue": null,
+        "citation_count": 951,
+        "fields_of_study": [
+          "Computer science",
+          "Statistical analysis",
+          "Statistics",
+          "Statistical theory",
+          "Computational statistics",
+          "Data science",
+          "Data mining",
+          "Machine learning",
+          "Artificial intelligence",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/978-1-4757-3121-7",
+          "OpenAlex": "https://openalex.org/W4242212377"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/978-1-4757-3121-7",
+        "citation_key": "citation-185"
+      },
+      {
+        "title": "Deleted Work",
+        "authors": [],
+        "year": 1955,
+        "venue": null,
+        "citation_count": 0,
+        "fields_of_study": [],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W4285719527"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-186"
+      },
+      {
+        "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+        "authors": [
+          "author-362",
+          "author-360",
+          "author-358",
+          "author-363"
+        ],
+        "year": 2016,
+        "venue": null,
+        "citation_count": 43516,
+        "fields_of_study": [
+          "Computer science",
+          "Object detection",
+          "Artificial intelligence",
+          "Computer vision",
+          "Object (grammar)",
+          "Cognitive neuroscience of visual object recognition",
+          "Pattern recognition (psychology)"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/tpami.2016.2577031",
+          "OpenAlex": "https://openalex.org/W639708223"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/tpami.2016.2577031",
+        "citation_key": "citation-187"
+      }
+    ]
+  },
+  "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks": {
+    "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+    "references": [
+      {
+        "title": "On the Optimization of a Synaptic Learning Rule",
+        "authors": [
+          "author-464",
+          "author-357",
+          "author-465",
+          "author-466"
+        ],
+        "year": 2013,
+        "venue": null,
+        "citation_count": 230,
+        "fields_of_study": [
+          "Constraint (computer-aided design)",
+          "Learning rule",
+          "Artificial intelligence",
+          "Computer science",
+          "Space (punctuation)",
+          "Domain (mathematical analysis)",
+          "Machine learning",
+          "Mathematics",
+          "Artificial neural network",
+          "Mathematical analysis",
+          "Geometry",
+          "Operating system"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.4324/9780203773833-22",
+          "OpenAlex": "https://openalex.org/W1598377843"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.4324/9780203773833-22",
+        "citation_key": "citation-188"
+      },
+      {
+        "title": "Trust Region Policy Optimization",
+        "authors": [
+          "author-467",
+          "author-468",
+          "author-469",
+          "author-470",
+          "author-471"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 3363,
+        "fields_of_study": [
+          "Hyperparameter",
+          "Monotonic function",
+          "Computer science",
+          "Trust region",
+          "Variety (cybernetics)",
+          "Scheme (mathematics)",
+          "Nonlinear system",
+          "Mathematical optimization",
+          "Artificial neural network",
+          "Deep neural networks",
+          "Artificial intelligence",
+          "Reinforcement learning",
+          "Optimization algorithm",
+          "Mathematics",
+          "Mathematical analysis",
+          "Physics",
+          "Computer security",
+          "Quantum mechanics",
+          "RADIUS"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W1771410628"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-189"
+      },
+      {
+        "title": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+        "authors": [
+          "author-375",
+          "author-376"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 21284,
+        "fields_of_study": [
+          "Covariate",
+          "Normalization (sociology)",
+          "Computer science",
+          "Training (meteorology)",
+          "Econometrics",
+          "Statistics",
+          "Artificial intelligence",
+          "Mathematics",
+          "Geography",
+          "Sociology",
+          "Meteorology",
+          "Anthropology"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1502.03167",
+          "OpenAlex": "https://openalex.org/W1836465849"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1502.03167",
+        "citation_key": "citation-190"
+      },
+      {
+        "title": "Gradient-based Hyperparameter Optimization through Reversible Learning",
+        "authors": [
+          "author-472",
+          "author-473",
+          "author-474"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 397,
+        "fields_of_study": [
+          "Hyperparameter",
+          "Parameterized complexity",
+          "Initialization",
+          "Computer science",
+          "Hyperparameter optimization",
+          "Gradient descent",
+          "Chaining",
+          "Stochastic gradient descent",
+          "Algorithm",
+          "Momentum (technical analysis)",
+          "Regularization (linguistics)",
+          "Artificial intelligence",
+          "Machine learning",
+          "Artificial neural network",
+          "Mathematical optimization",
+          "Mathematics",
+          "Support vector machine",
+          "Psychology",
+          "Finance",
+          "Economics",
+          "Psychotherapist",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W1868018859"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-191"
+      },
+      {
+        "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks",
+        "authors": [
+          "author-316"
+        ],
+        "year": 1992,
+        "venue": null,
+        "citation_count": 363,
+        "fields_of_study": [
+          "Computer science",
+          "Feed forward",
+          "Context (archaeology)",
+          "Sequence (biology)",
+          "Class (philosophy)",
+          "Artificial intelligence",
+          "Artificial neural network",
+          "Net (polyhedron)",
+          "Control (management)",
+          "Recurrent neural network",
+          "Machine learning",
+          "Mathematics",
+          "Paleontology",
+          "Geometry",
+          "Control engineering",
+          "Biology",
+          "Engineering",
+          "Genetics"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1162/neco.1992.4.1.131",
+          "OpenAlex": "https://openalex.org/W2089217417"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1162/neco.1992.4.1.131",
+        "citation_key": "citation-192"
+      },
+      {
+        "title": "Simple statistical gradient-following algorithms for connectionist reinforcement learning",
+        "authors": [
+          "author-475"
+        ],
+        "year": 1992,
+        "venue": null,
+        "citation_count": 7090,
+        "fields_of_study": [
+          "Reinforcement learning",
+          "Connectionism",
+          "Computer science",
+          "Simple (philosophy)",
+          "Reinforcement",
+          "Associative property",
+          "Artificial intelligence",
+          "Algorithm",
+          "Artificial neural network",
+          "Backpropagation",
+          "Limiting",
+          "Class (philosophy)",
+          "Machine learning",
+          "Mathematics",
+          "Mechanical engineering",
+          "Psychology",
+          "Social psychology",
+          "Philosophy",
+          "Epistemology",
+          "Pure mathematics",
+          "Engineering"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/bf00992696",
+          "OpenAlex": "https://openalex.org/W2119717200"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/bf00992696",
+        "citation_key": "citation-193"
+      },
+      {
+        "title": "Fast learning for problem classes using knowledge based network initialization",
+        "authors": [
+          "author-476",
+          "author-477"
+        ],
+        "year": 2000,
+        "venue": null,
+        "citation_count": 18,
+        "fields_of_study": [
+          "Initialization",
+          "Artificial neural network",
+          "Computer science",
+          "Focus (optics)",
+          "Artificial intelligence",
+          "Class (philosophy)",
+          "Domain (mathematical analysis)",
+          "Set (abstract data type)",
+          "Mathematical optimization",
+          "Domain knowledge",
+          "Variable (mathematics)",
+          "Decision boundary",
+          "Algorithm",
+          "Machine learning",
+          "Mathematics",
+          "Mathematical analysis",
+          "Physics",
+          "Classifier (UML)",
+          "Optics",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/ijcnn.2000.859464",
+          "OpenAlex": "https://openalex.org/W2137310197"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/ijcnn.2000.859464",
+        "citation_key": "citation-194"
+      },
+      {
+        "title": "Learning to Learn Using Gradient Descent",
+        "authors": [
+          "author-404",
+          "author-478",
+          "author-479"
+        ],
+        "year": 2001,
+        "venue": null,
+        "citation_count": 570,
+        "fields_of_study": [
+          "Computer science",
+          "Gradient descent",
+          "Artificial intelligence",
+          "Stochastic gradient descent",
+          "Artificial neural network"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/3-540-44668-0_13",
+          "OpenAlex": "https://openalex.org/W2137825550"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/3-540-44668-0_13",
+        "citation_key": "citation-195"
+      },
+      {
+        "title": "Meta-neural networks that learn by learning",
+        "authors": [
+          "author-480",
+          "author-481"
+        ],
+        "year": 2003,
+        "venue": null,
+        "citation_count": 194,
+        "fields_of_study": [
+          "Artificial neural network",
+          "Computer science",
+          "Artificial intelligence",
+          "Boolean function",
+          "Time delay neural network",
+          "Machine learning",
+          "Nervous system network models",
+          "Function (biology)",
+          "Types of artificial neural networks",
+          "Algorithm",
+          "Evolutionary biology",
+          "Biology"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/ijcnn.1992.287172",
+          "OpenAlex": "https://openalex.org/W2140804329"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/ijcnn.1992.287172",
+        "citation_key": "citation-196"
+      },
+      {
+        "title": "DeCAF: A Deep Convolutional Activation Feature for Generic Visual Recognition",
+        "authors": [
+          "author-414",
+          "author-407",
+          "author-482",
+          "author-483",
+          "author-484",
+          "author-485",
+          "author-386"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 3287,
+        "fields_of_study": [
+          "Computer science",
+          "Convolutional neural network",
+          "Artificial intelligence",
+          "Deep learning",
+          "Feature (linguistics)",
+          "Cognitive neuroscience of visual object recognition",
+          "Domain adaptation",
+          "Set (abstract data type)",
+          "Pattern recognition (psychology)",
+          "Adaptation (eye)",
+          "Feature extraction",
+          "Feature learning",
+          "Domain (mathematical analysis)",
+          "Machine learning",
+          "Mathematical analysis",
+          "Philosophy",
+          "Linguistics",
+          "Physics",
+          "Mathematics",
+          "Classifier (UML)",
+          "Optics",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2155541015"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-197"
+      },
+      {
+        "title": "MuJoCo: A physics engine for model-based control",
+        "authors": [
+          "author-486",
+          "author-487",
+          "author-488"
+        ],
+        "year": 2012,
+        "venue": null,
+        "citation_count": 3657,
+        "fields_of_study": [
+          "Physics engine",
+          "Compiler",
+          "Computer science",
+          "Inverse dynamics",
+          "Computation",
+          "Actuator",
+          "Executable",
+          "Damper",
+          "Algorithm",
+          "Control (management)",
+          "Computational science",
+          "Control theory (sociology)",
+          "Simulation",
+          "Control engineering",
+          "Programming language",
+          "Artificial intelligence",
+          "Engineering",
+          "Kinematics",
+          "Physics",
+          "Classical mechanics"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1109/iros.2012.6386109",
+          "OpenAlex": "https://openalex.org/W2158782408"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1109/iros.2012.6386109",
+        "citation_key": "citation-198"
+      },
+      {
+        "title": "TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems",
+        "authors": [
+          "author-489",
+          "author-490",
+          "author-491",
+          "author-492",
+          "author-493",
+          "author-494",
+          "author-495",
+          "author-496",
+          "author-497",
+          "author-498",
+          "author-499",
+          "author-459",
+          "author-500",
+          "author-501",
+          "author-502",
+          "author-407",
+          "author-503",
+          "author-504",
+          "author-505",
+          "author-506",
+          "author-507",
+          "author-508",
+          "author-509",
+          "author-510",
+          "author-511",
+          "author-512",
+          "author-513",
+          "author-514",
+          "author-299",
+          "author-515",
+          "author-516",
+          "author-412",
+          "author-517",
+          "author-518",
+          "author-482",
+          "author-519",
+          "author-520",
+          "author-521",
+          "author-522",
+          "author-523"
+        ],
+        "year": 2016,
+        "venue": null,
+        "citation_count": 9110,
+        "fields_of_study": [
+          "Scale (ratio)",
+          "Computer science",
+          "Artificial intelligence",
+          "Machine learning",
+          "Distributed computing",
+          "Geography",
+          "Cartography"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1603.04467",
+          "OpenAlex": "https://openalex.org/W2271840356"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1603.04467",
+        "citation_key": "citation-199"
+      },
+      {
+        "title": "Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks",
+        "authors": [
+          "author-524",
+          "author-525"
+        ],
+        "year": 2016,
+        "venue": null,
+        "citation_count": 872,
+        "fields_of_study": [
+          "Normalization (sociology)",
+          "Simple (philosophy)",
+          "Artificial neural network",
+          "Deep neural networks",
+          "Computer science",
+          "Artificial intelligence",
+          "Training (meteorology)",
+          "Machine learning",
+          "Geography",
+          "Sociology",
+          "Epistemology",
+          "Meteorology",
+          "Philosophy",
+          "Anthropology"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1602.07868",
+          "OpenAlex": "https://openalex.org/W2284050935"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1602.07868",
+        "citation_key": "citation-200"
+      },
+      {
+        "title": "One-shot generalization in deep generative models",
+        "authors": [
+          "author-526",
+          "author-527",
+          "author-528",
+          "author-529",
+          "author-530"
+        ],
+        "year": 2016,
+        "venue": null,
+        "citation_count": 48,
+        "fields_of_study": [
+          "Generalization",
+          "Generative grammar",
+          "Artificial intelligence",
+          "Computer science",
+          "Machine learning",
+          "Generative model",
+          "Class (philosophy)",
+          "Mathematics",
+          "Mathematical analysis"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2298457129"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-201"
+      },
+      {
+        "title": "Benchmarking Deep Reinforcement Learning for Continuous Control",
+        "authors": [
+          "author-531",
+          "author-532",
+          "author-533",
+          "author-467",
+          "author-469"
+        ],
+        "year": 2016,
+        "venue": null,
+        "citation_count": 948,
+        "fields_of_study": [
+          "Reinforcement learning",
+          "Benchmark (surveying)",
+          "Benchmarking",
+          "Computer science",
+          "Suite",
+          "Artificial intelligence",
+          "Machine learning",
+          "Deep learning",
+          "Control (management)",
+          "Domain (mathematical analysis)",
+          "Geodesy",
+          "Archaeology",
+          "Marketing",
+          "Business",
+          "History",
+          "Geography",
+          "Mathematical analysis",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1604.06778",
+          "OpenAlex": "https://openalex.org/W2342662072"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1604.06778",
+        "citation_key": "citation-202"
+      },
+      {
+        "title": "One shot learning of simple visual concepts",
+        "authors": [
+          "author-534",
+          "author-300",
+          "author-535",
+          "author-536"
+        ],
+        "year": 2011,
+        "venue": null,
+        "citation_count": 656,
+        "fields_of_study": [
+          "Character (mathematics)",
+          "Computer science",
+          "Simple (philosophy)",
+          "Artificial intelligence",
+          "Shot (pellet)",
+          "Task (project management)",
+          "Column (typography)",
+          "Generative model",
+          "Natural language processing",
+          "Pattern recognition (psychology)",
+          "Generative grammar",
+          "Mathematics",
+          "Telecommunications",
+          "Philosophy",
+          "Chemistry",
+          "Geometry",
+          "Management",
+          "Organic chemistry",
+          "Epistemology",
+          "Frame (networking)",
+          "Economics"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2401823607"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-203"
+      },
+      {
+        "title": "Towards a Neural Statistician",
+        "authors": [
+          "author-537",
+          "author-538"
+        ],
+        "year": 2016,
+        "venue": null,
+        "citation_count": 165,
+        "fields_of_study": [
+          "Autoencoder",
+          "Computer science",
+          "Statistician",
+          "Artificial intelligence",
+          "Machine learning",
+          "Artificial neural network",
+          "Cluster analysis",
+          "Generative grammar",
+          "Unsupervised learning",
+          "Key (lock)",
+          "Generative model",
+          "Statistics",
+          "Mathematics",
+          "Computer security"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2412589713"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-204"
+      },
+      {
+        "title": "Matching Networks for One Shot Learning",
+        "authors": [
+          "author-482",
+          "author-539",
+          "author-540",
+          "author-302",
+          "author-530"
+        ],
+        "year": 2016,
+        "venue": null,
+        "citation_count": 843,
+        "fields_of_study": [
+          "Computer science",
+          "Artificial intelligence",
+          "Treebank",
+          "Machine learning",
+          "Set (abstract data type)",
+          "Task (project management)",
+          "Metric (unit)",
+          "Matching (statistics)",
+          "Artificial neural network",
+          "Shot (pellet)",
+          "Deep learning",
+          "Key (lock)",
+          "Class (philosophy)",
+          "Deep neural networks",
+          "Annotation",
+          "Operations management",
+          "Statistics",
+          "Chemistry",
+          "Mathematics",
+          "Management",
+          "Organic chemistry",
+          "Computer security",
+          "Economics",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2432717477"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-205"
+      },
+      {
+        "title": "Meta-learning with memory-augmented neural networks",
+        "authors": [
+          "author-541",
+          "author-542",
+          "author-543",
+          "author-530",
+          "author-540"
+        ],
+        "year": 2016,
+        "venue": null,
+        "citation_count": 1206,
+        "fields_of_study": [
+          "Computer science",
+          "Leverage (statistics)",
+          "Artificial neural network",
+          "Artificial intelligence",
+          "Deep learning",
+          "ENCODE",
+          "Machine learning",
+          "Deep neural networks",
+          "Memory model",
+          "Shared memory",
+          "Biochemistry",
+          "Chemistry",
+          "Gene",
+          "Operating system"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2472819217"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-206"
+      },
+      {
+        "title": "Attentive Recurrent Comparators",
+        "authors": [
+          "author-544",
+          "author-545",
+          "author-546"
+        ],
+        "year": 2017,
+        "venue": null,
+        "citation_count": 68,
+        "fields_of_study": [
+          "Comparator",
+          "Computer science",
+          "Engineering",
+          "Electrical engineering",
+          "Voltage"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1703.00767",
+          "OpenAlex": "https://openalex.org/W2593331594"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1703.00767",
+        "citation_key": "citation-207"
+      },
+      {
+        "title": "Optimization as a Model for Few-Shot Learning",
+        "authors": [
+          "author-547",
+          "author-548"
+        ],
+        "year": 2017,
+        "venue": null,
+        "citation_count": 2613,
+        "fields_of_study": [
+          "Computer science",
+          "Initialization",
+          "Artificial intelligence",
+          "Meta learning (computer science)",
+          "Convergence (economics)",
+          "Deep learning",
+          "Metric (unit)",
+          "Artificial neural network",
+          "Machine learning",
+          "Set (abstract data type)",
+          "Parametrization (atmospheric modeling)",
+          "Competitive learning",
+          "Class (philosophy)",
+          "Domain (mathematical analysis)",
+          "Learning to learn",
+          "Mathematics",
+          "Task (project management)",
+          "Mathematical analysis",
+          "Operations management",
+          "Physics",
+          "Mathematics education",
+          "Management",
+          "Quantum mechanics",
+          "Radiative transfer",
+          "Economic growth",
+          "Economics",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2753160622"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-208"
       },
       {
         "title": "Prototypical Networks for Few-shot Learning",
         "authors": [
-          "author-49",
-          "author-50",
-          "author-51"
+          "author-549",
+          "author-550",
+          "author-551"
         ],
         "year": 2017,
-        "venue": "venue-9",
-        "citation_count": 7578,
+        "venue": null,
+        "citation_count": 87,
         "fields_of_study": [
-          "Computer Science",
-          "Mathematics"
+          "Computer science",
+          "Classifier (UML)",
+          "Artificial intelligence",
+          "Machine learning",
+          "Metric (unit)",
+          "Class (philosophy)",
+          "Shot (pellet)",
+          "One shot",
+          "Simple (philosophy)",
+          "Inductive bias",
+          "Set (abstract data type)",
+          "Metric space",
+          "Space (punctuation)",
+          "Training set",
+          "Mathematics",
+          "Multi-task learning",
+          "Task (project management)",
+          "Engineering",
+          "Mechanical engineering",
+          "Mathematical analysis",
+          "Philosophy",
+          "Operations management",
+          "Chemistry",
+          "Programming language",
+          "Organic chemistry",
+          "Epistemology",
+          "Systems engineering",
+          "Operating system"
         ],
         "external_ids": {
-          "DBLP": "conf/nips/SnellSZ17",
-          "ArXiv": "1703.05175",
-          "MAG": "2950537964",
-          "CorpusId": 309759
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2950537964"
         },
-        "semantic_scholar_id": "c269858a7bb34e8350f2442ccf37797856ae9bca",
+        "semantic_scholar_id": null,
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-14"
-      },
-      {
-        "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
-        "authors": [
-          "author-29",
-          "author-52",
-          "author-30"
-        ],
-        "year": 2017,
-        "venue": "venue-3",
-        "citation_count": 11073,
-        "fields_of_study": [
-          "Computer Science"
-        ],
-        "external_ids": {
-          "MAG": "2604763608",
-          "DBLP": "journals/corr/FinnAL17",
-          "ArXiv": "1703.03400",
-          "CorpusId": 6719686
-        },
-        "semantic_scholar_id": "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
-        "arxiv_id": null,
-        "doi": null,
-        "citation_key": "citation-15"
+        "citation_key": "citation-209"
       },
       {
         "title": "Learning to Remember Rare Events",
         "authors": [
-          "author-53",
-          "author-54",
-          "author-55",
-          "author-56"
+          "author-504",
+          "author-552",
+          "author-553",
+          "author-464"
         ],
         "year": 2017,
         "venue": null,
@@ -285,17 +4177,586 @@
         "semantic_scholar_id": null,
         "arxiv_id": null,
         "doi": "https://doi.org/10.48550/arxiv.1703.03129",
-        "citation_key": "citation-16"
+        "citation_key": "citation-210"
+      },
+      {
+        "title": "Actor-Mimic: Deep Multitask and Transfer Reinforcement Learning",
+        "authors": [
+          "author-554",
+          "author-555",
+          "author-300"
+        ],
+        "year": 2016,
+        "venue": null,
+        "citation_count": 123,
+        "fields_of_study": [
+          "Reinforcement learning",
+          "Computer science",
+          "Transfer of learning",
+          "Exploit",
+          "Artificial intelligence",
+          "Set (abstract data type)",
+          "Task (project management)",
+          "Machine learning",
+          "Human–computer interaction",
+          "Engineering",
+          "Computer security",
+          "Systems engineering",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2962858248"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-211"
+      },
+      {
+        "title": "Data-dependent Initializations of Convolutional Neural Networks",
+        "authors": [
+          "author-556",
+          "author-557",
+          "author-414",
+          "author-386"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 101,
+        "fields_of_study": [
+          "Convolutional neural network",
+          "Computer science",
+          "Artificial intelligence"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1511.06856",
+          "OpenAlex": "https://openalex.org/W2963192800"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1511.06856",
+        "citation_key": "citation-212"
+      },
+      {
+        "title": "Explaining and Harnessing Adversarial Examples",
+        "authors": [
+          "author-459",
+          "author-513",
+          "author-376"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 7564,
+        "fields_of_study": [
+          "Adversarial system",
+          "MNIST database",
+          "Overfitting",
+          "Computer science",
+          "Machine learning",
+          "Artificial intelligence",
+          "Generalization",
+          "Artificial neural network",
+          "Set (abstract data type)",
+          "Deep neural networks",
+          "Adversarial machine learning",
+          "Vulnerability (computing)",
+          "Test set",
+          "Nonlinear system",
+          "Mathematics",
+          "Mathematical analysis",
+          "Physics",
+          "Computer security",
+          "Quantum mechanics",
+          "Programming language"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2963207607"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-213"
+      },
+      {
+        "title": "Exact solutions to the nonlinear dynamics of learning in deep linear neural networks",
+        "authors": [
+          "author-429",
+          "author-430",
+          "author-431"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 383,
+        "fields_of_study": [
+          "Deep learning",
+          "Nonlinear system",
+          "Artificial neural network",
+          "Computer science",
+          "Artificial intelligence",
+          "Convergence (economics)",
+          "Unsupervised learning",
+          "Gradient descent",
+          "Gaussian",
+          "Stochastic gradient descent",
+          "Applied mathematics",
+          "Mathematics",
+          "Algorithm",
+          "Physics",
+          "Quantum mechanics",
+          "Economics",
+          "Economic growth"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W2963504252"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-214"
+      },
+      {
+        "title": "Adam: A Method for Stochastic Optimization",
+        "authors": [
+          "author-525",
+          "author-555"
+        ],
+        "year": 2014,
+        "venue": null,
+        "citation_count": 51836,
+        "fields_of_study": [
+          "Regret",
+          "Computer science",
+          "Mathematical optimization",
+          "Diagonal",
+          "Stochastic optimization",
+          "Convergence (economics)",
+          "Rate of convergence",
+          "Optimization problem",
+          "Mathematics",
+          "Key (lock)",
+          "Geometry",
+          "Computer security",
+          "Machine learning",
+          "Economics",
+          "Economic growth"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.48550/arxiv.1412.6980",
+          "OpenAlex": "https://openalex.org/W2964121744"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.48550/arxiv.1412.6980",
+        "citation_key": "citation-215"
       },
       {
         "title": "Meta Networks",
         "authors": [
-          "author-57",
-          "author-58"
+          "author-558",
+          "author-559"
+        ],
+        "year": 2017,
+        "venue": null,
+        "citation_count": 227,
+        "fields_of_study": [
+          "Generalization",
+          "Task (project management)",
+          "Computer science",
+          "Artificial neural network",
+          "Inductive bias",
+          "Artificial intelligence",
+          "Baseline (sea)",
+          "Machine learning",
+          "Meta learning (computer science)",
+          "Generalization error",
+          "Multi-task learning",
+          "Mathematics",
+          "Engineering",
+          "Mathematical analysis",
+          "Oceanography",
+          "Systems engineering",
+          "Geology"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W3037856073"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-216"
+      },
+      {
+        "title": "Siamese Neural Networks for One-shot Image Recognition",
+        "authors": [
+          "author-560",
+          "author-551",
+          "author-300"
+        ],
+        "year": 2015,
+        "venue": null,
+        "citation_count": 2957,
+        "fields_of_study": [
+          "Discriminative model",
+          "Computer science",
+          "Artificial intelligence",
+          "Convolutional neural network",
+          "Machine learning",
+          "Deep learning",
+          "Class (philosophy)",
+          "Process (computing)",
+          "Pattern recognition (psychology)",
+          "Artificial neural network",
+          "Similarity (geometry)",
+          "Shot (pellet)",
+          "Feature learning",
+          "Image (mathematics)",
+          "Chemistry",
+          "Organic chemistry",
+          "Operating system"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W3091905774"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-217"
+      },
+      {
+        "title": "Learning to Optimize.",
+        "authors": [
+          "author-561",
+          "author-415"
+        ],
+        "year": 2017,
+        "venue": null,
+        "citation_count": 104,
+        "fields_of_study": [
+          "Reinforcement learning",
+          "Computer science",
+          "Convergence (economics)",
+          "Perspective (graphical)",
+          "Algorithm design",
+          "Process (computing)",
+          "Artificial intelligence",
+          "Population-based incremental learning",
+          "Mathematical optimization",
+          "Machine learning",
+          "Algorithm",
+          "Genetic algorithm",
+          "Mathematics",
+          "Economics",
+          "Economic growth",
+          "Operating system"
+        ],
+        "external_ids": {
+          "DOI": null,
+          "OpenAlex": "https://openalex.org/W3093116395"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-218"
+      },
+      {
+        "title": "Learning to Learn",
+        "authors": [
+          "author-562"
+        ],
+        "year": 1998,
+        "venue": null,
+        "citation_count": 1345,
+        "fields_of_study": [
+          "Computer science",
+          "Artificial intelligence",
+          "Machine learning",
+          "Learning to learn",
+          "Set (abstract data type)",
+          "Process (computing)",
+          "Bayes' theorem",
+          "Bayesian probability",
+          "Mathematics",
+          "Mathematics education",
+          "Programming language",
+          "Operating system"
+        ],
+        "external_ids": {
+          "DOI": "https://doi.org/10.1007/978-1-4615-5529-2",
+          "OpenAlex": "https://openalex.org/W99485931"
+        },
+        "semantic_scholar_id": null,
+        "arxiv_id": null,
+        "doi": "https://doi.org/10.1007/978-1-4615-5529-2",
+        "citation_key": "citation-219"
+      }
+    ]
+  },
+  "06f0fe16fcb8f80bf88746c5ef6d3780531918ab": {
+    "title": "Task Agnostic Meta-Learning for Few-Shot Learning",
+    "references": [
+      {
+        "title": "Emergence of Scenario-Appropriate Collaborative Behaviors for Teams of Robotic Bodyguards",
+        "authors": [
+          "author-563",
+          "author-564"
+        ],
+        "year": 2018,
+        "venue": "venue-5",
+        "citation_count": 3,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2890509590",
+          "DBLP": "conf/atal/SheikhB19",
+          "ArXiv": "1809.04500",
+          "CorpusId": 52196126
+        },
+        "semantic_scholar_id": "2002a92a4a65e93a11448e5346cfbc893111ec8a",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-220"
+      },
+      {
+        "title": "On First-Order Meta-Learning Algorithms",
+        "authors": [
+          "author-565",
+          "author-566",
+          "author-467"
+        ],
+        "year": 2018,
+        "venue": "venue-6",
+        "citation_count": 2126,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2795900505",
+          "ArXiv": "1803.02999",
+          "DBLP": "journals/corr/abs-1803-02999",
+          "CorpusId": 4587331
+        },
+        "semantic_scholar_id": "90dc22818bd2d97d8deaff168b0137b75a962767",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-221"
+      },
+      {
+        "title": "Recasting Gradient-Based Meta-Learning as Hierarchical Bayes",
+        "authors": [
+          "author-567",
+          "author-568",
+          "author-569",
+          "author-570",
+          "author-571"
+        ],
+        "year": 2018,
+        "venue": "venue-7",
+        "citation_count": 499,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "DBLP": "journals/corr/abs-1801-08930",
+          "ArXiv": "1801.08930",
+          "MAG": "2963547174",
+          "CorpusId": 3484654
+        },
+        "semantic_scholar_id": "46b072cf918ec6f50403568a73d4347ea86b7e66",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-222"
+      },
+      {
+        "title": "Learning to Compare: Relation Network for Few-Shot Learning",
+        "authors": [
+          "author-572",
+          "author-573",
+          "author-574",
+          "author-575",
+          "author-576",
+          "author-577"
+        ],
+        "year": 2017,
+        "venue": "venue-8",
+        "citation_count": 3852,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2768228940",
+          "DBLP": "journals/corr/abs-1711-06025",
+          "ArXiv": "1711.06025",
+          "DOI": "10.1109/CVPR.2018.00131",
+          "CorpusId": 4412459
+        },
+        "semantic_scholar_id": "bfe284e4338e62f0a61bb33398353efd687f206f",
+        "arxiv_id": null,
+        "doi": "10.1109/CVPR.2018.00131",
+        "citation_key": "citation-223"
+      },
+      {
+        "title": "Few-Shot Learning with Graph Neural Networks",
+        "authors": [
+          "author-578",
+          "author-579"
+        ],
+        "year": 2017,
+        "venue": "venue-7",
+        "citation_count": 1194,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "2770468159",
+          "DBLP": "journals/corr/abs-1711-04043",
+          "ArXiv": "1711.04043",
+          "CorpusId": 3431470
+        },
+        "semantic_scholar_id": "572a1f77306e160c3893299c18f3ed862fb5f6d9",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-224"
+      },
+      {
+        "title": "Meta-SGD: Learning to Learn Quickly for Few Shot Learning",
+        "authors": [
+          "author-580",
+          "author-581",
+          "author-582",
+          "author-583"
+        ],
+        "year": 2017,
+        "venue": "venue-6",
+        "citation_count": 1082,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2742093937",
+          "ArXiv": "1707.09835",
+          "DBLP": "journals/corr/LiZCL17",
+          "CorpusId": 25316837
+        },
+        "semantic_scholar_id": "d33ad6a25264ba1747d8c93f6621c7f90a7ec601",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-225"
+      },
+      {
+        "title": "A Simple Neural Attentive Meta-Learner",
+        "authors": [
+          "author-584",
+          "author-585",
+          "author-586",
+          "author-587"
+        ],
+        "year": 2017,
+        "venue": "venue-7",
+        "citation_count": 1235,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2951881474",
+          "DBLP": "conf/iclr/MishraR0A18",
+          "CorpusId": 3503426
+        },
+        "semantic_scholar_id": "7e9c1e0d247b20a0683f4797d9ea248c3b53d424",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-226"
+      },
+      {
+        "title": "Prototypical Networks for Few-shot Learning",
+        "authors": [
+          "author-549",
+          "author-550",
+          "author-588"
+        ],
+        "year": 2017,
+        "venue": "venue-9",
+        "citation_count": 7579,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "DBLP": "conf/nips/SnellSZ17",
+          "ArXiv": "1703.05175",
+          "MAG": "2950537964",
+          "CorpusId": 309759
+        },
+        "semantic_scholar_id": "c269858a7bb34e8350f2442ccf37797856ae9bca",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-227"
+      },
+      {
+        "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+        "authors": [
+          "author-568",
+          "author-587",
+          "author-569"
         ],
         "year": 2017,
         "venue": "venue-3",
-        "citation_count": 1039,
+        "citation_count": 11083,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2604763608",
+          "DBLP": "journals/corr/FinnAL17",
+          "ArXiv": "1703.03400",
+          "CorpusId": 6719686
+        },
+        "semantic_scholar_id": "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-228"
+      },
+      {
+        "title": "Learning to Remember Rare Events",
+        "authors": [
+          "author-589",
+          "author-552",
+          "author-553",
+          "author-464"
+        ],
+        "year": 2017,
+        "venue": "venue-7",
+        "citation_count": 357,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "ArXiv": "1703.03129",
+          "DBLP": "journals/corr/KaiserNRB17",
+          "MAG": "2583010282",
+          "CorpusId": 12122362
+        },
+        "semantic_scholar_id": "29092f0deaac3898e43b3f094bf15d82b6a99afd",
+        "arxiv_id": null,
+        "doi": null,
+        "citation_key": "citation-229"
+      },
+      {
+        "title": "Meta Networks",
+        "authors": [
+          "author-590",
+          "author-591"
+        ],
+        "year": 2017,
+        "venue": "venue-3",
+        "citation_count": 1040,
         "fields_of_study": [
           "Medicine",
           "Computer Science",
@@ -311,65 +4772,40 @@
         "semantic_scholar_id": "470d11b8ca4586c930adbbfc3f60bff08f2a0161",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-17"
+        "citation_key": "citation-230"
       },
       {
         "title": "Optimization as a Model for Few-Shot Learning",
         "authors": [
-          "author-59",
-          "author-60"
+          "author-592",
+          "author-593"
         ],
-        "year": 2017,
-        "venue": null,
-        "citation_count": 2613,
+        "year": 2016,
+        "venue": "venue-7",
+        "citation_count": 3312,
         "fields_of_study": [
-          "Computer science",
-          "Initialization",
-          "Artificial intelligence",
-          "Meta learning (computer science)",
-          "Convergence (economics)",
-          "Deep learning",
-          "Metric (unit)",
-          "Artificial neural network",
-          "Machine learning",
-          "Set (abstract data type)",
-          "Parametrization (atmospheric modeling)",
-          "Competitive learning",
-          "Class (philosophy)",
-          "Domain (mathematical analysis)",
-          "Learning to learn",
-          "Mathematics",
-          "Task (project management)",
-          "Mathematical analysis",
-          "Operations management",
-          "Physics",
-          "Mathematics education",
-          "Management",
-          "Quantum mechanics",
-          "Radiative transfer",
-          "Economic growth",
-          "Economics",
-          "Programming language"
+          "Computer Science"
         ],
         "external_ids": {
-          "DOI": null,
-          "OpenAlex": "https://openalex.org/W2753160622"
+          "MAG": "2753160622",
+          "DBLP": "conf/iclr/RaviL17",
+          "CorpusId": 67413369
         },
-        "semantic_scholar_id": null,
+        "semantic_scholar_id": "29c887794eed2ca9462638ff853e6fe1ab91d5d8",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-18"
+        "citation_key": "citation-231"
       },
       {
         "title": "Learning to learn by gradient descent by gradient descent",
         "authors": [
-          "author-61",
-          "author-62",
-          "author-63",
-          "author-64",
-          "author-65",
-          "author-66",
-          "author-67"
+          "author-594",
+          "author-595",
+          "author-596",
+          "author-597",
+          "author-598",
+          "author-599",
+          "author-600"
         ],
         "year": 2016,
         "venue": "venue-9",
@@ -386,20 +4822,20 @@
         "semantic_scholar_id": "71683e224ab91617950956b5005ed0439a733a71",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-19"
+        "citation_key": "citation-232"
       },
       {
         "title": "Matching Networks for One Shot Learning",
         "authors": [
-          "author-68",
-          "author-69",
-          "author-70",
-          "author-71",
-          "author-72"
+          "author-601",
+          "author-602",
+          "author-603",
+          "author-604",
+          "author-605"
         ],
         "year": 2016,
         "venue": "venue-9",
-        "citation_count": 6957,
+        "citation_count": 6960,
         "fields_of_study": [
           "Computer Science",
           "Mathematics"
@@ -413,17 +4849,17 @@
         "semantic_scholar_id": "be1bb4e4aa1fcf70281b4bd24d8cd31c04864bb6",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-20"
+        "citation_key": "citation-233"
       },
       {
         "title": "Towards a Neural Statistician",
         "authors": [
-          "author-73",
-          "author-74"
+          "author-606",
+          "author-607"
         ],
         "year": 2016,
         "venue": "venue-7",
-        "citation_count": 416,
+        "citation_count": 418,
         "fields_of_study": [
           "Computer Science",
           "Mathematics"
@@ -437,16 +4873,16 @@
         "semantic_scholar_id": "405c31c85a324942811f3c9dc53ce3528f9284df",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-21"
+        "citation_key": "citation-234"
       },
       {
         "title": "One-shot Learning with Memory-Augmented Neural Networks",
         "authors": [
-          "author-75",
-          "author-76",
-          "author-77",
-          "author-72",
-          "author-70"
+          "author-541",
+          "author-542",
+          "author-608",
+          "author-605",
+          "author-603"
         ],
         "year": 2016,
         "venue": "venue-6",
@@ -463,16 +4899,16 @@
         "semantic_scholar_id": "bbd0e204f48a45735e1065c8b90b298077b73192",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-22"
+        "citation_key": "citation-235"
       },
       {
         "title": "Benchmarking Deep Reinforcement Learning for Continuous Control",
         "authors": [
-          "author-78",
-          "author-79",
-          "author-80",
-          "author-27",
-          "author-52"
+          "author-531",
+          "author-586",
+          "author-533",
+          "author-467",
+          "author-587"
         ],
         "year": 2016,
         "venue": "venue-3",
@@ -482,42 +4918,42 @@
           "Mathematics"
         ],
         "external_ids": {
-          "MAG": "2342662072",
           "DBLP": "conf/icml/DuanCHSA16",
+          "MAG": "2963641140",
           "ArXiv": "1604.06778",
           "CorpusId": 12296499
         },
         "semantic_scholar_id": "1464776f20e2bccb6182f183b5ff2e15b0ae5e56",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-23"
+        "citation_key": "citation-236"
       },
       {
         "title": "Human-level control through deep reinforcement learning",
         "authors": [
-          "author-81",
-          "author-71",
-          "author-82",
-          "author-83",
-          "author-84",
-          "author-85",
-          "author-86",
-          "author-87",
-          "author-88",
-          "author-89",
-          "author-90",
-          "author-91",
-          "author-92",
-          "author-93",
-          "author-94",
-          "author-95",
-          "author-72",
-          "author-96",
-          "author-97"
+          "author-609",
+          "author-604",
+          "author-610",
+          "author-611",
+          "author-612",
+          "author-613",
+          "author-614",
+          "author-615",
+          "author-616",
+          "author-617",
+          "author-618",
+          "author-619",
+          "author-620",
+          "author-621",
+          "author-622",
+          "author-623",
+          "author-605",
+          "author-624",
+          "author-625"
         ],
         "year": 2015,
         "venue": "venue-10",
-        "citation_count": 26321,
+        "citation_count": 26338,
         "fields_of_study": [
           "Medicine",
           "Computer Science"
@@ -532,20 +4968,20 @@
         "semantic_scholar_id": "340f48901f72278f6bf78a04ee5b01df208cc508",
         "arxiv_id": null,
         "doi": "10.1038/nature14236",
-        "citation_key": "citation-24"
+        "citation_key": "citation-237"
       },
       {
         "title": "Trust Region Policy Optimization",
         "authors": [
-          "author-27",
-          "author-30",
-          "author-52",
-          "author-98",
-          "author-99"
+          "author-467",
+          "author-569",
+          "author-587",
+          "author-626",
+          "author-627"
         ],
         "year": 2015,
         "venue": "venue-3",
-        "citation_count": 6418,
+        "citation_count": 6419,
         "fields_of_study": [
           "Computer Science",
           "Mathematics"
@@ -559,14 +4995,14 @@
         "semantic_scholar_id": "449532187c94af3dd3aa55e16d2c50f7854d2199",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-25"
+        "citation_key": "citation-238"
       },
       {
         "title": "Preliminary",
         "authors": [
-          "author-100",
-          "author-101",
-          "author-102"
+          "author-628",
+          "author-629",
+          "author-630"
         ],
         "year": 2014,
         "venue": "venue-11",
@@ -582,13 +5018,13 @@
         "semantic_scholar_id": "3346e72b31399527d037d6ed091a2ab96225e0fd",
         "arxiv_id": null,
         "doi": "10.1016/s0167-5648(08)70939-0",
-        "citation_key": "citation-26"
+        "citation_key": "citation-239"
       },
       {
         "title": "Lorenz Dominance and the Variance of Logarithms",
         "authors": [
-          "author-103",
-          "author-104"
+          "author-631",
+          "author-632"
         ],
         "year": 1999,
         "venue": "",
@@ -604,13 +5040,13 @@
         "semantic_scholar_id": "9744818146c045e54a3bee85b379aca940c44d6d",
         "arxiv_id": null,
         "doi": "10.1111/1468-0262.00057",
-        "citation_key": "citation-27"
+        "citation_key": "citation-240"
       },
       {
         "title": "Meta-neural networks that learn by learning",
         "authors": [
-          "author-105",
-          "author-106"
+          "author-633",
+          "author-634"
         ],
         "year": 1992,
         "venue": "venue-12",
@@ -626,12 +5062,12 @@
         "semantic_scholar_id": "b64e846fe88acaf302248249696c3b7badde41b5",
         "arxiv_id": null,
         "doi": "10.1109/IJCNN.1992.287172",
-        "citation_key": "citation-28"
+        "citation_key": "citation-241"
       },
       {
         "title": "Measures of Inequality",
         "authors": [
-          "author-107"
+          "author-635"
         ],
         "year": 1978,
         "venue": "",
@@ -647,16 +5083,16 @@
         "semantic_scholar_id": "502fdcf7b7cb1d42e19891db5460d294a3820700",
         "arxiv_id": null,
         "doi": "10.2307/2094626",
-        "citation_key": "citation-29"
+        "citation_key": "citation-242"
       },
       {
         "title": "Economics and Information Theory",
         "authors": [
-          "author-108"
+          "author-636"
         ],
         "year": 1967,
         "venue": "",
-        "citation_count": 1063,
+        "citation_count": 1061,
         "fields_of_study": [
           "Computer Science"
         ],
@@ -668,16 +5104,16 @@
         "semantic_scholar_id": "6dbdebc64cf3792b72b6bd0b8f7c3914af7d9c53",
         "arxiv_id": null,
         "doi": "10.1057/JORS.1967.59",
-        "citation_key": "citation-30"
+        "citation_key": "citation-243"
       },
       {
         "title": "Learning how to learn",
         "authors": [
-          "author-109"
+          "author-637"
         ],
         "year": 2019,
         "venue": "",
-        "citation_count": 2110,
+        "citation_count": 2108,
         "fields_of_study": [
           "Psychology"
         ],
@@ -689,33 +5125,16 @@
         "semantic_scholar_id": "44b6da0cd36c0fa2f7d3485c6dc0b6d2fbe379bb",
         "arxiv_id": null,
         "doi": "10.1007/978-1-4419-1428-6_4666",
-        "citation_key": "citation-31"
-      },
-      {
-        "title": "Learning to learn by gradient descent by gradient descent",
-        "authors": [
-          "author-110"
-        ],
-        "year": 2019,
-        "venue": "",
-        "citation_count": 137,
-        "fields_of_study": null,
-        "external_ids": {
-          "CorpusId": 221741465
-        },
-        "semantic_scholar_id": "9ab43fcb51b17c127b960149b59ee6e767e37629",
-        "arxiv_id": null,
-        "doi": null,
-        "citation_key": "citation-32"
+        "citation_key": "citation-244"
       },
       {
         "title": "Siamese Neural Networks for One-Shot Image Recognition",
         "authors": [
-          "author-111"
+          "author-638"
         ],
         "year": 2015,
         "venue": "",
-        "citation_count": 4025,
+        "citation_count": 4026,
         "fields_of_study": [
           "Computer Science"
         ],
@@ -726,16 +5145,16 @@
         "semantic_scholar_id": "f216444d4f2959b4520c61d20003fa30a199670a",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-33"
+        "citation_key": "citation-245"
       },
       {
         "title": "Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning",
         "authors": [
-          "author-112"
+          "author-475"
         ],
         "year": 2004,
         "venue": "venue-13",
-        "citation_count": 8472,
+        "citation_count": 8469,
         "fields_of_study": null,
         "external_ids": {
           "DOI": "10.1023/A:1022672621406",
@@ -744,12 +5163,12 @@
         "semantic_scholar_id": "4c915c1eecb217c123a36dc6d3ce52d12c742614",
         "arxiv_id": null,
         "doi": "10.1023/A:1022672621406",
-        "citation_key": "citation-34"
+        "citation_key": "citation-246"
       },
       {
         "title": "On the Measurement of Inequality",
         "authors": [
-          "author-113"
+          "author-639"
         ],
         "year": 2003,
         "venue": "",
@@ -761,16 +5180,16 @@
         "semantic_scholar_id": "d1354880f9395fec1eef9911c45fd6e5e509d37e",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-35"
+        "citation_key": "citation-247"
       },
       {
         "title": "Evolutionary principles in self-referential learning, or on learning how to learn: The meta-meta-. hook",
         "authors": [
-          "author-114"
+          "author-316"
         ],
         "year": 1987,
         "venue": "",
-        "citation_count": 722,
+        "citation_count": 723,
         "fields_of_study": [
           "Computer Science"
         ],
@@ -781,12 +5200,12 @@
         "semantic_scholar_id": "bdaec1b3eb9a8f7a2b296be009a148c35236f3ce",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-36"
+        "citation_key": "citation-248"
       },
       {
         "title": "Generalized entropy and the measurement of distributional change",
         "authors": [
-          "author-115"
+          "author-640"
         ],
         "year": 1980,
         "venue": "",
@@ -802,14 +5221,14 @@
         "semantic_scholar_id": "d74309294954deb8ea1b7a0972431add32af2469",
         "arxiv_id": null,
         "doi": "10.1016/0014-2921(80)90051-3",
-        "citation_key": "citation-37"
+        "citation_key": "citation-249"
       },
       {
         "title": "Statistical Methods of Econometrics. Volume 6 of Studies in Mathematical and Managerial Economics.",
         "authors": [
-          "author-116",
-          "author-117",
-          "author-118"
+          "author-641",
+          "author-642",
+          "author-643"
         ],
         "year": 1968,
         "venue": "",
@@ -825,9 +5244,13 @@
         "semantic_scholar_id": "42f1739aceb4348dbe0fe2a798d6ff8e991fbe18",
         "arxiv_id": null,
         "doi": "10.2307/2985278",
-        "citation_key": "citation-38"
+        "citation_key": "citation-250"
       }
     ]
+  },
+  "Learning to Self-Train for Semi-Supervised Few-Shot Classification": {
+    "title": "Learning to Self-Train for Semi-Supervised Few-Shot Classification",
+    "references": []
   },
   "20f0357688876fa4662f806f985779dce6e24f3c": {
     "title": "Transforming Auto-Encoders",
@@ -835,12 +5258,12 @@
       {
         "title": "Rectified Linear Units Improve Restricted Boltzmann Machines",
         "authors": [
-          "author-119",
-          "author-120"
+          "author-295",
+          "author-296"
         ],
         "year": 2010,
         "venue": "venue-3",
-        "citation_count": 17061,
+        "citation_count": 17066,
         "fields_of_study": [
           "Mathematics",
           "Computer Science"
@@ -853,13 +5276,13 @@
         "semantic_scholar_id": "a538b05ebb01a40323997629e171c91aa28b8e2f",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-39"
+        "citation_key": "citation-251"
       },
       {
         "title": "Learning to Represent Spatial Transformations with Factored Higher-Order Boltzmann Machines",
         "authors": [
-          "author-121",
-          "author-120"
+          "author-644",
+          "author-296"
         ],
         "year": 2010,
         "venue": "venue-14",
@@ -879,50 +5302,40 @@
         "semantic_scholar_id": "0eb2e4a205a628ab059cab41d3b772f614ad29f2",
         "arxiv_id": null,
         "doi": "10.1162/neco.2010.01-09-953",
-        "citation_key": "citation-40"
+        "citation_key": "citation-252"
       },
       {
         "title": "Understanding the difficulty of training deep feedforward neural networks",
         "authors": [
-          "author-122",
-          "author-123"
+          "author-645",
+          "author-646"
         ],
         "year": 2010,
-        "venue": null,
-        "citation_count": 11893,
+        "venue": "venue-16",
+        "citation_count": 17033,
         "fields_of_study": [
-          "Initialization",
-          "Computer science",
-          "Artificial neural network",
-          "Artificial intelligence",
-          "Deep neural networks",
-          "Deep learning",
-          "Gradient descent",
-          "Jacobian matrix and determinant",
-          "Sigmoid function",
-          "Machine learning",
           "Mathematics",
-          "Applied mathematics",
-          "Programming language"
+          "Computer Science"
         ],
         "external_ids": {
-          "DOI": null,
-          "OpenAlex": "https://openalex.org/W1533861849"
+          "MAG": "2606251538",
+          "DBLP": "journals/jmlr/GlorotB10",
+          "CorpusId": 5575601
         },
-        "semantic_scholar_id": null,
+        "semantic_scholar_id": "ea9d2a2b4ce11aaf85136840c65f3bc9c03ab649",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-41"
+        "citation_key": "citation-253"
       },
       {
         "title": "A Model Analysis of Arterial Oxygen Desaturation during Apnea in Preterm Infants",
         "authors": [
-          "author-124",
-          "author-125",
-          "author-126",
-          "author-127",
-          "author-128",
-          "author-129"
+          "author-647",
+          "author-648",
+          "author-649",
+          "author-650",
+          "author-651",
+          "author-652"
         ],
         "year": 2009,
         "venue": "venue-15",
@@ -942,14 +5355,14 @@
         "semantic_scholar_id": "4b25105f82cc372e0db5fb5b44a15b48cd6413cc",
         "arxiv_id": null,
         "doi": "10.1371/journal.pcbi.1000588",
-        "citation_key": "citation-42"
+        "citation_key": "citation-254"
       },
       {
         "title": "A Structured Model of Video Reproduces Primary Visual Cortical Organisation",
         "authors": [
-          "author-130",
-          "author-131",
-          "author-132"
+          "author-653",
+          "author-654",
+          "author-655"
         ],
         "year": 2009,
         "venue": "venue-15",
@@ -969,15 +5382,15 @@
         "semantic_scholar_id": "a7e5f1c143329c30d2dff82e61328c484ac2d747",
         "arxiv_id": null,
         "doi": "10.1371/journal.pcbi.1000495",
-        "citation_key": "citation-43"
+        "citation_key": "citation-255"
       },
       {
         "title": "Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations",
         "authors": [
-          "author-133",
-          "author-134",
-          "author-135",
-          "author-136"
+          "author-327",
+          "author-656",
+          "author-657",
+          "author-658"
         ],
         "year": 2009,
         "venue": "venue-3",
@@ -994,346 +5407,201 @@
         "semantic_scholar_id": "1e80f755bcbf10479afd2338cec05211fdbd325c",
         "arxiv_id": null,
         "doi": "10.1145/1553374.1553453",
-        "citation_key": "citation-44"
+        "citation_key": "citation-256"
       },
       {
         "title": "The uncrowded window of object recognition",
         "authors": [
-          "author-137",
-          "author-138"
+          "author-659",
+          "author-660"
         ],
         "year": 2008,
-        "venue": null,
-        "citation_count": 656,
+        "venue": "venue-17",
+        "citation_count": 653,
         "fields_of_study": [
-          "Computer vision",
-          "Crowding",
-          "Cognitive neuroscience of visual object recognition",
-          "Artificial intelligence",
-          "Object (grammar)",
-          "Computer science",
-          "Percept",
-          "Fixation (population genetics)",
-          "Perception",
           "Psychology",
-          "Cognitive psychology",
-          "Population",
-          "Demography",
-          "Neuroscience",
-          "Sociology"
+          "Medicine"
         ],
         "external_ids": {
-          "DOI": "https://doi.org/10.1038/nn.2187",
-          "OpenAlex": "https://openalex.org/W1994166112"
+          "MAG": "1994166112",
+          "DOI": "10.1038/nn.2187",
+          "CorpusId": 6042921,
+          "PubMed": "18828191"
         },
-        "semantic_scholar_id": null,
+        "semantic_scholar_id": "06adae42f8c6bf2cd733db8515b1711cfed67ad1",
         "arxiv_id": null,
-        "doi": "https://doi.org/10.1038/nn.2187",
-        "citation_key": "citation-45"
+        "doi": "10.1038/nn.2187",
+        "citation_key": "citation-257"
       },
       {
         "title": "Unsupervised Learning of Invariant Feature Hierarchies with Applications to Object Recognition",
         "authors": [
-          "author-139",
-          "author-140",
-          "author-141",
-          "author-142"
+          "author-661",
+          "author-331",
+          "author-662",
+          "author-301"
         ],
         "year": 2007,
-        "venue": null,
-        "citation_count": 1111,
+        "venue": "venue-18",
+        "citation_count": 1171,
         "fields_of_study": [
-          "Pattern recognition (psychology)",
-          "Artificial intelligence",
-          "MNIST database",
-          "Computer science",
-          "Classifier (UML)",
-          "Unsupervised learning",
-          "Invariant (physics)",
-          "Convolutional neural network",
-          "Cognitive neuroscience of visual object recognition",
-          "Sigmoid function",
-          "Feature extraction",
-          "Mathematics",
-          "Deep learning",
-          "Artificial neural network",
-          "Mathematical physics"
+          "Computer Science"
         ],
         "external_ids": {
-          "DOI": "https://doi.org/10.1109/cvpr.2007.383157",
-          "OpenAlex": "https://openalex.org/W2139427956"
+          "DBLP": "conf/cvpr/RanzatoHBL07",
+          "MAG": "2139427956",
+          "DOI": "10.1109/CVPR.2007.383157",
+          "CorpusId": 11398758
         },
-        "semantic_scholar_id": null,
+        "semantic_scholar_id": "ccd52aff02b0f902f4ce7247c4fee7273014c41c",
         "arxiv_id": null,
-        "doi": "https://doi.org/10.1109/cvpr.2007.383157",
-        "citation_key": "citation-46"
+        "doi": "10.1109/CVPR.2007.383157",
+        "citation_key": "citation-258"
       },
       {
         "title": "Invariant visual representation by single neurons in the human brain",
         "authors": [
-          "author-143",
-          "author-144",
-          "author-145",
-          "author-146",
-          "author-147"
+          "author-663",
+          "author-664",
+          "author-665",
+          "author-666",
+          "author-667"
         ],
         "year": 2005,
-        "venue": null,
-        "citation_count": 1894,
+        "venue": "venue-10",
+        "citation_count": 1782,
         "fields_of_study": [
-          "Stimulus (psychology)",
-          "Invariant (physics)",
-          "Neuroscience",
-          "Temporal lobe",
-          "Artificial intelligence",
-          "Representation (politics)",
-          "Computer science",
-          "Human brain",
-          "Visual system",
-          "Computer vision",
-          "Psychology",
-          "Pattern recognition (psychology)",
-          "Communication",
-          "Visual cortex",
-          "Mathematics",
-          "Cognitive psychology",
-          "Politics",
-          "Epilepsy",
-          "Political science",
-          "Law",
-          "Mathematical physics"
+          "Physics",
+          "Medicine"
         ],
         "external_ids": {
-          "DOI": "https://doi.org/10.1038/nature03687",
-          "OpenAlex": "https://openalex.org/W2101295242"
+          "MAG": "2101295242",
+          "DOI": "10.1038/nature03687",
+          "CorpusId": 1234637,
+          "PubMed": "15973409"
         },
-        "semantic_scholar_id": null,
+        "semantic_scholar_id": "4d6109548fab119d5edfb7a77b63eb10ca58f4a4",
         "arxiv_id": null,
-        "doi": "https://doi.org/10.1038/nature03687",
-        "citation_key": "citation-47"
+        "doi": "10.1038/nature03687",
+        "citation_key": "citation-259"
       },
       {
         "title": "Hierarchical models of object recognition in cortex",
         "authors": [
-          "author-148",
-          "author-149"
+          "author-668",
+          "author-669"
         ],
         "year": 1999,
-        "venue": null,
-        "citation_count": 3339,
+        "venue": "venue-17",
+        "citation_count": 3577,
         "fields_of_study": [
-          "Visual cortex",
-          "Neuroscience",
-          "Cognitive neuroscience of visual object recognition",
-          "Hierarchy",
-          "Hierarchical database model",
-          "Computer science",
-          "Object (grammar)",
-          "Cortex (anatomy)",
-          "Artificial intelligence",
-          "Visual processing",
-          "Task (project management)",
-          "Function (biology)",
           "Psychology",
-          "Cognitive science",
-          "Pattern recognition (psychology)",
-          "Biology",
-          "Perception",
-          "Data mining",
-          "Management",
-          "Evolutionary biology",
-          "Economics",
-          "Market economy"
+          "Medicine"
         ],
         "external_ids": {
-          "DOI": "https://doi.org/10.1038/14819",
-          "OpenAlex": "https://openalex.org/W2149194912"
+          "MAG": "2149194912",
+          "DOI": "10.1038/14819",
+          "CorpusId": 8920227,
+          "PubMed": "10526343"
         },
-        "semantic_scholar_id": null,
+        "semantic_scholar_id": "85abadb689897997f1e37baa7b5fc6f7d497518b",
         "arxiv_id": null,
-        "doi": "https://doi.org/10.1038/14819",
-        "citation_key": "citation-48"
+        "doi": "10.1038/14819",
+        "citation_key": "citation-260"
       },
       {
         "title": "Object recognition from local scale-invariant features",
         "authors": [
-          "author-150"
+          "author-670"
         ],
         "year": 1999,
-        "venue": null,
-        "citation_count": 15679,
-        "fields_of_study": [
-          "Artificial intelligence",
-          "Computer vision",
-          "Cognitive neuroscience of visual object recognition",
-          "Pattern recognition (psychology)",
-          "Invariant (physics)",
-          "3D single-object recognition",
-          "Computer science",
-          "Affine transformation",
-          "Computation",
-          "Search engine indexing",
-          "Feature extraction",
-          "Mathematics",
-          "Algorithm",
-          "Pure mathematics",
-          "Mathematical physics"
-        ],
-        "external_ids": {
-          "DOI": "https://doi.org/10.1109/iccv.1999.790410",
-          "OpenAlex": "https://openalex.org/W2124386111"
-        },
-        "semantic_scholar_id": null,
-        "arxiv_id": null,
-        "doi": "https://doi.org/10.1109/iccv.1999.790410",
-        "citation_key": "citation-49"
-      },
-      {
-        "title": "The design and use of steerable filters",
-        "authors": [
-          "author-151",
-          "author-152"
-        ],
-        "year": 1991,
-        "venue": null,
-        "citation_count": 2932,
-        "fields_of_study": [
-          "Orientation (vector space)",
-          "Artificial intelligence",
-          "Computer science",
-          "Pyramid (geometry)",
-          "Filter (signal processing)",
-          "Adaptive filter",
-          "Computer vision",
-          "Prototype filter",
-          "Representation (politics)",
-          "Filter design",
-          "Algorithm",
-          "Mathematics",
-          "Geometry",
-          "Politics",
-          "Political science",
-          "Law"
-        ],
-        "external_ids": {
-          "DOI": "https://doi.org/10.1109/34.93808",
-          "OpenAlex": "https://openalex.org/W1991605728"
-        },
-        "semantic_scholar_id": null,
-        "arxiv_id": null,
-        "doi": "https://doi.org/10.1109/34.93808",
-        "citation_key": "citation-50"
-      },
-      {
-        "title": "Shape representation in parallel systems",
-        "authors": [
-          "author-153"
-        ],
-        "year": 1981,
-        "venue": null,
-        "citation_count": 97,
-        "fields_of_study": [
-          "Gestalt psychology",
-          "ENCODE",
-          "Computer science",
-          "Representation (politics)",
-          "Artificial intelligence",
-          "Computation",
-          "Simple (philosophy)",
-          "Slogan",
-          "Perception",
-          "Interpretation (philosophy)",
-          "Theoretical computer science",
-          "Visual processing",
-          "Visual perception",
-          "Algorithm",
-          "Neuroscience",
-          "Psychology",
-          "Biochemistry",
-          "Chemistry",
-          "Philosophy",
-          "Epistemology",
-          "Politics",
-          "Political science",
-          "Law",
-          "Gene",
-          "Programming language"
-        ],
-        "external_ids": {
-          "DOI": null,
-          "OpenAlex": "https://openalex.org/W179212727"
-        },
-        "semantic_scholar_id": null,
-        "arxiv_id": null,
-        "doi": null,
-        "citation_key": "citation-51"
-      },
-      {
-        "title": "Gradient-based learning applied to document recognition",
-        "authors": [
-          "author-142",
-          "author-154",
-          "author-123",
-          "author-155"
-        ],
-        "year": 1998,
-        "venue": null,
-        "citation_count": 50396,
-        "fields_of_study": [
-          "Computer science",
-          "Artificial intelligence",
-          "Convolutional neural network",
-          "Intelligent character recognition",
-          "Handwriting recognition",
-          "Transformer",
-          "Artificial neural network",
-          "Pattern recognition (psychology)",
-          "Handwriting",
-          "Preprocessor",
-          "Deep learning",
-          "Graph",
-          "Speech recognition",
-          "Machine learning",
-          "Feature extraction",
-          "Character recognition",
-          "Theoretical computer science",
-          "Physics",
-          "Quantum mechanics",
-          "Voltage",
-          "Image (mathematics)"
-        ],
-        "external_ids": {
-          "DOI": "https://doi.org/10.1109/5.726791",
-          "OpenAlex": "https://openalex.org/W2112796928"
-        },
-        "semantic_scholar_id": null,
-        "arxiv_id": null,
-        "doi": "https://doi.org/10.1109/5.726791",
-        "citation_key": "citation-52"
-      },
-      {
-        "title": "TRAFFIC: Recognizing Objects Using Hierarchical Reference Frame Transformations",
-        "authors": [
-          "author-51",
-          "author-156",
-          "author-120"
-        ],
-        "year": 1989,
-        "venue": "venue-9",
-        "citation_count": 24,
+        "venue": "venue-19",
+        "citation_count": 17979,
         "fields_of_study": [
           "Mathematics",
           "Computer Science"
         ],
         "external_ids": {
-          "DBLP": "conf/nips/ZemelMH89",
-          "MAG": "2110803095",
-          "CorpusId": 15353397
+          "DBLP": "conf/iccv/Lowe99",
+          "MAG": "2124386111",
+          "DOI": "10.1109/ICCV.1999.790410",
+          "CorpusId": 5258236
         },
-        "semantic_scholar_id": "5b00ab8cc5a56ee934618bd7555965185a7f83ec",
+        "semantic_scholar_id": "f9f836d28f52ad260213d32224a6d227f8e8849a",
+        "arxiv_id": null,
+        "doi": "10.1109/ICCV.1999.790410",
+        "citation_key": "citation-261"
+      },
+      {
+        "title": "The Design and Use of Steerable Filters",
+        "authors": [
+          "author-671",
+          "author-672"
+        ],
+        "year": 1991,
+        "venue": "venue-20",
+        "citation_count": 3462,
+        "fields_of_study": [
+          "Computer Science",
+          "Mathematics"
+        ],
+        "external_ids": {
+          "MAG": "1991605728",
+          "DBLP": "journals/pami/FreemanA91",
+          "DOI": "10.1109/34.93808",
+          "CorpusId": 29187618
+        },
+        "semantic_scholar_id": "993b1083455b5c4d631eaf44f230b061994e75c3",
+        "arxiv_id": null,
+        "doi": "10.1109/34.93808",
+        "citation_key": "citation-262"
+      },
+      {
+        "title": "Shape Representation in Parallel Systems",
+        "authors": [
+          "author-296"
+        ],
+        "year": 1981,
+        "venue": "venue-21",
+        "citation_count": 111,
+        "fields_of_study": [
+          "Mathematics",
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "179212727",
+          "DBLP": "conf/ijcai/Hinton81",
+          "CorpusId": 9041037
+        },
+        "semantic_scholar_id": "272cb3db246145e13f8db4acbe1d2eae088c7677",
         "arxiv_id": null,
         "doi": null,
-        "citation_key": "citation-53"
+        "citation_key": "citation-263"
+      },
+      {
+        "title": "Gradient-based learning applied to document recognition",
+        "authors": [
+          "author-301",
+          "author-673",
+          "author-646",
+          "author-674"
+        ],
+        "year": 1998,
+        "venue": "venue-22",
+        "citation_count": 51894,
+        "fields_of_study": [
+          "Computer Science"
+        ],
+        "external_ids": {
+          "MAG": "2112796928",
+          "DBLP": "journals/pieee/LeCunBBH98",
+          "DOI": "10.1109/5.726791",
+          "CorpusId": 14542261
+        },
+        "semantic_scholar_id": "162d958ff885f1462aeda91cd72582323fd6a1f4",
+        "arxiv_id": null,
+        "doi": "10.1109/5.726791",
+        "citation_key": "citation-264"
       }
     ]
   }
