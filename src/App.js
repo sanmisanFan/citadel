@@ -12,7 +12,6 @@ import { VisContainer } from "./components/visContainer";
 import { extractAndHighlight } from "./util/pdfUtil";
 
 /** Import TEST Data */
-import testData from "./data/identifiedIssue.json";
 import authorRaw from "./data/author.json";
 import venueRaw from "./data/venue.json";
 import citationRaw from "./data/citation.json";

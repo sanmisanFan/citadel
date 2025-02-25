@@ -1,0 +1,1117 @@
+{
+  "citations": [
+    {
+      "id": "citation-1",
+      "cite_number": 1,
+      "author": [
+        "author-1",
+        "author-2",
+        "author-3"
+      ],
+      "venue": "venue-1",
+      "year": 2012,
+      "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+      "source": "Alex Krizhevsky, Ilya Sutskever, Geoffrey E. Hinton. \"ImageNet Classification with Deep Convolutional Neural Networks,\" Proc. Advances Neural Inf. Process. Syst., 2012.",
+      "doi": null,
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 4,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "height": 0.012335816834377195,
+            "width": 0.01892982865817228,
+            "x": 0.37122180642262514,
+            "y": 0.551534407868048
+          }
+        },
+        {
+          "page": 14,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "height": 0.012335816834377195,
+            "width": 0.019278400456614737,
+            "x": 0.8991271090039097,
+            "y": 0.714973473042635
+          }
+        },
+        {
+          "page": 16,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "height": 0.012335816834377195,
+            "width": 0.019538066590585823,
+            "x": 0.5760312813945595,
+            "y": 0.4177857460892279
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-2",
+      "cite_number": 2,
+      "author": [
+        "author-4",
+        "author-5",
+        "author-6",
+        "author-7"
+      ],
+      "venue": "venue-2",
+      "year": 2016,
+      "title": "Deep Residual Learning for Image Recognition",
+      "source": "Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun. \"Deep Residual Learning for Image Recognition,\" Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2016.",
+      "doi": "https://doi.org/10.1109/cvpr.2016.90",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "height": 0.012335816834377195,
+            "width": 0.01953809360537296,
+            "x": 0.20164407131860582,
+            "y": 0.6457851920013457
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-3",
+      "cite_number": 3,
+      "author": [
+        "author-8",
+        "author-9",
+        "author-10"
+      ],
+      "venue": "venue-3",
+      "year": 2017,
+      "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+      "source": "Chelsea Finn, Pieter Abbeel, Sergey Levine. \"Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks,\" Proc. 34th Int. Conf. Mach. Learn., 2017.",
+      "doi": "https://doi.org/10.48550/arxiv.1703.03400",
+      "hop": 1,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-4",
+      "cite_number": 4,
+      "author": [
+        "author-11",
+        "author-12",
+        "author-13"
+      ],
+      "venue": null,
+      "year": 2018,
+      "title": "Task Agnostic Meta-Learning for Few-Shot Learning",
+      "source": "M. A. Jamal, G.-J. Qi, M. Shah. \"Task Agnostic Meta-Learning for Few-Shot Learning,\" arXiv, 2018.",
+      "doi": "10.1109/CVPR.2019.01199",
+      "hop": 1,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-7",
+        "citation-8",
+        "citation-9",
+        "citation-10",
+        "citation-11",
+        "citation-12",
+        "citation-13",
+        "citation-14",
+        "citation-3",
+        "citation-16",
+        "citation-17",
+        "citation-18",
+        "citation-19",
+        "citation-20",
+        "citation-21",
+        "citation-22",
+        "citation-23",
+        "citation-24",
+        "citation-25",
+        "citation-26",
+        "citation-27",
+        "citation-28",
+        "citation-29",
+        "citation-30",
+        "citation-31",
+        "citation-32",
+        "citation-33",
+        "citation-34",
+        "citation-35",
+        "citation-36",
+        "citation-37",
+        "citation-38"
+      ]
+    },
+    {
+      "id": "citation-5",
+      "cite_number": 5,
+      "author": [
+        "author-14",
+        "author-15",
+        "author-16",
+        "author-17",
+        "author-18",
+        "author-19",
+        "author-20"
+      ],
+      "venue": "venue-1",
+      "year": 2019,
+      "title": "Learning to Self-Train for Semi-Supervised Few-Shot Classification",
+      "source": "Xinzhe Li, Qianru Sun, Yaoyao Liu, Qin Zhou, Shibao Zheng, Tat\u2010Seng Chua, Bernt Schiele. \"Learning to Self-Train for Semi-Supervised Few-Shot Classification,\" Proc. Advances Neural Inf. Process. Syst., 2019.",
+      "doi": null,
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "height": 0.012335816834377195,
+            "width": 0.019538066590585823,
+            "x": 0.8054768374674782,
+            "y": 0.8466618777642554
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "height": 0.012335856412083073,
+            "width": 0.01912925181682548,
+            "x": 0.23115405225589142,
+            "y": 0.2691970079254356
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-6",
+      "cite_number": 6,
+      "author": [
+        "author-3",
+        "author-21",
+        "author-22"
+      ],
+      "venue": "venue-4",
+      "year": 2011,
+      "title": "Transforming Auto-Encoders",
+      "source": "Geoffrey E. Hinton, A. Krizhevsky, S. D. Wang. \"Transforming Auto-Encoders,\" Proc. Int. Conf. Artif. Neural Netw., 2011.",
+      "doi": "10.1007/978-3-642-21735-7_6",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "height": 0.012335816834377195,
+            "width": 0.01886450690287244,
+            "x": 0.39475970941166005,
+            "y": 0.8040837860033443
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "height": 0.012335816834377195,
+            "width": 0.019229719810191944,
+            "x": 0.7320093134018955,
+            "y": 0.5320451185847013
+          }
+        },
+        {
+          "page": 4,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "height": 0.012335856412083073,
+            "width": 0.019538066590585823,
+            "x": 0.4671293795427391,
+            "y": 0.28404909614414203
+          }
+        },
+        {
+          "page": 14,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "height": 0.012335816834377195,
+            "width": 0.019538066590585823,
+            "x": 0.7996556911349679,
+            "y": 0.5515266506376958
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-39",
+        "citation-40",
+        "citation-41",
+        "citation-42",
+        "citation-43",
+        "citation-44",
+        "citation-45",
+        "citation-46",
+        "citation-47",
+        "citation-48",
+        "citation-49",
+        "citation-50",
+        "citation-51",
+        "citation-52",
+        "citation-53"
+      ]
+    },
+    {
+      "id": "citation-7",
+      "cite_number": 7,
+      "author": [
+        "author-23",
+        "author-24"
+      ],
+      "venue": "venue-5",
+      "year": 2018,
+      "title": "Emergence of Scenario-Appropriate Collaborative Behaviors for Teams of Robotic Bodyguards",
+      "source": "Hassam Sheikh, Ladislau B\u00f6l\u00f6ni. \"Emergence of Scenario-Appropriate Collaborative Behaviors for Teams of Robotic Bodyguards,\" venue-5, 2018.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-8",
+      "cite_number": 8,
+      "author": [
+        "author-25",
+        "author-26",
+        "author-27"
+      ],
+      "venue": "venue-6",
+      "year": 2018,
+      "title": "On First-Order Meta-Learning Algorithms",
+      "source": "Alex Nichol, Joshua Achiam, John Schulman. \"On First-Order Meta-Learning Algorithms,\" venue-6, 2018.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-9",
+      "cite_number": 9,
+      "author": [
+        "author-28",
+        "author-29",
+        "author-30",
+        "author-31",
+        "author-32"
+      ],
+      "venue": "venue-7",
+      "year": 2018,
+      "title": "Recasting Gradient-Based Meta-Learning as Hierarchical Bayes",
+      "source": "Erin Grant, Chelsea Finn, S. Levine, Trevor Darrell, T. Griffiths. \"Recasting Gradient-Based Meta-Learning as Hierarchical Bayes,\" venue-7, 2018.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-10",
+      "cite_number": 10,
+      "author": [
+        "author-33",
+        "author-34",
+        "author-35",
+        "author-36",
+        "author-37",
+        "author-38"
+      ],
+      "venue": "venue-8",
+      "year": 2017,
+      "title": "Learning to Compare: Relation Network for Few-Shot Learning",
+      "source": "Flood Sung, Yongxin Yang, Li Zhang, T. Xiang, Philip H. S. Torr, Timothy M. Hospedales. \"Learning to Compare: Relation Network for Few-Shot Learning,\" venue-8, 2017.",
+      "doi": "10.1109/CVPR.2018.00131",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-11",
+      "cite_number": 11,
+      "author": [
+        "author-39",
+        "author-40"
+      ],
+      "venue": "venue-7",
+      "year": 2017,
+      "title": "Few-Shot Learning with Graph Neural Networks",
+      "source": "Victor Garcia Satorras, Joan Bruna. \"Few-Shot Learning with Graph Neural Networks,\" venue-7, 2017.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-12",
+      "cite_number": 12,
+      "author": [
+        "author-41",
+        "author-42",
+        "author-43",
+        "author-44"
+      ],
+      "venue": "venue-6",
+      "year": 2017,
+      "title": "Meta-SGD: Learning to Learn Quickly for Few Shot Learning",
+      "source": "Zhenguo Li, Fengwei Zhou, Fei Chen, Hang Li. \"Meta-SGD: Learning to Learn Quickly for Few Shot Learning,\" venue-6, 2017.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-13",
+      "cite_number": 13,
+      "author": [
+        "author-45",
+        "author-46",
+        "author-47",
+        "author-48"
+      ],
+      "venue": null,
+      "year": 2017,
+      "title": "A Simple Neural Attentive Meta-Learner",
+      "source": "Nikhil Mishra, Mostafa Rohaninejad, Xi Chen, Pieter Abbeel. \"A Simple Neural Attentive Meta-Learner,\" None, 2017.",
+      "doi": "https://doi.org/10.48550/arxiv.1707.03141",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-14",
+      "cite_number": 14,
+      "author": [
+        "author-49",
+        "author-50",
+        "author-51"
+      ],
+      "venue": "venue-9",
+      "year": 2017,
+      "title": "Prototypical Networks for Few-shot Learning",
+      "source": "Jake Snell, Kevin Swersky, R. Zemel. \"Prototypical Networks for Few-shot Learning,\" venue-9, 2017.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-16",
+      "cite_number": 15,
+      "author": [
+        "author-53",
+        "author-54",
+        "author-55",
+        "author-56"
+      ],
+      "venue": null,
+      "year": 2017,
+      "title": "Learning to Remember Rare Events",
+      "source": "\u0141ukasz Kaiser, Ofir Nachum, Aurko Roy, Samy Bengio. \"Learning to Remember Rare Events,\" None, 2017.",
+      "doi": "https://doi.org/10.48550/arxiv.1703.03129",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-17",
+      "cite_number": 16,
+      "author": [
+        "author-57",
+        "author-58"
+      ],
+      "venue": "venue-3",
+      "year": 2017,
+      "title": "Meta Networks",
+      "source": "Tsendsuren Munkhdalai, Hong Yu. \"Meta Networks,\" venue-3, 2017.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-18",
+      "cite_number": 17,
+      "author": [
+        "author-59",
+        "author-60"
+      ],
+      "venue": null,
+      "year": 2017,
+      "title": "Optimization as a Model for Few-Shot Learning",
+      "source": "Sachin Ravi, Hugo Larochelle. \"Optimization as a Model for Few-Shot Learning,\" None, 2017.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-19",
+      "cite_number": 18,
+      "author": [
+        "author-61",
+        "author-62",
+        "author-63",
+        "author-64",
+        "author-65",
+        "author-66",
+        "author-67"
+      ],
+      "venue": "venue-9",
+      "year": 2016,
+      "title": "Learning to learn by gradient descent by gradient descent",
+      "source": "Marcin Andrychowicz, Misha Denil, Sergio Gomez Colmenarejo, Matthew W. Hoffman, David Pfau, T. Schaul, Nando de Freitas. \"Learning to learn by gradient descent by gradient descent,\" venue-9, 2016.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-20",
+      "cite_number": 19,
+      "author": [
+        "author-68",
+        "author-69",
+        "author-70",
+        "author-71",
+        "author-72"
+      ],
+      "venue": "venue-9",
+      "year": 2016,
+      "title": "Matching Networks for One Shot Learning",
+      "source": "O. Vinyals, C. Blundell, T. Lillicrap, K. Kavukcuoglu, D. Wierstra. \"Matching Networks for One Shot Learning,\" venue-9, 2016.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-21",
+      "cite_number": 20,
+      "author": [
+        "author-73",
+        "author-74"
+      ],
+      "venue": "venue-7",
+      "year": 2016,
+      "title": "Towards a Neural Statistician",
+      "source": "Harrison Edwards, A. Storkey. \"Towards a Neural Statistician,\" venue-7, 2016.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-22",
+      "cite_number": 21,
+      "author": [
+        "author-75",
+        "author-76",
+        "author-77",
+        "author-72",
+        "author-70"
+      ],
+      "venue": "venue-6",
+      "year": 2016,
+      "title": "One-shot Learning with Memory-Augmented Neural Networks",
+      "source": "Adam Santoro, Sergey Bartunov, M. Botvinick, D. Wierstra, T. Lillicrap. \"One-shot Learning with Memory-Augmented Neural Networks,\" venue-6, 2016.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-23",
+      "cite_number": 22,
+      "author": [
+        "author-78",
+        "author-79",
+        "author-80",
+        "author-27",
+        "author-52"
+      ],
+      "venue": "venue-3",
+      "year": 2016,
+      "title": "Benchmarking Deep Reinforcement Learning for Continuous Control",
+      "source": "Yan Duan, Xi Chen, Rein Houthooft, John Schulman, P. Abbeel. \"Benchmarking Deep Reinforcement Learning for Continuous Control,\" venue-3, 2016.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-24",
+      "cite_number": 23,
+      "author": [
+        "author-81",
+        "author-71",
+        "author-82",
+        "author-83",
+        "author-84",
+        "author-85",
+        "author-86",
+        "author-87",
+        "author-88",
+        "author-89",
+        "author-90",
+        "author-91",
+        "author-92",
+        "author-93",
+        "author-94",
+        "author-95",
+        "author-72",
+        "author-96",
+        "author-97"
+      ],
+      "venue": "venue-10",
+      "year": 2015,
+      "title": "Human-level control through deep reinforcement learning",
+      "source": "Volodymyr Mnih, K. Kavukcuoglu, David Silver, Andrei A. Rusu, J. Veness, Marc G. Bellemare, Alex Graves, Martin A. Riedmiller, A. Fidjeland, Georg Ostrovski, Stig Petersen, Charlie Beattie, Amir Sadik, Ioannis Antonoglou, Helen King, D. Kumaran, D. Wierstra, S. Legg, D. Hassabis. \"Human-level control through deep reinforcement learning,\" venue-10, 2015.",
+      "doi": "10.1038/nature14236",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-25",
+      "cite_number": 24,
+      "author": [
+        "author-27",
+        "author-30",
+        "author-52",
+        "author-98",
+        "author-99"
+      ],
+      "venue": "venue-3",
+      "year": 2015,
+      "title": "Trust Region Policy Optimization",
+      "source": "John Schulman, S. Levine, P. Abbeel, Michael I. Jordan, Philipp Moritz. \"Trust Region Policy Optimization,\" venue-3, 2015.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-26",
+      "cite_number": 25,
+      "author": [
+        "author-100",
+        "author-101",
+        "author-102"
+      ],
+      "venue": "venue-11",
+      "year": 2014,
+      "title": "Preliminary",
+      "source": "Tuncer \u00d6ren, Bernard P. Zeigler, T. Pawletta. \"Preliminary,\" venue-11, 2014.",
+      "doi": "10.1016/s0167-5648(08)70939-0",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-27",
+      "cite_number": 26,
+      "author": [
+        "author-103",
+        "author-104"
+      ],
+      "venue": "",
+      "year": 1999,
+      "title": "Lorenz Dominance and the Variance of Logarithms",
+      "source": "J. Foster, Efe A. Ok. \"Lorenz Dominance and the Variance of Logarithms,\" , 1999.",
+      "doi": "10.1111/1468-0262.00057",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-28",
+      "cite_number": 27,
+      "author": [
+        "author-105",
+        "author-106"
+      ],
+      "venue": "venue-12",
+      "year": 1992,
+      "title": "Meta-neural networks that learn by learning",
+      "source": "D. Naik, R. Mammone. \"Meta-neural networks that learn by learning,\" venue-12, 1992.",
+      "doi": "10.1109/IJCNN.1992.287172",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-29",
+      "cite_number": 28,
+      "author": [
+        "author-107"
+      ],
+      "venue": "",
+      "year": 1978,
+      "title": "Measures of Inequality",
+      "source": "P. Allison. \"Measures of Inequality,\" , 1978.",
+      "doi": "10.2307/2094626",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-30",
+      "cite_number": 29,
+      "author": [
+        "author-108"
+      ],
+      "venue": "",
+      "year": 1967,
+      "title": "Economics and Information Theory",
+      "source": "W. Silver. \"Economics and Information Theory,\" , 1967.",
+      "doi": "10.1057/JORS.1967.59",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-31",
+      "cite_number": 30,
+      "author": [
+        "author-109"
+      ],
+      "venue": "",
+      "year": 2019,
+      "title": "Learning how to learn",
+      "source": "Kyle Duffie. \"Learning how to learn,\" , 2019.",
+      "doi": "10.1007/978-1-4419-1428-6_4666",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-32",
+      "cite_number": 31,
+      "author": [
+        "author-110"
+      ],
+      "venue": "",
+      "year": 2019,
+      "title": "Learning to learn by gradient descent by gradient descent",
+      "source": "Liyang Jiang. \"Learning to learn by gradient descent by gradient descent,\" , 2019.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-33",
+      "cite_number": 32,
+      "author": [
+        "author-111"
+      ],
+      "venue": "",
+      "year": 2015,
+      "title": "Siamese Neural Networks for One-Shot Image Recognition",
+      "source": "Gregory R. Koch. \"Siamese Neural Networks for One-Shot Image Recognition,\" , 2015.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-34",
+      "cite_number": 33,
+      "author": [
+        "author-112"
+      ],
+      "venue": "venue-13",
+      "year": 2004,
+      "title": "Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning",
+      "source": "Ronald J. Williams. \"Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning,\" venue-13, 2004.",
+      "doi": "10.1023/A:1022672621406",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-35",
+      "cite_number": 34,
+      "author": [
+        "author-113"
+      ],
+      "venue": "",
+      "year": 2003,
+      "title": "On the Measurement of Inequality",
+      "source": "F. Bourguignon. \"On the Measurement of Inequality,\" , 2003.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-36",
+      "cite_number": 35,
+      "author": [
+        "author-114"
+      ],
+      "venue": "",
+      "year": 1987,
+      "title": "Evolutionary principles in self-referential learning, or on learning how to learn: The meta-meta-. hook",
+      "source": "J\u00fcrgen Schmidhuber. \"Evolutionary principles in self-referential learning, or on learning how to learn: The meta-meta-. hook,\" , 1987.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-37",
+      "cite_number": 36,
+      "author": [
+        "author-115"
+      ],
+      "venue": "",
+      "year": 1980,
+      "title": "Generalized entropy and the measurement of distributional change",
+      "source": "F. Cowell. \"Generalized entropy and the measurement of distributional change,\" , 1980.",
+      "doi": "10.1016/0014-2921(80)90051-3",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-38",
+      "cite_number": 37,
+      "author": [
+        "author-116",
+        "author-117",
+        "author-118"
+      ],
+      "venue": "",
+      "year": 1968,
+      "title": "Statistical Methods of Econometrics. Volume 6 of Studies in Mathematical and Managerial Economics.",
+      "source": "M. H. Hoyle, E. Malinvaud, Mrs A. Silvey. \"Statistical Methods of Econometrics. Volume 6 of Studies in Mathematical and Managerial Economics.,\" , 1968.",
+      "doi": "10.2307/2985278",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-39",
+      "cite_number": 38,
+      "author": [
+        "author-119",
+        "author-120"
+      ],
+      "venue": "venue-3",
+      "year": 2010,
+      "title": "Rectified Linear Units Improve Restricted Boltzmann Machines",
+      "source": "Vinod Nair, Geoffrey E. Hinton. \"Rectified Linear Units Improve Restricted Boltzmann Machines,\" venue-3, 2010.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-40",
+      "cite_number": 39,
+      "author": [
+        "author-121",
+        "author-120"
+      ],
+      "venue": "venue-14",
+      "year": 2010,
+      "title": "Learning to Represent Spatial Transformations with Factored Higher-Order Boltzmann Machines",
+      "source": "R. Memisevic, Geoffrey E. Hinton. \"Learning to Represent Spatial Transformations with Factored Higher-Order Boltzmann Machines,\" venue-14, 2010.",
+      "doi": "10.1162/neco.2010.01-09-953",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-41",
+      "cite_number": 40,
+      "author": [
+        "author-122",
+        "author-123"
+      ],
+      "venue": null,
+      "year": 2010,
+      "title": "Understanding the difficulty of training deep feedforward neural networks",
+      "source": "Xavier Glorot, Yoshua Bengio. \"Understanding the difficulty of training deep feedforward neural networks,\" None, 2010.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-42",
+      "cite_number": 41,
+      "author": [
+        "author-124",
+        "author-125",
+        "author-126",
+        "author-127",
+        "author-128",
+        "author-129"
+      ],
+      "venue": "venue-15",
+      "year": 2009,
+      "title": "A Model Analysis of Arterial Oxygen Desaturation during Apnea in Preterm Infants",
+      "source": "S. Sands, B. Edwards, V. J. Kelly, M. Davidson, M. Wilkinson, P. Berger. \"A Model Analysis of Arterial Oxygen Desaturation during Apnea in Preterm Infants,\" venue-15, 2009.",
+      "doi": "10.1371/journal.pcbi.1000588",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-43",
+      "cite_number": 42,
+      "author": [
+        "author-130",
+        "author-131",
+        "author-132"
+      ],
+      "venue": "venue-15",
+      "year": 2009,
+      "title": "A Structured Model of Video Reproduces Primary Visual Cortical Organisation",
+      "source": "P. Berkes, Richard E. Turner, M. Sahani. \"A Structured Model of Video Reproduces Primary Visual Cortical Organisation,\" venue-15, 2009.",
+      "doi": "10.1371/journal.pcbi.1000495",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-44",
+      "cite_number": 43,
+      "author": [
+        "author-133",
+        "author-134",
+        "author-135",
+        "author-136"
+      ],
+      "venue": "venue-3",
+      "year": 2009,
+      "title": "Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations",
+      "source": "Honglak Lee, R. Grosse, R. Ranganath, A. Ng. \"Convolutional deep belief networks for scalable unsupervised learning of hierarchical representations,\" venue-3, 2009.",
+      "doi": "10.1145/1553374.1553453",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-45",
+      "cite_number": 44,
+      "author": [
+        "author-137",
+        "author-138"
+      ],
+      "venue": null,
+      "year": 2008,
+      "title": "The uncrowded window of object recognition",
+      "source": "Denis G. Pelli, Katharine A. Tillman. \"The uncrowded window of object recognition,\" None, 2008.",
+      "doi": "https://doi.org/10.1038/nn.2187",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-46",
+      "cite_number": 45,
+      "author": [
+        "author-139",
+        "author-140",
+        "author-141",
+        "author-142"
+      ],
+      "venue": null,
+      "year": 2007,
+      "title": "Unsupervised Learning of Invariant Feature Hierarchies with Applications to Object Recognition",
+      "source": "Marc\u2019Aurelio Ranzato, Fu Jie Huang, Y-Lan Boureau, Yann LeCun. \"Unsupervised Learning of Invariant Feature Hierarchies with Applications to Object Recognition,\" None, 2007.",
+      "doi": "https://doi.org/10.1109/cvpr.2007.383157",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-47",
+      "cite_number": 46,
+      "author": [
+        "author-143",
+        "author-144",
+        "author-145",
+        "author-146",
+        "author-147"
+      ],
+      "venue": null,
+      "year": 2005,
+      "title": "Invariant visual representation by single neurons in the human brain",
+      "source": "Rodrigo Quian Quiroga, Leila Reddy, Gabriel Kreiman, Christof Koch, Itzhak Fried. \"Invariant visual representation by single neurons in the human brain,\" None, 2005.",
+      "doi": "https://doi.org/10.1038/nature03687",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-48",
+      "cite_number": 47,
+      "author": [
+        "author-148",
+        "author-149"
+      ],
+      "venue": null,
+      "year": 1999,
+      "title": "Hierarchical models of object recognition in cortex",
+      "source": "Maximilian Riesenhuber, Tomaso Poggio. \"Hierarchical models of object recognition in cortex,\" None, 1999.",
+      "doi": "https://doi.org/10.1038/14819",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-49",
+      "cite_number": 48,
+      "author": [
+        "author-150"
+      ],
+      "venue": null,
+      "year": 1999,
+      "title": "Object recognition from local scale-invariant features",
+      "source": "David Lowe. \"Object recognition from local scale-invariant features,\" None, 1999.",
+      "doi": "https://doi.org/10.1109/iccv.1999.790410",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-50",
+      "cite_number": 49,
+      "author": [
+        "author-151",
+        "author-152"
+      ],
+      "venue": null,
+      "year": 1991,
+      "title": "The design and use of steerable filters",
+      "source": "William T. Freeman, Edward H. Adelson. \"The design and use of steerable filters,\" None, 1991.",
+      "doi": "https://doi.org/10.1109/34.93808",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-51",
+      "cite_number": 50,
+      "author": [
+        "author-153"
+      ],
+      "venue": null,
+      "year": 1981,
+      "title": "Shape representation in parallel systems",
+      "source": "Geoffrey F. Hinton. \"Shape representation in parallel systems,\" None, 1981.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-52",
+      "cite_number": 51,
+      "author": [
+        "author-142",
+        "author-154",
+        "author-123",
+        "author-155"
+      ],
+      "venue": null,
+      "year": 1998,
+      "title": "Gradient-based learning applied to document recognition",
+      "source": "Yann LeCun, L\u00e9on Bottou, Yoshua Bengio, Patrick Haffner. \"Gradient-based learning applied to document recognition,\" None, 1998.",
+      "doi": "https://doi.org/10.1109/5.726791",
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    },
+    {
+      "id": "citation-53",
+      "cite_number": 52,
+      "author": [
+        "author-51",
+        "author-156",
+        "author-120"
+      ],
+      "venue": "venue-9",
+      "year": 1989,
+      "title": "TRAFFIC: Recognizing Objects Using Hierarchical Reference Frame Transformations",
+      "source": "R. Zemel, M. Mozer, Geoffrey E. Hinton. \"TRAFFIC: Recognizing Objects Using Hierarchical Reference Frame Transformations,\" venue-9, 1989.",
+      "doi": null,
+      "hop": 2,
+      "cite_positions": [],
+      "has_issue": false,
+      "citation_graph": []
+    }
+  ]
+}

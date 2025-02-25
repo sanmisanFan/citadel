@@ -1,0 +1,395 @@
+{
+  "venues": [
+    {
+      "id": "venue-1",
+      "type": "Unknown",
+      "raw_name": [
+        "Proc. Advances Neural Inf. Process. Syst."
+      ],
+      "short": "Advances i",
+      "standardized_name": "Advances in Neural Information Processing Systems",
+      "year": [
+        "2012",
+        "2019"
+      ],
+      "author": [
+        "author-3",
+        "author-18",
+        "author-20",
+        "author-17",
+        "author-19",
+        "author-1",
+        "author-14",
+        "author-16",
+        "author-2",
+        "author-15"
+      ],
+      "citation": [
+        "citation-5",
+        "citation-1"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-2",
+      "type": "Unknown",
+      "raw_name": [
+        "Proc. IEEE Conf. Comput. Vis. Pattern Recognit."
+      ],
+      "short": "IEEE Confe",
+      "standardized_name": "IEEE Conference on Computer Vision and Pattern Recognition",
+      "year": [
+        "2016"
+      ],
+      "author": [
+        "author-4",
+        "author-5",
+        "author-7",
+        "author-6"
+      ],
+      "citation": [
+        "citation-2"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-3",
+      "type": "Unknown",
+      "raw_name": [
+        "Proc. 34th Int. Conf. Mach. Learn."
+      ],
+      "short": "Internatio",
+      "standardized_name": "International Conference on Machine Learning",
+      "year": [
+        "2010",
+        "2017",
+        "2016",
+        "2009",
+        "2015"
+      ],
+      "author": [
+        "author-98",
+        "author-134",
+        "author-27",
+        "author-80",
+        "author-99",
+        "author-58",
+        "author-78",
+        "author-135",
+        "author-57",
+        "author-10",
+        "author-9",
+        "author-30",
+        "author-120",
+        "author-79",
+        "author-136",
+        "author-8",
+        "author-133",
+        "author-119",
+        "author-52"
+      ],
+      "citation": [
+        "citation-3",
+        "citation-39",
+        "citation-44",
+        "citation-25",
+        "citation-23",
+        "citation-17"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-4",
+      "type": "Unknown",
+      "raw_name": [
+        "Proc. Int. Conf. Artif. Neural Netw."
+      ],
+      "short": "Internatio",
+      "standardized_name": "International Conference on Artificial Neural Networks",
+      "year": [
+        "2011"
+      ],
+      "author": [
+        "author-3",
+        "author-21",
+        "author-22"
+      ],
+      "citation": [
+        "citation-6"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-5",
+      "type": "Unknown",
+      "raw_name": [],
+      "short": "Adaptive A",
+      "standardized_name": "Adaptive Agents and Multi-Agent Systems",
+      "year": [
+        "2018"
+      ],
+      "author": [
+        "author-23",
+        "author-24"
+      ],
+      "citation": [
+        "citation-7"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-6",
+      "type": "Unknown",
+      "raw_name": [],
+      "short": "arXiv.org",
+      "standardized_name": "arXiv.org",
+      "year": [
+        "2017",
+        "2016",
+        "2018"
+      ],
+      "author": [
+        "author-76",
+        "author-77",
+        "author-41",
+        "author-25",
+        "author-27",
+        "author-43",
+        "author-75",
+        "author-70",
+        "author-26",
+        "author-44",
+        "author-42",
+        "author-72"
+      ],
+      "citation": [
+        "citation-8",
+        "citation-12",
+        "citation-22"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-7",
+      "type": "Unknown",
+      "raw_name": [],
+      "short": "Internatio",
+      "standardized_name": "International Conference on Learning Representations",
+      "year": [
+        "2017",
+        "2016",
+        "2018"
+      ],
+      "author": [
+        "author-74",
+        "author-30",
+        "author-29",
+        "author-31",
+        "author-28",
+        "author-32",
+        "author-73",
+        "author-40",
+        "author-39"
+      ],
+      "citation": [
+        "citation-9",
+        "citation-21",
+        "citation-11"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-8",
+      "type": "Unknown",
+      "raw_name": [],
+      "short": "2018 IEEE/",
+      "standardized_name": "2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "year": [
+        "2017"
+      ],
+      "author": [
+        "author-38",
+        "author-35",
+        "author-34",
+        "author-37",
+        "author-33",
+        "author-36"
+      ],
+      "citation": [
+        "citation-10"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-9",
+      "type": "Unknown",
+      "raw_name": [],
+      "short": "Neural Inf",
+      "standardized_name": "Neural Information Processing Systems",
+      "year": [
+        "2017",
+        "2016",
+        "1989"
+      ],
+      "author": [
+        "author-156",
+        "author-65",
+        "author-120",
+        "author-49",
+        "author-51",
+        "author-67",
+        "author-71",
+        "author-69",
+        "author-70",
+        "author-66",
+        "author-64",
+        "author-50",
+        "author-72",
+        "author-68",
+        "author-61",
+        "author-62",
+        "author-63"
+      ],
+      "citation": [
+        "citation-19",
+        "citation-20",
+        "citation-53",
+        "citation-14"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-10",
+      "type": "Unknown",
+      "raw_name": [],
+      "short": "Nature",
+      "standardized_name": "Nature",
+      "year": [
+        "2015"
+      ],
+      "author": [
+        "author-93",
+        "author-94",
+        "author-84",
+        "author-81",
+        "author-90",
+        "author-97",
+        "author-88",
+        "author-85",
+        "author-95",
+        "author-83",
+        "author-82",
+        "author-96",
+        "author-86",
+        "author-92",
+        "author-87",
+        "author-89",
+        "author-71",
+        "author-72",
+        "author-91"
+      ],
+      "citation": [
+        "citation-24"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-11",
+      "type": "Unknown",
+      "raw_name": [],
+      "short": "Body of Kn",
+      "standardized_name": "Body of Knowledge for Modeling and Simulation",
+      "year": [
+        "2014"
+      ],
+      "author": [
+        "author-100",
+        "author-102",
+        "author-101"
+      ],
+      "citation": [
+        "citation-26"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-12",
+      "type": "Unknown",
+      "raw_name": [],
+      "short": "[Proceedin",
+      "standardized_name": "[Proceedings 1992] IJCNN International Joint Conference on Neural Networks",
+      "year": [
+        "1992"
+      ],
+      "author": [
+        "author-106",
+        "author-105"
+      ],
+      "citation": [
+        "citation-28"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-13",
+      "type": "Unknown",
+      "raw_name": [],
+      "short": "Machine-me",
+      "standardized_name": "Machine-mediated learning",
+      "year": [
+        "2004"
+      ],
+      "author": [
+        "author-112"
+      ],
+      "citation": [
+        "citation-34"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-14",
+      "type": "Unknown",
+      "raw_name": [],
+      "short": "Neural Com",
+      "standardized_name": "Neural Computation",
+      "year": [
+        "2010"
+      ],
+      "author": [
+        "author-121",
+        "author-120"
+      ],
+      "citation": [
+        "citation-40"
+      ],
+      "venue_graph": []
+    },
+    {
+      "id": "venue-15",
+      "type": "Unknown",
+      "raw_name": [],
+      "short": "PLoS Compu",
+      "standardized_name": "PLoS Comput. Biol.",
+      "year": [
+        "2009"
+      ],
+      "author": [
+        "author-128",
+        "author-129",
+        "author-132",
+        "author-127",
+        "author-124",
+        "author-125",
+        "author-126",
+        "author-130",
+        "author-131"
+      ],
+      "citation": [
+        "citation-42",
+        "citation-43"
+      ],
+      "venue_graph": []
+    }
+  ]
+}

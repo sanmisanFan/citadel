@@ -1,0 +1,2117 @@
+{
+  "authors": [
+    {
+      "id": "author-1",
+      "raw_name": "Alex Krizhevsky",
+      "standardized_name": "Alex Krizhevsky",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-1"
+      ],
+      "venue": [
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-2",
+      "raw_name": "Ilya Sutskever",
+      "standardized_name": "Ilya Sutskever",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-1"
+      ],
+      "venue": [
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-3",
+      "raw_name": "Geoffrey E. Hinton",
+      "standardized_name": "Geoffrey E. Hinton",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-1",
+        "citation-6"
+      ],
+      "venue": [
+        "venue-1",
+        "venue-4"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-4",
+      "raw_name": "Kaiming He",
+      "standardized_name": "Kaiming He",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0001-7318-9658",
+      "citation": [
+        "citation-2"
+      ],
+      "venue": [
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-5",
+      "raw_name": "Xiangyu Zhang",
+      "standardized_name": "Xiangyu Zhang",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0003-2138-4608",
+      "citation": [
+        "citation-2"
+      ],
+      "venue": [
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-6",
+      "raw_name": "Shaoqing Ren",
+      "standardized_name": "Shaoqing Ren",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-2"
+      ],
+      "venue": [
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-7",
+      "raw_name": "Jian Sun",
+      "standardized_name": "Jian Sun",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-6178-4166",
+      "citation": [
+        "citation-2"
+      ],
+      "venue": [
+        "venue-2"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-8",
+      "raw_name": "Chelsea Finn",
+      "standardized_name": "Chelsea Finn",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0001-6298-0874",
+      "citation": [
+        "citation-3"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-9",
+      "raw_name": "Pieter Abbeel",
+      "standardized_name": "Pieter Abbeel",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-3"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-10",
+      "raw_name": "Sergey Levine",
+      "standardized_name": "Sergey Levine",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0001-6764-2743",
+      "citation": [
+        "citation-3"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-11",
+      "raw_name": "M. A. Jamal",
+      "standardized_name": "Muhammad Abdullah Jamal",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-4"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-12",
+      "raw_name": "G.-J. Qi",
+      "standardized_name": "Guo-Jun Qi",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0003-3508-1851",
+      "citation": [
+        "citation-4"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-13",
+      "raw_name": "M. Shah",
+      "standardized_name": "M. Shah",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-4"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-14",
+      "raw_name": "Xinzhe Li",
+      "standardized_name": "Xinzhe Li",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-5547-8293",
+      "citation": [
+        "citation-5"
+      ],
+      "venue": [
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-15",
+      "raw_name": "Qianru Sun",
+      "standardized_name": "Qianru Sun",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0003-2689-317X",
+      "citation": [
+        "citation-5"
+      ],
+      "venue": [
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-16",
+      "raw_name": "Yaoyao Liu",
+      "standardized_name": "Yaoyao Liu",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-5316-3028",
+      "citation": [
+        "citation-5"
+      ],
+      "venue": [
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-17",
+      "raw_name": "Qin Zhou",
+      "standardized_name": "Qin Zhou",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-0082-1330",
+      "citation": [
+        "citation-5"
+      ],
+      "venue": [
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-18",
+      "raw_name": "Shibao Zheng",
+      "standardized_name": "Shibao Zheng",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-5"
+      ],
+      "venue": [
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-19",
+      "raw_name": "Tat\u2010Seng Chua",
+      "standardized_name": "Tat\u2010Seng Chua",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0001-6097-7807",
+      "citation": [
+        "citation-5"
+      ],
+      "venue": [
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-20",
+      "raw_name": "Bernt Schiele",
+      "standardized_name": "Bernt Schiele",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0001-9683-5237",
+      "citation": [
+        "citation-5"
+      ],
+      "venue": [
+        "venue-1"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-21",
+      "raw_name": "A. Krizhevsky",
+      "standardized_name": "A. Krizhevsky",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-6"
+      ],
+      "venue": [
+        "venue-4"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-22",
+      "raw_name": "S. D. Wang",
+      "standardized_name": "Sida I. Wang",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0003-3625-3459",
+      "citation": [
+        "citation-6"
+      ],
+      "venue": [
+        "venue-4"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-23",
+      "raw_name": "Hassam Sheikh",
+      "standardized_name": "Hassam Sheikh",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-7"
+      ],
+      "venue": [
+        "venue-5"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-24",
+      "raw_name": "Ladislau B\u00f6l\u00f6ni",
+      "standardized_name": "Ladislau B\u00f6l\u00f6ni",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-7"
+      ],
+      "venue": [
+        "venue-5"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-25",
+      "raw_name": "Alex Nichol",
+      "standardized_name": "Alex Nichol",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-8"
+      ],
+      "venue": [
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-26",
+      "raw_name": "Joshua Achiam",
+      "standardized_name": "Joshua Achiam",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-8"
+      ],
+      "venue": [
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-27",
+      "raw_name": "John Schulman",
+      "standardized_name": "John Schulman",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-8",
+        "citation-23",
+        "citation-25"
+      ],
+      "venue": [
+        "venue-6",
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-28",
+      "raw_name": "Erin Grant",
+      "standardized_name": "Erin Grant",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-9"
+      ],
+      "venue": [
+        "venue-7"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-29",
+      "raw_name": "Chelsea Finn",
+      "standardized_name": "Chelsea Finn",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-9"
+      ],
+      "venue": [
+        "venue-7"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-30",
+      "raw_name": "S. Levine",
+      "standardized_name": "S. Levine",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-9",
+        "citation-25"
+      ],
+      "venue": [
+        "venue-7",
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-31",
+      "raw_name": "Trevor Darrell",
+      "standardized_name": "Trevor Darrell",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-9"
+      ],
+      "venue": [
+        "venue-7"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-32",
+      "raw_name": "T. Griffiths",
+      "standardized_name": "T. Griffiths",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-9"
+      ],
+      "venue": [
+        "venue-7"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-33",
+      "raw_name": "Flood Sung",
+      "standardized_name": "Flood Sung",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-10"
+      ],
+      "venue": [
+        "venue-8"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-34",
+      "raw_name": "Yongxin Yang",
+      "standardized_name": "Yongxin Yang",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-10"
+      ],
+      "venue": [
+        "venue-8"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-35",
+      "raw_name": "Li Zhang",
+      "standardized_name": "Li Zhang",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-10"
+      ],
+      "venue": [
+        "venue-8"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-36",
+      "raw_name": "T. Xiang",
+      "standardized_name": "T. Xiang",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-10"
+      ],
+      "venue": [
+        "venue-8"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-37",
+      "raw_name": "Philip H. S. Torr",
+      "standardized_name": "Philip H. S. Torr",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-10"
+      ],
+      "venue": [
+        "venue-8"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-38",
+      "raw_name": "Timothy M. Hospedales",
+      "standardized_name": "Timothy M. Hospedales",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-10"
+      ],
+      "venue": [
+        "venue-8"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-39",
+      "raw_name": "Victor Garcia Satorras",
+      "standardized_name": "Victor Garcia Satorras",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-11"
+      ],
+      "venue": [
+        "venue-7"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-40",
+      "raw_name": "Joan Bruna",
+      "standardized_name": "Joan Bruna",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-11"
+      ],
+      "venue": [
+        "venue-7"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-41",
+      "raw_name": "Zhenguo Li",
+      "standardized_name": "Zhenguo Li",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-12"
+      ],
+      "venue": [
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-42",
+      "raw_name": "Fengwei Zhou",
+      "standardized_name": "Fengwei Zhou",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-12"
+      ],
+      "venue": [
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-43",
+      "raw_name": "Fei Chen",
+      "standardized_name": "Fei Chen",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-12"
+      ],
+      "venue": [
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-44",
+      "raw_name": "Hang Li",
+      "standardized_name": "Hang Li",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-12"
+      ],
+      "venue": [
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-45",
+      "raw_name": "Nikhil Mishra",
+      "standardized_name": "Nikhil Mishra",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-13"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-46",
+      "raw_name": "Mostafa Rohaninejad",
+      "standardized_name": "Mostafa Rohaninejad",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-13"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-47",
+      "raw_name": "Xi Chen",
+      "standardized_name": "Xi Chen",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0001-9223-0302",
+      "citation": [
+        "citation-13"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-48",
+      "raw_name": "Pieter Abbeel",
+      "standardized_name": "Pieter Abbeel",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-13"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-49",
+      "raw_name": "Jake Snell",
+      "standardized_name": "Jake Snell",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-14"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-50",
+      "raw_name": "Kevin Swersky",
+      "standardized_name": "Kevin Swersky",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-14"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-51",
+      "raw_name": "R. Zemel",
+      "standardized_name": "R. Zemel",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-14",
+        "citation-53"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-52",
+      "raw_name": "P. Abbeel",
+      "standardized_name": "P. Abbeel",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-23",
+        "citation-25"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-53",
+      "raw_name": "\u0141ukasz Kaiser",
+      "standardized_name": "\u0141ukasz Kaiser",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0003-1092-6010",
+      "citation": [
+        "citation-16"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-54",
+      "raw_name": "Ofir Nachum",
+      "standardized_name": "Ofir Nachum",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-16"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-55",
+      "raw_name": "Aurko Roy",
+      "standardized_name": "Aurko Roy",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-16"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-56",
+      "raw_name": "Samy Bengio",
+      "standardized_name": "Samy Bengio",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-16"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-57",
+      "raw_name": "Tsendsuren Munkhdalai",
+      "standardized_name": "Tsendsuren Munkhdalai",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-17"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-58",
+      "raw_name": "Hong Yu",
+      "standardized_name": "Hong Yu",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-17"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-59",
+      "raw_name": "Sachin Ravi",
+      "standardized_name": "Sachin Ravi",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-18"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-60",
+      "raw_name": "Hugo Larochelle",
+      "standardized_name": "Hugo Larochelle",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-18"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-61",
+      "raw_name": "Marcin Andrychowicz",
+      "standardized_name": "Marcin Andrychowicz",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-19"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-62",
+      "raw_name": "Misha Denil",
+      "standardized_name": "Misha Denil",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-19"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-63",
+      "raw_name": "Sergio Gomez Colmenarejo",
+      "standardized_name": "Sergio Gomez Colmenarejo",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-19"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-64",
+      "raw_name": "Matthew W. Hoffman",
+      "standardized_name": "Matthew W. Hoffman",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-19"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-65",
+      "raw_name": "David Pfau",
+      "standardized_name": "David Pfau",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-19"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-66",
+      "raw_name": "T. Schaul",
+      "standardized_name": "T. Schaul",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-19"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-67",
+      "raw_name": "Nando de Freitas",
+      "standardized_name": "Nando de Freitas",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-19"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-68",
+      "raw_name": "O. Vinyals",
+      "standardized_name": "O. Vinyals",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-20"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-69",
+      "raw_name": "C. Blundell",
+      "standardized_name": "C. Blundell",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-20"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-70",
+      "raw_name": "T. Lillicrap",
+      "standardized_name": "T. Lillicrap",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-20",
+        "citation-22"
+      ],
+      "venue": [
+        "venue-9",
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-71",
+      "raw_name": "K. Kavukcuoglu",
+      "standardized_name": "K. Kavukcuoglu",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-20",
+        "citation-24"
+      ],
+      "venue": [
+        "venue-9",
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-72",
+      "raw_name": "D. Wierstra",
+      "standardized_name": "D. Wierstra",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-20",
+        "citation-22",
+        "citation-24"
+      ],
+      "venue": [
+        "venue-9",
+        "venue-6",
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-73",
+      "raw_name": "Harrison Edwards",
+      "standardized_name": "Harrison Edwards",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-21"
+      ],
+      "venue": [
+        "venue-7"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-74",
+      "raw_name": "A. Storkey",
+      "standardized_name": "A. Storkey",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-21"
+      ],
+      "venue": [
+        "venue-7"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-75",
+      "raw_name": "Adam Santoro",
+      "standardized_name": "Adam Santoro",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-22"
+      ],
+      "venue": [
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-76",
+      "raw_name": "Sergey Bartunov",
+      "standardized_name": "Sergey Bartunov",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-22"
+      ],
+      "venue": [
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-77",
+      "raw_name": "M. Botvinick",
+      "standardized_name": "M. Botvinick",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-22"
+      ],
+      "venue": [
+        "venue-6"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-78",
+      "raw_name": "Yan Duan",
+      "standardized_name": "Yan Duan",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-23"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-79",
+      "raw_name": "Xi Chen",
+      "standardized_name": "Xi Chen",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-23"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-80",
+      "raw_name": "Rein Houthooft",
+      "standardized_name": "Rein Houthooft",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-23"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-81",
+      "raw_name": "Volodymyr Mnih",
+      "standardized_name": "Volodymyr Mnih",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-82",
+      "raw_name": "David Silver",
+      "standardized_name": "David Silver",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-83",
+      "raw_name": "Andrei A. Rusu",
+      "standardized_name": "Andrei A. Rusu",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-84",
+      "raw_name": "J. Veness",
+      "standardized_name": "J. Veness",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-85",
+      "raw_name": "Marc G. Bellemare",
+      "standardized_name": "Marc G. Bellemare",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-86",
+      "raw_name": "Alex Graves",
+      "standardized_name": "Alex Graves",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-87",
+      "raw_name": "Martin A. Riedmiller",
+      "standardized_name": "Martin A. Riedmiller",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-88",
+      "raw_name": "A. Fidjeland",
+      "standardized_name": "A. Fidjeland",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-89",
+      "raw_name": "Georg Ostrovski",
+      "standardized_name": "Georg Ostrovski",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-90",
+      "raw_name": "Stig Petersen",
+      "standardized_name": "Stig Petersen",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-91",
+      "raw_name": "Charlie Beattie",
+      "standardized_name": "Charlie Beattie",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-92",
+      "raw_name": "Amir Sadik",
+      "standardized_name": "Amir Sadik",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-93",
+      "raw_name": "Ioannis Antonoglou",
+      "standardized_name": "Ioannis Antonoglou",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-94",
+      "raw_name": "Helen King",
+      "standardized_name": "Helen King",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-95",
+      "raw_name": "D. Kumaran",
+      "standardized_name": "D. Kumaran",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-96",
+      "raw_name": "S. Legg",
+      "standardized_name": "S. Legg",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-97",
+      "raw_name": "D. Hassabis",
+      "standardized_name": "D. Hassabis",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-24"
+      ],
+      "venue": [
+        "venue-10"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-98",
+      "raw_name": "Michael I. Jordan",
+      "standardized_name": "Michael I. Jordan",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-25"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-99",
+      "raw_name": "Philipp Moritz",
+      "standardized_name": "Philipp Moritz",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-25"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-100",
+      "raw_name": "Tuncer \u00d6ren",
+      "standardized_name": "Tuncer \u00d6ren",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-26"
+      ],
+      "venue": [
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-101",
+      "raw_name": "Bernard P. Zeigler",
+      "standardized_name": "Bernard P. Zeigler",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-26"
+      ],
+      "venue": [
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-102",
+      "raw_name": "T. Pawletta",
+      "standardized_name": "T. Pawletta",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-26"
+      ],
+      "venue": [
+        "venue-11"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-103",
+      "raw_name": "J. Foster",
+      "standardized_name": "J. Foster",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-27"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-104",
+      "raw_name": "Efe A. Ok",
+      "standardized_name": "Efe A. Ok",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-27"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-105",
+      "raw_name": "D. Naik",
+      "standardized_name": "D. Naik",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-28"
+      ],
+      "venue": [
+        "venue-12"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-106",
+      "raw_name": "R. Mammone",
+      "standardized_name": "R. Mammone",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-28"
+      ],
+      "venue": [
+        "venue-12"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-107",
+      "raw_name": "P. Allison",
+      "standardized_name": "P. Allison",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-29"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-108",
+      "raw_name": "W. Silver",
+      "standardized_name": "W. Silver",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-30"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-109",
+      "raw_name": "Kyle Duffie",
+      "standardized_name": "Kyle Duffie",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-31"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-110",
+      "raw_name": "Liyang Jiang",
+      "standardized_name": "Liyang Jiang",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-32"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-111",
+      "raw_name": "Gregory R. Koch",
+      "standardized_name": "Gregory R. Koch",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-33"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-112",
+      "raw_name": "Ronald J. Williams",
+      "standardized_name": "Ronald J. Williams",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-34"
+      ],
+      "venue": [
+        "venue-13"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-113",
+      "raw_name": "F. Bourguignon",
+      "standardized_name": "F. Bourguignon",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-35"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-114",
+      "raw_name": "J\u00fcrgen Schmidhuber",
+      "standardized_name": "J\u00fcrgen Schmidhuber",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-36"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-115",
+      "raw_name": "F. Cowell",
+      "standardized_name": "F. Cowell",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-37"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-116",
+      "raw_name": "M. H. Hoyle",
+      "standardized_name": "M. H. Hoyle",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-38"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-117",
+      "raw_name": "E. Malinvaud",
+      "standardized_name": "E. Malinvaud",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-38"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-118",
+      "raw_name": "Mrs A. Silvey",
+      "standardized_name": "Mrs A. Silvey",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-38"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-119",
+      "raw_name": "Vinod Nair",
+      "standardized_name": "Vinod Nair",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-39"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-120",
+      "raw_name": "Geoffrey E. Hinton",
+      "standardized_name": "Geoffrey E. Hinton",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-39",
+        "citation-40",
+        "citation-53"
+      ],
+      "venue": [
+        "venue-3",
+        "venue-14",
+        "venue-9"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-121",
+      "raw_name": "R. Memisevic",
+      "standardized_name": "R. Memisevic",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-40"
+      ],
+      "venue": [
+        "venue-14"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-122",
+      "raw_name": "Xavier Glorot",
+      "standardized_name": "Xavier Glorot",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-6729-2189",
+      "citation": [
+        "citation-41"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-123",
+      "raw_name": "Yoshua Bengio",
+      "standardized_name": "Yoshua Bengio",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-9322-3515",
+      "citation": [
+        "citation-41",
+        "citation-52"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-124",
+      "raw_name": "S. Sands",
+      "standardized_name": "S. Sands",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-42"
+      ],
+      "venue": [
+        "venue-15"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-125",
+      "raw_name": "B. Edwards",
+      "standardized_name": "B. Edwards",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-42"
+      ],
+      "venue": [
+        "venue-15"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-126",
+      "raw_name": "V. J. Kelly",
+      "standardized_name": "V. J. Kelly",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-42"
+      ],
+      "venue": [
+        "venue-15"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-127",
+      "raw_name": "M. Davidson",
+      "standardized_name": "M. Davidson",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-42"
+      ],
+      "venue": [
+        "venue-15"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-128",
+      "raw_name": "M. Wilkinson",
+      "standardized_name": "M. Wilkinson",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-42"
+      ],
+      "venue": [
+        "venue-15"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-129",
+      "raw_name": "P. Berger",
+      "standardized_name": "P. Berger",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-42"
+      ],
+      "venue": [
+        "venue-15"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-130",
+      "raw_name": "P. Berkes",
+      "standardized_name": "P. Berkes",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-43"
+      ],
+      "venue": [
+        "venue-15"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-131",
+      "raw_name": "Richard E. Turner",
+      "standardized_name": "Richard E. Turner",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-43"
+      ],
+      "venue": [
+        "venue-15"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-132",
+      "raw_name": "M. Sahani",
+      "standardized_name": "M. Sahani",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-43"
+      ],
+      "venue": [
+        "venue-15"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-133",
+      "raw_name": "Honglak Lee",
+      "standardized_name": "Honglak Lee",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-44"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-134",
+      "raw_name": "R. Grosse",
+      "standardized_name": "R. Grosse",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-44"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-135",
+      "raw_name": "R. Ranganath",
+      "standardized_name": "R. Ranganath",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-44"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-136",
+      "raw_name": "A. Ng",
+      "standardized_name": "A. Ng",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-44"
+      ],
+      "venue": [
+        "venue-3"
+      ],
+      "author_graph": []
+    },
+    {
+      "id": "author-137",
+      "raw_name": "Denis G. Pelli",
+      "standardized_name": "Denis G. Pelli",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0001-7100-5659",
+      "citation": [
+        "citation-45"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-138",
+      "raw_name": "Katharine A. Tillman",
+      "standardized_name": "Katharine A. Tillman",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0001-9440-7239",
+      "citation": [
+        "citation-45"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-139",
+      "raw_name": "Marc\u2019Aurelio Ranzato",
+      "standardized_name": "Marc\u2019Aurelio Ranzato",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-46"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-140",
+      "raw_name": "Fu Jie Huang",
+      "standardized_name": "Fu Jie Huang",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-46"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-141",
+      "raw_name": "Y-Lan Boureau",
+      "standardized_name": "Y-Lan Boureau",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0009-0008-3990-5778",
+      "citation": [
+        "citation-46"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-142",
+      "raw_name": "Yann LeCun",
+      "standardized_name": "Yann LeCun",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-46",
+        "citation-52"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-143",
+      "raw_name": "Rodrigo Quian Quiroga",
+      "standardized_name": "Rodrigo Quian Quiroga",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0001-6534-3993",
+      "citation": [
+        "citation-47"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-144",
+      "raw_name": "Leila Reddy",
+      "standardized_name": "Leila Reddy",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-7078-1055",
+      "citation": [
+        "citation-47"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-145",
+      "raw_name": "Gabriel Kreiman",
+      "standardized_name": "Gabriel Kreiman",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0003-3505-8475",
+      "citation": [
+        "citation-47"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-146",
+      "raw_name": "Christof Koch",
+      "standardized_name": "Christof Koch",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0001-6482-8067",
+      "citation": [
+        "citation-47"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-147",
+      "raw_name": "Itzhak Fried",
+      "standardized_name": "Itzhak Fried",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-5962-2678",
+      "citation": [
+        "citation-47"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-148",
+      "raw_name": "Maximilian Riesenhuber",
+      "standardized_name": "Maximilian Riesenhuber",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-5744-0408",
+      "citation": [
+        "citation-48"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-149",
+      "raw_name": "Tomaso Poggio",
+      "standardized_name": "Tomaso Poggio",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-3944-0455",
+      "citation": [
+        "citation-48"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-150",
+      "raw_name": "David Lowe",
+      "standardized_name": "David Lowe",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0003-3332-483X",
+      "citation": [
+        "citation-49"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-151",
+      "raw_name": "William T. Freeman",
+      "standardized_name": "William T. Freeman",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-2231-7995",
+      "citation": [
+        "citation-50"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-152",
+      "raw_name": "Edward H. Adelson",
+      "standardized_name": "Edward H. Adelson",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-50"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-153",
+      "raw_name": "Geoffrey F. Hinton",
+      "standardized_name": "Geoffrey F. Hinton",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-51"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-154",
+      "raw_name": "L\u00e9on Bottou",
+      "standardized_name": "L\u00e9on Bottou",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-9894-8128",
+      "citation": [
+        "citation-52"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-155",
+      "raw_name": "Patrick Haffner",
+      "standardized_name": "Patrick Haffner",
+      "openalex_link": null,
+      "orcid": "https://orcid.org/0000-0002-2319-5109",
+      "citation": [
+        "citation-52"
+      ],
+      "venue": [],
+      "author_graph": []
+    },
+    {
+      "id": "author-156",
+      "raw_name": "M. Mozer",
+      "standardized_name": "M. Mozer",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": [
+        "citation-53"
+      ],
+      "venue": [
+        "venue-9"
+      ],
+      "author_graph": []
+    }
+  ]
+}
