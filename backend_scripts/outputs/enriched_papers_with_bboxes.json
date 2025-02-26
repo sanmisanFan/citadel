@@ -1,6 +1,6 @@
 [
   {
-    "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+    "title": "ImageNet classification with deep convolutional neural networks",
     "authors": [
       "author-1",
       "author-2",
@@ -9,133 +9,25 @@
     "year": 2012,
     "venue": "venue-1",
     "raw_venue": "Proc. Advances Neural Inf. Process. Syst.",
-    "citation_count": 0,
+    "citation_count": 115913,
     "fields_of_study": [
-      {
-        "id": "https://openalex.org/C188441871",
-        "wikidata": "https://www.wikidata.org/wiki/Q7554146",
-        "display_name": "Softmax function",
-        "level": 3,
-        "score": 0.88170564
-      },
-      {
-        "id": "https://openalex.org/C81363708",
-        "wikidata": "https://www.wikidata.org/wiki/Q17084460",
-        "display_name": "Convolutional neural network",
-        "level": 2,
-        "score": 0.8117933
-      },
-      {
-        "id": "https://openalex.org/C41008148",
-        "wikidata": "https://www.wikidata.org/wiki/Q21198",
-        "display_name": "Computer science",
-        "level": 0,
-        "score": 0.789114
-      },
-      {
-        "id": "https://openalex.org/C70437156",
-        "wikidata": "https://www.wikidata.org/wiki/Q7228652",
-        "display_name": "Pooling",
-        "level": 2,
-        "score": 0.68981254
-      },
-      {
-        "id": "https://openalex.org/C2776145597",
-        "wikidata": "https://www.wikidata.org/wiki/Q25339462",
-        "display_name": "Dropout (neural networks)",
-        "level": 2,
-        "score": 0.62921965
-      },
-      {
-        "id": "https://openalex.org/C154945302",
-        "wikidata": "https://www.wikidata.org/wiki/Q11660",
-        "display_name": "Artificial intelligence",
-        "level": 1,
-        "score": 0.61589855
-      },
-      {
-        "id": "https://openalex.org/C45347329",
-        "wikidata": "https://www.wikidata.org/wiki/Q5166604",
-        "display_name": "Convolution (computer science)",
-        "level": 3,
-        "score": 0.6064652
-      },
-      {
-        "id": "https://openalex.org/C2776135515",
-        "wikidata": "https://www.wikidata.org/wiki/Q17143721",
-        "display_name": "Regularization (linguistics)",
-        "level": 2,
-        "score": 0.5937029
-      },
-      {
-        "id": "https://openalex.org/C153180895",
-        "wikidata": "https://www.wikidata.org/wiki/Q7148389",
-        "display_name": "Pattern recognition (psychology)",
-        "level": 2,
-        "score": 0.58283216
-      },
-      {
-        "id": "https://openalex.org/C2984842247",
-        "wikidata": "https://www.wikidata.org/wiki/Q197536",
-        "display_name": "Deep neural networks",
-        "level": 3,
-        "score": 0.48869804
-      },
-      {
-        "id": "https://openalex.org/C40969351",
-        "wikidata": "https://www.wikidata.org/wiki/Q3516228",
-        "display_name": "Word error rate",
-        "level": 2,
-        "score": 0.45401564
-      },
-      {
-        "id": "https://openalex.org/C136886441",
-        "wikidata": "https://www.wikidata.org/wiki/Q926129",
-        "display_name": "Normalization (sociology)",
-        "level": 2,
-        "score": 0.44189316
-      },
-      {
-        "id": "https://openalex.org/C50644808",
-        "wikidata": "https://www.wikidata.org/wiki/Q192776",
-        "display_name": "Artificial neural network",
-        "level": 2,
-        "score": 0.44072217
-      },
-      {
-        "id": "https://openalex.org/C119857082",
-        "wikidata": "https://www.wikidata.org/wiki/Q2539",
-        "display_name": "Machine learning",
-        "level": 1,
-        "score": 0.3099594
-      },
-      {
-        "id": "https://openalex.org/C144024400",
-        "wikidata": "https://www.wikidata.org/wiki/Q21201",
-        "display_name": "Sociology",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C19165224",
-        "wikidata": "https://www.wikidata.org/wiki/Q23404",
-        "display_name": "Anthropology",
-        "level": 1,
-        "score": 0.0
-      }
+      "Computer Science"
     ],
     "external_ids": {
-      "OpenAlex": "https://openalex.org/W2163605009"
+      "MAG": "2618530766",
+      "DBLP": "conf/nips/KrizhevskySH12",
+      "DOI": "10.1145/3065386",
+      "CorpusId": 195908774
     },
-    "semantic_scholar_id": null,
+    "semantic_scholar_id": "abd1c342495432171beb7ca8fd9551ef13cbd0ff",
     "arxiv_id": null,
-    "doi": null,
+    "doi": "10.1145/3065386",
     "ref_id": 1,
     "reference_mentions": [
       {
         "text": "THIS paper aims at a comprehensive survey of recent progresses on unsupervised and semi-supervised methods addressing the challenges of training models with a small number or none of labeled data when a large volume of unlabeled data are available. The success of deep learning often hinges on the availability of a large number of labeled data, where millions of images are labeled to train the deep neural networks [1], [2] to enable these models to be on par with or even surpass the human performances.",
-        "relevance_score": 6,
-        "assessment": "Score: 6\nExplanation: The text excerpt uses citation [2] as a general background reference to support the statement about the success of deep learning being contingent on the availability of large labeled datasets. The cited paper's focus on a deep residual learning framework that achieves high accuracy in image recognition through innovative training methods indirectly supports the broader discussion on the importance of advanced models in handling large datasets. However, the excerpt does not delve into the specific methods or results of the paper, such as the use of residual mappings or the framework's performance on ImageNet and COCO, limiting the relevance to a more general context rather than a detailed discussion.",
+        "relevance_score": 7,
+        "assessment": "Score: 7\nExplanation: The mention of the cited paper [2] in the text excerpt is an important contextual reference that significantly influences the discussion about the challenges and advancements in training deep neural networks with limited labeled data. The paper's focus on a deep residual learning framework that enhances the optimization and accuracy of deep neural networks directly supports the excerpt's discussion on the necessity of innovative methods to achieve high performance in deep learning models. The mention of achieving higher accuracy and addressing optimization difficulties with residual networks (ResNets) is particularly relevant to the excerpt's theme of overcoming the challenges associated with training models with limited labeled data.",
         "page": 1,
         "text_bbox": {
           "height": 0.07174424886461456,
@@ -158,19 +50,19 @@
       {
         "text": "Although a solid theory is still lacking, it is thought that both equivalence and invariance to image translations play a critical role in the success of CNNs, particularly for supervised classification tasks [1], [6]. A typical Convolutional Neural Network (CNN) consists of two parts: the feature maps of input images through multiple convolutional layers, and the classifier of fully connected layers mapping the feature maps to the target labels.",
         "relevance_score": 4,
-        "assessment": "Score: 4\nExplanation: The mention of the cited paper [6] in the text excerpt provides general background information about advancements in neural networks, specifically in the context of object recognition and handling variations in position, orientation, scale, and lighting, which are crucial for the success of CNNs in supervised classification tasks. However, the excerpt does not delve into the detailed methods or results of the paper, such as the specific workings of capsules or their comparison to convolutional pools, making the reference more of a general background mention than a direct discussion of the paper's content.",
+        "assessment": "Score: 4\nExplanation: The mention of the cited paper [6] in the provided text excerpt offers general background information about the role of equivalence and invariance in the success of CNNs, particularly for supervised classification tasks. While the cited paper discusses capsules in neural networks and their advantages over traditional methods in handling variations in position, orientation, scale, and lighting, which indirectly relates to the concept of invariance, the direct connection to the specific mechanisms of CNNs mentioned in the excerpt is not explicitly made. The relevance is therefore moderate, as the paper's focus on capsules provides a tangential rather than a direct insight into the discussion on equivalence and invariance in CNNs.",
         "page": null,
         "text_bbox": null,
         "citations": []
       },
       {
-        "text": "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation \u00e2\u20ac\u201c without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
+        "text": "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation \u2013 without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
         "relevance_score": 7,
-        "assessment": "Score: 7\nExplanation: The mention of Hinton et al. [6] in the provided text excerpt is an important contextual reference that significantly influences the discussion on learning Transformation-Equivariance Representations (TER). The cited paper's focus on capsules in neural networks, which are designed to handle variations in position, orientation, scale, and lighting, directly relates to the concept of TER by demonstrating an advanced method for recognizing objects through their parts and predicting complex transformations. This connection is substantive as it provides a foundational basis for understanding the shift from transformation invariance to transformation equivariance in neural network design, which is central to the excerpt's discussion.",
+        "assessment": "Score: 7\nExplanation: The mention of Hinton et al. [6] in the provided text excerpt is an important contextual reference that significantly influences the discussion on learning Transformation-Equivariance Representations (TER). The cited paper's focus on capsules in neural networks, which are designed to handle variations in position, orientation, scale, and lighting, directly relates to the concept of TER by demonstrating an advanced method for recognizing objects through their parts and predicting complex transformations. This connection is substantive because it underpins the discussion on the evolution of approaches to achieving transformation invariance or equivariance in neural network models, thus significantly contributing to the overarching narrative on supervised and unsupervised model training.",
         "page": 4,
         "text_bbox": {
-          "height": 0.027187944630789475,
-          "width": 0.4444565305600457,
+          "height": 0.14607844301305076,
+          "width": 0.44445663861919427,
           "x": 0.04637157099956117,
           "y": 0.2691970079254356
         },
@@ -187,9 +79,9 @@
         ]
       },
       {
-        "text": "Thus, it is a natural choice to adopt the transformation equivariance as the criterion to train an unsupervised representation, hoping it could be generalizable to unseen tasks without knowledge their labels. This is contrary to the criterion of transformation invariance that tends to tailor the learned representations more specialized to the labels of given tasks. Indeed, it is straightforward to see that the feature maps generated through convolutional layers equivary with the translations \u00e2\u20ac\u201c the feature maps of translated images are also shifted in the same way subject to edge padding effect [1]. This inspires many works to generalize this idea to consider more types of transformations beyond translations (e.g., general image warping and projective transformations) [23]. This can learn a good representation of images by encoding their intrinsic visual structures that equivary with many transformations.",
+        "text": "Thus, it is a natural choice to adopt the transformation equivariance as the criterion to train an unsupervised representation, hoping it could be generalizable to unseen tasks without knowledge their labels. This is contrary to the criterion of transformation invariance that tends to tailor the learned representations more specialized to the labels of given tasks. Indeed, it is straightforward to see that the feature maps generated through convolutional layers equivary with the translations \u2013 the feature maps of translated images are also shifted in the same way subject to edge padding effect [1]. This inspires many works to generalize this idea to consider more types of transformations beyond translations (e.g., general image warping and projective transformations) [23]. This can learn a good representation of images by encoding their intrinsic visual structures that equivary with many transformations.",
         "relevance_score": 4,
-        "assessment": "Score: 4\nExplanation: The mention of the cited paper [1] in the text excerpt provides general background information about the behavior of feature maps in convolutional neural networks (CNNs) with respect to transformations, specifically translations. Although the summary of the cited paper focuses on the development and optimization of a CNN, including techniques to improve performance and reduce overfitting, it does not directly discuss the equivariance of feature maps to translations. The connection is tangential, as both the excerpt and the paper deal with properties and behaviors of CNNs, but the specific point about equivariance to translations is not directly covered in the paper summary.",
+        "assessment": "Score: 4\nExplanation: The text excerpt uses the cited paper [1] to illustrate the concept of transformation equivariance in convolutional neural networks, specifically mentioning the behavior of feature maps during translations. While the summary of the cited paper focuses on the development and optimization of a convolutional neural network, including aspects like network architecture and data augmentation, it does not explicitly discuss transformation equivariance. The connection is indirect, as the excerpt draws on the general behavior of convolutional layers, which is a foundational aspect of the cited work's focus on network architecture and performance optimization. Thus, the citation provides general background information relevant to the discussion but does not engage directly with the specific findings or methods of the paper.",
         "page": 4,
         "text_bbox": {
           "height": 0.22033902262855334,
@@ -210,9 +102,9 @@
         ]
       },
       {
-        "text": "At first glance, it looks like a dilemma to enforce two criteria simultaneously, but they actually co-exist well in the celebrated convolutional neural networks underpinning the great success of deep learning\u00e2\u20ac\u201dthe convolutional feature maps equivary to the translations while the output predictions should be invariant under various transformations [1]. The recent efforts [23] on generalizing translation equivariance to generic transformations also present great potentials of training more powerful representations and discriminative models atop to address small data challenges [7], [16], [23].",
+        "text": "At first glance, it looks like a dilemma to enforce two criteria simultaneously, but they actually co-exist well in the celebrated convolutional neural networks underpinning the great success of deep learning\u2014the convolutional feature maps equivary to the translations while the output predictions should be invariant under various transformations [1]. The recent efforts [23] on generalizing translation equivariance to generic transformations also present great potentials of training more powerful representations and discriminative models atop to address small data challenges [7], [16], [23].",
         "relevance_score": 7,
-        "assessment": "Score: 7\nExplanation: The mention of the cited paper [1] in the text excerpt is an important contextual reference that significantly influences the discussion about the effectiveness of convolutional neural networks (CNNs) in deep learning, particularly in achieving translation equivariance and output prediction invariance under various transformations. The summary of [1] highlights the development and optimization of a deep CNN, including techniques that contribute to its success, such as non-saturating neurons and dropout regularization, which are relevant to the discussion of training powerful representations and discriminative models. The direct relevance comes from the application of CNNs to address challenges in object recognition, aligning with the excerpt's focus on the co-existence of equivariance and invariance in CNNs, thus justifying a score of 7.",
+        "assessment": "Score: 7\nExplanation: The mention of the cited paper [1] in the text excerpt is an important contextual reference that significantly influences the discussion about the effectiveness of convolutional neural networks (CNNs) and their architecture's ability to handle translation equivariance and invariance under various transformations. The summary of [1] details the development and optimization of a deep CNN, including techniques that directly relate to the excerpt's focus on convolutional feature maps and output predictions' behavior under transformations. The mention of techniques such as data augmentation, which combats overfitting and is a form of handling transformations, aligns well with the excerpt's discussion, making the citation highly relevant but not a detailed, direct discussion of methods and results.",
         "page": 14,
         "text_bbox": {
           "height": 0.07174432802002632,
@@ -234,8 +126,8 @@
       },
       {
         "text": "Data augmentation has become a standard preprocessing step in training deep networks since the introduction of Alexnet [1]. It aims to augment the training set with more variations through different transformations such as spatial augmentations (e.g., random crops, mirror flips, random translations), color jittering, and random noises.",
-        "relevance_score": 8,
-        "assessment": "Score: 8\nExplanation: The mention of Alexnet in the provided text excerpt is a significant contextual reference that directly ties back to the paper's content, specifically the use of data augmentation techniques to combat overfitting in deep convolutional neural networks. The excerpt's focus on data augmentation as a standard preprocessing step in training deep networks is directly relevant to the paper's discussion on employing such techniques within the Alexnet architecture. This establishes a clear and influential link between the paper's methods/results and the broader discussion on the importance of data augmentation in deep learning, thereby justifying a high relevance score.",
+        "relevance_score": 7,
+        "assessment": "Score: 7\nExplanation: The mention of Alexnet in the provided text excerpt is an important contextual reference that significantly influences the discussion on the role of data augmentation in training deep networks. The summary of the cited paper indicates that data augmentation techniques were employed as part of the strategy to combat overfitting in the development of Alexnet, which aligns with the excerpt's focus on data augmentation as a standard preprocessing step since Alexnet's introduction. This connection between the paper's content on employing data augmentation techniques and the excerpt's discussion on the significance of such methods in deep learning models justifies the relevance score.",
         "page": 16,
         "text_bbox": {
           "height": 0.04204003284949588,
@@ -256,9 +148,9 @@
         ]
       },
       {
-        "text": "- [1] A. Krizhevsky, I. Sutskever, and G. E. Hinton, \"Imagenet classification with deep convolutional neural networks,\" in Proc. Advances Neural Inf. Process. Syst., 2012, pp. 1097\u00e2\u20ac\u201c1105.",
+        "text": "- [1] A. Krizhevsky, I. Sutskever, and G. E. Hinton, \"Imagenet classification with deep convolutional neural networks,\" in Proc. Advances Neural Inf. Process. Syst., 2012, pp. 1097\u20131105.",
         "relevance_score": 0,
-        "assessment": "Score: 0\nExplanation: The provided text excerpt is a reference list entry with no substantive discussion. It merely lists the publication details of the paper by A. Krizhevsky, I. Sutskever, and G. E. Hinton, without engaging with its content, methods, or results.",
+        "assessment": "Score: 0\nExplanation: The provided text excerpt is merely a reference list entry, containing only the publication details of the paper by A. Krizhevsky, I. Sutskever, and G. E. Hinton without any substantive discussion of its content, methods, or results.",
         "page": 7,
         "text_bbox": {
           "height": 0.012335836623230135,
@@ -279,171 +171,29 @@
       "author-6",
       "author-7"
     ],
-    "year": 2016,
+    "year": 2015,
     "venue": "venue-2",
     "raw_venue": "Proc. IEEE Conf. Comput. Vis. Pattern Recognit.",
-    "citation_count": 0,
+    "citation_count": 181783,
     "fields_of_study": [
-      {
-        "id": "https://openalex.org/C155512373",
-        "wikidata": "https://www.wikidata.org/wiki/Q287450",
-        "display_name": "Residual",
-        "level": 2,
-        "score": 0.91328824
-      },
-      {
-        "id": "https://openalex.org/C41008148",
-        "wikidata": "https://www.wikidata.org/wiki/Q21198",
-        "display_name": "Computer science",
-        "level": 0,
-        "score": 0.7827219
-      },
-      {
-        "id": "https://openalex.org/C21780288",
-        "wikidata": "https://www.wikidata.org/wiki/Q5139731",
-        "display_name": "Coco",
-        "level": 2,
-        "score": 0.7302752
-      },
-      {
-        "id": "https://openalex.org/C154945302",
-        "wikidata": "https://www.wikidata.org/wiki/Q11660",
-        "display_name": "Artificial intelligence",
-        "level": 1,
-        "score": 0.7211458
-      },
-      {
-        "id": "https://openalex.org/C2776151529",
-        "wikidata": "https://www.wikidata.org/wiki/Q3045304",
-        "display_name": "Object detection",
-        "level": 3,
-        "score": 0.60773295
-      },
-      {
-        "id": "https://openalex.org/C108583219",
-        "wikidata": "https://www.wikidata.org/wiki/Q197536",
-        "display_name": "Deep learning",
-        "level": 2,
-        "score": 0.57282454
-      },
-      {
-        "id": "https://openalex.org/C89600930",
-        "wikidata": "https://www.wikidata.org/wiki/Q1423946",
-        "display_name": "Segmentation",
-        "level": 2,
-        "score": 0.5636843
-      },
-      {
-        "id": "https://openalex.org/C153180895",
-        "wikidata": "https://www.wikidata.org/wiki/Q7148389",
-        "display_name": "Pattern recognition (psychology)",
-        "level": 2,
-        "score": 0.56021905
-      },
-      {
-        "id": "https://openalex.org/C177264268",
-        "wikidata": "https://www.wikidata.org/wiki/Q1514741",
-        "display_name": "Set (abstract data type)",
-        "level": 2,
-        "score": 0.4790636
-      },
-      {
-        "id": "https://openalex.org/C2779227376",
-        "wikidata": "https://www.wikidata.org/wiki/Q6505497",
-        "display_name": "Layer (electronics)",
-        "level": 2,
-        "score": 0.47214726
-      },
-      {
-        "id": "https://openalex.org/C50644808",
-        "wikidata": "https://www.wikidata.org/wiki/Q192776",
-        "display_name": "Artificial neural network",
-        "level": 2,
-        "score": 0.45602506
-      },
-      {
-        "id": "https://openalex.org/C2780451532",
-        "wikidata": "https://www.wikidata.org/wiki/Q759676",
-        "display_name": "Task (project management)",
-        "level": 2,
-        "score": 0.45123157
-      },
-      {
-        "id": "https://openalex.org/C119857082",
-        "wikidata": "https://www.wikidata.org/wiki/Q2539",
-        "display_name": "Machine learning",
-        "level": 1,
-        "score": 0.44327608
-      },
-      {
-        "id": "https://openalex.org/C2944601119",
-        "wikidata": "https://www.wikidata.org/wiki/Q43744058",
-        "display_name": "Residual neural network",
-        "level": 3,
-        "score": 0.431252
-      },
-      {
-        "id": "https://openalex.org/C2984842247",
-        "wikidata": "https://www.wikidata.org/wiki/Q197536",
-        "display_name": "Deep neural networks",
-        "level": 3,
-        "score": 0.41046202
-      },
-      {
-        "id": "https://openalex.org/C11413529",
-        "wikidata": "https://www.wikidata.org/wiki/Q8366",
-        "display_name": "Algorithm",
-        "level": 1,
-        "score": 0.11133298
-      },
-      {
-        "id": "https://openalex.org/C185592680",
-        "wikidata": "https://www.wikidata.org/wiki/Q2329",
-        "display_name": "Chemistry",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C187736073",
-        "wikidata": "https://www.wikidata.org/wiki/Q2920921",
-        "display_name": "Management",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C178790620",
-        "wikidata": "https://www.wikidata.org/wiki/Q11351",
-        "display_name": "Organic chemistry",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C162324750",
-        "wikidata": "https://www.wikidata.org/wiki/Q8134",
-        "display_name": "Economics",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C199360897",
-        "wikidata": "https://www.wikidata.org/wiki/Q9143",
-        "display_name": "Programming language",
-        "level": 1,
-        "score": 0.0
-      }
+      "Computer Science"
     ],
     "external_ids": {
-      "OpenAlex": "https://openalex.org/W2194775991"
+      "DBLP": "conf/cvpr/HeZRS16",
+      "MAG": "2949650786",
+      "ArXiv": "1512.03385",
+      "DOI": "10.1109/cvpr.2016.90",
+      "CorpusId": 206594692
     },
-    "semantic_scholar_id": null,
+    "semantic_scholar_id": "2c03df8b48bf3fa39054345bafabfeff15bfd11d",
     "arxiv_id": null,
-    "doi": "https://doi.org/10.1109/cvpr.2016.90",
+    "doi": "10.1109/cvpr.2016.90",
     "ref_id": 2,
     "reference_mentions": [
       {
         "text": "THIS paper aims at a comprehensive survey of recent progresses on unsupervised and semi-supervised methods addressing the challenges of training models with a small number or none of labeled data when a large volume of unlabeled data are available. The success of deep learning often hinges on the availability of a large number of labeled data, where millions of images are labeled to train the deep neural networks [1], [2] to enable these models to be on par with or even surpass the human performances.",
-        "relevance_score": 6,
-        "assessment": "Score: 6\nExplanation: The text excerpt uses citation [2] as a general background reference to support the statement about the success of deep learning being contingent on the availability of large labeled datasets. The cited paper's focus on a deep residual learning framework that achieves high accuracy in image recognition through innovative training methods indirectly supports the broader discussion on the importance of advanced models in handling large datasets. However, the excerpt does not delve into the specific methods or results of the paper, such as the use of residual mappings or the framework's performance on ImageNet and COCO, limiting the relevance to a more general context rather than a detailed discussion.",
+        "relevance_score": 7,
+        "assessment": "Score: 7\nExplanation: The mention of the cited paper [2] in the text excerpt is an important contextual reference that significantly influences the discussion about the challenges and advancements in training deep neural networks with limited labeled data. The paper's focus on a deep residual learning framework that enhances the optimization and accuracy of deep neural networks directly supports the excerpt's discussion on the necessity of innovative methods to achieve high performance in deep learning models. The mention of achieving higher accuracy and addressing optimization difficulties with residual networks (ResNets) is particularly relevant to the excerpt's theme of overcoming the challenges associated with training models with limited labeled data.",
         "page": 1,
         "text_bbox": {
           "height": 0.07174424886461456,
@@ -464,9 +214,9 @@
         ]
       },
       {
-        "text": "- [2] K. He, X. Zhang, S. Ren, and J. Sun, \"Deep residual learning for image recognition,\" in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2016, pp. 770\u00e2\u20ac\u201c778.",
+        "text": "- [2] K. He, X. Zhang, S. Ren, and J. Sun, \"Deep residual learning for image recognition,\" in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2016, pp. 770\u2013778.",
         "relevance_score": 0,
-        "assessment": "Score: 0\nExplanation: The provided text excerpt is merely a bibliographic reference to the paper by K. He et al., \"Deep residual learning for image recognition,\" without any substantive discussion of its content, methods, or results. It lists the publication details (authors, title, conference, year, and page numbers) but does not engage with the paper's findings or implications.",
+        "assessment": "Score: 0\nExplanation: The provided text excerpt is a reference list entry with no substantive discussion. It merely lists the publication details of the paper by K. He et al., without engaging with its content, methods, or results.",
         "page": 17,
         "text_bbox": {
           "height": 0.02210858143607706,
@@ -489,154 +239,25 @@
     "year": 2017,
     "venue": "venue-3",
     "raw_venue": "Proc. 34th Int. Conf. Mach. Learn.",
-    "citation_count": 0,
+    "citation_count": 11081,
     "fields_of_study": [
-      {
-        "id": "https://openalex.org/C97541855",
-        "wikidata": "https://www.wikidata.org/wiki/Q830687",
-        "display_name": "Reinforcement learning",
-        "level": 2,
-        "score": 0.8412299
-      },
-      {
-        "id": "https://openalex.org/C41008148",
-        "wikidata": "https://www.wikidata.org/wiki/Q21198",
-        "display_name": "Computer science",
-        "level": 0,
-        "score": 0.80826104
-      },
-      {
-        "id": "https://openalex.org/C2781002164",
-        "wikidata": "https://www.wikidata.org/wiki/Q6822311",
-        "display_name": "Meta learning (computer science)",
-        "level": 3,
-        "score": 0.77618754
-      },
-      {
-        "id": "https://openalex.org/C154945302",
-        "wikidata": "https://www.wikidata.org/wiki/Q11660",
-        "display_name": "Artificial intelligence",
-        "level": 1,
-        "score": 0.7171711
-      },
-      {
-        "id": "https://openalex.org/C177148314",
-        "wikidata": "https://www.wikidata.org/wiki/Q170084",
-        "display_name": "Generalization",
-        "level": 2,
-        "score": 0.6701946
-      },
-      {
-        "id": "https://openalex.org/C119857082",
-        "wikidata": "https://www.wikidata.org/wiki/Q2539",
-        "display_name": "Machine learning",
-        "level": 1,
-        "score": 0.6426681
-      },
-      {
-        "id": "https://openalex.org/C2780451532",
-        "wikidata": "https://www.wikidata.org/wiki/Q759676",
-        "display_name": "Task (project management)",
-        "level": 2,
-        "score": 0.55539167
-      },
-      {
-        "id": "https://openalex.org/C153258448",
-        "wikidata": "https://www.wikidata.org/wiki/Q1199743",
-        "display_name": "Gradient descent",
-        "level": 3,
-        "score": 0.53816366
-      },
-      {
-        "id": "https://openalex.org/C136197465",
-        "wikidata": "https://www.wikidata.org/wiki/Q1729295",
-        "display_name": "Variety (cybernetics)",
-        "level": 2,
-        "score": 0.5328392
-      },
-      {
-        "id": "https://openalex.org/C50644808",
-        "wikidata": "https://www.wikidata.org/wiki/Q192776",
-        "display_name": "Artificial neural network",
-        "level": 2,
-        "score": 0.51136845
-      },
-      {
-        "id": "https://openalex.org/C139807058",
-        "wikidata": "https://www.wikidata.org/wiki/Q352374",
-        "display_name": "Adaptation (eye)",
-        "level": 2,
-        "score": 0.50203824
-      },
-      {
-        "id": "https://openalex.org/C83546350",
-        "wikidata": "https://www.wikidata.org/wiki/Q1139051",
-        "display_name": "Regression",
-        "level": 2,
-        "score": 0.47046766
-      },
-      {
-        "id": "https://openalex.org/C33923547",
-        "wikidata": "https://www.wikidata.org/wiki/Q395",
-        "display_name": "Mathematics",
-        "level": 0,
-        "score": 0.08769077
-      },
-      {
-        "id": "https://openalex.org/C134306372",
-        "wikidata": "https://www.wikidata.org/wiki/Q7754",
-        "display_name": "Mathematical analysis",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C105795698",
-        "wikidata": "https://www.wikidata.org/wiki/Q12483",
-        "display_name": "Statistics",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C121332964",
-        "wikidata": "https://www.wikidata.org/wiki/Q413",
-        "display_name": "Physics",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C187736073",
-        "wikidata": "https://www.wikidata.org/wiki/Q2920921",
-        "display_name": "Management",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C120665830",
-        "wikidata": "https://www.wikidata.org/wiki/Q14620",
-        "display_name": "Optics",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C162324750",
-        "wikidata": "https://www.wikidata.org/wiki/Q8134",
-        "display_name": "Economics",
-        "level": 0,
-        "score": 0.0
-      }
+      "Computer Science"
     ],
     "external_ids": {
-      "OpenAlex": "https://openalex.org/W2604763608"
+      "MAG": "2604763608",
+      "DBLP": "journals/corr/FinnAL17",
+      "ArXiv": "1703.03400",
+      "CorpusId": 6719686
     },
-    "semantic_scholar_id": null,
+    "semantic_scholar_id": "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
     "arxiv_id": null,
-    "doi": "https://doi.org/10.48550/arxiv.1703.03400",
+    "doi": null,
     "ref_id": 3,
     "reference_mentions": [
       {
         "text": "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
-        "relevance_score": 7,
-        "assessment": "Score: 7\n\nExplanation: The mention of the cited paper [5] in the text excerpt is substantive and significantly influences the discussion by providing a concrete example of how meta-learning can be applied to Few-Shot Learning (FSL) problems, specifically through a novel semi-supervised method. The text's focus on leveraging auxiliary tasks and transferring knowledge from source tasks to target ones aligns well with the paper's introduction of a Learning to Self-Train (LST) method that improves few-shot classification performance by utilizing unlabeled data. This connection between the text's discussion on meta-learning and the paper's specific approach to addressing limited labeled data challenges in FSL contexts justifies a relevance score of 7.",
+        "relevance_score": 8,
+        "assessment": "Score: 8\nExplanation: The mention of the paper within the text excerpt is substantive and highly relevant, as it directly relates to the discussion of leveraging auxiliary tasks and meta-learning to address Few-Shot Learning (FSL) challenges. The paper's focus on a novel semi-supervised meta-learning method (LST) that significantly improves few-shot classification performance by leveraging unlabeled data aligns closely with the excerpt's discussion on transferring knowledge from source tasks to target ones in FSL contexts. The specific mention of \"meta-learning\" in the excerpt directly correlates with the paper's exploration of meta-optimization techniques, making this citation contextually relevant and influential to the discussion.",
         "page": 1,
         "text_bbox": {
           "height": 0.20556050936507467,
@@ -657,7 +278,7 @@
         ]
       },
       {
-        "text": "- [3] C. Finn, P. Abbeel, and S. Levine, \"Model-agnostic meta-learning for fast adaptation of deep networks,\" in Proc. 34th Int. Conf. Mach. Learn., 2017, pp. 1126\u00e2\u20ac\u201c1135.",
+        "text": "- [3] C. Finn, P. Abbeel, and S. Levine, \"Model-agnostic meta-learning for fast adaptation of deep networks,\" in Proc. 34th Int. Conf. Mach. Learn., 2017, pp. 1126\u20131135.",
         "relevance_score": null,
         "assessment": "No assessment available",
         "page": 17,
@@ -682,7 +303,7 @@
     "year": 2018,
     "venue": null,
     "raw_venue": "arXiv",
-    "citation_count": 441,
+    "citation_count": 440,
     "fields_of_study": [
       "Computer Science",
       "Mathematics"
@@ -701,8 +322,8 @@
     "reference_mentions": [
       {
         "text": "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
-        "relevance_score": 7,
-        "assessment": "Score: 7\n\nExplanation: The mention of the cited paper [5] in the text excerpt is substantive and significantly influences the discussion by providing a concrete example of how meta-learning can be applied to Few-Shot Learning (FSL) problems, specifically through a novel semi-supervised method. The text's focus on leveraging auxiliary tasks and transferring knowledge from source tasks to target ones aligns well with the paper's introduction of a Learning to Self-Train (LST) method that improves few-shot classification performance by utilizing unlabeled data. This connection between the text's discussion on meta-learning and the paper's specific approach to addressing limited labeled data challenges in FSL contexts justifies a relevance score of 7.",
+        "relevance_score": 8,
+        "assessment": "Score: 8\nExplanation: The mention of the paper within the text excerpt is substantive and highly relevant, as it directly relates to the discussion of leveraging auxiliary tasks and meta-learning to address Few-Shot Learning (FSL) challenges. The paper's focus on a novel semi-supervised meta-learning method (LST) that significantly improves few-shot classification performance by leveraging unlabeled data aligns closely with the excerpt's discussion on transferring knowledge from source tasks to target ones in FSL contexts. The specific mention of \"meta-learning\" in the excerpt directly correlates with the paper's exploration of meta-optimization techniques, making this citation contextually relevant and influential to the discussion.",
         "page": 1,
         "text_bbox": {
           "height": 0.20556050936507467,
@@ -725,7 +346,7 @@
       {
         "text": "In the spectrum of semi-supervised methods also resides Few-Shot Learning (FSL) when auxiliary tasks on a disjoint set of concepts are leveraged to improve the model training. On one hand, it is like zero-shot learning when conceptual correlations can be used to share information between different concepts through their embedded representations. On the other hand, a group of auxiliary tasks can be sampled from a collection of base concepts, and a meta-model can be trained to distill the knowledge of how to update models with few examples (e.g., the initial point, and the rule of updating model parameters) [4] along with the unlabeled examples in a semi-supervised fashion [5], [12], [13]. Thus, the FSL can be viewed as a semi-supervised problem that has few labeled examples available on the target concepts, along with many examples labeled on auxiliary concepts (which thus should be viewed as unlabeled on the target concepts). For a comprehensive review of FSL, the interested readers can refer to [14].",
         "relevance_score": 8,
-        "assessment": "Score: 8\nExplanation: The mention of the paper corresponding to [5] in the text excerpt is substantive and significantly influences the discussion by providing a concrete example of how semi-supervised methods, specifically through a novel semi-supervised meta-learning method (LST), can leverage unlabeled data to enhance few-shot learning (FSL) performance. The text's discussion on using unlabeled examples in a semi-supervised fashion aligns closely with the paper's focus on improving few-shot classification by predicting pseudo labels for unlabeled data and iterating self-training steps. This demonstrates a direct application of the methods discussed in [5] to the broader topic of FSL within the context of semi-supervised learning, making it a highly relevant citation.",
+        "assessment": "Score: 8\nExplanation: The mention of the cited paper [5] in the text excerpt is substantive and highly relevant, as it directly relates to the discussion on leveraging unlabeled data in few-shot learning (FSL) through a semi-supervised approach. The paper's focus on a novel semi-supervised meta-learning method that improves few-shot classification by using unlabeled data aligns closely with the excerpt's discussion on using auxiliary tasks and unlabeled examples in a semi-supervised fashion to enhance model training in FSL. The specific mention of \"along with the unlabeled examples in a semi-supervised fashion\" directly correlates with the paper's exploration of predicting pseudo labels for unlabeled data and iterating self-training steps, which substantiates its relevance and influence on the discussion.",
         "page": 3,
         "text_bbox": {
           "height": 0.2500432485380985,
@@ -748,7 +369,7 @@
       {
         "text": "- [4] M. A. Jamal, G.-J. Qi, and M. Shah, \"Task-agnostic meta-learning for few-shot learning,\" 2018, arXiv: 1805.07722.",
         "relevance_score": 0,
-        "assessment": "Score: 0\nExplanation: The provided text excerpt is merely a reference list entry, containing only the publication details of the paper (authors, title, year, and arXiv identifier) without any substantive discussion of its content, methods, or results.",
+        "assessment": "Score: 0\nExplanation: The provided text excerpt is merely a bibliographic reference to the paper by M. A. Jamal, G.-J. Qi, and M. Shah, without any substantive discussion of its content, methods, or results. It simply lists the publication details (authors, title, year, and arXiv identifier) without engaging with the paper's findings or methodologies.",
         "page": null,
         "text_bbox": null,
         "citations": []
@@ -764,160 +385,31 @@
       "author-16",
       "author-17",
       "author-18",
-      "author-19",
-      "author-20"
+      "author-19"
     ],
     "year": 2019,
     "venue": "venue-1",
     "raw_venue": "Proc. Advances Neural Inf. Process. Syst.",
-    "citation_count": 0,
+    "citation_count": 263,
     "fields_of_study": [
-      {
-        "id": "https://openalex.org/C41008148",
-        "wikidata": "https://www.wikidata.org/wiki/Q21198",
-        "display_name": "Computer science",
-        "level": 0,
-        "score": 0.79255915
-      },
-      {
-        "id": "https://openalex.org/C154945302",
-        "wikidata": "https://www.wikidata.org/wiki/Q11660",
-        "display_name": "Artificial intelligence",
-        "level": 1,
-        "score": 0.7212893
-      },
-      {
-        "id": "https://openalex.org/C183115368",
-        "wikidata": "https://www.wikidata.org/wiki/Q856577",
-        "display_name": "Weighting",
-        "level": 2,
-        "score": 0.70160925
-      },
-      {
-        "id": "https://openalex.org/C2776145971",
-        "wikidata": "https://www.wikidata.org/wiki/Q30673951",
-        "display_name": "Labeled data",
-        "level": 2,
-        "score": 0.64106256
-      },
-      {
-        "id": "https://openalex.org/C2781002164",
-        "wikidata": "https://www.wikidata.org/wiki/Q6822311",
-        "display_name": "Meta learning (computer science)",
-        "level": 3,
-        "score": 0.5952497
-      },
-      {
-        "id": "https://openalex.org/C119857082",
-        "wikidata": "https://www.wikidata.org/wiki/Q2539",
-        "display_name": "Machine learning",
-        "level": 1,
-        "score": 0.59161747
-      },
-      {
-        "id": "https://openalex.org/C58973888",
-        "wikidata": "https://www.wikidata.org/wiki/Q1041418",
-        "display_name": "Semi-supervised learning",
-        "level": 2,
-        "score": 0.55613637
-      },
-      {
-        "id": "https://openalex.org/C2780451532",
-        "wikidata": "https://www.wikidata.org/wiki/Q759676",
-        "display_name": "Task (project management)",
-        "level": 2,
-        "score": 0.5544518
-      },
-      {
-        "id": "https://openalex.org/C136389625",
-        "wikidata": "https://www.wikidata.org/wiki/Q334384",
-        "display_name": "Supervised learning",
-        "level": 3,
-        "score": 0.5152898
-      },
-      {
-        "id": "https://openalex.org/C2777212361",
-        "wikidata": "https://www.wikidata.org/wiki/Q5127848",
-        "display_name": "Class (philosophy)",
-        "level": 2,
-        "score": 0.4554538
-      },
-      {
-        "id": "https://openalex.org/C2778344882",
-        "wikidata": "https://www.wikidata.org/wiki/Q278938",
-        "display_name": "Shot (pellet)",
-        "level": 2,
-        "score": 0.4168254
-      },
-      {
-        "id": "https://openalex.org/C153180895",
-        "wikidata": "https://www.wikidata.org/wiki/Q7148389",
-        "display_name": "Pattern recognition (psychology)",
-        "level": 2,
-        "score": 0.3935628
-      },
-      {
-        "id": "https://openalex.org/C50644808",
-        "wikidata": "https://www.wikidata.org/wiki/Q192776",
-        "display_name": "Artificial neural network",
-        "level": 2,
-        "score": 0.26195642
-      },
-      {
-        "id": "https://openalex.org/C71924100",
-        "wikidata": "https://www.wikidata.org/wiki/Q11190",
-        "display_name": "Medicine",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C185592680",
-        "wikidata": "https://www.wikidata.org/wiki/Q2329",
-        "display_name": "Chemistry",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C187736073",
-        "wikidata": "https://www.wikidata.org/wiki/Q2920921",
-        "display_name": "Management",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C178790620",
-        "wikidata": "https://www.wikidata.org/wiki/Q11351",
-        "display_name": "Organic chemistry",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C162324750",
-        "wikidata": "https://www.wikidata.org/wiki/Q8134",
-        "display_name": "Economics",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C126838900",
-        "wikidata": "https://www.wikidata.org/wiki/Q77604",
-        "display_name": "Radiology",
-        "level": 1,
-        "score": 0.0
-      }
+      "Computer Science",
+      "Mathematics"
     ],
     "external_ids": {
-      "OpenAlex": "https://openalex.org/W2971071159"
+      "DBLP": "conf/nips/LiSLZZCS19",
+      "ArXiv": "1906.00562",
+      "MAG": "2947298857",
+      "CorpusId": 173990853
     },
-    "semantic_scholar_id": null,
+    "semantic_scholar_id": "2ff8c20ff38df9bfa2c89e8e3f8624598a7ea44f",
     "arxiv_id": null,
     "doi": null,
     "ref_id": 5,
     "reference_mentions": [
       {
         "text": "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
-        "relevance_score": 7,
-        "assessment": "Score: 7\n\nExplanation: The mention of the cited paper [5] in the text excerpt is substantive and significantly influences the discussion by providing a concrete example of how meta-learning can be applied to Few-Shot Learning (FSL) problems, specifically through a novel semi-supervised method. The text's focus on leveraging auxiliary tasks and transferring knowledge from source tasks to target ones aligns well with the paper's introduction of a Learning to Self-Train (LST) method that improves few-shot classification performance by utilizing unlabeled data. This connection between the text's discussion on meta-learning and the paper's specific approach to addressing limited labeled data challenges in FSL contexts justifies a relevance score of 7.",
+        "relevance_score": 8,
+        "assessment": "Score: 8\nExplanation: The mention of the paper within the text excerpt is substantive and highly relevant, as it directly relates to the discussion of leveraging auxiliary tasks and meta-learning to address Few-Shot Learning (FSL) challenges. The paper's focus on a novel semi-supervised meta-learning method (LST) that significantly improves few-shot classification performance by leveraging unlabeled data aligns closely with the excerpt's discussion on transferring knowledge from source tasks to target ones in FSL contexts. The specific mention of \"meta-learning\" in the excerpt directly correlates with the paper's exploration of meta-optimization techniques, making this citation contextually relevant and influential to the discussion.",
         "page": 1,
         "text_bbox": {
           "height": 0.20556050936507467,
@@ -940,7 +432,7 @@
       {
         "text": "In the spectrum of semi-supervised methods also resides Few-Shot Learning (FSL) when auxiliary tasks on a disjoint set of concepts are leveraged to improve the model training. On one hand, it is like zero-shot learning when conceptual correlations can be used to share information between different concepts through their embedded representations. On the other hand, a group of auxiliary tasks can be sampled from a collection of base concepts, and a meta-model can be trained to distill the knowledge of how to update models with few examples (e.g., the initial point, and the rule of updating model parameters) [4] along with the unlabeled examples in a semi-supervised fashion [5], [12], [13]. Thus, the FSL can be viewed as a semi-supervised problem that has few labeled examples available on the target concepts, along with many examples labeled on auxiliary concepts (which thus should be viewed as unlabeled on the target concepts). For a comprehensive review of FSL, the interested readers can refer to [14].",
         "relevance_score": 8,
-        "assessment": "Score: 8\nExplanation: The mention of the paper corresponding to [5] in the text excerpt is substantive and significantly influences the discussion by providing a concrete example of how semi-supervised methods, specifically through a novel semi-supervised meta-learning method (LST), can leverage unlabeled data to enhance few-shot learning (FSL) performance. The text's discussion on using unlabeled examples in a semi-supervised fashion aligns closely with the paper's focus on improving few-shot classification by predicting pseudo labels for unlabeled data and iterating self-training steps. This demonstrates a direct application of the methods discussed in [5] to the broader topic of FSL within the context of semi-supervised learning, making it a highly relevant citation.",
+        "assessment": "Score: 8\nExplanation: The mention of the cited paper [5] in the text excerpt is substantive and highly relevant, as it directly relates to the discussion on leveraging unlabeled data in few-shot learning (FSL) through a semi-supervised approach. The paper's focus on a novel semi-supervised meta-learning method that improves few-shot classification by using unlabeled data aligns closely with the excerpt's discussion on using auxiliary tasks and unlabeled examples in a semi-supervised fashion to enhance model training in FSL. The specific mention of \"along with the unlabeled examples in a semi-supervised fashion\" directly correlates with the paper's exploration of predicting pseudo labels for unlabeled data and iterating self-training steps, which substantiates its relevance and influence on the discussion.",
         "page": 3,
         "text_bbox": {
           "height": 0.2500432485380985,
@@ -961,9 +453,9 @@
         ]
       },
       {
-        "text": "- [5] X. Li et al., \"Learning to self-train for semi-supervised few-shot classification,\" in Proc. Advances Neural Inf. Process. Syst., 2019, pp. 10 276\u00e2\u20ac\u201c10 286.",
+        "text": "- [5] X. Li et al., \"Learning to self-train for semi-supervised few-shot classification,\" in Proc. Advances Neural Inf. Process. Syst., 2019, pp. 10 276\u201310 286.",
         "relevance_score": 0,
-        "assessment": "Score: 0\nExplanation: The provided text excerpt is merely a reference list entry, containing only the publication details of the paper by X. Li et al., without any substantive discussion of its content, methods, or results. There is no engagement with the paper's contributions or findings within the excerpt.",
+        "assessment": "Score: 0\nExplanation: The provided text excerpt is merely a reference list entry, containing only the publication details of the paper by X. Li et al., without any substantive discussion of its content, methods, or results. There is no engagement with the paper's findings or methodologies within the excerpt itself.",
         "page": 7,
         "text_bbox": {
           "height": 0.012335836623230135,
@@ -980,8 +472,8 @@
     "title": "Transforming Auto-Encoders",
     "authors": [
       "author-3",
-      "author-21",
-      "author-22"
+      "author-1",
+      "author-20"
     ],
     "year": 2011,
     "venue": "venue-4",
@@ -1005,7 +497,7 @@
       {
         "text": "A variety of principles and models have been devoted to training unsupervised representations. As shown in Fig. C.3, available in the online supplemental material, we will review them from several different perspectives. First, we will review the emerging principle of Transformation Equivariant Representations(TER) pioneered in Hinton's seminal work [6] as well as the recent formulation of unsupervised training of such representations [7]. It follows by reviewing a number of generative networks representative in many recent models, including the variants of auto-encoders, Generative Adversarial Nets (GANs), Flow-based Generative Networks, and Transformers (See Fig. C.3, available in the online supplemental material). The principle of learning disentangling representationsfrom these generative models is also central to many unsupervised methods, and we will review them on how to extract interpretable generative factors from unlabeled data. Finally, self-supervised methods constitutes a large category of unsupervised models, and we will review autoregressive models as well as the selfsupervised training of image and video representations.",
         "relevance_score": 8,
-        "assessment": "Score: 8\nExplanation: The mention of Hinton's work in the text is an important contextual reference that significantly influences the discussion on the principle of Transformation Equivariant Representations (TER). The cited paper's focus on capsules in neural networks, which are designed to handle variations in position, orientation, scale, and lighting through local computations and recognition of parts to understand wholes, aligns closely with the principles of TER mentioned in the text. This demonstrates a substantive engagement with the paper's methods and results, particularly in the context of unsupervised representation learning and the ability of these models to predict complex transformations, which is central to the discussion in the provided text excerpt.",
+        "assessment": "Score: 8\nExplanation: The mention of Hinton's seminal work on Transformation Equivariant Representations (TER) in the context of training unsupervised representations is substantive and highly relevant, as it directly relates to the foundational principles of the discussed topic. The cited paper's focus on capsules in neural networks, which are designed to handle variations in position, orientation, scale, and lighting\u2014key aspects of TER\u2014aligns closely with the excerpt's discussion on the emerging principle of TER. This demonstrates a significant influence on the discussion, especially in how these concepts pioneer the field of unsupervised learning and representation.",
         "page": 2,
         "text_bbox": {
           "height": 0.5620750591191982,
@@ -1028,7 +520,7 @@
       {
         "text": "- Transformation-Equivariant Representations. Recently, learning transformation-equivariant representations (TERs) from unlabeled data has attracted many attentions in both unsupervised and supervised methods. In particular, a good TER equivaries with different types of transformations so that the scene structure in an image can be compactly encoded into its representation. Then the successive problems for recognizing unseen visual concepts can be performed on top of the trained TER. The notion of TER was originally proposed by Hinton et al. [6] in introducing capsule nets and it has been formalized in various ways. We will review it in Section 2.2.",
         "relevance_score": 8,
-        "assessment": "Score: 8\nExplanation: The mention of the paper by Hinton et al. [6] is an important contextual reference that significantly influences the discussion about transformation-equivariant representations (TERs). The text excerpt directly attributes the original proposal of TER to Hinton et al., indicating a foundational contribution to the field. This is substantiated by the paper summary, which discusses capsules in neural networks, a concept closely related to TERs, emphasizing their ability to handle variations such as position and orientation, which are key aspects of transformation-equivariance. The direct linkage of the concept of TER to the foundational work on capsules by Hinton et al. demonstrates a significant contextual relevance.",
+        "assessment": "Score: 8\nExplanation: The mention of the paper by Hinton et al. in the text is an important contextual reference that significantly influences the discussion on transformation-equivariant representations (TERs). The text directly attributes the original proposal of TER to Hinton et al., which aligns with the paper's exploration of capsules in neural networks for object recognition and their ability to handle variations such as position and orientation. This connection is substantive because it establishes the foundational concept of TERs and their relevance to the development of capsule networks, directly engaging with the paper's methods and results on handling transformations in images.",
         "page": 3,
         "text_bbox": {
           "height": 0.19063480661343465,
@@ -1051,19 +543,19 @@
       {
         "text": "Although a solid theory is still lacking, it is thought that both equivalence and invariance to image translations play a critical role in the success of CNNs, particularly for supervised classification tasks [1], [6]. A typical Convolutional Neural Network (CNN) consists of two parts: the feature maps of input images through multiple convolutional layers, and the classifier of fully connected layers mapping the feature maps to the target labels.",
         "relevance_score": 4,
-        "assessment": "Score: 4\nExplanation: The mention of the cited paper [6] in the text excerpt provides general background information about advancements in neural networks, specifically in the context of object recognition and handling variations in position, orientation, scale, and lighting, which are crucial for the success of CNNs in supervised classification tasks. However, the excerpt does not delve into the detailed methods or results of the paper, such as the specific workings of capsules or their comparison to convolutional pools, making the reference more of a general background mention than a direct discussion of the paper's content.",
+        "assessment": "Score: 4\nExplanation: The mention of the cited paper [6] in the provided text excerpt offers general background information about the role of equivalence and invariance in the success of CNNs, particularly for supervised classification tasks. While the cited paper discusses capsules in neural networks and their advantages over traditional methods in handling variations in position, orientation, scale, and lighting, which indirectly relates to the concept of invariance, the direct connection to the specific mechanisms of CNNs mentioned in the excerpt is not explicitly made. The relevance is therefore moderate, as the paper's focus on capsules provides a tangential rather than a direct insight into the discussion on equivalence and invariance in CNNs.",
         "page": null,
         "text_bbox": null,
         "citations": []
       },
       {
-        "text": "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation \u00e2\u20ac\u201c without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
+        "text": "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation \u2013 without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
         "relevance_score": 7,
-        "assessment": "Score: 7\nExplanation: The mention of Hinton et al. [6] in the provided text excerpt is an important contextual reference that significantly influences the discussion on learning Transformation-Equivariance Representations (TER). The cited paper's focus on capsules in neural networks, which are designed to handle variations in position, orientation, scale, and lighting, directly relates to the concept of TER by demonstrating an advanced method for recognizing objects through their parts and predicting complex transformations. This connection is substantive as it provides a foundational basis for understanding the shift from transformation invariance to transformation equivariance in neural network design, which is central to the excerpt's discussion.",
+        "assessment": "Score: 7\nExplanation: The mention of Hinton et al. [6] in the provided text excerpt is an important contextual reference that significantly influences the discussion on learning Transformation-Equivariance Representations (TER). The cited paper's focus on capsules in neural networks, which are designed to handle variations in position, orientation, scale, and lighting, directly relates to the concept of TER by demonstrating an advanced method for recognizing objects through their parts and predicting complex transformations. This connection is substantive because it underpins the discussion on the evolution of approaches to achieving transformation invariance or equivariance in neural network models, thus significantly contributing to the overarching narrative on supervised and unsupervised model training.",
         "page": 4,
         "text_bbox": {
-          "height": 0.027187944630789475,
-          "width": 0.4444565305600457,
+          "height": 0.14607844301305076,
+          "width": 0.44445663861919427,
           "x": 0.04637157099956117,
           "y": 0.2691970079254356
         },
@@ -1082,7 +574,7 @@
       {
         "text": "The DC-IGN is semi-supervised to engineer inverse graphics as training images with various transformations are available from 3D face and chair datasets. We also note that a number of inverse graphics models [93], [94], [95] have been proposed to train disentangled representations. Among them are deep lambertian networks [96] that assume a Lambertian reflectance model and implicitly construct the 3D representation, and transforming auto-encoders [6], [97] that use a domain-specific decoder to reconstruct images, as well as [98] with an approximate differentiable renderer to explicitly capture the relationship between changes in model parameters and image observations.",
         "relevance_score": 7,
-        "assessment": "Score: 7\nExplanation: The mention of transforming auto-encoders in the text excerpt is substantive and contextually relevant, as it directly relates to the discussion of models that reconstruct images and handle transformations, which is a core aspect of the cited paper's focus on capsules and transforming auto-encoders for object recognition. The specific mention of \"transforming auto-encoders\" as a method to \"reconstruct images\" aligns closely with the paper's exploration of capsules in neural networks for recognizing objects through handling variations such as position and orientation, demonstrating a significant influence on the discussion of inverse graphics models.",
+        "assessment": "Score: 7\nExplanation: The mention of transforming auto-encoders [6] in the text is substantive and provides an important contextual reference that significantly influences the discussion on inverse graphics models and their ability to reconstruct images through domain-specific decoders. The summary of the cited paper discusses the concept of capsules in neural networks and their application in transforming auto-encoders for recognizing objects and handling variations such as position and orientation, which aligns closely with the text's discussion on using transforming auto-encoders to reconstruct images and model changes in viewpoint. This demonstrates a clear relevance and application of the paper's content to the discussed topic, making it an important contextual reference.",
         "page": 11,
         "text_bbox": {
           "height": 0.07181790297525403,
@@ -1095,7 +587,7 @@
       {
         "text": "A more theoretical topic lies on revealing the intrinsic relation between transformation equivariance and invariance in learning representations. On the one hand, the pursuit of Transformation Equivariant Representation (TER) has been spotlighted as one of critical criteria [6] that achieves the state-of-the-art performances in unsupervised learning [7], [16]. However, it is also important and necessary to apply the transformation invariance to train discriminative networks with labeled data in supervised tasks for recognizing images and objects.",
         "relevance_score": 7,
-        "assessment": "Score: 7\nExplanation: The mention of the cited paper [6] in the text excerpt is substantive and significantly influences the discussion about the importance of Transformation Equivariant Representation (TER) in unsupervised learning. The cited paper's focus on capsules in neural networks, which are designed to handle variations in position, orientation, scale, and lighting\u00e2\u20ac\u201dkey aspects of transformation equivariance\u00e2\u20ac\u201ddirectly supports the text's argument about the critical criteria for achieving state-of-the-art performances. The detailed discussion in the paper about capsules' ability to recognize objects by understanding the parts and their transformations aligns closely with the theoretical topic of transformation equivariance and invariance in learning representations mentioned in the text.",
+        "assessment": "Score: 7\nExplanation: The mention of the cited paper [6] in the text excerpt is an important contextual reference that significantly influences the discussion on the pursuit of Transformation Equivariant Representation (TER) in unsupervised learning. The paper's focus on capsules in neural networks, which enable better handling of variations such as position and orientation, directly relates to the concept of TER by demonstrating a method for achieving state-of-the-art performances through recognizing parts of objects to understand wholes. This connection between the paper's detailed exploration of capsules and the excerpt's discussion on TER and its critical role in unsupervised learning justifies the relevance score.",
         "page": 14,
         "text_bbox": {
           "height": 0.14607846280190367,
@@ -1116,9 +608,9 @@
         ]
       },
       {
-        "text": "- [6] G. E. Hinton, A. Krizhevsky, and S. D. Wang, \"Transforming auto-encoders,\" in Proc. Int. Conf. Artif. Neural Netw., 2011, pp. 44\u00e2\u20ac\u201c51.",
+        "text": "- [6] G. E. Hinton, A. Krizhevsky, and S. D. Wang, \"Transforming auto-encoders,\" in Proc. Int. Conf. Artif. Neural Netw., 2011, pp. 44\u201351.",
         "relevance_score": 0,
-        "assessment": "Score: 0\nExplanation: The provided text excerpt is a reference list entry with no substantive discussion. It merely lists the publication details of the paper by G. E. Hinton, A. Krizhevsky, and S. D. Wang, without engaging with its content, methods, or results.",
+        "assessment": "Score: 0\nExplanation: \"Reference list entry with no substantive discussion.\"",
         "page": 17,
         "text_bbox": {
           "height": 0.04527040478098687,

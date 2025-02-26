@@ -1,6 +1,6 @@
 [
   {
-    "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+    "title": "ImageNet classification with deep convolutional neural networks",
     "authors": [
       "author-1",
       "author-2",
@@ -9,127 +9,19 @@
     "year": 2012,
     "venue": "venue-1",
     "raw_venue": "Proc. Advances Neural Inf. Process. Syst.",
-    "citation_count": 0,
+    "citation_count": 115913,
     "fields_of_study": [
-      {
-        "id": "https://openalex.org/C188441871",
-        "wikidata": "https://www.wikidata.org/wiki/Q7554146",
-        "display_name": "Softmax function",
-        "level": 3,
-        "score": 0.88170564
-      },
-      {
-        "id": "https://openalex.org/C81363708",
-        "wikidata": "https://www.wikidata.org/wiki/Q17084460",
-        "display_name": "Convolutional neural network",
-        "level": 2,
-        "score": 0.8117933
-      },
-      {
-        "id": "https://openalex.org/C41008148",
-        "wikidata": "https://www.wikidata.org/wiki/Q21198",
-        "display_name": "Computer science",
-        "level": 0,
-        "score": 0.789114
-      },
-      {
-        "id": "https://openalex.org/C70437156",
-        "wikidata": "https://www.wikidata.org/wiki/Q7228652",
-        "display_name": "Pooling",
-        "level": 2,
-        "score": 0.68981254
-      },
-      {
-        "id": "https://openalex.org/C2776145597",
-        "wikidata": "https://www.wikidata.org/wiki/Q25339462",
-        "display_name": "Dropout (neural networks)",
-        "level": 2,
-        "score": 0.62921965
-      },
-      {
-        "id": "https://openalex.org/C154945302",
-        "wikidata": "https://www.wikidata.org/wiki/Q11660",
-        "display_name": "Artificial intelligence",
-        "level": 1,
-        "score": 0.61589855
-      },
-      {
-        "id": "https://openalex.org/C45347329",
-        "wikidata": "https://www.wikidata.org/wiki/Q5166604",
-        "display_name": "Convolution (computer science)",
-        "level": 3,
-        "score": 0.6064652
-      },
-      {
-        "id": "https://openalex.org/C2776135515",
-        "wikidata": "https://www.wikidata.org/wiki/Q17143721",
-        "display_name": "Regularization (linguistics)",
-        "level": 2,
-        "score": 0.5937029
-      },
-      {
-        "id": "https://openalex.org/C153180895",
-        "wikidata": "https://www.wikidata.org/wiki/Q7148389",
-        "display_name": "Pattern recognition (psychology)",
-        "level": 2,
-        "score": 0.58283216
-      },
-      {
-        "id": "https://openalex.org/C2984842247",
-        "wikidata": "https://www.wikidata.org/wiki/Q197536",
-        "display_name": "Deep neural networks",
-        "level": 3,
-        "score": 0.48869804
-      },
-      {
-        "id": "https://openalex.org/C40969351",
-        "wikidata": "https://www.wikidata.org/wiki/Q3516228",
-        "display_name": "Word error rate",
-        "level": 2,
-        "score": 0.45401564
-      },
-      {
-        "id": "https://openalex.org/C136886441",
-        "wikidata": "https://www.wikidata.org/wiki/Q926129",
-        "display_name": "Normalization (sociology)",
-        "level": 2,
-        "score": 0.44189316
-      },
-      {
-        "id": "https://openalex.org/C50644808",
-        "wikidata": "https://www.wikidata.org/wiki/Q192776",
-        "display_name": "Artificial neural network",
-        "level": 2,
-        "score": 0.44072217
-      },
-      {
-        "id": "https://openalex.org/C119857082",
-        "wikidata": "https://www.wikidata.org/wiki/Q2539",
-        "display_name": "Machine learning",
-        "level": 1,
-        "score": 0.3099594
-      },
-      {
-        "id": "https://openalex.org/C144024400",
-        "wikidata": "https://www.wikidata.org/wiki/Q21201",
-        "display_name": "Sociology",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C19165224",
-        "wikidata": "https://www.wikidata.org/wiki/Q23404",
-        "display_name": "Anthropology",
-        "level": 1,
-        "score": 0.0
-      }
+      "Computer Science"
     ],
     "external_ids": {
-      "OpenAlex": "https://openalex.org/W2163605009"
+      "MAG": "2618530766",
+      "DBLP": "conf/nips/KrizhevskySH12",
+      "DOI": "10.1145/3065386",
+      "CorpusId": 195908774
     },
-    "semantic_scholar_id": null,
+    "semantic_scholar_id": "abd1c342495432171beb7ca8fd9551ef13cbd0ff",
     "arxiv_id": null,
-    "doi": null,
+    "doi": "10.1145/3065386",
     "ref_id": 1,
     "reference_mentions": [
       "THIS paper aims at a comprehensive survey of recent progresses on unsupervised and semi-supervised methods addressing the challenges of training models with a small number or none of labeled data when a large volume of unlabeled data are available. The success of deep learning often hinges on the availability of a large number of labeled data, where millions of images are labeled to train the deep neural networks [1], [2] to enable these models to be on par with or even surpass the human performances.",
@@ -150,165 +42,23 @@
       "author-6",
       "author-7"
     ],
-    "year": 2016,
+    "year": 2015,
     "venue": "venue-2",
     "raw_venue": "Proc. IEEE Conf. Comput. Vis. Pattern Recognit.",
-    "citation_count": 0,
+    "citation_count": 181783,
     "fields_of_study": [
-      {
-        "id": "https://openalex.org/C155512373",
-        "wikidata": "https://www.wikidata.org/wiki/Q287450",
-        "display_name": "Residual",
-        "level": 2,
-        "score": 0.91328824
-      },
-      {
-        "id": "https://openalex.org/C41008148",
-        "wikidata": "https://www.wikidata.org/wiki/Q21198",
-        "display_name": "Computer science",
-        "level": 0,
-        "score": 0.7827219
-      },
-      {
-        "id": "https://openalex.org/C21780288",
-        "wikidata": "https://www.wikidata.org/wiki/Q5139731",
-        "display_name": "Coco",
-        "level": 2,
-        "score": 0.7302752
-      },
-      {
-        "id": "https://openalex.org/C154945302",
-        "wikidata": "https://www.wikidata.org/wiki/Q11660",
-        "display_name": "Artificial intelligence",
-        "level": 1,
-        "score": 0.7211458
-      },
-      {
-        "id": "https://openalex.org/C2776151529",
-        "wikidata": "https://www.wikidata.org/wiki/Q3045304",
-        "display_name": "Object detection",
-        "level": 3,
-        "score": 0.60773295
-      },
-      {
-        "id": "https://openalex.org/C108583219",
-        "wikidata": "https://www.wikidata.org/wiki/Q197536",
-        "display_name": "Deep learning",
-        "level": 2,
-        "score": 0.57282454
-      },
-      {
-        "id": "https://openalex.org/C89600930",
-        "wikidata": "https://www.wikidata.org/wiki/Q1423946",
-        "display_name": "Segmentation",
-        "level": 2,
-        "score": 0.5636843
-      },
-      {
-        "id": "https://openalex.org/C153180895",
-        "wikidata": "https://www.wikidata.org/wiki/Q7148389",
-        "display_name": "Pattern recognition (psychology)",
-        "level": 2,
-        "score": 0.56021905
-      },
-      {
-        "id": "https://openalex.org/C177264268",
-        "wikidata": "https://www.wikidata.org/wiki/Q1514741",
-        "display_name": "Set (abstract data type)",
-        "level": 2,
-        "score": 0.4790636
-      },
-      {
-        "id": "https://openalex.org/C2779227376",
-        "wikidata": "https://www.wikidata.org/wiki/Q6505497",
-        "display_name": "Layer (electronics)",
-        "level": 2,
-        "score": 0.47214726
-      },
-      {
-        "id": "https://openalex.org/C50644808",
-        "wikidata": "https://www.wikidata.org/wiki/Q192776",
-        "display_name": "Artificial neural network",
-        "level": 2,
-        "score": 0.45602506
-      },
-      {
-        "id": "https://openalex.org/C2780451532",
-        "wikidata": "https://www.wikidata.org/wiki/Q759676",
-        "display_name": "Task (project management)",
-        "level": 2,
-        "score": 0.45123157
-      },
-      {
-        "id": "https://openalex.org/C119857082",
-        "wikidata": "https://www.wikidata.org/wiki/Q2539",
-        "display_name": "Machine learning",
-        "level": 1,
-        "score": 0.44327608
-      },
-      {
-        "id": "https://openalex.org/C2944601119",
-        "wikidata": "https://www.wikidata.org/wiki/Q43744058",
-        "display_name": "Residual neural network",
-        "level": 3,
-        "score": 0.431252
-      },
-      {
-        "id": "https://openalex.org/C2984842247",
-        "wikidata": "https://www.wikidata.org/wiki/Q197536",
-        "display_name": "Deep neural networks",
-        "level": 3,
-        "score": 0.41046202
-      },
-      {
-        "id": "https://openalex.org/C11413529",
-        "wikidata": "https://www.wikidata.org/wiki/Q8366",
-        "display_name": "Algorithm",
-        "level": 1,
-        "score": 0.11133298
-      },
-      {
-        "id": "https://openalex.org/C185592680",
-        "wikidata": "https://www.wikidata.org/wiki/Q2329",
-        "display_name": "Chemistry",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C187736073",
-        "wikidata": "https://www.wikidata.org/wiki/Q2920921",
-        "display_name": "Management",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C178790620",
-        "wikidata": "https://www.wikidata.org/wiki/Q11351",
-        "display_name": "Organic chemistry",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C162324750",
-        "wikidata": "https://www.wikidata.org/wiki/Q8134",
-        "display_name": "Economics",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C199360897",
-        "wikidata": "https://www.wikidata.org/wiki/Q9143",
-        "display_name": "Programming language",
-        "level": 1,
-        "score": 0.0
-      }
+      "Computer Science"
     ],
     "external_ids": {
-      "OpenAlex": "https://openalex.org/W2194775991"
+      "DBLP": "conf/cvpr/HeZRS16",
+      "MAG": "2949650786",
+      "ArXiv": "1512.03385",
+      "DOI": "10.1109/cvpr.2016.90",
+      "CorpusId": 206594692
     },
-    "semantic_scholar_id": null,
+    "semantic_scholar_id": "2c03df8b48bf3fa39054345bafabfeff15bfd11d",
     "arxiv_id": null,
-    "doi": "https://doi.org/10.1109/cvpr.2016.90",
+    "doi": "10.1109/cvpr.2016.90",
     "ref_id": 2,
     "reference_mentions": [
       "THIS paper aims at a comprehensive survey of recent progresses on unsupervised and semi-supervised methods addressing the challenges of training models with a small number or none of labeled data when a large volume of unlabeled data are available. The success of deep learning often hinges on the availability of a large number of labeled data, where millions of images are labeled to train the deep neural networks [1], [2] to enable these models to be on par with or even surpass the human performances.",
@@ -326,148 +76,19 @@
     "year": 2017,
     "venue": "venue-3",
     "raw_venue": "Proc. 34th Int. Conf. Mach. Learn.",
-    "citation_count": 0,
+    "citation_count": 11081,
     "fields_of_study": [
-      {
-        "id": "https://openalex.org/C97541855",
-        "wikidata": "https://www.wikidata.org/wiki/Q830687",
-        "display_name": "Reinforcement learning",
-        "level": 2,
-        "score": 0.8412299
-      },
-      {
-        "id": "https://openalex.org/C41008148",
-        "wikidata": "https://www.wikidata.org/wiki/Q21198",
-        "display_name": "Computer science",
-        "level": 0,
-        "score": 0.80826104
-      },
-      {
-        "id": "https://openalex.org/C2781002164",
-        "wikidata": "https://www.wikidata.org/wiki/Q6822311",
-        "display_name": "Meta learning (computer science)",
-        "level": 3,
-        "score": 0.77618754
-      },
-      {
-        "id": "https://openalex.org/C154945302",
-        "wikidata": "https://www.wikidata.org/wiki/Q11660",
-        "display_name": "Artificial intelligence",
-        "level": 1,
-        "score": 0.7171711
-      },
-      {
-        "id": "https://openalex.org/C177148314",
-        "wikidata": "https://www.wikidata.org/wiki/Q170084",
-        "display_name": "Generalization",
-        "level": 2,
-        "score": 0.6701946
-      },
-      {
-        "id": "https://openalex.org/C119857082",
-        "wikidata": "https://www.wikidata.org/wiki/Q2539",
-        "display_name": "Machine learning",
-        "level": 1,
-        "score": 0.6426681
-      },
-      {
-        "id": "https://openalex.org/C2780451532",
-        "wikidata": "https://www.wikidata.org/wiki/Q759676",
-        "display_name": "Task (project management)",
-        "level": 2,
-        "score": 0.55539167
-      },
-      {
-        "id": "https://openalex.org/C153258448",
-        "wikidata": "https://www.wikidata.org/wiki/Q1199743",
-        "display_name": "Gradient descent",
-        "level": 3,
-        "score": 0.53816366
-      },
-      {
-        "id": "https://openalex.org/C136197465",
-        "wikidata": "https://www.wikidata.org/wiki/Q1729295",
-        "display_name": "Variety (cybernetics)",
-        "level": 2,
-        "score": 0.5328392
-      },
-      {
-        "id": "https://openalex.org/C50644808",
-        "wikidata": "https://www.wikidata.org/wiki/Q192776",
-        "display_name": "Artificial neural network",
-        "level": 2,
-        "score": 0.51136845
-      },
-      {
-        "id": "https://openalex.org/C139807058",
-        "wikidata": "https://www.wikidata.org/wiki/Q352374",
-        "display_name": "Adaptation (eye)",
-        "level": 2,
-        "score": 0.50203824
-      },
-      {
-        "id": "https://openalex.org/C83546350",
-        "wikidata": "https://www.wikidata.org/wiki/Q1139051",
-        "display_name": "Regression",
-        "level": 2,
-        "score": 0.47046766
-      },
-      {
-        "id": "https://openalex.org/C33923547",
-        "wikidata": "https://www.wikidata.org/wiki/Q395",
-        "display_name": "Mathematics",
-        "level": 0,
-        "score": 0.08769077
-      },
-      {
-        "id": "https://openalex.org/C134306372",
-        "wikidata": "https://www.wikidata.org/wiki/Q7754",
-        "display_name": "Mathematical analysis",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C105795698",
-        "wikidata": "https://www.wikidata.org/wiki/Q12483",
-        "display_name": "Statistics",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C121332964",
-        "wikidata": "https://www.wikidata.org/wiki/Q413",
-        "display_name": "Physics",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C187736073",
-        "wikidata": "https://www.wikidata.org/wiki/Q2920921",
-        "display_name": "Management",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C120665830",
-        "wikidata": "https://www.wikidata.org/wiki/Q14620",
-        "display_name": "Optics",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C162324750",
-        "wikidata": "https://www.wikidata.org/wiki/Q8134",
-        "display_name": "Economics",
-        "level": 0,
-        "score": 0.0
-      }
+      "Computer Science"
     ],
     "external_ids": {
-      "OpenAlex": "https://openalex.org/W2604763608"
+      "MAG": "2604763608",
+      "DBLP": "journals/corr/FinnAL17",
+      "ArXiv": "1703.03400",
+      "CorpusId": 6719686
     },
-    "semantic_scholar_id": null,
+    "semantic_scholar_id": "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
     "arxiv_id": null,
-    "doi": "https://doi.org/10.48550/arxiv.1703.03400",
+    "doi": null,
     "ref_id": 3,
     "reference_mentions": [
       "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
@@ -485,7 +106,7 @@
     "year": 2018,
     "venue": null,
     "raw_venue": "arXiv",
-    "citation_count": 441,
+    "citation_count": 440,
     "fields_of_study": [
       "Computer Science",
       "Mathematics"
@@ -516,152 +137,23 @@
       "author-16",
       "author-17",
       "author-18",
-      "author-19",
-      "author-20"
+      "author-19"
     ],
     "year": 2019,
     "venue": "venue-1",
     "raw_venue": "Proc. Advances Neural Inf. Process. Syst.",
-    "citation_count": 0,
+    "citation_count": 263,
     "fields_of_study": [
-      {
-        "id": "https://openalex.org/C41008148",
-        "wikidata": "https://www.wikidata.org/wiki/Q21198",
-        "display_name": "Computer science",
-        "level": 0,
-        "score": 0.79255915
-      },
-      {
-        "id": "https://openalex.org/C154945302",
-        "wikidata": "https://www.wikidata.org/wiki/Q11660",
-        "display_name": "Artificial intelligence",
-        "level": 1,
-        "score": 0.7212893
-      },
-      {
-        "id": "https://openalex.org/C183115368",
-        "wikidata": "https://www.wikidata.org/wiki/Q856577",
-        "display_name": "Weighting",
-        "level": 2,
-        "score": 0.70160925
-      },
-      {
-        "id": "https://openalex.org/C2776145971",
-        "wikidata": "https://www.wikidata.org/wiki/Q30673951",
-        "display_name": "Labeled data",
-        "level": 2,
-        "score": 0.64106256
-      },
-      {
-        "id": "https://openalex.org/C2781002164",
-        "wikidata": "https://www.wikidata.org/wiki/Q6822311",
-        "display_name": "Meta learning (computer science)",
-        "level": 3,
-        "score": 0.5952497
-      },
-      {
-        "id": "https://openalex.org/C119857082",
-        "wikidata": "https://www.wikidata.org/wiki/Q2539",
-        "display_name": "Machine learning",
-        "level": 1,
-        "score": 0.59161747
-      },
-      {
-        "id": "https://openalex.org/C58973888",
-        "wikidata": "https://www.wikidata.org/wiki/Q1041418",
-        "display_name": "Semi-supervised learning",
-        "level": 2,
-        "score": 0.55613637
-      },
-      {
-        "id": "https://openalex.org/C2780451532",
-        "wikidata": "https://www.wikidata.org/wiki/Q759676",
-        "display_name": "Task (project management)",
-        "level": 2,
-        "score": 0.5544518
-      },
-      {
-        "id": "https://openalex.org/C136389625",
-        "wikidata": "https://www.wikidata.org/wiki/Q334384",
-        "display_name": "Supervised learning",
-        "level": 3,
-        "score": 0.5152898
-      },
-      {
-        "id": "https://openalex.org/C2777212361",
-        "wikidata": "https://www.wikidata.org/wiki/Q5127848",
-        "display_name": "Class (philosophy)",
-        "level": 2,
-        "score": 0.4554538
-      },
-      {
-        "id": "https://openalex.org/C2778344882",
-        "wikidata": "https://www.wikidata.org/wiki/Q278938",
-        "display_name": "Shot (pellet)",
-        "level": 2,
-        "score": 0.4168254
-      },
-      {
-        "id": "https://openalex.org/C153180895",
-        "wikidata": "https://www.wikidata.org/wiki/Q7148389",
-        "display_name": "Pattern recognition (psychology)",
-        "level": 2,
-        "score": 0.3935628
-      },
-      {
-        "id": "https://openalex.org/C50644808",
-        "wikidata": "https://www.wikidata.org/wiki/Q192776",
-        "display_name": "Artificial neural network",
-        "level": 2,
-        "score": 0.26195642
-      },
-      {
-        "id": "https://openalex.org/C71924100",
-        "wikidata": "https://www.wikidata.org/wiki/Q11190",
-        "display_name": "Medicine",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C185592680",
-        "wikidata": "https://www.wikidata.org/wiki/Q2329",
-        "display_name": "Chemistry",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C187736073",
-        "wikidata": "https://www.wikidata.org/wiki/Q2920921",
-        "display_name": "Management",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C178790620",
-        "wikidata": "https://www.wikidata.org/wiki/Q11351",
-        "display_name": "Organic chemistry",
-        "level": 1,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C162324750",
-        "wikidata": "https://www.wikidata.org/wiki/Q8134",
-        "display_name": "Economics",
-        "level": 0,
-        "score": 0.0
-      },
-      {
-        "id": "https://openalex.org/C126838900",
-        "wikidata": "https://www.wikidata.org/wiki/Q77604",
-        "display_name": "Radiology",
-        "level": 1,
-        "score": 0.0
-      }
+      "Computer Science",
+      "Mathematics"
     ],
     "external_ids": {
-      "OpenAlex": "https://openalex.org/W2971071159"
+      "DBLP": "conf/nips/LiSLZZCS19",
+      "ArXiv": "1906.00562",
+      "MAG": "2947298857",
+      "CorpusId": 173990853
     },
-    "semantic_scholar_id": null,
+    "semantic_scholar_id": "2ff8c20ff38df9bfa2c89e8e3f8624598a7ea44f",
     "arxiv_id": null,
     "doi": null,
     "ref_id": 5,
@@ -676,8 +168,8 @@
     "title": "Transforming Auto-Encoders",
     "authors": [
       "author-3",
-      "author-21",
-      "author-22"
+      "author-1",
+      "author-20"
     ],
     "year": 2011,
     "venue": "venue-4",

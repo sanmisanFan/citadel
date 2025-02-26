@@ -10,7 +10,15 @@ class PaperProcessor:
         self.max_retries = 3
         self.request_delay = 1
         self.gpt_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+         # Load the Semantic Scholar API key
+        # Priority: constructor argument -> environment variable
+        self.s2_api_key = os.getenv("S2_API_KEY")
+
         print("DEBUG: Initialized PaperProcessor with Semantic Scholar base URL:", self.s2_base)
+        if self.s2_api_key:
+            print("DEBUG: Semantic Scholar API key loaded successfully.")
+        else:
+            print("WARNING: No Semantic Scholar API key detected!")
         
     def parse_reference_with_gpt(self, ref_text):
         """
@@ -93,16 +101,18 @@ Example:
         return mapping
 
     def get_paper_details(self, paper_id):
-        """Fetch complete paper details from Semantic Scholar using the paper ID"""
+        """Fetch complete paper details from Semantic Scholar using the paper ID."""
         fields = (
             "title,authors.name,authors.authorId,authors.externalIds,"
             "venue,year,citationCount,fieldsOfStudy,externalIds,paperId"
         )
         print(f"DEBUG: Fetching Semantic Scholar details for paper ID: {paper_id}")
         try:
+            # Pass the API key in the header
             response = requests.get(
                 f"{self.s2_base}/paper/{paper_id}",
                 params={"fields": fields},
+                headers={"x-api-key": self.s2_api_key},  # <-- API key here
                 timeout=15
             )
             print("DEBUG: Semantic Scholar API response status:", response.status_code)
@@ -113,6 +123,7 @@ Example:
         except requests.exceptions.RequestException as e:
             print(f"DEBUG: API request failed for paper ID {paper_id}: {e}")
             return None
+
 
     def get_paper_details_openalex(self, title):
         """Fetch paper details from OpenAlex by title"""
@@ -394,7 +405,13 @@ Example:
             "limit": 1  # Only get the first result
         }
         try:
-            response = requests.get(search_url, params=params, timeout=15)
+            # Pass the API key in the header
+            response = requests.get(
+                search_url,
+                params=params,
+                headers={"x-api-key": self.s2_api_key},  # <-- API key here
+                timeout=15
+            )
             print("DEBUG: Semantic Scholar search response status:", response.status_code)
             response.raise_for_status()
             data = response.json()
@@ -408,6 +425,7 @@ Example:
         except Exception as e:
             print("DEBUG: search_paper error:", e)
             return None
+
 
 if __name__ == "__main__":
     processor = PaperProcessor()

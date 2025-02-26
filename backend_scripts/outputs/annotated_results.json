@@ -24,19 +24,29 @@
   {
     "page": 4,
     "ref_id": 1,
-    "text": "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation \u00e2\u20ac\u201c without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
+    "text": "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation \u2013 without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
     "text_bbox": {
-      "height": 0.027187944630789475,
-      "width": 0.4444565305600457,
+      "height": 0.14607844301305076,
+      "width": 0.44445663861919427,
       "x": 0.04637157099956117,
       "y": 0.2691970079254356
     },
-    "citations": []
+    "citations": [
+      {
+        "citation": "[1]",
+        "bbox": {
+          "height": 0.012335816834377195,
+          "width": 0.0195381206201601,
+          "x": 0.3537062018711306,
+          "y": 0.3434575479632323
+        }
+      }
+    ]
   },
   {
     "page": 4,
     "ref_id": 1,
-    "text": "Thus, it is a natural choice to adopt the transformation equivariance as the criterion to train an unsupervised representation, hoping it could be generalizable to unseen tasks without knowledge their labels. This is contrary to the criterion of transformation invariance that tends to tailor the learned representations more specialized to the labels of given tasks. Indeed, it is straightforward to see that the feature maps generated through convolutional layers equivary with the translations \u00e2\u20ac\u201c the feature maps of translated images are also shifted in the same way subject to edge padding effect [1]. This inspires many works to generalize this idea to consider more types of transformations beyond translations (e.g., general image warping and projective transformations) [23]. This can learn a good representation of images by encoding their intrinsic visual structures that equivary with many transformations.",
+    "text": "Thus, it is a natural choice to adopt the transformation equivariance as the criterion to train an unsupervised representation, hoping it could be generalizable to unseen tasks without knowledge their labels. This is contrary to the criterion of transformation invariance that tends to tailor the learned representations more specialized to the labels of given tasks. Indeed, it is straightforward to see that the feature maps generated through convolutional layers equivary with the translations \u2013 the feature maps of translated images are also shifted in the same way subject to edge padding effect [1]. This inspires many works to generalize this idea to consider more types of transformations beyond translations (e.g., general image warping and projective transformations) [23]. This can learn a good representation of images by encoding their intrinsic visual structures that equivary with many transformations.",
     "text_bbox": {
       "height": 0.22033902262855334,
       "width": 0.4445820412610892,
@@ -58,7 +68,7 @@
   {
     "page": 14,
     "ref_id": 1,
-    "text": "At first glance, it looks like a dilemma to enforce two criteria simultaneously, but they actually co-exist well in the celebrated convolutional neural networks underpinning the great success of deep learning\u00e2\u20ac\u201dthe convolutional feature maps equivary to the translations while the output predictions should be invariant under various transformations [1]. The recent efforts [23] on generalizing translation equivariance to generic transformations also present great potentials of training more powerful representations and discriminative models atop to address small data challenges [7], [16], [23].",
+    "text": "At first glance, it looks like a dilemma to enforce two criteria simultaneously, but they actually co-exist well in the celebrated convolutional neural networks underpinning the great success of deep learning\u2014the convolutional feature maps equivary to the translations while the output predictions should be invariant under various transformations [1]. The recent efforts [23] on generalizing translation equivariance to generic transformations also present great potentials of training more powerful representations and discriminative models atop to address small data challenges [7], [16], [23].",
     "text_bbox": {
       "height": 0.07174432802002632,
       "width": 0.4446327074943666,
@@ -102,7 +112,7 @@
   {
     "page": 7,
     "ref_id": 1,
-    "text": "- [1] A. Krizhevsky, I. Sutskever, and G. E. Hinton, \"Imagenet classification with deep convolutional neural networks,\" in Proc. Advances Neural Inf. Process. Syst., 2012, pp. 1097\u00e2\u20ac\u201c1105.",
+    "text": "- [1] A. Krizhevsky, I. Sutskever, and G. E. Hinton, \"Imagenet classification with deep convolutional neural networks,\" in Proc. Advances Neural Inf. Process. Syst., 2012, pp. 1097\u20131105.",
     "text_bbox": {
       "height": 0.012335836623230135,
       "width": 0.059820788224492015,
@@ -136,7 +146,7 @@
   {
     "page": 17,
     "ref_id": 2,
-    "text": "- [2] K. He, X. Zhang, S. Ren, and J. Sun, \"Deep residual learning for image recognition,\" in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2016, pp. 770\u00e2\u20ac\u201c778.",
+    "text": "- [2] K. He, X. Zhang, S. Ren, and J. Sun, \"Deep residual learning for image recognition,\" in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2016, pp. 770\u2013778.",
     "text_bbox": {
       "height": 0.02210858143607706,
       "width": 0.3991528811108394,
@@ -170,7 +180,7 @@
   {
     "page": 17,
     "ref_id": 3,
-    "text": "- [3] C. Finn, P. Abbeel, and S. Levine, \"Model-agnostic meta-learning for fast adaptation of deep networks,\" in Proc. 34th Int. Conf. Mach. Learn., 2017, pp. 1126\u00e2\u20ac\u201c1135.",
+    "text": "- [3] C. Finn, P. Abbeel, and S. Levine, \"Model-agnostic meta-learning for fast adaptation of deep networks,\" in Proc. 34th Int. Conf. Mach. Learn., 2017, pp. 1126\u20131135.",
     "text_bbox": {
       "height": 0.056959917678371774,
       "width": 0.4038657728157977,
@@ -270,7 +280,7 @@
   {
     "page": 7,
     "ref_id": 5,
-    "text": "- [5] X. Li et al., \"Learning to self-train for semi-supervised few-shot classification,\" in Proc. Advances Neural Inf. Process. Syst., 2019, pp. 10 276\u00e2\u20ac\u201c10 286.",
+    "text": "- [5] X. Li et al., \"Learning to self-train for semi-supervised few-shot classification,\" in Proc. Advances Neural Inf. Process. Syst., 2019, pp. 10 276\u201310 286.",
     "text_bbox": {
       "height": 0.012335836623230135,
       "width": 0.059820788224492015,
@@ -326,10 +336,10 @@
   {
     "page": 4,
     "ref_id": 6,
-    "text": "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation \u00e2\u20ac\u201c without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
+    "text": "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation \u2013 without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
     "text_bbox": {
-      "height": 0.027187944630789475,
-      "width": 0.4444565305600457,
+      "height": 0.14607844301305076,
+      "width": 0.44445663861919427,
       "x": 0.04637157099956117,
       "y": 0.2691970079254356
     },
@@ -382,7 +392,7 @@
   {
     "page": 17,
     "ref_id": 6,
-    "text": "- [6] G. E. Hinton, A. Krizhevsky, and S. D. Wang, \"Transforming auto-encoders,\" in Proc. Int. Conf. Artif. Neural Netw., 2011, pp. 44\u00e2\u20ac\u201c51.",
+    "text": "- [6] G. E. Hinton, A. Krizhevsky, and S. D. Wang, \"Transforming auto-encoders,\" in Proc. Int. Conf. Artif. Neural Netw., 2011, pp. 44\u201351.",
     "text_bbox": {
       "height": 0.04527040478098687,
       "width": 0.18967276556103066,
