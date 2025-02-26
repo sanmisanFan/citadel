@@ -1,114 +1,117 @@
 import json
 import igraph as ig
 import leidenalg as la
-import matplotlib.pyplot as plt  # Required for igraph plotting backend
+import matplotlib.pyplot as plt  # for igraph's plotting
 
-# Load citations.json
+# --- Load JSON data ---
 with open('outputs/citations.json', 'r') as f:
     citations_data = json.load(f)['citations']
 
-# Load authors.json
 with open('outputs/authors.json', 'r') as f:
     authors_data = json.load(f)['authors']
 
-# Create an undirected graph
-author_G = ig.Graph(directed=False)
+# --- Create a directed graph ---
+author_G = ig.Graph(directed=True)
 
-# Add vertices (authors)
+# --- Add vertices (authors) ---
 author_ids = [a['id'] for a in authors_data]
 author_G.add_vertices(author_ids)
 for i, author in enumerate(authors_data):
     author_G.vs[i]['name'] = author['standardized_name']
 
-# Add edges (co-authorship and citation links)
-edges = {}
+# --- Build edges ---
+all_edges = []
 for citation in citations_data:
     authors = citation['author']
     cited_ids = citation['citation_graph']
-    # Co-authorship
+    
+    # 1) Co-authorship: add both directions
     for i, a1 in enumerate(authors):
         for a2 in authors[i+1:]:
-            edge = tuple(sorted([a1, a2]))
-            edges[edge] = edges.get(edge, 0) + 1
-    # Citation links
+            all_edges.append((a1, a2))
+            all_edges.append((a2, a1))
+    
+    # 2) Citation: directed from citing → cited
     for cited_id in cited_ids:
         cited_authors = next(c['author'] for c in citations_data if c['id'] == cited_id)
         for a1 in authors:
             for a2 in cited_authors:
                 if a1 != a2:
-                    edge = tuple(sorted([a1, a2]))
-                    edges[edge] = edges.get(edge, 0) + 1
+                    all_edges.append((a1, a2))
 
-# Add weighted edges
-edge_list = [(author_ids.index(e[0]), author_ids.index(e[1])) for e in edges.keys()]
-weight_list = [edges[e] for e in edges.keys()]
+# Remove duplicates, convert to graph indices
+unique_edges = list(set(all_edges))
+edge_list = []
+for src, tgt in unique_edges:
+    try:
+        src_idx = author_ids.index(src)
+        tgt_idx = author_ids.index(tgt)
+        edge_list.append((src_idx, tgt_idx))
+    except ValueError:
+        pass
+
+# Add edges to the graph
 author_G.add_edges(edge_list)
-author_G.es['weight'] = weight_list
 
-print(author_G.summary())  # Check: nodes = authors, edges = relationships
+# ----------------------------------------------------------------------
+#  1) Run the Leiden algorithm
+# ----------------------------------------------------------------------
+# Leiden can be used with various VertexPartition classes, each measuring
+# “community quality” differently. For directed graphs, you can use
+# RBConfigurationVertexPartition (or alternatives like CPMVertexPartition).
+# If your edges have weights, provide 'weights' in the call.
 
-# Apply Leiden with weighted modularity
-partition = la.find_partition(author_G, la.ModularityVertexPartition, weights='weight')
+partition = la.find_partition(
+    author_G,
+    la.RBConfigurationVertexPartition,  # Works on directed graphs
+    weights=None,                       # or 'weight' if you tracked weights
+    resolution_parameter=1.0
+)
 
-# Extract communities
+# partition.membership is a list, where each element is the community ID
+# for the corresponding node (vertex)
+
+# ----------------------------------------------------------------------
+#  2) Examine Communities
+# ----------------------------------------------------------------------
 communities = {}
-for i, vertex in enumerate(author_G.vs):
-    comm_id = partition.membership[i]
-    if comm_id not in communities:
-        communities[comm_id] = []
-    communities[comm_id].append(vertex['name'])
+for i, comm_id in enumerate(partition.membership):
+    communities.setdefault(comm_id, []).append(author_G.vs[i]['name'])
 
-# Filter and display potential author rings
-for comm_id, authors in communities.items():
-    if len(authors) > 2:  # Filter small groups
-        print(f"Author Community {comm_id} (Size: {len(authors)}):")
-        for auth_name in authors:
-            author = next(a for a in authors_data if a['standardized_name'] == auth_name)
-            print(f" - {auth_name}: {author['citation']}")
+for comm_id, member_list in communities.items():
+    print(f"Community {comm_id} (size={len(member_list)}):")
+    for name in member_list:
+        print("   ", name)
 
-# --- Improved Visualization ---
-# Assign colors to communities
-colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange', 'pink', 'cyan', 'magenta', 'lime']
-for i, vertex in enumerate(author_G.vs):
-    comm_id = partition.membership[i]
-    vertex['color'] = colors[comm_id % len(colors)]  # Cycle through colors
+# If you want to measure the modularity-like score for this partition:
+print("\nPartition quality (modularity-like):", partition.quality())
 
-# Set node sizes based on degree (scaled down for clarity)
-author_G.vs['size'] = [max(v.degree(), 1) * 5 + 10 for v in author_G.vs]  # Smaller nodes to reduce overlap
+# ----------------------------------------------------------------------
+#  3) Plot the Graph with Community Colors
+# ----------------------------------------------------------------------
+# Assign each community a color
+colors = [
+    "red", "blue", "green", "yellow", "purple", "orange",
+    "pink", "cyan", "magenta", "lime"
+]
+for v_idx, comm_id in enumerate(partition.membership):
+    author_G.vs[v_idx]["color"] = colors[comm_id % len(colors)]
 
-# Set labels (shortened to initials or first 10 characters)
-author_G.vs['label'] = [name.split('.')[0][:10] + '...' if '.' in name else name[:10] + '...' for name in author_G.vs['name']]
-
-# Use Kamada-Kawai layout for better spacing (or try "circle" for circular layout)
-layout = author_G.layout("kk")  # Kamada-Kawai for clearer separation
-
-# Filter to show only communities with >2 authors to reduce clutter
-visible_nodes = []
-for comm_id, authors in communities.items():
-    if len(authors) > 2:
-        for author in authors:
-            idx = author_G.vs.find(name=author).index
-            visible_nodes.append(idx)
-
-# Subgraph with only selected nodes (and their edges)
-subgraph = author_G.subgraph(visible_nodes)
-
-# Visual style for the subgraph
+# Layout and style
+layout = author_G.layout("kk")  # or "fr", "graphopt", etc.
 visual_style = {
-    "vertex_size": [max(v.degree(), 1) * 5 + 10 for v in subgraph.vs],  # Smaller nodes
-    "vertex_color": [subgraph.vs[i]['color'] for i in range(len(subgraph.vs))],
-    "vertex_label": [subgraph.vs[i]['label'] for i in range(len(subgraph.vs))],
-    "vertex_label_size": 8,  # Smaller font to reduce overlap
-    "vertex_label_dist": 1.5,  # Adjust label position outward
-    "edge_width": [w / 5 for w in subgraph.es['weight']],  # Thinner edges for clarity
     "layout": layout,
-    "bbox": (1200, 900),  # Larger figure size
-    "margin": 100  # More margin to prevent overlap
+    "vertex_size": 20,
+    "vertex_label": author_G.vs['name'],
+    "vertex_label_size": 10,
+    "edge_arrow_size": 0.8,
+    "edge_curved": 0.2,
+    "bbox": (2000, 2000),
+    "margin": 100
 }
 
-# Plot and save
 try:
-    ig.plot(subgraph, **visual_style, target='author_communities_improved.png')
-    print("Improved graph saved as 'author_communities_improved.png'")
+    ig.plot(author_G, target="directed_leiden_graph.png", **visual_style)
+    print("Graph with Leiden communities saved as 'directed_leiden_graph.png'")
 except AttributeError as e:
-    print(f"Plotting failed: {e}. Please ensure pycairo or cairocffi is installed.")
+    print(f"Plotting failed: {e}\nPlease ensure pycairo or cairocffi is installed.")
