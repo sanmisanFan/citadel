@@ -1,0 +1,34 @@
+{
+  "identifiedIssue": [
+    {
+      "id": "issue-0",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "lowRelevancy",
+        "displayName": "Low Relevancy",
+        "options": {
+          "citationRing": true,
+          "selfCitation": true
+        }
+      },
+      "paper": ["citation-21"],
+      "page": 1,
+      "sentence": [
+        {
+          "sentence": "researchers have developed sophisticated spatial",
+          "bbox": null
+        },
+        {
+          "sentence": "eling techniques and software, such as multiscale geographically",
+          "bbox": null
+        },
+        {
+          "sentence":  "weighted regression",
+          "bbox": null
+        }
+      ]
+    }
+   
+  ]
+}
