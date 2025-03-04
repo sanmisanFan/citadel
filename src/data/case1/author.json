@@ -1,0 +1,124 @@
+{
+  "authors": [
+    {
+      "id": "author-0",
+      "raw_name": "H. Solo",
+      "standardized_name": "Han Solo",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": ["citation-1"],
+      "venue": ["venue-0", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    },
+    {
+      "id": "author-1",
+      "raw_name": "L. Skywalker",
+      "standardized_name": "Luke Skywalker",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": ["citation-2"],
+      "venue": ["venue-1", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    },
+    {
+      "id": "author-2",
+      "raw_name": "O.-W. Kenobi",
+      "standardized_name": "Obi-Wan Kenobi",
+      "openalex_link":null,
+      "orcid": null,
+      "citation": ["citation-3", "citation-2"],
+      "venue": ["venue-2", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    },
+    {
+      "id": "author-3",
+      "raw_name": "D. Smeesters",
+      "standardized_name": "Dirk Smeesters",
+      "openalex_link": "https://openalex.org/authors/a5058793975",
+      "orcid": null,
+      "citation": ["citation-3", "citation-2"],
+      "venue": ["venue-2", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    },
+    {
+      "id": "author-4",
+      "raw_name": "J. Liu",
+      "standardized_name": "Jia Liu",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": ["citation-3", "citation-2"],
+      "venue": ["venue-2", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    },
+    {
+      "id": "author-5",
+      "raw_name": "J. Hutt",
+      "standardized_name": "Jabba Hutt",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": ["citation-3", "citation-2"],
+      "venue": ["venue-2", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    },
+    {
+      "id": "author-6",
+      "raw_name": "L. Organa",
+      "standardized_name": "Leia Organa",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": ["citation-3", "citation-2"],
+      "venue": ["venue-2", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    },
+    {
+      "id": "author-7",
+      "raw_name": "Q.-G. Jinn",
+      "standardized_name": "Qui-Gon Jinn",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": ["citation-26", "citation-27"],
+      "venue": ["venue-2", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    },
+    {
+      "id": "author-8",
+      "raw_name": "A. Skywalker",
+      "standardized_name": "Anakin Skywalker",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": ["citation-26", "citation-27"],
+      "venue": ["venue-2", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    },
+    {
+      "id": "author-9",
+      "raw_name": "M. Windu",
+      "standardized_name": "Mace Windu",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": ["citation-26", "citation-27"],
+      "venue": ["venue-2", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    },
+    {
+      "id": "author-10",
+      "raw_name": "Chewbacca",
+      "standardized_name": "Chewbacca",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": ["citation-26", "citation-27"],
+      "venue": ["venue-2", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    },
+    {
+      "id": "author-10",
+      "raw_name": "D. Vader",
+      "standardized_name": "Darth Vader",
+      "openalex_link": null,
+      "orcid": null,
+      "citation": ["citation-26", "citation-27"],
+      "venue": ["venue-2", "venue-3"],
+      "author_graph": ["author-graph-1"]
+    }
+  ]
+}

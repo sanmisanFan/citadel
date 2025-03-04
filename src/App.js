@@ -12,13 +12,18 @@ import { VisContainer } from "./components/visContainer";
 import { extractAndHighlight } from "./util/pdfUtil";
 
 /** Import TEST Data */
-import authorRaw from "./data/author.json";
+/*import authorRaw from "./data/author.json";
 import venueRaw from "./data/venue.json";
 import citationRaw from "./data/citation.json";
+import anomalousRaw from "./data/anomalous.json";*/
+import authorRaw from "./data/author.json";
+import venueRaw from "./data/venue.json";
+import citationRaw from "./data/case1/citation.json";
 import anomalousRaw from "./data/anomalous.json";
 
 /** load test PDF - should be uploaded by user */
-import samplePDF from "./data/testpaper.pdf";
+//import samplePDF from "./data/testpaper.pdf";
+import samplePDF from "./data/case1/reviewerAPP_case1.pdf";
 
 const anomalousColorScheme = {
   citation: {

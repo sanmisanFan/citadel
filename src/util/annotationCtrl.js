@@ -10,7 +10,7 @@ export const citationHighlight = (
   setActiveHighlight
 ) => {
   const bboxHeightOffest = 0.003;
-  //console.log('activeHighlight', activeHighlight);
+  console.log('citation', citation);
   if (!viewerRef.current) return;
 
   const viewer = viewerRef.current;

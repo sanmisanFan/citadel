@@ -44,12 +44,12 @@ export const HighlightBbox = ({
         top: 0,
         width: "100%",
         height: "100%",
-        background: activeHighlight === cite.issues[0] ? boxColor : "",
-        //transition: "all 0.2s ease-out",
+        //background: activeHighlight === cite.issues[0] ? boxColor : "",
+        background: "blue",
         border: categoryColor !== null ? "3px solid" : "",
         borderColor: categoryColor !== null ? categoryColor : "",
         borderRadius: 8,
-        //opacity: 0.5,
+        opacity: 0.5,
         cursor: "pointer",
         pointerEvents: "auto"
       }}
