@@ -11,6 +11,9 @@ import { VisContainer } from "./components/visContainer";
 /** Import utilitie functions */
 import { extractAndHighlight } from "./util/pdfUtil";
 
+/** Import annotation configure */
+import { anomalousColorScheme } from "./annotationConfig";
+
 /** Import TEST Data */
 /*import authorRaw from "./data/author.json";
 import venueRaw from "./data/venue.json";
@@ -24,48 +27,6 @@ import anomalousRaw from "./data/anomalous.json";
 /** load test PDF - should be uploaded by user */
 //import samplePDF from "./data/testpaper.pdf";
 import samplePDF from "./data/case1/reviewerAPP_case1.pdf";
-
-const anomalousColorScheme = {
-  citation: {
-    baseColor: "rgba(197,27,138,1)",
-    boxColor: "rgba(197,27,138,0.3)",
-    annotationCss: "rgba(197,27,138,0.3)",
-    category: {
-      lowRelevancy: {
-        baseColor: "rgba(247,104,161,1)",
-        boxColor: "rgba(247,104,161,0.3)",
-        annotationCss: "linear-gradient(135deg, rgba(197,27,138,0.5) 50%, rgba(247,104,161,0.5) 50%)",
-        divCss: "linear-gradient(135deg, rgba(197,27,138,1) 50%, rgba(247,104,161,1) 50%)"
-      },
-      retractedPaper: {
-        baseColor: "rgba(251,180,185,1)",
-        boxColor: "rgba(251,180,185,0.3)",
-        annotationCss: "linear-gradient(135deg, rgba(197,27,138,0.5) 50%, rgba(251,180,185,0.5) 50%)",
-        divCss: "linear-gradient(135deg, rgba(197,27,138,1) 50%, rgba(251,180,185,1) 50%)",
-      }
-    }
-  },
-  statistic: {
-    baseColor: "rgba(217,95,14,1)",
-    boxColor: "rgba(217,95,14,0.3)",
-    annotationCss: "rgba(217,95,14,0.3)",
-    category: {
-      testFailure: {
-        baseColor: "rgba(254,196,79,1)",
-        boxColor: "rgba(254,196,79,0.3)",
-        annotationCss: "linear-gradient(135deg, rgba(217,95,14,0.3) 50%, rgba(254,196,79,0.3) 50%)",
-        divCss: "linear-gradient(135deg, rgba(217,95,14,1) 50%, rgba(254,196,79,1) 50%)"
-      },
-      valueInconsistency: {
-        baseColor: "rgba(255,247,188,1)",
-        boxColor: "rgba(255,247,188,0.3)",
-        annotationCss: "linear-gradient(135deg, rgba(217,95,14,0.3) 50%, rgba(255,247,188,0.3) 50%)",
-        divCss: "linear-gradient(135deg, rgba(217,95,14,1) 50%, rgba(255,247,188,1) 50%)"
-      }
-    }
-  },
-  other: {} // other anomalous such as the figure that has never been referenced
-};
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -144,14 +105,17 @@ function App() {
     setVenue(venueList);
   };
 
+  /** PDF file on load */
   useEffect(() => {
     setPdfData(samplePDF);
   }, []);
 
+  /** load citation objects */
   useEffect(() => {
     initCitations();
   }, [citationRaw]);
 
+  /**  */
   useEffect(() => {
     initAnomalous();
   }, [anomalousRaw]);
