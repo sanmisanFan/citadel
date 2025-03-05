@@ -1,203 +1,854 @@
 [
   {
-    "title": "ImageNet classification with deep convolutional neural networks",
+    "title": "Geographically Weighted Regression: A Method for Exploring Spatial Nonstationarity",
     "authors": [
       "author-1",
       "author-2",
       "author-3"
     ],
-    "year": 2012,
+    "year": 2010,
     "venue": "venue-1",
-    "raw_venue": "Proc. Advances Neural Inf. Process. Syst.",
-    "citation_count": 115913,
+    "raw_venue": "Geographical Analysis",
+    "citation_count": 2651,
     "fields_of_study": [
       "Computer Science"
     ],
     "external_ids": {
-      "MAG": "2618530766",
-      "DBLP": "conf/nips/KrizhevskySH12",
-      "DOI": "10.1145/3065386",
-      "CorpusId": 195908774
+      "MAG": "2047120335",
+      "DOI": "10.1111/J.1538-4632.1996.TB00936.X",
+      "CorpusId": 20785411
     },
-    "semantic_scholar_id": "abd1c342495432171beb7ca8fd9551ef13cbd0ff",
+    "semantic_scholar_id": "a6fa2cb155b15b3415b630c16e5903e389890c6f",
     "arxiv_id": null,
-    "doi": "10.1145/3065386",
+    "doi": "10.1111/J.1538-4632.1996.TB00936.X",
     "ref_id": 1,
+    "is_artificial": false,
     "reference_mentions": [
-      "THIS paper aims at a comprehensive survey of recent progresses on unsupervised and semi-supervised methods addressing the challenges of training models with a small number or none of labeled data when a large volume of unlabeled data are available. The success of deep learning often hinges on the availability of a large number of labeled data, where millions of images are labeled to train the deep neural networks [1], [2] to enable these models to be on par with or even surpass the human performances.",
-      "Although a solid theory is still lacking, it is thought that both equivalence and invariance to image translations play a critical role in the success of CNNs, particularly for supervised classification tasks [1], [6]. A typical Convolutional Neural Network (CNN) consists of two parts: the feature maps of input images through multiple convolutional layers, and the classifier of fully connected layers mapping the feature maps to the target labels.",
-      "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation – without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
-      "Thus, it is a natural choice to adopt the transformation equivariance as the criterion to train an unsupervised representation, hoping it could be generalizable to unseen tasks without knowledge their labels. This is contrary to the criterion of transformation invariance that tends to tailor the learned representations more specialized to the labels of given tasks. Indeed, it is straightforward to see that the feature maps generated through convolutional layers equivary with the translations – the feature maps of translated images are also shifted in the same way subject to edge padding effect [1]. This inspires many works to generalize this idea to consider more types of transformations beyond translations (e.g., general image warping and projective transformations) [23]. This can learn a good representation of images by encoding their intrinsic visual structures that equivary with many transformations.",
-      "At first glance, it looks like a dilemma to enforce two criteria simultaneously, but they actually co-exist well in the celebrated convolutional neural networks underpinning the great success of deep learning—the convolutional feature maps equivary to the translations while the output predictions should be invariant under various transformations [1]. The recent efforts [23] on generalizing translation equivariance to generic transformations also present great potentials of training more powerful representations and discriminative models atop to address small data challenges [7], [16], [23].",
-      "Data augmentation has become a standard preprocessing step in training deep networks since the introduction of Alexnet [1]. It aims to augment the training set with more variations through different transformations such as spatial augmentations (e.g., random crops, mirror flips, random translations), color jittering, and random noises.",
-      "- [1] A. Krizhevsky, I. Sutskever, and G. E. Hinton, \"Imagenet classification with deep convolutional neural networks,\" in Proc. Advances Neural Inf. Process. Syst., 2012, pp. 1097–1105."
+      "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+      "- [1] C. Brunsdon, A. S. Fotheringham, and M. E. Charlton. Geographically weighted regression: A method for exploring spatial nonstationarity. _Geographical Analysis_, 28(4):281–298, 1996. doi: 10.1111/j. 1538-4632.1996.tb00936.x 1"
     ],
     "citation_key": "citation-1"
   },
   {
-    "title": "Deep Residual Learning for Image Recognition",
+    "title": "Multiscale Geographically Weighted Regression (MGWR)",
     "authors": [
+      "author-2",
       "author-4",
-      "author-5",
-      "author-6",
-      "author-7"
+      "author-5"
     ],
-    "year": 2015,
+    "year": 2017,
     "venue": "venue-2",
-    "raw_venue": "Proc. IEEE Conf. Comput. Vis. Pattern Recognit.",
-    "citation_count": 181783,
+    "raw_venue": "Annals of the American Association of Geographers",
+    "citation_count": 0,
     "fields_of_study": [
-      "Computer Science"
+      {
+        "id": "https://openalex.org/C2778755073",
+        "wikidata": "https://www.wikidata.org/wiki/Q10858537",
+        "display_name": "Scale (ratio)",
+        "level": 2,
+        "score": 0.61235404
+      },
+      {
+        "id": "https://openalex.org/C2910321205",
+        "wikidata": "https://www.wikidata.org/wiki/Q1938983",
+        "display_name": "Geographically Weighted Regression",
+        "level": 2,
+        "score": 0.607604
+      },
+      {
+        "id": "https://openalex.org/C41008148",
+        "wikidata": "https://www.wikidata.org/wiki/Q21198",
+        "display_name": "Computer science",
+        "level": 0,
+        "score": 0.57766426
+      },
+      {
+        "id": "https://openalex.org/C124101348",
+        "wikidata": "https://www.wikidata.org/wiki/Q172491",
+        "display_name": "Data mining",
+        "level": 1,
+        "score": 0.53097165
+      },
+      {
+        "id": "https://openalex.org/C158709400",
+        "wikidata": "https://www.wikidata.org/wiki/Q3578586",
+        "display_name": "Spatial ecology",
+        "level": 2,
+        "score": 0.5103974
+      },
+      {
+        "id": "https://openalex.org/C159620131",
+        "wikidata": "https://www.wikidata.org/wiki/Q1938983",
+        "display_name": "Spatial analysis",
+        "level": 2,
+        "score": 0.4911537
+      },
+      {
+        "id": "https://openalex.org/C180478619",
+        "wikidata": "https://www.wikidata.org/wiki/Q7574066",
+        "display_name": "Spatial heterogeneity",
+        "level": 2,
+        "score": 0.41404253
+      },
+      {
+        "id": "https://openalex.org/C205649164",
+        "wikidata": "https://www.wikidata.org/wiki/Q1071",
+        "display_name": "Geography",
+        "level": 0,
+        "score": 0.25248158
+      },
+      {
+        "id": "https://openalex.org/C33923547",
+        "wikidata": "https://www.wikidata.org/wiki/Q395",
+        "display_name": "Mathematics",
+        "level": 0,
+        "score": 0.2424098
+      },
+      {
+        "id": "https://openalex.org/C105795698",
+        "wikidata": "https://www.wikidata.org/wiki/Q12483",
+        "display_name": "Statistics",
+        "level": 1,
+        "score": 0.20963207
+      },
+      {
+        "id": "https://openalex.org/C58640448",
+        "wikidata": "https://www.wikidata.org/wiki/Q42515",
+        "display_name": "Cartography",
+        "level": 1,
+        "score": 0.19349894
+      },
+      {
+        "id": "https://openalex.org/C18903297",
+        "wikidata": "https://www.wikidata.org/wiki/Q7150",
+        "display_name": "Ecology",
+        "level": 1,
+        "score": 0.0
+      },
+      {
+        "id": "https://openalex.org/C86803240",
+        "wikidata": "https://www.wikidata.org/wiki/Q420",
+        "display_name": "Biology",
+        "level": 0,
+        "score": 0.0
+      }
     ],
     "external_ids": {
-      "DBLP": "conf/cvpr/HeZRS16",
-      "MAG": "2949650786",
-      "ArXiv": "1512.03385",
-      "DOI": "10.1109/cvpr.2016.90",
-      "CorpusId": 206594692
+      "OpenAlex": "https://openalex.org/W2747207142"
     },
-    "semantic_scholar_id": "2c03df8b48bf3fa39054345bafabfeff15bfd11d",
+    "semantic_scholar_id": null,
     "arxiv_id": null,
-    "doi": "10.1109/cvpr.2016.90",
+    "doi": "https://doi.org/10.1080/24694452.2017.1352480",
     "ref_id": 2,
+    "is_artificial": false,
     "reference_mentions": [
-      "THIS paper aims at a comprehensive survey of recent progresses on unsupervised and semi-supervised methods addressing the challenges of training models with a small number or none of labeled data when a large volume of unlabeled data are available. The success of deep learning often hinges on the availability of a large number of labeled data, where millions of images are labeled to train the deep neural networks [1], [2] to enable these models to be on par with or even surpass the human performances.",
-      "- [2] K. He, X. Zhang, S. Ren, and J. Sun, \"Deep residual learning for image recognition,\" in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2016, pp. 770–778."
+      "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+      "- [2] A. S. Fotheringham, W. Yang, and W. Kang. Multiscale geographically weighted regression (MGWR). _Annals of the American Association of Geographers_, 107(6):1247–1265, 2017. doi: 10.1080/ 24694452.2017.1352480 1"
     ],
     "citation_key": "citation-2"
   },
   {
-    "title": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+    "title": "NewsViews: an automated pipeline for creating custom geovisualizations for news",
     "authors": [
+      "author-6",
+      "author-7",
       "author-8",
       "author-9",
       "author-10"
     ],
-    "year": 2017,
+    "year": 2014,
     "venue": "venue-3",
-    "raw_venue": "Proc. 34th Int. Conf. Mach. Learn.",
-    "citation_count": 11081,
+    "raw_venue": "CHI",
+    "citation_count": 89,
     "fields_of_study": [
       "Computer Science"
     ],
     "external_ids": {
-      "MAG": "2604763608",
-      "DBLP": "journals/corr/FinnAL17",
-      "ArXiv": "1703.03400",
-      "CorpusId": 6719686
+      "MAG": "1990809386",
+      "DBLP": "conf/chi/GaoHAHD14",
+      "DOI": "10.1145/2556288.2557228",
+      "CorpusId": 1368576
     },
-    "semantic_scholar_id": "c889d6f98e6d79b89c3a6adf8a921f88fa6ba518",
+    "semantic_scholar_id": "df69a5099fc88102643f8fbeeee639072b7fdc2d",
     "arxiv_id": null,
-    "doi": null,
+    "doi": "10.1145/2556288.2557228",
     "ref_id": 3,
+    "is_artificial": false,
     "reference_mentions": [
-      "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
-      "- [3] C. Finn, P. Abbeel, and S. Levine, \"Model-agnostic meta-learning for fast adaptation of deep networks,\" in Proc. 34th Int. Conf. Mach. Learn., 2017, pp. 1126–1135."
+      "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "- [3] T. Gao, J. Hullman, E. Adar, B. Hecht, and N. Diakopoulos. NewsViews: An automated pipeline for creating custom geovisualizations for news. _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 3005–3014, 2014. doi: 10.1145/ 2556288.2557228 1"
     ],
     "citation_key": "citation-3"
   },
   {
-    "title": "Task Agnostic Meta-Learning for Few-Shot Learning",
+    "title": "Visualizing Multiple Variables Across Scale and Geography",
     "authors": [
       "author-11",
       "author-12",
-      "author-13"
+      "author-13",
+      "author-14"
     ],
-    "year": 2018,
-    "venue": null,
-    "raw_venue": "arXiv",
-    "citation_count": 440,
+    "year": 2016,
+    "venue": "venue-4",
+    "raw_venue": "IEEE Transactions on Visualization and Computer Graphics",
+    "citation_count": 57,
     "fields_of_study": [
       "Computer Science",
-      "Mathematics"
+      "Medicine"
     ],
     "external_ids": {
-      "ArXiv": "1805.07722",
-      "DBLP": "journals/corr/abs-1805-07722",
-      "MAG": "2804962156",
-      "DOI": "10.1109/CVPR.2019.01199",
-      "CorpusId": 29156972
+      "MAG": "1922630791",
+      "DBLP": "journals/tvcg/GoodwinDST16",
+      "DOI": "10.1109/TVCG.2015.2467199",
+      "CorpusId": 14333394,
+      "PubMed": "26390471"
     },
-    "semantic_scholar_id": "06f0fe16fcb8f80bf88746c5ef6d3780531918ab",
-    "arxiv_id": "1805.07722",
-    "doi": "10.1109/CVPR.2019.01199",
+    "semantic_scholar_id": "3914f6d073add69ec6f06bc8f852a2b9e045fa65",
+    "arxiv_id": null,
+    "doi": "10.1109/TVCG.2015.2467199",
     "ref_id": 4,
+    "is_artificial": false,
     "reference_mentions": [
-      "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
-      "In the spectrum of semi-supervised methods also resides Few-Shot Learning (FSL) when auxiliary tasks on a disjoint set of concepts are leveraged to improve the model training. On one hand, it is like zero-shot learning when conceptual correlations can be used to share information between different concepts through their embedded representations. On the other hand, a group of auxiliary tasks can be sampled from a collection of base concepts, and a meta-model can be trained to distill the knowledge of how to update models with few examples (e.g., the initial point, and the rule of updating model parameters) [4] along with the unlabeled examples in a semi-supervised fashion [5], [12], [13]. Thus, the FSL can be viewed as a semi-supervised problem that has few labeled examples available on the target concepts, along with many examples labeled on auxiliary concepts (which thus should be viewed as unlabeled on the target concepts). For a comprehensive review of FSL, the interested readers can refer to [14].",
-      "- [4] M. A. Jamal, G.-J. Qi, and M. Shah, \"Task-agnostic meta-learning for few-shot learning,\" 2018, arXiv: 1805.07722."
+      "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and ¨ Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+      "- [4] S. Goodwin, J. Dykes, A. Slingsby, and C. Turkay. Visualizing multiple variables across scale and geography. _IEEE Transactions on Visualization and Computer Graphics_, 22:599–608, 1 2016. doi: 10. 1109/TVCG.2015.2467199 2"
     ],
     "citation_key": "citation-4"
   },
   {
-    "title": "Learning to Self-Train for Semi-Supervised Few-Shot Classification",
+    "title": "Visualization Rhetoric: Framing Effects in Narrative Visualization",
     "authors": [
-      "author-14",
-      "author-15",
-      "author-16",
-      "author-17",
-      "author-18",
-      "author-19"
+      "author-7",
+      "author-10"
     ],
-    "year": 2019,
-    "venue": "venue-1",
-    "raw_venue": "Proc. Advances Neural Inf. Process. Syst.",
-    "citation_count": 263,
+    "year": 2011,
+    "venue": "venue-4",
+    "raw_venue": "IEEE TVCG",
+    "citation_count": 439,
     "fields_of_study": [
       "Computer Science",
-      "Mathematics"
+      "Medicine"
     ],
     "external_ids": {
-      "DBLP": "conf/nips/LiSLZZCS19",
-      "ArXiv": "1906.00562",
-      "MAG": "2947298857",
-      "CorpusId": 173990853
+      "MAG": "2108982845",
+      "DBLP": "journals/tvcg/HullmanD11",
+      "DOI": "10.1109/TVCG.2011.255",
+      "CorpusId": 10436985,
+      "PubMed": "22034342"
     },
-    "semantic_scholar_id": "2ff8c20ff38df9bfa2c89e8e3f8624598a7ea44f",
+    "semantic_scholar_id": "537a94e3250153310f5920dce370df08612f7fa7",
     "arxiv_id": null,
-    "doi": null,
+    "doi": "10.1109/TVCG.2011.255",
     "ref_id": 5,
+    "is_artificial": false,
     "reference_mentions": [
-      "- Auxiliary tasks. Auxiliary tasks can also be leveraged to mitigate small data problems as an important source of side information. For example, a related task can be a learning problem on a disjoint set of concepts that are related to the target task. This falls into the category of Zero-Shot Learning (ZSL) and Few-Shot Learning (FSL) problems. In a generalized sense, the ZSL problem can be viewed as an unsupervised learning problem with no labeled example on the target task, while the FSL is semi-supervised with few available labeled data. Both aim to transfer the semantic knowledge or the knowledge of learning (e.g., meta-learning [3], [4], [5]) from the source tasks to the target ones.",
-      "In the spectrum of semi-supervised methods also resides Few-Shot Learning (FSL) when auxiliary tasks on a disjoint set of concepts are leveraged to improve the model training. On one hand, it is like zero-shot learning when conceptual correlations can be used to share information between different concepts through their embedded representations. On the other hand, a group of auxiliary tasks can be sampled from a collection of base concepts, and a meta-model can be trained to distill the knowledge of how to update models with few examples (e.g., the initial point, and the rule of updating model parameters) [4] along with the unlabeled examples in a semi-supervised fashion [5], [12], [13]. Thus, the FSL can be viewed as a semi-supervised problem that has few labeled examples available on the target concepts, along with many examples labeled on auxiliary concepts (which thus should be viewed as unlabeled on the target concepts). For a comprehensive review of FSL, the interested readers can refer to [14].",
-      "- [5] X. Li et al., \"Learning to self-train for semi-supervised few-shot classification,\" in Proc. Advances Neural Inf. Process. Syst., 2019, pp. 10 276–10 286."
+      "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "- [5] J. Hullman and N. Diakopoulos. Visualization rhetoric: Framing effects in narrative visualization. _IEEE Transactions on Visualization and Computer Graphics_, 17(12):2231–2240, 2011. doi: 10.1109/ TVCG.2011.255 1"
     ],
     "citation_key": "citation-5"
   },
   {
-    "title": "Transforming Auto-Encoders",
+    "title": "Artificial reference paper 4",
     "authors": [
-      "author-3",
-      "author-1",
-      "author-20"
+      "author-15"
     ],
-    "year": 2011,
-    "venue": "venue-4",
-    "raw_venue": "Proc. Int. Conf. Artif. Neural Netw.",
-    "citation_count": 1227,
+    "year": 2025,
+    "venue": "venue-5",
+    "raw_venue": "_Fake Journal 2_",
+    "citation_count": 0,
+    "fields_of_study": [],
+    "external_ids": {},
+    "semantic_scholar_id": null,
+    "arxiv_id": null,
+    "doi": "10.1080/13658816.2020.1720692",
+    "ref_id": 6,
+    "is_artificial": true,
+    "reference_mentions": [
+      "Support for a variety of spatial models is integrated into the most widely used geographic information systems (GIS). However, these systems and notebooks do not support integrated external knowledge sources to help contextualize models [6]. They also require analysts to judiciously choose the proper tools at every stage of the analytical pipeline to build a well-trained model. This process necessitates a solid foundation in geographical concepts and can be time-consuming, even for seasoned analysts. Our goal is to enhance the spatial modeling process through a deliberately designed userfriendly workflow and automatically generated explanatory narratives guided by domain experts to promote the understanding of local contextual information from models. Our work focuses on improving model explainability, enabling interactive report authoring, and supporting contextualization through narrative generation. This is important in local models such as GWR and MGWR because the main output from such models is a set of local parameter estimates from each process being modeled, and the spatial variation in these estimates needs to be explained in terms of the contextualized environment of each location by providing additional contextual information for users.",
+      "- [6] J. Hutt. Artificial reference paper 4. _Fake Journal 2_, 10(2):1–4, 2025. doi: 10.1080/13658816.2020.1720692 1"
+    ],
+    "citation_key": "citation-6"
+  },
+  {
+    "title": "Storytelling: The Next Step for Visualization",
+    "authors": [
+      "author-16",
+      "author-17"
+    ],
+    "year": 2013,
+    "venue": "venue-6",
+    "raw_venue": "Computer",
+    "citation_count": 433,
     "fields_of_study": [
-      "Mathematics",
       "Computer Science"
     ],
     "external_ids": {
-      "MAG": "2966661",
-      "DBLP": "conf/icann/HintonKW11",
-      "DOI": "10.1007/978-3-642-21735-7_6",
-      "CorpusId": 6138085
+      "MAG": "2163805179",
+      "DBLP": "journals/computer/KosaraM13",
+      "DOI": "10.1109/MC.2013.36",
+      "CorpusId": 11740454
     },
-    "semantic_scholar_id": "20f0357688876fa4662f806f985779dce6e24f3c",
+    "semantic_scholar_id": "b7a7717d09deb7606758a27fbde49f77f92c7982",
     "arxiv_id": null,
-    "doi": "10.1007/978-3-642-21735-7_6",
-    "ref_id": 6,
+    "doi": "10.1109/MC.2013.36",
+    "ref_id": 7,
+    "is_artificial": false,
     "reference_mentions": [
-      "A variety of principles and models have been devoted to training unsupervised representations. As shown in Fig. C.3, available in the online supplemental material, we will review them from several different perspectives. First, we will review the emerging principle of Transformation Equivariant Representations(TER) pioneered in Hinton's seminal work [6] as well as the recent formulation of unsupervised training of such representations [7]. It follows by reviewing a number of generative networks representative in many recent models, including the variants of auto-encoders, Generative Adversarial Nets (GANs), Flow-based Generative Networks, and Transformers (See Fig. C.3, available in the online supplemental material). The principle of learning disentangling representationsfrom these generative models is also central to many unsupervised methods, and we will review them on how to extract interpretable generative factors from unlabeled data. Finally, self-supervised methods constitutes a large category of unsupervised models, and we will review autoregressive models as well as the selfsupervised training of image and video representations.",
-      "- Transformation-Equivariant Representations. Recently, learning transformation-equivariant representations (TERs) from unlabeled data has attracted many attentions in both unsupervised and supervised methods. In particular, a good TER equivaries with different types of transformations so that the scene structure in an image can be compactly encoded into its representation. Then the successive problems for recognizing unseen visual concepts can be performed on top of the trained TER. The notion of TER was originally proposed by Hinton et al. [6] in introducing capsule nets and it has been formalized in various ways. We will review it in Section 2.2.",
-      "Although a solid theory is still lacking, it is thought that both equivalence and invariance to image translations play a critical role in the success of CNNs, particularly for supervised classification tasks [1], [6]. A typical Convolutional Neural Network (CNN) consists of two parts: the feature maps of input images through multiple convolutional layers, and the classifier of fully connected layers mapping the feature maps to the target labels.",
-      "While the resultant feature maps are equivariant to the translation of an input image, the fully connected classifier should be predict labels invariant to any transformations. Before the concept of learning Transformation-Equivariance Representations (TER) was proposed by Hinton et al. [6], [23], [24], [25], most attentions have been paid on the transformation invariance criterion to train supervised models by minimizing the classification errors on labeled images augmented with various transformations [1]. Unfortunately, it is impossible to directly apply transformation invariance to train an unsupervised representation – without the guidance of label supervision, this would lead to a trivial representation invariant to all examples.",
-      "The DC-IGN is semi-supervised to engineer inverse graphics as training images with various transformations are available from 3D face and chair datasets. We also note that a number of inverse graphics models [93], [94], [95] have been proposed to train disentangled representations. Among them are deep lambertian networks [96] that assume a Lambertian reflectance model and implicitly construct the 3D representation, and transforming auto-encoders [6], [97] that use a domain-specific decoder to reconstruct images, as well as [98] with an approximate differentiable renderer to explicitly capture the relationship between changes in model parameters and image observations.",
-      "A more theoretical topic lies on revealing the intrinsic relation between transformation equivariance and invariance in learning representations. On the one hand, the pursuit of Transformation Equivariant Representation (TER) has been spotlighted as one of critical criteria [6] that achieves the state-of-the-art performances in unsupervised learning [7], [16]. However, it is also important and necessary to apply the transformation invariance to train discriminative networks with labeled data in supervised tasks for recognizing images and objects.",
-      "- [6] G. E. Hinton, A. Krizhevsky, and S. D. Wang, \"Transforming auto-encoders,\" in Proc. Int. Conf. Artif. Neural Netw., 2011, pp. 44–51."
+      "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+      "Many of these systems utilize annotations to enhance the visual narratives, and Kosara and Mackinlay [7] emphasize the importance of annotations for facilitating storytelling in visualization. Recent annotation work [15] has focused on the semi-automatic creation",
+      "- [7] R. Kosara and J. Mackinlay. Storytelling: The next step for visualization. _Computer_, 46(5):44–50, 2013. doi: 10.1109/MC.2013.36 1"
     ],
-    "citation_key": "citation-6"
+    "citation_key": "citation-7"
+  },
+  {
+    "title": "Interacting with Predictions: Visual Inspection of Black-box Machine Learning Models",
+    "authors": [
+      "author-18",
+      "author-19",
+      "author-20"
+    ],
+    "year": 2016,
+    "venue": "venue-7",
+    "raw_venue": "CHI",
+    "citation_count": 371,
+    "fields_of_study": [
+      "Computer Science"
+    ],
+    "external_ids": {
+      "MAG": "2394669110",
+      "DBLP": "conf/chi/KrausePN16",
+      "DOI": "10.1145/2858036.2858529",
+      "CorpusId": 14162250
+    },
+    "semantic_scholar_id": "4db4ba1c0bebb91f95c59d0aa22dfab6ca6eddf6",
+    "arxiv_id": null,
+    "doi": "10.1145/2858036.2858529",
+    "ref_id": 8,
+    "is_artificial": false,
+    "reference_mentions": [
+      "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+      "- [8] J. Krause, A. Perer, and K. Ng. Interacting with predictions: Visual inspection of black-box machine learning models. In _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 5686–5697, 2016. doi: 10.1145/2858036.2858529 2"
+    ],
+    "citation_key": "citation-8"
+  },
+  {
+    "title": "Automatic Annotation Synchronizing with Textual Description for Visualization",
+    "authors": [
+      "author-21",
+      "author-22",
+      "author-23",
+      "author-24",
+      "author-25",
+      "author-26"
+    ],
+    "year": 2020,
+    "venue": "venue-7",
+    "raw_venue": "CHI",
+    "citation_count": 55,
+    "fields_of_study": [
+      "Computer Science"
+    ],
+    "external_ids": {
+      "MAG": "3031494326",
+      "DBLP": "conf/chi/LaiLJH0Y20",
+      "DOI": "10.1145/3313831.3376443",
+      "CorpusId": 218483598
+    },
+    "semantic_scholar_id": "3af942f4329122871caa313c6c5929c855b68618",
+    "arxiv_id": null,
+    "doi": "10.1145/3313831.3376443",
+    "ref_id": 9,
+    "is_artificial": false,
+    "reference_mentions": [
+      "of presentation-like storytelling visualizations and explored mechanisms for automatically generating annotations by integrating deeplearning feature extraction techniques with a natural language generation process [9]. Annotations in such systems are used to describe salient patterns and facilitate storytelling [23].",
+      "- [9] C. Lai, Z. Lin, R. Jiang, Y. Han, C. Liu, and X. Yuan. Automatic annotation synchronizing with textual description for visualization. _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 1–13, 2020. doi: 10.1145/3313831.3376443 2"
+    ],
+    "citation_key": "citation-9"
+  },
+  {
+    "title": "Interactive map reports summarizing bivariate geographic data",
+    "authors": [
+      "author-27",
+      "author-28"
+    ],
+    "year": 2019,
+    "venue": "venue-8",
+    "raw_venue": "Visual Informatics",
+    "citation_count": 15,
+    "fields_of_study": [
+      "Computer Science"
+    ],
+    "external_ids": {
+      "MAG": "2923187851",
+      "DBLP": "journals/vi/LatifB19",
+      "DOI": "10.1016/J.VISINF.2019.03.004",
+      "CorpusId": 135276508
+    },
+    "semantic_scholar_id": "f9b8d03e48096d107019bb254179c846eb1ad231",
+    "arxiv_id": null,
+    "doi": "10.1016/J.VISINF.2019.03.004",
+    "ref_id": 10,
+    "is_artificial": false,
+    "reference_mentions": [
+      "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "- [10] S. Latif and F. Beck. Interactive map reports summarizing bivariate geographic data. _Visual Informatics_, 3(1):27–37, 2019. doi: 10.1016/j .visinf.2019.03.004 1"
+    ],
+    "citation_key": "citation-10"
+  },
+  {
+    "title": "A Deeper Understanding of Visualization‐Text Interplay in Geographic Data‐driven Stories",
+    "authors": [
+      "author-27",
+      "author-27",
+      "author-28",
+      "author-28"
+    ],
+    "year": 2021,
+    "venue": "venue-9",
+    "raw_venue": "CGF",
+    "citation_count": 28,
+    "fields_of_study": [
+      "Medicine"
+    ],
+    "external_ids": {
+      "DBLP": "journals/cgf/LatifCB21",
+      "DOI": "10.1111/cgf.14309",
+      "CorpusId": 235273165
+    },
+    "semantic_scholar_id": "fd9611b612ffb4cf819ea3197d82d1ae86cee358",
+    "arxiv_id": null,
+    "doi": "10.1111/cgf.14309",
+    "ref_id": 11,
+    "is_artificial": false,
+    "reference_mentions": [
+      "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "- [11] S. Latif, S. Chen, and F. Beck. A deeper understanding of visualization-text interplay in geographic data-driven stories. _Computer Graphics Forum_, 40(3):311–322, 2021. doi: 10.1111/cgf.14309 1"
+    ],
+    "citation_key": "citation-11"
+  },
+  {
+    "title": "The State‐of‐the‐Art in Predictive Visual Analytics",
+    "authors": [
+      "author-29",
+      "author-30",
+      "author-31",
+      "author-32",
+      "author-33"
+    ],
+    "year": 2017,
+    "venue": "venue-9",
+    "raw_venue": "CGF",
+    "citation_count": 89,
+    "fields_of_study": [
+      "Computer Science"
+    ],
+    "external_ids": {
+      "MAG": "2625478334",
+      "DBLP": "journals/cgf/LuGHGM17",
+      "DOI": "10.1111/cgf.13210",
+      "CorpusId": 26243143
+    },
+    "semantic_scholar_id": "585de90664248109f9c972aa09dd4b95c9e11595",
+    "arxiv_id": null,
+    "doi": "10.1111/cgf.13210",
+    "ref_id": 12,
+    "is_artificial": false,
+    "reference_mentions": [
+      "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+      "- [12] Y. Lu, R. Garcia, B. Hansen, M. Gleicher, and R. Maciejewski. The state-of-the-art in predictive visual analytics. _Computer Graphics Forum_, 36(3):539–562, 2017. doi: 10.1111/cgf.13210 2"
+    ],
+    "citation_key": "citation-12"
+  },
+  {
+    "title": "RuleMatrix: Visualizing and Understanding Classifiers with Rules",
+    "authors": [
+      "author-34",
+      "author-35",
+      "author-36"
+    ],
+    "year": 2018,
+    "venue": "venue-4",
+    "raw_venue": "IEEE TVCG",
+    "citation_count": 209,
+    "fields_of_study": [
+      "Medicine",
+      "Computer Science",
+      "Mathematics"
+    ],
+    "external_ids": {
+      "DBLP": "journals/corr/abs-1807-06228",
+      "MAG": "2950232947",
+      "ArXiv": "1807.06228",
+      "DOI": "10.1109/TVCG.2018.2864812",
+      "CorpusId": 49869296,
+      "PubMed": "30130210"
+    },
+    "semantic_scholar_id": "a9b57247bfb912fa8919e8d87b68e09ad81d418a",
+    "arxiv_id": null,
+    "doi": "10.1109/TVCG.2018.2864812",
+    "ref_id": 13,
+    "is_artificial": false,
+    "reference_mentions": [
+      "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+      "- [13] Y. Ming, H. Qu, and E. Bertini. RuleMatrix: Visualizing and understanding classifiers with rules. _IEEE Transactions on Visualization and Computer Graphics_, 25(1):342–352, 2018. doi: 10.1109/TVCG. 2018.2864812 2"
+    ],
+    "citation_key": "citation-13"
+  },
+  {
+    "title": "A Partition-Based Framework for Building and Validating Regression Models",
+    "authors": [
+      "author-37",
+      "author-38"
+    ],
+    "year": 2013,
+    "venue": "venue-4",
+    "raw_venue": "IEEE Trans. Vis. Comput. Graph.",
+    "citation_count": 139,
+    "fields_of_study": [
+      "Computer Science",
+      "Medicine"
+    ],
+    "external_ids": {
+      "MAG": "1974584593",
+      "DBLP": "journals/tvcg/MuhlbacherP13",
+      "DOI": "10.1109/TVCG.2013.125",
+      "CorpusId": 255103,
+      "PubMed": "24051762"
+    },
+    "semantic_scholar_id": "3e02f29a28af37319f63ee91cd1ec97240118e80",
+    "arxiv_id": null,
+    "doi": "10.1109/TVCG.2013.125",
+    "ref_id": 14,
+    "is_artificial": false,
+    "reference_mentions": [
+      "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and ¨ Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+      "- [14] T. Muhlbacher and H. Piringer. A partition-based framework for build- ¨ ing and validating regression models. _IEEE Transactions on Visualization and Computer Graphics_, 19(12):1962–1971, 2013. doi: 10. 1109/TVCG.2013.125 2"
+    ],
+    "citation_key": "citation-14"
+  },
+  {
+    "title": "ChartAccent: Annotation for data-driven storytelling",
+    "authors": [
+      "author-39",
+      "author-40",
+      "author-41",
+      "author-42",
+      "author-43"
+    ],
+    "year": 2017,
+    "venue": "venue-10",
+    "raw_venue": "IEEE Pacific Symposium on Visualization",
+    "citation_count": 122,
+    "fields_of_study": [
+      "Computer Science"
+    ],
+    "external_ids": {
+      "MAG": "2596412070",
+      "DBLP": "conf/apvis/RenBLHC17",
+      "DOI": "10.1109/PACIFICVIS.2017.8031599",
+      "CorpusId": 17645166
+    },
+    "semantic_scholar_id": "58410da56a7ae9cac486ed288f1ebef9091c59a6",
+    "arxiv_id": null,
+    "doi": "10.1109/PACIFICVIS.2017.8031599",
+    "ref_id": 15,
+    "is_artificial": false,
+    "reference_mentions": [
+      "Many of these systems utilize annotations to enhance the visual narratives, and Kosara and Mackinlay [7] emphasize the importance of annotations for facilitating storytelling in visualization. Recent annotation work [15] has focused on the semi-automatic creation",
+      "- [15] D. Ren, M. Brehmer, B. Lee, T. Hollerer, and E. K. Choe. ChartAc- ¨ cent: Annotation for data-driven storytelling. In _IEEE Pacific Symposium on Visualization_, pp. 230–239, 2017. doi: 10.1109/PACIFICVIS .2017.8031599 1"
+    ],
+    "citation_key": "citation-15"
+  },
+  {
+    "title": "Authoring Narrative Visualizations with Ellipsis",
+    "authors": [
+      "author-44",
+      "author-45"
+    ],
+    "year": 2014,
+    "venue": "venue-9",
+    "raw_venue": "Computer Graphics Forum",
+    "citation_count": 142,
+    "fields_of_study": [
+      "Computer Science"
+    ],
+    "external_ids": {
+      "DBLP": "journals/cgf/SatyanarayanH14a",
+      "MAG": "1530372876",
+      "DOI": "10.1111/cgf.12392",
+      "CorpusId": 12903416
+    },
+    "semantic_scholar_id": "b90bad831de7b112b6759fbdff00209fe6aa0320",
+    "arxiv_id": null,
+    "doi": "10.1111/cgf.12392",
+    "ref_id": 16,
+    "is_artificial": false,
+    "reference_mentions": [
+      "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "- [16] A. Satyanarayan and J. Heer. Authoring narrative visualizations with ellipsis. _Computer Graphics Forum_, 33(3):361–370, 2014. doi: 10. 1111/cgf.12392 1"
+    ],
+    "citation_key": "citation-16"
+  },
+  {
+    "title": "Visual Parameter Space Analysis: A Conceptual Framework",
+    "authors": [
+      "author-46",
+      "author-47",
+      "author-48",
+      "author-38",
+      "author-49"
+    ],
+    "year": 2014,
+    "venue": "venue-4",
+    "raw_venue": "IEEE TVCG",
+    "citation_count": 211,
+    "fields_of_study": [
+      "Computer Science",
+      "Medicine"
+    ],
+    "external_ids": {
+      "DBLP": "journals/tvcg/SedlmairHBPM14",
+      "MAG": "1964473154",
+      "DOI": "10.1109/TVCG.2014.2346321",
+      "CorpusId": 1360769,
+      "PubMed": "26356930"
+    },
+    "semantic_scholar_id": "7ca5756e93ac40b8cf853e040f2f38b31a25998a",
+    "arxiv_id": null,
+    "doi": "10.1109/TVCG.2014.2346321",
+    "ref_id": 17,
+    "is_artificial": false,
+    "reference_mentions": [
+      "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and ¨ Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+      "- [17] M. Sedlmair, C. Heinzl, S. Bruckner, H. Piringer, and T. Moller. Vi- ¨ sual parameter space analysis: A conceptual framework. _IEEE Transactions on Visualization and Computer Graphics_, 20:2161–2170, 12 2014. doi: 10.1109/TVCG.2014.2346321 2"
+    ],
+    "citation_key": "citation-17"
+  },
+  {
+    "title": "Narrative Visualization: Telling Stories with Data",
+    "authors": [
+      "author-50",
+      "author-45"
+    ],
+    "year": 2010,
+    "venue": "venue-4",
+    "raw_venue": "IEEE TVCG",
+    "citation_count": 1139,
+    "fields_of_study": [
+      "Computer Science",
+      "Medicine"
+    ],
+    "external_ids": {
+      "MAG": "2157900633",
+      "DBLP": "journals/tvcg/SegelH10",
+      "DOI": "10.1109/TVCG.2010.179",
+      "CorpusId": 1603489,
+      "PubMed": "20975152"
+    },
+    "semantic_scholar_id": "7b2972e2bdd6944338a895c97eecbd12725fdcd8",
+    "arxiv_id": null,
+    "doi": "10.1109/TVCG.2010.179",
+    "ref_id": 18,
+    "is_artificial": false,
+    "reference_mentions": [
+      "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+      "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "- [18] E. Segel and J. Heer. Narrative visualization: Telling stories with data. _IEEE Transactions on Visualization and Computer Graphics_, 16(6):1139–1148, 2010. doi: 10.1109/TVCG.2010.179 1"
+    ],
+    "citation_key": "citation-18"
+  },
+  {
+    "title": "Artificial reference paper 2",
+    "authors": [
+      "author-51",
+      "author-52"
+    ],
+    "year": 2025,
+    "venue": "venue-5",
+    "raw_venue": "_Fake Journal 2_",
+    "citation_count": 0,
+    "fields_of_study": [],
+    "external_ids": {},
+    "semantic_scholar_id": null,
+    "arxiv_id": null,
+    "doi": "10.1080/13658816.2020.1720692",
+    "ref_id": 19,
+    "is_artificial": true,
+    "reference_mentions": [
+      "Geographic models are often used to answer _why_ questions regarding underlying spatial phenomena such as why do voter preferences generally exhibit strong spatial dependency. In order to answer such questions, researchers have developed sophisticated spatial modeling techniques and software, such as multiscale geographically weighted regression [21], to identify the determinants of the spatial patterns of data we observe in both the human and natural environments. However, these models generate output that needs local contextual information to be interpreted properly. Without such information, advanced spatial modeling techniques do not gain their full potential. While a variety of geovisual analytics systems [19] have been developed to explore spatial statistics with the help of interactive maps and narrative annotations, these applications tend to visualize only basic statistical results, and, to our knowledge, none of them explain spatial modeling results.",
+      "- [19] L. Skywalker and O.-W. Kenobi. Artificial reference paper 2. _Fake Journal 2_, 10(2):1–4, 2025. doi: 10.1080/13658816.2020.1720692 1"
+    ],
+    "citation_key": "citation-19"
+  },
+  {
+    "title": "The effect of color (red versus blue) on assimilation versus contrast in prime-to-behavior effects",
+    "authors": [
+      "author-53",
+      "author-54"
+    ],
+    "year": 2011,
+    "venue": "venue-11",
+    "raw_venue": "J. Exp. Soc. Psychol.",
+    "citation_count": 26,
+    "fields_of_study": [
+      "Psychology"
+    ],
+    "external_ids": {
+      "MAG": "1979045736",
+      "DOI": "10.1016/J.JESP.2011.02.010",
+      "CorpusId": 36517229
+    },
+    "semantic_scholar_id": "0a5cd34e15e6e595f5a10173ac93105ea0e3ec0a",
+    "arxiv_id": null,
+    "doi": "10.1016/J.JESP.2011.02.010",
+    "ref_id": 20,
+    "is_artificial": false,
+    "reference_mentions": [
+      "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+      "- [20] D. Smeesters and J. Liu. Retracted: The effect of color (red versus blue) on assimilation versus contrast in prime-to-behavior effects. _Journal of Experimental Social Psychology_, 47(3):653–656, 2011. doi: 10.1016/j.jesp.2011.02.010 1"
+    ],
+    "citation_key": "citation-20"
+  },
+  {
+    "title": "Artificial reference paper 1",
+    "authors": [
+      "author-55",
+      "author-52"
+    ],
+    "year": 2025,
+    "venue": "venue-12",
+    "raw_venue": "_Fake Journal 1_",
+    "citation_count": 0,
+    "fields_of_study": [],
+    "external_ids": {},
+    "semantic_scholar_id": null,
+    "arxiv_id": null,
+    "doi": "10.1080/13658816.2020.1720692",
+    "ref_id": 21,
+    "is_artificial": true,
+    "reference_mentions": [
+      "Geographic models are often used to answer _why_ questions regarding underlying spatial phenomena such as why do voter preferences generally exhibit strong spatial dependency. In order to answer such questions, researchers have developed sophisticated spatial modeling techniques and software, such as multiscale geographically weighted regression [21], to identify the determinants of the spatial patterns of data we observe in both the human and natural environments. However, these models generate output that needs local contextual information to be interpreted properly. Without such information, advanced spatial modeling techniques do not gain their full potential. While a variety of geovisual analytics systems [19] have been developed to explore spatial statistics with the help of interactive maps and narrative annotations, these applications tend to visualize only basic statistical results, and, to our knowledge, none of them explain spatial modeling results.",
+      "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+      "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+      "- [21] H. Solo and O.-W. Kenobi. Artificial reference paper 1. _Fake Journal 1_, 34(7):1378–1397, 2025. doi: 10.1080/13658816.2020.1720692 1"
+    ],
+    "citation_key": "citation-21"
+  },
+  {
+    "title": "Artificial reference paper 5",
+    "authors": [
+      "author-55",
+      "author-56"
+    ],
+    "year": 2025,
+    "venue": "venue-5",
+    "raw_venue": "Fake Journal 2",
+    "citation_count": 0,
+    "fields_of_study": [],
+    "external_ids": {},
+    "semantic_scholar_id": null,
+    "arxiv_id": null,
+    "doi": "10.1080/13658816.2020.1720692",
+    "ref_id": 22,
+    "is_artificial": true,
+    "reference_mentions": [
+      "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+      "- [22] H. Solo and L. Organa. Artificial reference paper 5. _Fake Journal 2_, 10(2):1–4, 2025. doi: 10.1080/13658816.2020.1720692 2"
+    ],
+    "citation_key": "citation-22"
+  },
+  {
+    "title": "Augmenting Visualizations with Interactive Data Facts to Facilitate Interpretation and Communication",
+    "authors": [
+      "author-57",
+      "author-58",
+      "author-59",
+      "author-60"
+    ],
+    "year": 2019,
+    "venue": "venue-4",
+    "raw_venue": "IEEE TVCG",
+    "citation_count": 171,
+    "fields_of_study": [
+      "Computer Science",
+      "Medicine"
+    ],
+    "external_ids": {
+      "DBLP": "journals/tvcg/SrinivasanDES19",
+      "MAG": "2888660171",
+      "DOI": "10.1109/TVCG.2018.2865145",
+      "CorpusId": 52071158,
+      "PubMed": "30136989"
+    },
+    "semantic_scholar_id": "1589deb55663bb8672ed031377c2072b607b2ce6",
+    "arxiv_id": null,
+    "doi": "10.1109/TVCG.2018.2865145",
+    "ref_id": 23,
+    "is_artificial": false,
+    "reference_mentions": [
+      "of presentation-like storytelling visualizations and explored mechanisms for automatically generating annotations by integrating deeplearning feature extraction techniques with a natural language generation process [9]. Annotations in such systems are used to describe salient patterns and facilitate storytelling [23].",
+      "- [23] A. Srinivasan, S. M. Drucker, A. Endert, and J. Stasko. Augmenting visualizations with interactive data facts to facilitate interpretation and communication. _IEEE Transactions on Visualization and Computer Graphics_, 25(1):672–681, 2019. doi: 10.1109/TVCG.2018.2865145 2"
+    ],
+    "citation_key": "citation-23"
+  },
+  {
+    "title": "GeoVISTA studio: a codeless visual programming environment for geoscientific data analysis and visualization",
+    "authors": [
+      "author-61",
+      "author-62"
+    ],
+    "year": 2002,
+    "venue": "venue-13",
+    "raw_venue": "Computers and Geosciences",
+    "citation_count": 209,
+    "fields_of_study": [
+      "Computer Science"
+    ],
+    "external_ids": {
+      "MAG": "2075274160",
+      "DOI": "10.1016/S0098-3004(02)00031-6",
+      "CorpusId": 14809457
+    },
+    "semantic_scholar_id": "19d25a102a8534818a676c347bcac84165080e6c",
+    "arxiv_id": null,
+    "doi": "10.1016/S0098-3004(02)00031-6",
+    "ref_id": 24,
+    "is_artificial": false,
+    "reference_mentions": [
+      "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+      "- [24] M. Takatsuka and M. Gahegan. GeoVISTA Studio: A codeless visual programming environment for geoscientific data analysis and visualization. _Computers and Geosciences_, 28(10):1131–1144, 2002. doi: 10.1016/S0098-3004(02)00031-6 1"
+    ],
+    "citation_key": "citation-24"
+  },
+  {
+    "title": "EnsembleMatrix: interactive visualization to support machine learning with multiple classifiers",
+    "authors": [
+      "author-63",
+      "author-41",
+      "author-64",
+      "author-65"
+    ],
+    "year": 2009,
+    "venue": "venue-7",
+    "raw_venue": "CHI",
+    "citation_count": 259,
+    "fields_of_study": [
+      "Computer Science"
+    ],
+    "external_ids": {
+      "DBLP": "conf/chi/TalbotLKT09",
+      "MAG": "2127058057",
+      "DOI": "10.1145/1518701.1518895",
+      "CorpusId": 15526581
+    },
+    "semantic_scholar_id": "24b0b7b24aec255fb4c362bc9f28c280b99b7dc4",
+    "arxiv_id": null,
+    "doi": "10.1145/1518701.1518895",
+    "ref_id": 25,
+    "is_artificial": false,
+    "reference_mentions": [
+      "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+      "- [25] J. Talbot, B. Lee, A. Kapoor, and D. S. Tan. EnsembleMatrix: Interactive visualization to support machine learning with multiple classifiers. In _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 1283–1292, 2009. doi: 10.1145/1518701. 1518895 2"
+    ],
+    "citation_key": "citation-25"
   }
 ]
