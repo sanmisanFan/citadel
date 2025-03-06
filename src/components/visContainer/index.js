@@ -97,14 +97,14 @@ export const VisContainer = ({
       <div
         style={{
           width: '100%',
-          height: 300,
+          height: 250,
           display: 'flex',
           gap: 5
         }}
       >
-       <SectionCard 
+       {/*<SectionCard 
           sections={sections}
-       />
+       />*/}
        <OverviewCard 
           anomalous={anomalous}
           author={author}
@@ -115,7 +115,8 @@ export const VisContainer = ({
       <div
         style={{
           width: '100%',
-          flex: 1,
+          //flex: 1,
+          height: 'calc(100% - 250px)',
           display: 'flex',
           gap: 5
         }}
@@ -148,6 +149,9 @@ export const VisContainer = ({
             title={'Citation Anomalous'}
             activeHighlight={activeHighlight}
             anomalous={anomalous}
+            citation={citation}
+            author={author}
+            venue={venue}
           />
         }
       </div>

@@ -1,5 +1,836 @@
 {
-  "citations": [
+  "citations":[
+    {
+      "id": "citation-1",
+      "cite_number": 1,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 1996,
+      "title": "Geographically Weighted Regression: A Method for Exploring Spatial Nonstationarity",
+      "source": "C. Brunsdon, A. S. Fotheringham, and M. E. Charlton. Geographically weighted regression: A method for exploring spatial nonstationarity. Geographical Analysis, 28(4):281-298, 1996.",
+      "doi": "10.1111/j.1538-4632.1996.tb00936.x",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.891,
+            "y": 0.344,
+            "width": 0.017,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.526,
+            "y": 0.254,
+            "width": 0.015,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-2",
+      "cite_number": 2,
+      "author": [
+        "author-1"
+      ],
+      "venue": "venue-1",
+      "year": 2008,
+      "title": "Multiscale Geographically Weighted Regression (MGWR)",
+      "source": "Multiscale Geographically Weighted Regression (MGWR)",
+      "doi": "10.1080/24694452.2017.1352480",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.636,
+            "y": 0.369,
+            "width": 0.017,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.526,
+            "y": 0.302,
+            "width": 0.015,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-3",
+      "cite_number": 3,
+      "author": [
+        "author-2"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "NewsViews: An Automated Pipeline for Creating Custom Geovisualizations for News",
+      "source": "NewsViews: An Automated Pipeline for Creating Custom Geovisualizations for News",
+      "doi": "10.1145/2556288.2557228",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.594,
+            "y": 0.798,
+            "width": 0.017,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.526,
+            "y": 0.35,
+            "width": 0.015,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-4",
+      "cite_number": 4,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-2",
+      "year": 2008,
+      "title": "Visualizing Multiple Variables Across Scale and Geography",
+      "source": "Visualizing Multiple Variables Across Scale and Geography",
+      "doi": "10.1109/TVCG.2015.2467199",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.463,
+            "y": 0.602,
+            "width": 0.017,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.526,
+            "y": 0.41,
+            "width": 0.015,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-5",
+      "cite_number": 5,
+      "author": [
+        "author-1"
+      ],
+      "venue": "venue-2",
+      "year": 2008,
+      "title": "Visualization Rhetoric: Framing Effects in Narrative Visualization",
+      "source": "Visualization Rhetoric: Framing Effects in Narrative Visualization",
+      "doi": "10.1109/TVCG.2011.255",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.797,
+            "y": 0.71,
+            "width": 0.017,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.526,
+            "y": 0.458,
+            "width": 0.015,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-6",
+      "cite_number": 6,
+      "author": [
+        "author-2"
+      ],
+      "venue": "venue-1",
+      "year": 2025,
+      "title": "Artificial reference paper 4",
+      "source": "Artificial reference paper 4",
+      "doi": null,
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.778,
+            "y": 0.47,
+            "width": 0.017,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.526,
+            "y": 0.505,
+            "width": 0.015,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-7",
+      "cite_number": 7,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.158,
+            "y": 0.745,
+            "width": 0.017,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.741,
+            "y": 0.873,
+            "width": 0.017,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.526,
+            "y": 0.529,
+            "width": 0.015,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-8",
+      "cite_number": 8,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.44,
+            "y": 0.488,
+            "width": 0.017,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.526,
+            "y": 0.553,
+            "width": 0.015,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-9",
+      "cite_number": 9,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.183,
+            "y": 0.306,
+            "width": 0.017,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.526,
+            "y": 0.601,
+            "width": 0.015,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-10",
+      "cite_number": 10,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.887,
+            "y": 0.81,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.52,
+            "y": 0.649,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-11",
+      "cite_number": 11,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.863,
+            "y": 0.848,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.52,
+            "y": 0.685,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }    
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-12",
+      "cite_number": 12,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.248,
+            "y": 0.425,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.52,
+            "y": 0.732,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-13",
+      "cite_number": 13,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.415,
+            "y": 0.438,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.52,
+            "y": 0.768,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-14",
+      "cite_number": 14,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.138,
+            "y": 0.552,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.52,
+            "y": 0.816,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-15",
+      "cite_number": 15,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.622,
+            "y": 0.899,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.52,
+            "y": 0.864,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-16",
+      "cite_number": 16,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.764,
+            "y": 0.773,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.088,
+            "y": 0.071,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-17",
+      "cite_number": 17,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.282,
+            "y": 0.577,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.088,
+            "y": 0.107,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-18",
+      "cite_number": 18,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.775,
+            "y": 0.71,
+            "width": 0.022,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.088,
+            "y": 0.155,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-19",
+      "cite_number": 19,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.456,
+            "y": 0.631,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.088,
+            "y": 0.191,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-20",
+      "cite_number": 20,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.59,
+            "y": 0.381,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.088,
+            "y": 0.215,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
     {
       "id": "citation-21",
       "cite_number": 21,
@@ -13,17 +844,17 @@
       "title": "paper title",
       "source": "citation source",
       "doi": "doi link",
-      "layer": 1,
+      "hop": 1,
       "cite_positions": [
         {
           "page": 1,
           "has_issue": false,
           "issues": [],
           "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.49515387024542296,
-            "width": 0.3922381432227839,
-            "height": 0.34219899803701076
+            "x": 0.209,
+            "y": 0.568,
+            "width": 0.024,
+            "height": 0.014
           }
         },
         {
@@ -31,10 +862,10 @@
           "has_issue": false,
           "issues": [],
           "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.49515387024542296,
-            "width": 0.3922381432227839,
-            "height": 0.34219899803701076
+            "x": 0.456,
+            "y": 0.72,
+            "width": 0.024,
+            "height": 0.014
           }
         },
         {
@@ -42,10 +873,10 @@
           "has_issue": false,
           "issues": [],
           "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.7112375317197858,
-            "width": 0.3922379936268127,
-            "height": 0.3956488599680891
+            "x": 0.73,
+            "y": 0.306,
+            "width": 0.024,
+            "height": 0.014
           }
         },
         {
@@ -53,988 +884,10 @@
           "has_issue": false,
           "issues": [],
           "bbox": {
-            "x": 0.08823524425232332,
-            "y": 0.73733489681976,
-            "width": 0.39222562702652675,
-            "height": 0.024075710412227745
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-19",
-      "cite_number": 19,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.49515387024542296,
-            "width": 0.3922381432227839,
-            "height": 0.34219899803701076
-          }
-        },
-        {
-          "page": 3,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.8090357154306739,
-            "width": 0.39222996530969156,
-            "height": 0.024075710412227745
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-18",
-      "cite_number": 18,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.49515387024542296,
-            "width": 0.3922381432227839,
-            "height": 0.34219899803701076
-          }
-        },
-        {
-          "page": 3,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.8448867701520824,
-            "width": 0.3922296162524255,
-            "height": 0.03602649226333156
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-7",
-      "cite_number": 7,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.49515387024542296,
-            "width": 0.3922381432227839,
-            "height": 0.34219899803701076
-          }
-        },
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.30726877848307294,
-            "width": 0.39223789389616526,
-            "height": 0.21954122215810448
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5260458054885365,
-            "y": 0.4706621266374684,
-            "width": 0.3857167063195721,
-            "height": 0.024076981977982956
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-24",
-      "cite_number": 24,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.7112375317197858,
-            "width": 0.3922379936268127,
-            "height": 0.3956488599680891
-          }
-        },
-        {
-          "page": 3,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823524425232332,
-            "y": 0.6297843624847104,
-            "width": 0.392233256421058,
-            "height": 0.04797721631599195
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-1",
-      "cite_number": 1,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.7112375317197858,
-            "width": 0.3922379936268127,
-            "height": 0.3956488599680891
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5260458054885365,
-            "y": 0.7455143013385811,
-            "width": 0.38572079527611824,
-            "height": 0.04797598328253235
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-2",
-      "cite_number": 2,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.7112375317197858,
-            "width": 0.3922379936268127,
-            "height": 0.3956488599680891
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5260458054885365,
-            "y": 0.6977137555979719,
-            "width": 0.38572458504072205,
-            "height": 0.04797598328253235
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-20",
-      "cite_number": 20,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.7112375317197858,
-            "width": 0.3922379936268127,
-            "height": 0.3956488599680891
-          }
-        },
-        {
-          "page": 3,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823524425232332,
-            "y": 0.7851354425603693,
-            "width": 0.39223550036062604,
-            "height": 0.04797598328253235
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-6",
-      "cite_number": 6,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.7112375317197858,
-            "width": 0.3922379936268127,
-            "height": 0.3956488599680891
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5260458054885365,
-            "y": 0.49456236097547746,
-            "width": 0.38572418611813214,
-            "height": 0.024076981977982956
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-16",
-      "cite_number": 16,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.30726877848307294,
-            "width": 0.39223789389616526,
-            "height": 0.21954122215810448
-          }
-        },
-        {
-          "page": 3,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.928537070149123,
-            "width": 0.3922334060170292,
-            "height": 0.03602650189640546
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-3",
-      "cite_number": 3,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.30726877848307294,
-            "width": 0.39223789389616526,
-            "height": 0.21954122215810448
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5260458054885365,
-            "y": 0.6499132483896582,
-            "width": 0.38572478450201697,
-            "height": 0.05992669770211884
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-10",
-      "cite_number": 10,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.30726877848307294,
-            "width": 0.39223789389616526,
-            "height": 0.21954122215810448
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.3511609934797191,
-            "width": 0.3922322092492596,
-            "height": 0.03602654042870107
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-11",
-      "cite_number": 11,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.30726877848307294,
-            "width": 0.39223789389616526,
-            "height": 0.21954122215810448
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195343416500715,
-            "y": 0.31530992912523675,
-            "width": 0.39223126180810863,
-            "height": 0.04797602181482797
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-15",
-      "cite_number": 15,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 1,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195342917847477,
-            "y": 0.30726877848307294,
-            "width": 0.39223789389616526,
-            "height": 0.21954122215810448
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195343416500715,
-            "y": 0.13610793604995264,
-            "width": 0.39223315669041053,
-            "height": 0.04802649912208018
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-9",
-      "cite_number": 9,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823530035081252,
-            "y": 0.7313030319984513,
-            "width": 0.39223609251134534,
-            "height": 0.06395900610721472
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5260458054885365,
-            "y": 0.39896142362344145,
-            "width": 0.38571979796964356,
-            "height": 0.04797721631599195
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-23",
-      "cite_number": 23,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823530035081252,
-            "y": 0.7313030319984513,
-            "width": 0.39223609251134534,
-            "height": 0.06395900610721472
-          }
-        },
-        {
-          "page": 3,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823524425232332,
-            "y": 0.6895343510791508,
-            "width": 0.39223475238077,
-            "height": 0.059926736234414454
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-25",
-      "cite_number": 25,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.6376931546914457,
-            "width": 0.39223819308810765,
-            "height": 0.4043077411073627
-          }
-        },
-        {
-          "page": 3,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823524425232332,
-            "y": 0.5819838938086924,
-            "width": 0.3922339545355903,
-            "height": 0.05992669770211884
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-13",
-      "cite_number": 13,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.6376931546914457,
-            "width": 0.39223819308810765,
-            "height": 0.4043077411073627
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195343416500715,
-            "y": 0.23165970619278725,
-            "width": 0.3922305636935764,
-            "height": 0.047977331912878785
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-8",
-      "cite_number": 8,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.6376931546914457,
-            "width": 0.39223819308810765,
-            "height": 0.4043077411073627
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5260458054885365,
-            "y": 0.44676189229945945,
-            "width": 0.38572358773424736,
-            "height": 0.04797721631599195
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-14",
-      "cite_number": 14,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.6376931546914457,
-            "width": 0.39223819308810765,
-            "height": 0.4043077411073627
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195343416500715,
-            "y": 0.18390840472597064,
-            "width": 0.3922336553436479,
-            "height": 0.04802649912208018
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-17",
-      "cite_number": 17,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.6376931546914457,
-            "width": 0.39223819308810765,
-            "height": 0.4043077411073627
-          }
-        },
-        {
-          "page": 3,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.8927377931999437,
-            "width": 0.39223116207746117,
-            "height": 0.04802777068783538
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-4",
-      "cite_number": 4,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.08823529411764706,
-            "y": 0.6376931546914457,
-            "width": 0.39223819308810765,
-            "height": 0.4043077411073627
-          }
-        },
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5260458054885365,
-            "y": 0.5901632983275135,
-            "width": 0.38572239096647776,
-            "height": 0.04797721631599195
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-5",
-      "cite_number": 5,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5260458054885365,
-            "y": 0.5423628296514954,
-            "width": 0.3857236874648948,
-            "height": 0.04797721631599195
-          }
-        }
-      ],
-      "has_issue": false,
-      "citation_graph": [
-        "citation-graph-0"
-      ]
-    },
-    {
-      "id": "citation-12",
-      "cite_number": 12,
-      "author": [
-        "author-0",
-        "author-1",
-        "author-2"
-      ],
-      "venue": "venue-0",
-      "year": 2008,
-      "title": "paper title",
-      "source": "citation source",
-      "doi": "doi link",
-      "layer": 1,
-      "cite_positions": [
-        {
-          "page": 2,
-          "has_issue": false,
-          "issues": [],
-          "bbox": {
-            "x": 0.5195343416500715,
-            "y": 0.26750946044921875,
-            "width": 0.39222777123544733,
-            "height": 0.03602654042870107
+            "x": 0.088,
+            "y": 0.263,
+            "width": 0.022,
+            "height": 0.012
           }
         }
       ],
@@ -1047,26 +900,35 @@
       "id": "citation-22",
       "cite_number": 22,
       "author": [
-        "author-0",
-        "author-1",
-        "author-2"
+        "author-0"
       ],
       "venue": "venue-0",
       "year": 2008,
       "title": "paper title",
       "source": "citation source",
       "doi": "doi link",
-      "layer": 1,
+      "hop": 1,
       "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.224,
+            "y": 0.425,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
         {
           "page": 3,
           "has_issue": false,
           "issues": [],
           "bbox": {
-            "x": 0.08823525048548879,
-            "y": 0.7134346239494554,
-            "width": 0.39222961001926,
-            "height": 0.024075710412227745
+            "x": 0.088,
+            "y": 0.287,
+            "width": 0.022,
+            "height": 0.012
           }
         }
       ],
@@ -1074,6 +936,159 @@
       "citation_graph": [
         "citation-graph-0"
       ]
+    },
+    {
+      "id": "citation-23",
+      "cite_number": 23,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.369,
+            "y": 0.319,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.088,
+            "y": 0.31,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-24",
+      "cite_number": 24,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 1,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.55,
+            "y": 0.317,
+            "width": 0.028,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.088,
+            "y": 0.37,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-25",
+      "cite_number": 25,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2008,
+      "title": "paper title",
+      "source": "citation source",
+      "doi": "doi link",
+      "hop": 1,
+      "cite_positions": [
+        {
+          "page": 2,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.285,
+            "y": 0.438,
+            "width": 0.024,
+            "height": 0.014
+          }
+        },
+        {
+          "page": 3,
+          "has_issue": false,
+          "issues": [],
+          "bbox": {
+            "x": 0.088,
+            "y": 0.418,
+            "width": 0.022,
+            "height": 0.012
+          }
+        }
+      ],
+      "has_issue": false,
+      "citation_graph": [
+        "citation-graph-0"
+      ]
+    },
+    {
+      "id": "citation-26",
+      "cite_number": 26,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2025,
+      "title": "Artificial reference paper hop-2",
+      "source": "Artificial reference paper hop-2",
+      "doi": "doi link",
+      "hop": 2,
+      "cite_positions": [],
+      "citation_graph": []
+    },
+    {
+      "id": "citation-27",
+      "cite_number": 27,
+      "author": [
+        "author-0"
+      ],
+      "venue": "venue-0",
+      "year": 2025,
+      "title": "Artificial reference paper hop-2 no.2",
+      "source": "Artificial reference paper hop-2 no.2",
+      "doi": "doi link",
+      "hop": 2,
+      "cite_positions": [],
+      "citation_graph": []
     }
   ]
 }

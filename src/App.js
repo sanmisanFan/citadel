@@ -15,17 +15,12 @@ import { extractAndHighlight } from "./util/pdfUtil";
 import { anomalousColorScheme } from "./annotationConfig";
 
 /** Import TEST Data */
-/*import authorRaw from "./data/author.json";
-import venueRaw from "./data/venue.json";
-import citationRaw from "./data/citation.json";
-import anomalousRaw from "./data/anomalous.json";*/
-import authorRaw from "./data/author.json";
-import venueRaw from "./data/venue.json";
+import authorRaw from "./data/case1/authors.json";
+import venueRaw from "./data/case1/venues.json";
 import citationRaw from "./data/case1/citation.json";
-import anomalousRaw from "./data/anomalous.json";
+import anomalousRaw from "./data/case1/anomalous.json";
 
 /** load test PDF - should be uploaded by user */
-//import samplePDF from "./data/testpaper.pdf";
 import samplePDF from "./data/case1/reviewerAPP_case1.pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -47,7 +42,9 @@ function App() {
 
   /** init citation list */
   const initCitations = () => {
-    const citationsList = JSON.parse(JSON.stringify(citationRaw.citations));
+    const citationsList = JSON.parse(JSON.stringify(citationRaw.citations))
+      .filter(e=>e.hop===1);
+    
     setCitation(citationsList);
   };
 
@@ -77,6 +74,7 @@ function App() {
       const sentenceList = e.sentence;
       // construct sentence highlight object
       sentenceList.forEach(sentenceObj=>{
+        //loadAndExtract(sentenceObj.sentence, page);
         const sentenceHighlight = {
           issueID: issueID,
           issueName: issueName,

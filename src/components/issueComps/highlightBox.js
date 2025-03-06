@@ -17,10 +17,6 @@ export const HighlightBbox = ({
     ? anomalousColorScheme[issue.name]['category'][issue.category.name]['boxColor']
     : null;
 
-  const annotationColor = issue !== null 
-    ? anomalousColorScheme[issue.name]['category'][issue.category.name]['annotationCss']
-    : null;
-
   const popContent = (
     <div
       style={{
@@ -48,7 +44,7 @@ export const HighlightBbox = ({
         border: categoryColor !== null ? "3px solid" : "",
         borderColor: categoryColor !== null ? categoryColor : "",
         borderRadius: 8,
-        opacity: 0.5,
+        //opacity: 0.5,
         cursor: "pointer",
         pointerEvents: "auto"
       }}

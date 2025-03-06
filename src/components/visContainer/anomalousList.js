@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useState } from "react";
+import { useEffect, useCallback, useState, useRef } from "react";
 import { Card, Space, Flex, Badge, Tag } from 'antd';
 
 import "./style.css";
@@ -9,43 +9,48 @@ export const AnomalousListCard = ({
   activeHighlight,
   setActiveHighlight
 }) => {
+  const listRef = useRef(null);
+  const itemRefs = useRef({});
 
   const handleCardClick = (id) => {
     //console.log(id);
     id === activeHighlight ? setActiveHighlight(null) : setActiveHighlight(id);
   };
 
+ // Scroll active highlight into view
+ useEffect(() => {
+  if (activeHighlight && itemRefs.current[activeHighlight]) {
+    itemRefs.current[activeHighlight].scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    });
+  }
+}, [activeHighlight]);
+
+
   return(
     <Card
-    id="anomalousListContainer-card"
-    size="small"
-    title="Anomalous List"
-    style={{
-      width: '40.3%',
-      display: "flex",
-      flexDirection: "column",
-      //flex: 1, // Ensures the Card itself stretches
-      height: "100%", // Fills the parent container
-    }}
-    styles={{
-      body: {
+      ref={listRef}
+      id="anomalousListContainer-card"
+      size="small"
+      title="Anomalous List"
+      style={{
+        width: '40.3%',
         display: "flex",
         flexDirection: "column",
-        flex: 1, // Allows the body to expand
-        overflow: "auto", // Enables scrolling if content is too large
-      },
-    }}
-    //className="custom-card"
+        //flex: 1, // Ensures the Card itself stretches
+        height: "100%", // Fills the parent container
+      }}
+      styles={{
+        body: {
+          height: "100%",
+          overflowY: "scroll",
+          position: "relative"
+        },
+      }}
+      //className="custom-card"
     >
-      <Space 
-      direction="vertical"
-      size="small"
-        style={{ 
-          flex: 1, 
-          padding: "10px"
-        }}
-      >
-      {anomalous.map(e=>{
+       {anomalous.map(e=>{
         const anomalousName = e.displayName;
         const anomalousCategoryName = e.category.displayName;
         const baseColor = anomalousColorScheme[e.name]['baseColor'];
@@ -60,11 +65,12 @@ export const AnomalousListCard = ({
             style={{
               width: "100%",
               padding: 10,
-              marginTop: 10,
+              //marginTop: 5,
               marginBottom: 10,
               backgroundColor: bgColor
             }}
             onClick={() => handleCardClick(e.id)}
+            ref={(el) => (itemRefs.current[e.id] = el)}
           >
             <Flex
               gap="small"
@@ -88,7 +94,6 @@ export const AnomalousListCard = ({
         );
       }
       )}
-      </Space>
     </Card>
   );
 };

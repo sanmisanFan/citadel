@@ -112,7 +112,6 @@ export const extractAndHighlight = async (pdf, targetSentence, pageNumber = 1) =
     height: coordinates.height / viewport.height,
   } : null;
   console.log('normalizedCoordinates', normalizedCoordinates, targetSentence, pageNumber);
-  
 };
 
 // Function to extract and highlight a specific citation on a given page

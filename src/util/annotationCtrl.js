@@ -10,13 +10,14 @@ export const citationHighlight = (
   setActiveHighlight
 ) => {
   const bboxHeightOffest = 0.003;
-  console.log('citation', citation);
+  //console.log('citation', citation);
   if (!viewerRef.current) return;
 
   const viewer = viewerRef.current;
   const pageElements = viewer.querySelectorAll(".react-pdf__Page");
   pageElements.forEach((pageElement) => {
     const textContentLayer = pageElement.querySelector(".react-pdf__Page__textContent");
+    
     if (textContentLayer) {
       // Clear existing React Highlights
       const existingContainers = textContentLayer.querySelectorAll(".citation-highlighter-container");
@@ -59,7 +60,7 @@ export const citationHighlight = (
           const root = createRoot(highlightContainer);
           root.render(
             <HighlightBbox
-              boxid={id}
+              boxid={id+"_"+citeIndex}
               issue={issue}
               cite={cite}
               citeObj={e}
@@ -74,8 +75,4 @@ export const citationHighlight = (
       });
     }
   });
-};
-
-export const anomalousAnnotation = () => {
-  
 };

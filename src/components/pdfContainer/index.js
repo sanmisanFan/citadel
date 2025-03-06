@@ -143,22 +143,27 @@ export const PDFContainer = ({
     // render anomalous highlight
     if (Object.keys(renderedPages).length === numPages) {
       //console.log("activeHighlight:", activeHighlight);
-      //applyHighlightsReact();
+      setTimeout(() => {
+        applyHighlightsReact();
+       }, 100);
     }
   }, [renderedPages, sentenceAnnotationList, activeHighlight]);
 
   useEffect(() => {
     if (Object.keys(renderedPages).length === numPages) {
-      citationHighlight(
-        viewerRef, 
-        citation, 
-        anomalous, 
-        anomalousColorScheme,
-        activeHighlight,
-        setActiveHighlight
-      );
+      setTimeout(() => {
+       citationHighlight(
+          viewerRef, 
+          citation, 
+          anomalous, 
+          anomalousColorScheme,
+          activeHighlight,
+          setActiveHighlight
+        );
+      }, 100);
+      
     }
-  }, [renderedPages, citation, activeHighlight]);
+  }, [renderedPages, citation, anomalous, activeHighlight]);
 
   useEffect(() => {
     if (viewerRef.current) {
@@ -193,10 +198,11 @@ export const PDFContainer = ({
           
         }}
       >
-        {/* Floating Panel */}
+        {/* Floating Panel 
         <FloatingPanel
           currentPage={currentPage}
-        />
+        />*/}
+
         {/* PDF Viewer */}
         <Document
           file={file}
