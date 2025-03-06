@@ -3,10 +3,10 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 # Load the JSON data
-with open('./outputs/authors.json', 'r') as f:
+with open('./outputs/authors_updated.json', 'r') as f:
     authors_data = json.load(f)
 
-with open('./outputs/citations.json', 'r') as f:
+with open('./outputs/citations_updated.json', 'r') as f:
     citations_data = json.load(f)
 
 # Create a directed graph
@@ -72,7 +72,7 @@ edge_widths = [w * 2 for w in edge_weights]  # Scale for visibility
 edge_colors = ['red' if w > weight_threshold else 'gray' for w in edge_weights]  # Highlight high weights
 
 # Visualize the suspicious subgraph
-plt.figure(figsize=(10, 8))
+plt.figure(figsize=(20, 8))
 pos = nx.spring_layout(suspicious_subgraph, k=0.5, iterations=50)
 nx.draw(suspicious_subgraph, pos, with_labels=True, node_color="lightblue", node_size=800, 
         font_size=8, font_weight="bold", edge_color=edge_colors, width=edge_widths, 
