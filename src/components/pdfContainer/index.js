@@ -30,7 +30,8 @@ export const PDFContainer = ({
   currentPage,
   setCurrentPage,
   activeHighlight,
-  setActiveHighlight
+  setActiveHighlight,
+  setAnomalous
 }) => {
   //const targetSentence = "understand the experience of people that were there [3]";
   const bboxHeightOffest = 0.005;
@@ -129,6 +130,8 @@ export const PDFContainer = ({
                 baseColor={highlight.baseColor}
                 boxColor={highlight.boxColor}
                 activeHighlight={activeHighlight}
+                anomalous={anomalous} // Pass the anomalous data
+                citation={citation} // Pass the citation data
                 onClick={(issueID) => setActiveHighlight(issueID)}
               />
             );
@@ -190,6 +193,7 @@ export const PDFContainer = ({
     >
       <ToolBar
         setPdfScale={setPdfScale}
+        currentPage={currentPage}
       />
       <div
         ref={viewerRef}
@@ -198,10 +202,12 @@ export const PDFContainer = ({
           
         }}
       >
-        {/* Floating Panel 
+        {/* Floating Panel */
         <FloatingPanel
-          currentPage={currentPage}
-        />*/}
+          anomalous={anomalous}
+          anomalousColorScheme={anomalousColorScheme}
+          setAnomalous={setAnomalous}
+        />}
 
         {/* PDF Viewer */}
         <Document

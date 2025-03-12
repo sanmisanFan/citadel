@@ -3,7 +3,7 @@
     {
       "id": "issue-1",
       "name": "citation",
-      "displayName": "Citation Anomalous",
+      "displayName": "Citation Issues",
       "category": {
         "name": "lowRelevancy",
         "displayName": "Low Relevancy",
@@ -48,7 +48,7 @@
     {
       "id": "issue-2",
       "name": "citation",
-      "displayName": "Citation Anomalous",
+      "displayName": "Citation Issues",
       "category": {
         "name": "lowRelevancy",
         "displayName": "Low Relevancy",
@@ -93,7 +93,7 @@
     {
       "id": "issue-3",
       "name": "citation",
-      "displayName": "Citation Anomalous",
+      "displayName": "Citation Issues",
       "category": {
         "name": "lowRelevancy",
         "displayName": "Low Relevancy",
@@ -120,7 +120,7 @@
     {
       "id": "issue-4",
       "name": "citation",
-      "displayName": "Citation Anomalous",
+      "displayName": "Citation Issues",
       "category": {
         "name": "lowRelevancy",
         "displayName": "Low Relevancy",
@@ -147,7 +147,7 @@
     {
       "id": "issue-5",
       "name": "citation",
-      "displayName": "Citation Anomalous",
+      "displayName": "Citation Issues",
       "category": {
         "name": "retractedPaper",
         "displayName": "Retracted Paper",
@@ -183,7 +183,7 @@
     {
       "id": "issue-6",
       "name": "citation",
-      "displayName": "Citation Anomalous",
+      "displayName": "Citation Issues",
       "category": {
         "name": "lowRelevancy",
         "displayName": "Low Relevancy",
@@ -219,7 +219,7 @@
     {
       "id": "issue-7",
       "name": "citation",
-      "displayName": "Citation Anomalous",
+      "displayName": "Citation Issues",
       "category": {
         "name": "lowRelevancy",
         "displayName": "Low Relevancy",
@@ -273,7 +273,7 @@
     {
       "id": "issue-8",
       "name": "statistic",
-      "displayName": "Statistic Anomalous",
+      "displayName": "Statistic Issues",
       "category": {
         "name": "testFailure",
         "displayName": "Statistical Test Failure",
@@ -297,7 +297,7 @@
     {
       "id": "issue-9",
       "name": "statistic",
-      "displayName": "Statistic Anomalous",
+      "displayName": "Statistic Issues",
       "category": {
         "name": "testFailure",
         "displayName": "Statistical Test Failure",
@@ -321,7 +321,7 @@
     {
       "id": "issue-10",
       "name": "statistic",
-      "displayName": "Statistic Anomalous",
+      "displayName": "Statistic Issues",
       "category": {
         "name": "valueInconsistency",
         "displayName": "Inconsistency in Value",

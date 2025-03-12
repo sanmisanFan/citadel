@@ -1,7 +1,9 @@
 import { useEffect, useCallback, useState, useRef } from "react";
-import { Card, Space, Flex, Badge, Tag } from 'antd';
+import { Card, Space, Flex, Badge, Tag, Typography, Tooltip } from 'antd';
 
 import "./style.css";
+
+const { Text } = Typography;
 
 export const AnomalousListCard = ({
   anomalous,
@@ -9,7 +11,7 @@ export const AnomalousListCard = ({
   activeHighlight,
   setActiveHighlight
 }) => {
-  const listRef = useRef(null);
+  //const listRef = useRef(null);
   const itemRefs = useRef({});
 
   const handleCardClick = (id) => {
@@ -17,20 +19,26 @@ export const AnomalousListCard = ({
     id === activeHighlight ? setActiveHighlight(null) : setActiveHighlight(id);
   };
 
- // Scroll active highlight into view
- useEffect(() => {
-  if (activeHighlight && itemRefs.current[activeHighlight]) {
-    itemRefs.current[activeHighlight].scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-    });
-  }
-}, [activeHighlight]);
+  // Scroll active highlight into view
+  useEffect(() => {
+    if (activeHighlight && itemRefs.current[activeHighlight]) {
+      itemRefs.current[activeHighlight].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+      });
+    }
+  }, [activeHighlight]);
+
+  // Tooltip content for each tag
+  const tagTooltips = {
+    citationRing: "Citations within the same paper or among a close network of papers.",
+    selfCitation: "Citations referring to the authors' own previous work.",
+  };
 
 
-  return(
+  return (
     <Card
-      ref={listRef}
+      //ref={listRef}
       id="anomalousListContainer-card"
       size="small"
       title="Anomalous List"
@@ -48,47 +56,77 @@ export const AnomalousListCard = ({
           position: "relative"
         },
       }}
-      //className="custom-card"
+    //className="custom-card"
     >
-       {anomalous.map(e=>{
+      {anomalous
+      .filter(e => !e.filter) // Filter out anomalous with filter === true
+      .map(e => {
         const anomalousName = e.displayName;
         const anomalousCategoryName = e.category.displayName;
         const baseColor = anomalousColorScheme[e.name]['baseColor'];
         const categoryColor = anomalousColorScheme[e.name]['category'][e.category.name]['baseColor'];
         const boxColor = anomalousColorScheme[e.name]['category'][e.category.name]['boxColor'];
-        const bgColor = activeHighlight === e.id && boxColor
-        return(
+        const bgColor = activeHighlight === e.id && boxColor;
+        const page = e.page;
+
+        // Extract options and create tags
+        const options = e.category.options;
+        const optionTags = [];
+        if (options) {
+          if (options.citationRing) {
+            optionTags.push(
+                <Tooltip key="citationRing" title={tagTooltips.citationRing}>
+                  <Tag color="blue">
+                    Citation Ring
+                  </Tag>
+                </Tooltip>
+            );
+          }
+          if (options.selfCitation) {
+            optionTags.push(
+               <Tooltip key="selfCitation" title={tagTooltips.selfCitation}>
+                  <Tag color="purple">
+                    Self Citation
+                  </Tag>
+                </Tooltip>
+            );
+          }
+        }
+        return (
           <Card
-            key={'anomalous-list-element-key-'+e.id}
-            id={'anomalous-list-element-'+e.id}
+            key={'anomalous-list-element-key-' + e.id}
+            id={'anomalous-list-element-' + e.id}
             size="small"
             style={{
               width: "100%",
-              padding: 10,
+              padding: 8,
               //marginTop: 5,
               marginBottom: 10,
-              backgroundColor: bgColor
+              backgroundColor: bgColor,
+              cursor: "pointer"
             }}
             onClick={() => handleCardClick(e.id)}
             ref={(el) => (itemRefs.current[e.id] = el)}
           >
             <Flex
-              gap="small"
+              justify="space-between"
               align="center"
+              style={{width:'100%'}}
             >
-              <b>Potential Anomalous:</b>
-              <div>
-              <span style={{
-                color: baseColor
-              }}>
-                {anomalousName}
-              </span> - <span style={{
-                color: categoryColor
-              }}>
-                 {anomalousCategoryName}
-              </span>
+              <Flex vertical gap={3}>
+                <Text strong style={{ color: baseColor, fontSize:12 }}>
+                    {anomalousName}
+                </Text>
+                <Flex>
+                    <Tag color={categoryColor}>
+                      <b>{anomalousCategoryName}</b>
+                    </Tag>
+                    {optionTags}
+                </Flex>
+                
+              </Flex>
               
-              </div>
+              <Text type="secondary" style={{fontSize:14}}>Page: {page}</Text>
             </Flex>
           </Card>
         );

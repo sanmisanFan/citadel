@@ -57,14 +57,17 @@ function App() {
   /** init anomalous list */
   const initAnomalous = () => {
     const anomalousList = JSON.parse(JSON.stringify(anomalousRaw.identifiedIssue));
+    anomalousList.map(e=>e.filter = false);
     setAnomalous(anomalousList);
   };
 
   /** extract */
   const initSentenceHightlights = () => {
-    const anomalousList = JSON.parse(JSON.stringify(anomalousRaw.identifiedIssue));
+    const anomalousList = JSON.parse(JSON.stringify(anomalous));
     const _sentenceHighlights = [];
-    anomalousList.forEach(e=>{
+    anomalousList
+    .filter(e => !e.filter) // Filter out anomalous with filter === true
+    .forEach(e=>{
       const issueID = e.id;
       const issueName = e.displayName;
       const issueCategory = e.category.displayName;
@@ -97,7 +100,7 @@ function App() {
     setAuthor(authorList);
   };
 
-   /** init author list */
+   /** init venue list */
    const initVenue = () => {
     const venueList = JSON.parse(JSON.stringify(venueRaw.venues));
     setVenue(venueList);
@@ -113,14 +116,14 @@ function App() {
     initCitations();
   }, [citationRaw]);
 
-  /**  */
+  /** load detected anomalous */
   useEffect(() => {
     initAnomalous();
   }, [anomalousRaw]);
 
   useEffect(() => {
-    initSentenceHightlights();
-  }, [anomalousRaw]);
+    anomalous.length > 0 && initSentenceHightlights();
+  }, [anomalous]);
 
   useEffect(() => {
     initAuthor();
@@ -131,7 +134,7 @@ function App() {
   }, [venueRaw]);
 
   //const { Header, Content } = Layout;
-  //console.log("activeHighlight", activeHighlight);
+  //console.log("anomalousList", anomalous);
   return (
     <div className="App">
       <div className="mainContainer">
@@ -147,6 +150,7 @@ function App() {
                 setCurrentPage={setCurrentPage}
                 activeHighlight={activeHighlight}
                 setActiveHighlight={setActiveHighlight}
+                setAnomalous={setAnomalous}
               />
             </Col>
             <Col span={10}>

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./toolbar.css";
 
-export const ToolBar = ({ setPdfScale }) => {
+export const ToolBar = ({ setPdfScale, currentPage }) => {
   const [zoom, setZoom] = useState(1);
   const [isHighlightPen, setIsHighlightPen] = useState(false);
 
@@ -36,6 +36,7 @@ export const ToolBar = ({ setPdfScale }) => {
         <b>ReviewerAPP</b>
       </span>
       <div className="ZoomControls">
+        <span style={{marginRight: 20}}><b>Page: {currentPage}</b></span>
         <button title="Zoom in" onClick={zoomIn}>+</button>
         <button title="Zoom out" onClick={zoomOut}>-</button>
         {zoom ? `${(zoom * 100).toFixed(0)}%` : "Auto"}

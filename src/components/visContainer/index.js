@@ -3,7 +3,7 @@ import { Card, Empty } from 'antd';
 import { pdfjs } from "react-pdf";
 
 import { ContentCard } from "./contentCard";
-import { SectionCard } from "./sectionCard";
+import { AnomalousLegendCard } from "./anomalousLegendCard";
 import { OverviewCard } from "./overviewCard";
 import { AnomalousListCard } from "./anomalousList";
 
@@ -11,6 +11,16 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
   import.meta.url,
 ).toString();
+
+/**
+ * 
+ * <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <span>Anomalous Overview</span>
+          <span onClick={toggleLegend} style={{ cursor: "pointer", fontSize: '12px', textDecoration: 'underline' }}>
+              {isLegendOpen ? "Hide Legend" : "Show Legend"}
+          </span>
+        </div>
+ */
 
 export const VisContainer = ({
   file,
@@ -23,64 +33,6 @@ export const VisContainer = ({
   activeHighlight,
   setActiveHighlight
 }) => {
-  const [selectedTarget, setSelectedTarget] = useState(null);
-  const [sections, setSections] = useState([]);
-
-  const handleCardClick = (id) => {
-    id === activeHighlight ? setActiveHighlight(null) : setActiveHighlight(id);
-  };
-  
-
-  useEffect(() => {
-    if (!file) return; // Ensure file is loaded before calling pdfjs
-  
-    const loadSections = async () => {
-      try {
-        const loadingTask = pdfjs.getDocument(file);
-        const pdf = await loadingTask.promise;
-  
-        // Get document outline (sections)
-        const outline = await pdf.getOutline();
-        if (!outline) {
-          console.warn("No outline found in this PDF.");
-          return;
-        }
-  
-        // Resolve page numbers for each section
-        const sectionsWithPages = await Promise.all(
-          outline.map(async (item) => {
-            let pageNumber = null;
-  
-            if (item.dest) {
-              try {
-                const dest = Array.isArray(item.dest) ? item.dest[0] : item.dest;
-                const resolvedDest = await pdf.getDestination(dest);
-                const pageRef = resolvedDest ? resolvedDest[0] : dest;
-  
-                if (pageRef && pageRef.num) {
-                  const pageIndex = await pdf.getPageIndex(pageRef);
-                  pageNumber = pageIndex + 1;
-                }
-              } catch (error) {
-                console.warn(`Error resolving page for section: ${item.title}`, error);
-              }
-            }
-  
-            return {
-              title: item.title,
-              page: pageNumber,
-            };
-          })
-        );
-  
-        setSections(sectionsWithPages);
-      } catch (error) {
-        console.error("Error loading PDF sections:", error);
-      }
-    };
-  
-    loadSections();
-  }, [file]); // Runs only when `file` changes
   
   return(
     <div
@@ -102,15 +54,13 @@ export const VisContainer = ({
           gap: 5
         }}
       >
-       {/*<SectionCard 
-          sections={sections}
-       />*/}
        <OverviewCard 
           anomalous={anomalous}
           author={author}
           venue={venue}
           citation={citation}
        />
+       <AnomalousLegendCard />
       </div>
 
       <div
