@@ -76,7 +76,7 @@ export const AnomalousListCard = ({
           if (options.citationRing) {
             optionTags.push(
                 <Tooltip key="citationRing" title={tagTooltips.citationRing}>
-                  <Tag color="blue">
+                  <Tag color="blue" style={{fontSize: 10, lineHeight: 1.5}}>
                     Citation Ring
                   </Tag>
                 </Tooltip>
@@ -85,7 +85,7 @@ export const AnomalousListCard = ({
           if (options.selfCitation) {
             optionTags.push(
                <Tooltip key="selfCitation" title={tagTooltips.selfCitation}>
-                  <Tag color="purple">
+                  <Tag color="purple" style={{fontSize: 10, lineHeight: 1.5}}>
                     Self Citation
                   </Tag>
                 </Tooltip>
@@ -99,7 +99,7 @@ export const AnomalousListCard = ({
             size="small"
             style={{
               width: "100%",
-              padding: 8,
+              padding: 5,
               //marginTop: 5,
               marginBottom: 10,
               backgroundColor: bgColor,
@@ -113,19 +113,17 @@ export const AnomalousListCard = ({
               align="center"
               style={{width:'100%'}}
             >
-              <Flex vertical gap={3}>
+              <Flex vertical gap={1}>
                 <Text strong style={{ color: baseColor, fontSize:12 }}>
                     {anomalousName}
                 </Text>
-                <Flex>
-                    <Tag color={categoryColor}>
-                      <b>{anomalousCategoryName}</b>
-                    </Tag>
-                    {optionTags}
-                </Flex>
-                
+                <Tag color={categoryColor}>
+                  <b>{anomalousCategoryName}</b>
+                </Tag>
               </Flex>
-              
+              <Flex vertical gap={5}>
+              {optionTags}
+              </Flex>
               <Text type="secondary" style={{fontSize:14}}>Page: {page}</Text>
             </Flex>
           </Card>

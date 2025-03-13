@@ -31,8 +31,48 @@ export const VisContainer = ({
   anomalousColorScheme,
   currentPage,
   activeHighlight,
-  setActiveHighlight
+  setActiveHighlight,
+  authorGraphData
 }) => {
+
+  const [graphData, setGraphData] = useState(null);
+
+  const graphDataProcess = () => {
+    if (!authorGraphData || !author) return;
+
+    // Construct nodes and links for D3
+    const nodes = [];
+    const links = [];
+    const nodeMap = {}; // To track existing nodes
+
+    // Filter links and count targets for each source
+    const filteredLinks = authorGraphData
+      //.filter((link) => link.value > 1);
+
+    filteredLinks.forEach((link) => {
+      const sourceAuthor = author.find((a) => a.id === link.source);
+      const targetAuthor = author.find((a) => a.id === link.target);
+
+      if (sourceAuthor && targetAuthor) {
+        if (!nodeMap[link.source]) {
+          nodes.push({ id: link.source, name: sourceAuthor.standardized_name });
+          nodeMap[link.source] = true;
+        }
+        if (!nodeMap[link.target]) {
+          nodes.push({ id: link.target, name: targetAuthor.standardized_name });
+          nodeMap[link.target] = true;
+        }
+        links.push({ source: link.source, target: link.target });
+      }
+    });
+
+    const graphData = { nodes, links };
+    return graphData;
+  };
+
+  useEffect(() => {
+    setGraphData(graphDataProcess());
+  }, [authorGraphData, author]);
   
   return(
     <div
@@ -59,8 +99,9 @@ export const VisContainer = ({
           author={author}
           venue={venue}
           citation={citation}
+          graphData={graphData}
        />
-       <AnomalousLegendCard />
+       {/*<AnomalousLegendCard />*/}
       </div>
 
       <div

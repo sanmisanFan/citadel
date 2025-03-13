@@ -504,10 +504,25 @@
       "openalex_link": null,
       "orcid": "https://orcid.org/0000-0001-8803-6355",
       "citation": [
-        "citation-12"
+        "citation-12",
+        "citation-304",
+        "citation-356",
+        "citation-358",
+        "citation-384",
+        "citation-385",
+        "citation-387",
+        "citation-411",
+        "citation-421",
+        "citation-453",
+        "citation-460"
       ],
       "venue": [
-        "venue-9"
+        "venue-9",
+        "venue-4",
+        "venue-120",
+        "venue-16",
+        "venue-19",
+        "venue-57"
       ],
       "author_graph": []
     },
@@ -9158,33 +9173,6 @@
       ],
       "venue": [
         "venue-4"
-      ],
-      "author_graph": []
-    },
-    {
-      "id": "author-621",
-      "raw_name": "Ross Maciejewski",
-      "standardized_name": "Ross Maciejewski",
-      "openalex_link": null,
-      "orcid": null,
-      "citation": [
-        "citation-304",
-        "citation-356",
-        "citation-358",
-        "citation-384",
-        "citation-385",
-        "citation-387",
-        "citation-411",
-        "citation-421",
-        "citation-453",
-        "citation-460"
-      ],
-      "venue": [
-        "venue-4",
-        "venue-120",
-        "venue-16",
-        "venue-19",
-        "venue-57"
       ],
       "author_graph": []
     },

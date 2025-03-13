@@ -19,6 +19,7 @@ import authorRaw from "./data/case1/authors.json";
 import venueRaw from "./data/case1/venues.json";
 import citationRaw from "./data/case1/citation.json";
 import anomalousRaw from "./data/case1/anomalous.json";
+import authorGraphData from "./data/case1/author_graph.json";
 
 /** load test PDF - should be uploaded by user */
 import samplePDF from "./data/case1/reviewerAPP_case1.pdf";
@@ -44,6 +45,12 @@ function App() {
   const initCitations = () => {
     const citationsList = JSON.parse(JSON.stringify(citationRaw.citations))
       .filter(e=>e.hop===1);
+    
+    citationsList.map(e=>{
+      e.cite_positions.filter(f=>f.has_issue).length>0 && (e.has_issue = true);
+      return e;
+    })
+
     
     setCitation(citationsList);
   };
@@ -164,6 +171,7 @@ function App() {
                 currentPage={currentPage}
                 activeHighlight={activeHighlight}
                 setActiveHighlight={setActiveHighlight}
+                authorGraphData={authorGraphData}
               />
             </Col>
           </Row>
