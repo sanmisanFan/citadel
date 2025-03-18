@@ -240,6 +240,10 @@ export const OverviewCard = ({
                     author={author}
                     citation={citation}
                   />}
+                  {/*<AuthorGraph 
+                    graphData={graphData}
+                    author={author}
+                  />*/}
               </Modal>
         </Descriptions.Item>
         <Descriptions.Item label="Most Cited Venues">

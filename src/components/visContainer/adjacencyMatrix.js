@@ -75,9 +75,32 @@ const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
         matrix[link.source][link.target] = 1;
       }
     });
+    
+    // Function to calculate the degree of each node
+    const calculateNodeDegree = (matrix) => {
+        const degree = {};
+        for (const source in matrix) {
+            degree[source] = 0;
+            for (const target in matrix[source]) {
+                degree[source] += matrix[source][target];
+            }
+        }
+        return degree;
+    };
 
-    // Sort nodes alphabetically for consistent matrix
-    nodes.sort((a, b) => a.name.localeCompare(b.name));
+    // Calculate node degrees
+    const nodeDegree = calculateNodeDegree(matrix);
+
+    // Sort nodes by degree (descending) and then alphabetically
+    nodes.sort((a, b) => {
+      const degreeDiff = nodeDegree[b.id] - nodeDegree[a.id];
+      if (degreeDiff !== 0) {
+          return degreeDiff;
+      }
+      return a.name.localeCompare(b.name);
+    });
+
+    // Sorted node order
     const nodeOrder = nodes.map(node => node.id);
 
     // Calculate cell size
