@@ -47,7 +47,7 @@ export const VisContainer = ({
 
     // Filter links and count targets for each source
     const filteredLinks = authorGraphData
-      //.filter((link) => link.value > 1);
+      .filter((link) => link.value > 3);
 
     filteredLinks.forEach((link) => {
       const sourceAuthor = author.find((a) => a.id === link.source);
@@ -67,6 +67,7 @@ export const VisContainer = ({
     });
 
     const graphData = { nodes, links };
+    console.log(graphData);
     return graphData;
   };
 
