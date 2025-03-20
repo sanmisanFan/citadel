@@ -19,7 +19,8 @@ import authorRaw from "./data/case1/authors.json";
 import venueRaw from "./data/case1/venues.json";
 import citationRaw from "./data/case1/citation.json";
 import anomalousRaw from "./data/case1/anomalous.json";
-import authorGraphData from "./data/case1/author_graph.json";
+import authorGraphDataRaw from "./data/case1/community_graph.json";
+//import authorGraphData from "./data/case1/author_graph.json";
 
 /** load test PDF - should be uploaded by user */
 import samplePDF from "./data/case1/reviewerAPP_case1.pdf";
@@ -171,7 +172,7 @@ function App() {
                 currentPage={currentPage}
                 activeHighlight={activeHighlight}
                 setActiveHighlight={setActiveHighlight}
-                authorGraphData={authorGraphData}
+                authorGraphDataRaw={authorGraphDataRaw}
               />
             </Col>
           </Row>

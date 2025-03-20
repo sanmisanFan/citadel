@@ -32,48 +32,42 @@ export const VisContainer = ({
   currentPage,
   activeHighlight,
   setActiveHighlight,
-  authorGraphData
+  authorGraphDataRaw
 }) => {
 
-  const [graphData, setGraphData] = useState(null);
+  const [authorGraphData, setAuthorGraphData] = useState(null);
 
-  const graphDataProcess = () => {
-    if (!authorGraphData || !author) return;
+  const authorGraphDataProcess = () => {
+    if (!authorGraphDataRaw || !author) return;
 
-    // Construct nodes and links for D3
-    const nodes = [];
-    const links = [];
-    const nodeMap = {}; // To track existing nodes
+    // add author names to author nodes
+    const authorGraphDataRaw_ = JSON.parse(JSON.stringify(authorGraphDataRaw));
 
-    // Filter links and count targets for each source
-    const filteredLinks = authorGraphData
-      .filter((link) => link.value > 3);
+    // Filter nodes with groups not equal to 0
+    authorGraphDataRaw_.nodes = authorGraphDataRaw_.nodes.filter(node => node.group !== 0);
 
-    filteredLinks.forEach((link) => {
-      const sourceAuthor = author.find((a) => a.id === link.source);
-      const targetAuthor = author.find((a) => a.id === link.target);
+    // Filter links that only contain nodes with groups not equal to 0
+    const validNodeIds = new Set(authorGraphDataRaw_.nodes.map(node => node.id));
+    authorGraphDataRaw_.links = authorGraphDataRaw_.links.filter(link => validNodeIds.has(link.source) && validNodeIds.has(link.target));
 
-      if (sourceAuthor && targetAuthor) {
-        if (!nodeMap[link.source]) {
-          nodes.push({ id: link.source, name: sourceAuthor.standardized_name });
-          nodeMap[link.source] = true;
-        }
-        if (!nodeMap[link.target]) {
-          nodes.push({ id: link.target, name: targetAuthor.standardized_name });
-          nodeMap[link.target] = true;
-        }
-        links.push({ source: link.source, target: link.target });
+    // Add corresponding author name to each node
+    authorGraphDataRaw_.nodes.forEach(node => {
+      const authorData = author.find((a) => a.id === node.id);
+      if (authorData) {
+        node.name = authorData.standardized_name;
       }
+     // node.name = author.find((a) => a.id === node.id).standardized_name;
     });
 
-    const graphData = { nodes, links };
-    console.log(graphData);
-    return graphData;
+    console.log(authorGraphDataRaw_);
+    return(authorGraphDataRaw_);
   };
 
+
+
   useEffect(() => {
-    setGraphData(graphDataProcess());
-  }, [authorGraphData, author]);
+    setAuthorGraphData(authorGraphDataProcess());
+  }, [authorGraphDataRaw, author]);
   
   return(
     <div
@@ -100,7 +94,7 @@ export const VisContainer = ({
           author={author}
           venue={venue}
           citation={citation}
-          graphData={graphData}
+          graphData={authorGraphData}
        />
        {/*<AnomalousLegendCard />*/}
       </div>
