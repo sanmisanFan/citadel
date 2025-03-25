@@ -5,14 +5,15 @@ const AuthorGraph = ({
   authorID,
   graphData, 
   author,
-  height
+  height,
+  graphSource
 }) => {
   const canvasRef = useRef(null);
 
   const drawGraph = () => {
     console.log(author);
     const { scrollWidth, scrollHeight } = canvasRef.current;
-    const nodeRedius = 5;
+    const nodeRedius = 8;
     let dimensions = {
       width: scrollWidth,
       height: scrollHeight,
@@ -79,7 +80,7 @@ const AuthorGraph = ({
       )
       .force("charge", d3.forceManyBody())
       .force("center", d3.forceCenter(dimensions.boundedWidth / 2, dimensions.boundedHeight / 2))
-      .force("collide", d3.forceCollide().radius(40))
+      .force("collide", d3.forceCollide().radius(graphSource === 'card'? 40 : 70))
       .force("x", d3.forceX())
       .force("y", d3.forceY());
 
@@ -91,7 +92,7 @@ const AuthorGraph = ({
       .selectAll("line")
       .data(graphData.links)
       .join("line")
-      .attr("stroke-width", 1)
+      .attr("stroke-width", d => Math.min(Math.sqrt(d.value), 5)) // Update link width based on value with a max width
       .attr("marker-end", "url(#arrowhead"+authorID+")"); // Add arrowhead to links
 
 
@@ -118,7 +119,7 @@ const AuthorGraph = ({
     node
       .append("circle")
       .attr("r", nodeRedius)
-      .attr("fill", author.has_issue ? "red" : "steelblue")
+      .attr("fill", (d) => d.has_issue ? "red" : "steelblue")
       .attr("stroke", "#fff")
       .attr("stroke-width", 1);
 

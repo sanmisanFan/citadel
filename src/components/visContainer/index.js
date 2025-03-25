@@ -94,8 +94,6 @@ export const VisContainer = ({
     return(authorGraphDataRaw_);
   };
 
-
-
   useEffect(() => {
     setAuthorGraphData(authorGraphDataProcess());
     setAdjacencyMatrixData(adjacencyMatrixDataProcess());
@@ -173,6 +171,7 @@ export const VisContainer = ({
             citation={citation}
             author={author}
             venue={venue}
+            anomalousColorScheme={anomalousColorScheme}
           />
         }
       </div>

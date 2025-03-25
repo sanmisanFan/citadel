@@ -76,7 +76,7 @@ export const AnomalousListCard = ({
           if (options.citationRing) {
             optionTags.push(
                 <Tooltip key="citationRing" title={tagTooltips.citationRing}>
-                  <Tag color="blue" style={{fontSize: 10, lineHeight: 1.5}}>
+                  <Tag color="purple" style={{fontSize: 10, lineHeight: 1.5}}>
                     Citation Ring
                   </Tag>
                 </Tooltip>
@@ -85,7 +85,7 @@ export const AnomalousListCard = ({
           if (options.selfCitation) {
             optionTags.push(
                <Tooltip key="selfCitation" title={tagTooltips.selfCitation}>
-                  <Tag color="purple" style={{fontSize: 10, lineHeight: 1.5}}>
+                  <Tag color="magenta" style={{fontSize: 10, lineHeight: 1.5}}>
                     Self Citation
                   </Tag>
                 </Tooltip>

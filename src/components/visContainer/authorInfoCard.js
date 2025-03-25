@@ -4,7 +4,14 @@ import AuthorGraph from './authorGraph'; // Import AuthorGraph component
 
 const { Text, Link } = Typography;
 
-export const AuthorInfoCard = ({ author, citation, authorGraphData, anomalous, anomalousColorScheme }) => {
+export const AuthorInfoCard = ({ 
+  author, 
+  citation, 
+  authorGraphData, 
+  anomalous, 
+  anomalousColorScheme,
+  source
+}) => {
   if (!author) return null;
 
   const authorCitations = citation.filter(cite => cite.author.includes(author.id));
@@ -16,12 +23,27 @@ export const AuthorInfoCard = ({ author, citation, authorGraphData, anomalous, a
   const authorNode = authorGraphData.nodes.find(node => node.id === author.id);
   const authorGroup = authorNode ? authorNode.group : null;
 
-  const filteredNodes = authorGraphData.nodes.filter(node => node.id === author.id || node.group === authorGroup);
-  const filteredNodeIds = new Set(filteredNodes.map(node => node.id));
+  let filteredNodes = [];
+  let filteredLinks = [];
 
-  const filteredLinks = authorGraphData.links.filter(link => 
-    filteredNodeIds.has(link.source.id || link.source) && filteredNodeIds.has(link.target.id || link.target)
-  );
+  if (authorGroup === 0) {
+    // If the node is in group 0, show the node and all nodes that have direct links connected to it
+    filteredNodes = authorGraphData.nodes.filter(node => node.id === author.id);
+    const directLinks = authorGraphData.links.filter(link => 
+      link.source.id === author.id || link.target.id === author.id || 
+      link.source === author.id || link.target === author.id
+    );
+    const directNodeIds = new Set(directLinks.flatMap(link => [link.source.id || link.source, link.target.id || link.target]));
+    filteredNodes = filteredNodes.concat(authorGraphData.nodes.filter(node => directNodeIds.has(node.id)));
+    filteredLinks = directLinks;
+  } else {
+    // Otherwise, show the node and all nodes in the same group
+    filteredNodes = authorGraphData.nodes.filter(node => node.id === author.id || node.group === authorGroup);
+    const filteredNodeIds = new Set(filteredNodes.map(node => node.id));
+    filteredLinks = authorGraphData.links.filter(link => 
+      filteredNodeIds.has(link.source.id || link.source) && filteredNodeIds.has(link.target.id || link.target)
+    );
+  }
 
   console.log("filteredGraphData", author.standardized_name, filteredLinks);
   const filteredGraphData = {
@@ -95,10 +117,11 @@ export const AuthorInfoCard = ({ author, citation, authorGraphData, anomalous, a
         <Divider style={{ margin: '8px 0' }} />
         <Text strong>Citation Graph</Text>
         <AuthorGraph 
-          authorID={author.id}
+          authorID={author.id+source}
           graphData={filteredGraphData} 
           author={author} 
           height={300}
+          graphSource={'card'}
         />
       </Space>
     </div>

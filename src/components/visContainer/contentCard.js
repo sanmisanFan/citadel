@@ -11,16 +11,21 @@ export const ContentCard = ({
   anomalous,
   citation,
   author,
-  venue
+  venue,
+  anomalousColorScheme
 }) => {
   const selectedAnomalous = anomalous.find(e => e.id === activeHighlight);
+  const baseColor = anomalousColorScheme[selectedAnomalous.name]['baseColor'];
+  const categoryColor = anomalousColorScheme[selectedAnomalous.name]['category'][selectedAnomalous.category.name]['baseColor'];
+  const boxColor = anomalousColorScheme[selectedAnomalous.name]['category'][selectedAnomalous.category.name]['boxColor'];
+  const bgColor = activeHighlight === selectedAnomalous.id && boxColor;
 
   if (!selectedAnomalous) {
     return (
       <Card
         id={id}
         size="small"
-        title={title}
+        //title={title}
         style={{
           width: width,
         }}
@@ -31,7 +36,7 @@ export const ContentCard = ({
   }
 
   // Extract relevant information from the selected anomalous object
-  const { displayName, category, paper, page, explanation, sentence } = selectedAnomalous;
+  const { displayName, category, paper, page, explanation } = selectedAnomalous;
 
   // Function to format the authors, if available
   const formatAuthors = (authorIds) => {
@@ -60,24 +65,27 @@ export const ContentCard = ({
       console.log("citationObj", citationObj);
       
       return (
-        <div key={`citation-${index}`} style={{padding: 10}}>
-          <Descriptions size="small" column={1}>
-            <Descriptions.Item label={`Citation ${index+1} Author`}>
+        <div key={`citation-${index}`} style={{padding: 5}}>
+          <Descriptions size="small" >
+            <Descriptions.Item label={`Author`} span={3}>
               {citationObj && formatAuthors(citationObj.author)}
             </Descriptions.Item>
-            <Descriptions.Item label={`Citation ${index+1} Title`}>
+            <Descriptions.Item label={`Title`} span={3}>
               {citationObj && citationObj.title}
             </Descriptions.Item>
-            <Descriptions.Item label={`Citation ${index+1} Venue`}>
+            <Descriptions.Item label={`Venue`} span={3}>
               {citationObj && formatVenue(citationObj.venue)}
             </Descriptions.Item>
-            <Descriptions.Item label={`Citation ${index+1} Year`}>
+            <Descriptions.Item label={`Year`}>
               {citationObj && citationObj.year}
             </Descriptions.Item>
-            <Descriptions.Item label={`Citation ${index+1} DOI`}>
+            <Descriptions.Item label={`Citation Number`} span={3}>
+              {citationObj && citationObj.cite_number}
+            </Descriptions.Item>
+            <Descriptions.Item label={`DOI`} span={3}>
               {citationObj && citationObj.doi ? (<a href={citationObj.doi} target="_blank" rel="noopener noreferrer">{citationObj.doi}</a>) : 'N/A'}
             </Descriptions.Item>
-            <Descriptions.Item label={`Citation ${index+1} Source`}>
+            <Descriptions.Item label={`Source`} span={3}>
             {citationObj && citationObj.source}
             </Descriptions.Item>
           </Descriptions>
@@ -90,14 +98,14 @@ export const ContentCard = ({
     <Card
       id={id}
       size="small"
-      title={title}
+      //title={title}
       style={{
         width: width,
         height: '100%'
       }}
       styles={{
         body: {
-          height: 'calc(100% - 60px)',
+          height: 'calc(100%)',
           overflowY: "scroll",
           position: "relative"
         },
@@ -105,11 +113,22 @@ export const ContentCard = ({
     >
       <div>
         <Descriptions size="small" column={1} bordered>
-          <Descriptions.Item label="Anomalous Type">
-            <Tag color="blue">{displayName}</Tag>
+          <Descriptions.Item label="Type">
+            <Tag color={baseColor} style={{fontSize: 12, lineHeight: 1.5}}>{displayName}</Tag>
           </Descriptions.Item>
-          <Descriptions.Item label="Category">
-            <Tag color="green">{category.displayName}</Tag>
+          <Descriptions.Item label="Anomalous">
+            <Tag 
+              color={categoryColor}
+              style={{fontSize: 12, lineHeight: 1.5}}
+            >
+                {category.displayName}
+            </Tag>
+            {(category.options !== null && category.options.citationRing) && (
+              <Tag color="red" style={{fontSize: 12, lineHeight: 1.5}}>Citation Ring</Tag>
+            )}
+            {(category.options !== null && category.options.selfCitation) && (
+              <Tag color="blue" style={{fontSize: 12, lineHeight: 1.5}}>Self Citation</Tag>
+            )}
           </Descriptions.Item>
           <Descriptions.Item label="Page">
             {page}

@@ -169,6 +169,15 @@ export const PDFContainer = ({
   }, [renderedPages, citation, anomalous, activeHighlight]);
 
   useEffect(() => {
+    if (activeHighlight !== null) {
+      const selectedAnomalous = anomalous.find(e => e.id === activeHighlight);
+      if (selectedAnomalous) {
+        scrollToPage(selectedAnomalous.page);
+      }
+    }
+  }, [activeHighlight, anomalous]);
+
+  useEffect(() => {
     if (viewerRef.current) {
       setWidth(viewerRef.current.offsetWidth);
     }

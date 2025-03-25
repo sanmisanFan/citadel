@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useState } from "react";
-import { Card, Space, Flex, Badge, Tag, Tooltip, Descriptions, Typography, Modal, List, Button, Popover } from 'antd';
+import { Card, Radio, Flex, Badge, Tag, Tooltip, Descriptions, Typography, Modal, List, Button, Popover } from 'antd';
 
 import AuthorGraph from "./authorGraph";
 import AdjacencyMatrixPanel from "./adjacencyMatrix.js";
@@ -17,7 +17,15 @@ export const OverviewCard = ({
   anomalousColorScheme
 }) => {
   const { Text } = Typography;
+
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [autherGraphFlag, setAuthorGraphFlag] = useState('matrix');
+  const [isVenueModalVisible, setIsVenueModalVisible] = useState(false);
+  const [selectedYear, setSelectedYear] = useState(null);
+  const [citationSources, setCitationSources] = useState([]);
+  const [popoverVisible, setPopoverVisible] = useState(false);
+
+  const authorCardGraphData = JSON.parse(JSON.stringify(adjacencyMatrixData));
 
   // Helper function to get author object by ID
   const getAuthorById = (authorId) => {
@@ -110,14 +118,14 @@ export const OverviewCard = ({
       (a, b) => venueCitationCounts[b] - venueCitationCounts[a]
     );
 
-    return sortedVenueIds.slice(0, 3).map(venueId => { // Top 3
+    return sortedVenueIds.map(venueId => {
       const venueObj = getVenueById(venueId);
       return {
         name: venueObj ? venueObj.standardized_name : "Unknown Venue",
         type: venueObj ? venueObj.type : "Unknown Type",        
         totalCount: venueCitationCounts[venueId],
         id: venueId,
-        issueCount:0,
+        issueCount: 0,
       }
     });
   };
@@ -149,7 +157,7 @@ export const OverviewCard = ({
   };
 
   const hop1CitedAuthors = authorsWithHop1Citations();
-  console.log('hop1CitedAuthors', hop1CitedAuthors);
+  //console.log('hop1CitedAuthors', hop1CitedAuthors);
   const citedVenues = mostCitedVenues();
   const citedVenuesWithIssue = calculateIssueCountForVenues(citedVenues);
   const timeDistribution = citationTimeDistribution();
@@ -166,6 +174,26 @@ export const OverviewCard = ({
     setIsModalVisible(false);
   };
 
+  const showVenueModal = () => {
+    setIsVenueModalVisible(true);
+  };
+
+  const handleVenueModalCancel = () => {
+    setIsVenueModalVisible(false);
+  };
+
+  const handleYearBarClick = (year) => {
+    setSelectedYear(year);
+    const sources = citation.filter(c => c.year === year).map(c => {
+      return {
+        source:c.source,
+        number:c.cite_number
+      };
+    });
+    setCitationSources(sources);
+    setPopoverVisible(true);
+  };
+  
   return (
     <Card
       id="overviewContainer-card"
@@ -197,9 +225,10 @@ export const OverviewCard = ({
                     content={<AuthorInfoCard 
                                 author={getAuthorById(author.id)}
                                 citation={citation}
-                                authorGraphData={graphData}
+                                authorGraphData={authorCardGraphData}
                                 anomalous={anomalous}
                                 anomalousColorScheme={anomalousColorScheme}
+                                source={'overview'}
                               />}
                     //title={author.name}
                     trigger="click"
@@ -230,11 +259,17 @@ export const OverviewCard = ({
                 style={{
                   top: 20
                 }}
-                /*footer={[
-                  <Button key="show-author-graph-btn" onClick={handleCancel}>
-                    Show author graph
-                  </Button>
-                ]}*/
+                footer={[
+                  <Radio.Group 
+                    defaultValue="matrix" 
+                    buttonStyle="solid" 
+                    key='radio-group-overview'
+                    onChange={(e) => setAuthorGraphFlag(e.target.value)}
+                  >
+                    <Radio.Button value="matrix">Adjacency Matrix</Radio.Button>
+                    <Radio.Button value="graph">Citation Graph</Radio.Button>
+                  </Radio.Group>
+                ]}
                 >
                     <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <List
@@ -251,9 +286,10 @@ export const OverviewCard = ({
                         content={<AuthorInfoCard 
                                     author={getAuthorById(item.id)}
                                     citation={citation}
-                                    authorGraphData={graphData}
+                                    authorGraphData={authorCardGraphData}
                                     anomalous={anomalous}
                                     anomalousColorScheme={anomalousColorScheme}
+                                    source={'model'}
                                   />}
                         //title={item.name}
                         trigger="click"
@@ -267,20 +303,26 @@ export const OverviewCard = ({
                       </Popover>
                       )}
                     />
-                    <div
-                      style={{
-                        width: '80%',
-                        height: 930,
-                        overflow: 'auto'
-                      }}
-                    >
-                      <AdjacencyMatrixPanel 
-                      graphData={adjacencyMatrixData}
-                      author={author}
-                      citation={citation}
-                      //style={{ width: '60%' }} // Adjust width to fit the remaining space
-                    />
-                    </div>
+                      <div
+                        style={{
+                          width: '80%',
+                          height: 930,
+                          overflow: 'auto'
+                        }}
+                      >
+                        {autherGraphFlag === 'graph' && <AuthorGraph 
+                          authorID={'overview'}
+                          graphData={graphData}
+                          author={author}
+                          height={900}
+                          graphSource={'overview'}
+                        />}
+                        {autherGraphFlag === 'matrix' && <AdjacencyMatrixPanel 
+                          graphData={adjacencyMatrixData}
+                          author={author}
+                          citation={citation}
+                        />}
+                      </div>
                     </div>
                   {/*<List
                     style={{
@@ -309,8 +351,8 @@ export const OverviewCard = ({
               </Modal>
         </Descriptions.Item>
         <Descriptions.Item label="Most Cited Venues">
-          <Flex gap={10}>
-            {citedVenuesWithIssue.map((venue, index) => (
+          <Flex gap={10} wrap={true}>
+            {citedVenuesWithIssue.slice(0, 2).map((venue, index) => (
               <span key={`venue-${venue.id}`}>
                   <Tooltip key={`venue-tip-${venue.id}`} title={`${venue.name} [${venue.type}]`}>
                     <span style={{display:"inline-block", overflow:"hidden", textOverflow:"ellipsis", maxWidth:"200px", whiteSpace:"nowrap"}}>{venue.name}</span>
@@ -323,10 +365,43 @@ export const OverviewCard = ({
                 </span>
               
             ))}
+            {/* Show More Button */}
+            {citedVenuesWithIssue.length > 3 && (
+              <Button size="small" type="link" onClick={showVenueModal} style={{padding: 0}}>
+                Show More
+              </Button>
+            )}
           </Flex>
+          <Modal
+            title="All Cited Venues"
+            open={isVenueModalVisible}
+            onCancel={handleVenueModalCancel}
+            width={800}
+            destroyOnClose={true}
+            style={{
+              top: 20
+            }}
+            footer={null}
+          >
+            <List
+              style={{
+                height: 400,
+                overflow: 'auto'
+              }}
+              dataSource={citedVenuesWithIssue}
+              renderItem={(item) => (
+                <List.Item>
+                  <Text strong>{item.name}</Text>
+                  <Text type={item.issueCount > 0 ? 'danger' : 'success'}>
+                    {item.issueCount > 0 ? `[${item.issueCount}/${item.totalCount}]` : `[${item.totalCount}]`}
+                  </Text>
+                </List.Item>
+              )}
+            />
+          </Modal>
         </Descriptions.Item>
+        
         <Descriptions.Item label="Citation Time Distribution" >
-          
           
             <Flex gap={5}>
             <Flex
@@ -341,42 +416,63 @@ export const OverviewCard = ({
             >
               {timeDistribution.map((item, index) => (
                 <Tooltip key={`time-dist-tooltip-${index}`} title={`${item.year}: ${item.count} citations`}>
-                  <div
-                    key={`time-dist-${index}`}
-                    style={{
-                      height: item.height,
-                      width: 20,
-                      backgroundColor: '#999',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      position: 'relative' // Add relative positioning
-                    }}
+                  <Popover
+                    content={
+                      <List
+                        style={{ width: 500 }}
+                        size="small"
+                        dataSource={citationSources}
+                        renderItem={source => (
+                          <List.Item>
+                            <b>[{source.number}]</b> {source.source} 
+                          </List.Item>
+                        )}
+                      />
+                    }
+                    title={`Citation Sources for ${selectedYear}`}
+                    trigger="click"
+                    open={popoverVisible && selectedYear === item.year}
+                    onOpenChange={(open) => setPopoverVisible(open)}
                   >
-                    {/* Citation count label */}
-                    <span
+                    <div
+                      key={`time-dist-${index}`}
                       style={{
-                        fontSize: '0.6rem',
-                        position: 'absolute', // Absolute positioning to overlap
-                        top: '-0.8rem', // Position above the bar
-                        left: '50%', // Center horizontally
-                        transform: 'translateX(-50%)', // Adjust for centering
-                        whiteSpace: 'nowrap',
-                        color: '#000'
+                        height: item.height,
+                        width: 20,
+                        backgroundColor: '#999',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        position: 'relative', // Add relative positioning
+                        cursor: 'pointer' // Add cursor pointer
                       }}
+                      onClick={() => handleYearBarClick(item.year)} // Add click handler
                     >
-                      {item.count}
-                    </span>
-                    <span style={{
-                        fontSize: `${labelFontSize}rem`, // Small font size
-                        position: 'absolute', // Change to absolute
-                        bottom: `-${labelOffset+8}px`, // Use calculated offset here
-                        whiteSpace: 'nowrap',
-                        textAlign: 'center',
-                        transform: 'rotate(-30deg) translateX(-50%)', // Center horizontally and rotate
-                        left: '50%'
-                      }}>{item.year}</span>
-                  </div>
+                      {/* Citation count label */}
+                      <span
+                        style={{
+                          fontSize: '0.6rem',
+                          position: 'absolute', // Absolute positioning to overlap
+                          top: '-0.8rem', // Position above the bar
+                          left: '50%', // Center horizontally
+                          transform: 'translateX(-50%)', // Adjust for centering
+                          whiteSpace: 'nowrap',
+                          color: '#000'
+                        }}
+                      >
+                        {item.count}
+                      </span>
+                      <span style={{
+                          fontSize: `${labelFontSize}rem`, // Small font size
+                          position: 'absolute', // Change to absolute
+                          bottom: `-${labelOffset+8}px`, // Use calculated offset here
+                          whiteSpace: 'nowrap',
+                          textAlign: 'center',
+                          transform: 'rotate(-30deg) translateX(-50%)', // Center horizontally and rotate
+                          left: '50%'
+                        }}>{item.year}</span>
+                    </div>
+                  </Popover>
                 </Tooltip>
               ))}
             </Flex>
