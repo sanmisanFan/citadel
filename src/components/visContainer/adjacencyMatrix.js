@@ -4,7 +4,7 @@ import * as d3 from "d3";
 const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
   const canvasRef = useRef(null);
 
-  const drawGraph = (graphData) => {
+  const drawGraph = () => {
     if (!graphData || !graphData.nodes || !graphData.links || graphData.nodes.length === 0) {
       return; // Exit if data is invalid or empty
     }
@@ -13,10 +13,10 @@ const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
       width: scrollWidth,
       height: scrollHeight,
       margin: {
-        top: 100, // Increased top margin for labels
-        right: 10,
+        top: 110, // Increased top margin for labels
+        right: 50,
         bottom: 10,
-        left: 100, // Increased left margin for labels
+        left: 150, // Increased left margin for labels
       },
     };
     dimensions.boundedWidth =
@@ -81,7 +81,7 @@ const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
 
     // Calculate node degrees
     const nodeDegree = calculateNodeDegree(matrix);
-    console.log(matrix);
+    //console.log(matrix);
 
     // Sort nodes by degree (descending) and then alphabetically
     nodes.sort((a, b) => {
@@ -94,14 +94,22 @@ const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
 
     // Sorted node order
     const nodeOrder = nodes.map(node => node.id);
+    //console.log(nodeOrder);
 
     // Calculate cell size
     const cellSize = Math.min(dimensions.boundedWidth / nodes.length, dimensions.boundedHeight / nodes.length);
 
     // Define the color scale for the heatmap
-    const colorScale = d3.scaleLinear()
-      .domain([0, 5]) // We have 0 (no link) and 1 (link)
-      .range(["#eee", "steelblue"]); // Light gray to blue
+    const colorScheme = ['#eee', '#c6dbef','#9ecae1','#6baed6','#3182bd','#08519c'];
+    const colorSchemeCluster = ['#eee', '#fcc5c0','#fa9fb5','#f768a1','#dd3497','#ae017e'];
+
+    const colorScale = d3.scaleThreshold()
+    .domain([1, 2, 3, 5, 10])
+    .range(colorScheme);
+
+    const colorScaleCluster = d3.scaleThreshold()
+    .domain([1, 2, 3, 5, 10])
+    .range(colorSchemeCluster);
 
     // Create scales for x and y axes
     const xScale = d3.scaleBand()
@@ -135,9 +143,38 @@ const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
       .attr("x", d => xScale(d.target))
       .attr("width", xScale.bandwidth())
       .attr("height", yScale.bandwidth())
-      .style("fill", d => colorScale(matrix[d.source][d.target]))
+      .style("fill", d => {
+        const hasIssue = citation.some(cite => 
+          cite.author.includes(d.target) && 
+          cite.has_issue === true
+        );
+        return hasIssue ? colorScaleCluster(matrix[d.source][d.target]) : colorScale(matrix[d.source][d.target]);
+      })
       .style("stroke", "white")
-      .style("stroke-width", 1);
+      .style("stroke-width", 1)
+      .on("mouseover", function(event, d) {
+        d3.select(this).style("stroke", "black").style("stroke-width", 2);
+        d3.selectAll(`.row text`).filter(text => text === d.source).style("font-weight", "bold");
+        d3.selectAll(`.column text`).filter(text => text === d.target).style("font-weight", "bold");
+      })
+      .on("mouseout", function(event, d) {
+        d3.select(this).style("stroke", "white").style("stroke-width", 1);
+        d3.selectAll(`.row text`).filter(text => text === d.source).style("font-weight", "normal");
+        d3.selectAll(`.column text`).filter(text => text === d.target).style("font-weight", "normal");
+      });
+
+    // Add citation text to each cell
+    rows.selectAll(".cell-text")
+      .data(source => nodeOrder.map(target => ({ source, target })))
+      .enter().append("text")
+      .attr("class", "cell-text")
+      .attr("x", d => xScale(d.target) + xScale.bandwidth() / 2)
+      .attr("y", yScale.bandwidth() / 2)
+      .attr("dy", ".32em")
+      .attr("text-anchor", "middle")
+      .text(d => matrix[d.source][d.target] > 0 ? matrix[d.source][d.target] : "")
+      .style("font-size", "0.5rem")
+      .style("pointer-events", "none");
 
     // Add node labels
     rows.append("text")
@@ -157,17 +194,17 @@ const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
       .attr("transform", (d, i) => `translate(${xScale(d)}, 0)`);
 
     columnLabels.append("text")
-      .attr("x", xScale.bandwidth() / 2)
-      .attr("y", -5)
+      .attr("x", 5)
+      .attr("y", xScale.bandwidth() / 2 - 5)
       .attr("dy", ".32em")
       .attr("text-anchor", "start")
-      .attr("transform", "rotate(-90)")
+      .attr("transform", "rotate(-65)")
       .text(target => authorLookup[target].name)
       .style("font-size", "0.7rem")
       .style("pointer-events", "none");
 
     // Brush
-    const brush = d3.brush()
+    /*const brush = d3.brush()
       .extent([[0, 0], [xScale.range()[1], yScale.range()[1]]])
       .on("start brush end", brushed);
 
@@ -199,7 +236,7 @@ const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
         rows.selectAll("text").classed("selected", false);
         columnLabels.selectAll("text").classed("selected", false);
       }
-    }
+    }*/
   };
 
   const clearCanvas = () => {
@@ -210,15 +247,15 @@ const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
   useEffect(() => {
     if (graphData === null || !citation) return;
     clearCanvas();
-    drawGraph(graphData);
+    drawGraph();
   }, [graphData, author, citation]);
 
   return (
     <div ref={canvasRef} style={{ height: "100%" }}>
       <svg
         style={{
-          width: "50%",
-          height: "500px",
+          width: "100%", 
+          height: "950px",
         }}
       >
         <g id="root-group" />

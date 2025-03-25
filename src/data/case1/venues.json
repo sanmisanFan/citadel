@@ -73,7 +73,7 @@
         "IEEE Transactions on Visualization and Computer Graphics",
         "IEEE Trans. Vis. Comput. Graph."
       ],
-      "short": "IEEE Trans",
+      "short": "IEEE TVCG",
       "standardized_name": "IEEE Transactions on Visualization and Computer Graphics",
       "year": [
         "2019",
@@ -634,7 +634,7 @@
       "raw_name": [
         "CHI"
       ],
-      "short": "ACM Confer",
+      "short": "ACM CHI",
       "standardized_name": "ACM Conference on Human Factors in Computing Systems",
       "year": [
         "2020",

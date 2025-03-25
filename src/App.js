@@ -50,9 +50,28 @@ function App() {
     citationsList.map(e=>{
       e.cite_positions.filter(f=>f.has_issue).length>0 && (e.has_issue = true);
       return e;
-    })
+    });
 
-    
+    const authorList = JSON.parse(JSON.stringify(authorRaw.authors));
+    authorList.forEach(author => {
+      author.has_issue = citationsList.some(citation => 
+        citation.author.includes(author.id) && citation.has_issue
+      );
+    });
+
+    const venueList = JSON.parse(JSON.stringify(venueRaw.venues));
+    venueList.forEach(venue => {
+      venue.has_issue = citationsList.some(citation => 
+        citation.venue.includes(venue.id) && citation.has_issue
+      );
+    });
+
+    console.log("citationsList", citationsList);
+    console.log("authorList", authorList);  
+    console.log("venueList", venueList);  
+
+    setAuthor(authorList);
+    setVenue(venueList);
     setCitation(citationsList);
   };
 
@@ -103,10 +122,10 @@ function App() {
   };
 
   /** init author list */
-  const initAuthor = () => {
+  /*const initAuthor = () => {
     const authorList = JSON.parse(JSON.stringify(authorRaw.authors));
     setAuthor(authorList);
-  };
+  };*/
 
    /** init venue list */
    const initVenue = () => {
@@ -122,7 +141,7 @@ function App() {
   /** load citation objects */
   useEffect(() => {
     initCitations();
-  }, [citationRaw]);
+  }, [citationRaw, authorRaw, venueRaw]);
 
   /** load detected anomalous */
   useEffect(() => {
@@ -133,13 +152,13 @@ function App() {
     anomalous.length > 0 && initSentenceHightlights();
   }, [anomalous]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     initAuthor();
-  }, [authorRaw]);
+  }, [authorRaw]);*/
 
-  useEffect(() => {
+  /*useEffect(() => {
     initVenue();
-  }, [venueRaw]);
+  }, [venueRaw]);*/
 
   //const { Header, Content } = Layout;
   //console.log("anomalousList", anomalous);

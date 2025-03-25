@@ -36,6 +36,7 @@ export const VisContainer = ({
 }) => {
 
   const [authorGraphData, setAuthorGraphData] = useState(null);
+  const [adjacencyMatrixData, setAdjacencyMatrixData] = useState(null);
 
   const authorGraphDataProcess = () => {
     if (!authorGraphDataRaw || !author) return;
@@ -55,11 +56,41 @@ export const VisContainer = ({
       const authorData = author.find((a) => a.id === node.id);
       if (authorData) {
         node.name = authorData.standardized_name;
+        node.has_issue = authorData.has_issue;
       }
-     // node.name = author.find((a) => a.id === node.id).standardized_name;
     });
 
-    console.log(authorGraphDataRaw_);
+    //console.log(authorGraphDataRaw_);
+    return(authorGraphDataRaw_);
+  };
+
+  const adjacencyMatrixDataProcess = () => {
+    if (!authorGraphDataRaw || !author || !citation) return;
+
+    // add author names to author nodes
+    const authorGraphDataRaw_ = JSON.parse(JSON.stringify(authorGraphDataRaw));
+    
+    // Map each author with their citations and filter the authors with hop in citation other than 1
+    authorGraphDataRaw_.nodes = authorGraphDataRaw_.nodes.filter(node => {
+      const authorData = author.find((a) => a.id === node.id);
+      const citationData = citation.find((c) => c.author.includes(node.id));
+      
+      return citationData && citationData.hop === 1;
+    });
+
+    // Filter links that only contain nodes with groups not equal to 0
+    const validNodeIds = new Set(authorGraphDataRaw_.nodes.map(node => node.id));
+    authorGraphDataRaw_.links = authorGraphDataRaw_.links.filter(link => validNodeIds.has(link.source) && validNodeIds.has(link.target));
+
+    // Add corresponding author name to each node
+    authorGraphDataRaw_.nodes.forEach(node => {
+      const authorData = author.find((a) => a.id === node.id);
+      if (authorData) {
+        node.name = authorData.standardized_name;
+        node.has_issue = authorData.has_issue;
+      }
+    });
+    //console.log(authorGraphDataRaw_);
     return(authorGraphDataRaw_);
   };
 
@@ -67,6 +98,7 @@ export const VisContainer = ({
 
   useEffect(() => {
     setAuthorGraphData(authorGraphDataProcess());
+    setAdjacencyMatrixData(adjacencyMatrixDataProcess());
   }, [authorGraphDataRaw, author]);
   
   return(
@@ -95,6 +127,8 @@ export const VisContainer = ({
           venue={venue}
           citation={citation}
           graphData={authorGraphData}
+          adjacencyMatrixData={adjacencyMatrixData}
+          anomalousColorScheme={anomalousColorScheme}
        />
        {/*<AnomalousLegendCard />*/}
       </div>

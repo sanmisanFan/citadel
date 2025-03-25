@@ -51,12 +51,13 @@ export const ContentCard = ({
     if (!venueId) return "N/A";
 
     const venueObj = venue.find(v => v.id === venueId);
-    return venueObj ? `${venueObj.name} [${venueObj.type}]` : "Unknown Venue";
+    return venueObj ? `${venueObj.standardized_name}` : "Unknown Venue";
   };
 
   const citationInfo = paper && paper.length > 0 ? (
     paper.map((citationId, index) => {
       const citationObj = citation.find(c=>c.id===citationId);
+      console.log("citationObj", citationObj);
       
       return (
         <div key={`citation-${index}`} style={{padding: 10}}>
@@ -94,8 +95,15 @@ export const ContentCard = ({
         width: width,
         height: '100%'
       }}
+      styles={{
+        body: {
+          height: 'calc(100% - 60px)',
+          overflowY: "scroll",
+          position: "relative"
+        },
+      }}
     >
-      <div style={{height: 'calc(100% - 60px)', overflowY: "auto",}}>
+      <div>
         <Descriptions size="small" column={1} bordered>
           <Descriptions.Item label="Anomalous Type">
             <Tag color="blue">{displayName}</Tag>
@@ -113,11 +121,6 @@ export const ContentCard = ({
           <Descriptions.Item label="Explanation">
             {explanation}
           </Descriptions.Item>
-          {sentence.map((s, i) => (
-            <Descriptions.Item key={i} label={`Sentence ${i + 1}`}>
-              {s.sentence}
-            </Descriptions.Item>
-          ))}
         </Descriptions>
       </div>
     </Card>

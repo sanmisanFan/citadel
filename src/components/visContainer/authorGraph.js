@@ -2,13 +2,17 @@ import { useEffect, useRef } from "react";
 import * as d3 from "d3";
 
 const AuthorGraph = ({ 
+  authorID,
   graphData, 
-  author 
+  author,
+  height
 }) => {
   const canvasRef = useRef(null);
 
   const drawGraph = () => {
+    console.log(author);
     const { scrollWidth, scrollHeight } = canvasRef.current;
+    const nodeRedius = 5;
     let dimensions = {
       width: scrollWidth,
       height: scrollHeight,
@@ -26,6 +30,27 @@ const AuthorGraph = ({
 
     const svgRoot = d3.select(canvasRef.current).select("svg");
     const rootGroup = svgRoot.select("g#root-group");
+    // Clear previous content
+    rootGroup.selectAll("*").remove();
+
+    // Ensure defs and marker are only appended once
+    if (svgRoot.select("defs").empty()) {
+      const defs = svgRoot.append("defs");
+      defs
+        .append("marker")
+        .attr("id", "arrowhead"+authorID)
+        .attr("viewBox", "-0 -5 10 10")
+        .attr("refX", 13) // Adjust this value to move the arrowhead along the line
+        .attr("refY", 0)
+        .attr("orient", "auto")
+        .attr("markerWidth", 8)
+        .attr("markerHeight", 8)
+        .attr("xoverflow", "visible")
+        .append("svg:path")
+        .attr("d", "M 0,-5 L 10 ,0 L 0,5")
+        .attr("fill", "#999")
+        .style("stroke", "none");
+    }
 
     // Create a group for the graph within the root group
     const graphGroup = rootGroup
@@ -36,22 +61,11 @@ const AuthorGraph = ({
         `translate(${dimensions.margin.left}, ${dimensions.margin.top})`
       );
 
-    // Add arrowheads
-    svgRoot
-      .append("defs")
-      .append("marker")
-      .attr("id", "arrowhead")
-      .attr("viewBox", "-0 -5 10 10")
-      .attr("refX", 13) // Adjust this value to move the arrowhead along the line
-      .attr("refY", 0)
-      .attr("orient", "auto")
-      .attr("markerWidth", 8)
-      .attr("markerHeight", 8)
-      .attr("xoverflow", "visible")
-      .append("svg:path")
-      .attr("d", "M 0,-5 L 10 ,0 L 0,5")
-      .attr("fill", "#999")
-      .style("stroke", "none");
+    // Set initial positions for nodes
+    graphData.nodes.forEach(node => {
+      node.x = dimensions.boundedWidth / 2;
+      node.y = dimensions.boundedHeight / 2;
+    });
 
     // Create a force simulation
     const simulation = d3
@@ -78,7 +92,7 @@ const AuthorGraph = ({
       .data(graphData.links)
       .join("line")
       .attr("stroke-width", 1)
-      .attr("marker-end", "url(#arrowhead)"); // Add arrowhead to links
+      .attr("marker-end", "url(#arrowhead"+authorID+")"); // Add arrowhead to links
 
 
      // Create self-loop links
@@ -90,7 +104,7 @@ const AuthorGraph = ({
      .attr("fill", "none")
      .attr("stroke", "#999")
      .attr("stroke-width", 1)
-     .attr("marker-end", "url(#arrowhead)");
+     .attr("marker-end", "url(#arrowhead"+authorID+")");
 
     // Create nodes
     const node = graphGroup
@@ -103,8 +117,8 @@ const AuthorGraph = ({
     // Append circles to nodes
     node
       .append("circle")
-      .attr("r", 5)
-      .attr("fill", "steelblue")
+      .attr("r", nodeRedius)
+      .attr("fill", author.has_issue ? "red" : "steelblue")
       .attr("stroke", "#fff")
       .attr("stroke-width", 1);
 
@@ -147,21 +161,49 @@ const AuthorGraph = ({
 
     // Update positions on each tick of the simulation
     simulation.on("tick", () => {
-       link
-        .attr("x1", (d) => d.source.x)
-        .attr("y1", (d) => d.source.y)
-        .attr("x2", (d) => d.target.x)
-        .attr("y2", (d) => d.target.y);
+      link
+        .attr("x1", (d) => {
+          const dx = d.target.x - d.source.x;
+          const dy = d.target.y - d.source.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const offsetX = (dx * nodeRedius) / dist;
+          const offsetY = (dy * nodeRedius) / dist;
+          return d.source.x + offsetX;
+        })
+        .attr("y1", (d) => {
+          const dx = d.target.x - d.source.x;
+          const dy = d.target.y - d.source.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const offsetX = (dx * nodeRedius) / dist;
+          const offsetY = (dy * nodeRedius) / dist;
+          return d.source.y + offsetY;
+        })
+        .attr("x2", (d) => {
+          const dx = d.source.x - d.target.x;
+          const dy = d.source.y - d.target.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const offsetX = (dx * nodeRedius) / dist;
+          const offsetY = (dy * nodeRedius) / dist;
+          return d.target.x + offsetX;
+        })
+        .attr("y2", (d) => {
+          const dx = d.source.x - d.target.x;
+          const dy = d.source.y - d.target.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const offsetX = (dx * nodeRedius) / dist;
+          const offsetY = (dy * nodeRedius) / dist;
+          return d.target.y + offsetY;
+        });
 
       node.attr("transform", (d) => `translate(${d.x},${d.y})`);
 
       // Update self-loop link positions
-       selfLoopLinks.attr("d", (d) => {
-          const radius = 20;
-          const dx = d.target.x;
-          const dy = d.target.y;
-          return `M${dx},${dy} A${radius},${radius} 0 1,1 ${dx - 0.01},${dy}`;
-       });
+      selfLoopLinks.attr("d", (d) => {
+        const radius = 20;
+        const dx = d.target.x;
+        const dy = d.target.y;
+        return `M${dx},${dy} A${radius},${radius} 0 1,1 ${dx - 0.01},${dy}`;
+      });
     });
   };
 
@@ -171,9 +213,11 @@ const AuthorGraph = ({
   };
 
   useEffect(() => {
-    if (graphData === null) return;
     clearCanvas();
-    drawGraph();
+    if (graphData === null) return;
+    setTimeout(() => {
+      drawGraph();
+    }, 400);
   }, [graphData, author]);
 
   return (
@@ -181,7 +225,7 @@ const AuthorGraph = ({
       <svg
         style={{
           width: "100%",
-          height: "900px",
+          height: height,
         }}
       >
         <g id="root-group" />

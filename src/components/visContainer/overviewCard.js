@@ -1,8 +1,9 @@
 import { useEffect, useCallback, useState } from "react";
-import { Card, Space, Flex, Badge, Tag, Tooltip, Descriptions, Typography, Modal, List, Button } from 'antd';
+import { Card, Space, Flex, Badge, Tag, Tooltip, Descriptions, Typography, Modal, List, Button, Popover } from 'antd';
 
 import AuthorGraph from "./authorGraph";
 import AdjacencyMatrixPanel from "./adjacencyMatrix.js";
+import { AuthorInfoCard } from "./authorInfoCard"; // Import the AuthorInfoCard component
 
 import "./style.css";
 
@@ -11,7 +12,9 @@ export const OverviewCard = ({
   author,
   venue,
   citation,
-  graphData
+  graphData,
+  adjacencyMatrixData,
+  anomalousColorScheme
 }) => {
   const { Text } = Typography;
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -146,7 +149,7 @@ export const OverviewCard = ({
   };
 
   const hop1CitedAuthors = authorsWithHop1Citations();
-  //console.log('hop1CitedAuthors', hop1CitedAuthors);
+  console.log('hop1CitedAuthors', hop1CitedAuthors);
   const citedVenues = mostCitedVenues();
   const citedVenuesWithIssue = calculateIssueCountForVenues(citedVenues);
   const timeDistribution = citationTimeDistribution();
@@ -189,14 +192,27 @@ export const OverviewCard = ({
         <Descriptions.Item label="Author Overview">
             <Flex gap={10} wrap={true}>
                 {hop1CitedAuthors.slice(0,4).map((author, index) => ( // Display the top 3 authors
-                  <span key={`author-${author.id}`}>
-                    {author.name}
-                    <Text type={author.issueCount > 0 ? 'danger' : 'success'}>
-                      {
-                        author.issueCount > 0 ? `[${author.issueCount}/${author.totalCount}]` : `[${author.totalCount}]`
-                      }
-                    </Text>
-                  </span>
+                  <Popover
+                    key={`author-popover-${author.id}`}
+                    content={<AuthorInfoCard 
+                                author={getAuthorById(author.id)}
+                                citation={citation}
+                                authorGraphData={graphData}
+                                anomalous={anomalous}
+                                anomalousColorScheme={anomalousColorScheme}
+                              />}
+                    //title={author.name}
+                    trigger="click"
+                  >
+                    <span key={`author-${author.id}`} style={{ cursor: 'pointer' }}>
+                      {author.name}
+                      <Text type={author.issueCount > 0 ? 'danger' : 'success'}>
+                        {
+                          author.issueCount > 0 ? `[${author.issueCount}/${author.totalCount}]` : `[${author.totalCount}]`
+                        }
+                      </Text>
+                    </span>
+                  </Popover>
                 ))}
                 {/* Show More Button */}
               {hop1CitedAuthors.length > 3 && (
@@ -209,18 +225,64 @@ export const OverviewCard = ({
                 title="All Cited Authors"
                 open={isModalVisible}
                 onCancel={handleCancel}
-                width={1200}
+                width={1400}
                 destroyOnClose={true}
                 style={{
                   top: 20
                 }}
-                footer={[
+                /*footer={[
                   <Button key="show-author-graph-btn" onClick={handleCancel}>
                     Show author graph
                   </Button>
-                ]}
+                ]}*/
                 >
-                  {<List
+                    <div style={{ display: 'flex', flexDirection: 'row' }}>
+                    <List
+                      style={{
+                      height: 930,
+                      overflow: 'auto',
+                      width: '20%', // Narrow the List
+                      marginRight: '10px' // Add some space between List and AdjacencyMatrixPanel
+                      }}
+                      dataSource={hop1CitedAuthors}
+                      renderItem={(item) => (
+                      <Popover
+                        key={`author-popover-${item.id}`}
+                        content={<AuthorInfoCard 
+                                    author={getAuthorById(item.id)}
+                                    citation={citation}
+                                    authorGraphData={graphData}
+                                    anomalous={anomalous}
+                                    anomalousColorScheme={anomalousColorScheme}
+                                  />}
+                        //title={item.name}
+                        trigger="click"
+                      >
+                        <List.Item style={{ cursor: 'pointer' }}>
+                          <Text strong>{item.name}</Text>
+                          <Text type={item.issueCount > 0 ? 'danger' : 'success'}>
+                            {item.issueCount > 0 ? `[${item.issueCount}/${item.totalCount}]` : `[${item.totalCount}]`}
+                          </Text>
+                        </List.Item>
+                      </Popover>
+                      )}
+                    />
+                    <div
+                      style={{
+                        width: '80%',
+                        height: 930,
+                        overflow: 'auto'
+                      }}
+                    >
+                      <AdjacencyMatrixPanel 
+                      graphData={adjacencyMatrixData}
+                      author={author}
+                      citation={citation}
+                      //style={{ width: '60%' }} // Adjust width to fit the remaining space
+                    />
+                    </div>
+                    </div>
+                  {/*<List
                     style={{
                       height: 800,
                       overflow: 'auto'
@@ -234,12 +296,12 @@ export const OverviewCard = ({
                         </Text>
                       </List.Item>
                     )}
-                  />}
-                  {<AdjacencyMatrixPanel 
+                  />*/}
+                  {/*<AdjacencyMatrixPanel 
                     graphData={graphData}
                     author={author}
                     citation={citation}
-                  />}
+                  />*/}
                   {/*<AuthorGraph 
                     graphData={graphData}
                     author={author}
