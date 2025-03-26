@@ -7,10 +7,11 @@ import { AnomalousLegendCard } from "./anomalousLegendCard";
 import { OverviewCard } from "./overviewCard";
 import { AnomalousListCard } from "./anomalousList";
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+/*pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
   import.meta.url,
-).toString();
+).toString();*/
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 /**
  * 

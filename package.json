@@ -1,6 +1,7 @@
 {
   "name": "research_reviewer_main",
   "version": "0.1.0",
+  "homepage": "https://sanmisanfan.github.io/ReviewerApp-demo/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -9,6 +10,7 @@
     "@wojtekmaj/react-hooks": "^1.22.0",
     "antd": "^5.18.0",
     "d3": "^7.9.0",
+    "pdfjs-dist": "^5.0.375",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-pdf": "^9.2.1",

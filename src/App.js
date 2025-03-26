@@ -1,5 +1,7 @@
+// https://sanmisanfan.github.io/ReviewerApp-demo/
 import { useState, useEffect, useCallback } from "react";
 import { pdfjs } from "react-pdf";
+//import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 import { Col, Row, Spin} from 'antd';
 import 'antd/dist/reset.css';
 import './App.css';
@@ -25,10 +27,12 @@ import authorGraphDataRaw from "./data/case1/community_graph.json";
 /** load test PDF - should be uploaded by user */
 import samplePDF from "./data/case1/reviewerAPP_case1.pdf";
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+/*pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
   import.meta.url,
-).toString();
+).toString();*/
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+
 
 function App() {
   // global init
@@ -167,7 +171,7 @@ function App() {
       <div className="mainContainer">
           <Row>
             <Col span={14}>
-              <PDFContainer
+              {pdfData !== null && <PDFContainer
                 file={pdfData}
                 citation={citation}
                 anomalous={anomalous}
@@ -178,7 +182,7 @@ function App() {
                 activeHighlight={activeHighlight}
                 setActiveHighlight={setActiveHighlight}
                 setAnomalous={setAnomalous}
-              />
+              />}
             </Col>
             <Col span={10}>
               <VisContainer
