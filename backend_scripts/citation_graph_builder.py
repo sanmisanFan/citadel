@@ -48,8 +48,7 @@ for paper in enriched_papers:
         "venue": paper.get("venue", ""),
         "year": paper.get("year", None),
         "title": paper.get("title", ""),
-        "source": f"{', '.join([entity_keys['authors'][a].get('raw_name', entity_keys['authors'][a]['name']) for a in paper['authors']])}. \"{paper['title']},\" {paper['raw_venue']}, {paper['year']}.",
-        "doi": paper.get("doi", None),
+        "source": f"{', '.join([str(entity_keys['authors'].get(a, {}).get('raw_name')) or str(entity_keys['authors'].get(a, {}).get('name')) or 'Unknown Author' for a in paper.get('authors', [])])}. \"{paper.get('title', 'Unknown Title')},\" {paper.get('raw_venue', 'Unknown Venue')}, {paper.get('year', 'Unknown Year')}.",
         "hop": 1,
         "cite_positions": cite_positions,
         "has_issue": False,
@@ -71,7 +70,7 @@ hop2_counter = max_ref_id + 1
 for paper_id, data in second_hop.items():
     hop1_citation_key = next((p["citation_key"] for p in enriched_papers if p.get("semantic_scholar_id") == paper_id), None)
     for ref in data.get("references", []):
-        title = ref["title"].lower().strip()  # Normalize title for comparison
+        title = ref["title"].lower().strip() if ref.get("title") else "Unknown Title"
         existing_citation_key = title_to_citation_key.get(title)
 
         if existing_citation_key and existing_citation_key in hop1_citation_keys:

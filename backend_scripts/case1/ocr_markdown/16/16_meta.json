@@ -1,0 +1,958 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Authoring Narrative Visualizations with Ellipsis",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          93.28857421875,
+          96.91650390625
+        ],
+        [
+          448.84375000000006,
+          96.91650390625
+        ],
+        [
+          448.84375000000006,
+          115.8326416015625
+        ],
+        [
+          93.28857421875,
+          115.8326416015625
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          66.55908203125,
+          168.199951171875
+        ],
+        [
+          101.095703125,
+          168.199951171875
+        ],
+        [
+          101.095703125,
+          178.344482421875
+        ],
+        [
+          66.55908203125,
+          178.344482421875
+        ]
+      ]
+    },
+    {
+      "title": "1. Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          43.336181640625,
+          327.8857421875
+        ],
+        [
+          103.940673828125,
+          327.8857421875
+        ],
+        [
+          103.940673828125,
+          338.1377868652344
+        ],
+        [
+          43.336181640625,
+          338.1377868652344
+        ]
+      ]
+    },
+    {
+      "title": "2. Related Work",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          281.8505859375,
+          562.296875
+        ],
+        [
+          348.5419921875,
+          562.296875
+        ],
+        [
+          348.5419921875,
+          572.1355743408203
+        ],
+        [
+          281.8505859375,
+          572.1355743408203
+        ]
+      ]
+    },
+    {
+      "title": "3. Current Narrative Visualization Practices",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          43.27001953125,
+          561.4091339111328
+        ],
+        [
+          214.7103729248047,
+          561.4091339111328
+        ],
+        [
+          214.7103729248047,
+          570.3755340576172
+        ],
+        [
+          43.27001953125,
+          570.3755340576172
+        ]
+      ]
+    },
+    {
+      "title": "4. A Model for Narrative Visualizations",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          282.6620178222656,
+          493.458984375
+        ],
+        [
+          436.140625,
+          493.458984375
+        ],
+        [
+          436.140625,
+          502.4302520751953
+        ],
+        [
+          282.6620178222656,
+          502.4302520751953
+        ]
+      ]
+    },
+    {
+      "title": "4.1. Parameters: Coordinating Visualizations",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          43.00537109375,
+          74.4083251953125
+        ],
+        [
+          218.33496093750003,
+          74.4083251953125
+        ],
+        [
+          218.33496093750003,
+          84.120849609375
+        ],
+        [
+          43.00537109375,
+          84.120849609375
+        ]
+      ]
+    },
+    {
+      "title": "4.2. Textual and Graphical Annotations",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          43.00537109375,
+          385.02423095703125
+        ],
+        [
+          197.6923828125,
+          385.02423095703125
+        ],
+        [
+          197.6923828125,
+          393.9906311035156
+        ],
+        [
+          43.00537109375,
+          393.9906311035156
+        ]
+      ]
+    },
+    {
+      "title": "4.3. Triggers: Defining Reactive and Interactive Stories",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          43.071533203125,
+          574.3676605224609
+        ],
+        [
+          256.1796875,
+          574.3676605224609
+        ],
+        [
+          256.1796875,
+          583.3340606689453
+        ],
+        [
+          43.071533203125,
+          583.3340606689453
+        ]
+      ]
+    },
+    {
+      "title": "4.4. Scenes: Providing Narrative Structure",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          282.64453125,
+          389.39947509765625
+        ],
+        [
+          447.1879577636719,
+          389.39947509765625
+        ],
+        [
+          447.1879577636719,
+          398.3658752441406
+        ],
+        [
+          282.64453125,
+          398.3658752441406
+        ]
+      ]
+    },
+    {
+      "title": "4.5. Example: Budget forecasts, compared with reality",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          43.071533203125,
+          221.18701171875
+        ],
+        [
+          252.54039001464844,
+          221.18701171875
+        ],
+        [
+          252.54039001464844,
+          230.43453979492188
+        ],
+        [
+          43.071533203125,
+          230.43453979492188
+        ]
+      ]
+    },
+    {
+      "title": "5. The Ellipsis Domain-Specific Language",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          42.939208984375,
+          188.3984375
+        ],
+        [
+          205.1025390625,
+          188.3984375
+        ],
+        [
+          205.1025390625,
+          198.04791259765625
+        ],
+        [
+          42.939208984375,
+          198.04791259765625
+        ]
+      ]
+    },
+    {
+      "title": "6. The Ellipsis Graphical User Interface",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          282.115234375,
+          389.4775390625
+        ],
+        [
+          437.72851562500006,
+          389.4775390625
+        ],
+        [
+          437.72851562500006,
+          398.56591796875
+        ],
+        [
+          282.115234375,
+          398.56591796875
+        ]
+      ]
+    },
+    {
+      "title": "7. Example Ellipsis Narratives",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          43.3692626953125,
+          607.22265625
+        ],
+        [
+          161.70179748535156,
+          607.22265625
+        ],
+        [
+          161.70179748535156,
+          616.9259719848633
+        ],
+        [
+          43.3692626953125,
+          616.9259719848633
+        ]
+      ]
+    },
+    {
+      "title": "7.1. Budget Forecasts, Compared with Reality",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          280.52734375,
+          505.77734375
+        ],
+        [
+          460.1932067871094,
+          505.77734375
+        ],
+        [
+          460.1932067871094,
+          514.9959716796875
+        ],
+        [
+          280.52734375,
+          514.9959716796875
+        ]
+      ]
+    },
+    {
+      "title": "7.2. Metro & County Unemployment, 2004\u20132012",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          281.056640625,
+          617.0048828125
+        ],
+        [
+          470.5494079589844,
+          617.0048828125
+        ],
+        [
+          470.5494079589844,
+          626.3138198852539
+        ],
+        [
+          281.056640625,
+          626.3138198852539
+        ]
+      ]
+    },
+    {
+      "title": "7.3. Habemus Papam: We Have a Pope!",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          42.939208984375,
+          594.904296875
+        ],
+        [
+          197.1630859375,
+          594.904296875
+        ],
+        [
+          197.1630859375,
+          604.0733489990234
+        ],
+        [
+          42.939208984375,
+          604.0733489990234
+        ]
+      ]
+    },
+    {
+      "title": "8. Evaluation with Professional Journalists",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          43.00537109375,
+          460.8515625
+        ],
+        [
+          209.20458984375,
+          460.8515625
+        ],
+        [
+          209.20458984375,
+          470.5717468261719
+        ],
+        [
+          43.00537109375,
+          470.5717468261719
+        ]
+      ]
+    },
+    {
+      "title": "8.1. Methods",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          43.27001953125,
+          595.3750610351562
+        ],
+        [
+          95.2734375,
+          595.3750610351562
+        ],
+        [
+          95.2734375,
+          604.6865234375
+        ],
+        [
+          43.27001953125,
+          604.6865234375
+        ]
+      ]
+    },
+    {
+      "title": "8.2. Results",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          282.115234375,
+          562.296875
+        ],
+        [
+          328.49072265625,
+          562.296875
+        ],
+        [
+          328.49072265625,
+          571.7853851318359
+        ],
+        [
+          282.115234375,
+          571.7853851318359
+        ]
+      ]
+    },
+    {
+      "title": "9. Conclusion and Future Work",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          282.66748046875,
+          74.000732421875
+        ],
+        [
+          405.8837585449219,
+          74.000732421875
+        ],
+        [
+          405.8837585449219,
+          84.02227783203125
+        ],
+        [
+          282.66748046875,
+          84.02227783203125
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledgements",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          282.6506042480469,
+          614.46875
+        ],
+        [
+          356.77581787109375,
+          614.46875
+        ],
+        [
+          356.77581787109375,
+          623.6911392211914
+        ],
+        [
+          282.6506042480469,
+          623.6911392211914
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          43.40234375,
+          75.1544189453125
+        ],
+        [
+          85.61376953125,
+          75.1544189453125
+        ],
+        [
+          85.61376953125,
+          84.120849609375
+        ],
+        [
+          43.40234375,
+          84.120849609375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          182
+        ],
+        [
+          "Line",
+          83
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          236
+        ],
+        [
+          "Line",
+          107
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          235
+        ],
+        [
+          "Line",
+          99
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          256
+        ],
+        [
+          "Line",
+          107
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          285
+        ],
+        [
+          "Line",
+          111
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Code",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          122
+        ],
+        [
+          "Line",
+          45
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          285
+        ],
+        [
+          "Line",
+          124
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          247
+        ],
+        [
+          "Line",
+          112
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          212
+        ],
+        [
+          "Line",
+          107
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          446
+        ],
+        [
+          "Line",
+          84
+        ],
+        [
+          "ListItem",
+          21
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/16"
+}

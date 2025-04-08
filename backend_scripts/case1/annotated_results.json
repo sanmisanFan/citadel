@@ -1,0 +1,888 @@
+[
+  {
+    "page": 1,
+    "ref_id": 1,
+    "text": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+    "text_bbox": {
+      "height": 0.12453341243242977,
+      "width": 0.39223629820580574,
+      "x": 0.5195342917847477,
+      "y": 0.30775247438989506
+    },
+    "citations": [
+      {
+        "citation": "[1]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.01708316179661969,
+          "x": 0.8910244212431067,
+          "y": 0.3454898487437855
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 1,
+    "text": "- [1] C. Brunsdon, A. S. Fotheringham, and M. E. Charlton. Geographically weighted regression: A method for exploring spatial nonstationarity. _Geographical Analysis_, 28(4):281\u2013298, 1996. doi: 10.1111/j. 1538-4632.1996.tb00936.x 1",
+    "text_bbox": {
+      "height": 0.04591300270774148,
+      "width": 0.35805556353400736,
+      "x": 0.5493709589141647,
+      "y": 0.25615229751124524
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 2,
+    "text": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+    "text_bbox": {
+      "height": 0.12453341243242977,
+      "width": 0.39223629820580574,
+      "x": 0.5195342917847477,
+      "y": 0.30775247438989506
+    },
+    "citations": [
+      {
+        "citation": "[2]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.01708301220064849,
+          "x": 0.6357458775339563,
+          "y": 0.3706477001459912
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 2,
+    "text": "- [2] A. S. Fotheringham, W. Yang, and W. Kang. Multiscale geographically weighted regression (MGWR). _Annals of the American Association of Geographers_, 107(6):1247\u20131265, 2017. doi: 10.1080/ 24694452.2017.1352480 1",
+    "text_bbox": {
+      "height": 0.022012729837436868,
+      "width": 0.3580545662275327,
+      "x": 0.5493709589141647,
+      "y": 0.3039528432518545
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 3,
+    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+    "text_bbox": {
+      "height": 0.1496911867700442,
+      "width": 0.3922360987445108,
+      "x": 0.5195342917847477,
+      "y": 0.7117211698281645
+    },
+    "citations": [
+      {
+        "citation": "[3]",
+        "bbox": {
+          "height": 0.011321250838462752,
+          "width": 0.017083062065972224,
+          "x": 0.5940052605921926,
+          "y": 0.7997742469864663
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 3,
+    "text": "- [3] T. Gao, J. Hullman, E. Adar, B. Hecht, and N. Diakopoulos. NewsViews: An automated pipeline for creating custom geovisualizations for news. _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 3005\u20133014, 2014. doi: 10.1145/ 2556288.2557228 1",
+    "text_bbox": {
+      "height": 0.04591423574120107,
+      "width": 0.36238935881969975,
+      "x": 0.5493709589141647,
+      "y": 0.363702831846295
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 4,
+    "text": "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and \u00a8 Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+    "text_bbox": {
+      "height": 0.2377456125586924,
+      "width": 0.39223599901386336,
+      "x": 0.08823529411764706,
+      "y": 0.5284230781323982
+    },
+    "citations": [
+      {
+        "citation": "[4]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.01708301220064849,
+          "x": 0.46338828093086193,
+          "y": 0.6038979039047704
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 4,
+    "text": "- [4] S. Goodwin, J. Dykes, A. Slingsby, and C. Turkay. Visualizing multiple variables across scale and geography. _IEEE Transactions on Visualization and Computer Graphics_, 22:599\u2013608, 1 2016. doi: 10. 1109/TVCG.2015.2467199 2",
+    "text_bbox": {
+      "height": 0.04591423574120107,
+      "width": 0.35805466595818014,
+      "x": 0.5493709589141647,
+      "y": 0.411503300522313
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 5,
+    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+    "text_bbox": {
+      "height": 0.1496911867700442,
+      "width": 0.3922360987445108,
+      "x": 0.5195342917847477,
+      "y": 0.7117211698281645
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 5,
+    "text": "- [5] J. Hullman and N. Diakopoulos. Visualization rhetoric: Framing effects in narrative visualization. _IEEE Transactions on Visualization and Computer Graphics_, 17(12):2231\u20132240, 2011. doi: 10.1109/ TVCG.2011.255 1",
+    "text_bbox": {
+      "height": 0.02201400140319208,
+      "width": 0.36239155289394404,
+      "x": 0.5493709589141647,
+      "y": 0.459303769198331
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 6,
+    "text": "Support for a variety of spatial models is integrated into the most widely used geographic information systems (GIS). However, these systems and notebooks do not support integrated external knowledge sources to help contextualize models [6]. They also require analysts to judiciously choose the proper tools at every stage of the analytical pipeline to build a well-trained model. This process necessitates a solid foundation in geographical concepts and can be time-consuming, even for seasoned analysts. Our goal is to enhance the spatial modeling process through a deliberately designed userfriendly workflow and automatically generated explanatory narratives guided by domain experts to promote the understanding of local contextual information from models. Our work focuses on improving model explainability, enabling interactive report authoring, and supporting contextualization through narrative generation. This is important in local models such as GWR and MGWR because the main output from such models is a set of local parameter estimates from each process being modeled, and the spatial variation in these estimates needs to be explained in terms of the contextualized environment of each location by providing additional contextual information for users.",
+    "text_bbox": {
+      "height": 0.2503239795415088,
+      "width": 0.3922379936268127,
+      "x": 0.5195342917847477,
+      "y": 0.4336414529819681
+    },
+    "citations": [
+      {
+        "citation": "[6]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.017083062065972224,
+          "x": 0.77771370083678,
+          "y": 0.4713788658681542
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 6,
+    "text": "- [6] J. Hutt. Artificial reference paper 4. _Fake Journal 2_, 10(2):1\u20134, 2025. doi: 10.1080/13658816.2020.1720692 1",
+    "text_bbox": {
+      "height": 0.010063248451309974,
+      "width": 0.1437353994332108,
+      "x": 0.5918643427830116,
+      "y": 0.507104237874349
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 7,
+    "text": "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+    "text_bbox": {
+      "height": 0.6809136361786814,
+      "width": 0.8186563728681577,
+      "x": 0.08823529411764706,
+      "y": 0.16568559588808002
+    },
+    "citations": [
+      {
+        "citation": "[7]",
+        "bbox": {
+          "height": 0.011321250838462752,
+          "width": 0.017083037133310355,
+          "x": 0.1576955957350388,
+          "y": 0.7472236710365372
+        }
+      }
+    ]
+  },
+  {
+    "page": 1,
+    "ref_id": 7,
+    "text": "Many of these systems utilize annotations to enhance the visual narratives, and Kosara and Mackinlay [7] emphasize the importance of annotations for facilitating storytelling in visualization. Recent annotation work [15] has focused on the semi-automatic creation",
+    "text_bbox": {
+      "height": 0.04905862519235322,
+      "width": 0.39223789389616526,
+      "x": 0.5195342917847477,
+      "y": 0.862767922757852
+    },
+    "citations": [
+      {
+        "citation": "[7]",
+        "bbox": {
+          "height": 0.011321250838462752,
+          "width": 0.01708301220064849,
+          "x": 0.7405734592013888,
+          "y": 0.8753474071772411
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 7,
+    "text": "- [7] R. Kosara and J. Mackinlay. Storytelling: The next step for visualization. _Computer_, 46(5):44\u201350, 2013. doi: 10.1109/MC.2013.36 1",
+    "text_bbox": {
+      "height": 0.02201400140319208,
+      "width": 0.35805486541947507,
+      "x": 0.5493709589141647,
+      "y": 0.5310044722123579
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 8,
+    "text": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+    "text_bbox": {
+      "height": 0.16227086385091147,
+      "width": 0.3922359927806979,
+      "x": 0.08823530035081252,
+      "y": 0.3641817497484612
+    },
+    "citations": [
+      {
+        "citation": "[8]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.01708301220064849,
+          "x": 0.44034222372217113,
+          "y": 0.48997354989099984
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 8,
+    "text": "- [8] J. Krause, A. Perer, and K. Ng. Interacting with predictions: Visual inspection of black-box machine learning models. In _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 5686\u20135697, 2016. doi: 10.1145/2858036.2858529 2",
+    "text_bbox": {
+      "height": 0.04591423574120107,
+      "width": 0.3623913534326491,
+      "x": 0.5493709589141647,
+      "y": 0.5549047065503669
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 9,
+    "text": "of presentation-like storytelling visualizations and explored mechanisms for automatically generating annotations by integrating deeplearning feature extraction techniques with a natural language generation process [9]. Annotations in such systems are used to describe salient patterns and facilitate storytelling [23].",
+    "text_bbox": {
+      "height": 0.061638148144038035,
+      "width": 0.38735731910256777,
+      "x": 0.08823530035081252,
+      "y": 0.2705718917076034
+    },
+    "citations": [
+      {
+        "citation": "[9]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.017083037133310355,
+          "x": 0.18321759093041515,
+          "y": 0.30830926606149384
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 9,
+    "text": "- [9] C. Lai, Z. Lin, R. Jiang, Y. Han, C. Liu, and X. Yuan. Automatic annotation synchronizing with textual description for visualization. _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 1\u201313, 2020. doi: 10.1145/3313831.3376443 2",
+    "text_bbox": {
+      "height": 0.04591427427349669,
+      "width": 0.35805466595818014,
+      "x": 0.5493709589141647,
+      "y": 0.6027051752263849
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 10,
+    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+    "text_bbox": {
+      "height": 0.1496911867700442,
+      "width": 0.3922360987445108,
+      "x": 0.5195342917847477,
+      "y": 0.7117211698281645
+    },
+    "citations": [
+      {
+        "citation": "[10]",
+        "bbox": {
+          "height": 0.011321250838462752,
+          "width": 0.024408677045036766,
+          "x": 0.8873614142922794,
+          "y": 0.8123537314058554
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 10,
+    "text": "- [10] S. Latif and F. Beck. Interactive map reports summarizing bivariate geographic data. _Visual Informatics_, 3(1):27\u201337, 2019. doi: 10.1016/j .visinf.2019.03.004 1",
+    "text_bbox": {
+      "height": 0.02201403993548769,
+      "width": 0.3623912038366779,
+      "x": 0.5493709090488409,
+      "y": 0.6505056053701074
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 11,
+    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+    "text_bbox": {
+      "height": 0.1496911867700442,
+      "width": 0.3922360987445108,
+      "x": 0.5195342917847477,
+      "y": 0.7117211698281645
+    },
+    "citations": [
+      {
+        "citation": "[11]",
+        "bbox": {
+          "height": 0.011321250838462752,
+          "width": 0.024408677045036766,
+          "x": 0.8627625509025225,
+          "y": 0.8500911057597459
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 11,
+    "text": "- [11] S. Latif, S. Chen, and F. Beck. A deeper understanding of visualization-text interplay in geographic data-driven stories. _Computer Graphics Forum_, 40(3):311\u2013322, 2021. doi: 10.1111/cgf.14309 1",
+    "text_bbox": {
+      "height": 0.022012729837436868,
+      "width": 0.3623913534326491,
+      "x": 0.5493709589141647,
+      "y": 0.6863566697245896
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 12,
+    "text": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+    "text_bbox": {
+      "height": 0.16227086385091147,
+      "width": 0.3922359927806979,
+      "x": 0.08823530035081252,
+      "y": 0.3641817497484612
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 12,
+    "text": "- [12] Y. Lu, R. Garcia, B. Hansen, M. Gleicher, and R. Maciejewski. The state-of-the-art in predictive visual analytics. _Computer Graphics Forum_, 36(3):539\u2013562, 2017. doi: 10.1111/cgf.13210 2",
+    "text_bbox": {
+      "height": 0.022012806902028094,
+      "width": 0.3623911539713542,
+      "x": 0.5493709589141647,
+      "y": 0.7341571384006076
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 13,
+    "text": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+    "text_bbox": {
+      "height": 0.16227086385091147,
+      "width": 0.3922359927806979,
+      "x": 0.08823530035081252,
+      "y": 0.3641817497484612
+    },
+    "citations": [
+      {
+        "citation": "[13]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.02440855238172743,
+          "x": 0.41460052191042435,
+          "y": 0.4396565755208333
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 13,
+    "text": "- [13] Y. Ming, H. Qu, and E. Bertini. RuleMatrix: Visualizing and understanding classifiers with rules. _IEEE Transactions on Visualization and Computer Graphics_, 25(1):342\u2013352, 2018. doi: 10.1109/TVCG. 2018.2864812 2",
+    "text_bbox": {
+      "height": 0.0459143128057923,
+      "width": 0.3583153618706597,
+      "x": 0.5493709589141647,
+      "y": 0.7700068926570391
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 14,
+    "text": "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and \u00a8 Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+    "text_bbox": {
+      "height": 0.2377456125586924,
+      "width": 0.39223599901386336,
+      "x": 0.08823529411764706,
+      "y": 0.5284230781323982
+    },
+    "citations": [
+      {
+        "citation": "[14]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408527449065565,
+          "x": 0.13823909385531558,
+          "y": 0.553582201100359
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 14,
+    "text": "- [14] T. Muhlbacher and H. Piringer. A partition-based framework for build- \u00a8 ing and validating regression models. _IEEE Transactions on Visualization and Computer Graphics_, 19(12):1962\u20131971, 2013. doi: 10. 1109/TVCG.2013.125 2",
+    "text_bbox": {
+      "height": 0.010063248451309974,
+      "width": 0.13003500146803512,
+      "x": 0.5493709589141647,
+      "y": 0.8536584256875395
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 15,
+    "text": "Many of these systems utilize annotations to enhance the visual narratives, and Kosara and Mackinlay [7] emphasize the importance of annotations for facilitating storytelling in visualization. Recent annotation work [15] has focused on the semi-automatic creation",
+    "text_bbox": {
+      "height": 0.04905862519235322,
+      "width": 0.39223789389616526,
+      "x": 0.5195342917847477,
+      "y": 0.862767922757852
+    },
+    "citations": [
+      {
+        "citation": "[15]",
+        "bbox": {
+          "height": 0.011321250838462752,
+          "width": 0.024408527449065565,
+          "x": 0.621563680810866,
+          "y": 0.9005052971117424
+        }
+      }
+    ]
+  },
+  {
+    "page": 2,
+    "ref_id": 15,
+    "text": "- [15] D. Ren, M. Brehmer, B. Lee, T. Hollerer, and E. K. Choe. ChartAc- \u00a8 cent: Annotation for data-driven storytelling. In _IEEE Pacific Symposium on Visualization_, pp. 230\u2013239, 2017. doi: 10.1109/PACIFICVIS .2017.8031599 1",
+    "text_bbox": {
+      "height": 0.022013962870896464,
+      "width": 0.36239294912300857,
+      "x": 0.5493709589141647,
+      "y": 0.8895081799439709
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 16,
+    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+    "text_bbox": {
+      "height": 0.1496911867700442,
+      "width": 0.3922360987445108,
+      "x": 0.5195342917847477,
+      "y": 0.7117211698281645
+    },
+    "citations": [
+      {
+        "citation": "[16]",
+        "bbox": {
+          "height": 0.011321250838462752,
+          "width": 0.024408527449065565,
+          "x": 0.7639417461320466,
+          "y": 0.7746164341165562
+        }
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "ref_id": 16,
+    "text": "- [16] A. Satyanarayan and J. Heer. Authoring narrative visualizations with ellipsis. _Computer Graphics Forum_, 33(3):361\u2013370, 2014. doi: 10. 1111/cgf.12392 1",
+    "text_bbox": {
+      "height": 0.03396352613815153,
+      "width": 0.36239289925768486,
+      "x": 0.11807026582605698,
+      "y": 0.07312951425109247
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 17,
+    "text": "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and \u00a8 Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+    "text_bbox": {
+      "height": 0.2377456125586924,
+      "width": 0.39223599901386336,
+      "x": 0.08823529411764706,
+      "y": 0.5284230781323982
+    },
+    "citations": [
+      {
+        "citation": "[17]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408527449065565,
+          "x": 0.28151102003708384,
+          "y": 0.5787400525025647
+        }
+      }
+    ]
+  },
+  {
+    "page": 1,
+    "ref_id": 18,
+    "text": "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+    "text_bbox": {
+      "height": 0.6809136361786814,
+      "width": 0.8186563728681577,
+      "x": 0.08823529411764706,
+      "y": 0.16568559588808002
+    },
+    "citations": [
+      {
+        "citation": "[18]",
+        "bbox": {
+          "height": 0.011321250838462752,
+          "width": 0.024408527449065565,
+          "x": 0.358047759610843,
+          "y": 0.7346454196506076
+        }
+      }
+    ]
+  },
+  {
+    "page": 1,
+    "ref_id": 18,
+    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+    "text_bbox": {
+      "height": 0.1496911867700442,
+      "width": 0.3922360987445108,
+      "x": 0.5195342917847477,
+      "y": 0.7117211698281645
+    },
+    "citations": []
+  },
+  {
+    "page": 3,
+    "ref_id": 18,
+    "text": "- [18] E. Segel and J. Heer. Narrative visualization: Telling stories with data. _IEEE Transactions on Visualization and Computer Graphics_, 16(6):1139\u20131148, 2010. doi: 10.1109/TVCG.2010.179 1",
+    "text_bbox": {
+      "height": 0.02201404956856159,
+      "width": 0.36239289925768486,
+      "x": 0.11807026582605698,
+      "y": 0.15677980943159622
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 19,
+    "text": "Geographic models are often used to answer _why_ questions regarding underlying spatial phenomena such as why do voter preferences generally exhibit strong spatial dependency. In order to answer such questions, researchers have developed sophisticated spatial modeling techniques and software, such as multiscale geographically weighted regression [21], to identify the determinants of the spatial patterns of data we observe in both the human and natural environments. However, these models generate output that needs local contextual information to be interpreted properly. Without such information, advanced spatial modeling techniques do not gain their full potential. While a variety of geovisual analytics systems [19] have been developed to explore spatial statistics with the help of interactive maps and narrative annotations, these applications tend to visualize only basic statistical results, and, to our knowledge, none of them explain spatial modeling results.",
+    "text_bbox": {
+      "height": 0.16227086385091147,
+      "width": 0.3922360488791871,
+      "x": 0.08823529411764706,
+      "y": 0.5318788855966895
+    },
+    "citations": [
+      {
+        "citation": "[19]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408527449065565,
+          "x": 0.45606276568244486,
+          "y": 0.6325115627712674
+        }
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "ref_id": 19,
+    "text": "- [19] L. Skywalker and O.-W. Kenobi. Artificial reference paper 2. _Fake Journal 2_, 10(2):1\u20134, 2025. doi: 10.1080/13658816.2020.1720692 1",
+    "text_bbox": {
+      "height": 0.010063248451309974,
+      "width": 0.14688683802785438,
+      "x": 0.3007972567689185,
+      "y": 0.19263088341915247
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 20,
+    "text": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+    "text_bbox": {
+      "height": 0.12453341243242977,
+      "width": 0.39223629820580574,
+      "x": 0.5195342917847477,
+      "y": 0.30775247438989506
+    },
+    "citations": [
+      {
+        "citation": "[20]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408527449065565,
+          "x": 0.5903425029679841,
+          "y": 0.3832272616299716
+        }
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "ref_id": 20,
+    "text": "- [20] D. Smeesters and J. Liu. Retracted: The effect of color (red versus blue) on assimilation versus contrast in prime-to-behavior effects. _Journal of Experimental Social Psychology_, 47(3):653\u2013656, 2011. doi: 10.1016/j.jesp.2011.02.010 1",
+    "text_bbox": {
+      "height": 0.022012729837436868,
+      "width": 0.36239205154718135,
+      "x": 0.11807021596073325,
+      "y": 0.21653115628945707
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 21,
+    "text": "Geographic models are often used to answer _why_ questions regarding underlying spatial phenomena such as why do voter preferences generally exhibit strong spatial dependency. In order to answer such questions, researchers have developed sophisticated spatial modeling techniques and software, such as multiscale geographically weighted regression [21], to identify the determinants of the spatial patterns of data we observe in both the human and natural environments. However, these models generate output that needs local contextual information to be interpreted properly. Without such information, advanced spatial modeling techniques do not gain their full potential. While a variety of geovisual analytics systems [19] have been developed to explore spatial statistics with the help of interactive maps and narrative annotations, these applications tend to visualize only basic statistical results, and, to our knowledge, none of them explain spatial modeling results.",
+    "text_bbox": {
+      "height": 0.16227086385091147,
+      "width": 0.3922360488791871,
+      "x": 0.08823529411764706,
+      "y": 0.5318788855966895
+    },
+    "citations": [
+      {
+        "citation": "[21]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408539915396498,
+          "x": 0.20894469466863894,
+          "y": 0.5696162984828756
+        }
+      }
+    ]
+  },
+  {
+    "page": 1,
+    "ref_id": 21,
+    "text": "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+    "text_bbox": {
+      "height": 0.6809136361786814,
+      "width": 0.8186563728681577,
+      "x": 0.08823529411764706,
+      "y": 0.16568559588808002
+    },
+    "citations": [
+      {
+        "citation": "[21]",
+        "bbox": {
+          "height": 0.4256346346151949,
+          "width": 0.5457669301749835,
+          "x": 0.20894469466863894,
+          "y": 0.30775247438989506
+        }
+      }
+    ]
+  },
+  {
+    "page": 1,
+    "ref_id": 21,
+    "text": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+    "text_bbox": {
+      "height": 0.12453341243242977,
+      "width": 0.39223629820580574,
+      "x": 0.5195342917847477,
+      "y": 0.30775247438989506
+    },
+    "citations": [
+      {
+        "citation": "[21]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408577314389297,
+          "x": 0.730303047529233,
+          "y": 0.30775247438989506
+        }
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "ref_id": 21,
+    "text": "- [21] H. Solo and O.-W. Kenobi. Artificial reference paper 1. _Fake Journal 1_, 34(7):1378\u20131397, 2025. doi: 10.1080/13658816.2020.1720692 1",
+    "text_bbox": {
+      "height": 0.010063248451309974,
+      "width": 0.14385240841535182,
+      "x": 0.26361649955799377,
+      "y": 0.2643317020300663
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 22,
+    "text": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+    "text_bbox": {
+      "height": 0.16227086385091147,
+      "width": 0.3922359927806979,
+      "x": 0.08823530035081252,
+      "y": 0.3641817497484612
+    },
+    "citations": []
+  },
+  {
+    "page": 3,
+    "ref_id": 22,
+    "text": "- [22] H. Solo and L. Organa. Artificial reference paper 5. _Fake Journal 2_, 10(2):1\u20134, 2025. doi: 10.1080/13658816.2020.1720692 2",
+    "text_bbox": {
+      "height": 0.010063248451309974,
+      "width": 0.1452458699544271,
+      "x": 0.2468297871109707,
+      "y": 0.2882319749003709
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 23,
+    "text": "of presentation-like storytelling visualizations and explored mechanisms for automatically generating annotations by integrating deeplearning feature extraction techniques with a natural language generation process [9]. Annotations in such systems are used to describe salient patterns and facilitate storytelling [23].",
+    "text_bbox": {
+      "height": 0.061638148144038035,
+      "width": 0.38735731910256777,
+      "x": 0.08823530035081252,
+      "y": 0.2705718917076034
+    },
+    "citations": [
+      {
+        "citation": "[23]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408527449065565,
+          "x": 0.36886023228464565,
+          "y": 0.32088882754547426
+        }
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "ref_id": 23,
+    "text": "- [23] A. Srinivasan, S. M. Drucker, A. Endert, and J. Stasko. Augmenting visualizations with interactive data facts to facilitate interpretation and communication. _IEEE Transactions on Visualization and Computer Graphics_, 25(1):672\u2013681, 2019. doi: 10.1109/TVCG.2018.2865145 2",
+    "text_bbox": {
+      "height": 0.033963521321614586,
+      "width": 0.36239289925768486,
+      "x": 0.11807021596073325,
+      "y": 0.3121322477706755
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 24,
+    "text": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+    "text_bbox": {
+      "height": 0.12453341243242977,
+      "width": 0.39223629820580574,
+      "x": 0.5195342917847477,
+      "y": 0.30775247438989506
+    },
+    "citations": [
+      {
+        "citation": "[24]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408577314389297,
+          "x": 0.5523817772958793,
+          "y": 0.3203320358738755
+        }
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "ref_id": 24,
+    "text": "- [24] M. Takatsuka and M. Gahegan. GeoVISTA Studio: A codeless visual programming environment for geoscientific data analysis and visualization. _Computers and Geosciences_, 28(10):1131\u20131144, 2002. doi: 10.1016/S0098-3004(02)00031-6 1",
+    "text_bbox": {
+      "height": 0.03396348278931897,
+      "width": 0.36239289925768486,
+      "x": 0.11807021596073325,
+      "y": 0.371882236365116
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 25,
+    "text": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+    "text_bbox": {
+      "height": 0.16227086385091147,
+      "width": 0.3922359927806979,
+      "x": 0.08823530035081252,
+      "y": 0.3641817497484612
+    },
+    "citations": [
+      {
+        "citation": "[25]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408527449065565,
+          "x": 0.28473423976524204,
+          "y": 0.4396565755208333
+        }
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "ref_id": 25,
+    "text": "- [25] J. Talbot, B. Lee, A. Kapoor, and D. S. Tan. EnsembleMatrix: Interactive visualization to support machine learning with multiple classifiers. In _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 1283\u20131292, 2009. doi: 10.1145/1518701. 1518895 2",
+    "text_bbox": {
+      "height": 0.05786371712732797,
+      "width": 0.36239898282718036,
+      "x": 0.11807021596073325,
+      "y": 0.419682705041134
+    },
+    "citations": []
+  }
+]

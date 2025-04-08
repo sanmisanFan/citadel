@@ -1,0 +1,1110 @@
+{
+  "table_of_contents": [
+    {
+      "title": "ChartAccent: Annotation for Data-Driven Storytelling",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          123.8642578125,
+          61.05322265625
+        ],
+        [
+          486.6805114746094,
+          61.05322265625
+        ],
+        [
+          486.6805114746094,
+          77.90826416015625
+        ],
+        [
+          123.8642578125,
+          77.90826416015625
+        ]
+      ]
+    },
+    {
+      "title": "ABSTRACT",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          53.9384765625,
+          315.755859375
+        ],
+        [
+          98.98681640625,
+          315.755859375
+        ],
+        [
+          98.98681640625,
+          326.25799560546875
+        ],
+        [
+          53.9384765625,
+          326.25799560546875
+        ]
+      ]
+    },
+    {
+      "title": "1 INTRODUCTION",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          53.71435546875,
+          533.28515625
+        ],
+        [
+          130.21435546875,
+          533.28515625
+        ],
+        [
+          130.21435546875,
+          542.6221466064453
+        ],
+        [
+          53.71435546875,
+          542.6221466064453
+        ]
+      ]
+    },
+    {
+      "title": "2 BACKGROUND & RELATED WORK",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          52.81787109375,
+          126.0703125
+        ],
+        [
+          203.8788604736328,
+          126.0703125
+        ],
+        [
+          203.8788604736328,
+          136.969970703125
+        ],
+        [
+          52.81787109375,
+          136.969970703125
+        ]
+      ]
+    },
+    {
+      "title": "2.1 Annotation in Data-Driven Storytelling",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          52.81787109375,
+          180.59765625
+        ],
+        [
+          237.9195098876953,
+          180.59765625
+        ],
+        [
+          237.9195098876953,
+          191.8125
+        ],
+        [
+          52.81787109375,
+          191.8125
+        ]
+      ]
+    },
+    {
+      "title": "2.2 Current Approaches to Annotation",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          53.56494140625,
+          474.1171875
+        ],
+        [
+          223.5234375,
+          474.1171875
+        ],
+        [
+          223.5234375,
+          485.15008544921875
+        ],
+        [
+          53.56494140625,
+          485.15008544921875
+        ]
+      ]
+    },
+    {
+      "title": "3 ANNOTATION DESIGN SPACE",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          53.452880859375,
+          194.6162109375
+        ],
+        [
+          185.7216796875,
+          194.6162109375
+        ],
+        [
+          185.7216796875,
+          205.49993896484375
+        ],
+        [
+          53.452880859375,
+          205.49993896484375
+        ]
+      ]
+    },
+    {
+      "title": "3.1 Survey of Annotated Charts",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          53.527587890625,
+          406.828125
+        ],
+        [
+          195.43359375,
+          406.828125
+        ],
+        [
+          195.43359375,
+          418.1731262207031
+        ],
+        [
+          53.527587890625,
+          418.1731262207031
+        ]
+      ]
+    },
+    {
+      "title": "3.2 Analysis",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          317.9550476074219,
+          403.34765625
+        ],
+        [
+          378.31640625,
+          403.34765625
+        ],
+        [
+          378.31640625,
+          414.94921875
+        ],
+        [
+          317.9550476074219,
+          414.94921875
+        ]
+      ]
+    },
+    {
+      "title": "Dimension 1: Annotation Form",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          317.35546875,
+          647.75390625
+        ],
+        [
+          440.47265625,
+          647.75390625
+        ],
+        [
+          440.47265625,
+          658.2078857421875
+        ],
+        [
+          317.35546875,
+          658.2078857421875
+        ]
+      ]
+    },
+    {
+      "title": "Dimension 2: Annotation Target Type",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          53.71435546875,
+          566.9296875
+        ],
+        [
+          200.94374084472656,
+          566.9296875
+        ],
+        [
+          200.94374084472656,
+          576.3447570800781
+        ],
+        [
+          53.71435546875,
+          576.3447570800781
+        ]
+      ]
+    },
+    {
+      "title": "4 CHARTACCENT",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          316.458984375,
+          667.08984375
+        ],
+        [
+          394.751953125,
+          667.08984375
+        ],
+        [
+          394.751953125,
+          676.4682464599609
+        ],
+        [
+          316.458984375,
+          676.4682464599609
+        ]
+      ]
+    },
+    {
+      "title": "4.1 Interacting with ChartAccent",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          52.96728515625,
+          290.42578125
+        ],
+        [
+          198.123046875,
+          290.42578125
+        ],
+        [
+          198.123046875,
+          300.9110412597656
+        ],
+        [
+          52.96728515625,
+          300.9110412597656
+        ]
+      ]
+    },
+    {
+      "title": "Annotation Target Selection",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          53.11669921875,
+          385.171875
+        ],
+        [
+          163.5644989013672,
+          385.171875
+        ],
+        [
+          163.5644989013672,
+          394.3996887207031
+        ],
+        [
+          53.11669921875,
+          394.3996887207031
+        ]
+      ]
+    },
+    {
+      "title": "Annotation Form Specification & Modification",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          317.654296875,
+          365.255859375
+        ],
+        [
+          496.353515625,
+          365.255859375
+        ],
+        [
+          496.353515625,
+          374.9208679199219
+        ],
+        [
+          317.654296875,
+          374.9208679199219
+        ]
+      ]
+    },
+    {
+      "title": "4.2 Usage Scenarios",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          53.079345703125,
+          56.654296875
+        ],
+        [
+          148.21875,
+          56.654296875
+        ],
+        [
+          148.21875,
+          66.03497314453125
+        ],
+        [
+          53.079345703125,
+          66.03497314453125
+        ]
+      ]
+    },
+    {
+      "title": "Scenario 1: Monthly Temperature Line Chart",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          53.490234375,
+          117.3355712890625
+        ],
+        [
+          230.81845092773438,
+          117.3355712890625
+        ],
+        [
+          230.81845092773438,
+          126.301513671875
+        ],
+        [
+          53.490234375,
+          126.301513671875
+        ]
+      ]
+    },
+    {
+      "title": "Scenario 2: Fertility Rate vs. Life Expectancy Scatterplot",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          53.56494140625,
+          432.46661376953125
+        ],
+        [
+          278.517578125,
+          432.46661376953125
+        ],
+        [
+          278.517578125,
+          441.4326171875
+        ],
+        [
+          53.56494140625,
+          441.4326171875
+        ]
+      ]
+    },
+    {
+      "title": "4.3 Implementation Details",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          317.056640625,
+          434.5649719238281
+        ],
+        [
+          437.53448486328125,
+          434.5649719238281
+        ],
+        [
+          437.53448486328125,
+          443.5309753417969
+        ],
+        [
+          317.056640625,
+          443.5309753417969
+        ]
+      ]
+    },
+    {
+      "title": "5 EVALUATION: REPRODUCTION STUDY",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          317.953125,
+          689.1070251464844
+        ],
+        [
+          483.7017517089844,
+          689.1070251464844
+        ],
+        [
+          483.7017517089844,
+          698.0730209350586
+        ],
+        [
+          317.953125,
+          698.0730209350586
+        ]
+      ]
+    },
+    {
+      "title": "5.1 Participants and Setup",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          53.41552734375,
+          449.75390625
+        ],
+        [
+          173.021484375,
+          449.75390625
+        ],
+        [
+          173.021484375,
+          459.03515625
+        ],
+        [
+          53.41552734375,
+          459.03515625
+        ]
+      ]
+    },
+    {
+      "title": "5.2 Tasks and Datasets",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          53.41552734375,
+          659.9651794433594
+        ],
+        [
+          158.4269561767578,
+          659.9651794433594
+        ],
+        [
+          158.4269561767578,
+          668.9311752319336
+        ],
+        [
+          53.41552734375,
+          668.9311752319336
+        ]
+      ]
+    },
+    {
+      "title": "5.3 Procedure",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          317.056640625,
+          530.0103454589844
+        ],
+        [
+          383.5502014160156,
+          530.0103454589844
+        ],
+        [
+          383.5502014160156,
+          538.9763488769531
+        ],
+        [
+          317.056640625,
+          538.9763488769531
+        ]
+      ]
+    },
+    {
+      "title": "5.4 Results",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          54.0,
+          364.095703125
+        ],
+        [
+          107.81391906738281,
+          364.095703125
+        ],
+        [
+          107.81391906738281,
+          373.5249938964844
+        ],
+        [
+          54.0,
+          373.5249938964844
+        ]
+      ]
+    },
+    {
+      "title": "6 DISCUSSION AND FUTURE WORK",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          316.16015625,
+          686.0390625
+        ],
+        [
+          465.716796875,
+          686.0390625
+        ],
+        [
+          465.716796875,
+          695.4270629882812
+        ],
+        [
+          316.16015625,
+          695.4270629882812
+        ]
+      ]
+    },
+    {
+      "title": "6.1 Reflection on the Survey of Annotated Charts",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          52.7431640625,
+          55.54248046875
+        ],
+        [
+          269.35430908203125,
+          55.54248046875
+        ],
+        [
+          269.35430908203125,
+          66.03497314453125
+        ],
+        [
+          52.7431640625,
+          66.03497314453125
+        ]
+      ]
+    },
+    {
+      "title": "6.2 Improving and Extending ChartAccent",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          53.41552734375,
+          230.677734375
+        ],
+        [
+          238.763671875,
+          230.677734375
+        ],
+        [
+          238.763671875,
+          241.61993408203125
+        ],
+        [
+          53.41552734375,
+          241.61993408203125
+        ]
+      ]
+    },
+    {
+      "title": "6.3 Desirable Annotation Form Defaults and Templates",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          53.9384765625,
+          506.6015625
+        ],
+        [
+          293.5986328125,
+          506.6015625
+        ],
+        [
+          293.5986328125,
+          517.55615234375
+        ],
+        [
+          53.9384765625,
+          517.55615234375
+        ]
+      ]
+    },
+    {
+      "title": "6.4 Study Limitations and Web Deployment",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          317.35546875,
+          145.1162109375
+        ],
+        [
+          509.203125,
+          145.1162109375
+        ],
+        [
+          509.203125,
+          154.9930419921875
+        ],
+        [
+          317.35546875,
+          154.9930419921875
+        ]
+      ]
+    },
+    {
+      "title": "7 CONCLUSION",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          317.35546875,
+          529.03125
+        ],
+        [
+          386.68359375,
+          529.03125
+        ],
+        [
+          386.68359375,
+          539.0859375
+        ],
+        [
+          317.35546875,
+          539.0859375
+        ]
+      ]
+    },
+    {
+      "title": "REFERENCES",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          53.751708984375,
+          56.1708984375
+        ],
+        [
+          108.53083801269531,
+          56.1708984375
+        ],
+        [
+          108.53083801269531,
+          66.03497314453125
+        ],
+        [
+          53.751708984375,
+          66.03497314453125
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          215
+        ],
+        [
+          "Line",
+          100
+        ],
+        [
+          "Text",
+          16
+        ],
+        [
+          "Footnote",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "ListItem",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          262
+        ],
+        [
+          "Line",
+          129
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          287
+        ],
+        [
+          "Line",
+          129
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          236
+        ],
+        [
+          "Line",
+          118
+        ],
+        [
+          "Text",
+          15
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          197
+        ],
+        [
+          "Line",
+          93
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          241
+        ],
+        [
+          "Line",
+          122
+        ],
+        [
+          "Text",
+          16
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          173
+        ],
+        [
+          "Line",
+          92
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "Figure",
+          5
+        ],
+        [
+          "Caption",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          273
+        ],
+        [
+          "Line",
+          112
+        ],
+        [
+          "TableCell",
+          48
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          245
+        ],
+        [
+          "Line",
+          128
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          408
+        ],
+        [
+          "Line",
+          140
+        ],
+        [
+          "ListItem",
+          48
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/15"
+}

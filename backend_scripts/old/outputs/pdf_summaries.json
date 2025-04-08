@@ -1,0 +1,22 @@
+[
+  {
+    "reference": "1",
+    "summary": "The text discusses the development and optimization of a deep convolutional neural network trained on the ImageNet dataset, achieving top-1 and top-5 error rates of 37.5% and 17.0% in the ILSVRC-2010 contest. Techniques such as non-saturating neurons, efficient GPU implementation, and dropout regularization were used to improve training speed and reduce overfitting. The network architecture included convolutional and fully-connected layers, with data augmentation techniques employed to combat overfitting. The text also explores the use of Rectified Linear Units (ReLUs), response normalization, and dropout in improving network performance, as well as the challenges and advancements in object recognition using deep convolutional neural networks."
+  },
+  {
+    "reference": "2",
+    "summary": "The text introduces a deep residual learning framework for image recognition, which utilizes residual mappings to optimize the training of deep neural networks. Empirical evidence shows that these residual networks are easier to optimize and achieve higher accuracy with increased depth, outperforming other models on datasets like ImageNet and COCO. The framework addresses the issue of degradation in deep neural networks and emphasizes the importance of shortcut connections in improving accuracy and addressing optimization difficulties. Various experiments and evaluations demonstrate the effectiveness of ResNets in overcoming optimization challenges and achieving state-of-the-art results in image classification tasks."
+  },
+  {
+    "reference": "4",
+    "summary": "The text discusses the issue of bias and lack of adaptability in meta-learners trained on existing tasks, proposing Task-Agnostic Meta-Learning (TAML) algorithms to address this. The TAML approaches aim to create unbiased initial models with high uncertainty over output labels, using entropy-based and inequality-minimization measures. Experimental studies show improved performance on benchmarked datasets for few-shot classification and reinforcement learning tasks compared to existing meta-learning approaches, highlighting the effectiveness of TAML in achieving unbiased adaptation to new tasks."
+  },
+  {
+    "reference": "5",
+    "summary": "The text introduces a novel semi-supervised meta-learning method called learning to self-train (LST) that leverages unlabeled data to improve few-shot classification performance. The LST model predicts pseudo labels for unlabeled data and iterates self-training steps on labeled and pseudo-labeled data, with a soft weighting network (SWN) optimizing the self-training weights of pseudo labels. The method is evaluated on ImageNet benchmarks and shows significant improvements over existing methods, addressing the challenges of limited labeled data in few-shot classification tasks. The approach involves recursive self-training, cherry-picking strategies, and meta-optimization of parameters for gradient descent methods, achieving top performance in various settings on miniImageNet and tieredImageNet datasets."
+  },
+  {
+    "reference": "6",
+    "summary": "The text explores the concept of capsules in neural networks as a more promising approach for object recognition than current methods, allowing for better handling of variations in position, orientation, scale, and lighting. Capsules use local computations to output instantiation parameters for visual entities, enabling recognition of wholes by recognizing their parts. The text discusses transforming auto-encoders with capsules that can predict complex transformations and model changes in viewpoint, demonstrating effectiveness in handling 2-D and 3-D perspectives. Capsules are compared to convolutional pools, highlighting their ability to compute precise position coordinates. Additionally, the text discusses the use of extended Kalman filters and transforming auto-encoders in linearizing dynamics and finding slow features in observations. Capsules in simple cells can disentangle"
+  }
+]

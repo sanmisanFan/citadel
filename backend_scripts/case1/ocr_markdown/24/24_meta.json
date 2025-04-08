@@ -1,0 +1,1377 @@
+{
+  "table_of_contents": [
+    {
+      "title": "GeoVISTA Studio: a codeless visual programming\nenvironment for geoscientific data analysis and visualization$",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          43.296875,
+          138.28656005859375
+        ],
+        [
+          499.16473388671875,
+          138.28656005859375
+        ],
+        [
+          499.16473388671875,
+          176.714111328125
+        ],
+        [
+          43.296875,
+          176.714111328125
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          44.42578125,
+          261.2355651855469
+        ],
+        [
+          78.69140625,
+          261.2355651855469
+        ],
+        [
+          78.69140625,
+          270.6416015625
+        ],
+        [
+          44.42578125,
+          270.6416015625
+        ]
+      ]
+    },
+    {
+      "title": "1. Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          44.7578125,
+          516.646484375
+        ],
+        [
+          102.3530502319336,
+          516.646484375
+        ],
+        [
+          102.3530502319336,
+          526.22705078125
+        ],
+        [
+          44.7578125,
+          526.22705078125
+        ]
+      ]
+    },
+    {
+      "title": "1.1. Integrating the various stages of analysis",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          43.89453125,
+          308.9333801269531
+        ],
+        [
+          217.78091430664062,
+          308.9333801269531
+        ],
+        [
+          217.78091430664062,
+          318.28466796875
+        ],
+        [
+          43.89453125,
+          318.28466796875
+        ]
+      ]
+    },
+    {
+      "title": "M. Takatsuka, M. Gahegan / Computers & Geosciences 28 (2002) 1131\u20131144 1133",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          137.0625,
+          46.6024169921875
+        ],
+        [
+          499.1918029785156,
+          46.6024169921875
+        ],
+        [
+          499.1918029785156,
+          55.02502441406251
+        ],
+        [
+          137.0625,
+          55.02502441406251
+        ]
+      ]
+    },
+    {
+      "title": "1.2. Thinking visually",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          44.42578125,
+          67.81951904296875
+        ],
+        [
+          127.83203125,
+          67.81951904296875
+        ],
+        [
+          127.83203125,
+          76.78582763671875
+        ],
+        [
+          44.42578125,
+          76.78582763671875
+        ]
+      ]
+    },
+    {
+      "title": "1.3. Dealing with increasing data complexity",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          44.2265625,
+          407.5768737792969
+        ],
+        [
+          215.15625,
+          407.5768737792969
+        ],
+        [
+          215.15625,
+          416.65039062500006
+        ],
+        [
+          44.2265625,
+          416.65039062500006
+        ]
+      ]
+    },
+    {
+      "title": "1.4. Interoperating scientific models",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          44.29296875,
+          571.9272613525391
+        ],
+        [
+          181.421875,
+          571.9272613525391
+        ],
+        [
+          181.421875,
+          580.8935699462891
+        ],
+        [
+          44.29296875,
+          580.8935699462891
+        ]
+      ]
+    },
+    {
+      "title": "2. Overview of GeoVISTA Studio",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          283.6875,
+          279.4790954589844
+        ],
+        [
+          414.90625,
+          279.4790954589844
+        ],
+        [
+          414.90625,
+          288.44537353515625
+        ],
+        [
+          283.6875,
+          288.44537353515625
+        ]
+      ]
+    },
+    {
+      "title": "2.1. Java and JavaBeans\u2014underlying technology",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          43.9609375,
+          429.33105468750006
+        ],
+        [
+          230.9609375,
+          429.33105468750006
+        ],
+        [
+          230.9609375,
+          438.4254150390625
+        ],
+        [
+          43.9609375,
+          438.4254150390625
+        ]
+      ]
+    },
+    {
+      "title": "2.2. The user models",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          43.5625,
+          252.97760009765625
+        ],
+        [
+          124.578125,
+          252.97760009765625
+        ],
+        [
+          124.578125,
+          261.9438781738281
+        ],
+        [
+          43.5625,
+          261.9438781738281
+        ]
+      ]
+    },
+    {
+      "title": "2.2.1. Tool users",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          44.09375,
+          386.3746337890625
+        ],
+        [
+          109.1793212890625,
+          386.3746337890625
+        ],
+        [
+          109.1793212890625,
+          395.3409118652344
+        ],
+        [
+          44.09375,
+          395.3409118652344
+        ]
+      ]
+    },
+    {
+      "title": "2.2.2. Application developers",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          44.060546875,
+          486.8895721435547
+        ],
+        [
+          154.59375,
+          486.8895721435547
+        ],
+        [
+          154.59375,
+          495.8558807373047
+        ],
+        [
+          44.060546875,
+          495.8558807373047
+        ]
+      ]
+    },
+    {
+      "title": "2.2.3. Application users",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          282.09375,
+          104.49298095703125
+        ],
+        [
+          375.0625,
+          104.49298095703125
+        ],
+        [
+          375.0625,
+          113.45928955078125
+        ],
+        [
+          282.09375,
+          113.45928955078125
+        ]
+      ]
+    },
+    {
+      "title": "2.3. A typical work flow in GeoVISTA Studio",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          282.625,
+          239.81781005859375
+        ],
+        [
+          460.0625,
+          239.81781005859375
+        ],
+        [
+          460.0625,
+          248.78408813476562
+        ],
+        [
+          282.625,
+          248.78408813476562
+        ]
+      ]
+    },
+    {
+      "title": "2.4. Related works",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          43.595703125,
+          341.6533203125
+        ],
+        [
+          116.90894317626953,
+          341.6533203125
+        ],
+        [
+          116.90894317626953,
+          350.7820739746094
+        ],
+        [
+          43.595703125,
+          350.7820739746094
+        ]
+      ]
+    },
+    {
+      "title": "3. GeoVISTA Studio basics",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          283.15625,
+          369.84912109375
+        ],
+        [
+          391.0,
+          369.84912109375
+        ],
+        [
+          391.0,
+          378.970703125
+        ],
+        [
+          283.15625,
+          378.970703125
+        ]
+      ]
+    },
+    {
+      "title": "3.1. Studio window",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          282.625,
+          550.0494537353516
+        ],
+        [
+          357.3110046386719,
+          550.0494537353516
+        ],
+        [
+          357.3110046386719,
+          559.0361328125
+        ],
+        [
+          282.625,
+          559.0361328125
+        ]
+      ]
+    },
+    {
+      "title": "3.2. Palette and JavaBean components",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          43.89453125,
+          67.81951904296875
+        ],
+        [
+          192.84375,
+          67.81951904296875
+        ],
+        [
+          192.84375,
+          77.080322265625
+        ],
+        [
+          43.89453125,
+          77.080322265625
+        ]
+      ]
+    },
+    {
+      "title": "3.2.1. Property Editor",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          44.060546875,
+          327.8673400878906
+        ],
+        [
+          130.421875,
+          327.8673400878906
+        ],
+        [
+          130.421875,
+          336.8336181640625
+        ],
+        [
+          44.060546875,
+          336.8336181640625
+        ]
+      ]
+    },
+    {
+      "title": "3.2.2. Importing components",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          282.625,
+          208.14404296875003
+        ],
+        [
+          393.65625,
+          208.14404296875003
+        ],
+        [
+          393.65625,
+          217.25897216796875
+        ],
+        [
+          282.625,
+          217.25897216796875
+        ]
+      ]
+    },
+    {
+      "title": "3.3. Connecting components",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          282.625,
+          396.5680236816406
+        ],
+        [
+          391.53125,
+          396.5680236816406
+        ],
+        [
+          391.53125,
+          405.5343017578125
+        ],
+        [
+          282.625,
+          405.5343017578125
+        ]
+      ]
+    },
+    {
+      "title": "3.4. Online help",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          282.625,
+          298.9013671875
+        ],
+        [
+          346.375,
+          298.9013671875
+        ],
+        [
+          346.375,
+          307.91375732421875
+        ],
+        [
+          282.625,
+          307.91375732421875
+        ]
+      ]
+    },
+    {
+      "title": "3.5. Deploying a designed program",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          283.15625,
+          486.25978088378906
+        ],
+        [
+          418.09375,
+          486.25978088378906
+        ],
+        [
+          418.09375,
+          495.27050781250006
+        ],
+        [
+          283.15625,
+          495.27050781250006
+        ]
+      ]
+    },
+    {
+      "title": "4. Examples",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          44.09375,
+          615.9052963256836
+        ],
+        [
+          92.82212829589844,
+          615.9052963256836
+        ],
+        [
+          92.82212829589844,
+          624.9755859375
+        ],
+        [
+          44.09375,
+          624.9755859375
+        ]
+      ]
+    },
+    {
+      "title": "4.1. Experiment 1: environmental assessment\u2014improving\nclassifiers and information classes",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          283.9190979003906,
+          517.1646270751953
+        ],
+        [
+          499.375,
+          517.1646270751953
+        ],
+        [
+          499.375,
+          537.2978515625
+        ],
+        [
+          283.9190979003906,
+          537.2978515625
+        ]
+      ]
+    },
+    {
+      "title": "4.2. Experiment 2: socio-demographics\u2014studying\ncounty-level similarities and differences",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          283.9188232421875,
+          593.8635711669922
+        ],
+        [
+          472.546875,
+          593.8635711669922
+        ],
+        [
+          472.546875,
+          614.1064453125
+        ],
+        [
+          283.9188232421875,
+          614.1064453125
+        ]
+      ]
+    },
+    {
+      "title": "5. Conclusions",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          43.89453125,
+          528.2575531005859
+        ],
+        [
+          100.75704956054688,
+          528.2575531005859
+        ],
+        [
+          100.75704956054688,
+          537.2238616943359
+        ],
+        [
+          43.89453125,
+          537.2238616943359
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledgements",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          44.591796875,
+          337.9399719238281
+        ],
+        [
+          116.05354309082031,
+          337.9399719238281
+        ],
+        [
+          116.05354309082031,
+          346.90673828125
+        ],
+        [
+          44.591796875,
+          346.90673828125
+        ]
+      ]
+    },
+    {
+      "title": "Appendix A",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          44.82421875,
+          460.5101623535156
+        ],
+        [
+          89.944580078125,
+          460.5101623535156
+        ],
+        [
+          89.944580078125,
+          469.54687500000006
+        ],
+        [
+          44.82421875,
+          469.54687500000006
+        ]
+      ]
+    },
+    {
+      "title": "A.2. To import a palette",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          283.91827392578125,
+          233.18783569335938
+        ],
+        [
+          378.05010986328125,
+          233.18783569335938
+        ],
+        [
+          378.05010986328125,
+          242.15411376953125
+        ],
+        [
+          283.91827392578125,
+          242.15411376953125
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          283.421875,
+          370.8226623535156
+        ],
+        [
+          325.390625,
+          370.8226623535156
+        ],
+        [
+          325.390625,
+          379.7889404296875
+        ],
+        [
+          283.421875,
+          379.7889404296875
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          145
+        ],
+        [
+          "Line",
+          53
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Picture",
+          2
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          144
+        ],
+        [
+          "Line",
+          63
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          218
+        ],
+        [
+          "Line",
+          103
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          198
+        ],
+        [
+          "Line",
+          87
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          220
+        ],
+        [
+          "Line",
+          82
+        ],
+        [
+          "ListItem",
+          13
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          161
+        ],
+        [
+          "Line",
+          67
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          246
+        ],
+        [
+          "Line",
+          105
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          170
+        ],
+        [
+          "TableCell",
+          86
+        ],
+        [
+          "Line",
+          74
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Form",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          126
+        ],
+        [
+          "Line",
+          50
+        ],
+        [
+          "TableCell",
+          8
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          109
+        ],
+        [
+          "Line",
+          55
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          7
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Line",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          118
+        ],
+        [
+          "Line",
+          50
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          170
+        ],
+        [
+          "Line",
+          72
+        ],
+        [
+          "ListItem",
+          16
+        ],
+        [
+          "TableCell",
+          12
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListGroup",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Form",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          233
+        ],
+        [
+          "Line",
+          109
+        ],
+        [
+          "ListItem",
+          33
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Text",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/24"
+}

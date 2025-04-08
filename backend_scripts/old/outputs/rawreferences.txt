@@ -1,0 +1,6 @@
+[1] A. Krizhevsky, I. Sutskever, and G. E. Hinton, "Imagenet classification with deep convolutional neural networks," in Proc. Advances Neural Inf. Process. Syst., 2012, pp. 1097–1105.
+[2] K. He, X. Zhang, S. Ren, and J. Sun, "Deep residual learning for image recognition," in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2016, pp. 770–778.
+[3] C. Finn, P. Abbeel, and S. Levine, "Model-agnostic meta-learning for fast adaptation of deep networks," in Proc. 34th Int. Conf. Mach. Learn., 2017, pp. 1126–1135.  Authorized licensed use limited to: Arizona State University. Downloaded on February 10,2025 at 20:54:49 UTC from IEEE Xplore. Restrictions apply.
+[4] M. A. Jamal, G.-J. Qi, and M. Shah, "Task-agnostic meta-learning for few-shot learning," 2018, arXiv: 1805.07722.
+[5] X. Li et al., "Learning to self-train for semi-supervised few-shot classification," in Proc. Advances Neural Inf. Process. Syst., 2019, pp. 10 276–10 286.
+[6] G. E. Hinton, A. Krizhevsky, and S. D. Wang, "Transforming auto-encoders," in Proc. Int. Conf. Artif. Neural Netw., 2011, pp. 44–51.
