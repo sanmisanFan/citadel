@@ -1,0 +1,1165 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Augmenting Visualizations with Interactive Data Facts\nto Facilitate Interpretation and Communication",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          105.486328125,
+          55.9775390625
+        ],
+        [
+          517.869140625,
+          55.9775390625
+        ],
+        [
+          517.869140625,
+          97.78204345703125
+        ],
+        [
+          105.486328125,
+          97.78204345703125
+        ]
+      ]
+    },
+    {
+      "title": "Arjun Srinivasan, Steven M. Drucker, Alex Endert, and John Stasko",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          162.5625,
+          112.6318359375
+        ],
+        [
+          459.0,
+          112.6318359375
+        ],
+        [
+          459.0,
+          123.01409912109375
+        ],
+        [
+          162.5625,
+          123.01409912109375
+        ]
+      ]
+    },
+    {
+      "title": "1 INTRODUCTION",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          53.71435546875,
+          320.906005859375
+        ],
+        [
+          128.84857177734375,
+          320.906005859375
+        ],
+        [
+          128.84857177734375,
+          329.87200927734375
+        ],
+        [
+          53.71435546875,
+          329.87200927734375
+        ]
+      ]
+    },
+    {
+      "title": "Fig. 1. Result of the Quill NLG plug-in applied to a visualization in\nMicrosoft Power BI. (image source: [2])",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          316.458984375,
+          510.82354736328125
+        ],
+        [
+          568.072265625,
+          510.82354736328125
+        ],
+        [
+          568.072265625,
+          529.8046875
+        ],
+        [
+          316.458984375,
+          529.8046875
+        ]
+      ]
+    },
+    {
+      "title": "2 RELATED WORK",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          44.3759765625,
+          607.921875
+        ],
+        [
+          126.404296875,
+          607.921875
+        ],
+        [
+          126.404296875,
+          617.4850006103516
+        ],
+        [
+          44.3759765625,
+          617.4850006103516
+        ]
+      ]
+    },
+    {
+      "title": "2.1 Automated-Insights and NLG-based Visualization Sys-\ntems",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          44.60009765625,
+          621.84375
+        ],
+        [
+          296.85491943359375,
+          621.84375
+        ],
+        [
+          296.85491943359375,
+          641.1796875
+        ],
+        [
+          44.60009765625,
+          641.1796875
+        ]
+      ]
+    },
+    {
+      "title": "2.2 Visualization Recommendation",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          53.0419921875,
+          89.525390625
+        ],
+        [
+          207.9551544189453,
+          89.525390625
+        ],
+        [
+          207.9551544189453,
+          100.13800048828125
+        ],
+        [
+          53.0419921875,
+          100.13800048828125
+        ]
+      ]
+    },
+    {
+      "title": "2.3 Embellishing Visualizations For Communication",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          53.86376953125,
+          361.775390625
+        ],
+        [
+          281.794921875,
+          361.775390625
+        ],
+        [
+          281.794921875,
+          371.91802978515625
+        ],
+        [
+          53.86376953125,
+          371.91802978515625
+        ]
+      ]
+    },
+    {
+      "title": "3 VODER",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          316.843994140625,
+          110.794921875
+        ],
+        [
+          359.325927734375,
+          110.794921875
+        ],
+        [
+          359.325927734375,
+          121.4296875
+        ],
+        [
+          316.843994140625,
+          121.4296875
+        ]
+      ]
+    },
+    {
+      "title": "3.1 Design Considerations",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          315.5625,
+          163.775390625
+        ],
+        [
+          435.69744873046875,
+          163.775390625
+        ],
+        [
+          435.69744873046875,
+          174.0234375
+        ],
+        [
+          315.5625,
+          174.0234375
+        ]
+      ]
+    },
+    {
+      "title": "DC3. Facilitate exploration of alternative ways to communicate\ndata facts:",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          316.6199951171875,
+          561.12890625
+        ],
+        [
+          568.96875,
+          561.12890625
+        ],
+        [
+          568.96875,
+          580.46484375
+        ],
+        [
+          316.6199951171875,
+          580.46484375
+        ]
+      ]
+    },
+    {
+      "title": "3.2 User Interface",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          44.114501953125,
+          389.42578125
+        ],
+        [
+          127.001953125,
+          389.42578125
+        ],
+        [
+          127.001953125,
+          398.9480285644531
+        ],
+        [
+          44.114501953125,
+          398.9480285644531
+        ]
+      ]
+    },
+    {
+      "title": "3.2.1 Exploring Data Facts",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          44.30126953125,
+          492.29296875
+        ],
+        [
+          156.8060302734375,
+          492.29296875
+        ],
+        [
+          156.8060302734375,
+          501.57421875
+        ],
+        [
+          44.30126953125,
+          501.57421875
+        ]
+      ]
+    },
+    {
+      "title": "3.2.2 Exploring Alternatives to Present Data Facts",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          307.6199951171875,
+          610.62890625
+        ],
+        [
+          512.7890625,
+          610.62890625
+        ],
+        [
+          512.7890625,
+          620.2726135253906
+        ],
+        [
+          307.6199951171875,
+          620.2726135253906
+        ]
+      ]
+    },
+    {
+      "title": "3.2.3 Organizing Saved Visualizations and Data Facts",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          52.96728515625,
+          109.44140625
+        ],
+        [
+          273.9090576171875,
+          109.44140625
+        ],
+        [
+          273.9090576171875,
+          119.96856689453125
+        ],
+        [
+          52.96728515625,
+          119.96856689453125
+        ]
+      ]
+    },
+    {
+      "title": "3.3 Generating and Ordering Data Facts",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          53.11669921875,
+          291.5859375
+        ],
+        [
+          230.6953125,
+          291.5859375
+        ],
+        [
+          230.6953125,
+          301.68701171875
+        ],
+        [
+          53.11669921875,
+          301.68701171875
+        ]
+      ]
+    },
+    {
+      "title": "3.4 Mappings Between Data Facts, Visualizations, and\nEmbellishments",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          314.3671875,
+          472.9920349121094
+        ],
+        [
+          567.17578125,
+          472.9920349121094
+        ],
+        [
+          567.17578125,
+          491.9210510253906
+        ],
+        [
+          314.3671875,
+          491.9210510253906
+        ]
+      ]
+    },
+    {
+      "title": "3.5 Keyword-based Search Queries",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          43.62890625,
+          672.1171875
+        ],
+        [
+          200.5690460205078,
+          672.1171875
+        ],
+        [
+          200.5690460205078,
+          681.4850158691406
+        ],
+        [
+          43.62890625,
+          681.4850158691406
+        ]
+      ]
+    },
+    {
+      "title": "4 PRELIMINARY USER STUDY",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          307.843994140625,
+          692.5280227661133
+        ],
+        [
+          432.1397705078125,
+          692.5280227661133
+        ],
+        [
+          432.1397705078125,
+          701.5078125
+        ],
+        [
+          307.843994140625,
+          701.5078125
+        ]
+      ]
+    },
+    {
+      "title": "4.1 Participants and Experimental Setup",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          53.0419921875,
+          190.7490234375
+        ],
+        [
+          232.3388671875,
+          190.7490234375
+        ],
+        [
+          232.3388671875,
+          200.823974609375
+        ],
+        [
+          53.0419921875,
+          200.823974609375
+        ]
+      ]
+    },
+    {
+      "title": "4.2 Procedure",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          53.7890625,
+          504.28125
+        ],
+        [
+          119.59524536132812,
+          504.28125
+        ],
+        [
+          119.59524536132812,
+          514.3359375
+        ],
+        [
+          53.7890625,
+          514.3359375
+        ]
+      ]
+    },
+    {
+      "title": "4.3 Participant Feedback",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          314.068359375,
+          129.2607421875
+        ],
+        [
+          427.96875,
+          129.2607421875
+        ],
+        [
+          427.96875,
+          138.93096923828125
+        ],
+        [
+          314.068359375,
+          138.93096923828125
+        ]
+      ]
+    },
+    {
+      "title": "4.3.1 Usage Overview",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          313.76953125,
+          142.892578125
+        ],
+        [
+          411.157470703125,
+          142.892578125
+        ],
+        [
+          411.157470703125,
+          152.25555419921875
+        ],
+        [
+          313.76953125,
+          152.25555419921875
+        ]
+      ]
+    },
+    {
+      "title": "4.3.2 Using Data Facts to Aid Visual Analysis",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          316.6199951171875,
+          343.40625
+        ],
+        [
+          502.62890625,
+          343.40625
+        ],
+        [
+          502.62890625,
+          352.5735778808594
+        ],
+        [
+          316.6199951171875,
+          352.5735778808594
+        ]
+      ]
+    },
+    {
+      "title": "4.3.3 Interactive Data Facts For Communication",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          44.0771484375,
+          256.39453125
+        ],
+        [
+          240.70079040527344,
+          256.39453125
+        ],
+        [
+          240.70079040527344,
+          266.4365234375
+        ],
+        [
+          44.0771484375,
+          266.4365234375
+        ]
+      ]
+    },
+    {
+      "title": "5 DISCUSSION",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          307.79296875,
+          80.244140625
+        ],
+        [
+          372.33984375,
+          80.244140625
+        ],
+        [
+          372.33984375,
+          89.912109375
+        ],
+        [
+          307.79296875,
+          89.912109375
+        ]
+      ]
+    },
+    {
+      "title": "5.1 Iterating between Visualizations and Facts during Ex-\nploration",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          306.896484375,
+          91.89404296875
+        ],
+        [
+          560.302734375,
+          91.89404296875
+        ],
+        [
+          560.302734375,
+          112.863037109375
+        ],
+        [
+          306.896484375,
+          112.863037109375
+        ]
+      ]
+    },
+    {
+      "title": "5.2 Potential Risks: Trust and Deception",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          307.1953125,
+          641.1796875
+        ],
+        [
+          485.89453125,
+          641.1796875
+        ],
+        [
+          485.89453125,
+          651.6330261230469
+        ],
+        [
+          307.1953125,
+          651.6330261230469
+        ]
+      ]
+    },
+    {
+      "title": "6 LIMITATIONS AND FUTURE WORK",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          53.3408203125,
+          460.96875
+        ],
+        [
+          202.904296875,
+          460.96875
+        ],
+        [
+          202.904296875,
+          471.5110168457031
+        ],
+        [
+          53.3408203125,
+          471.5110168457031
+        ]
+      ]
+    },
+    {
+      "title": "7 CONCLUSION",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          316.843994140625,
+          479.91796875
+        ],
+        [
+          384.7474365234375,
+          479.91796875
+        ],
+        [
+          384.7474365234375,
+          490.155029296875
+        ],
+        [
+          316.843994140625,
+          490.155029296875
+        ]
+      ]
+    },
+    {
+      "title": "ACKNOWLEDGMENTS",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          316.7578125,
+          671.73046875
+        ],
+        [
+          401.7649841308594,
+          671.73046875
+        ],
+        [
+          401.7649841308594,
+          680.7680130004883
+        ],
+        [
+          316.7578125,
+          680.7680130004883
+        ]
+      ]
+    },
+    {
+      "title": "REFERENCES",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          45.19775390625,
+          51.5302734375
+        ],
+        [
+          99.53083038330078,
+          51.5302734375
+        ],
+        [
+          99.53083038330078,
+          61.53497314453125
+        ],
+        [
+          45.19775390625,
+          61.53497314453125
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          172
+        ],
+        [
+          "Line",
+          83
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          199
+        ],
+        [
+          "Line",
+          92
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          269
+        ],
+        [
+          "Line",
+          135
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          248
+        ],
+        [
+          "Line",
+          87
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          327
+        ],
+        [
+          "Line",
+          119
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          519
+        ],
+        [
+          "Line",
+          166
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          297
+        ],
+        [
+          "Line",
+          138
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "TextInlineMath",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          336
+        ],
+        [
+          "Line",
+          130
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          307
+        ],
+        [
+          "Line",
+          136
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          532
+        ],
+        [
+          "Line",
+          144
+        ],
+        [
+          "ListItem",
+          50
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/23"
+}

@@ -1,0 +1,52 @@
+{
+  "identifiedIssue": [
+    {
+      "id": "issue-1",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "lowRelevancy",
+        "displayName": "Low Relevancy",
+        "options": {
+          "citationRing": false,
+          "selfCitation": false
+        }
+      },
+      "paper": [
+        "citation-12"
+      ],
+      "page": 1,
+      "explanation": "The mention of citation [12] in the provided text excerpt is peripheral and minimally discussed. The excerpt focuses on the automatic analysis of data and metadata for feature detection in various types of statistical charts, classifying detected features into categories such as general information and data facts. The cited paper, however, primarily discusses accessible visualization through natural language descriptions and the importance of conveying trends and statistics in a reader-specific manner, particularly for individuals with visual disabilities. While the concept of categorizing information from visualizations (charts) into \"general information and data facts\" could tangentially relate to the broader theme of making data accessible and understandable (as discussed in [12]), the direct connection between the framework's feature detection process and the paper's focus on natural language descriptions for accessibility is minimal.",
+      "sentence": [
+        {
+          "sentence": "Feature Detection. The framework conducts an automatic analysis of the extracted data and metadata to identify key features. The detection is based on chart type and currently supports all basic statistical charts and their variants, such as bar charts (split bars, stacked bars, grouped bars, etc.), area charts, line charts, and pie charts. For each type of chart, the framework detects key features and classifies them into the following categories: general information and data facts [12].",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-2",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "lowRelevancy",
+        "displayName": "Low Relevancy",
+        "options": {
+          "citationRing": false,
+          "selfCitation": true
+        }
+      },
+      "paper": [
+        "citation-19"
+      ],
+      "page": 1,
+      "explanation": "The mention of citation [19] in the text excerpt is peripheral and minimally discussed. The excerpt talks about the limitations of fully automated systems in making critical errors due to their reliance on training data, which is a broader issue than the specific focus of the cited paper on the challenges faced by blind and visually impaired users with AI image captioning systems. While the cited paper's emphasis on the need for human-in-the-loop workflows to improve accuracy indirectly supports the excerpt's point, the direct relevance of the paper's content to the excerpt's discussion on automated system errors is minimal.",
+      "sentence": [
+        {
+          "sentence": "- C3. The accuracy of the description depends on the correct interpretation. Fully automated systems can make critical errors [19] as their performance is tied to training data and may struggle with unfamiliar situations.",
+          "bbox": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,957 @@
+{
+  "table_of_contents": [
+    {
+      "title": "1 INTRODUCTION",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          30.592529296875,
+          242.54742431640625
+        ],
+        [
+          106.35081481933594,
+          242.54742431640625
+        ],
+        [
+          106.35081481933594,
+          251.51385498046875
+        ],
+        [
+          30.592529296875,
+          251.51385498046875
+        ]
+      ]
+    },
+    {
+      "title": "2 RELATED WORK",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          292.359375,
+          482.87982177734375
+        ],
+        [
+          374.4381103515625,
+          482.87982177734375
+        ],
+        [
+          374.4381103515625,
+          492.064453125
+        ],
+        [
+          292.359375,
+          492.064453125
+        ]
+      ]
+    },
+    {
+      "title": "2.1 Narrative Structure",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          291.251953125,
+          542.9430999755859
+        ],
+        [
+          397.564453125,
+          542.9430999755859
+        ],
+        [
+          397.564453125,
+          551.9095001220703
+        ],
+        [
+          291.251953125,
+          551.9095001220703
+        ]
+      ]
+    },
+    {
+      "title": "2.2 Visual Narratives",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          22.25225830078125,
+          133.798095703125
+        ],
+        [
+          116.69202423095703,
+          133.798095703125
+        ],
+        [
+          116.69202423095703,
+          142.7645263671875
+        ],
+        [
+          22.25225830078125,
+          142.7645263671875
+        ]
+      ]
+    },
+    {
+      "title": "2.3 Storytelling with Data Visualization",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          21.8023681640625,
+          601.1365509033203
+        ],
+        [
+          192.99609375,
+          601.1365509033203
+        ],
+        [
+          192.99609375,
+          610.3564453125
+        ],
+        [
+          21.8023681640625,
+          610.3564453125
+        ]
+      ]
+    },
+    {
+      "title": "3 CASE STUDIES OF NARRATIVE VISUALIZATION",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          283.77685546875,
+          460.5652160644531
+        ],
+        [
+          486.43505859375,
+          460.5652160644531
+        ],
+        [
+          486.43505859375,
+          469.53289794921875
+        ],
+        [
+          283.77685546875,
+          469.53289794921875
+        ]
+      ]
+    },
+    {
+      "title": "3.1 Steroids or Not, the Pursuit is On",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          284.607421875,
+          691.9747619628906
+        ],
+        [
+          447.734619140625,
+          691.9747619628906
+        ],
+        [
+          447.734619140625,
+          700.941162109375
+        ],
+        [
+          284.607421875,
+          700.941162109375
+        ]
+      ]
+    },
+    {
+      "title": "3.2 Budget Forecasts, Compared With Reality",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          294.1199951171875,
+          222.99945068359375
+        ],
+        [
+          495.5712890625,
+          222.99945068359375
+        ],
+        [
+          495.5712890625,
+          231.96588134765625
+        ],
+        [
+          294.1199951171875,
+          231.96588134765625
+        ]
+      ]
+    },
+    {
+      "title": "3.3 Afghanistan: Behind the Front Line",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          21.9407958984375,
+          299.3203125
+        ],
+        [
+          194.2872314453125,
+          299.3203125
+        ],
+        [
+          194.2872314453125,
+          308.7710266113281
+        ],
+        [
+          21.9407958984375,
+          308.7710266113281
+        ]
+      ]
+    },
+    {
+      "title": "3.4 Gapminder Human Development Trends",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          284.607421875,
+          385.8662109375
+        ],
+        [
+          477.8525390625,
+          385.8662109375
+        ],
+        [
+          477.8525390625,
+          395.0254211425781
+        ],
+        [
+          284.607421875,
+          395.0254211425781
+        ]
+      ]
+    },
+    {
+      "title": "3.5 The Minnesota Employment Explorer",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          31.0078125,
+          481.38671875
+        ],
+        [
+          210.69300842285156,
+          481.38671875
+        ],
+        [
+          210.69300842285156,
+          490.3531188964844
+        ],
+        [
+          31.0078125,
+          490.3531188964844
+        ]
+      ]
+    },
+    {
+      "title": "",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          295.40478515625,
+          50.3118896484375
+        ],
+        [
+          466.50146484375,
+          50.3118896484375
+        ],
+        [
+          466.50146484375,
+          57.4925537109375
+        ],
+        [
+          295.40478515625,
+          57.4925537109375
+        ]
+      ]
+    },
+    {
+      "title": "4 DESIGN SPACE ANALYSIS",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          294.3427734375,
+          562.1746063232422
+        ],
+        [
+          412.79150390625,
+          562.1746063232422
+        ],
+        [
+          412.79150390625,
+          571.1439056396484
+        ],
+        [
+          294.3427734375,
+          571.1439056396484
+        ]
+      ]
+    },
+    {
+      "title": "4.1 Design Space Dimensions",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          31.11163330078125,
+          304.54974365234375
+        ],
+        [
+          165.974853515625,
+          304.54974365234375
+        ],
+        [
+          165.974853515625,
+          313.5161437988281
+        ],
+        [
+          31.11163330078125,
+          313.5161437988281
+        ]
+      ]
+    },
+    {
+      "title": "4.2 Design Space Observations",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          31.18084716796875,
+          700.8554840087891
+        ],
+        [
+          171.43856811523438,
+          700.8554840087891
+        ],
+        [
+          171.43856811523438,
+          709.8218841552734
+        ],
+        [
+          31.18084716796875,
+          709.8218841552734
+        ]
+      ]
+    },
+    {
+      "title": "4.3 Genres of Narrative Visualization",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          293.466796875,
+          532.6222381591797
+        ],
+        [
+          456.07147216796875,
+          532.6222381591797
+        ],
+        [
+          456.07147216796875,
+          541.5886383056641
+        ],
+        [
+          293.466796875,
+          541.5886383056641
+        ]
+      ]
+    },
+    {
+      "title": "4.4 Balancing Author-Driven and Reader-Driven Stories",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          22.1484375,
+          409.1550598144531
+        ],
+        [
+          264.39697265625,
+          409.1550598144531
+        ],
+        [
+          264.39697265625,
+          418.1214599609375
+        ],
+        [
+          22.1484375,
+          418.1214599609375
+        ]
+      ]
+    },
+    {
+      "title": "4.4.1 Martini Glass Structure",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          285.1196594238281,
+          52.4141845703125
+        ],
+        [
+          405.6997985839844,
+          52.4141845703125
+        ],
+        [
+          405.6997985839844,
+          61.380615234375
+        ],
+        [
+          285.1196594238281,
+          61.380615234375
+        ]
+      ]
+    },
+    {
+      "title": "4.4.2 Interactive Slideshow",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          281.56201171875,
+          285.0003662109375
+        ],
+        [
+          398.29388427734375,
+          285.0003662109375
+        ],
+        [
+          398.29388427734375,
+          294.029296875
+        ],
+        [
+          281.56201171875,
+          294.029296875
+        ]
+      ]
+    },
+    {
+      "title": "4.4.3 Drill-Down Story",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          282.11572265625,
+          488.113037109375
+        ],
+        [
+          379.0510559082031,
+          488.113037109375
+        ],
+        [
+          379.0510559082031,
+          497.0794372558594
+        ],
+        [
+          282.11572265625,
+          497.0794372558594
+        ]
+      ]
+    },
+    {
+      "title": "5 DISCUSSION",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          284.607421875,
+          641.8007202148438
+        ],
+        [
+          349.6773681640625,
+          641.8007202148438
+        ],
+        [
+          349.6773681640625,
+          650.7671203613281
+        ],
+        [
+          284.607421875,
+          650.7671203613281
+        ]
+      ]
+    },
+    {
+      "title": "ACKNOWLEDGMENTS",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          292.63623046875,
+          189.70965576171875
+        ],
+        [
+          379.26318359375,
+          189.70965576171875
+        ],
+        [
+          379.26318359375,
+          198.67608642578125
+        ],
+        [
+          292.63623046875,
+          198.67608642578125
+        ]
+      ]
+    },
+    {
+      "title": "REFERENCES",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          294.3441467285156,
+          230.6138916015625
+        ],
+        [
+          348.837890625,
+          230.6138916015625
+        ],
+        [
+          348.837890625,
+          239.607421875
+        ],
+        [
+          294.3441467285156,
+          239.607421875
+        ]
+      ]
+    },
+    {
+      "title": "APPENDIX: NARRATIVE VISUALIZATION EXAMPLES",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          22.724000930786133,
+          52.4244384765625
+        ],
+        [
+          227.5751953125,
+          52.4244384765625
+        ],
+        [
+          227.5751953125,
+          61.5552978515625
+        ],
+        [
+          22.724000930786133,
+          61.5552978515625
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          222
+        ],
+        [
+          "Line",
+          108
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "PageHeader",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Footnote",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          298
+        ],
+        [
+          "Line",
+          134
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          223
+        ],
+        [
+          "Line",
+          102
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          202
+        ],
+        [
+          "Line",
+          90
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Picture",
+          2
+        ],
+        [
+          "PictureGroup",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          285
+        ],
+        [
+          "Line",
+          118
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Line",
+          4213
+        ],
+        [
+          "Span",
+          4200
+        ],
+        [
+          "TableCell",
+          328
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          262
+        ],
+        [
+          "Line",
+          124
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          246
+        ],
+        [
+          "Line",
+          132
+        ],
+        [
+          "Text",
+          17
+        ],
+        [
+          "TableCell",
+          8
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Picture",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          337
+        ],
+        [
+          "Line",
+          140
+        ],
+        [
+          "ListItem",
+          27
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          470
+        ],
+        [
+          "Line",
+          166
+        ],
+        [
+          "ListItem",
+          58
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/18"
+}

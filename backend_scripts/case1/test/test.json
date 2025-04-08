@@ -1,0 +1,2940 @@
+{
+  "children": [
+    {
+      "id": "/page/0/Page/323",
+      "block_type": "Page",
+      "html": "<content-ref src='/page/0/SectionHeader/0'></content-ref><content-ref src='/page/0/Text/1'></content-ref><content-ref src='/page/0/Text/2'></content-ref><content-ref src='/page/0/Text/3'></content-ref><content-ref src='/page/0/SectionHeader/4'></content-ref><content-ref src='/page/0/Text/5'></content-ref><content-ref src='/page/0/Text/6'></content-ref><content-ref src='/page/0/SectionHeader/7'></content-ref><content-ref src='/page/0/Text/8'></content-ref><content-ref src='/page/0/Text/9'></content-ref><content-ref src='/page/0/Text/10'></content-ref><content-ref src='/page/0/SectionHeader/11'></content-ref><content-ref src='/page/0/Text/12'></content-ref><content-ref src='/page/0/SectionHeader/13'></content-ref><content-ref src='/page/0/Text/14'></content-ref><content-ref src='/page/0/Text/15'></content-ref><content-ref src='/page/0/SectionHeader/16'></content-ref><content-ref src='/page/0/Text/17'></content-ref><content-ref src='/page/0/Text/18'></content-ref>",
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          612.0,
+          0.0
+        ],
+        [
+          612.0,
+          792.0
+        ],
+        [
+          0.0,
+          792.0
+        ]
+      ],
+      "bbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "children": [
+        {
+          "id": "/page/0/SectionHeader/0",
+          "block_type": "SectionHeader",
+          "html": "<h1><b>A Demo Manuscript as a ReviewerApp Study Case</b></h1>",
+          "polygon": [
+            [
+              134.0244140625,
+              63.3251953125
+            ],
+            [
+              477.52734375,
+              63.3251953125
+            ],
+            [
+              477.52734375,
+              78.6005859375
+            ],
+            [
+              134.0244140625,
+              78.6005859375
+            ]
+          ],
+          "bbox": [
+            134.0244140625,
+            63.3251953125,
+            477.52734375,
+            78.6005859375
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/1",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\"></p>",
+          "polygon": [
+            [
+              171.52734375,
+              90.10546875
+            ],
+            [
+              215.15625,
+              90.10546875
+            ],
+            [
+              215.15625,
+              99.4833984375
+            ],
+            [
+              171.52734375,
+              99.4833984375
+            ]
+          ],
+          "bbox": [
+            171.52734375,
+            90.10546875,
+            215.15625,
+            99.4833984375
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/2",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">Han Solo Luke Skywalker Obi-Wan Kenobi</p>",
+          "polygon": [
+            [
+              173.54000854492188,
+              88.84246826171875
+            ],
+            [
+              438.45550537109375,
+              88.84246826171875
+            ],
+            [
+              438.45550537109375,
+              99.0
+            ],
+            [
+              173.54000854492188,
+              99.0
+            ]
+          ],
+          "bbox": [
+            173.54000854492188,
+            88.84246826171875,
+            438.45550537109375,
+            99.0
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/3",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\"></p>",
+          "polygon": [
+            [
+              369.94921875,
+              89.0419921875
+            ],
+            [
+              440.47265625,
+              89.0419921875
+            ],
+            [
+              440.47265625,
+              99.0966796875
+            ],
+            [
+              369.94921875,
+              99.0966796875
+            ]
+          ],
+          "bbox": [
+            369.94921875,
+            89.0419921875,
+            440.47265625,
+            99.0966796875
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/4",
+          "block_type": "SectionHeader",
+          "html": "<h1><b>A</b><b>BSTRACT</b></h1>",
+          "polygon": [
+            [
+              53.56494140625,
+              130.7109375
+            ],
+            [
+              99.28564453125,
+              130.7109375
+            ],
+            [
+              99.28564453125,
+              140.765625
+            ],
+            [
+              53.56494140625,
+              140.765625
+            ]
+          ],
+          "bbox": [
+            53.56494140625,
+            130.7109375,
+            99.28564453125,
+            140.765625
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/5",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">Geographic regression models of various descriptions are often applied to identify patterns and anomalies in the determinants of spatially distributed observations. These types of analyses focus on answering why questions about underlying spatial phenomena, e.g., why is crime higher in this locale, why do children in one school district outperform those in another, etc.? Answers to these questions require explanations of the model structure, the choice of parameters, and contextualization of the findings with respect to their geographic context. This is particularly true for local forms of regression models which are focused on the role of locational context in determining human behavior. In this paper, we present a visual analytics framework designed to support analysts in creating explanative documentation that summarizes and contextualizes their spatial analyses. As analysts create their spatial models, our framework flags potential issues with model parameter selections, utilizes template-based text generation to summarize model outputs, and links with external knowledge repositories to provide annotations that help to explain the model results. As analysts explore the model results, all visualizations and annotations can be captured in an interactive report generation widget.</p>",
+          "polygon": [
+            [
+              53.490234375,
+              146.4697265625
+            ],
+            [
+              295.541015625,
+              146.4697265625
+            ],
+            [
+              295.541015625,
+              344.8204650878906
+            ],
+            [
+              53.490234375,
+              344.8204650878906
+            ]
+          ],
+          "bbox": [
+            53.490234375,
+            146.4697265625,
+            295.541015625,
+            344.8204650878906
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/6",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">Index Terms: Spatial data analysis, geographically weighted regression, model explanation, visual analytics.</p>",
+          "polygon": [
+            [
+              53.490234375,
+              351.9041748046875
+            ],
+            [
+              294.04931640625,
+              351.9041748046875
+            ],
+            [
+              294.04931640625,
+              371.25
+            ],
+            [
+              53.490234375,
+              371.25
+            ]
+          ],
+          "bbox": [
+            53.490234375,
+            351.9041748046875,
+            294.04931640625,
+            371.25
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/4"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h4><b>1 I</b><b>NTRODUCTION</b></h4>",
+          "polygon": [
+            [
+              53.71435546875,
+              385.8877868652344
+            ],
+            [
+              129.16845703125,
+              385.8877868652344
+            ],
+            [
+              129.16845703125,
+              394.85418701171875
+            ],
+            [
+              53.71435546875,
+              394.85418701171875
+            ]
+          ],
+          "bbox": [
+            53.71435546875,
+            385.8877868652344,
+            129.16845703125,
+            394.85418701171875
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/4",
+            "4": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/8",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">Geographic models are often used to answer <i>why</i> questions regarding underlying spatial phenomena such as why do voter preferences generally exhibit strong spatial dependency. In order to answer such questions, researchers have developed sophisticated spatial modeling techniques and software, such as multiscale geographically weighted regression [21], to identify the determinants of the spatial patterns of data we observe in both the human and natural environments. However, these models generate output that needs local contextual information to be interpreted properly. Without such information, advanced spatial modeling techniques do not gain their full potential. While a variety of geovisual analytics systems [19] have been developed to explore spatial statistics with the help of interactive maps and narrative annotations, these applications tend to visualize only basic statistical results, and, to our knowledge, none of them explain spatial modeling results.</p>",
+          "polygon": [
+            [
+              53.490234375,
+              401.16656494140625
+            ],
+            [
+              295.2421875,
+              401.16656494140625
+            ],
+            [
+              295.2421875,
+              549.9140625
+            ],
+            [
+              53.490234375,
+              549.9140625
+            ]
+          ],
+          "bbox": [
+            53.490234375,
+            401.16656494140625,
+            295.2421875,
+            549.9140625
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/4",
+            "4": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/9",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\" class=\"has-continuation\">In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured</p>",
+          "polygon": [
+            [
+              53.9384765625,
+              551.9511871337891
+            ],
+            [
+              295.0927734375,
+              551.9511871337891
+            ],
+            [
+              295.0927734375,
+              670.5703125
+            ],
+            [
+              53.9384765625,
+              670.5703125
+            ]
+          ],
+          "bbox": [
+            53.9384765625,
+            551.9511871337891,
+            295.0927734375,
+            670.5703125
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/4",
+            "4": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/10",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.</p>",
+          "polygon": [
+            [
+              317.35546875,
+              131.222900390625
+            ],
+            [
+              558.00341796875,
+              131.222900390625
+            ],
+            [
+              558.00341796875,
+              150.15130615234375
+            ],
+            [
+              317.35546875,
+              150.15130615234375
+            ]
+          ],
+          "bbox": [
+            317.35546875,
+            131.222900390625,
+            558.00341796875,
+            150.15130615234375
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/4",
+            "4": "/page/0/SectionHeader/7"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/11",
+          "block_type": "SectionHeader",
+          "html": "<h1><b>2 R</b><b>ELATED</b> <b>W</b><b>ORK</b></h1>",
+          "polygon": [
+            [
+              317.953125,
+              159.2314453125
+            ],
+            [
+              398.63671875,
+              159.2314453125
+            ],
+            [
+              398.63671875,
+              168.48199462890625
+            ],
+            [
+              317.953125,
+              168.48199462890625
+            ]
+          ],
+          "bbox": [
+            317.953125,
+            159.2314453125,
+            398.63671875,
+            168.48199462890625
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/12",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">Our work focuses on facilitating spatial analysis by explaining the outputs of spatial modeling with contextual information through narrative visualization. In this section, we review related work on geographic analysis, narrative visualization, and model explainability.</p>",
+          "polygon": [
+            [
+              317.654296875,
+              172.94085693359375
+            ],
+            [
+              558.509765625,
+              172.94085693359375
+            ],
+            [
+              558.509765625,
+              221.75830078125
+            ],
+            [
+              317.654296875,
+              221.75830078125
+            ]
+          ],
+          "bbox": [
+            317.654296875,
+            172.94085693359375,
+            558.509765625,
+            221.75830078125
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/11"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/13",
+          "block_type": "SectionHeader",
+          "html": "<h1><b>2.1 Geographic Analysis</b></h1>",
+          "polygon": [
+            [
+              317.953125,
+              230.09765625
+            ],
+            [
+              428.44793701171875,
+              230.09765625
+            ],
+            [
+              428.44793701171875,
+              239.281005859375
+            ],
+            [
+              317.953125,
+              239.281005859375
+            ]
+          ],
+          "bbox": [
+            317.953125,
+            230.09765625,
+            428.44793701171875,
+            239.281005859375
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/13"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/14",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.</p>",
+          "polygon": [
+            [
+              317.953125,
+              243.7398681640625
+            ],
+            [
+              558.2109375,
+              243.7398681640625
+            ],
+            [
+              558.2109375,
+              342.370361328125
+            ],
+            [
+              317.953125,
+              342.370361328125
+            ]
+          ],
+          "bbox": [
+            317.953125,
+            243.7398681640625,
+            558.2109375,
+            342.370361328125
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/13"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/15",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">Support for a variety of spatial models is integrated into the most widely used geographic information systems (GIS). However, these systems and notebooks do not support integrated external knowledge sources to help contextualize models [6]. They also require analysts to judiciously choose the proper tools at every stage of the analytical pipeline to build a well-trained model. This process necessitates a solid foundation in geographical concepts and can be time-consuming, even for seasoned analysts. Our goal is to enhance the spatial modeling process through a deliberately designed userfriendly workflow and automatically generated explanatory narratives guided by domain experts to promote the understanding of local contextual information from models. Our work focuses on improving model explainability, enabling interactive report authoring, and supporting contextualization through narrative generation. This is important in local models such as GWR and MGWR because the main output from such models is a set of local parameter estimates from each process being modeled, and the spatial variation in these estimates needs to be explained in terms of the contextualized environment of each location by providing additional contextual information for users.</p>",
+          "polygon": [
+            [
+              317.35546875,
+              343.4439697265625
+            ],
+            [
+              558.2109375,
+              343.4439697265625
+            ],
+            [
+              558.2109375,
+              541.7005615234375
+            ],
+            [
+              317.35546875,
+              541.7005615234375
+            ]
+          ],
+          "bbox": [
+            317.35546875,
+            343.4439697265625,
+            558.2109375,
+            541.7005615234375
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/13"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/SectionHeader/16",
+          "block_type": "SectionHeader",
+          "html": "<h4><b>2.2 Narratives and Annotations</b></h4>",
+          "polygon": [
+            [
+              317.953125,
+              550.2578887939453
+            ],
+            [
+              457.20703125,
+              550.2578887939453
+            ],
+            [
+              457.20703125,
+              559.2242889404297
+            ],
+            [
+              317.953125,
+              559.2242889404297
+            ]
+          ],
+          "bbox": [
+            317.953125,
+            550.2578887939453,
+            457.20703125,
+            559.2242889404297
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/13",
+            "4": "/page/0/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/17",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].</p>",
+          "polygon": [
+            [
+              317.953125,
+              563.6831512451172
+            ],
+            [
+              558.2109375,
+              563.6831512451172
+            ],
+            [
+              558.2109375,
+              682.2385482788086
+            ],
+            [
+              317.953125,
+              682.2385482788086
+            ]
+          ],
+          "bbox": [
+            317.953125,
+            563.6831512451172,
+            558.2109375,
+            682.2385482788086
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/13",
+            "4": "/page/0/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/0/Text/18",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">Many of these systems utilize annotations to enhance the visual narratives, and Kosara and Mackinlay [7] emphasize the importance of annotations for facilitating storytelling in visualization. Recent annotation work [15] has focused on the semi-automatic creation</p>",
+          "polygon": [
+            [
+              317.654296875,
+              682.9453125
+            ],
+            [
+              558.509765625,
+              682.9453125
+            ],
+            [
+              558.509765625,
+              722.1665420532227
+            ],
+            [
+              317.654296875,
+              722.1665420532227
+            ]
+          ],
+          "bbox": [
+            317.654296875,
+            682.9453125,
+            558.509765625,
+            722.1665420532227
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/13",
+            "4": "/page/0/SectionHeader/16"
+          },
+          "images": {}
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/0/SectionHeader/13",
+        "4": "/page/0/SectionHeader/16"
+      },
+      "images": null
+    },
+    {
+      "id": "/page/1/Page/694",
+      "block_type": "Page",
+      "html": "<content-ref src='/page/1/FigureGroup/672'></content-ref><content-ref src='/page/1/Text/2'></content-ref><content-ref src='/page/1/SectionHeader/3'></content-ref><content-ref src='/page/1/Text/4'></content-ref><content-ref src='/page/1/Text/5'></content-ref><content-ref src='/page/1/SectionHeader/6'></content-ref><content-ref src='/page/1/Text/7'></content-ref><content-ref src='/page/1/TextInlineMath/8'></content-ref><content-ref src='/page/1/TableGroup/673'></content-ref><content-ref src='/page/1/TextInlineMath/11'></content-ref><content-ref src='/page/1/SectionHeader/12'></content-ref><content-ref src='/page/1/ListGroup/674'></content-ref>",
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          612.0,
+          0.0
+        ],
+        [
+          612.0,
+          792.0
+        ],
+        [
+          0.0,
+          792.0
+        ]
+      ],
+      "bbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "children": [
+        {
+          "id": "/page/1/FigureGroup/672",
+          "block_type": "FigureGroup",
+          "html": "<content-ref src='/page/1/Figure/0'></content-ref><content-ref src='/page/1/Caption/1'></content-ref>",
+          "polygon": [
+            [
+              52.892578125,
+              50.080078125
+            ],
+            [
+              293.748046875,
+              50.080078125
+            ],
+            [
+              293.748046875,
+              190.13824462890625
+            ],
+            [
+              52.892578125,
+              190.13824462890625
+            ]
+          ],
+          "bbox": [
+            52.892578125,
+            50.080078125,
+            293.748046875,
+            190.13824462890625
+          ],
+          "children": [
+            {
+              "id": "/page/1/Figure/0",
+              "block_type": "Figure",
+              "html": "",
+              "polygon": [
+                [
+                  52.892578125,
+                  50.080078125
+                ],
+                [
+                  293.748046875,
+                  50.080078125
+                ],
+                [
+                  293.748046875,
+                  170.54296875
+                ],
+                [
+                  52.892578125,
+                  170.54296875
+                ]
+              ],
+              "bbox": [
+                52.892578125,
+                50.080078125,
+                293.748046875,
+                170.54296875
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/0/SectionHeader/13",
+                "4": "/page/0/SectionHeader/16"
+              },
+              "images": {
+                "/page/1/Figure/0": "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"
+              }
+            },
+            {
+              "id": "/page/1/Caption/1",
+              "block_type": "Caption",
+              "html": "<p>Figure 1: A visualization of the 1990–2016 publication data.</p>",
+              "polygon": [
+                [
+                  68.20751953125,
+                  182.14453125
+                ],
+                [
+                  278.7632141113281,
+                  182.14453125
+                ],
+                [
+                  278.7632141113281,
+                  190.13824462890625
+                ],
+                [
+                  68.20751953125,
+                  190.13824462890625
+                ]
+              ],
+              "bbox": [
+                68.20751953125,
+                182.14453125,
+                278.7632141113281,
+                190.13824462890625
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/0/SectionHeader/13",
+                "4": "/page/0/SectionHeader/16"
+              },
+              "images": {}
+            }
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/13",
+            "4": "/page/0/SectionHeader/16"
+          },
+          "images": null
+        },
+        {
+          "id": "/page/1/Text/2",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">of presentation-like storytelling visualizations and explored mechanisms for automatically generating annotations by integrating deeplearning feature extraction techniques with a natural language generation process [9]. Annotations in such systems are used to describe salient patterns and facilitate storytelling [23].</p>",
+          "polygon": [
+            [
+              53.6396484375,
+              214.29290771484375
+            ],
+            [
+              294.0484619140625,
+              214.29290771484375
+            ],
+            [
+              294.0484619140625,
+              263.1103515625
+            ],
+            [
+              53.6396484375,
+              263.1103515625
+            ]
+          ],
+          "bbox": [
+            53.6396484375,
+            214.29290771484375,
+            294.0484619140625,
+            263.1103515625
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/13",
+            "4": "/page/0/SectionHeader/16"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h1><b>2.3 Model Explainability</b></h1>",
+          "polygon": [
+            [
+              53.751708984375,
+              274.12567138671875
+            ],
+            [
+              161.63267517089844,
+              274.12567138671875
+            ],
+            [
+              161.63267517089844,
+              283.46484375
+            ],
+            [
+              53.751708984375,
+              283.46484375
+            ]
+          ],
+          "bbox": [
+            53.751708984375,
+            274.12567138671875,
+            161.63267517089844,
+            283.46484375
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/1/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/4",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.</p>",
+          "polygon": [
+            [
+              53.6396484375,
+              288.43194580078125
+            ],
+            [
+              294.0484619140625,
+              288.43194580078125
+            ],
+            [
+              294.0484619140625,
+              416.9504699707031
+            ],
+            [
+              53.6396484375,
+              416.9504699707031
+            ]
+          ],
+          "bbox": [
+            53.6396484375,
+            288.43194580078125,
+            294.0484619140625,
+            416.9504699707031
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/1/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/5",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and ¨ Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.</p>",
+          "polygon": [
+            [
+              53.86376953125,
+              418.5110778808594
+            ],
+            [
+              294.0497741699219,
+              418.5110778808594
+            ],
+            [
+              294.0497741699219,
+              606.8055877685547
+            ],
+            [
+              53.86376953125,
+              606.8055877685547
+            ]
+          ],
+          "bbox": [
+            53.86376953125,
+            418.5110778808594,
+            294.0497741699219,
+            606.8055877685547
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/1/SectionHeader/3"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/6",
+          "block_type": "SectionHeader",
+          "html": "<h3><b>3 S</b><b>TATISTICAL</b> <b>E</b><b>VALUATION</b></h3>",
+          "polygon": [
+            [
+              53.602294921875,
+              618.6279144287109
+            ],
+            [
+              173.1708984375,
+              618.6279144287109
+            ],
+            [
+              173.1708984375,
+              627.64453125
+            ],
+            [
+              53.602294921875,
+              627.64453125
+            ]
+          ],
+          "bbox": [
+            53.602294921875,
+            618.6279144287109,
+            173.1708984375,
+            627.64453125
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/1/SectionHeader/3",
+            "3": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/Text/7",
+          "block_type": "Text",
+          "html": "<p block-type=\"Text\">A summary of the ratings on each evaluative dimension across conditions is shown in Figure 1. The scores indicated that though drafts from the tool condition have passing quality, they still fall short from excellence.</p>",
+          "polygon": [
+            [
+              53.71435546875,
+              632.9341888427734
+            ],
+            [
+              294.0484619140625,
+              632.9341888427734
+            ],
+            [
+              294.0484619140625,
+              671.7885818481445
+            ],
+            [
+              53.71435546875,
+              671.7885818481445
+            ]
+          ],
+          "bbox": [
+            53.71435546875,
+            632.9341888427734,
+            294.0484619140625,
+            671.7885818481445
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/1/SectionHeader/3",
+            "3": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/TextInlineMath/8",
+          "block_type": "TextInlineMath",
+          "html": "<p block-type=\"TextInlineMath\">In particular, a repeated measures ANOVA was conducted to investigate the influence of three conditions on the six measures. Our findings revealed a significant main effect on the score of Factor 1 (<i>F</i>(2,46) = 4, <i>p</i> &lt; .01). Here is some text with statistical tests <i>t</i>(123) = .45, <i>p</i> = 0.65. Sometimes, the reported statistics</p>",
+          "polygon": [
+            [
+              53.56494140625,
+              673.3501815795898
+            ],
+            [
+              294.04974365234375,
+              673.3501815795898
+            ],
+            [
+              294.04974365234375,
+              723.1640625
+            ],
+            [
+              53.56494140625,
+              723.1640625
+            ]
+          ],
+          "bbox": [
+            53.56494140625,
+            673.3501815795898,
+            294.04974365234375,
+            723.1640625
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/1/SectionHeader/3",
+            "3": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/TableGroup/673",
+          "block_type": "TableGroup",
+          "html": "<content-ref src='/page/1/Table/9'></content-ref><content-ref src='/page/1/Caption/10'></content-ref>",
+          "polygon": [
+            [
+              365.16796875,
+              52.59375
+            ],
+            [
+              506.8125,
+              52.59375
+            ],
+            [
+              506.8125,
+              116.5242919921875
+            ],
+            [
+              365.16796875,
+              116.5242919921875
+            ]
+          ],
+          "bbox": [
+            365.16796875,
+            52.59375,
+            506.8125,
+            116.5242919921875
+          ],
+          "children": [
+            {
+              "id": "/page/1/Table/9",
+              "block_type": "Table",
+              "html": "<table><tbody><tr><th></th><th>df1</th><th>df2</th><th>Value</th><th>p-value</th></tr><tr><th>F</th><th>2</th><th>46</th><th>6.36</th><th>< 0.01</th></tr><tr><th>t</th><th></th><th>123</th><th>0.45</th><th>0.65</th></tr><tr><th>F</th><th>0.47</th><th>1.73</th><th>0.9</th><th>0.756</th></tr></tbody></table>",
+              "polygon": [
+                [
+                  365.16796875,
+                  52.59375
+                ],
+                [
+                  506.8125,
+                  52.59375
+                ],
+                [
+                  506.8125,
+                  99.4833984375
+                ],
+                [
+                  365.16796875,
+                  99.4833984375
+                ]
+              ],
+              "bbox": [
+                365.16796875,
+                52.59375,
+                506.8125,
+                99.4833984375
+              ],
+              "children": [
+                {
+                  "id": "/page/1/TableCell/675",
+                  "block_type": "TableCell",
+                  "html": "<th></th>",
+                  "polygon": [
+                    [
+                      365.16796875,
+                      52.650970458984375
+                    ],
+                    [
+                      381.8658142089844,
+                      52.650970458984375
+                    ],
+                    [
+                      381.8658142089844,
+                      66.13211059570312
+                    ],
+                    [
+                      365.16796875,
+                      66.13211059570312
+                    ]
+                  ],
+                  "bbox": [
+                    365.16796875,
+                    52.650970458984375,
+                    381.8658142089844,
+                    66.13211059570312
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/676",
+                  "block_type": "TableCell",
+                  "html": "<th>df1</th>",
+                  "polygon": [
+                    [
+                      381.6927795410156,
+                      52.66241455078125
+                    ],
+                    [
+                      409.5859680175781,
+                      52.66241455078125
+                    ],
+                    [
+                      409.5859680175781,
+                      66.13211059570312
+                    ],
+                    [
+                      381.6927795410156,
+                      66.13211059570312
+                    ]
+                  ],
+                  "bbox": [
+                    381.6927795410156,
+                    52.66241455078125,
+                    409.5859680175781,
+                    66.13211059570312
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/677",
+                  "block_type": "TableCell",
+                  "html": "<th>df2</th>",
+                  "polygon": [
+                    [
+                      409.54270935058594,
+                      52.66241455078125
+                    ],
+                    [
+                      437.48780822753906,
+                      52.66241455078125
+                    ],
+                    [
+                      437.48780822753906,
+                      66.13211059570312
+                    ],
+                    [
+                      409.54270935058594,
+                      66.13211059570312
+                    ]
+                  ],
+                  "bbox": [
+                    409.54270935058594,
+                    52.66241455078125,
+                    437.48780822753906,
+                    66.13211059570312
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/678",
+                  "block_type": "TableCell",
+                  "html": "<th>Value</th>",
+                  "polygon": [
+                    [
+                      437.3061218261719,
+                      52.673858642578125
+                    ],
+                    [
+                      469.8020324707031,
+                      52.673858642578125
+                    ],
+                    [
+                      469.8020324707031,
+                      66.13211059570312
+                    ],
+                    [
+                      437.3061218261719,
+                      66.13211059570312
+                    ]
+                  ],
+                  "bbox": [
+                    437.3061218261719,
+                    52.673858642578125,
+                    469.8020324707031,
+                    66.13211059570312
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/679",
+                  "block_type": "TableCell",
+                  "html": "<th>p-value</th>",
+                  "polygon": [
+                    [
+                      469.680908203125,
+                      52.66241455078125
+                    ],
+                    [
+                      506.74493408203125,
+                      52.66241455078125
+                    ],
+                    [
+                      506.74493408203125,
+                      66.13211059570312
+                    ],
+                    [
+                      469.680908203125,
+                      66.13211059570312
+                    ]
+                  ],
+                  "bbox": [
+                    469.680908203125,
+                    52.66241455078125,
+                    506.74493408203125,
+                    66.13211059570312
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/680",
+                  "block_type": "TableCell",
+                  "html": "<th>F</th>",
+                  "polygon": [
+                    [
+                      365.16796875,
+                      66.08633422851562
+                    ],
+                    [
+                      381.8658142089844,
+                      66.08633422851562
+                    ],
+                    [
+                      381.8658142089844,
+                      78.51461791992188
+                    ],
+                    [
+                      365.16796875,
+                      78.51461791992188
+                    ]
+                  ],
+                  "bbox": [
+                    365.16796875,
+                    66.08633422851562,
+                    381.8658142089844,
+                    78.51461791992188
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/681",
+                  "block_type": "TableCell",
+                  "html": "<th>2</th>",
+                  "polygon": [
+                    [
+                      381.6927795410156,
+                      66.08633422851562
+                    ],
+                    [
+                      409.5859680175781,
+                      66.08633422851562
+                    ],
+                    [
+                      409.5859680175781,
+                      78.51461791992188
+                    ],
+                    [
+                      381.6927795410156,
+                      78.51461791992188
+                    ]
+                  ],
+                  "bbox": [
+                    381.6927795410156,
+                    66.08633422851562,
+                    409.5859680175781,
+                    78.51461791992188
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/682",
+                  "block_type": "TableCell",
+                  "html": "<th>46</th>",
+                  "polygon": [
+                    [
+                      409.54270935058594,
+                      66.08633422851562
+                    ],
+                    [
+                      437.48780822753906,
+                      66.08633422851562
+                    ],
+                    [
+                      437.48780822753906,
+                      78.51461791992188
+                    ],
+                    [
+                      409.54270935058594,
+                      78.51461791992188
+                    ]
+                  ],
+                  "bbox": [
+                    409.54270935058594,
+                    66.08633422851562,
+                    437.48780822753906,
+                    78.51461791992188
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/683",
+                  "block_type": "TableCell",
+                  "html": "<th>6.36</th>",
+                  "polygon": [
+                    [
+                      437.3061218261719,
+                      66.08633422851562
+                    ],
+                    [
+                      469.8020324707031,
+                      66.08633422851562
+                    ],
+                    [
+                      469.8020324707031,
+                      78.51461791992188
+                    ],
+                    [
+                      437.3061218261719,
+                      78.51461791992188
+                    ]
+                  ],
+                  "bbox": [
+                    437.3061218261719,
+                    66.08633422851562,
+                    469.8020324707031,
+                    78.51461791992188
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/684",
+                  "block_type": "TableCell",
+                  "html": "<th>&lt; 0.01</th>",
+                  "polygon": [
+                    [
+                      469.680908203125,
+                      66.08633422851562
+                    ],
+                    [
+                      506.779541015625,
+                      66.08633422851562
+                    ],
+                    [
+                      506.779541015625,
+                      78.51461791992188
+                    ],
+                    [
+                      469.680908203125,
+                      78.51461791992188
+                    ]
+                  ],
+                  "bbox": [
+                    469.680908203125,
+                    66.08633422851562,
+                    506.779541015625,
+                    78.51461791992188
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/685",
+                  "block_type": "TableCell",
+                  "html": "<th>t</th>",
+                  "polygon": [
+                    [
+                      365.16796875,
+                      78.50889587402344
+                    ],
+                    [
+                      381.8658142089844,
+                      78.50889587402344
+                    ],
+                    [
+                      381.8658142089844,
+                      88.15626525878906
+                    ],
+                    [
+                      365.16796875,
+                      88.15626525878906
+                    ]
+                  ],
+                  "bbox": [
+                    365.16796875,
+                    78.50889587402344,
+                    381.8658142089844,
+                    88.15626525878906
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/686",
+                  "block_type": "TableCell",
+                  "html": "<th></th>",
+                  "polygon": [
+                    [
+                      381.6927795410156,
+                      78.50889587402344
+                    ],
+                    [
+                      409.5859680175781,
+                      78.50889587402344
+                    ],
+                    [
+                      409.5859680175781,
+                      88.15626525878906
+                    ],
+                    [
+                      381.6927795410156,
+                      88.15626525878906
+                    ]
+                  ],
+                  "bbox": [
+                    381.6927795410156,
+                    78.50889587402344,
+                    409.5859680175781,
+                    88.15626525878906
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/687",
+                  "block_type": "TableCell",
+                  "html": "<th>123</th>",
+                  "polygon": [
+                    [
+                      409.54270935058594,
+                      78.50889587402344
+                    ],
+                    [
+                      437.48780822753906,
+                      78.50889587402344
+                    ],
+                    [
+                      437.48780822753906,
+                      88.15626525878906
+                    ],
+                    [
+                      409.54270935058594,
+                      88.15626525878906
+                    ]
+                  ],
+                  "bbox": [
+                    409.54270935058594,
+                    78.50889587402344,
+                    437.48780822753906,
+                    88.15626525878906
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/688",
+                  "block_type": "TableCell",
+                  "html": "<th>0.45</th>",
+                  "polygon": [
+                    [
+                      437.3061218261719,
+                      78.50889587402344
+                    ],
+                    [
+                      469.8020324707031,
+                      78.50889587402344
+                    ],
+                    [
+                      469.8020324707031,
+                      88.15626525878906
+                    ],
+                    [
+                      437.3061218261719,
+                      88.15626525878906
+                    ]
+                  ],
+                  "bbox": [
+                    437.3061218261719,
+                    78.50889587402344,
+                    469.8020324707031,
+                    88.15626525878906
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/689",
+                  "block_type": "TableCell",
+                  "html": "<th>0.65</th>",
+                  "polygon": [
+                    [
+                      469.680908203125,
+                      78.50889587402344
+                    ],
+                    [
+                      506.779541015625,
+                      78.50889587402344
+                    ],
+                    [
+                      506.779541015625,
+                      88.15626525878906
+                    ],
+                    [
+                      469.680908203125,
+                      88.15626525878906
+                    ]
+                  ],
+                  "bbox": [
+                    469.680908203125,
+                    78.50889587402344,
+                    506.779541015625,
+                    88.15626525878906
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/690",
+                  "block_type": "TableCell",
+                  "html": "<th>F</th>",
+                  "polygon": [
+                    [
+                      365.16796875,
+                      88.00463104248047
+                    ],
+                    [
+                      381.8658142089844,
+                      87.91307830810547
+                    ],
+                    [
+                      381.8658142089844,
+                      99.16834259033203
+                    ],
+                    [
+                      365.16796875,
+                      99.18264770507812
+                    ]
+                  ],
+                  "bbox": [
+                    365.16796875,
+                    87.91307830810547,
+                    381.8658142089844,
+                    99.18264770507812
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/691",
+                  "block_type": "TableCell",
+                  "html": "<th>0.47</th>",
+                  "polygon": [
+                    [
+                      381.6927795410156,
+                      88.00463104248047
+                    ],
+                    [
+                      409.5859680175781,
+                      87.91307830810547
+                    ],
+                    [
+                      409.5859680175781,
+                      99.1483154296875
+                    ],
+                    [
+                      381.6927795410156,
+                      99.1483154296875
+                    ]
+                  ],
+                  "bbox": [
+                    381.6927795410156,
+                    87.91307830810547,
+                    409.5859680175781,
+                    99.1483154296875
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/692",
+                  "block_type": "TableCell",
+                  "html": "<th>1.73</th>",
+                  "polygon": [
+                    [
+                      409.54270935058594,
+                      88.00463104248047
+                    ],
+                    [
+                      437.48780822753906,
+                      87.91307830810547
+                    ],
+                    [
+                      437.48780822753906,
+                      99.1483154296875
+                    ],
+                    [
+                      409.54270935058594,
+                      99.1483154296875
+                    ]
+                  ],
+                  "bbox": [
+                    409.54270935058594,
+                    87.91307830810547,
+                    437.48780822753906,
+                    99.1483154296875
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/693",
+                  "block_type": "TableCell",
+                  "html": "<th>0.9</th>",
+                  "polygon": [
+                    [
+                      437.3061218261719,
+                      88.00463104248047
+                    ],
+                    [
+                      469.8020324707031,
+                      87.91307830810547
+                    ],
+                    [
+                      469.8020324707031,
+                      99.15975952148438
+                    ],
+                    [
+                      437.3061218261719,
+                      99.15975952148438
+                    ]
+                  ],
+                  "bbox": [
+                    437.3061218261719,
+                    87.91307830810547,
+                    469.8020324707031,
+                    99.15975952148438
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                },
+                {
+                  "id": "/page/1/TableCell/694",
+                  "block_type": "TableCell",
+                  "html": "<th>0.756</th>",
+                  "polygon": [
+                    [
+                      469.680908203125,
+                      88.00463104248047
+                    ],
+                    [
+                      506.74493408203125,
+                      87.91307830810547
+                    ],
+                    [
+                      506.74493408203125,
+                      99.1483154296875
+                    ],
+                    [
+                      469.680908203125,
+                      99.1483154296875
+                    ]
+                  ],
+                  "bbox": [
+                    469.680908203125,
+                    87.91307830810547,
+                    506.74493408203125,
+                    99.1483154296875
+                  ],
+                  "children": null,
+                  "section_hierarchy": {
+                    "1": "/page/1/SectionHeader/3",
+                    "3": "/page/1/SectionHeader/6"
+                  },
+                  "images": {}
+                }
+              ],
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "3": "/page/1/SectionHeader/6"
+              },
+              "images": null
+            },
+            {
+              "id": "/page/1/Caption/10",
+              "block_type": "Caption",
+              "html": "<p>Table 1: Statistical testing results.</p>",
+              "polygon": [
+                [
+                  378.31640625,
+                  108.1845703125
+                ],
+                [
+                  496.9813232421875,
+                  108.1845703125
+                ],
+                [
+                  496.9813232421875,
+                  116.5242919921875
+                ],
+                [
+                  378.31640625,
+                  116.5242919921875
+                ]
+              ],
+              "bbox": [
+                378.31640625,
+                108.1845703125,
+                496.9813232421875,
+                116.5242919921875
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "3": "/page/1/SectionHeader/6"
+              },
+              "images": {}
+            }
+          ],
+          "section_hierarchy": {
+            "1": "/page/1/SectionHeader/3",
+            "3": "/page/1/SectionHeader/6"
+          },
+          "images": null
+        },
+        {
+          "id": "/page/1/TextInlineMath/11",
+          "block_type": "TextInlineMath",
+          "html": "<p block-type=\"TextInlineMath\">are so internally inconsistent that they can lead to a decision error <i>F</i>(0.47,1.73) = 0.9, <i>p</i> = 0.756.</p>",
+          "polygon": [
+            [
+              316.16015625,
+              148.83099365234375
+            ],
+            [
+              558.0035400390625,
+              148.83099365234375
+            ],
+            [
+              558.0035400390625,
+              167.76043701171875
+            ],
+            [
+              316.16015625,
+              167.76043701171875
+            ]
+          ],
+          "bbox": [
+            316.16015625,
+            148.83099365234375,
+            558.0035400390625,
+            167.76043701171875
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/1/SectionHeader/3",
+            "3": "/page/1/SectionHeader/6"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/SectionHeader/12",
+          "block_type": "SectionHeader",
+          "html": "<h2><b>R</b><b>EFERENCES</b></h2>",
+          "polygon": [
+            [
+              318.1790466308594,
+              187.4619140625
+            ],
+            [
+              373.833984375,
+              187.4619140625
+            ],
+            [
+              373.833984375,
+              196.55511474609375
+            ],
+            [
+              318.1790466308594,
+              196.55511474609375
+            ]
+          ],
+          "bbox": [
+            318.1790466308594,
+            187.4619140625,
+            373.833984375,
+            196.55511474609375
+          ],
+          "children": null,
+          "section_hierarchy": {
+            "1": "/page/1/SectionHeader/3",
+            "2": "/page/1/SectionHeader/12"
+          },
+          "images": {}
+        },
+        {
+          "id": "/page/1/ListGroup/674",
+          "block_type": "ListGroup",
+          "html": "<p block-type='ListGroup' class='has-continuation'><ul><content-ref src='/page/1/ListItem/13'></content-ref><content-ref src='/page/1/ListItem/14'></content-ref><content-ref src='/page/1/ListItem/15'></content-ref><content-ref src='/page/1/ListItem/16'></content-ref><content-ref src='/page/1/ListItem/17'></content-ref><content-ref src='/page/1/ListItem/18'></content-ref><content-ref src='/page/1/ListItem/19'></content-ref><content-ref src='/page/1/ListItem/20'></content-ref><content-ref src='/page/1/ListItem/21'></content-ref><content-ref src='/page/1/ListItem/22'></content-ref><content-ref src='/page/1/ListItem/23'></content-ref><content-ref src='/page/1/ListItem/24'></content-ref><content-ref src='/page/1/ListItem/25'></content-ref><content-ref src='/page/1/ListItem/26'></content-ref><content-ref src='/page/1/ListItem/27'></content-ref></ul></p>",
+          "polygon": [
+            [
+              316.16015625,
+              202.87261962890625
+            ],
+            [
+              558.2109375,
+              202.87261962890625
+            ],
+            [
+              558.2109375,
+              721.9255676269531
+            ],
+            [
+              316.16015625,
+              721.9255676269531
+            ]
+          ],
+          "bbox": [
+            316.16015625,
+            202.87261962890625,
+            558.2109375,
+            721.9255676269531
+          ],
+          "children": [
+            {
+              "id": "/page/1/ListItem/13",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[1] C. Brunsdon, A. S. Fotheringham, and M. E. Charlton. Geographically weighted regression: A method for exploring spatial nonstationarity. <i>Geographical Analysis</i>, 28(4):281–298, 1996. doi: 10.1111/j. 1538-4632.1996.tb00936.x 1</li>",
+              "polygon": [
+                [
+                  321.837890625,
+                  202.87261962890625
+                ],
+                [
+                  558.0011596679688,
+                  202.87261962890625
+                ],
+                [
+                  558.0011596679688,
+                  239.2357177734375
+                ],
+                [
+                  321.837890625,
+                  239.2357177734375
+                ]
+              ],
+              "bbox": [
+                321.837890625,
+                202.87261962890625,
+                558.0011596679688,
+                239.2357177734375
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/14",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[2] A. S. Fotheringham, W. Yang, and W. Kang. Multiscale geographically weighted regression (MGWR). <i>Annals of the American As</i><i>sociation of Geographers</i>, 107(6):1247–1265, 2017. doi: 10.1080/ 24694452.2017.1352480 1</li>",
+              "polygon": [
+                [
+                  320.34375,
+                  240.73065185546875
+                ],
+                [
+                  558.00341796875,
+                  240.73065185546875
+                ],
+                [
+                  558.00341796875,
+                  277.09375
+                ],
+                [
+                  320.34375,
+                  277.09375
+                ]
+              ],
+              "bbox": [
+                320.34375,
+                240.73065185546875,
+                558.00341796875,
+                277.09375
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/15",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[3] T. Gao, J. Hullman, E. Adar, B. Hecht, and N. Diakopoulos. NewsViews: An automated pipeline for creating custom geovisualizations for news. <i>Proceedings of the ACM Conference on Human</i> <i>Factors in Computing Systems</i>, pp. 3005–3014, 2014. doi: 10.1145/ 2556288.2557228 1</li>",
+              "polygon": [
+                [
+                  321.837890625,
+                  278.588623046875
+                ],
+                [
+                  558.0036010742188,
+                  278.588623046875
+                ],
+                [
+                  558.0036010742188,
+                  324.4167175292969
+                ],
+                [
+                  321.837890625,
+                  324.4167175292969
+                ]
+              ],
+              "bbox": [
+                321.837890625,
+                278.588623046875,
+                558.0036010742188,
+                324.4167175292969
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/16",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[4] S. Goodwin, J. Dykes, A. Slingsby, and C. Turkay. Visualizing multiple variables across scale and geography. <i>IEEE Transactions on Vi</i><i>sualization and Computer Graphics</i>, 22:599–608, 1 2016. doi: 10. 1109/TVCG.2015.2467199 2</li>",
+              "polygon": [
+                [
+                  321.5390625,
+                  325.9106140136719
+                ],
+                [
+                  558.002197265625,
+                  325.9106140136719
+                ],
+                [
+                  558.002197265625,
+                  362.2746887207031
+                ],
+                [
+                  321.5390625,
+                  362.2746887207031
+                ]
+              ],
+              "bbox": [
+                321.5390625,
+                325.9106140136719,
+                558.002197265625,
+                362.2746887207031
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/17",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[5] J. Hullman and N. Diakopoulos. Visualization rhetoric: Framing effects in narrative visualization. <i>IEEE Transactions on Visualiza</i><i>tion and Computer Graphics</i>, 17(12):2231–2240, 2011. doi: 10.1109/ TVCG.2011.255 1</li>",
+              "polygon": [
+                [
+                  321.240234375,
+                  363.7685852050781
+                ],
+                [
+                  558.0029296875,
+                  363.7685852050781
+                ],
+                [
+                  558.0029296875,
+                  400.1326599121094
+                ],
+                [
+                  321.240234375,
+                  400.1326599121094
+                ]
+              ],
+              "bbox": [
+                321.240234375,
+                363.7685852050781,
+                558.0029296875,
+                400.1326599121094
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/18",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[6] J. Hutt. Artificial reference paper 4. <i>Fake Journal 2</i>, 10(2):1–4, 2025. doi: 10.1080/13658816.2020.1720692 1</li>",
+              "polygon": [
+                [
+                  320.34375,
+                  401.4874572753906
+                ],
+                [
+                  558.003173828125,
+                  401.4874572753906
+                ],
+                [
+                  558.003173828125,
+                  419.0616455078125
+                ],
+                [
+                  320.34375,
+                  419.0616455078125
+                ]
+              ],
+              "bbox": [
+                320.34375,
+                401.4874572753906,
+                558.003173828125,
+                419.0616455078125
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/19",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[7] R. Kosara and J. Mackinlay. Storytelling: The next step for visualization. <i>Computer</i>, 46(5):44–50, 2013. doi: 10.1109/MC.2013.36 1</li>",
+              "polygon": [
+                [
+                  320.94140625,
+                  420.5555419921875
+                ],
+                [
+                  557.9984130859375,
+                  420.5555419921875
+                ],
+                [
+                  557.9984130859375,
+                  437.9906311035156
+                ],
+                [
+                  320.94140625,
+                  437.9906311035156
+                ]
+              ],
+              "bbox": [
+                320.94140625,
+                420.5555419921875,
+                557.9984130859375,
+                437.9906311035156
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/20",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[8] J. Krause, A. Perer, and K. Ng. Interacting with predictions: Visual inspection of black-box machine learning models. In <i>Proceedings of</i> <i>the ACM Conference on Human Factors in Computing Systems</i>, pp. 5686–5697, 2016. doi: 10.1145/2858036.2858529 2</li>",
+              "polygon": [
+                [
+                  321.240234375,
+                  439.4845275878906
+                ],
+                [
+                  558.0029907226562,
+                  439.4845275878906
+                ],
+                [
+                  558.0029907226562,
+                  475.8486022949219
+                ],
+                [
+                  321.240234375,
+                  475.8486022949219
+                ]
+              ],
+              "bbox": [
+                321.240234375,
+                439.4845275878906,
+                558.0029907226562,
+                475.8486022949219
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/21",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[9] C. Lai, Z. Lin, R. Jiang, Y. Han, C. Liu, and X. Yuan. Automatic annotation synchronizing with textual description for visualization. <i>Pro</i><i>ceedings of the ACM Conference on Human Factors in Computing</i> <i>Systems</i>, pp. 1–13, 2020. doi: 10.1145/3313831.3376443 2</li>",
+              "polygon": [
+                [
+                  320.34375,
+                  477.3424987792969
+                ],
+                [
+                  558.0005493164062,
+                  477.3424987792969
+                ],
+                [
+                  558.0005493164062,
+                  513.7065734863281
+                ],
+                [
+                  320.34375,
+                  513.7065734863281
+                ]
+              ],
+              "bbox": [
+                320.34375,
+                477.3424987792969,
+                558.0005493164062,
+                513.7065734863281
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/22",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[10] S. Latif and F. Beck. Interactive map reports summarizing bivariate geographic data. <i>Visual Informatics</i>, 3(1):27–37, 2019. doi: 10.1016/j .visinf.2019.03.004 1</li>",
+              "polygon": [
+                [
+                  316.7578125,
+                  515.2004699707031
+                ],
+                [
+                  558.0010986328125,
+                  515.2004699707031
+                ],
+                [
+                  558.0010986328125,
+                  542.0995635986328
+                ],
+                [
+                  316.7578125,
+                  542.0995635986328
+                ]
+              ],
+              "bbox": [
+                316.7578125,
+                515.2004699707031,
+                558.0010986328125,
+                542.0995635986328
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/23",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[11] S. Latif, S. Chen, and F. Beck. A deeper understanding of visualization-text interplay in geographic data-driven stories. <i>Com</i><i>puter Graphics Forum</i>, 40(3):311–322, 2021. doi: 10.1111/cgf.14309 1</li>",
+              "polygon": [
+                [
+                  317.654296875,
+                  543.5944671630859
+                ],
+                [
+                  558.0006103515625,
+                  543.5944671630859
+                ],
+                [
+                  558.0006103515625,
+                  579.9575653076172
+                ],
+                [
+                  317.654296875,
+                  579.9575653076172
+                ]
+              ],
+              "bbox": [
+                317.654296875,
+                543.5944671630859,
+                558.0006103515625,
+                579.9575653076172
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/24",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[12] Y. Lu, R. Garcia, B. Hansen, M. Gleicher, and R. Maciejewski. The state-of-the-art in predictive visual analytics. <i>Computer Graphics Fo</i><i>rum</i>, 36(3):539–562, 2017. doi: 10.1111/cgf.13210 2</li>",
+              "polygon": [
+                [
+                  316.7578125,
+                  581.4524688720703
+                ],
+                [
+                  557.9984741210938,
+                  581.4524688720703
+                ],
+                [
+                  557.9984741210938,
+                  608.3515625
+                ],
+                [
+                  316.7578125,
+                  608.3515625
+                ]
+              ],
+              "bbox": [
+                316.7578125,
+                581.4524688720703,
+                557.9984741210938,
+                608.3515625
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/25",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[13] Y. Ming, H. Qu, and E. Bertini. RuleMatrix: Visualizing and understanding classifiers with rules. <i>IEEE Transactions on Visualization</i> <i>and Computer Graphics</i>, 25(1):342–352, 2018. doi: 10.1109/TVCG. 2018.2864812 2</li>",
+              "polygon": [
+                [
+                  316.16015625,
+                  609.8454742431641
+                ],
+                [
+                  558.0001220703125,
+                  609.8454742431641
+                ],
+                [
+                  558.0001220703125,
+                  646.2095642089844
+                ],
+                [
+                  316.16015625,
+                  646.2095642089844
+                ]
+              ],
+              "bbox": [
+                316.16015625,
+                609.8454742431641,
+                558.0001220703125,
+                646.2095642089844
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/26",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[14] T. Muhlbacher and H. Piringer. A partition-based framework for build- ¨ ing and validating regression models. <i>IEEE Transactions on Visual</i><i>ization and Computer Graphics</i>, 19(12):1962–1971, 2013. doi: 10. 1109/TVCG.2013.125 2</li>",
+              "polygon": [
+                [
+                  316.458984375,
+                  647.6644744873047
+                ],
+                [
+                  558.001953125,
+                  647.6644744873047
+                ],
+                [
+                  558.001953125,
+                  684.10546875
+                ],
+                [
+                  316.458984375,
+                  684.10546875
+                ]
+              ],
+              "bbox": [
+                316.458984375,
+                647.6644744873047,
+                558.001953125,
+                684.10546875
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/1/ListItem/27",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[15] D. Ren, M. Brehmer, B. Lee, T. Hollerer, and E. K. Choe. ChartAc- ¨ cent: Annotation for data-driven storytelling. In <i>IEEE Pacific Sympo</i><i>sium on Visualization</i>, pp. 230–239, 2017. doi: 10.1109/PACIFICVIS .2017.8031599 1</li>",
+              "polygon": [
+                [
+                  317.953125,
+                  685.5224609375
+                ],
+                [
+                  558.2109375,
+                  685.5224609375
+                ],
+                [
+                  558.2109375,
+                  721.9255676269531
+                ],
+                [
+                  317.953125,
+                  721.9255676269531
+                ]
+              ],
+              "bbox": [
+                317.953125,
+                685.5224609375,
+                558.2109375,
+                721.9255676269531
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            }
+          ],
+          "section_hierarchy": {
+            "1": "/page/1/SectionHeader/3",
+            "2": "/page/1/SectionHeader/12"
+          },
+          "images": null
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/1/SectionHeader/3",
+        "2": "/page/1/SectionHeader/12"
+      },
+      "images": null
+    },
+    {
+      "id": "/page/2/Page/174",
+      "block_type": "Page",
+      "html": "<content-ref src='/page/2/ListGroup/174'></content-ref>",
+      "polygon": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          612.0,
+          0.0
+        ],
+        [
+          612.0,
+          792.0
+        ],
+        [
+          0.0,
+          792.0
+        ]
+      ],
+      "bbox": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "children": [
+        {
+          "id": "/page/2/ListGroup/174",
+          "block_type": "ListGroup",
+          "html": "<p block-type='ListGroup'><ul><content-ref src='/page/2/ListItem/0'></content-ref><content-ref src='/page/2/ListItem/1'></content-ref><content-ref src='/page/2/ListItem/2'></content-ref><content-ref src='/page/2/ListItem/3'></content-ref><content-ref src='/page/2/ListItem/4'></content-ref><content-ref src='/page/2/ListItem/5'></content-ref><content-ref src='/page/2/ListItem/6'></content-ref><content-ref src='/page/2/ListItem/7'></content-ref><content-ref src='/page/2/ListItem/8'></content-ref><content-ref src='/page/2/ListItem/9'></content-ref></ul></p>",
+          "polygon": [
+            [
+              52.51904296875,
+              57.9111328125
+            ],
+            [
+              294.64453125,
+              57.9111328125
+            ],
+            [
+              294.64453125,
+              378.2167053222656
+            ],
+            [
+              52.51904296875,
+              378.2167053222656
+            ]
+          ],
+          "bbox": [
+            52.51904296875,
+            57.9111328125,
+            294.64453125,
+            378.2167053222656
+          ],
+          "children": [
+            {
+              "id": "/page/2/ListItem/0",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[16] A. Satyanarayan and J. Heer. Authoring narrative visualizations with ellipsis. <i>Computer Graphics Forum</i>, 33(3):361–370, 2014. doi: 10. 1111/cgf.12392 1</li>",
+              "polygon": [
+                [
+                  53.19140625,
+                  57.9111328125
+                ],
+                [
+                  294.64453125,
+                  57.9111328125
+                ],
+                [
+                  294.64453125,
+                  84.817626953125
+                ],
+                [
+                  53.19140625,
+                  84.817626953125
+                ]
+              ],
+              "bbox": [
+                53.19140625,
+                57.9111328125,
+                294.64453125,
+                84.817626953125
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/2/ListItem/1",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[17] M. Sedlmair, C. Heinzl, S. Bruckner, H. Piringer, and T. Moller. Vi- ¨ sual parameter space analysis: A conceptual framework. <i>IEEE Trans</i><i>actions on Visualization and Computer Graphics</i>, 20:2161–2170, 12 2014. doi: 10.1109/TVCG.2014.2346321 2</li>",
+              "polygon": [
+                [
+                  53.6396484375,
+                  85.7548828125
+                ],
+                [
+                  294.4951171875,
+                  85.7548828125
+                ],
+                [
+                  294.4951171875,
+                  122.6756591796875
+                ],
+                [
+                  53.6396484375,
+                  122.6756591796875
+                ]
+              ],
+              "bbox": [
+                53.6396484375,
+                85.7548828125,
+                294.4951171875,
+                122.6756591796875
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/2/ListItem/2",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[18] E. Segel and J. Heer. Narrative visualization: Telling stories with data. <i>IEEE Transactions on Visualization and Computer Graphics</i>, 16(6):1139–1148, 2010. doi: 10.1109/TVCG.2010.179 1</li>",
+              "polygon": [
+                [
+                  53.490234375,
+                  124.1695556640625
+                ],
+                [
+                  294.0445251464844,
+                  124.1695556640625
+                ],
+                [
+                  294.0445251464844,
+                  151.06866455078125
+                ],
+                [
+                  53.490234375,
+                  151.06866455078125
+                ]
+              ],
+              "bbox": [
+                53.490234375,
+                124.1695556640625,
+                294.0445251464844,
+                151.06866455078125
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/2/ListItem/3",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[19] L. Skywalker and O.-W. Kenobi. Artificial reference paper 2. <i>Fake</i> <i>Journal 2</i>, 10(2):1–4, 2025. doi: 10.1080/13658816.2020.1720692 1</li>",
+              "polygon": [
+                [
+                  52.96728515625,
+                  152.42449951171875
+                ],
+                [
+                  294.04473876953125,
+                  152.42449951171875
+                ],
+                [
+                  294.04473876953125,
+                  169.9976806640625
+                ],
+                [
+                  52.96728515625,
+                  169.9976806640625
+                ]
+              ],
+              "bbox": [
+                52.96728515625,
+                152.42449951171875,
+                294.04473876953125,
+                169.9976806640625
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/2/ListItem/4",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[20] D. Smeesters and J. Liu. Retracted: The effect of color (red versus blue) on assimilation versus contrast in prime-to-behavior effects. <i>Journal of Experimental Social Psychology</i>, 47(3):653–656, 2011. doi: 10.1016/j.jesp.2011.02.010 1</li>",
+              "polygon": [
+                [
+                  52.7431640625,
+                  171.49261474609375
+                ],
+                [
+                  294.04815673828125,
+                  171.49261474609375
+                ],
+                [
+                  294.04815673828125,
+                  207.855712890625
+                ],
+                [
+                  52.7431640625,
+                  207.855712890625
+                ]
+              ],
+              "bbox": [
+                52.7431640625,
+                171.49261474609375,
+                294.04815673828125,
+                207.855712890625
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/2/ListItem/5",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[21] H. Solo and O.-W. Kenobi. Artificial reference paper 1. <i>Fake Journal</i> <i>1</i>, 34(7):1378–1397, 2025. doi: 10.1080/13658816.2020.1720692 1</li>",
+              "polygon": [
+                [
+                  52.51904296875,
+                  209.2115478515625
+                ],
+                [
+                  294.046875,
+                  209.2115478515625
+                ],
+                [
+                  294.046875,
+                  226.78472900390625
+                ],
+                [
+                  52.51904296875,
+                  226.78472900390625
+                ]
+              ],
+              "bbox": [
+                52.51904296875,
+                209.2115478515625,
+                294.046875,
+                226.78472900390625
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/2/ListItem/6",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[22] H. Solo and L. Organa. Artificial reference paper 5. <i>Fake Journal 2</i>, 10(2):1–4, 2025. doi: 10.1080/13658816.2020.1720692 2</li>",
+              "polygon": [
+                [
+                  53.0419921875,
+                  228.14056396484375
+                ],
+                [
+                  294.04449462890625,
+                  228.14056396484375
+                ],
+                [
+                  294.04449462890625,
+                  245.7137451171875
+                ],
+                [
+                  53.0419921875,
+                  245.7137451171875
+                ]
+              ],
+              "bbox": [
+                53.0419921875,
+                228.14056396484375,
+                294.04449462890625,
+                245.7137451171875
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/2/ListItem/7",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[23] A. Srinivasan, S. M. Drucker, A. Endert, and J. Stasko. Augmenting visualizations with interactive data facts to facilitate interpretation and communication. <i>IEEE Transactions on Visualization and Computer</i> <i>Graphics</i>, 25(1):672–681, 2019. doi: 10.1109/TVCG.2018.2865145 2</li>",
+              "polygon": [
+                [
+                  53.11669921875,
+                  247.20867919921875
+                ],
+                [
+                  294.64453125,
+                  247.20867919921875
+                ],
+                [
+                  294.64453125,
+                  293.0367736816406
+                ],
+                [
+                  53.11669921875,
+                  293.0367736816406
+                ]
+              ],
+              "bbox": [
+                53.11669921875,
+                247.20867919921875,
+                294.64453125,
+                293.0367736816406
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/2/ListItem/8",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[24] M. Takatsuka and M. Gahegan. GeoVISTA Studio: A codeless visual programming environment for geoscientific data analysis and visualization. <i>Computers and Geosciences</i>, 28(10):1131–1144, 2002. doi: 10.1016/S0098-3004(02)00031-6 1</li>",
+              "polygon": [
+                [
+                  53.0419921875,
+                  294.29296875
+                ],
+                [
+                  294.4951171875,
+                  294.29296875
+                ],
+                [
+                  294.4951171875,
+                  330.8947448730469
+                ],
+                [
+                  53.0419921875,
+                  330.8947448730469
+                ]
+              ],
+              "bbox": [
+                53.0419921875,
+                294.29296875,
+                294.4951171875,
+                330.8947448730469
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            },
+            {
+              "id": "/page/2/ListItem/9",
+              "block_type": "ListItem",
+              "html": "<li block-type=\"ListItem\">[25] J. Talbot, B. Lee, A. Kapoor, and D. S. Tan. EnsembleMatrix: Interactive visualization to support machine learning with multiple classifiers. In <i>Proceedings of the ACM Conference on Human Factors</i> <i>in Computing Systems</i>, pp. 1283–1292, 2009. doi: 10.1145/1518701. 1518895 2</li>",
+              "polygon": [
+                [
+                  52.96728515625,
+                  332.3886413574219
+                ],
+                [
+                  294.64453125,
+                  332.3886413574219
+                ],
+                [
+                  294.64453125,
+                  378.2167053222656
+                ],
+                [
+                  52.96728515625,
+                  378.2167053222656
+                ]
+              ],
+              "bbox": [
+                52.96728515625,
+                332.3886413574219,
+                294.64453125,
+                378.2167053222656
+              ],
+              "children": null,
+              "section_hierarchy": {
+                "1": "/page/1/SectionHeader/3",
+                "2": "/page/1/SectionHeader/12"
+              },
+              "images": {}
+            }
+          ],
+          "section_hierarchy": {
+            "1": "/page/1/SectionHeader/3",
+            "2": "/page/1/SectionHeader/12"
+          },
+          "images": null
+        }
+      ],
+      "section_hierarchy": {
+        "1": "/page/1/SectionHeader/3",
+        "2": "/page/1/SectionHeader/12"
+      },
+      "images": null
+    }
+  ],
+  "block_type": "Document"
+}

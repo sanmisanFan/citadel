@@ -21,9 +21,9 @@ with entity_keys_path.open("r", encoding="utf-8") as f:
 
 # --- 2) Your new paper info --- #
 new_paper = {
-    "title": "A Demo Manuscript as a ReviewerApp Study Case",
-    "authors": ["Han Solo", "Luke Skywalker", "Obi-Wan Kenobi"],
-    "year": 2025
+    "title": None,
+    "authors": None,
+    "year": None
 }
 new_citation_id = "citation-0"
 

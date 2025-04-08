@@ -1,0 +1,1073 @@
+{
+  "table_of_contents": [
+    {
+      "title": "EnsembleMatrix: Interactive Visualization to Support \nMachine Learning with Multiple Classifiers",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          80.0859375,
+          72.0263671875
+        ],
+        [
+          535.8215942382812,
+          72.0263671875
+        ],
+        [
+          535.8215942382812,
+          113.888671875
+        ],
+        [
+          80.0859375,
+          113.888671875
+        ]
+      ]
+    },
+    {
+      "title": "ABSTRACT",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          53.26611328125,
+          184.7548828125
+        ],
+        [
+          106.00199890136719,
+          184.7548828125
+        ],
+        [
+          106.00199890136719,
+          196.3564453125
+        ],
+        [
+          53.26611328125,
+          196.3564453125
+        ]
+      ]
+    },
+    {
+      "title": "Author Keywords",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          53.677001953125,
+          419.9765625
+        ],
+        [
+          131.51158142089844,
+          419.9765625
+        ],
+        [
+          131.51158142089844,
+          431.578125
+        ],
+        [
+          53.677001953125,
+          431.578125
+        ]
+      ]
+    },
+    {
+      "title": "ACM Classification Keywords",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          53.826416015625,
+          459.421875
+        ],
+        [
+          183.6298828125,
+          459.421875
+        ],
+        [
+          183.6298828125,
+          471.0234375
+        ],
+        [
+          53.826416015625,
+          471.0234375
+        ]
+      ]
+    },
+    {
+      "title": "INTRODUCTION",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          53.9384765625,
+          498.8671875
+        ],
+        [
+          125.50680541992188,
+          498.8671875
+        ],
+        [
+          125.50680541992188,
+          510.46875
+        ],
+        [
+          53.9384765625,
+          510.46875
+        ]
+      ]
+    },
+    {
+      "title": "BACKGROUND AND RELATED WORK",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          54.0,
+          443.1796875
+        ],
+        [
+          220.49462890625,
+          443.1796875
+        ],
+        [
+          220.49462890625,
+          454.78125
+        ],
+        [
+          54.0,
+          454.78125
+        ]
+      ]
+    },
+    {
+      "title": "Applied Machine Learning",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          54.0,
+          459.80859375
+        ],
+        [
+          168.6060028076172,
+          459.80859375
+        ],
+        [
+          168.6060028076172,
+          471.41015625
+        ],
+        [
+          54.0,
+          471.41015625
+        ]
+      ]
+    },
+    {
+      "title": "Ensemble Machine Learning Models",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          316.16015625,
+          238.025390625
+        ],
+        [
+          474.38275146484375,
+          238.025390625
+        ],
+        [
+          474.38275146484375,
+          249.240234375
+        ],
+        [
+          316.16015625,
+          249.240234375
+        ]
+      ]
+    },
+    {
+      "title": "Visualization for Machine Learning",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          316.16015625,
+          535.60546875
+        ],
+        [
+          467.77587890625,
+          535.60546875
+        ],
+        [
+          467.77587890625,
+          547.20703125
+        ],
+        [
+          316.16015625,
+          547.20703125
+        ]
+      ]
+    },
+    {
+      "title": "",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          53.378173828125,
+          30.0673828125
+        ],
+        [
+          177.50390625,
+          30.0673828125
+        ],
+        [
+          177.50390625,
+          40.84716796875
+        ],
+        [
+          53.378173828125,
+          40.84716796875
+        ]
+      ]
+    },
+    {
+      "title": "ENSEMBLEMATRIX",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          316.16015625,
+          128.8740234375
+        ],
+        [
+          403.7778015136719,
+          128.8740234375
+        ],
+        [
+          403.7778015136719,
+          139.5087890625
+        ],
+        [
+          316.16015625,
+          139.5087890625
+        ]
+      ]
+    },
+    {
+      "title": "Visualizing the Confusion Matrix",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          316.79998779296875,
+          180.3076171875
+        ],
+        [
+          458.2907409667969,
+          180.3076171875
+        ],
+        [
+          458.2907409667969,
+          190.7490234375
+        ],
+        [
+          316.79998779296875,
+          190.7490234375
+        ]
+      ]
+    },
+    {
+      "title": "Interacting with EnsembleMatrix",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          53.41552734375,
+          584.71875
+        ],
+        [
+          194.60520935058594,
+          584.71875
+        ],
+        [
+          194.60520935058594,
+          594.9816131591797
+        ],
+        [
+          53.41552734375,
+          594.9816131591797
+        ]
+      ]
+    },
+    {
+      "title": "Partitioning",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          315.861328125,
+          244.79296875
+        ],
+        [
+          364.869140625,
+          244.79296875
+        ],
+        [
+          364.869140625,
+          255.62109375
+        ],
+        [
+          315.861328125,
+          255.62109375
+        ]
+      ]
+    },
+    {
+      "title": "Linear Combinations",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          316.7578125,
+          658.58203125
+        ],
+        [
+          401.78338623046875,
+          658.58203125
+        ],
+        [
+          401.78338623046875,
+          668.63671875
+        ],
+        [
+          316.7578125,
+          668.63671875
+        ]
+      ]
+    },
+    {
+      "title": "USER STUDY",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          53.56494140625,
+          523.6171875
+        ],
+        [
+          114.53309631347656,
+          523.6171875
+        ],
+        [
+          114.53309631347656,
+          535.2216186523438
+        ],
+        [
+          53.56494140625,
+          535.2216186523438
+        ]
+      ]
+    },
+    {
+      "title": "Methodology",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          316.7578125,
+          116.7890625
+        ],
+        [
+          375.29010009765625,
+          116.7890625
+        ],
+        [
+          375.29010009765625,
+          128.390625
+        ],
+        [
+          316.7578125,
+          128.390625
+        ]
+      ]
+    },
+    {
+      "title": "Ensemble Classifier Details",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          53.0419921875,
+          53.75390625
+        ],
+        [
+          174.04554748535156,
+          53.75390625
+        ],
+        [
+          174.04554748535156,
+          64.4853515625
+        ],
+        [
+          53.0419921875,
+          64.4853515625
+        ]
+      ]
+    },
+    {
+      "title": "Results: Semi-Structured Interview to Elicit Approaches",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          53.6396484375,
+          370.08984375
+        ],
+        [
+          295.54742431640625,
+          370.08984375
+        ],
+        [
+          295.54742431640625,
+          380.53125
+        ],
+        [
+          53.6396484375,
+          380.53125
+        ]
+      ]
+    },
+    {
+      "title": "Results: Using EnsembleMatrix to Build Classifiers",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          316.16015625,
+          238.21875
+        ],
+        [
+          537.7833251953125,
+          238.21875
+        ],
+        [
+          537.7833251953125,
+          248.66015625
+        ],
+        [
+          316.16015625,
+          248.66015625
+        ]
+      ]
+    },
+    {
+      "title": "Observations: Building an Ensemble Classifier",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          315.5625,
+          667.4765625
+        ],
+        [
+          503.9000244140625,
+          667.4765625
+        ],
+        [
+          503.9000244140625,
+          678.3046875
+        ],
+        [
+          315.5625,
+          678.3046875
+        ]
+      ]
+    },
+    {
+      "title": "Quality of the Ensemble Classifiers",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          316.7578125,
+          157.2978515625
+        ],
+        [
+          458.82000732421875,
+          157.2978515625
+        ],
+        [
+          458.82000732421875,
+          168.1259765625
+        ],
+        [
+          316.7578125,
+          168.1259765625
+        ]
+      ]
+    },
+    {
+      "title": "DISCUSSION",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          53.56494140625,
+          681.3984375
+        ],
+        [
+          112.48200225830078,
+          681.3984375
+        ],
+        [
+          112.48200225830078,
+          692.2265625
+        ],
+        [
+          53.56494140625,
+          692.2265625
+        ]
+      ]
+    },
+    {
+      "title": "Confusion from Reordering Classes within Matrices",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          316.7578125,
+          129.0673828125
+        ],
+        [
+          540.8477172851562,
+          129.0673828125
+        ],
+        [
+          540.8477172851562,
+          139.3154296875
+        ],
+        [
+          316.7578125,
+          139.3154296875
+        ]
+      ]
+    },
+    {
+      "title": "Why Human in the Loop rather than Automating it all?",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          316.16015625,
+          393.486328125
+        ],
+        [
+          550.3751831054688,
+          393.486328125
+        ],
+        [
+          550.3751831054688,
+          403.734375
+        ],
+        [
+          316.16015625,
+          403.734375
+        ]
+      ]
+    },
+    {
+      "title": "CONCLUSION",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          54.0,
+          382.078125
+        ],
+        [
+          116.98200988769531,
+          382.078125
+        ],
+        [
+          116.98200988769531,
+          393.6796875
+        ],
+        [
+          54.0,
+          393.6796875
+        ]
+      ]
+    },
+    {
+      "title": "ACKNOWLEDGMENTS",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          53.677001953125,
+          634.60546875
+        ],
+        [
+          154.5435028076172,
+          634.60546875
+        ],
+        [
+          154.5435028076172,
+          646.20703125
+        ],
+        [
+          53.677001953125,
+          646.20703125
+        ]
+      ]
+    },
+    {
+      "title": "REFERENCES",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          316.79998779296875,
+          53.173828125
+        ],
+        [
+          380.7900085449219,
+          53.173828125
+        ],
+        [
+          380.7900085449219,
+          64.388671875
+        ],
+        [
+          316.79998779296875,
+          64.388671875
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          178
+        ],
+        [
+          "Line",
+          98
+        ],
+        [
+          "Text",
+          14
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          210
+        ],
+        [
+          "Line",
+          110
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          117
+        ],
+        [
+          "Line",
+          64
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          154
+        ],
+        [
+          "Line",
+          88
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          177
+        ],
+        [
+          "Line",
+          97
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          198
+        ],
+        [
+          "Line",
+          110
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          135
+        ],
+        [
+          "Line",
+          75
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          199
+        ],
+        [
+          "Line",
+          112
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          237
+        ],
+        [
+          "Line",
+          105
+        ],
+        [
+          "ListItem",
+          19
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          157
+        ],
+        [
+          "Line",
+          69
+        ],
+        [
+          "ListItem",
+          21
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/25"
+}

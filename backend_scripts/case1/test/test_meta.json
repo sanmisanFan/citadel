@@ -1,0 +1,331 @@
+{
+  "table_of_contents": [
+    {
+      "title": "A Demo Manuscript as a ReviewerApp Study Case",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          134.0244140625,
+          63.3251953125
+        ],
+        [
+          477.52734375,
+          63.3251953125
+        ],
+        [
+          477.52734375,
+          78.6005859375
+        ],
+        [
+          134.0244140625,
+          78.6005859375
+        ]
+      ]
+    },
+    {
+      "title": "ABSTRACT",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          53.56494140625,
+          130.7109375
+        ],
+        [
+          99.28564453125,
+          130.7109375
+        ],
+        [
+          99.28564453125,
+          140.765625
+        ],
+        [
+          53.56494140625,
+          140.765625
+        ]
+      ]
+    },
+    {
+      "title": "1 INTRODUCTION",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          53.71435546875,
+          385.8877868652344
+        ],
+        [
+          129.16845703125,
+          385.8877868652344
+        ],
+        [
+          129.16845703125,
+          394.85418701171875
+        ],
+        [
+          53.71435546875,
+          394.85418701171875
+        ]
+      ]
+    },
+    {
+      "title": "2 RELATED WORK",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          317.953125,
+          159.2314453125
+        ],
+        [
+          398.63671875,
+          159.2314453125
+        ],
+        [
+          398.63671875,
+          168.48199462890625
+        ],
+        [
+          317.953125,
+          168.48199462890625
+        ]
+      ]
+    },
+    {
+      "title": "2.1 Geographic Analysis",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          317.953125,
+          230.09765625
+        ],
+        [
+          428.44793701171875,
+          230.09765625
+        ],
+        [
+          428.44793701171875,
+          239.281005859375
+        ],
+        [
+          317.953125,
+          239.281005859375
+        ]
+      ]
+    },
+    {
+      "title": "2.2 Narratives and Annotations",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          317.953125,
+          550.2578887939453
+        ],
+        [
+          457.20703125,
+          550.2578887939453
+        ],
+        [
+          457.20703125,
+          559.2242889404297
+        ],
+        [
+          317.953125,
+          559.2242889404297
+        ]
+      ]
+    },
+    {
+      "title": "2.3 Model Explainability",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          53.751708984375,
+          274.12567138671875
+        ],
+        [
+          161.63267517089844,
+          274.12567138671875
+        ],
+        [
+          161.63267517089844,
+          283.46484375
+        ],
+        [
+          53.751708984375,
+          283.46484375
+        ]
+      ]
+    },
+    {
+      "title": "3 STATISTICAL EVALUATION",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          53.602294921875,
+          618.6279144287109
+        ],
+        [
+          173.1708984375,
+          618.6279144287109
+        ],
+        [
+          173.1708984375,
+          627.64453125
+        ],
+        [
+          53.602294921875,
+          627.64453125
+        ]
+      ]
+    },
+    {
+      "title": "REFERENCES",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          318.1790466308594,
+          187.4619140625
+        ],
+        [
+          373.833984375,
+          187.4619140625
+        ],
+        [
+          373.833984375,
+          196.55511474609375
+        ],
+        [
+          318.1790466308594,
+          196.55511474609375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          196
+        ],
+        [
+          "Line",
+          109
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "SectionHeader",
+          6
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          466
+        ],
+        [
+          "Line",
+          178
+        ],
+        [
+          "TableCell",
+          20
+        ],
+        [
+          "ListItem",
+          15
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "TextInlineMath",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          130
+        ],
+        [
+          "Line",
+          34
+        ],
+        [
+          "ListItem",
+          10
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/test"
+}

@@ -1,627 +1,657 @@
 [
   {
-    "page": 1,
+    "page": 3,
     "ref_id": 1,
-    "text": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+    "text": "Regarding data facts, the framework analyzes the numerical and statistical elements of the chart. It identifies specific data points and calculates statistical measures such as extrema, mean, standard deviation, and median. Additionally, it recognizes outliers\u2014data points that markedly differ from the main observations. When the chart involves numerical data on the independent axis, the framework assesses correlations and trends. These facts are derived from the low-level analytical tasks that viewers typically perform while engaging with a visualization [1].",
     "text_bbox": {
-      "height": 0.12453341243242977,
-      "width": 0.39223629820580574,
-      "x": 0.5195342917847477,
-      "y": 0.30775247438989506
+      "height": 0.11195381241615372,
+      "width": 0.3922381058237911,
+      "x": 0.08823533151663986,
+      "y": 0.7611756758256392
     },
     "citations": [
       {
         "citation": "[1]",
         "bbox": {
-          "height": 0.011321212306167141,
-          "width": 0.01708316179661969,
-          "x": 0.8910244212431067,
-          "y": 0.3454898487437855
+          "height": 0.011321250838462752,
+          "width": 0.017083037133310355,
+          "x": 0.26395919899535336,
+          "y": 0.8618082374033301
         }
       }
     ]
   },
   {
-    "page": 2,
+    "page": 4,
     "ref_id": 1,
-    "text": "- [1] C. Brunsdon, A. S. Fotheringham, and M. E. Charlton. Geographically weighted regression: A method for exploring spatial nonstationarity. _Geographical Analysis_, 28(4):281\u2013298, 1996. doi: 10.1111/j. 1538-4632.1996.tb00936.x 1",
+    "text": "- [1] R. Amar, J. Eagan, and J. Stasko. Low-level components of analytic activity in information visualization. In *Proceedings of the IEEE Symposium on Information Visualization*, p. 15. IEEE Computer Society, USA, 2005. doi: 10.1109/INFOVIS.2005.24 3",
     "text_bbox": {
-      "height": 0.04591300270774148,
-      "width": 0.35805556353400736,
-      "x": 0.5493709589141647,
-      "y": 0.25615229751124524
+      "height": 0.04591423574120107,
+      "width": 0.36239100437538296,
+      "x": 0.5493708093181934,
+      "y": 0.6863570550475457
     },
     "citations": []
   },
   {
     "page": 1,
     "ref_id": 2,
-    "text": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+    "text": "The practice of providing detailed descriptions for non-textual elements on websites is gaining traction; however, the lack of precise and standardized guidelines significantly hampers consistency in these efforts [14]. The task of effectively describing visual elements in data-driven stories introduces multiple challenges. First, there is a notable learning curve associated with the skill of writing comprehensive descriptions for accessibility [15], as it requires an in-depth understanding of the critical details to be included. Second, data visualizations present complex datasets that demand advanced analytical skills [2]. Creators must interpret visual patterns with precision, ensuring that the data is neither oversimplified nor misrepresented. Third, crafting such descriptions is often laborious and time-consuming, necessitating meticulous attention to detail. Despite diligent efforts, some descriptions may not adequately convey all the necessary details of the visual elements [16]. Recently, the machine learning community has explored deep learning-based methods to aid chart-text transformation [3, 17, 9, 4]. Yet, these black box models often lack transparency, challenging users' ability to fine-tune or fully comprehend the details in the generated outputs. In response to these issues, we propose the development of a novel framework designed to aid media content creators in interpreting charts and producing detailed textual descriptions. This preliminary research is tailored specifically for individuals who develop visualizations using Datawrapper1 , a popular tool for those with basic proficiency in statistics and data analysis but without extensive programming knowledge.",
     "text_bbox": {
-      "height": 0.12453341243242977,
-      "width": 0.39223629820580574,
+      "height": 0.27548294838028725,
+      "width": 0.3922382928187551,
       "x": 0.5195342917847477,
-      "y": 0.30775247438989506
+      "y": 0.5465090202562737
     },
     "citations": [
       {
         "citation": "[2]",
         "bbox": {
-          "height": 0.011321212306167141,
+          "height": 0.011321250838462752,
           "width": 0.01708301220064849,
-          "x": 0.6357458775339563,
-          "y": 0.3706477001459912
+          "x": 0.6604911455141953,
+          "y": 0.6597212203825363
         }
       }
     ]
   },
   {
-    "page": 2,
+    "page": 4,
     "ref_id": 2,
-    "text": "- [2] A. S. Fotheringham, W. Yang, and W. Kang. Multiscale geographically weighted regression (MGWR). _Annals of the American Association of Geographers_, 107(6):1247\u20131265, 2017. doi: 10.1080/ 24694452.2017.1352480 1",
+    "text": "- [2] J. Boy, R. A. Rensink, E. Bertini, and J.-D. Fekete. A principled way of assessing visualization literacy. *IEEE Transactions on Visualization and Computer Graphics*, 20(12):1963\u20131972, 2014. doi: 10.1109/ TVCG.2014.2346984 1",
     "text_bbox": {
-      "height": 0.022012729837436868,
-      "width": 0.3580545662275327,
-      "x": 0.5493709589141647,
-      "y": 0.3039528432518545
+      "height": 0.022013962870896464,
+      "width": 0.3623912038366779,
+      "x": 0.5493708093181934,
+      "y": 0.734157600788155
     },
     "citations": []
   },
   {
     "page": 1,
     "ref_id": 3,
-    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+    "text": "The practice of providing detailed descriptions for non-textual elements on websites is gaining traction; however, the lack of precise and standardized guidelines significantly hampers consistency in these efforts [14]. The task of effectively describing visual elements in data-driven stories introduces multiple challenges. First, there is a notable learning curve associated with the skill of writing comprehensive descriptions for accessibility [15], as it requires an in-depth understanding of the critical details to be included. Second, data visualizations present complex datasets that demand advanced analytical skills [2]. Creators must interpret visual patterns with precision, ensuring that the data is neither oversimplified nor misrepresented. Third, crafting such descriptions is often laborious and time-consuming, necessitating meticulous attention to detail. Despite diligent efforts, some descriptions may not adequately convey all the necessary details of the visual elements [16]. Recently, the machine learning community has explored deep learning-based methods to aid chart-text transformation [3, 17, 9, 4]. Yet, these black box models often lack transparency, challenging users' ability to fine-tune or fully comprehend the details in the generated outputs. In response to these issues, we propose the development of a novel framework designed to aid media content creators in interpreting charts and producing detailed textual descriptions. This preliminary research is tailored specifically for individuals who develop visualizations using Datawrapper1 , a popular tool for those with basic proficiency in statistics and data analysis but without extensive programming knowledge.",
     "text_bbox": {
-      "height": 0.1496911867700442,
-      "width": 0.3922360987445108,
+      "height": 0.27548294838028725,
+      "width": 0.3922382928187551,
       "x": 0.5195342917847477,
-      "y": 0.7117211698281645
+      "y": 0.5465090202562737
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 3,
+    "text": "Significant advancements in deep learning have been made towards automating the generation of text from visualizations and structured data. Chen et al. employed ResNet and LSTM architectures to generate natural language descriptions for figures in the FigCAP dataset [3], while Cheng et al. proposed a framework with transformer-based chart detection and pre-trained vision-language model [4]. Additionally, some researchers prioritize the underlying data rather than the visual representation of charts, focusing on data-to-text generation. Notable efforts in this area include the use of transformer-based models [6, 17] and encoder-decoder LSTM frameworks for analyzing time-series data [23]. In assessing the performance of these models, metrics like BLEU score [18] are commonly applied to test datasets. Despite their computational skills, deep learning models often encounter issues with generalization and credibility. Generalization problems occur when the models underperform with unfamiliar datasets, limiting their practical use. Credibility concerns stem from the models' opaque nature, which obscures the internal mechanisms and decision-making processes. To address these natural language generation issues, some research prototypes [29, 11] have adopted template-based text generation methods, which offer more transparent approaches to creating textual descriptions from visual data.",
+    "text_bbox": {
+      "height": 0.2754829869125829,
+      "width": 0.3922360800450144,
+      "x": 0.08823526295181973,
+      "y": 0.5056743043841738
     },
     "citations": [
       {
         "citation": "[3]",
         "bbox": {
-          "height": 0.011321250838462752,
-          "width": 0.017083062065972224,
-          "x": 0.5940052605921926,
-          "y": 0.7997742469864663
+          "height": 0.011321212306167141,
+          "width": 0.017083037133310355,
+          "x": 0.1841991773617813,
+          "y": 0.5559912787543403
         }
       }
     ]
   },
   {
-    "page": 2,
+    "page": 4,
     "ref_id": 3,
-    "text": "- [3] T. Gao, J. Hullman, E. Adar, B. Hecht, and N. Diakopoulos. NewsViews: An automated pipeline for creating custom geovisualizations for news. _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 3005\u20133014, 2014. doi: 10.1145/ 2556288.2557228 1",
+    "text": "- [3] C. Chen, R. Zhang, E. Koh, S. Kim, S. Cohen, and R. Rossi. Figure captioning with relation maps for reasoning. In *Proceedings of IEEE Winter Conference on Applications of Computer Vision*, pp. 1526\u2013 1534, 2020. doi: 10.1109/WACV45572.2020.9093592 1, 2",
     "text_bbox": {
-      "height": 0.04591423574120107,
-      "width": 0.36238935881969975,
-      "x": 0.5493709589141647,
-      "y": 0.363702831846295
+      "height": 0.0459143128057923,
+      "width": 0.3623972375408497,
+      "x": 0.5493707594528697,
+      "y": 0.781958069464173
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 4,
+    "text": "The practice of providing detailed descriptions for non-textual elements on websites is gaining traction; however, the lack of precise and standardized guidelines significantly hampers consistency in these efforts [14]. The task of effectively describing visual elements in data-driven stories introduces multiple challenges. First, there is a notable learning curve associated with the skill of writing comprehensive descriptions for accessibility [15], as it requires an in-depth understanding of the critical details to be included. Second, data visualizations present complex datasets that demand advanced analytical skills [2]. Creators must interpret visual patterns with precision, ensuring that the data is neither oversimplified nor misrepresented. Third, crafting such descriptions is often laborious and time-consuming, necessitating meticulous attention to detail. Despite diligent efforts, some descriptions may not adequately convey all the necessary details of the visual elements [16]. Recently, the machine learning community has explored deep learning-based methods to aid chart-text transformation [3, 17, 9, 4]. Yet, these black box models often lack transparency, challenging users' ability to fine-tune or fully comprehend the details in the generated outputs. In response to these issues, we propose the development of a novel framework designed to aid media content creators in interpreting charts and producing detailed textual descriptions. This preliminary research is tailored specifically for individuals who develop visualizations using Datawrapper1 , a popular tool for those with basic proficiency in statistics and data analysis but without extensive programming knowledge.",
+    "text_bbox": {
+      "height": 0.27548294838028725,
+      "width": 0.3922382928187551,
+      "x": 0.5195342917847477,
+      "y": 0.5465090202562737
     },
     "citations": []
   },
   {
     "page": 2,
     "ref_id": 4,
-    "text": "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and \u00a8 Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+    "text": "Significant advancements in deep learning have been made towards automating the generation of text from visualizations and structured data. Chen et al. employed ResNet and LSTM architectures to generate natural language descriptions for figures in the FigCAP dataset [3], while Cheng et al. proposed a framework with transformer-based chart detection and pre-trained vision-language model [4]. Additionally, some researchers prioritize the underlying data rather than the visual representation of charts, focusing on data-to-text generation. Notable efforts in this area include the use of transformer-based models [6, 17] and encoder-decoder LSTM frameworks for analyzing time-series data [23]. In assessing the performance of these models, metrics like BLEU score [18] are commonly applied to test datasets. Despite their computational skills, deep learning models often encounter issues with generalization and credibility. Generalization problems occur when the models underperform with unfamiliar datasets, limiting their practical use. Credibility concerns stem from the models' opaque nature, which obscures the internal mechanisms and decision-making processes. To address these natural language generation issues, some research prototypes [29, 11] have adopted template-based text generation methods, which offer more transparent approaches to creating textual descriptions from visual data.",
     "text_bbox": {
-      "height": 0.2377456125586924,
-      "width": 0.39223599901386336,
-      "x": 0.08823529411764706,
-      "y": 0.5284230781323982
+      "height": 0.2754829869125829,
+      "width": 0.3922360800450144,
+      "x": 0.08823526295181973,
+      "y": 0.5056743043841738
     },
     "citations": [
       {
         "citation": "[4]",
         "bbox": {
           "height": 0.011321212306167141,
-          "width": 0.01708301220064849,
-          "x": 0.46338828093086193,
-          "y": 0.6038979039047704
+          "width": 0.017083037133310355,
+          "x": 0.1299905589982575,
+          "y": 0.5811491301565459
         }
       }
     ]
   },
   {
-    "page": 2,
+    "page": 4,
     "ref_id": 4,
-    "text": "- [4] S. Goodwin, J. Dykes, A. Slingsby, and C. Turkay. Visualizing multiple variables across scale and geography. _IEEE Transactions on Visualization and Computer Graphics_, 22:599\u2013608, 1 2016. doi: 10. 1109/TVCG.2015.2467199 2",
+    "text": "- [4] Z.-Q. Cheng, Q. Dai, and A. G. Hauptmann. ChartReader: A unified framework for chart derendering and comprehension without heuristic rules. In *Proceedings of the IEEE Conference on Computer Vision*, pp. 22202\u201322213, Oct 2023. 1, 2",
     "text_bbox": {
-      "height": 0.04591423574120107,
-      "width": 0.35805466595818014,
-      "x": 0.5493709589141647,
-      "y": 0.411503300522313
-    },
-    "citations": []
-  },
-  {
-    "page": 1,
-    "ref_id": 5,
-    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
-    "text_bbox": {
-      "height": 0.1496911867700442,
-      "width": 0.3922360987445108,
-      "x": 0.5195342917847477,
-      "y": 0.7117211698281645
+      "height": 0.05786371712732797,
+      "width": 0.3623923507391238,
+      "x": 0.5493707594528697,
+      "y": 0.8178091338186553
     },
     "citations": []
   },
   {
     "page": 2,
     "ref_id": 5,
-    "text": "- [5] J. Hullman and N. Diakopoulos. Visualization rhetoric: Framing effects in narrative visualization. _IEEE Transactions on Visualization and Computer Graphics_, 17(12):2231\u20132240, 2011. doi: 10.1109/ TVCG.2011.255 1",
+    "text": "- C4. Users may be resistant to fully trusting auto-generated outputs. The transformation of format, i.e. chart to text, can make it difficult for users to discern how accurately the resulting text represents the original visual content [5].",
     "text_bbox": {
-      "height": 0.02201400140319208,
-      "width": 0.36239155289394404,
-      "x": 0.5493709589141647,
-      "y": 0.459303769198331
-    },
-    "citations": []
-  },
-  {
-    "page": 1,
-    "ref_id": 6,
-    "text": "Support for a variety of spatial models is integrated into the most widely used geographic information systems (GIS). However, these systems and notebooks do not support integrated external knowledge sources to help contextualize models [6]. They also require analysts to judiciously choose the proper tools at every stage of the analytical pipeline to build a well-trained model. This process necessitates a solid foundation in geographical concepts and can be time-consuming, even for seasoned analysts. Our goal is to enhance the spatial modeling process through a deliberately designed userfriendly workflow and automatically generated explanatory narratives guided by domain experts to promote the understanding of local contextual information from models. Our work focuses on improving model explainability, enabling interactive report authoring, and supporting contextualization through narrative generation. This is important in local models such as GWR and MGWR because the main output from such models is a set of local parameter estimates from each process being modeled, and the spatial variation in these estimates needs to be explained in terms of the contextualized environment of each location by providing additional contextual information for users.",
-    "text_bbox": {
-      "height": 0.2503239795415088,
-      "width": 0.3922379936268127,
-      "x": 0.5195342917847477,
-      "y": 0.4336414529819681
+      "height": 0.04916200734148122,
+      "width": 0.35967030244715076,
+      "x": 0.5520915112464256,
+      "y": 0.34747761427754104
     },
     "citations": [
       {
-        "citation": "[6]",
+        "citation": "[5]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.01708301220064849,
+          "x": 0.8192224440231822,
+          "y": 0.3853184093128551
+        }
+      }
+    ]
+  },
+  {
+    "page": 4,
+    "ref_id": 5,
+    "text": "- [5] A. Dasgupta, J.-Y. Lee, R. Wilson, R. A. Lafrance, N. Cramer, K. Cook, and S. Payne. Familiarity vs trust: A comparative study of domain scientists' trust in visual analytics and conventional analysis",
+    "text_bbox": {
+      "height": 0.02201403993548769,
+      "width": 0.3623914531632966,
+      "x": 0.5493707594528697,
+      "y": 0.8775590838808002
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 6,
+    "text": "Significant advancements in deep learning have been made towards automating the generation of text from visualizations and structured data. Chen et al. employed ResNet and LSTM architectures to generate natural language descriptions for figures in the FigCAP dataset [3], while Cheng et al. proposed a framework with transformer-based chart detection and pre-trained vision-language model [4]. Additionally, some researchers prioritize the underlying data rather than the visual representation of charts, focusing on data-to-text generation. Notable efforts in this area include the use of transformer-based models [6, 17] and encoder-decoder LSTM frameworks for analyzing time-series data [23]. In assessing the performance of these models, metrics like BLEU score [18] are commonly applied to test datasets. Despite their computational skills, deep learning models often encounter issues with generalization and credibility. Generalization problems occur when the models underperform with unfamiliar datasets, limiting their practical use. Credibility concerns stem from the models' opaque nature, which obscures the internal mechanisms and decision-making processes. To address these natural language generation issues, some research prototypes [29, 11] have adopted template-based text generation methods, which offer more transparent approaches to creating textual descriptions from visual data.",
+    "text_bbox": {
+      "height": 0.2754829869125829,
+      "width": 0.3922360800450144,
+      "x": 0.08823526295181973,
+      "y": 0.5056743043841738
+    },
+    "citations": []
+  },
+  {
+    "page": 5,
+    "ref_id": 6,
+    "text": "- [6] L. Gong, J. Crego, and J. Senellart. Enhanced transformer model for data-to-text generation. In *Proceedings of the Workshop on Neural Generation and Translation*, pp. 148\u2013156. Association for Computational Linguistics, China, Nov 2019. doi: 10.18653/v1/D19-5615 2",
+    "text_bbox": {
+      "height": 0.04591301234081538,
+      "width": 0.3623928244596992,
+      "x": 0.11807024089339511,
+      "y": 0.09702978230486012
+    },
+    "citations": []
+  },
+  {
+    "page": 4,
+    "ref_id": 7,
+    "text": "Limitations. Regarding the framework's efficiency in saving time, although P2 considers it a primary strength, other participants noted that the amount of information could potentially overwhelm average users, particularly those with limited data understanding. The tool offers extensive details about the underlying data but falls short in suggesting high-level communicative objectives, such as presenting the narrative or the context that the data encapsulated. Furthermore, visualizations serve dual roles in data presentation, being both communicative and explorative [7]. The framework relies on users to generate descriptions, inherently reflecting their unique perspectives. Consequently, integrating the explorative nature of data remains a significant challenge, as it requires a delicate balance between detailed analysis and clear, concise storytelling.",
+    "text_bbox": {
+      "height": 0.16237424600003947,
+      "width": 0.39223624834048204,
+      "x": 0.519534241919424,
+      "y": 0.3361983636412958
+    },
+    "citations": [
+      {
+        "citation": "[7]",
         "bbox": {
           "height": 0.011321212306167141,
           "width": 0.017083062065972224,
-          "x": 0.77771370083678,
-          "y": 0.4713788658681542
+          "x": 0.7597517125746783,
+          "y": 0.4369356945307568
         }
       }
     ]
   },
   {
-    "page": 2,
-    "ref_id": 6,
-    "text": "- [6] J. Hutt. Artificial reference paper 4. _Fake Journal 2_, 10(2):1\u20134, 2025. doi: 10.1080/13658816.2020.1720692 1",
-    "text_bbox": {
-      "height": 0.010063248451309974,
-      "width": 0.1437353994332108,
-      "x": 0.5918643427830116,
-      "y": 0.507104237874349
-    },
-    "citations": []
-  },
-  {
-    "page": 1,
+    "page": 5,
     "ref_id": 7,
-    "text": "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+    "text": "- [7] J. Hullman and N. Diakopoulos. Visualization rhetoric: Framing effects in narrative visualization. *IEEE Transactions on Visualization and Computer Graphics*, 17(12):2231\u20132240, 2011. doi: 10.1109/ TVCG.2011.255 4",
     "text_bbox": {
-      "height": 0.6809136361786814,
-      "width": 0.8186563728681577,
-      "x": 0.08823529411764706,
-      "y": 0.16568559588808002
-    },
-    "citations": [
-      {
-        "citation": "[7]",
-        "bbox": {
-          "height": 0.011321250838462752,
-          "width": 0.017083037133310355,
-          "x": 0.1576955957350388,
-          "y": 0.7472236710365372
-        }
-      }
-    ]
-  },
-  {
-    "page": 1,
-    "ref_id": 7,
-    "text": "Many of these systems utilize annotations to enhance the visual narratives, and Kosara and Mackinlay [7] emphasize the importance of annotations for facilitating storytelling in visualization. Recent annotation work [15] has focused on the semi-automatic creation",
-    "text_bbox": {
-      "height": 0.04905862519235322,
-      "width": 0.39223789389616526,
-      "x": 0.5195342917847477,
-      "y": 0.862767922757852
-    },
-    "citations": [
-      {
-        "citation": "[7]",
-        "bbox": {
-          "height": 0.011321250838462752,
-          "width": 0.01708301220064849,
-          "x": 0.7405734592013888,
-          "y": 0.8753474071772411
-        }
-      }
-    ]
-  },
-  {
-    "page": 2,
-    "ref_id": 7,
-    "text": "- [7] R. Kosara and J. Mackinlay. Storytelling: The next step for visualization. _Computer_, 46(5):44\u201350, 2013. doi: 10.1109/MC.2013.36 1",
-    "text_bbox": {
-      "height": 0.02201400140319208,
-      "width": 0.35805486541947507,
-      "x": 0.5493709589141647,
-      "y": 0.5310044722123579
+      "height": 0.022012739470510773,
+      "width": 0.36239272472905176,
+      "x": 0.11807024089339511,
+      "y": 0.14483032804546933
     },
     "citations": []
   },
   {
     "page": 2,
     "ref_id": 8,
-    "text": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+    "text": "The World Wide Web Consortium (W3C) plays a crucial role in setting guidelines and standards for web accessibility. One of its fundamental principles is ensuring that all non-textual web content provides a text alternative that fulfills the same function. The W3C particularly stresses the importance of crafting detailed descriptions for complex images such as charts, maps, and other visualizations. The process of converting these complex images into text involves a substantial reduction in information dimension, which brings forth critical considerations regarding the specific needs and preferences of the target audience. Consequently, recent studies increasingly aim to pinpoint what aspects of these descriptions are most valued by visually impaired people [8, 12]. Concurrently, there is ongoing research exploring various design approaches for making visualizations more accessible [27]. This research includes developing innovative methods to navigate, comprehend, and interact with graphical data using non-visual interfaces like keyboards [31] and speech interfaces [22].",
     "text_bbox": {
-      "height": 0.16227086385091147,
-      "width": 0.3922359927806979,
-      "x": 0.08823530035081252,
-      "y": 0.3641817497484612
+      "height": 0.21258779968878236,
+      "width": 0.3922380746579638,
+      "x": 0.08823526295181973,
+      "y": 0.2913635330970841
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 8,
+    "text": "- C2. Properly describing a visualization requires a careful examination of all its features. This requires a profound understanding of accessibility principles and the information needs of the target audience [8].",
+    "text_bbox": {
+      "height": 0.0491619495430378,
+      "width": 0.35968127281837214,
+      "x": 0.5520915112464256,
+      "y": 0.23780716790093315
     },
     "citations": [
       {
         "citation": "[8]",
         "bbox": {
           "height": 0.011321212306167141,
-          "width": 0.01708301220064849,
-          "x": 0.44034222372217113,
-          "y": 0.48997354989099984
+          "width": 0.017083062065972224,
+          "x": 0.6820163602143331,
+          "y": 0.2756479051378038
         }
       }
     ]
   },
   {
-    "page": 2,
+    "page": 3,
     "ref_id": 8,
-    "text": "- [8] J. Krause, A. Perer, and K. Ng. Interacting with predictions: Visual inspection of black-box machine learning models. In _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 5686\u20135697, 2016. doi: 10.1145/2858036.2858529 2",
+    "text": "For general information, the framework captures important details such as chart type, main title, subtitles, footnotes, axes, and color schemes. The comprehensive understanding of visualization goes beyond mere data representation; it necessitates an elaborate description of all graphical elements. These detailed descriptions are crucial for visually impaired people, as they enable them to form a mental representation of the visualization, enhancing their comprehension of the overall design [8].",
     "text_bbox": {
-      "height": 0.04591423574120107,
-      "width": 0.3623913534326491,
-      "x": 0.5493709589141647,
-      "y": 0.5549047065503669
+      "height": 0.0993754839656329,
+      "width": 0.39223611121084173,
+      "x": 0.08823533151663986,
+      "y": 0.6595822729245581
+    },
+    "citations": [
+      {
+        "citation": "[8]",
+        "bbox": {
+          "height": 0.011321250838462752,
+          "width": 0.017083037133310355,
+          "x": 0.30467431062187245,
+          "y": 0.7476365060517283
+        }
+      }
+    ]
+  },
+  {
+    "page": 5,
+    "ref_id": 8,
+    "text": "- [8] C. Jung, S. Mehta, A. Kulkarni, Y. Zhao, and Y.-S. Kim. Communicating visualizations without visuals: Investigation of visualization alternative text for people with visual impairments. *IEEE Transactions on Visualization and Computer Graphics*, 28(1):1095\u20131105, 2022. doi: 10.1109/TVCG.2021.3114846 2, 3",
+    "text_bbox": {
+      "height": 0.033963521321614586,
+      "width": 0.3583158355912352,
+      "x": 0.11807024089339511,
+      "y": 0.19263088341915247
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 9,
+    "text": "The practice of providing detailed descriptions for non-textual elements on websites is gaining traction; however, the lack of precise and standardized guidelines significantly hampers consistency in these efforts [14]. The task of effectively describing visual elements in data-driven stories introduces multiple challenges. First, there is a notable learning curve associated with the skill of writing comprehensive descriptions for accessibility [15], as it requires an in-depth understanding of the critical details to be included. Second, data visualizations present complex datasets that demand advanced analytical skills [2]. Creators must interpret visual patterns with precision, ensuring that the data is neither oversimplified nor misrepresented. Third, crafting such descriptions is often laborious and time-consuming, necessitating meticulous attention to detail. Despite diligent efforts, some descriptions may not adequately convey all the necessary details of the visual elements [16]. Recently, the machine learning community has explored deep learning-based methods to aid chart-text transformation [3, 17, 9, 4]. Yet, these black box models often lack transparency, challenging users' ability to fine-tune or fully comprehend the details in the generated outputs. In response to these issues, we propose the development of a novel framework designed to aid media content creators in interpreting charts and producing detailed textual descriptions. This preliminary research is tailored specifically for individuals who develop visualizations using Datawrapper1 , a popular tool for those with basic proficiency in statistics and data analysis but without extensive programming knowledge.",
+    "text_bbox": {
+      "height": 0.27548294838028725,
+      "width": 0.3922382928187551,
+      "x": 0.5195342917847477,
+      "y": 0.5465090202562737
+    },
+    "citations": []
+  },
+  {
+    "page": 5,
+    "ref_id": 9,
+    "text": "- [9] S. Kantharaj, R. T. Leong, X. Lin, A. Masry, M. Thakkar, E. Hoque, and S. Joty. Chart-to-text: A large-scale benchmark for chart summarization. In *Proceedings of the Association for Computational Linguistics*, pp. 4005\u20134023. Association for Computational Linguistics, Ireland, may 2022. doi: 10.18653/v1/2022.acl-long.277 1",
+    "text_bbox": {
+      "height": 0.04591300270774148,
+      "width": 0.3623926249984043,
+      "x": 0.11807024089339511,
+      "y": 0.2643317020300663
+    },
+    "citations": []
+  },
+  {
+    "page": 3,
+    "ref_id": 10,
+    "text": "To ensure that the generated text meets high standards of clarity and stylistic quality, the framework allows users to fine-tune descriptions. Users can edit or rearrange text segments effortlessly by dragging the associated tags. Furthermore, when users hover their cursor over any part of the description, an animation activates on the corresponding section of the input chart (Fig. 1C). This animation (R4), combined with visual cues, emphasizes the relevance of the text, offering a dynamic and interactive method for illustrating the relationship between textual descriptions and visual data [10, 24].",
+    "text_bbox": {
+      "height": 0.11195388948074494,
+      "width": 0.39223839254940257,
+      "x": 0.5195342917847477,
+      "y": 0.5581077036231455
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 10,
+    "text": "- [10] S. Latif, D. Liu, and F. Beck. Exploring interactive linking between text and visualization. In *Proceedings of the Eurographics/IEEE Conference on Visualization*, p. 91\u201394. Eurographics Association, Goslar, DEU, 2018. 3",
+    "text_bbox": {
+      "height": 0.011321250838462752,
+      "width": 0.007325515248417075,
+      "x": 0.7716628928589665,
+      "y": 0.7477755305742977
     },
     "citations": []
   },
   {
     "page": 2,
-    "ref_id": 9,
-    "text": "of presentation-like storytelling visualizations and explored mechanisms for automatically generating annotations by integrating deeplearning feature extraction techniques with a natural language generation process [9]. Annotations in such systems are used to describe salient patterns and facilitate storytelling [23].",
+    "ref_id": 11,
+    "text": "Significant advancements in deep learning have been made towards automating the generation of text from visualizations and structured data. Chen et al. employed ResNet and LSTM architectures to generate natural language descriptions for figures in the FigCAP dataset [3], while Cheng et al. proposed a framework with transformer-based chart detection and pre-trained vision-language model [4]. Additionally, some researchers prioritize the underlying data rather than the visual representation of charts, focusing on data-to-text generation. Notable efforts in this area include the use of transformer-based models [6, 17] and encoder-decoder LSTM frameworks for analyzing time-series data [23]. In assessing the performance of these models, metrics like BLEU score [18] are commonly applied to test datasets. Despite their computational skills, deep learning models often encounter issues with generalization and credibility. Generalization problems occur when the models underperform with unfamiliar datasets, limiting their practical use. Credibility concerns stem from the models' opaque nature, which obscures the internal mechanisms and decision-making processes. To address these natural language generation issues, some research prototypes [29, 11] have adopted template-based text generation methods, which offer more transparent approaches to creating textual descriptions from visual data.",
     "text_bbox": {
-      "height": 0.061638148144038035,
-      "width": 0.38735731910256777,
-      "x": 0.08823530035081252,
-      "y": 0.2705718917076034
+      "height": 0.2754829869125829,
+      "width": 0.3922360800450144,
+      "x": 0.08823526295181973,
+      "y": 0.5056743043841738
+    },
+    "citations": []
+  },
+  {
+    "page": 5,
+    "ref_id": 11,
+    "text": "- [11] F. Lei, Y. Ma, A. S. Fotheringham, E. A. Mack, Z. Li, M. Sachdeva, S. Bardin, and R. Maciejewski. GeoExplainer: A visual analytics framework for spatial modeling contextualization and report generation. *IEEE Transactions on Visualization and Computer Graphics*, 30(1):1391\u20131401, 2024. doi: 10.1109/TVCG.2023.3327359 2",
+    "text_bbox": {
+      "height": 0.03396348278931897,
+      "width": 0.362392113878836,
+      "x": 0.11807025335972605,
+      "y": 0.371882236365116
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 12,
+    "text": "The World Wide Web Consortium (W3C) plays a crucial role in setting guidelines and standards for web accessibility. One of its fundamental principles is ensuring that all non-textual web content provides a text alternative that fulfills the same function. The W3C particularly stresses the importance of crafting detailed descriptions for complex images such as charts, maps, and other visualizations. The process of converting these complex images into text involves a substantial reduction in information dimension, which brings forth critical considerations regarding the specific needs and preferences of the target audience. Consequently, recent studies increasingly aim to pinpoint what aspects of these descriptions are most valued by visually impaired people [8, 12]. Concurrently, there is ongoing research exploring various design approaches for making visualizations more accessible [27]. This research includes developing innovative methods to navigate, comprehend, and interact with graphical data using non-visual interfaces like keyboards [31] and speech interfaces [22].",
+    "text_bbox": {
+      "height": 0.21258779968878236,
+      "width": 0.3922380746579638,
+      "x": 0.08823526295181973,
+      "y": 0.2913635330970841
+    },
+    "citations": []
+  },
+  {
+    "page": 3,
+    "ref_id": 12,
+    "text": "Feature Detection. The framework conducts an automatic analysis of the extracted data and metadata to identify key features. The detection is based on chart type and currently supports all basic statistical charts and their variants, such as bar charts (split bars, stacked bars, grouped bars, etc.), area charts, line charts, and pie charts. For each type of chart, the framework detects key features and classifies them into the following categories: general information and data facts [12].",
+    "text_bbox": {
+      "height": 0.09947898171164772,
+      "width": 0.39223606134551803,
+      "x": 0.08823533151663986,
+      "y": 0.5578853722774622
     },
     "citations": [
       {
-        "citation": "[9]",
+        "citation": "[12]",
         "bbox": {
           "height": 0.011321212306167141,
-          "width": 0.017083037133310355,
-          "x": 0.18321759093041515,
-          "y": 0.30830926606149384
+          "width": 0.02440851498273463,
+          "x": 0.1987623202255349,
+          "y": 0.6460431416829427
         }
       }
     ]
   },
   {
-    "page": 2,
-    "ref_id": 9,
-    "text": "- [9] C. Lai, Z. Lin, R. Jiang, Y. Han, C. Liu, and X. Yuan. Automatic annotation synchronizing with textual description for visualization. _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 1\u201313, 2020. doi: 10.1145/3313831.3376443 2",
-    "text_bbox": {
-      "height": 0.04591427427349669,
-      "width": 0.35805466595818014,
-      "x": 0.5493709589141647,
-      "y": 0.6027051752263849
-    },
-    "citations": []
-  },
-  {
-    "page": 1,
-    "ref_id": 10,
-    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
-    "text_bbox": {
-      "height": 0.1496911867700442,
-      "width": 0.3922360987445108,
-      "x": 0.5195342917847477,
-      "y": 0.7117211698281645
-    },
-    "citations": [
-      {
-        "citation": "[10]",
-        "bbox": {
-          "height": 0.011321250838462752,
-          "width": 0.024408677045036766,
-          "x": 0.8873614142922794,
-          "y": 0.8123537314058554
-        }
-      }
-    ]
-  },
-  {
-    "page": 2,
-    "ref_id": 10,
-    "text": "- [10] S. Latif and F. Beck. Interactive map reports summarizing bivariate geographic data. _Visual Informatics_, 3(1):27\u201337, 2019. doi: 10.1016/j .visinf.2019.03.004 1",
-    "text_bbox": {
-      "height": 0.02201403993548769,
-      "width": 0.3623912038366779,
-      "x": 0.5493709090488409,
-      "y": 0.6505056053701074
-    },
-    "citations": []
-  },
-  {
-    "page": 1,
-    "ref_id": 11,
-    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
-    "text_bbox": {
-      "height": 0.1496911867700442,
-      "width": 0.3922360987445108,
-      "x": 0.5195342917847477,
-      "y": 0.7117211698281645
-    },
-    "citations": [
-      {
-        "citation": "[11]",
-        "bbox": {
-          "height": 0.011321250838462752,
-          "width": 0.024408677045036766,
-          "x": 0.8627625509025225,
-          "y": 0.8500911057597459
-        }
-      }
-    ]
-  },
-  {
-    "page": 2,
-    "ref_id": 11,
-    "text": "- [11] S. Latif, S. Chen, and F. Beck. A deeper understanding of visualization-text interplay in geographic data-driven stories. _Computer Graphics Forum_, 40(3):311\u2013322, 2021. doi: 10.1111/cgf.14309 1",
-    "text_bbox": {
-      "height": 0.022012729837436868,
-      "width": 0.3623913534326491,
-      "x": 0.5493709589141647,
-      "y": 0.6863566697245896
-    },
-    "citations": []
-  },
-  {
-    "page": 2,
+    "page": 5,
     "ref_id": 12,
-    "text": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+    "text": "- [12] A. Lundgard and A. Satyanarayan. Accessible visualization via natural language descriptions: A four-level model of semantic content. *IEEE Transactions on Visualization and Computer Graphics*, 28(1):1073\u20131083, 2022. doi: 10.1109/TVCG.2021.3114770 2, 3",
     "text_bbox": {
-      "height": 0.16227086385091147,
-      "width": 0.3922359927806979,
-      "x": 0.08823530035081252,
-      "y": 0.3641817497484612
+      "height": 0.03396348278931897,
+      "width": 0.3580562117832159,
+      "x": 0.11807026582605698,
+      "y": 0.419682705041134
     },
     "citations": []
   },
   {
-    "page": 2,
-    "ref_id": 12,
-    "text": "- [12] Y. Lu, R. Garcia, B. Hansen, M. Gleicher, and R. Maciejewski. The state-of-the-art in predictive visual analytics. _Computer Graphics Forum_, 36(3):539\u2013562, 2017. doi: 10.1111/cgf.13210 2",
-    "text_bbox": {
-      "height": 0.022012806902028094,
-      "width": 0.3623911539713542,
-      "x": 0.5493709589141647,
-      "y": 0.7341571384006076
-    },
-    "citations": []
-  },
-  {
-    "page": 2,
+    "page": 3,
     "ref_id": 13,
-    "text": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+    "text": "Chart Color Identification. To handle color identification, we used the list of CSS3 extended color names which consist of keyvalue pairs of hex color codes and the corresponding names. All RGB color codes, including those extracted from SVG, are converted to the CIELAB [13] color space. This transformation allows us to use the nearest neighbor algorithm [26], as CIELAB aims to approximate human vision rather than just mimic the physical attributes of colors. This ensures that the closest color name can be effectively identified for each detected color in the input chart.",
     "text_bbox": {
-      "height": 0.16227086385091147,
-      "width": 0.3922359927806979,
-      "x": 0.08823530035081252,
-      "y": 0.3641817497484612
+      "height": 0.061741530293166036,
+      "width": 0.39223599901386336,
+      "x": 0.5195343915153953,
+      "y": 0.8500864818842724
     },
     "citations": [
       {
         "citation": "[13]",
         "bbox": {
-          "height": 0.011321212306167141,
-          "width": 0.02440855238172743,
-          "x": 0.41460052191042435,
-          "y": 0.4396565755208333
+          "height": 0.011321250838462752,
+          "width": 0.024408577314389297,
+          "x": 0.6522427727194393,
+          "y": 0.9005067613389757
         }
       }
     ]
   },
   {
-    "page": 2,
+    "page": 5,
     "ref_id": 13,
-    "text": "- [13] Y. Ming, H. Qu, and E. Bertini. RuleMatrix: Visualizing and understanding classifiers with rules. _IEEE Transactions on Visualization and Computer Graphics_, 25(1):342\u2013352, 2018. doi: 10.1109/TVCG. 2018.2864812 2",
+    "text": "- [13] M. R. Luo. *CIELAB*, pp. 1\u20137. Springer Berlin Heidelberg, Berlin, Heidelberg, 2014. doi: 10.1007/978-3-642-27851-8 11-1 3",
     "text_bbox": {
-      "height": 0.0459143128057923,
-      "width": 0.3583153618706597,
-      "x": 0.5493709589141647,
-      "y": 0.7700068926570391
+      "height": 0.02201400140319208,
+      "width": 0.3624010771707772,
+      "x": 0.11807026582605698,
+      "y": 0.467483173717152
     },
     "citations": []
   },
   {
-    "page": 2,
+    "page": 1,
     "ref_id": 14,
-    "text": "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and \u00a8 Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+    "text": "The practice of providing detailed descriptions for non-textual elements on websites is gaining traction; however, the lack of precise and standardized guidelines significantly hampers consistency in these efforts [14]. The task of effectively describing visual elements in data-driven stories introduces multiple challenges. First, there is a notable learning curve associated with the skill of writing comprehensive descriptions for accessibility [15], as it requires an in-depth understanding of the critical details to be included. Second, data visualizations present complex datasets that demand advanced analytical skills [2]. Creators must interpret visual patterns with precision, ensuring that the data is neither oversimplified nor misrepresented. Third, crafting such descriptions is often laborious and time-consuming, necessitating meticulous attention to detail. Despite diligent efforts, some descriptions may not adequately convey all the necessary details of the visual elements [16]. Recently, the machine learning community has explored deep learning-based methods to aid chart-text transformation [3, 17, 9, 4]. Yet, these black box models often lack transparency, challenging users' ability to fine-tune or fully comprehend the details in the generated outputs. In response to these issues, we propose the development of a novel framework designed to aid media content creators in interpreting charts and producing detailed textual descriptions. This preliminary research is tailored specifically for individuals who develop visualizations using Datawrapper1 , a popular tool for those with basic proficiency in statistics and data analysis but without extensive programming knowledge.",
     "text_bbox": {
-      "height": 0.2377456125586924,
-      "width": 0.39223599901386336,
-      "x": 0.08823529411764706,
-      "y": 0.5284230781323982
+      "height": 0.27548294838028725,
+      "width": 0.3922382928187551,
+      "x": 0.5195342917847477,
+      "y": 0.5465090202562737
     },
     "citations": [
       {
         "citation": "[14]",
         "bbox": {
           "height": 0.011321212306167141,
-          "width": 0.024408527449065565,
-          "x": 0.13823909385531558,
-          "y": 0.553582201100359
+          "width": 0.024408577314389297,
+          "x": 0.6121430739857792,
+          "y": 0.5842464331424597
         }
       }
     ]
   },
   {
-    "page": 2,
+    "page": 5,
     "ref_id": 14,
-    "text": "- [14] T. Muhlbacher and H. Piringer. A partition-based framework for build- \u00a8 ing and validating regression models. _IEEE Transactions on Visualization and Computer Graphics_, 19(12):1962\u20131971, 2013. doi: 10. 1109/TVCG.2013.125 2",
+    "text": "- [14] K. Marriott, B. Lee, M. Butler, E. Cutrell, K. Ellis, C. Goncu, M. Hearst, K. McCoy, and D. A. Szafir. Inclusive data visualization for people with disabilities: a call to action. *Interactions*, 28(3):47\u201351, apr 2021. doi: 10.1145/3457875 1",
     "text_bbox": {
-      "height": 0.010063248451309974,
-      "width": 0.13003500146803512,
-      "x": 0.5493709589141647,
-      "y": 0.8536584256875395
+      "height": 0.022012729837436868,
+      "width": 0.36239225100847633,
+      "x": 0.11807026582605698,
+      "y": 0.5033340454101562
     },
     "citations": []
   },
   {
     "page": 1,
     "ref_id": 15,
-    "text": "Many of these systems utilize annotations to enhance the visual narratives, and Kosara and Mackinlay [7] emphasize the importance of annotations for facilitating storytelling in visualization. Recent annotation work [15] has focused on the semi-automatic creation",
+    "text": "The practice of providing detailed descriptions for non-textual elements on websites is gaining traction; however, the lack of precise and standardized guidelines significantly hampers consistency in these efforts [14]. The task of effectively describing visual elements in data-driven stories introduces multiple challenges. First, there is a notable learning curve associated with the skill of writing comprehensive descriptions for accessibility [15], as it requires an in-depth understanding of the critical details to be included. Second, data visualizations present complex datasets that demand advanced analytical skills [2]. Creators must interpret visual patterns with precision, ensuring that the data is neither oversimplified nor misrepresented. Third, crafting such descriptions is often laborious and time-consuming, necessitating meticulous attention to detail. Despite diligent efforts, some descriptions may not adequately convey all the necessary details of the visual elements [16]. Recently, the machine learning community has explored deep learning-based methods to aid chart-text transformation [3, 17, 9, 4]. Yet, these black box models often lack transparency, challenging users' ability to fine-tune or fully comprehend the details in the generated outputs. In response to these issues, we propose the development of a novel framework designed to aid media content creators in interpreting charts and producing detailed textual descriptions. This preliminary research is tailored specifically for individuals who develop visualizations using Datawrapper1 , a popular tool for those with basic proficiency in statistics and data analysis but without extensive programming knowledge.",
     "text_bbox": {
-      "height": 0.04905862519235322,
-      "width": 0.39223789389616526,
+      "height": 0.27548294838028725,
+      "width": 0.3922382928187551,
       "x": 0.5195342917847477,
-      "y": 0.862767922757852
+      "y": 0.5465090202562737
     },
     "citations": [
       {
         "citation": "[15]",
         "bbox": {
-          "height": 0.011321250838462752,
-          "width": 0.024408527449065565,
-          "x": 0.621563680810866,
-          "y": 0.9005052971117424
+          "height": 0.011321212306167141,
+          "width": 0.024408577314389297,
+          "x": 0.785068437164905,
+          "y": 0.6219838460286459
         }
       }
     ]
   },
   {
-    "page": 2,
+    "page": 5,
     "ref_id": 15,
-    "text": "- [15] D. Ren, M. Brehmer, B. Lee, T. Hollerer, and E. K. Choe. ChartAc- \u00a8 cent: Annotation for data-driven storytelling. In _IEEE Pacific Symposium on Visualization_, pp. 230\u2013239, 2017. doi: 10.1109/PACIFICVIS .2017.8031599 1",
+    "text": "- [15] A. Matamala and P. Orero. Designing a course on audio description and defining the main competences of the future professional. *Linguistica Antverpiensia, New Series \u2013 Themes in Translation Studies*, 6, Oct. 2021. doi: 10.52034/lanstts.v6i.195 1",
     "text_bbox": {
-      "height": 0.022013962870896464,
+      "height": 0.02201400140319208,
       "width": 0.36239294912300857,
-      "x": 0.5493709589141647,
-      "y": 0.8895081799439709
+      "x": 0.11807026582605698,
+      "y": 0.5391837611342921
     },
     "citations": []
   },
   {
     "page": 1,
     "ref_id": 16,
-    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+    "text": "The practice of providing detailed descriptions for non-textual elements on websites is gaining traction; however, the lack of precise and standardized guidelines significantly hampers consistency in these efforts [14]. The task of effectively describing visual elements in data-driven stories introduces multiple challenges. First, there is a notable learning curve associated with the skill of writing comprehensive descriptions for accessibility [15], as it requires an in-depth understanding of the critical details to be included. Second, data visualizations present complex datasets that demand advanced analytical skills [2]. Creators must interpret visual patterns with precision, ensuring that the data is neither oversimplified nor misrepresented. Third, crafting such descriptions is often laborious and time-consuming, necessitating meticulous attention to detail. Despite diligent efforts, some descriptions may not adequately convey all the necessary details of the visual elements [16]. Recently, the machine learning community has explored deep learning-based methods to aid chart-text transformation [3, 17, 9, 4]. Yet, these black box models often lack transparency, challenging users' ability to fine-tune or fully comprehend the details in the generated outputs. In response to these issues, we propose the development of a novel framework designed to aid media content creators in interpreting charts and producing detailed textual descriptions. This preliminary research is tailored specifically for individuals who develop visualizations using Datawrapper1 , a popular tool for those with basic proficiency in statistics and data analysis but without extensive programming knowledge.",
     "text_bbox": {
-      "height": 0.1496911867700442,
-      "width": 0.3922360987445108,
+      "height": 0.27548294838028725,
+      "width": 0.3922382928187551,
       "x": 0.5195342917847477,
-      "y": 0.7117211698281645
+      "y": 0.5465090202562737
     },
     "citations": [
       {
         "citation": "[16]",
         "bbox": {
           "height": 0.011321250838462752,
-          "width": 0.024408527449065565,
-          "x": 0.7639417461320466,
-          "y": 0.7746164341165562
+          "width": 0.02440862717971303,
+          "x": 0.8228091071633732,
+          "y": 0.7226177177043877
         }
       }
     ]
   },
   {
-    "page": 3,
+    "page": 5,
     "ref_id": 16,
-    "text": "- [16] A. Satyanarayan and J. Heer. Authoring narrative visualizations with ellipsis. _Computer Graphics Forum_, 33(3):361\u2013370, 2014. doi: 10. 1111/cgf.12392 1",
+    "text": "- [16] V. S. Morash, Y.-T. Siu, J. A. Miele, L. Hasty, and S. Landau. Guiding novice web workers in making image descriptions using templates. *ACM Transactions on Accessible Computing*, 7(4), nov 2015. doi: 10 .1145/2764916 1",
     "text_bbox": {
-      "height": 0.03396352613815153,
-      "width": 0.36239289925768486,
+      "height": 0.02201400140319208,
+      "width": 0.3623929989883323,
       "x": 0.11807026582605698,
-      "y": 0.07312951425109247
+      "y": 0.5869842298103102
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 17,
+    "text": "The practice of providing detailed descriptions for non-textual elements on websites is gaining traction; however, the lack of precise and standardized guidelines significantly hampers consistency in these efforts [14]. The task of effectively describing visual elements in data-driven stories introduces multiple challenges. First, there is a notable learning curve associated with the skill of writing comprehensive descriptions for accessibility [15], as it requires an in-depth understanding of the critical details to be included. Second, data visualizations present complex datasets that demand advanced analytical skills [2]. Creators must interpret visual patterns with precision, ensuring that the data is neither oversimplified nor misrepresented. Third, crafting such descriptions is often laborious and time-consuming, necessitating meticulous attention to detail. Despite diligent efforts, some descriptions may not adequately convey all the necessary details of the visual elements [16]. Recently, the machine learning community has explored deep learning-based methods to aid chart-text transformation [3, 17, 9, 4]. Yet, these black box models often lack transparency, challenging users' ability to fine-tune or fully comprehend the details in the generated outputs. In response to these issues, we propose the development of a novel framework designed to aid media content creators in interpreting charts and producing detailed textual descriptions. This preliminary research is tailored specifically for individuals who develop visualizations using Datawrapper1 , a popular tool for those with basic proficiency in statistics and data analysis but without extensive programming knowledge.",
+    "text_bbox": {
+      "height": 0.27548294838028725,
+      "width": 0.3922382928187551,
+      "x": 0.5195342917847477,
+      "y": 0.5465090202562737
     },
     "citations": []
   },
   {
     "page": 2,
     "ref_id": 17,
-    "text": "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and \u00a8 Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+    "text": "Significant advancements in deep learning have been made towards automating the generation of text from visualizations and structured data. Chen et al. employed ResNet and LSTM architectures to generate natural language descriptions for figures in the FigCAP dataset [3], while Cheng et al. proposed a framework with transformer-based chart detection and pre-trained vision-language model [4]. Additionally, some researchers prioritize the underlying data rather than the visual representation of charts, focusing on data-to-text generation. Notable efforts in this area include the use of transformer-based models [6, 17] and encoder-decoder LSTM frameworks for analyzing time-series data [23]. In assessing the performance of these models, metrics like BLEU score [18] are commonly applied to test datasets. Despite their computational skills, deep learning models often encounter issues with generalization and credibility. Generalization problems occur when the models underperform with unfamiliar datasets, limiting their practical use. Credibility concerns stem from the models' opaque nature, which obscures the internal mechanisms and decision-making processes. To address these natural language generation issues, some research prototypes [29, 11] have adopted template-based text generation methods, which offer more transparent approaches to creating textual descriptions from visual data.",
     "text_bbox": {
-      "height": 0.2377456125586924,
-      "width": 0.39223599901386336,
-      "x": 0.08823529411764706,
-      "y": 0.5284230781323982
+      "height": 0.2754829869125829,
+      "width": 0.3922360800450144,
+      "x": 0.08823526295181973,
+      "y": 0.5056743043841738
     },
-    "citations": [
-      {
-        "citation": "[17]",
-        "bbox": {
-          "height": 0.011321212306167141,
-          "width": 0.024408527449065565,
-          "x": 0.28151102003708384,
-          "y": 0.5787400525025647
-        }
-      }
-    ]
+    "citations": []
   },
   {
-    "page": 1,
-    "ref_id": 18,
-    "text": "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+    "page": 5,
+    "ref_id": 17,
+    "text": "- [17] J. Obeid and E. Hoque. Chart-to-text: Generating natural language descriptions for charts by adapting the transformer model. In *Proceedings of the International Conference on Natural Language Generation*, pp. 138\u2013147. Association for Computational Linguistics, Ireland, dec 2020. doi: 10.18653/v1/2020.inlg-1.20 1, 2",
     "text_bbox": {
-      "height": 0.6809136361786814,
-      "width": 0.8186563728681577,
-      "x": 0.08823529411764706,
-      "y": 0.16568559588808002
+      "height": 0.05786371712732797,
+      "width": 0.3623927995270374,
+      "x": 0.11807026582605698,
+      "y": 0.6347859700520834
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 18,
+    "text": "Significant advancements in deep learning have been made towards automating the generation of text from visualizations and structured data. Chen et al. employed ResNet and LSTM architectures to generate natural language descriptions for figures in the FigCAP dataset [3], while Cheng et al. proposed a framework with transformer-based chart detection and pre-trained vision-language model [4]. Additionally, some researchers prioritize the underlying data rather than the visual representation of charts, focusing on data-to-text generation. Notable efforts in this area include the use of transformer-based models [6, 17] and encoder-decoder LSTM frameworks for analyzing time-series data [23]. In assessing the performance of these models, metrics like BLEU score [18] are commonly applied to test datasets. Despite their computational skills, deep learning models often encounter issues with generalization and credibility. Generalization problems occur when the models underperform with unfamiliar datasets, limiting their practical use. Credibility concerns stem from the models' opaque nature, which obscures the internal mechanisms and decision-making processes. To address these natural language generation issues, some research prototypes [29, 11] have adopted template-based text generation methods, which offer more transparent approaches to creating textual descriptions from visual data.",
+    "text_bbox": {
+      "height": 0.2754829869125829,
+      "width": 0.3922360800450144,
+      "x": 0.08823526295181973,
+      "y": 0.5056743043841738
     },
     "citations": [
       {
         "citation": "[18]",
         "bbox": {
-          "height": 0.011321250838462752,
+          "height": 0.011321212306167141,
           "width": 0.024408527449065565,
-          "x": 0.358047759610843,
-          "y": 0.7346454196506076
+          "x": 0.4322841868681066,
+          "y": 0.6440443944449377
         }
       }
     ]
   },
   {
-    "page": 1,
+    "page": 5,
     "ref_id": 18,
-    "text": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+    "text": "- [18] K. Papineni, S. Roukos, T. Ward, and W.-J. Zhu. BLEU: a method for automatic evaluation of machine translation. In *Proceedings of the Annual Meeting on Association for Computational Linguistics*, p. 311\u2013318. Association for Computational Linguistics, USA, 2002. doi: 10.3115/1073083.1073135 2",
     "text_bbox": {
-      "height": 0.1496911867700442,
-      "width": 0.3922360987445108,
-      "x": 0.5195342917847477,
-      "y": 0.7117211698281645
-    },
-    "citations": []
-  },
-  {
-    "page": 3,
-    "ref_id": 18,
-    "text": "- [18] E. Segel and J. Heer. Narrative visualization: Telling stories with data. _IEEE Transactions on Visualization and Computer Graphics_, 16(6):1139\u20131148, 2010. doi: 10.1109/TVCG.2010.179 1",
-    "text_bbox": {
-      "height": 0.02201404956856159,
-      "width": 0.36239289925768486,
+      "height": 0.05786371712732797,
+      "width": 0.36239294912300857,
       "x": 0.11807026582605698,
-      "y": 0.15677980943159622
+      "y": 0.6945359971788194
     },
     "citations": []
   },
   {
-    "page": 1,
+    "page": 2,
     "ref_id": 19,
-    "text": "Geographic models are often used to answer _why_ questions regarding underlying spatial phenomena such as why do voter preferences generally exhibit strong spatial dependency. In order to answer such questions, researchers have developed sophisticated spatial modeling techniques and software, such as multiscale geographically weighted regression [21], to identify the determinants of the spatial patterns of data we observe in both the human and natural environments. However, these models generate output that needs local contextual information to be interpreted properly. Without such information, advanced spatial modeling techniques do not gain their full potential. While a variety of geovisual analytics systems [19] have been developed to explore spatial statistics with the help of interactive maps and narrative annotations, these applications tend to visualize only basic statistical results, and, to our knowledge, none of them explain spatial modeling results.",
+    "text": "- C3. The accuracy of the description depends on the correct interpretation. Fully automated systems can make critical errors [19] as their performance is tied to training data and may struggle with unfamiliar situations.",
     "text_bbox": {
-      "height": 0.16227086385091147,
-      "width": 0.3922360488791871,
-      "x": 0.08823529411764706,
-      "y": 0.5318788855966895
+      "height": 0.0491619495430378,
+      "width": 0.35966691160513686,
+      "x": 0.5520915112464256,
+      "y": 0.2926417842055812
     },
     "citations": [
       {
@@ -629,169 +659,135 @@
         "bbox": {
           "height": 0.011321212306167141,
           "width": 0.024408527449065565,
-          "x": 0.45606276568244486,
-          "y": 0.6325115627712674
+          "x": 0.5916345135059232,
+          "y": 0.3179042700565223
         }
       }
     ]
   },
   {
-    "page": 3,
+    "page": 5,
     "ref_id": 19,
-    "text": "- [19] L. Skywalker and O.-W. Kenobi. Artificial reference paper 2. _Fake Journal 2_, 10(2):1\u20134, 2025. doi: 10.1080/13658816.2020.1720692 1",
+    "text": "- [19] E. Salisbury, E. Kamar, and M. Morris. Toward scalable social alt text: Conversational crowdsourcing as a tool for refining vision-tolanguage technology for the blind. *Proceedings of the AAAI Conference on Human Computation and Crowdsourcing*, 5(1):147\u2013156, Sep. 2017. doi: 10.1609/hcomp.v5i1.13301 2",
     "text_bbox": {
-      "height": 0.010063248451309974,
-      "width": 0.14688683802785438,
-      "x": 0.3007972567689185,
-      "y": 0.19263088341915247
+      "height": 0.033963444257023356,
+      "width": 0.3623929989883323,
+      "x": 0.11807026582605698,
+      "y": 0.7542872573390151
     },
     "citations": []
   },
   {
     "page": 1,
     "ref_id": 20,
-    "text": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+    "text": "In our increasingly data-driven world, visualizations serve as pivotal tools for storytelling, offering clear and concise portrayals of complex datasets that cater to the swift comprehension needs of modern audiences [20]. These visual representations transform abstract numbers into insightful narratives and intuitive graphics, making complex information more accessible to the general public. However, an exclusive reliance on these visual formats inherently excludes significant segments of the audience, including those with visual impairments. Extensive research has demonstrated that a substantial number of online visualizations are not compatible with screen-reader technologies, primarily due to the absence of adequate textual alternatives [21]. This limitation not only restricts the accessibility of such visualizations for visually impaired individuals and screen reader users but also affects those requiring auditory information for various activities, such as driving or multitasking. Consequently, to bridge this accessibility gap and ensure equitable access to information, the provision of textual descriptions for visualizations is not merely important\u2014it is imperative.",
     "text_bbox": {
-      "height": 0.12453341243242977,
-      "width": 0.39223629820580574,
-      "x": 0.5195342917847477,
-      "y": 0.30775247438989506
+      "height": 0.39134767320421004,
+      "width": 0.8235350964116115,
+      "x": 0.08823529411764706,
+      "y": 0.5078991591328322
     },
     "citations": [
       {
         "citation": "[20]",
         "bbox": {
-          "height": 0.011321212306167141,
-          "width": 0.024408527449065565,
-          "x": 0.5903425029679841,
-          "y": 0.3832272616299716
+          "height": 0.011321250838462752,
+          "width": 0.02440851498273463,
+          "x": 0.20387546065586065,
+          "y": 0.7872930199208886
         }
       }
     ]
   },
   {
-    "page": 3,
+    "page": 5,
     "ref_id": 20,
-    "text": "- [20] D. Smeesters and J. Liu. Retracted: The effect of color (red versus blue) on assimilation versus contrast in prime-to-behavior effects. _Journal of Experimental Social Psychology_, 47(3):653\u2013656, 2011. doi: 10.1016/j.jesp.2011.02.010 1",
+    "text": "- [20] E. Segel and J. Heer. Narrative visualization: Telling stories with data. *IEEE Transactions on Visualization and Computer Graphics*, 16(6):1139\u20131148, 2010. doi: 10.1109/TVCG.2010.179 1",
     "text_bbox": {
-      "height": 0.022012729837436868,
-      "width": 0.36239205154718135,
-      "x": 0.11807021596073325,
-      "y": 0.21653115628945707
+      "height": 0.02201403993548769,
+      "width": 0.36239289925768486,
+      "x": 0.11807026582605698,
+      "y": 0.81403720740116
     },
     "citations": []
   },
   {
     "page": 1,
     "ref_id": 21,
-    "text": "Geographic models are often used to answer _why_ questions regarding underlying spatial phenomena such as why do voter preferences generally exhibit strong spatial dependency. In order to answer such questions, researchers have developed sophisticated spatial modeling techniques and software, such as multiscale geographically weighted regression [21], to identify the determinants of the spatial patterns of data we observe in both the human and natural environments. However, these models generate output that needs local contextual information to be interpreted properly. Without such information, advanced spatial modeling techniques do not gain their full potential. While a variety of geovisual analytics systems [19] have been developed to explore spatial statistics with the help of interactive maps and narrative annotations, these applications tend to visualize only basic statistical results, and, to our knowledge, none of them explain spatial modeling results.",
+    "text": "In our increasingly data-driven world, visualizations serve as pivotal tools for storytelling, offering clear and concise portrayals of complex datasets that cater to the swift comprehension needs of modern audiences [20]. These visual representations transform abstract numbers into insightful narratives and intuitive graphics, making complex information more accessible to the general public. However, an exclusive reliance on these visual formats inherently excludes significant segments of the audience, including those with visual impairments. Extensive research has demonstrated that a substantial number of online visualizations are not compatible with screen-reader technologies, primarily due to the absence of adequate textual alternatives [21]. This limitation not only restricts the accessibility of such visualizations for visually impaired individuals and screen reader users but also affects those requiring auditory information for various activities, such as driving or multitasking. Consequently, to bridge this accessibility gap and ensure equitable access to information, the provision of textual descriptions for visualizations is not merely important\u2014it is imperative.",
     "text_bbox": {
-      "height": 0.16227086385091147,
-      "width": 0.3922360488791871,
+      "height": 0.39134767320421004,
+      "width": 0.8235350964116115,
       "x": 0.08823529411764706,
-      "y": 0.5318788855966895
+      "y": 0.5078991591328322
     },
     "citations": [
       {
         "citation": "[21]",
         "bbox": {
-          "height": 0.011321212306167141,
-          "width": 0.024408539915396498,
-          "x": 0.20894469466863894,
-          "y": 0.5696162984828756
+          "height": 0.011321250838462752,
+          "width": 0.024408527449065565,
+          "x": 0.2375287573321972,
+          "y": 0.8879255814985796
         }
       }
     ]
   },
   {
-    "page": 1,
+    "page": 5,
     "ref_id": 21,
-    "text": "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+    "text": "- [21] A. Sharif, S. S. Chintalapati, J. O. Wobbrock, and K. Reinecke. Understanding screen-reader users' experiences with online data visualizations. In *Proceedings of the ACM Conference on Computers and Accessibility*. Association for Computing Machinery, USA, 2021. doi: 10.1145/3441852.3471202 1",
     "text_bbox": {
-      "height": 0.6809136361786814,
-      "width": 0.8186563728681577,
-      "x": 0.08823529411764706,
-      "y": 0.16568559588808002
-    },
-    "citations": [
-      {
-        "citation": "[21]",
-        "bbox": {
-          "height": 0.4256346346151949,
-          "width": 0.5457669301749835,
-          "x": 0.20894469466863894,
-          "y": 0.30775247438989506
-        }
-      }
-    ]
-  },
-  {
-    "page": 1,
-    "ref_id": 21,
-    "text": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
-    "text_bbox": {
-      "height": 0.12453341243242977,
-      "width": 0.39223629820580574,
-      "x": 0.5195342917847477,
-      "y": 0.30775247438989506
-    },
-    "citations": [
-      {
-        "citation": "[21]",
-        "bbox": {
-          "height": 0.011321212306167141,
-          "width": 0.024408577314389297,
-          "x": 0.730303047529233,
-          "y": 0.30775247438989506
-        }
-      }
-    ]
-  },
-  {
-    "page": 3,
-    "ref_id": 21,
-    "text": "- [21] H. Solo and O.-W. Kenobi. Artificial reference paper 1. _Fake Journal 1_, 34(7):1378\u20131397, 2025. doi: 10.1080/13658816.2020.1720692 1",
-    "text_bbox": {
-      "height": 0.010063248451309974,
-      "width": 0.14385240841535182,
-      "x": 0.26361649955799377,
-      "y": 0.2643317020300663
+      "height": 0.02201403993548769,
+      "width": 0.36239220114315257,
+      "x": 0.11807026582605698,
+      "y": 0.8857379489474826
     },
     "citations": []
   },
   {
     "page": 2,
     "ref_id": 22,
-    "text": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+    "text": "The World Wide Web Consortium (W3C) plays a crucial role in setting guidelines and standards for web accessibility. One of its fundamental principles is ensuring that all non-textual web content provides a text alternative that fulfills the same function. The W3C particularly stresses the importance of crafting detailed descriptions for complex images such as charts, maps, and other visualizations. The process of converting these complex images into text involves a substantial reduction in information dimension, which brings forth critical considerations regarding the specific needs and preferences of the target audience. Consequently, recent studies increasingly aim to pinpoint what aspects of these descriptions are most valued by visually impaired people [8, 12]. Concurrently, there is ongoing research exploring various design approaches for making visualizations more accessible [27]. This research includes developing innovative methods to navigate, comprehend, and interact with graphical data using non-visual interfaces like keyboards [31] and speech interfaces [22].",
     "text_bbox": {
-      "height": 0.16227086385091147,
-      "width": 0.3922359927806979,
-      "x": 0.08823530035081252,
-      "y": 0.3641817497484612
+      "height": 0.21258779968878236,
+      "width": 0.3922380746579638,
+      "x": 0.08823526295181973,
+      "y": 0.2913635330970841
     },
-    "citations": []
+    "citations": [
+      {
+        "citation": "[22]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408527449065565,
+          "x": 0.14869985393449373,
+          "y": 0.49263012047969934
+        }
+      }
+    ]
   },
   {
-    "page": 3,
+    "page": 5,
     "ref_id": 22,
-    "text": "- [22] H. Solo and L. Organa. Artificial reference paper 5. _Fake Journal 2_, 10(2):1\u20134, 2025. doi: 10.1080/13658816.2020.1720692 2",
+    "text": "- [22] A. Sharif, O. H. Wang, A. T. Muongchan, K. Reinecke, and J. O. Wobbrock. VoxLens: Making online data visualizations accessible with an interactive javascript plug-in. In *Proceedings of the ACM Conference on Human Factors in Computing Systems*. Association for Computing Machinery, USA, 2022. doi: 10.1145/3491102.3517431 2",
     "text_bbox": {
-      "height": 0.010063248451309974,
-      "width": 0.1452458699544271,
-      "x": 0.2468297871109707,
-      "y": 0.2882319749003709
+      "height": 0.0459143224388662,
+      "width": 0.36239444508272056,
+      "x": 0.5493709589141647,
+      "y": 0.08507883669149996
     },
     "citations": []
   },
   {
     "page": 2,
     "ref_id": 23,
-    "text": "of presentation-like storytelling visualizations and explored mechanisms for automatically generating annotations by integrating deeplearning feature extraction techniques with a natural language generation process [9]. Annotations in such systems are used to describe salient patterns and facilitate storytelling [23].",
+    "text": "Significant advancements in deep learning have been made towards automating the generation of text from visualizations and structured data. Chen et al. employed ResNet and LSTM architectures to generate natural language descriptions for figures in the FigCAP dataset [3], while Cheng et al. proposed a framework with transformer-based chart detection and pre-trained vision-language model [4]. Additionally, some researchers prioritize the underlying data rather than the visual representation of charts, focusing on data-to-text generation. Notable efforts in this area include the use of transformer-based models [6, 17] and encoder-decoder LSTM frameworks for analyzing time-series data [23]. In assessing the performance of these models, metrics like BLEU score [18] are commonly applied to test datasets. Despite their computational skills, deep learning models often encounter issues with generalization and credibility. Generalization problems occur when the models underperform with unfamiliar datasets, limiting their practical use. Credibility concerns stem from the models' opaque nature, which obscures the internal mechanisms and decision-making processes. To address these natural language generation issues, some research prototypes [29, 11] have adopted template-based text generation methods, which offer more transparent approaches to creating textual descriptions from visual data.",
     "text_bbox": {
-      "height": 0.061638148144038035,
-      "width": 0.38735731910256777,
-      "x": 0.08823530035081252,
-      "y": 0.2705718917076034
+      "height": 0.2754829869125829,
+      "width": 0.3922360800450144,
+      "x": 0.08823526295181973,
+      "y": 0.5056743043841738
     },
     "citations": [
       {
@@ -799,89 +795,253 @@
         "bbox": {
           "height": 0.011321212306167141,
           "width": 0.024408527449065565,
-          "x": 0.36886023228464565,
-          "y": 0.32088882754547426
+          "x": 0.34732314963745914,
+          "y": 0.6314661045267125
         }
       }
     ]
   },
   {
-    "page": 3,
+    "page": 5,
     "ref_id": 23,
-    "text": "- [23] A. Srinivasan, S. M. Drucker, A. Endert, and J. Stasko. Augmenting visualizations with interactive data facts to facilitate interpretation and communication. _IEEE Transactions on Visualization and Computer Graphics_, 25(1):672\u2013681, 2019. doi: 10.1109/TVCG.2018.2865145 2",
+    "text": "- [23] A. Spreafico and G. Carenini. Neural data-driven captioning of timeseries line charts. In *Proceedings of the International Conference on Advanced Visual Interfaces*. Association for Computing Machinery, New York, NY, USA, 2020. doi: 10.1145/3399715.3399829 2",
+    "text_bbox": {
+      "height": 0.0459143224388662,
+      "width": 0.36239245046977125,
+      "x": 0.5493709589141647,
+      "y": 0.13287938243210917
+    },
+    "citations": []
+  },
+  {
+    "page": 3,
+    "ref_id": 24,
+    "text": "To ensure that the generated text meets high standards of clarity and stylistic quality, the framework allows users to fine-tune descriptions. Users can edit or rearrange text segments effortlessly by dragging the associated tags. Furthermore, when users hover their cursor over any part of the description, an animation activates on the corresponding section of the input chart (Fig. 1C). This animation (R4), combined with visual cues, emphasizes the relevance of the text, offering a dynamic and interactive method for illustrating the relationship between textual descriptions and visual data [10, 24].",
+    "text_bbox": {
+      "height": 0.11195388948074494,
+      "width": 0.39223839254940257,
+      "x": 0.5195342917847477,
+      "y": 0.5581077036231455
+    },
+    "citations": []
+  },
+  {
+    "page": 5,
+    "ref_id": 24,
+    "text": "- [24] A. Srinivasan, S. M. Drucker, A. Endert, and J. Stasko. Augmenting visualizations with interactive data facts to facilitate interpretation and communication. *IEEE Transactions on Visualization and Computer Graphics*, 25(1):672\u2013681, 2019. doi: 10.1109/TVCG.2018.2865145 3",
     "text_bbox": {
       "height": 0.033963521321614586,
-      "width": 0.36239289925768486,
-      "x": 0.11807021596073325,
-      "y": 0.3121322477706755
+      "width": 0.3623923507391238,
+      "x": 0.5493709589141647,
+      "y": 0.1806799378057923
     },
     "citations": []
   },
   {
-    "page": 1,
-    "ref_id": 24,
-    "text": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
-    "text_bbox": {
-      "height": 0.12453341243242977,
-      "width": 0.39223629820580574,
-      "x": 0.5195342917847477,
-      "y": 0.30775247438989506
-    },
-    "citations": [
-      {
-        "citation": "[24]",
-        "bbox": {
-          "height": 0.011321212306167141,
-          "width": 0.024408577314389297,
-          "x": 0.5523817772958793,
-          "y": 0.3203320358738755
-        }
-      }
-    ]
-  },
-  {
-    "page": 3,
-    "ref_id": 24,
-    "text": "- [24] M. Takatsuka and M. Gahegan. GeoVISTA Studio: A codeless visual programming environment for geoscientific data analysis and visualization. _Computers and Geosciences_, 28(10):1131\u20131144, 2002. doi: 10.1016/S0098-3004(02)00031-6 1",
-    "text_bbox": {
-      "height": 0.03396348278931897,
-      "width": 0.36239289925768486,
-      "x": 0.11807021596073325,
-      "y": 0.371882236365116
-    },
-    "citations": []
-  },
-  {
-    "page": 2,
+    "page": 4,
     "ref_id": 25,
-    "text": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+    "text": "Future work. A common suggestion from the feedback was to make output descriptions less technical and more narrative-driven, emphasizing general trends over detailed data points. This could be achieved by improving template wording using LLMs and quantifying changes in data trends to offer users a more nuanced understanding of magnitude. Currently, the framework lists every feature of an input chart. To simplify it for general users, we can improve it by automatically recommending top insights, with these checkboxes pre-selected by default. Additionally, ongoing research into accessibility is crucial, as preferences for description length and detail vary widely [25], and no universal standard exists yet for optimizing these elements in our user interface.",
     "text_bbox": {
-      "height": 0.16227086385091147,
-      "width": 0.3922359927806979,
-      "x": 0.08823530035081252,
-      "y": 0.3641817497484612
+      "height": 0.1497946459837634,
+      "width": 0.3922361486098346,
+      "x": 0.519534241919424,
+      "y": 0.5009535587195194
     },
     "citations": [
       {
         "citation": "[25]",
         "bbox": {
           "height": 0.011321212306167141,
-          "width": 0.024408527449065565,
-          "x": 0.28473423976524204,
-          "y": 0.4396565755208333
+          "width": 0.024408577314389297,
+          "x": 0.6284935147154564,
+          "y": 0.6268474694454309
         }
       }
     ]
   },
   {
-    "page": 3,
+    "page": 5,
     "ref_id": 25,
-    "text": "- [25] J. Talbot, B. Lee, A. Kapoor, and D. S. Tan. EnsembleMatrix: Interactive visualization to support machine learning with multiple classifiers. In _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 1283\u20131292, 2009. doi: 10.1145/1518701. 1518895 2",
+    "text": "- [25] A. Stangl, M. R. Morris, and D. Gurari. \"Person, shoes, tree. is the person naked?\" what people with vision impairments want in image descriptions. In *Proceedings of the ACM Conference on Human Factors in Computing Systems*, p. 1\u201313. Association for Computing Machinery, New York, NY, USA, 2020. doi: 10.1145/3313831.3376404 4",
     "text_bbox": {
-      "height": 0.05786371712732797,
-      "width": 0.36239898282718036,
-      "x": 0.11807021596073325,
-      "y": 0.419682705041134
+      "height": 0.05786379419191919,
+      "width": 0.36239225100847633,
+      "x": 0.5493709589141647,
+      "y": 0.2523807564167061
+    },
+    "citations": []
+  },
+  {
+    "page": 3,
+    "ref_id": 26,
+    "text": "Chart Color Identification. To handle color identification, we used the list of CSS3 extended color names which consist of keyvalue pairs of hex color codes and the corresponding names. All RGB color codes, including those extracted from SVG, are converted to the CIELAB [13] color space. This transformation allows us to use the nearest neighbor algorithm [26], as CIELAB aims to approximate human vision rather than just mimic the physical attributes of colors. This ensures that the closest color name can be effectively identified for each detected color in the input chart.",
+    "text_bbox": {
+      "height": 0.061741530293166036,
+      "width": 0.39223599901386336,
+      "x": 0.5195343915153953,
+      "y": 0.8500864818842724
+    },
+    "citations": []
+  },
+  {
+    "page": 5,
+    "ref_id": 26,
+    "text": "- [26] K. Taunk, S. De, S. Verma, and A. Swetapadma. A brief review of nearest neighbor algorithm for learning and classification. In *International Conference on Intelligent Computing and Control Systems*, pp. 1255\u20131260, 2019. doi: 10.1109/ICCS45141.2019.9065747 4",
+    "text_bbox": {
+      "height": 0.04591300270774148,
+      "width": 0.3623913534326491,
+      "x": 0.5493709589141647,
+      "y": 0.3121320936414931
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 27,
+    "text": "The World Wide Web Consortium (W3C) plays a crucial role in setting guidelines and standards for web accessibility. One of its fundamental principles is ensuring that all non-textual web content provides a text alternative that fulfills the same function. The W3C particularly stresses the importance of crafting detailed descriptions for complex images such as charts, maps, and other visualizations. The process of converting these complex images into text involves a substantial reduction in information dimension, which brings forth critical considerations regarding the specific needs and preferences of the target audience. Consequently, recent studies increasingly aim to pinpoint what aspects of these descriptions are most valued by visually impaired people [8, 12]. Concurrently, there is ongoing research exploring various design approaches for making visualizations more accessible [27]. This research includes developing innovative methods to navigate, comprehend, and interact with graphical data using non-visual interfaces like keyboards [31] and speech interfaces [22].",
+    "text_bbox": {
+      "height": 0.21258779968878236,
+      "width": 0.3922380746579638,
+      "x": 0.08823526295181973,
+      "y": 0.2913635330970841
+    },
+    "citations": [
+      {
+        "citation": "[27]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408527449065565,
+          "x": 0.215933207592933,
+          "y": 0.45489270759351325
+        }
+      }
+    ]
+  },
+  {
+    "page": 5,
+    "ref_id": 27,
+    "text": "- [27] J. R. Thompson, J. J. Martinez, A. Sarikaya, E. Cutrell, and B. Lee. Chart reader: Accessible visualization experiences designed with screen reader users. In *Proceedings of the ACM Conference on Human Factors in Computing Systems*. Association for Computing Machinery, USA, 2023. doi: 10.1145/3544548.3581186 2",
+    "text_bbox": {
+      "height": 0.04591423574120107,
+      "width": 0.3623923507391238,
+      "x": 0.5493709589141647,
+      "y": 0.37188208223593355
+    },
+    "citations": []
+  },
+  {
+    "page": 3,
+    "ref_id": 28,
+    "text": "Data Facts. Data facts such as extrema, mean, standard deviation, and median are calculated from raw data. To detect outliers, we employed the Interquartile Range method [28]. This statistical technique is designed to identify anomalies by defining acceptable boundaries based on the spread of data. To analyze numerical data exhibiting a trend, our initial step is to determine whether the data exhibits a monotonic behavior. If not, we segment the data into intervals where values are either rising, falling, or remaining constant. Should the total number of these intervals exceed a specific threshold, it indicates considerable variability in the trend. In such cases, we further refine our analysis by calculating the slope for each interval, allowing us to identify and highlight those intervals that demonstrate significant changes with respect to the independent axis, thereby focusing on the most critical variations within the data.",
+    "text_bbox": {
+      "height": 0.011321212306167141,
+      "width": 0.05897008359821793,
+      "x": 0.6984079897014144,
+      "y": 0.24110377918590198
+    },
+    "citations": []
+  },
+  {
+    "page": 1,
+    "ref_id": 28,
+    "text": "- [28] H. Vinutha, B. Poornima, and B. Sagar. Detection of outliers using interquartile range technique from intrusion dataset. In *Proceedings of the International Conference on Frontiers of Intelligent Computing*, pp. 511\u2013518. Springer, 2018. 4",
+    "text_bbox": {
+      "height": 0.17485034827030066,
+      "width": 0.2105933295355903,
+      "x": 0.6243473626429739,
+      "y": 0.5842464331424597
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 29,
+    "text": "Significant advancements in deep learning have been made towards automating the generation of text from visualizations and structured data. Chen et al. employed ResNet and LSTM architectures to generate natural language descriptions for figures in the FigCAP dataset [3], while Cheng et al. proposed a framework with transformer-based chart detection and pre-trained vision-language model [4]. Additionally, some researchers prioritize the underlying data rather than the visual representation of charts, focusing on data-to-text generation. Notable efforts in this area include the use of transformer-based models [6, 17] and encoder-decoder LSTM frameworks for analyzing time-series data [23]. In assessing the performance of these models, metrics like BLEU score [18] are commonly applied to test datasets. Despite their computational skills, deep learning models often encounter issues with generalization and credibility. Generalization problems occur when the models underperform with unfamiliar datasets, limiting their practical use. Credibility concerns stem from the models' opaque nature, which obscures the internal mechanisms and decision-making processes. To address these natural language generation issues, some research prototypes [29, 11] have adopted template-based text generation methods, which offer more transparent approaches to creating textual descriptions from visual data.",
+    "text_bbox": {
+      "height": 0.2754829869125829,
+      "width": 0.3922360800450144,
+      "x": 0.08823526295181973,
+      "y": 0.5056743043841738
+    },
+    "citations": []
+  },
+  {
+    "page": 5,
+    "ref_id": 29,
+    "text": "- [29] Y. Wang, Z. Sun, H. Zhang, W. Cui, K. Xu, X. Ma, and D. Zhang. DataShot: Automatic generation of fact sheets from tabular data. *IEEE Transactions on Visualization and Computer Graphics*, 26(1):895\u2013905, 2020. doi: 10.1109/TVCG.2019.2934398 2",
+    "text_bbox": {
+      "height": 0.03396348278931897,
+      "width": 0.36239125370200165,
+      "x": 0.5493709589141647,
+      "y": 0.46748301958796956
+    },
+    "citations": []
+  },
+  {
+    "page": 3,
+    "ref_id": 30,
+    "text": "Upon the selection of a checkbox, the framework initiates templatebased text generation to fill the description component (R3) as shown in Fig. 1B. Each segment of the generated description is associated with the feature's name and is color-coordinated with the corresponding checkbox for clarity. The framework employs heuristic analysis of the features within the input chart, where each specific condition is connected to a designated text template. In charts depicting univariate data, selecting a checkbox automatically generates a preset textual description. Conversely, in charts with multivariate data, the text is dynamically updated based on the selected variables, enabling detailed comparisons both within and between groups [30]. This functionality ensures that the displayed information is tailored to the specific categories, offering personalized and pertinent descriptions that align with the user's comprehension and interaction with the data.",
+    "text_bbox": {
+      "height": 0.14969130236693104,
+      "width": 0.39223629820580574,
+      "x": 0.5195342917847477,
+      "y": 0.3691845518169981
+    },
+    "citations": [
+      {
+        "citation": "[30]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408577314389297,
+          "x": 0.6053743549421722,
+          "y": 0.507554641877762
+        }
+      }
+    ]
+  },
+  {
+    "page": 5,
+    "ref_id": 30,
+    "text": "- [30] C. Xiong, V. Setlur, B. Bach, E. Koh, K. Lin, and S. Franconeri. Visual arrangements of bar charts influence comparisons in viewer takeaways. *IEEE Transactions on Visualization and Computer Graphics*, 28(1):955\u2013965, 2022. doi: 10.1109/TVCG.2021.3114823 3",
+    "text_bbox": {
+      "height": 0.03396348278931897,
+      "width": 0.35805536407271243,
+      "x": 0.5493709589141647,
+      "y": 0.5152834882639875
+    },
+    "citations": []
+  },
+  {
+    "page": 2,
+    "ref_id": 31,
+    "text": "The World Wide Web Consortium (W3C) plays a crucial role in setting guidelines and standards for web accessibility. One of its fundamental principles is ensuring that all non-textual web content provides a text alternative that fulfills the same function. The W3C particularly stresses the importance of crafting detailed descriptions for complex images such as charts, maps, and other visualizations. The process of converting these complex images into text involves a substantial reduction in information dimension, which brings forth critical considerations regarding the specific needs and preferences of the target audience. Consequently, recent studies increasingly aim to pinpoint what aspects of these descriptions are most valued by visually impaired people [8, 12]. Concurrently, there is ongoing research exploring various design approaches for making visualizations more accessible [27]. This research includes developing innovative methods to navigate, comprehend, and interact with graphical data using non-visual interfaces like keyboards [31] and speech interfaces [22].",
+    "text_bbox": {
+      "height": 0.21258779968878236,
+      "width": 0.3922380746579638,
+      "x": 0.08823526295181973,
+      "y": 0.2913635330970841
+    },
+    "citations": [
+      {
+        "citation": "[31]",
+        "bbox": {
+          "height": 0.011321212306167141,
+          "width": 0.024408527449065565,
+          "x": 0.38765738992130055,
+          "y": 0.4800505589957189
+        }
+      }
+    ]
+  },
+  {
+    "page": 5,
+    "ref_id": 31,
+    "text": "- [31] J. Zong, C. Lee, A. Lundgard, J. Jang, D. Hajas, and A. Satyanarayan. Rich screen reader experiences for accessible data visualization. *Computer Graphics Forum*, 41(3):15\u201327, 2022. doi: 10.1111/cgf.14519 2",
+    "text_bbox": {
+      "height": 0.010063248451309974,
+      "width": 0.32999106014476104,
+      "x": 0.5493709589141647,
+      "y": 0.5750347098918877
     },
     "citations": []
   }
