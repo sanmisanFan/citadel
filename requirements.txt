@@ -1,7 +1,11 @@
 scipy
 pymupdf
+PyPDF2
 flordb>=3.4.1
 networkx
+nltk
 matplotlib
+marker-pdf
 requests
 pymed
+openai

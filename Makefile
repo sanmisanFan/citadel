@@ -1,3 +1,5 @@
+.PHONY: all clean extractor process_references raw_ref_to_json summarize gpt_relevance cit_locator second_hop citation_graph_builder paper_details generate_anomalous_json author_sus venue_sus
+
 #  _____ __    _____ _____ _____ __    _____ _____ 
 # |   __|  |  |     | __  |  _  |  |  |  _  |   | |
 # |   __|  |__|  |  |    -|   __|  |__|     | | | |
@@ -10,12 +12,6 @@ install:
 	@pip install -r requirements.txt
 	@echo "Packages installed"
 
-
-
-.PHONY: all clean extractor process_references raw_ref_to_json summarize gpt_relevance cit_locator second_hop citation_graph_builder paper_details generate_anomalous_json author_sus venue_sus
-
-# Default target: run all steps
-all: extractor process_references raw_ref_to_json summarize gpt_relevance cit_locator second_hop citation_graph_builder paper_details generate_anomalous_json author_sus venue_sus
 
 # Targets for Python scripts
 extractor:
