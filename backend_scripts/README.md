@@ -193,7 +193,7 @@ Run the scripts **in the following order** to ensure proper data flow:
   - `outputs/scc_details_with_hop1.json`
 - **Run**:
   ```bash
-  python author.sus
+  python author_sus.py
   ```
 - Note: Highlights strongly connected components of authors with suspicious citation behaviors, especially if at least one is from hop-1.
 

@@ -10,6 +10,64 @@ install:
 	@pip install -r requirements.txt
 	@echo "Packages installed"
 
+
+
+.PHONY: all clean extractor process_references raw_ref_to_json summarize gpt_relevance cit_locator second_hop citation_graph_builder paper_details generate_anomalous_json author_sus venue_sus
+
+# Default target: run all steps
+all: extractor process_references raw_ref_to_json summarize gpt_relevance cit_locator second_hop citation_graph_builder paper_details generate_anomalous_json author_sus venue_sus
+
+# Targets for Python scripts
+extractor:
+	@echo "Running extractor.py..."
+	python backend_scripts/extractor.py
+
+process_references:
+	@echo "Running process_references.py..."
+	python backend_scripts/process_references.py
+
+raw_ref_to_json:
+	@echo "Running raw_ref_to_json.py..."
+	python backend_scripts/raw_ref_to_json.py
+
+summarize:
+	@echo "Running summarize.py..."
+	python backend_scripts/summarize.py
+
+gpt_relevance:
+	@echo "Running gpt_relevance.py..."
+	python backend_scripts/gpt_relevance.py
+
+cit_locator:
+	@echo "Running cit_locator.py..."
+	python backend_scripts/cit_locator.py
+
+second_hop:
+	@echo "Running second_hop.py..."
+	python backend_scripts/second_hop.py
+
+citation_graph_builder:
+	@echo "Running citation_graph_builder.py..."
+	python backend_scripts/citation_graph_builder.py
+
+paper_details:
+	@echo "Running paper_details.py..."
+	python backend_scripts/paper_details.py
+
+generate_anomalous_json:
+	@echo "Running generate_anomalous_json.py..."
+	python backend_scripts/generate_anomalous_json.py
+
+# Targets for subdirectories (if applicable)
+author_sus:
+	@echo "Running author.sus..."
+	python backend_scripts/author_sus.py
+
+venue_sus:
+	@echo "Running venue.sus..."
+	python backend_scripts/venue_sus.py
+
+
 # Parse text
 parse: $(wildcard known_pdfs/*.pdf) parse_text.py
 	@echo "Parsing text"
@@ -63,6 +121,7 @@ clean:
 	@rm -f generate_citation_network
 	@rm -f fetch_pubmed
 	@rm -f ~/.flor/research_reviewer_main.db
+	@rm -rf outputs/*
 
 
 .PHONY: install run clean visualize_citation_network create_venv
