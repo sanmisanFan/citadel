@@ -1,4 +1,4 @@
-.PHONY: all clean extractor process_references raw_ref_to_json summarize gpt_relevance cit_locator second_hop citation_graph_builder paper_details generate_anomalous_json author_sus venue_sus
+.PHONY: all clean extractor process_references raw_ref_to_json summarize gpt_relevance cit_locator second_hop citation_graph_builder paper_details generate_anomalous_json author_sus venue_sus install run clean visualize_citation_network create_venv
 
 #  _____ __    _____ _____ _____ __    _____ _____ 
 # |   __|  |  |     | __  |  _  |  |  |  _  |   | |
@@ -6,12 +6,18 @@
 # |__|  |_____|_____|__|__|__|  |_____|__|__|_|___|
 #                                 
 
+# Create a virtual environment
+create_venv:
+		@if [ ! -d ".venv" ]; then \
+				echo "Creating virtual environment..."; \
+				python3 -m venv .venv; \
+		fi
+
 # Install the required packages
 install:
 	@echo "Installing required packages"
 	@pip install -r requirements.txt
 	@echo "Packages installed"
-
 
 # Targets for Python scripts
 extractor:
@@ -103,12 +109,6 @@ run: statcheck
 	@flask run
 
 
-# Create a virtual environment
-create_venv:
-		@if [ ! -d ".venv" ]; then \
-				echo "Creating virtual environment..."; \
-				python3 -m venv .venv; \
-		fi
 
 # Clean the project
 clean:
@@ -120,4 +120,4 @@ clean:
 	@rm -rf outputs/*
 
 
-.PHONY: install run clean visualize_citation_network create_venv
+.PHONY: 
