@@ -40,6 +40,10 @@ Run the scripts **in the following order** to ensure proper data flow:
 
 ### 1. `extractor.py`
 
+```Makefile
+make extractor
+```
+
 - Converts `test.pdf` to Markdown and JSON using the `marker` CLI tool.
 - **Input**: `test.pdf`
 - **Output**:

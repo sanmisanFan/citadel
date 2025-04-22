@@ -19,10 +19,12 @@ install:
 	@pip install -r requirements.txt
 	@echo "Packages installed"
 
+# backend_all: extractor process_references raw_ref_to_json summarize gpt_relevance cit_locator second_hop citation_graph_builder paper_details generate_anomalous_json author_sus venue_sus
+
 # Targets for Python scripts
 extractor:
 	@echo "Running extractor.py..."
-	python backend_scripts/extractor.py
+	cd backend_scripts && python extractor.py
 
 process_references:
 	@echo "Running process_references.py..."
