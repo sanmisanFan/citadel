@@ -1,7 +1,7 @@
 [
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2025-04-23T14:09:56",
+    "tstamp": "2025-04-23T14:10:20",
     "filename": "extractor.py",
     "ctx": null,
     "name": "pdf_path",
@@ -10,7 +10,7 @@
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2025-04-23T14:09:56",
+    "tstamp": "2025-04-23T14:10:20",
     "filename": "extractor.py",
     "ctx": null,
     "name": "output_dir",
@@ -19,20 +19,20 @@
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2025-04-23T14:09:56",
+    "tstamp": "2025-04-23T14:10:20",
     "filename": "extractor.py",
     "ctx": null,
     "name": "output_format",
-    "value": "markdown",
+    "value": "json",
     "type": 1
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2025-04-23T14:09:56",
+    "tstamp": "2025-04-23T14:10:20",
     "filename": "extractor.py",
     "ctx": null,
     "name": "delta::suffix",
-    "value": 20.14154100000451,
+    "value": 12.725563333005994,
     "type": 3
   }
 ]
