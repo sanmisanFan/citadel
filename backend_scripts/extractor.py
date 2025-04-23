@@ -5,6 +5,8 @@ from marker.converters.pdf import PdfConverter
 from marker.models import create_model_dict
 from marker.output import text_from_rendered
 
+import flor
+
 
 def run_marker_single(pdf_path, output_dir, output_format, disable_links=True):
     """
@@ -45,12 +47,13 @@ def run_marker_single(pdf_path, output_dir, output_format, disable_links=True):
 
 if __name__ == "__main__":
     # Define arguments
-    pdf_path = "test.pdf"  # Replace with the path to your PDF
-    output_dir = "outputs"  # Directory to save output files
+    pdf_path = flor.arg("pdf_path", "test.pdf")  # Replace with the path to your PDF
+    output_dir = flor.arg("output_dir", "outputs")  # Directory to save output files
 
     # Run with --disable_links enabled
-    run_marker_single(pdf_path, output_dir, "json")
-    run_marker_single(pdf_path, output_dir, "markdown")
+    output_format = flor.arg("output_format", "json")
+    assert output_format in ["json", "markdown"], "Invalid output format specified."
+    run_marker_single(pdf_path, output_dir, output_format)
 
     # Optional: Run with --disable_links disabled
     # run_marker_single(pdf_path, output_dir, "json", disable_links=False)
