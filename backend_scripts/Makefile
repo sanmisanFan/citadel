@@ -9,13 +9,17 @@ MARKDOWNS := $(patsubst %.pdf,$(OUTPUT_DIR)%/%.md,$(PDFS))
 .PHONY: all
 all: $(MARKDOWNS) $(JSONS)
 
+# python extractor.py --kwargs pdf_path=$< output_dir=$(OUTPUT_DIR) output_format=json
 $(OUTPUT_DIR)%/%.json: %.pdf
 	@echo "Running extraction with marker-pdf..."
-	python extractor.py --kwargs pdf_path=$< output_dir=$(OUTPUT_DIR) output_format=json
+	marker_single --pdf_path $< --output_dir $(OUTPUT_DIR) --output_format json
+	@echo "Extraction complete. JSON file created at $(OUTPUT_DIR)%/%.json"
 
+# python extractor.py --kwargs pdf_path=$< output_dir=$(OUTPUT_DIR) output_format=markdown
 $(OUTPUT_DIR)%/%.md: %.pdf
 	@echo "Running extraction with marker-pdf..."
-	python extractor.py --kwargs pdf_path=$< output_dir=$(OUTPUT_DIR) output_format=markdown
+	marker_single --pdf_path $< --output_dir $(OUTPUT_DIR) --output_format markdown
+	@echo "Extraction complete. Markdown file created at $(OUTPUT_DIR)%/%.md"
 
 
 .PHONY: clean
