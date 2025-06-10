@@ -16,7 +16,6 @@ $(OUTPUT_DIR)%/marker.done: %.pdf
 	@echo "Extraction complete. JSON and Markdown files created for $<"
 
 extract: $(OUTPUTS)
-	@echo "All files extracted successfully."
 
 clean:
 	rm -rf $(OUTPUT_DIR)
