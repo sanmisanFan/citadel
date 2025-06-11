@@ -1,26 +1,26 @@
 [
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2025-06-11T14:16:30",
+    "tstamp": "2025-06-11T14:46:51",
     "filename": "process_references.py",
     "ctx": null,
     "name": "read_dir",
-    "value": "outputs/",
+    "value": "outputs",
     "type": 1
   },
   {
     "projid": "research_reviewer_main",
-    "tstamp": "2025-06-11T14:16:30",
+    "tstamp": "2025-06-11T14:46:51",
     "filename": "process_references.py",
     "ctx": {
-      "ctx_id": -525500889214173352,
+      "ctx_id": -3794577135496427711,
       "p_ctx": null,
       "name": "document",
       "iteration": 1,
       "value": "test"
     },
     "name": "delta::suffix",
-    "value": 0.3107862990000285,
+    "value": 0.30992061799952353,
     "type": 3
   }
 ]

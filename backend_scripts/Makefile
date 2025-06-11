@@ -1,9 +1,7 @@
-# PDFS := $(wildcard input/*.pdf)
-PDFS ?= test.pdf
-OUTPUT_DIR := outputs/
-DOCS_DIR := documents/
+PDFS ?= $(wildcard documents/*.pdf)
+OUTPUT_DIR := outputs
 
-MARKDOWNS := $(patsubst %.pdf,$(OUTPUT_DIR)%/%.md,$(PDFS))
+MARKDOWNS := $(patsubst documents/%.pdf,$(OUTPUT_DIR)/%,$(PDFS))
 
 .PHONY: all extract clean process_references
 
@@ -17,7 +15,7 @@ $(OUTPUT_DIR)/references_processed: $(MARKDOWNS)
 
 process_references: $(OUTPUT_DIR)/references_processed
 	
-$(OUTPUT_DIR)%/%.md: %.pdf
+$(OUTPUT_DIR)/%: documents/%.pdf
 	marker_single --output_dir $(OUTPUT_DIR) --output_format markdown $<
 	@echo "Extraction complete. JSON and Markdown files created for $<"
 
