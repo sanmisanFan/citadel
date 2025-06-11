@@ -1,6 +1,7 @@
 # PDFS := $(wildcard input/*.pdf)
 PDFS ?= test.pdf
 OUTPUT_DIR := outputs/
+DOCS_DIR := documents/
 
 MARKDOWNS := $(patsubst %.pdf,$(OUTPUT_DIR)%/%.md,$(PDFS))
 
