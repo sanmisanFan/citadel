@@ -1,7 +1,7 @@
 scipy
 pymupdf
 PyPDF2
-flordb>=3.4.3
+flordb>=3.4.6
 networkx
 nltk
 matplotlib
