@@ -85,11 +85,6 @@ def process_markdown_file(md_file_path):
     and saves the results to a JSON file and a text file.
     """
 
-    print(md_file_path)
-    import sys
-
-    sys.exit(0)
-
     # Read the Markdown file
     with open(md_file_path, "r", encoding="utf-8") as f:
         content = f.read()
@@ -105,14 +100,11 @@ def process_markdown_file(md_file_path):
             return float("inf")
 
     sorted_keys = sorted(grouped_references.keys(), key=sort_key)
-    output_data = [
-        {"reference": ref, "texts": grouped_references[ref]} for ref in sorted_keys
-    ]
 
-    # Save grouped references to JSON
-    with open(output_json_path, "w", encoding="utf-8") as f:
-        json.dump(output_data, f, indent=2)
-    print(f"Found {len(output_data)} reference groups saved to {output_json_path}")
+    for ref in flor.loop("refkey", sorted_keys):
+        texts = grouped_references[ref]
+        for i in flor.loop("txtid", range(len(texts))):
+            flor.log("reftext", texts[i])
 
     # Extract and split the references section
     references_section = extract_references_section(content)
@@ -124,11 +116,13 @@ def process_markdown_file(md_file_path):
 
     # Save references to text file
     if references_list:
-        with open(output_txt_path, "w", encoding="utf-8") as f:
-            f.write("\n".join(references_list))
-        print(
-            f"Successfully saved {len(references_list)} references to {output_txt_path}"
-        )
+        # with open(output_txt_path, "w", encoding="utf-8") as f:
+        #     f.write("\n".join(references_list))
+        # print(
+        #     f"Successfully saved {len(references_list)} references to {output_txt_path}"
+        # )
+        for i in flor.loop("ref", range(len(references_list))):
+            flor.log("reference", references_list[i])
     else:
         print("No references found to save")
 
