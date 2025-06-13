@@ -100,11 +100,6 @@ def process_markdown_file(md_file_path):
 
     sorted_keys = sorted(grouped_references.keys(), key=sort_key)
 
-    for ref in flor.loop("refkey", sorted_keys):
-        texts = grouped_references[ref]
-        for i in flor.loop("txtid", range(len(texts))):
-            flor.log("reftext", texts[i])
-
     # Extract and split the references section
     references_section = extract_references_section(content)
     if not references_section:
@@ -114,16 +109,12 @@ def process_markdown_file(md_file_path):
         references_list = split_references(references_section)
 
     # Save references to text file
-    if references_list:
-        # with open(output_txt_path, "w", encoding="utf-8") as f:
-        #     f.write("\n".join(references_list))
-        # print(
-        #     f"Successfully saved {len(references_list)} references to {output_txt_path}"
-        # )
-        for i in flor.loop("ref", range(len(references_list))):
-            flor.log("reference", references_list[i])
-    else:
-        print("No references found to save")
+    for ref in flor.loop("refid", sorted_keys):
+        if references_list:
+            flor.log("reference", references_list[ref - 1])
+        texts = grouped_references[ref]
+        for i in flor.loop("txtid", range(len(texts))):
+            flor.log("reftext", texts[i])
 
 
 # Example usage
