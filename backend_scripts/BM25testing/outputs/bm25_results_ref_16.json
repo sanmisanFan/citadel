@@ -1,0 +1,137 @@
+{
+  "ref_id": 16,
+  "cross_encoder": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "top_k": [
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 18,
+          "paragraph": "In other related work, the potential benefits of interactive narrative tools are demonstrated by GeoTime Stories [EKHW07], in which a text-editing story interface increased analysts’ descriptive capability and the clarity of their reports. We also draw inspiration from existing research on multimedia authoring tools [ADJ _[∗]_ 10, BH05, TEF _[∗]_ 11], which suggest potential storytelling abstractions and interface paradigms. We extend this prior work by introducing toolkit support for narrative devices for data visualization.",
+          "bm25": 42.34734465870973,
+          "ce_score": -0.9665715098381042,
+          "cos_score": 0.7661579847335815,
+          "bm25_norm": 0.5349141814573463,
+          "final_score": -0.042555714733210445,
+          "final_score_0_10": -0.43,
+          "final_rank": 1
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 4,
+          "paragraph": "_Data visualization is now a popular medium for journalistic storytelling. However, current visualization tools ei-_ _ther lack support for storytelling or require significant technical expertise. Informed by interviews with journalists,_ _we introduce a model of storytelling abstractions that includes state-based scene structure, dynamic annotations_ _and decoupled coordination of multiple visualization components. We instantiate our model in Ellipsis: a system_ _that combines a domain-specific language (DSL) for storytelling with a graphical interface for story authoring._ _User interactions are automatically translated into statements in the Ellipsis DSL. By enabling storytelling with-_ _out programming, the Ellipsis interface lowers the threshold for authoring narrative visualizations. We evaluate_ _Ellipsis through example applications and user studies with award-winning journalists. Study participants find_ _Ellipsis to be a valuable prototyping tool that can empower journalists in the creation of interactive narratives._",
+          "bm25": 40.256337601217666,
+          "ce_score": -0.39653730392456055,
+          "cos_score": 0.6912156343460083,
+          "bm25_norm": 0.05613528795580363,
+          "final_score": -0.06142571415732158,
+          "final_score_0_10": -0.61,
+          "final_rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 8,
+          "paragraph": "In this paper, we contribute a model and system for authoring both linear and non-linear data stories. Through interviews and reimplementations of existing narrative visualizations, we identify a set of requisite storytelling abstractions, including state-based scene structure, coordinated visualizations, dynamic annotations and interactive triggers. We implement these abstractions in _Ellipsis_, a system for authoring narrative visualizations. Ellipsis consists of two",
+          "bm25": 40.01117373772426,
+          "ce_score": -0.6761950850486755,
+          "cos_score": 0.7536275386810303,
+          "bm25_norm": 0.0,
+          "final_score": -0.1951152801513672,
+          "final_score_0_10": -1.95,
+          "final_rank": 3
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 93,
+          "paragraph": "The first visualization is a choropleth map of the U.S. showing unemployment in 2012: darker areas have higher unemployment, and lighter areas less. The map visualization exposes parameters for pan (coords) and zoom (zoom) settings. Semantic zooming is triggered when zoom exceeds a given threshold: states split into constituent counties, and the map displays unemployment rates for each county. The second visualization is a line chart of national and regional unemployment levels, superimposed to facilitate comparison. The visualization exposes two parameters: year determines the maximum year for which data is plotted, and location determines which region’s data is shown.",
+          "bm25": 44.378548920451124,
+          "ce_score": -2.895270824432373,
+          "cos_score": 0.4467918574810028,
+          "bm25_norm": 1.0,
+          "final_score": -0.613429144024849,
+          "final_score_0_10": -6.13,
+          "final_rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 6,
+          "paragraph": "Stories are a pervasive aspect of human culture; they convey information in a memorable form that can engage and establish causal links [GP01]. Journalists, policy makers and others use stories to convey complex issues including elections, the economy and global health. For stories grounded in data, storytellers are turning to interactive narrative visualizations that combine an author-driven narrative [SH10] with interactive exploration by users. Interactive exploration can facilitate understanding by encouraging readers to actively construct and test their own questions [THL _[∗]_ 07, TMB02].",
+          "bm25": 40.34460065519344,
+          "ce_score": -2.844911575317383,
+          "cos_score": 0.7494880557060242,
+          "bm25_norm": 0.07634492195401302,
+          "final_score": -1.0248433635793444,
+          "final_score_0_10": -10.25,
+          "final_rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [16] A. Satyanarayan and J. Heer. Authoring narrative visualizations with ellipsis. _Computer Graphics Forum_, 33(3):361–370, 2014. doi: 10. 1111/cgf.12392 1",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 14,
+          "paragraph": "_Arvind Satyanarayan and Jeffrey Heer / Authoring Narrative Visualizations with Ellipsis_",
+          "bm25": 10.515281473694365,
+          "ce_score": 5.767577171325684,
+          "cos_score": 0.8465477228164673,
+          "bm25_norm": 0.5,
+          "final_score": 2.6416856408119203,
+          "final_score_0_10": 26.42,
+          "final_rank": 1
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 29,
+          "paragraph": "_Arvind Satyanarayan and Jeffrey Heer / Authoring Narrative Visualizations with Ellipsis_",
+          "bm25": 10.515281473694365,
+          "ce_score": 5.767577171325684,
+          "cos_score": 0.8465477228164673,
+          "bm25_norm": 0.5,
+          "final_score": 2.6416856408119203,
+          "final_score_0_10": 26.42,
+          "final_rank": 2
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 47,
+          "paragraph": "_Arvind Satyanarayan and Jeffrey Heer / Authoring Narrative Visualizations with Ellipsis_",
+          "bm25": 10.515281473694365,
+          "ce_score": 5.767577171325684,
+          "cos_score": 0.8465477228164673,
+          "bm25_norm": 0.5,
+          "final_score": 2.6416856408119203,
+          "final_score_0_10": 26.42,
+          "final_rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 59,
+          "paragraph": "_Arvind Satyanarayan and Jeffrey Heer / Authoring Narrative Visualizations with Ellipsis_",
+          "bm25": 10.515281473694365,
+          "ce_score": 5.767577171325684,
+          "cos_score": 0.8465477228164673,
+          "bm25_norm": 0.5,
+          "final_score": 2.6416856408119203,
+          "final_score_0_10": 26.42,
+          "final_rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 82,
+          "paragraph": "_Arvind Satyanarayan and Jeffrey Heer / Authoring Narrative Visualizations with Ellipsis_",
+          "bm25": 10.515281473694365,
+          "ce_score": 5.767577171325684,
+          "cos_score": 0.8465477228164673,
+          "bm25_norm": 0.5,
+          "final_score": 2.6416856408119203,
+          "final_score_0_10": 26.42,
+          "final_rank": 5
+        }
+      ]
+    }
+  ]
+}

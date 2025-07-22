@@ -1,0 +1,137 @@
+{
+  "ref_id": 1,
+  "cross_encoder": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 7,
+          "paragraph": "One of the main objectives in spatial analysis is to identify the nature of relationships that exist between variables. Typically this is undertaken by calculating statistics or estimating parameters with observations taken from different spatial units across a study area. The resulting statistics or parameter estimates are assumed to be constant across space although this might be a very questionable assumption to make in many circumstances. It seems reasonable to assume that there might be intrinsic differences in relationships over space or that there might be some problem with the specification of the model from which the relationships are being measured and which manifests itself in terms of spatially",
+          "bm25": 19.216981101292294,
+          "ce_score": -0.8178822994232178,
+          "cos_score": 0.5283266305923462,
+          "bm25_norm": 1.0,
+          "final_score": 0.2256797432899475,
+          "final_score_0_10": 2.26,
+          "final_rank": 1
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 2,
+          "paragraph": "_**Geographically Weighted Regression:**_ **A** _**Method**_ _**`for`**_ _**Exploring Spatial Nonstationarity**_",
+          "bm25": 5.646058112112542,
+          "ce_score": -1.7753585577011108,
+          "cos_score": 0.7288236618041992,
+          "bm25_norm": 0.025101021266011634,
+          "final_score": -0.6247105462670187,
+          "final_score_0_10": -6.25,
+          "final_rank": 2
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 4,
+          "paragraph": "_model which allows diferent relationships_ _to_ _exist at diferent points in space._ _This technique is loosely based on kernel regression. The method itself is intro-_ _duced and related issues such as the choice of a spatial weighting function are_ _discussed. Following_ _this,_ _a series of related statistical tests are considered_ _which can be described generally as tests for spatial nonstationarity. Using_ _Monte Carlo methods, techniques are proposed for investigatin_ _the null_",
+          "bm25": 12.243198526684244,
+          "ce_score": -2.3951802253723145,
+          "cos_score": 0.5904948711395264,
+          "bm25_norm": 0.49902202559700776,
+          "final_score": -0.6495115902364693,
+          "final_score_0_10": -6.5,
+          "final_rank": 3
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 3,
+          "paragraph": "_Spatial nonstationarity is a condition_ _in_ _which a simple ‘global” model cannot_ _explain the relationships between some sets of variables. The nature of the_ _model must alter over space to reflect the structure within the data._ _In_ _this_ _paper, a technique is developed, termed which attempts to capture this variation by Cali_ geogra hically weighted regression, **E** _rating a multiple regression_",
+          "bm25": 5.296643419942929,
+          "ce_score": -2.2549190521240234,
+          "cos_score": 0.6343714594841003,
+          "bm25_norm": 0.0,
+          "final_score": -0.8385304749011995,
+          "final_score_0_10": -8.39,
+          "final_rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 6,
+          "paragraph": "_non-stationa_ **`y`** _one and also for testing whether individual regression_ _**coefi-**_ _cients are stable over geographic space. These techniques are demonstrated on a_ _data set from the_ _1991_ _**`U.`**_ _**`K.`**_ _census relating car ownership rates to social class_ _and mule unemployment. The paper concludes by discussing ways in which the_ _technique can_ _be_ _extended._",
+          "bm25": 7.774566731731448,
+          "ce_score": -2.5796430110931396,
+          "cos_score": 0.4093678593635559,
+          "bm25_norm": 0.17800741393712527,
+          "final_score": -0.9019167115323375,
+          "final_score_0_10": -9.02,
+          "final_rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [1] C. Brunsdon, A. S. Fotheringham, and M. E. Charlton. Geographically weighted regression: A method for exploring spatial nonstationarity. _Geographical Analysis_, 28(4):281–298, 1996. doi: 10.1111/j. 1538-4632.1996.tb00936.x 1",
+      "top_k": [
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 8,
+          "paragraph": "_**Dr.**_ _Chris Brunsdon is lecturer in computer-based methods in the Department_ _**`of`**_ _Town_ _and County Planning, A. Stewart Fotheringham_ is _Professor_ _**`of`**_ _Quantitative Geography,_ _and Martin Charlton_ **is** _lecturer_ _in_ _GIS_ _in the Department_ _**`of`**_ _Geography, all_ _at_ _Newcastle_ _University._",
+          "bm25": 1.8247716331922663,
+          "ce_score": 0.7005066871643066,
+          "cos_score": 0.3162934184074402,
+          "bm25_norm": 0.06560372201530729,
+          "final_score": 0.3446338777141203,
+          "final_score_0_10": 3.45,
+          "final_rank": 1
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 4,
+          "paragraph": "_model which allows diferent relationships_ _to_ _exist at diferent points in space._ _This technique is loosely based on kernel regression. The method itself is intro-_ _duced and related issues such as the choice of a spatial weighting function are_ _discussed. Following_ _this,_ _a series of related statistical tests are considered_ _which can be described generally as tests for spatial nonstationarity. Using_ _Monte Carlo methods, techniques are proposed for investigatin_ _the null_",
+          "bm25": 6.019567112822311,
+          "ce_score": -5.210300922393799,
+          "cos_score": 0.6495106220245361,
+          "bm25_norm": 1.0,
+          "final_score": -1.519169306755066,
+          "final_score_0_10": -15.19,
+          "final_rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 7,
+          "paragraph": "One of the main objectives in spatial analysis is to identify the nature of relationships that exist between variables. Typically this is undertaken by calculating statistics or estimating parameters with observations taken from different spatial units across a study area. The resulting statistics or parameter estimates are assumed to be constant across space although this might be a very questionable assumption to make in many circumstances. It seems reasonable to assume that there might be intrinsic differences in relationships over space or that there might be some problem with the specification of the model from which the relationships are being measured and which manifests itself in terms of spatially",
+          "bm25": 1.5302561229739933,
+          "ce_score": -6.422150611877441,
+          "cos_score": 0.575583815574646,
+          "bm25_norm": 0.0,
+          "final_score": -2.5113018631935122,
+          "final_score_0_10": -25.11,
+          "final_rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 6,
+          "paragraph": "_non-stationa_ **`y`** _one and also for testing whether individual regression_ _**coefi-**_ _cients are stable over geographic space. These techniques are demonstrated on a_ _data set from the_ _1991_ _**`U.`**_ _**`K.`**_ _census relating car ownership rates to social class_ _and mule unemployment. The paper concludes by discussing ways in which the_ _technique can_ _be_ _extended._",
+          "bm25": 1.6929115598489939,
+          "ce_score": -7.669172763824463,
+          "cos_score": 0.5559817552566528,
+          "bm25_norm": 0.036231715121276625,
+          "final_score": -2.9939550724434816,
+          "final_score_0_10": -29.94,
+          "final_rank": 4
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 9,
+          "paragraph": "_Geographical Analysis,_ **Vol.** **28,** _No._ **4** **(October 1996)** _`0`_ **1996 Ohio State University Press** **Submitted 6/7/95. Revised version accepted 2/16/96.**",
+          "bm25": 2.3641130026086996,
+          "ce_score": -8.006692886352539,
+          "cos_score": 0.4127906560897827,
+          "bm25_norm": 0.18574273012502532,
+          "final_score": -3.068526723869525,
+          "final_score_0_10": -30.69,
+          "final_rank": 5
+        }
+      ]
+    }
+  ]
+}

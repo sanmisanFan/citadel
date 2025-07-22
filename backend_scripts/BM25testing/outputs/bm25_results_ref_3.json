@@ -1,0 +1,137 @@
+{
+  "ref_id": 3,
+  "cross_encoder": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "top_k": [
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 101,
+          "paragraph": "Research around narrative visualizations—visualizations that guide users’ interpretations using forms of visual, textual and procedural rhetoric [13, 25]—informs the design of NewsViews. Many exemplary artifacts motivating scholarly discussion come from news settings, where interactive visualizations presented with text articles help explain news",
+          "bm25": 47.15699664498494,
+          "ce_score": 1.1282094717025757,
+          "cos_score": 0.7331228256225586,
+          "bm25_norm": 0.14049817732302075,
+          "final_score": 0.5948451599047966,
+          "final_score_0_10": 5.95,
+          "final_rank": 1
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 98,
+          "paragraph": "Automation has been employed in news visualizations, yet these few solutions tend to be specific to small subsets of news articles. For example, applications generate annotated stock time series [12] or graphics to accompany articles that follow a strict narrative template [22].",
+          "bm25": 57.65388774434751,
+          "ce_score": -0.6001824140548706,
+          "cos_score": 0.6165547370910645,
+          "bm25_norm": 1.0,
+          "final_score": 0.3215825080871582,
+          "final_score_0_10": 3.22,
+          "final_rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 103,
+          "paragraph": "Typically, the annotated narrative visualizations that appear in online news contexts are the work of designers with expertise in graphics, statistics, and journalism. The time these experts spend creating graphics also makes it difficult to scale their process to the massive amounts of new and archived news content, motivating automated solutions.",
+          "bm25": 45.44112586017924,
+          "ce_score": -0.06777803599834442,
+          "cos_score": 0.7560040354728699,
+          "bm25_norm": 0.0,
+          "final_score": 0.048489189147949224,
+          "final_score_0_10": 0.48,
+          "final_rank": 3
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 99,
+          "paragraph": "We explore how a complex visualization _pipeline_, or sequence of decisions and algorithms for solving them, can be automated to scale the creation of popular types of news geovisualizations. Our work contributes to automated news visualization research by identifying key criteria for a news map generation pipeline. We describe the _NewsViews_ system, which implements this pipeline to automatically generate visualizations to accompany news articles using geographic information from multiple sources. Criteria include pairing relevant data variables to article text, finding locations of interest, choosing relevant annotations, setting the map extent, and modeling maps’ visual interestingness.",
+          "bm25": 48.125271176399394,
+          "ce_score": -2.0058999061584473,
+          "cos_score": 0.7484790682792664,
+          "bm25_norm": 0.2197820068611739,
+          "final_score": -0.6176210522048653,
+          "final_score_0_10": -6.18,
+          "final_rank": 4
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 593,
+          "paragraph": "**CONCLUSION** We present an automated pipeline for generating relevant geovisualizations given context articles. By mining a context article locations and topic, NewsViews can select from a range of data views. We demonstrate that the system is able to generate visualizations that are both “interesting” and relevant. By automating visualization construction, our system can be applied in resource constrained environments that nonetheless have a huge corpus of articles.",
+          "bm25": 46.93992226170886,
+          "ce_score": -3.3320462703704834,
+          "cos_score": 0.7126017808914185,
+          "bm25_norm": 0.12272378809518487,
+          "final_score": -1.2001964360114592,
+          "final_score_0_10": -12.0,
+          "final_rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [3] T. Gao, J. Hullman, E. Adar, B. Hecht, and N. Diakopoulos. NewsViews: An automated pipeline for creating custom geovisualizations for news. _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 3005–3014, 2014. doi: 10.1145/ 2556288.2557228 1",
+      "top_k": [
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 99,
+          "paragraph": "We explore how a complex visualization _pipeline_, or sequence of decisions and algorithms for solving them, can be automated to scale the creation of popular types of news geovisualizations. Our work contributes to automated news visualization research by identifying key criteria for a news map generation pipeline. We describe the _NewsViews_ system, which implements this pipeline to automatically generate visualizations to accompany news articles using geographic information from multiple sources. Criteria include pairing relevant data variables to article text, finding locations of interest, choosing relevant annotations, setting the map extent, and modeling maps’ visual interestingness.",
+          "bm25": 10.531242240247858,
+          "ce_score": -6.569159507751465,
+          "cos_score": 0.7469190359115601,
+          "bm25_norm": 0.0,
+          "final_score": -2.55297189950943,
+          "final_score_0_10": -25.53,
+          "final_rank": 1
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 593,
+          "paragraph": "**CONCLUSION** We present an automated pipeline for generating relevant geovisualizations given context articles. By mining a context article locations and topic, NewsViews can select from a range of data views. We demonstrate that the system is able to generate visualizations that are both “interesting” and relevant. By automating visualization construction, our system can be applied in resource constrained environments that nonetheless have a huge corpus of articles.",
+          "bm25": 13.261800588854005,
+          "ce_score": -7.989978790283203,
+          "cos_score": 0.7522735595703125,
+          "bm25_norm": 1.0,
+          "final_score": -2.62076416015625,
+          "final_score_0_10": -26.21,
+          "final_rank": 2
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 596,
+          "paragraph": "Kong, N. and Agrawala, M. Graphical Overlays: Using Layered Elements to Aid Chart Reading. _IEEE TVCG_ _18_, 12 (2012), 2631–2638. Ratinov, L., Roth, D., Downey, D., and Anderson, M. Local and Global Algorithms for Disambiguation to Wikipedia. _ACL_ (2011). Leonhardt, D., Bostock, M., Carter, S., et al. In Climbing Income Ladder, Location Matters - NYTimes.com. _The New York Times_, 2013. http://nyti.ms/1dPGWbN. Lin, S., Fortuna, J., Kulkarni, C., Stone, M., and Heer, J. Selecting Semantically-Resonant Colors for Data Visualization.",
+          "bm25": 12.5017400692516,
+          "ce_score": -9.938803672790527,
+          "cos_score": 0.36392641067504883,
+          "bm25_norm": 0.721646483038757,
+          "final_score": -3.5783055865293276,
+          "final_score_0_10": -35.78,
+          "final_rank": 3
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 595,
+          "paragraph": "Jenks, G. and Caspall, F.C. Error on Choroplethic Maps: Definition, Measurement, Reduction. _Annals of_ _the Assoc. of Amer. Geographers_ 61, 2 (1971), 217–244 Kandogan, E. Just-in-time Annotation of Clusters, Outliers, and Trends in Point-Based Data Visualizations. _IEEE VAST '12_, (2012), 73-82. Kong, N. and Agrawala, M. Perceptual Interpretation of Ink Annotations on Line Charts. _Proc. UIST ‘09_ (2009), 233–236.",
+          "bm25": 12.040962096532768,
+          "ce_score": -10.17872428894043,
+          "cos_score": 0.24258650839328766,
+          "bm25_norm": 0.5528978558746304,
+          "final_score": -3.7707821367995282,
+          "final_score_0_10": -37.71,
+          "final_rank": 4
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 103,
+          "paragraph": "Typically, the annotated narrative visualizations that appear in online news contexts are the work of designers with expertise in graphics, statistics, and journalism. The time these experts spend creating graphics also makes it difficult to scale their process to the massive amounts of new and archived news content, motivating automated solutions.",
+          "bm25": 10.876841778334853,
+          "ce_score": -10.261178970336914,
+          "cos_score": 0.5887589454650879,
+          "bm25_norm": 0.12656735142225095,
+          "final_score": -3.9823120178771316,
+          "final_score_0_10": -39.82,
+          "final_rank": 5
+        }
+      ]
+    }
+  ]
+}

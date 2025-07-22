@@ -1,0 +1,64 @@
+Title: Attention‑Gated 3‑D UNet for Brain Tumour Segmentation
+Authors: Li et al.
+
+ABSTRACT
+Accurate tumour segmentation in MRI is critical for personalised treatment planning.
+We propose an attention‑gated 3‑D UNet that balances parameter efficiency with volumetric
+context capture.  Evaluated on the BraTS 2020 dataset, the model achieves an average Dice
+of 0.89, outperforming prior 2‑D approaches while reducing inference latency by 27 %.
+
+INTRODUCTION
+Deep learning has revolutionised medical imaging, yet volumetric consistency across slices
+remains challenging.  Prior 2‑D UNets suffer from discontinuities because they process each
+slice independently.  Volumetric 3‑D networks deliver superior coherence but often carry a
+hefty parameter count.  Li et al. [3] highlighted three obstacles: limited GPU memory,
+class imbalance in tumour regions, and the need for robust intensity normalisation.
+Our work addresses these challenges by incorporating channel‑wise attention and lightweight
+residual blocks.
+
+RELATED WORK
+UNet derivatives, V‑Net, HighRes‑Net and, more recently, transformer hybrids have been
+explored for brain MRI.  Attention mechanisms, first introduced by Oktay et al., improve
+boundary delineation by gating irrelevant activations.  However, most implementations are
+2‑D, limiting volumetric context.  Concurrently, efficiency studies emphasise reduced
+parameter count for real‑time clinical deployment.
+
+METHODS
+Network Architecture  We embed channel‑wise attention gates after each encoder block.
+The backbone uses depthwise separable 3‑D convolutions, trimming parameters by 38 %
+compared with a vanilla 3‑D UNet.  The resulting model has 7.2 M parameters.
+
+Preprocessing Pipeline  Following recommendations from Li et al. [3], we apply Z‑score
+intensity normalisation and bias‑field correction.  All volumes are resampled to 1 mm³
+isotropic resolution and skull‑stripped with HD‑BET.
+
+Training Strategy  The dataset is split 80 / 20 (train/validation) in accordance with the
+evaluation protocol proposed in [3].  Class imbalance is mitigated via a weighted Dice +
+Cross‑Entropy composite loss (α = 0.7).  Training uses a batch size of 2, Dice loss,
+learning rate 0.001, Adam optimiser, and runs for 200 epochs.
+
+RESULTS
+Quantitative Evaluation  On the BraTS 2020 test set, our model achieves:
+  • Whole‑tumour Dice  0.892  
+  • Tumour‑core Dice   0.873  
+  • Enhancing‑tumour   0.854  
+These scores exceed the best 2‑D hybrid UNet by 0.03–0.05 absolute Dice.
+
+Boundary Delineation  The attention gate improves tumour margin precision, reducing
+Hausdorff 95% distance by 12 %.  Visual inspection confirms fewer false positives in
+healthy tissue.
+
+Efficiency  Parameter count drops from 11.5 M (baseline 3‑D UNet) to 7.2 M, cutting
+inference latency from 420 ms to 305 ms per volume on an RTX 2080 Ti.
+
+DISCUSSION
+Our Dice of 0.892 compares favourably to prior 3‑D CNNs that reported ≤ 0.86 under the
+same protocol.  The volumetric approach preserves inter‑slice context, delivering superior
+consistency across slices.  Nevertheless, memory constraints still limit batch size.
+Future work may explore mixed‑precision training and patch‑wise inference for deployment
+on resource‑constrained hardware.
+
+CONCLUSION
+Attention‑gated 3‑D UNet achieves state‑of‑the‑art accuracy while adding minimal
+computational cost.  By integrating efficiency considerations and robust preprocessing,
+the model is a practical candidate for clinical MRI workflows.

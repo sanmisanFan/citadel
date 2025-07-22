@@ -1,0 +1,137 @@
+{
+  "ref_id": 5,
+  "cross_encoder": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "top_k": [
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 11,
+          "paragraph": "visualization. Section 3 outlines many specific visualization rhetoric techniques based on a systematic qualitative analysis of narrative visualizations, and describes how these techniques form clusters of strategies exemplifying different rhetorical operations. Analytical devices for understanding the site of techniques and their interaction with end-user characteristics are also presented. Section 4 uses two case studies to demonstrate how an understanding of visualization rhetoric can provide insight for the analysis and design of narrative visualizations. Section 5 discusses themes emerging from our analyses and highlights areas for future study.",
+          "bm25": 43.267182719242975,
+          "ce_score": 0.0385160818696022,
+          "cos_score": 0.7083702087402344,
+          "bm25_norm": 0.4636158370329769,
+          "final_score": 0.3180513721383528,
+          "final_score_0_10": 3.18,
+          "final_rank": 1
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 8,
+          "paragraph": "In what ways can factors external to the visualization itself, such as internalized knowledge and conventions at the individual and community level, interact with the rhetorical strategies used in a narrative visualization to influence interpretation?",
+          "bm25": 48.24322230043266,
+          "ce_score": -1.0586092472076416,
+          "cos_score": 0.6211777329444885,
+          "bm25_norm": 1.0,
+          "final_score": 0.13867407441139218,
+          "final_score_0_10": 1.39,
+          "final_rank": 2
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 20,
+          "paragraph": "[2]). Semiotic theory has been introduced in HCI as an inspection method for interactive interfaces to help assess the designer-user meta-communication via the interactive artifact [17]. First applied by Jacques Bertin [4] as a tool for describing how information visualizations convey meaning, semiotic theories emphasize the communicative properties of visualizations alluded to in recent works [48]. This can serve designers seeking to better convey their intended messages [1] and increase their awareness of how design",
+          "bm25": 45.311841366639904,
+          "ce_score": -1.9902979135513306,
+          "cos_score": 0.4687327444553375,
+          "bm25_norm": 0.684016518989586,
+          "final_score": -0.40723763148020553,
+          "final_score_0_10": -4.07,
+          "final_rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 41,
+          "paragraph": "one might judge statistical significance) are lacking among most users becomes a particular risk. _Spatial ordering_ leverages reading and scanning conventions to prioritize some information [38]. _Animations_ leverage time to suggest a story, and _partial animation_ that pauses or ends on particular views prioritizes through a “climactic” effect. More subtle means of anchoring include _search_ _suggestions_ or direct or implied _goal suggestions,_ prompting the user to examine particular parts of the data rather than explore freely _._ More explicitly interactive techniques include **filtering** _,_ through search bars or menuing that constrain the data depiction based on a user’s preferences for certain information (this also appears in individualization, 3.2.5). Search bars are likely to be effective in engaging a user to explore data based on how the personalization of information increases the salience of the message being presented (e.g. [40]). Menu choices that appear by default can also help users find the most interesting comparisons or views in a visualization using the information gained by designers who have already thoroughly explored the data in the design process.",
+          "bm25": 40.646151028246024,
+          "ce_score": -1.692888855934143,
+          "cos_score": 0.47436732053756714,
+          "bm25_norm": 0.18108595222259155,
+          "final_score": -0.5391758342086047,
+          "final_score_0_10": -5.39,
+          "final_rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 16,
+          "paragraph": "[Merriam-Webster]. Similarly, the concept of perspective tends to be either neutrally or positively-connoted in literary and critical theory as a productive force in the telling of a story. The term _rhetoric_ has a complex history, but has come to be associated with persuasion as a result of the implicit motivation of the speaker to gain other adherents to a preconceived view or conclusion [7]. We use the term rhetoric to refer to the set of processes by which intended meanings are represented in the visualization via a designer’s choices and then shaped by individual end-user characteristics, contextual factors involving societal or cultural codes, and the end-user’s interaction. While this term may bring to mind negatively connoted notions of persuasion as bias common in some InfoVis literature, we seek to objectively describe the rhetorical nature of visualization design rather than to comment on the appropriateness of persuasion in visualization design.",
+          "bm25": 38.96621539988475,
+          "ce_score": -2.0792970657348633,
+          "cos_score": 0.5650549530982971,
+          "bm25_norm": 0.0,
+          "final_score": -0.7752133309841156,
+          "final_score_0_10": -7.75,
+          "final_rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [5] J. Hullman and N. Diakopoulos. Visualization rhetoric: Framing effects in narrative visualization. _IEEE Transactions on Visualization and Computer Graphics_, 17(12):2231–2240, 2011. doi: 10.1109/ TVCG.2011.255 1",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 1,
+          "paragraph": "Visualization Rhetoric: Framing Effects in Narrative Visualization",
+          "bm25": 18.38293267034423,
+          "ce_score": 3.0750961303710938,
+          "cos_score": 0.9106333255767822,
+          "bm25_norm": 1.0,
+          "final_score": 1.8211017847061157,
+          "final_score_0_10": 18.21,
+          "final_rank": 1
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 66,
+          "paragraph": "[12] D. Chong and J. N. Druckman, Framing Theory, _Ann. Rev. Polit. Sci._ vol. 10, 2007.",
+          "bm25": 12.957920749117028,
+          "ce_score": -1.6728535890579224,
+          "cos_score": 0.45263445377349854,
+          "bm25_norm": 0.2125312553968736,
+          "final_score": -0.5176123625473823,
+          "final_score_0_10": -5.18,
+          "final_rank": 2
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 104,
+          "paragraph": "[49] F. Viegas, M. Wattenberg, F. van Ham, J. Kriss, and M. McKeon.. ManyEyes: a Site for Visualization at Internet Scale. _IEEE TVCG,_ vol. 13, no. 6, 2007.",
+          "bm25": 14.23495709102124,
+          "ce_score": -6.166662693023682,
+          "cos_score": 0.4153704345226288,
+          "bm25_norm": 0.3978997337659303,
+          "final_score": -2.2261781668742446,
+          "final_score_0_10": -22.26,
+          "final_rank": 3
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 85,
+          "paragraph": "[30] T. Munzner, A Nested Model for Visualization Design and Validation. _IEEE TVCG,_ vol. 15, no. 6, 2009.",
+          "bm25": 14.438316233857414,
+          "ce_score": -7.014310359954834,
+          "cos_score": 0.5406472086906433,
+          "bm25_norm": 0.42741837284691947,
+          "final_score": -2.5379502366894093,
+          "final_score_0_10": -25.38,
+          "final_rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 110,
+          "paragraph": "[55] C. Ziemkiewicz and R. Kosara, Embedding Information Visualization Within Visual Representation, _Advances in Information and Intelligent_ _Systems_, vol. 251, Springer Verlag, 2010",
+          "bm25": 11.493755216118622,
+          "ce_score": -7.02546501159668,
+          "cos_score": 0.49409449100494385,
+          "bm25_norm": 0.0,
+          "final_score": -2.7607765555381776,
+          "final_score_0_10": -27.61,
+          "final_rank": 5
+        }
+      ]
+    }
+  ]
+}

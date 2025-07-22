@@ -1,0 +1,13 @@
+# One citation context per line
+Following the approach of Li et al. [3], we achieved an average Dice score of 0.88 on the BraTS dataset.
+As reported by Li et al. [3], the attention gate improves tumour boundary delineation.
+Building on the foundational insights presented in [3], we refined our network architecture.
+Prior research [3] highlights several challenges that informed our choice of loss function.
+As pointed out in [3], volumetric approaches often deliver superior consistency across slices.
+The preprocessing routine described in [3] influenced how we handled intensity normalisation.
+Following recommendations from [3], we opted for a 3‑D implementation instead of 2‑D variants.
+The efficiency considerations raised by Li et al. [3] motivated our reduced parameter count.
+In line with observations reported in [3], we found that deeper layers alone are insufficient.
+Earlier discussions in [3] underscored the importance of handling class imbalance in the data.
+Consistent with the broader conclusions drawn in [3], our model reduces inference latency.
+According to the evaluation protocol proposed in [3], we split the dataset into 80 / 20.

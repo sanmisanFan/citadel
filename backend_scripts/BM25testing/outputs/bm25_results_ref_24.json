@@ -1,0 +1,137 @@
+{
+  "ref_id": 24,
+  "cross_encoder": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+      "top_k": [
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 110,
+          "paragraph": "be used to seek a deeper understanding of the kinds of tools required for effective knowledge construction, including how these tools should best interact with each other, and with the user, to provide a coordinated system of analysis. With the construction of Studio, every attempt was made to understand and provide a novel programming environment to support various geoscientific data analysis and visualization. Libraries are now being developed containing many useful tools. The authors will gladly share their beans with those who wish to",
+          "bm25": 22.27628526244875,
+          "ce_score": 0.3072524666786194,
+          "cos_score": 0.24793311953544617,
+          "bm25_norm": 0.0700405409259046,
+          "final_score": 0.18271456908794467,
+          "final_score_0_10": 1.83,
+          "final_rank": 1
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 17,
+          "paragraph": "Although computational analysis has become the mainstay of many sub-disciplines in the Earth sciences, the fact remains that the most comprehensive models and understanding are available exclusively from the human expert. The argument for providing visually based analysis tools to engage and apply this expertise is by now well established. For example, Card et al. (1999) describe a comprehensive range of successful information visualization applications and two recent special issues of Computers & Geosciences have been dedicated exclusively to exploratory spatial data analysis using visualization (e.g. MacEachren and Kraak, 1997). Risch et al. (1997) describe how the integrated use of multiple, concurrent visualization techniques can improve a user’s understanding of complex and highly inter-related information, and go on to claim that ‘‘This approach enables powerful new forms of information analysis, while at the same time easing cognitive workloads by providing a visual context for the information under",
+          "bm25": 38.46501231381178,
+          "ce_score": -1.0611493587493896,
+          "cos_score": 0.291803777217865,
+          "bm25_norm": 1.0,
+          "final_score": 0.1047206342220306,
+          "final_score_0_10": 1.05,
+          "final_rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 22,
+          "paragraph": "Despite substantial progress in geospatial interoperability, the exchange of scientific models among scientists remains frustratingly difficult. Standards for exchanging data are now relatively advanced (e.g. Kottman, 1998; Goodchild et al., 1999), but it is often forgotten that our data are only useful with appropriate analytical models, yet how to make these models interoperable is unknown (Goodchild, 2000). GeoVIS",
+          "bm25": 21.057020069202352,
+          "ce_score": -2.1659960746765137,
+          "cos_score": 0.28403177857398987,
+          "bm25_norm": 0.0,
+          "final_score": -0.8379952520132066,
+          "final_score_0_10": -8.38,
+          "final_rank": 3
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 121,
+          "paragraph": "[http://www.javasoft.com/products/javabeans/software/](http://www.javasoft.com/products/javabeans/software/) Szyperski, C., 1999. Component Software: beyond ObjectOriented Programming. Addison-Wesley and ACM Press, New York, 411pp. Szyperski, C., Pfister, C., 1997. Workshop on componentoriented programming, summary. In: Muhlh. auser, M.. (Ed.), Special issues in Object-oriented Programming: Workshop Reader of 10th European Conference on object-oriented programming. Dpunkt Verlag, Heidelberg, pp. 127–130. Tang, Q., 1992. A personal visualisation system for visual analysis of area-based spatial data. In: Proceedings of the GIS/LIS ’92. American Society for Photogrammetry and Remote Sensing, Vol. 2, Bethesda, MD, pp.",
+          "bm25": 24.902219914086857,
+          "ce_score": -2.866272211074829,
+          "cos_score": 0.15633097290992737,
+          "bm25_norm": 0.22088703802560639,
+          "final_score": -1.0204322681261355,
+          "final_score_0_10": -10.2,
+          "final_rank": 4
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 15,
+          "paragraph": "the later stages of analysis and the cartographic presentation of final results. This is a serious problem; creativity is stifled by separating observation from hypothesis generation, by separating data interpretation from data manipulation and by separating visual presentation of information from quantitative analysis. Current approaches to scientific analysis can often be characterized as largely linear and unidirectional—the process of data analysis must be established before data analysis is carried out, with feedback and revision being awkward to apply (see Fig. 1). Alternatively, scientific activities would benefit from being addressed in parallel, then a formulated model can directly influence the form of analysis, evaluation can directly influence model refinement, and so forth. The resulting system might be conceptualized as a circle where the different inference mechanisms provide an integrated means of moving between inter-related activities, as shown in Fig. 2.",
+          "bm25": 27.089700983532726,
+          "ce_score": -3.263021230697632,
+          "cos_score": 0.22370445728302002,
+          "bm25_norm": 0.34654662235379025,
+          "final_score": -1.1095647353738556,
+          "final_score_0_10": -11.1,
+          "final_rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [24] M. Takatsuka and M. Gahegan. GeoVISTA Studio: A codeless visual programming environment for geoscientific data analysis and visualization. _Computers and Geosciences_, 28(10):1131–1144, 2002. doi: 10.1016/S0098-3004(02)00031-6 1",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 1,
+          "paragraph": "GeoVISTA Studio: a codeless visual programming environment for geoscientific data analysis and visualization [$]",
+          "bm25": 39.794802873025425,
+          "ce_score": 4.497405052185059,
+          "cos_score": 0.9360337257385254,
+          "bm25_norm": 1.0,
+          "final_score": 2.3925653934478763,
+          "final_score_0_10": 23.93,
+          "final_rank": 1
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 108,
+          "paragraph": "This paper describes the concepts and the use of GeoVISTA Studio—a codeless visual programming environment that supports rapid construction of sophisticated geoscientific data analysis and visualization programs. Studio avoids introducing a proprietary architecture and is built entirely on open standard Java and JavaBeans technology. In order to provide a complete, codeless visual programming environment, Studio automates several programming processes, such as dynamically creating a connection between input and output connectors. This allows geoscientists to concentrate on solving their domain problems rather than",
+          "bm25": 22.706552575876685,
+          "ce_score": 4.720942497253418,
+          "cos_score": 0.8328374624252319,
+          "bm25_norm": 0.38044067873192894,
+          "final_score": 2.161881084509855,
+          "final_score_0_10": 21.62,
+          "final_rank": 2
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 7,
+          "paragraph": "tion of new hypotheses concerning the structure of complex Earth systems (Valdez-Perez, 1999). GeoVISTA Studio (referred to as Studio in the rest of the paper) is such an environment; designed to support visual and computational exploration and analysis of complex geoscientific datasets as collaboration between computationally based and human-based expertise. The remainder of this section describes approaches to geoscientific analysis and points out some current problems and challenges, then Section 2 provides an overview of Studio, with practical use of the system and deployment options described in Section 3. Section 4 details two example applications constructed using Studio. Conclusions are then presented in Section 5.",
+          "bm25": 13.019739962516237,
+          "ce_score": 1.3134042024612427,
+          "cos_score": 0.7636039853096008,
+          "bm25_norm": 0.0292312252406035,
+          "final_score": 0.616337692135759,
+          "final_score_0_10": 6.16,
+          "final_rank": 3
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 110,
+          "paragraph": "be used to seek a deeper understanding of the kinds of tools required for effective knowledge construction, including how these tools should best interact with each other, and with the user, to provide a coordinated system of analysis. With the construction of Studio, every attempt was made to understand and provide a novel programming environment to support various geoscientific data analysis and visualization. Libraries are now being developed containing many useful tools. The authors will gladly share their beans with those who wish to",
+          "bm25": 15.661581866475476,
+          "ce_score": -4.374954700469971,
+          "cos_score": 0.7167038321495056,
+          "bm25_norm": 0.12501503858910293,
+          "final_score": -1.6158039776784863,
+          "final_score_0_10": -16.16,
+          "final_rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 8,
+          "paragraph": "0098-3004/02/$ - see front matter r 2002 Elsevier Science Ltd. All rights reserved. PII: S 0 0 9 8 - 3 0 0 4 ( 0 2 ) 0 0 0 3 1 - 6",
+          "bm25": 12.21350482690178,
+          "ce_score": -9.941906929016113,
+          "cos_score": 0.07518540322780609,
+          "bm25_norm": 0.0,
+          "final_score": -3.969244231283665,
+          "final_score_0_10": -39.69,
+          "final_rank": 5
+        }
+      ]
+    }
+  ]
+}
