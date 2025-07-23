@@ -1,0 +1,107 @@
+{
+  "ref_id": 14,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and ¨ Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+      "top_k": [
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 4,
+          "paragraph": "Regression analysis is a statistical technique for modeling a quantitative dependent variable _Y_ as a function of one or more continuous or categorical independent variables _X_ 1 to _X_ _n_ . Common applications of regression models include prediction and sensitivity analysis of _Y_ with respect to changes of independent variables. The field of sta",
+          "bm25": 63.85925839914973,
+          "ce_score": 0.15310576558113098,
+          "cos_score": 0.23830534517765045,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 18,
+          "paragraph": "selection [19], model comparison [27], and model validation [43]. Numerous measures have been proposed for quantifying relationships, many of them being limited to certain classes such as linear or monotonic relationships (e.g., Pearson correlation). As a more general indicator, the Maximum Information Coefficient (MIC) measures the mutual information of two features based on partitioning them at multiple resolutions [37]. Similar to our approach, the partitioning of MIC largely avoids structural assumptions, but we do not require a categorization of the dependent variable. More importantly, quantifying a relationship by a single value incurs a loss of information which may hide important structural aspects, e.g., due to data quality issues. For this reason, a comparison of multiple measures is advisable [1].",
+          "bm25": 60.25207733330794,
+          "ce_score": 0.03333168476819992,
+          "cos_score": 0.32457607984542847,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 50,
+          "paragraph": "Our framework has been implemented as part of Visplore, a system for visual exploration and model building. Additional views of Visplore like histograms, scatterplots, and parallel coordinates support a flexible analysis of multivariate data by linked ad-hoc selections and derived data columns. In context of model building, they enable an interactive specification of training and validation data for ensuring an appropriate data quality (e.g., by removing outliers). Regression models can be identified and managed by the user. Supported types of models currently include generalized linear models, support vector regression based on the library LIBSVM [10], and piece-wise linear regression trees. Internally, a common interface for fitting and evalu",
+          "bm25": 58.19162704274292,
+          "ce_score": 0.02531174011528492,
+          "cos_score": 0.486836314201355,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 47,
+          "paragraph": "It should be noted that the tasks involving models operate solely on point-wise predictions of these models. They neither make assumptions about _M_, nor is access to an evaluable representation of _M_ required. This makes the framework applicable to the validation and comparison of any type of quantitative prediction from any source. In the context of renewable energy, assessing and comparing forecasts of meteorological quantities from different providers is of great practical importance (e.g., day-ahead forecasts of temperature at a specific location). In this case, the prediction is based on physical rather than statistical models. Analysts in the energy sector do not have access to such models themselves, but still, the framework has successfully been applied for assessment and (composite) selection of providers.",
+          "bm25": 68.81498814034417,
+          "ce_score": 0.022181669250130653,
+          "cos_score": 0.21213221549987793,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 27,
+          "paragraph": "**3.2** **Partition-Based Visualization of Relationships** As motivated above, the key idea of our framework is to support an analysis of local variations of the conditional distribution _P_ ( _T_ _|X_ _i_ [ _,_ _X_ _j_ ]) by partitioning _X_ _i_ [ _,_ _X_ _j_ ] into disjoint regions. This section discusses considerations regarding the representation of this partitioning for visualization. As opposed to quantitative relevance measures (see Sec. 3.3), the goal of the visualization is to convey qualitative aspects of relationships such as location, shape, and significance of structures. In addition to considerations regarding the partitioning itself as discussed in Sec. 3.1, we identified two central design issues regarding partition-based visualizations of _P_ ( _T_ _|X_ _i_ [ _,_ _X_ _j_ ]): How to _layout_ regions within a plot, and how to visually _represent P_ ( _T_ _|X_ _i_ [ _,_ _X_ _j_ ]).",
+          "bm25": 67.37854956177092,
+          "ce_score": 0.005051229614764452,
+          "cos_score": 0.5081403255462646,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [14] T. Muhlbacher and H. Piringer. A partition-based framework for build- ¨ ing and validating regression models. _IEEE Transactions on Visualization and Computer Graphics_, 19(12):1962–1971, 2013. doi: 10. 1109/TVCG.2013.125 2",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 97,
+          "paragraph": "[33] H. Piringer, C. Tominski, P. Muigg, and W. Berger. A multi-threading architecture to support interactive visual exploration. _IEEE Trans. on_ _Visualization and Computer Graphics_, 15(6):1113–1120, Nov. 2009.",
+          "bm25": 18.92583410813719,
+          "ce_score": 0.03906543552875519,
+          "cos_score": 0.4502318501472473,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 88,
+          "paragraph": "[24] S. Kandel, A. Paepcke, J. Hellerstein, and J. Heer. Enterprise data analysis and visualization: An interview study. _IEEE Trans. on Visualization_ _and Computer Graphics_, 18(12):2917–2926, 2012.",
+          "bm25": 15.973575751589383,
+          "ce_score": 0.021865908056497574,
+          "cos_score": 0.5061033368110657,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 106,
+          "paragraph": "[42] A. Slingsby, J. Dykes, and J. Wood. Configuring Hierarchical Layouts to Address Research Questions. _IEEE Trans. on Visualization and Com-_ _puter Graphics_, 15(6):977–984, 2009.",
+          "bm25": 15.672492847198107,
+          "ce_score": 0.011420093476772308,
+          "cos_score": 0.3334347903728485,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 109,
+          "paragraph": "[45] T. Torsney-Weir, A. Saad, T. M¨oller, H.-C. Hege, B. Weber, and J.-M. Verbavatz. Tuner: Principled parameter finding for image segmentation algorithms using visual response surface exploration. _IEEE Trans. on_ _Visualization and Computer Graphics_, 17(12):1892–1901, 2011.",
+          "bm25": 17.395958257446004,
+          "ce_score": 0.0037294768262654543,
+          "cos_score": 0.4049075245857239,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 68,
+          "paragraph": "[4] T. Baudel and B. Broeskema. Capturing the design space of sequential space-filling layouts. _IEEE Trans. on Visualization and Computer Graph-_ _ics_, 18(12):2593–2602, Dec. 2012.",
+          "bm25": 18.703408451531097,
+          "ce_score": 0.0029596230015158653,
+          "cos_score": 0.3739698827266693,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

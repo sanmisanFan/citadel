@@ -1,0 +1,107 @@
+{
+  "ref_id": 10,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "top_k": [
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 24,
+          "paragraph": "types, only two (bivariate choropleths and choropleths with overlaid graduated symbols) have been generally used in previous literature. Bivariate map visualizations, by construction, are visually more complex and harder to comprehend in comparison to their univariate counterparts. To facilitate the analysis of relationships among variables in geographical setting, Monmonier (1990) combines spatial representation with visual statistical summaries (scatter plot matrix). In contrast, we advocate textual explanations that make the visualizations self-explaining and provide an anchor point to explore the information specifically to users lacking visualization literacy.",
+          "bm25": 53.71836709914229,
+          "ce_score": 0.1347959339618683,
+          "cos_score": 0.6710860729217529,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 11,
+          "paragraph": "guide a reader through important findings. Hence, we believe that augmenting a bivariate map visualization with a textual report and interactively linking both can significantly improve users’ abilities to understand the data. Using natural language generation technology, we could easily develop a joint automatic generation of the visualization and an accompanying text for a specific type of applications (e.g., reports of fatalities). However, we want to find more generalizable solutions that can deal with various types of geo-statistical variables (e.g., fatalities, monetary, demographic). Whereas visualizations are usually generalizable to different scenarios already, automatically produced text heavily depends on domain vocabulary and context. In contrast, we propose a text generation process that is flexible and adaptable to different variable types and geographic settings. This flexibility is achieved through a set of parameters providing metadata and context. The parameters also influence the visual encoding. Text and visualization are finally presented together in a linked interactive representation.",
+          "bm25": 54.02012136451207,
+          "ce_score": 0.11238057166337967,
+          "cos_score": 0.6946291923522949,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 31,
+          "paragraph": "Besides the interactive linking of text and visualizations, the use of word-sized graphics or sparklines (Tufte, 2006) has also been suggested for better integrating textual and visual content (Beck and Weiskopf, 2017; Goffin et al., 2014). In this paper, we use filled circles in line with text to better connect it with the map visualization as shown in Fig. 1.",
+          "bm25": 55.0598788977946,
+          "ce_score": 0.09857532382011414,
+          "cos_score": 0.6220052242279053,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 110,
+          "paragraph": "We demonstrated an approach to create bivariate geostatistical data analysis reports consisting of generated narrative accompanying a map visualization. The reports guide through the analysis results and provide additional explanations for interpreting the data. Through a number of examples, we have shown the flexibility of our approach and that it produces meaningful interactive reports for different variable types, geographic regions, and scenarios.",
+          "bm25": 52.86437110252231,
+          "ce_score": 0.06392896920442581,
+          "cos_score": 0.7740967869758606,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 12,
+          "paragraph": "We developed _interactive Map Reports_ (iMR), a Web-based tool that automatically generates a narrative and visualization to describe the analysis results for bivariate geo-statistical data. The sample shown in Fig. 1 explains fatalities caused by storm events in the USA, 2017. The reports summarize noteworthy patterns and relationships among the variables. In addition, they provide explanations on selected regions and the ability to compare any two regions of interest on demand. The color and shape encodings of variables in the text help establish quick linking of respective regions across both representations. To generate the reports, we combine data analysis techniques with natural language generation and interactive visualization. Our main scientific contributions are:",
+          "bm25": 59.15228255836376,
+          "ce_score": 0.05624782666563988,
+          "cos_score": 0.7779385447502136,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [10] S. Latif and F. Beck. Interactive map reports summarizing bivariate geographic data. _Visual Informatics_, 3(1):27–37, 2019. doi: 10.1016/j .visinf.2019.03.004 1",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 3,
+          "paragraph": "Interactive map reports summarizing bivariate geographic data",
+          "bm25": 27.939155655739384,
+          "ce_score": 0.9998763799667358,
+          "cos_score": 0.8581334352493286,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 27,
+          "paragraph": "_S. Latif and F. Beck / Visual Informatics 3 (2019) 27–37_ 29",
+          "bm25": 9.68160793602878,
+          "ce_score": 0.9977097511291504,
+          "cos_score": 0.4524060785770416,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 14,
+          "paragraph": "28 _S. Latif and F. Beck / Visual Informatics 3 (2019) 27–37_",
+          "bm25": 9.68160793602878,
+          "ce_score": 0.9969333410263062,
+          "cos_score": 0.4303310513496399,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 110,
+          "paragraph": "We demonstrated an approach to create bivariate geostatistical data analysis reports consisting of generated narrative accompanying a map visualization. The reports guide through the analysis results and provide additional explanations for interpreting the data. Through a number of examples, we have shown the flexibility of our approach and that it produces meaningful interactive reports for different variable types, geographic regions, and scenarios.",
+          "bm25": 13.010315381657612,
+          "ce_score": 0.6664596199989319,
+          "cos_score": 0.7548589706420898,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 45,
+          "paragraph": "than _Q_ 1 − 1 _._ 5 - _IQR_ or larger than _Q_ 3 + 1 _._ 5 - _IQR_ as the potential candidates for outliers. Although somewhat arbitrary, this threshold for detecting outliers works well based on their experience with many datasets.",
+          "bm25": 10.478125840514945,
+          "ce_score": 0.0005951080820523202,
+          "cos_score": 0.006479124538600445,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

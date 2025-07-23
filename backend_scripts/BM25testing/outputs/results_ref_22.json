@@ -1,0 +1,107 @@
+{
+  "ref_id": 22,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 37,
+          "paragraph": "Figure 2: A visualization of the 1990–2016 data from, recreated based on Fig. 1 from [5] and is in the public domain.",
+          "bm25": 27.104711715583534,
+          "ce_score": 0.004384586121886969,
+          "cos_score": 0.3770614266395569,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 45,
+          "paragraph": "Refer to the instructions for this section (Sec. 4). Below is an example you can follow that includes the actual supplemental material for this template: All supplemental materials are available on OSF at `[https:](https://doi.org/10.17605/OSF.IO/2NBSG)` `[//doi.org/10.17605/OSF.IO/2NBSG](https://doi.org/10.17605/OSF.IO/2NBSG)`, released under a CC BY 4.0 license. In particular, they include (1) Excel files containing the data for and analyses for creating and Fig. 2, (2) figure images in multiple formats, and (3) a full version of this paper with all appendices. Our other code is intellectual property of a corporation— Starbucks Research—and there is no feasible way to share it publicly.",
+          "bm25": 24.01472068944939,
+          "ce_score": 0.004069127142429352,
+          "cos_score": 0.23793992400169373,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 29,
+          "paragraph": "In support of transparent research practices and long-term open science goals, you are encouraged to make your supplemental materials available on a publicly-accessible repository. Please describe the available supplemental materials in the Supplemental Materials section. These details could include (1) what materials are available, (2) where they are hosted, and (3) any necessary omissions.",
+          "bm25": 22.110486843607113,
+          "ce_score": 0.002470047678798437,
+          "cos_score": 0.0715518444776535,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 9,
+          "paragraph": "For adding hyperlinks and DOIs to the list of references, you can use “ _\\_ `bibliographystyle` _{_ `abbrv-doi-hyperref-narrow` _}_ ” (instead of “ _\\_ `bibliographystyle` _{_ `abbrv` _}_ ”). It uses the doi and url fields in a bibTEX entry and turns the entire reference into a link, giving priority to the doi. The doi can be entered with or without the “ `http://dx.doi.org/` ” url part. See the examples in the bibTEX file and the bibliography at the end of this template.",
+          "bm25": 22.260849916595305,
+          "ce_score": 0.0023493950720876455,
+          "cos_score": -0.05596186965703964,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 49,
+          "paragraph": "The authors wish to thank A, B, and C. This work was supported in part by a grant from XYZ.",
+          "bm25": 21.78936805747812,
+          "ce_score": 0.0005149126518517733,
+          "cos_score": 0.13299405574798584,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [22] H. Solo and L. Organa. Artificial reference paper 5. _Fake Journal 2_, 10(2):1–4, 2025. doi: 10.1080/13658816.2020.1720692 2",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 7,
+          "paragraph": "of “ `Figure˜` _\\_ `ref` _{_ `reference` _}_ ” or similar) since “ _\\_ `cref` _{_ `reference` _}_ ” turns the entire reference into an internal link, not just the number. Examples: Fig. 2",
+          "bm25": 5.285608609628717,
+          "ce_score": 0.0026988047175109386,
+          "cos_score": 0.1522005945444107,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 51,
+          "paragraph": "[2] J. Hullman, X. Qiao, M. Correll, A. Kale, and M. Kay. In pursuit of error: A survey of uncertainty visualization evaluation. _IEEE Transac-_ _tions on Visualization and Computer Graphics_, 25(1):903–913, 2018. 2",
+          "bm25": 3.9476591678048045,
+          "ce_score": 0.0011227261275053024,
+          "cos_score": -0.03830498456954956,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 24,
+          "paragraph": "**–** paper “Marching Cubes: A High Resolution 3D Surface Construction Algorithm”",
+          "bm25": 4.4589830503767125,
+          "ce_score": 0.0007802648469805717,
+          "cos_score": 0.16625012457370758,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 32,
+          "paragraph": "_z_ j ∑ =1 j = [z] [(] [z] 2 [+] [1][)] (1)",
+          "bm25": 3.423809744412002,
+          "ce_score": 0.0006439773715101182,
+          "cos_score": 0.07560711354017258,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 48,
+          "paragraph": "Figure 2 is a partial recreation of Fig. 1 from [5], which is in the public domain.",
+          "bm25": 3.1998687000827286,
+          "ce_score": 0.0001520295481896028,
+          "cos_score": 0.13470789790153503,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

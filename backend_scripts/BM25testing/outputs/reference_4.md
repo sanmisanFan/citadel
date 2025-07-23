@@ -412,23 +412,16 @@ is important here. Smooth and fluid transitions between the cells and
 
 
 
+
+
+
+
 |STATE|Col2|Col3|Col4|Col5|
 |---|---|---|---|---|
 |Q1<br>ELECTRICITY<br>COUNTY<br>DISTRICT|Q1<br>ELECTRICITY<br>COUNTY<br>DISTRICT|Q1<br>ELECTRICITY<br>COUNTY<br>DISTRICT|Q1<br>ELECTRICITY<br>COUNTY<br>DISTRICT|Q1<br>ELECTRICITY<br>COUNTY<br>DISTRICT|
 |Q1<br>ELECTRICITY<br>COUNTY<br>DISTRICT|Q1<br><br>DISTRICT|Q1<br><br>DISTRICT|Q1<br><br>DISTRICT|Q1<br><br>DISTRICT|
 ||Q4|GAS<br>OA<br>CENSUS<br>AREA|Q2||
 |Q3<br>OTHER<br>(E.G. WOOD, OIL, COAL)|Q3<br>OTHER<br>|Q3<br>OTHER<br>|Q3<br>OTHER<br>|Q3<br>OTHER<br>|
-
-
-
-ENRGYY **E** AR
-
-
-(c) Spatial (SR4)
-
-
-
-
 
 
 
@@ -448,11 +441,20 @@ ENRGYY **E** AR
 
 
 
+
+
 (a) Temporal (SR5)
 
 
 
 (b) Attribute (SR4)
+
+
+
+ENRGYY **E** AR
+
+
+(c) Spatial (SR4)
 
 
 
@@ -876,6 +878,8 @@ and London. Revealing the geography of these relationships may be
 
 
 GOODWIN ET AL.: VISUALIZING MULTIPLE VARIABLES ACROSS SCALE AND GEOGRAPHY 605
+
+
 
 
 

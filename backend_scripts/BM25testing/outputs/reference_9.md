@@ -460,10 +460,6 @@ entity by describing its visual properties, including its shape,
 
 
 
-
-
-
-
 **Figure 2. The workflow consists of three major modules: Object Detection (OD), Natural Language Processing (NLP), and Annotation. The OD module**
 **identifies visual entities and visible texts in the chart, along with their visual properties. The NLP module parses the description to generate queries for**
 **the described entities. The Annotation module fulfills the queries to anchor each sentence to the corresponding image areas. It also renders annotations**

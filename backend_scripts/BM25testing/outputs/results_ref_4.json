@@ -1,0 +1,107 @@
+{
+  "ref_id": 4,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and ¨ Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+      "top_k": [
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 17,
+          "paragraph": "and correlations vary at different spatial scales. It complements a call for geodemographics to follow more specific, domain centred approaches utilizing the advances in geographically informed statistics, data exploration and visualization [40]. Our approaches use new visual designs that enable us to consider _where_, _how_ and at _what scale_ these variations occur concurrently so that geography can be used as a means of selecting discriminating variables. We claim three contributions to information visualization:",
+          "bm25": 76.73881549268164,
+          "ce_score": 0.0309669841080904,
+          "cos_score": 0.4881269633769989,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 49,
+          "paragraph": "tionally, our approach considers an _informed trial and error process_ – to support variable selection in our geodemographic context. Here we engage in some tasks described in vPSA. The first of these is _opti-_ _mization_, where we support analysts in finding a suitable subset of the variables by taking geography and scale into account through wellinformed, robust decisions in variable selection. The second relates to the _sensitivity_ of the observations. We support this task by including visual designs that inform on the scale and location dependency of multivariate relationships. Considering geography, scale and locality as introduced in the previous section and the overlap with vPSA enables us to introduce our work as Geo-visual Parameter Space Analysis (gvPSA).",
+          "bm25": 70.69554728243277,
+          "ce_score": 0.021921394392848015,
+          "cos_score": 0.550469160079956,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 92,
+          "paragraph": "We continue to develop our design suggestions as we apply our framework to other application areas. We are currently working to improve the quality of future survey data by identifying geographic and demographic patterns in response rates. This involves a large number of census and related variables to investigate _model rates of response_ _to household surveys_ [8] . In this context both time and attribute-based SR and SE are important in addition to spatial scale. The appropriate and informed selection of a limited set of discriminating variables is an important process in this analysis and one that can be supported by the framework, techniques and prototype software.",
+          "bm25": 70.63746423396482,
+          "ce_score": 0.013780632987618446,
+          "cos_score": 0.29693374037742615,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 37,
+          "paragraph": "[26]. Previous efforts include the use of interactive graphics to visually explore the effects of scale [9] and the results of geographicallyweighted regression [7]. But managing the effects and parameters of comparison in which spatial scale and locality vary concurrently in workflows for multivariate geographical analysis requires a broader and more structured approach. The visual exploration of this complex _parameter space_ can draw from existing work on vPSA, which aims to enable analysts faced with such spaces through visualization and interaction [38]. As such, we propose a framework for considering scale and geography in multivariate analysis with visual means and apply techniques from vPSA to investigate the effects of varying parameters associated with geography, scale and locality.",
+          "bm25": 65.12577063313672,
+          "ce_score": 0.01093252096325159,
+          "cos_score": 0.5382742285728455,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 6,
+          "paragraph": "The various ways that geographical phenomena interrelate with location and scale [1, 3, 11, 26] are at the core of geographical analysis. Despite this, multivariate geographical phenomena are frequently studied using _global_ summary statistics that do not take geography into account [13, 50]. Although these make results and analysis manageable, they hide important local variations in space, time, and scale. We investigate the effects of varying scale in multivariate comparison, establish a complex parameter space for geographic analysis and present a new theoretical framework to manage these complexities. The framework allows multiple variables, and the relationships between them to be visualized concurrently in the contexts of geography and scale. Just as visual parameter space analysis (vPSA) [38] explores the effects of varying parameter values in a model parameter",
+          "bm25": 78.41217903429879,
+          "ce_score": 0.010844958946108818,
+          "cos_score": 0.5280765891075134,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [4] S. Goodwin, J. Dykes, A. Slingsby, and C. Turkay. Visualizing multiple variables across scale and geography. _IEEE Transactions on Visualization and Computer Graphics_, 22:599–608, 1 2016. doi: 10. 1109/TVCG.2015.2467199 2",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 112,
+          "paragraph": "[16] S. Goodwin, J. Dykes, and A. Slingsby. Visualizing the effects of scale and geography in multivariate comparison. In _Conference on VAST_ _(Poster)_, Paris, France, Nov. 2014.",
+          "bm25": 27.2149764318852,
+          "ce_score": 0.9184521436691284,
+          "cos_score": 0.8051872253417969,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 143,
+          "paragraph": "[46] C. Turkay, A. Slingsby, H. Hauser, J. Wood, and J. Dykes. Attribute signatures: Dynamic visual summaries for analyzing multivariate geographical data. _IEEE TVCG_, Dec 2014.",
+          "bm25": 17.414197311859407,
+          "ce_score": 0.13197603821754456,
+          "cos_score": 0.6060466766357422,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 111,
+          "paragraph": "[15] S. Goodwin, J. Dykes, S. Jones, I. Dillingham, G. Dove, A. Duffy, A. Kachkaev, A. Slingsby, and J. Wood. Creative user-centered visualization design for energy analysts and modelers. _IEEE TVCG_, 19:2516– 2525, 2013.",
+          "bm25": 26.193772696447244,
+          "ce_score": 0.11028295010328293,
+          "cos_score": 0.48078685998916626,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 140,
+          "paragraph": "[43] A. Slingsby, J. Dykes, and J. Wood. Exploring uncertainty in geodemographics with interactive graphics. _IEEE TVCG_, 17(12):2545–2554, Dec. 2011.",
+          "bm25": 19.839489748870545,
+          "ce_score": 0.03958582505583763,
+          "cos_score": 0.5280371904373169,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 138,
+          "paragraph": "[41] A. Slingsby, J. Dykes, and J. Wood. Configuring hierarchical layouts to address research questions. _IEEE TVCG_, 15(6):977–984, Dec. 2009.",
+          "bm25": 19.839489748870545,
+          "ce_score": 0.024534622207283974,
+          "cos_score": 0.30085450410842896,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

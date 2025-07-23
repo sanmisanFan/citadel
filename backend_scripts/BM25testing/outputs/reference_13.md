@@ -3,7 +3,6 @@
 # RuleMatrix: Visualizing and Understanding Classifiers with Rules
 
 
-
 Yao Ming, Huamin Qu, _Member, IEEE_, and Enrico Bertini, _Member, IEEE_
 
 
@@ -36,7 +35,6 @@ visualization technique to help users with little expertise in machine learning 
 viewing the model as a black box, we extract a standardized rule-based knowledge representation from its input-output behavior. Then,
 we design RuleMatrix, a matrix-based visualization of rules to help users navigate and verify the rules and the black-box model. We
 evaluate the effectiveness of RuleMatrix via two use cases and a usability study.
-
 
 
 **Index Terms** —explainable machine learning, rule visualization, visual analytics
@@ -92,8 +90,9 @@ _reprints@ieee.org, and reference the Digital Object Identifier below._
 _Digital Object Identifier no. 10.1109/TVCG.2018.2864812_
 
 
-
 1077-2626 2018 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.
+
+
 
 Authorized licensed use limited to: Cornell University Library. Downloaded on September 04,2020 at 07:46:13 UTC from IEEE Xplore. Restrictions apply. See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
 

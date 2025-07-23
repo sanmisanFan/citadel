@@ -1,0 +1,107 @@
+{
+  "ref_id": 13,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22, 12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 18,
+          "paragraph": "Visualization has been increasingly used to support the understanding, diagnosis and refinement of machine learning models [1, 22]. In pioneering work by Tzeng and Ma [42], a node-linked visualization is used to understand and analyze a trained neural network’s behavior in classifying volume and text data. More recently, a number of visual analytics methods have been developed to support the analysis of complex deep neural networks",
+          "bm25": 55.72366180269931,
+          "ce_score": 0.04314563050866127,
+          "cos_score": 0.6224439144134521,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 21,
+          "paragraph": "These methods have addressed the need for better visualization tools for machine learning researchers and developers. However, little attention has been paid to help domain experts ( _e_ . _g_ ., doctors and analysts) who have little or no knowledge of machine learning or deep learning to understand and exploit this powerful technology. Krause _et al_ . [17] developed an overview-feature-item workflow to help explain machine learning models to domain experts operating a hospital. Such nonexperts in machine learning are the major target users of our solution.",
+          "bm25": 44.08439861944004,
+          "ce_score": 0.02658133953809738,
+          "cos_score": 0.5878748893737793,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 20,
+          "paragraph": "In the meantime, there are concrete demands in the industry to apply visualization to assist the development of machine learning systems [16,46]. Kahng _et al_ . [16] developed ActiVis, a visual system to support the exploration of industrial deep learning models in Facebook. Wongsuphasawat _et al_ . [46] presented the TensorFlow Graph Visualizer, an integrated visualization tool to help developers understand the complex structure of different machine learning architectures.",
+          "bm25": 46.6100956351244,
+          "ce_score": 0.02007674053311348,
+          "cos_score": 0.47727030515670776,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 15,
+          "paragraph": "Recent research has explored promising directions to make machine learning models explainable. By associating semantic information with a learned deep neural networks, researchers created visualizations that can explain the learned features of the model [38,48]. In another direction, a variety of algorithms has been developed to directly learn more interpretable and structured models, including generalized additive models [6] and decision rule lists [19,47]. Most related to our work, model-agnostic induction techniques [9,32] have been used to generate explanations for any given machine learning model.",
+          "bm25": 50.953348459780955,
+          "ce_score": 0.017198650166392326,
+          "cos_score": 0.6586478352546692,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 3,
+          "paragraph": "**Abstract** —With the growing adoption of machine learning techniques, there is a surge of research interest towards making machine learning systems more transparent and interpretable. Various visualizations have been developed to help model developers understand, diagnose, and refine machine learning models. However, a large number of potential but neglected users are the domain experts with little knowledge of machine learning but are expected to work with machine learning systems. In this paper, we present an interactive visualization technique to help users with little expertise in machine learning to understand, explore and validate predictive models. By viewing the model as a black box, we extract a standardized rule-based knowledge representation from its input-output behavior. Then, we design RuleMatrix, a matrix-based visualization of rules to help users navigate and verify the rules and the black-box model. We evaluate the effectiveness of RuleMatrix via two use cases and a usability study.",
+          "bm25": 52.35414565070596,
+          "ce_score": 0.006645329296588898,
+          "cos_score": 0.6819698214530945,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [13] Y. Ming, H. Qu, and E. Bertini. RuleMatrix: Visualizing and understanding classifiers with rules. _IEEE Transactions on Visualization and Computer Graphics_, 25(1):342–352, 2018. doi: 10.1109/TVCG. 2018.2864812 2",
+      "top_k": [
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 139,
+          "paragraph": "[16] M. Kahng, P. Y. Andrews, A. Kalro, and D. H. . Chau. Activis: Visual exploration of industry-scale deep neural network models. _IEEE Trans-_ _actions on Visualization and Computer Graphics_, 24(1):88–97, Jan 2018. doi: 10.1109/TVCG.2017.2744718",
+          "bm25": 31.73383984125038,
+          "ce_score": 0.07602939009666443,
+          "cos_score": 0.3784593939781189,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 171,
+          "paragraph": "[46] K. Wongsuphasawat, D. Smilkov, J. Wexler, J. Wilson, D. Man, D. Fritz, D. Krishnan, F. B. Vigas, and M. Wattenberg. Visualizing dataflow graphs of deep learning models in tensorflow. _IEEE Transactions on Visualization_ _and Computer Graphics_, 24(1):1–12, Jan 2018. doi: 10.1109/TVCG.2017. 2744878",
+          "bm25": 24.830115255093645,
+          "ce_score": 0.06087128072977066,
+          "cos_score": 0.39596429467201233,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 128,
+          "paragraph": "[5] A. Bilal, A. Jourabloo, M. Ye, X. Liu, and L. Ren. Do convolutional neural networks learn class hierarchy? _IEEE Transactions on Visualization and_ _Computer Graphics_, 24(1):152–162, Jan 2018. doi: 10.1109/TVCG.2017. 2744683",
+          "bm25": 24.401575225070157,
+          "ce_score": 0.055029597133398056,
+          "cos_score": 0.4894847273826599,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 163,
+          "paragraph": "[40] H. Strobelt, S. Gehrmann, H. Pfister, and A. M. Rush. Lstmvis: A tool for visual analysis of hidden state dynamics in recurrent neural networks. _IEEE Transactions on Visualization and Computer Graphics_, 24(1):667– 676, Jan 2018. doi: 10.1109/TVCG.2017.2744158",
+          "bm25": 31.863744994526556,
+          "ce_score": 0.04891269654035568,
+          "cos_score": 0.3406282663345337,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 153,
+          "paragraph": "[30] P. E. Rauber, S. G. Fadel, A. X. Falco, and A. C. Telea. Visualizing the hidden activity of artificial neural networks. _IEEE Transactions on_ _Visualization and Computer Graphics_, 23(1):101–110, Jan 2017.",
+          "bm25": 26.240757592047586,
+          "ce_score": 0.0131971575319767,
+          "cos_score": 0.4324496388435364,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "ref_id": 17,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "Most closely related to our work are the techniques that explain models from feature-level observation. Muhlbacher and ¨ Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 3,
+          "paragraph": "**Abstract** —Various case studies in different application domains have shown the great potential of visual parameter space analysis to support validating and using simulation models. In order to guide and systematize research endeavors in this area, we provide a conceptual framework for visual parameter space analysis problems. The framework is based on our own experience and a structured analysis of the visualization literature. It contains three major components: (1) a data flow model that helps to abstractly describe visual parameter space analysis problems independent of their application domain; (2) a set of four navigation strategies of how parameter space analysis can be supported by visualization tools; and (3) a characterization of six analysis tasks. Based on our framework, we analyze and classify the current body of literature, and identify three open research gaps in visual parameter space analysis. The framework and its discussion are meant to support visualization designers and researchers in characterizing parameter space analysis problems and to guide their design and evaluation processes.",
+          "bm25": 94.70730230830401,
+          "ce_score": 0.014880464412271976,
+          "cos_score": 0.6327891945838928,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 20,
+          "paragraph": "recently, researchers have started to characterize complex tasks that lie between these two extremes and that better reflect the needs of real users [17, 47, 58, 61]. Our work on tasks has similar goals. However while the previous work is targeted at generic visualization tasks, we focus on a specific set of data analysis challenges appearing around visual parameter space analysis. We argue that characterizing problems and tasks from more specific angles is indispensable for getting a more concrete understanding of users’ needs in these areas. We see our work between the extremes of narrow, domain-specific task characterizations as done in design studies [64], and generic task taxonomies. Notable examples along these lines are Lee et al.’s work on characterizing tasks for graph visualization [40], and Sedlmair et al.’s work on dimensionality reduction tasks [62].",
+          "bm25": 80.71569888871312,
+          "ce_score": 0.012414421886205673,
+          "cos_score": 0.5537876486778259,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 72,
+          "paragraph": "analysis solutions are generated. We refined and validated our framework by describing visual parameter space analysis applications from 21 papers, and are therefore confident that the framework will be descriptive for many other application examples as well. We anticipate three major benefits when describing visual parameter space analysis work through our abstract lens. First, it will help in problem-driven research, such as design studies [64], to abstractly characterize the problem and translate domain knowledge into actionable design decisions. Second, technique-driven researchers can use it to clearly characterize their goals and assumptions. Third, the framework then can facilitate the communication between researchers. Specifically, it will allow for an easier mapping between problemdriven and technique-driven work. Additionally, it will allow to compare and relate findings _across different application domains_, accelerating progress in visual parameter space analysis research in general.",
+          "bm25": 83.19311952871169,
+          "ce_score": 0.010713505558669567,
+          "cos_score": 0.6005557775497437,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 75,
+          "paragraph": "Generative Usage Finally, our framework can also be used to generate and inspire new ideas. We believe that the framework is concrete enough to depict visual parameter space analysis problems and solutions, yet general enough to inspire other areas as well. While we use our input-output data flow model to reason about simulations and algorithms it could, for instance, be similarly used to describe and analyze the visualization process itself. The idea would be to generate, that is, _sample_ many different visual encodings and then use _derived_ quality measures to spot interesting ones. Some of the pioneering work in visualization includes the study of transfer functions for volume rendering (Design Galleries [44], visualization spreadsheets [32], parallel-coordinate-style interfaces [71], VisTrails [6]), the analysis of the rendering pipeline [38], graphs [33], and the analysis of multi-variate data projections [66, 77]. Our framework gives a new theoretical lens to think about this line of work and might be used to generate new ideas that have not been thought of with the traditional perspective.",
+          "bm25": 81.70259361393977,
+          "ce_score": 0.007763121277093887,
+          "cos_score": 0.5646507740020752,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 65,
+          "paragraph": "Table 1 shows the final result of our iterative analysis of the 21 papers. The cells mark how we classified these papers according to our framework. Naturally, the papers we analyzed were not written with our theoretical lens in mind, necessitating interpretation and in-depth discussions in their analysis. We see our main contribution in summarizing, abstracting, and classifying different characteristics of visual parameter space analysis into a holistic conceptual framework based on these 21 papers. After reviewing our framework’s relation to other theoretical visualization models, we provide guidance on how to use the framework, and discuss its focus and limitations.",
+          "bm25": 82.77602578425899,
+          "ce_score": 0.005874907597899437,
+          "cos_score": 0.5919464826583862,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [17] M. Sedlmair, C. Heinzl, S. Bruckner, H. Piringer, and T. Moller. Vi- ¨ sual parameter space analysis: A conceptual framework. _IEEE Transactions on Visualization and Computer Graphics_, 20:2161–2170, 12 2014. doi: 10.1109/TVCG.2014.2346321 2",
+      "top_k": [
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 2,
+          "paragraph": "Michael Sedlmair, _Member, IEEE_, Christoph Heinzl, _Member, IEEE_, Stefan Bruckner, _Member, IEEE_, Harald Piringer, and Torsten M¨oller, _Senior Member, IEEE_",
+          "bm25": 22.577135996455475,
+          "ce_score": 0.720126748085022,
+          "cos_score": 0.23854242265224457,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 92,
+          "paragraph": "[10] S. Bergner, M. Sedlmair, T. M¨oller, S. Nabi Abdolyousefi, and A. Saad. ParaGlide: Interactive parameter space partitioning for computer simulations. _IEEE Trans. on Visualization and Computer Graphics_, 19(9):1499– 1512, 2013.",
+          "bm25": 22.955078621554094,
+          "ce_score": 0.04560499265789986,
+          "cos_score": 0.6846933364868164,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 146,
+          "paragraph": "[61] H.-J. Schulz, T. Nocke, M. Heitzler, and H. Schumann. A design space of visualization tasks. _IEEE Trans. on Visualization and Computer Graph-_ _ics_, 19(12):2366–2375, 2013.",
+          "bm25": 18.76858064164256,
+          "ce_score": 0.009250817820429802,
+          "cos_score": 0.542083203792572,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 99,
+          "paragraph": "[17] M. Brehmer and T. Munzner. A multi-level typology of abstract visualization tasks. _IEEE Trans. on Visualization and Computer Graphics_, 19(12):2376–2385, 2013.",
+          "bm25": 22.666222087969782,
+          "ce_score": 0.008972801268100739,
+          "cos_score": 0.5026960372924805,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 86,
+          "paragraph": "[4] A. Amirkhanov, C. Heinzl, M. Reiter, and E. Gr¨oller. Visual optimality and stability analysis of 3DCT scanpositions. _IEEE Trans. on Visualiza-_ _tion and Computer Graphics_, 16:1477 –1487, 2010.",
+          "bm25": 18.49885255069041,
+          "ce_score": 0.006515859626233578,
+          "cos_score": 0.48744723200798035,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

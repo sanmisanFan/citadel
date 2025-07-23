@@ -1,0 +1,107 @@
+{
+  "ref_id": 2,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+      "top_k": [
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 10,
+          "paragraph": "Multiscale Geographically Weighted Regression (MGWR)",
+          "bm25": 33.9984316784519,
+          "ce_score": 0.9379826784133911,
+          "cos_score": 0.7064668536186218,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 62,
+          "paragraph": "erties and varying levels of spatial heterogeneity across local parameter surfaces. To construct these simulated databases, the basis for the data generating process (DGP) is the GWR-like linear model in Equation (1). The spatial layout consists of a regular 25 £ 25 lattice. [3]",
+          "bm25": 33.703895663985314,
+          "ce_score": 0.1616138517856598,
+          "cos_score": 0.4454370439052582,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 169,
+          "paragraph": "The standard modeling approach is that of global regression in which the implicit assumption is that the processes generating the associations being modeled do not vary over space and in which a single parameter is estimated for each relationship specified in the model. GWR, which relaxes the assumption of spatial stationarity in the global model by allowing the parameters in the model to vary over space. The implicit assumption in this model is that all the local parameters in the model vary at the same spatial scale. Semiparametric GWR (SGWR), which allows a subset of the relationships being modeled to be fixed over space and a subset to vary spatially. The implicit assumption in this model is that the subset of parameters that vary over space do so at the same spatial scale. MGWR, which not only allows parameter estimates to vary over space but also allows the scale of this variation to vary across parameter surfaces.",
+          "bm25": 42.24366579831297,
+          "ce_score": 0.05830542743206024,
+          "cos_score": 0.5738805532455444,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 170,
+          "paragraph": "straightforward manner via bootstrapping or Monte Carlo procedures, but this will add significantly to computing time. Consequently, research also needs to be directed to developing a more formal inferential procedure possibly through the established general additive modeling framework (Hastie and Tibshirani 1990). This article establishes the merits of MGWR and demonstrates how it can be used to identify and measure the different spatial scales over which different processes operate. In doing so, it opens up many new possibilities for further empirical investigations into the role of multiscale processes. Geographers and other spatial scientists now have an alternative methodology to nonseparable Bayesian SVC models that provides an arguably more intuitive measure of the spatial scale over which different processes operate. An important question can now be investigated: How common are multiscale processes in generating the observations we measure in both our social and physical environments?",
+          "bm25": 34.60836085299534,
+          "ce_score": 0.022432932630181313,
+          "cos_score": 0.5913661122322083,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 77,
+          "paragraph": "In Simulation Design 1, the parameter surfaces are generated in a manner such that they have unequal degrees of spatial heterogeneity and are used here to examine the relative performances of GWR and MGWR with the expectation that MGWR should provide more accurate information on the processes being modeled. To check that MGWR does not provide spurious results when the processes modeled have the same degree of spatial heterogeneity, we develop a second simulation. In this case, the DGP is",
+          "bm25": 40.090632456463545,
+          "ce_score": 0.0200035497546196,
+          "cos_score": 0.37095335125923157,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [2] A. S. Fotheringham, W. Yang, and W. Kang. Multiscale geographically weighted regression (MGWR). _Annals of the American Association of Geographers_, 107(6):1247–1265, 2017. doi: 10.1080/ 24694452.2017.1352480 1",
+      "top_k": [
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 14,
+          "paragraph": "Annals of the American Association of Geographers, 107(6) 2017, pp. 1247–1265 � 2017 by American Association of Geographers Initial submission, May 2016; revised submissions, November 2016 and March 2017; final acceptance, May 2017 Published by Taylor & Francis, LLC.",
+          "bm25": 12.133163543247075,
+          "ce_score": 0.9975640773773193,
+          "cos_score": 0.4784300923347473,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 0,
+          "paragraph": "**Annals of the American Association of Geographers**",
+          "bm25": 13.14677066220642,
+          "ce_score": 0.9852590560913086,
+          "cos_score": 0.4151920676231384,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 4,
+          "paragraph": "**To cite this article:** A. Stewart Fotheringham, Wenbai Yang & Wei Kang (2017) Multiscale Geographically Weighted Regression (MGWR), Annals of the American Association of [Geographers, 107:6, 1247-1265, DOI: 10.1080/24694452.2017.1352480](http://www.tandfonline.com/action/showCitFormats?doi=10.1080/24694452.2017.1352480)",
+          "bm25": 21.613971413724304,
+          "ce_score": 0.9136019349098206,
+          "cos_score": 0.9586383700370789,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 11,
+          "paragraph": "A. Stewart Fotheringham,* Wenbai Yang, [y] and Wei Kang*",
+          "bm25": 13.682648726290315,
+          "ce_score": 0.8295420408248901,
+          "cos_score": 0.105019211769104,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 140,
+          "paragraph": "Figure 10. Simulation 1: Time for each of the 100 runs for geographically weighted regression and multiscale geographically weighted regression models. GWR D geographically weighted regression; MGWR D multiscale geographically weighted regression.",
+          "bm25": 11.381810358775704,
+          "ce_score": 0.06064683943986893,
+          "cos_score": 0.5850582122802734,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

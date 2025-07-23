@@ -1,0 +1,107 @@
+{
+  "ref_id": 6,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "Support for a variety of spatial models is integrated into the most widely used geographic information systems (GIS). However, these systems and notebooks do not support integrated external knowledge sources to help contextualize models [6]. They also require analysts to judiciously choose the proper tools at every stage of the analytical pipeline to build a well-trained model. This process necessitates a solid foundation in geographical concepts and can be time-consuming, even for seasoned analysts. Our goal is to enhance the spatial modeling process through a deliberately designed userfriendly workflow and automatically generated explanatory narratives guided by domain experts to promote the understanding of local contextual information from models. Our work focuses on improving model explainability, enabling interactive report authoring, and supporting contextualization through narrative generation. This is important in local models such as GWR and MGWR because the main output from such models is a set of local parameter estimates from each process being modeled, and the spatial variation in these estimates needs to be explained in terms of the contextualized environment of each location by providing additional contextual information for users.",
+      "top_k": [
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 45,
+          "paragraph": "Refer to the instructions for this section (Sec. 4). Below is an example you can follow that includes the actual supplemental material for this template: All supplemental materials are available on OSF at `[https:](https://doi.org/10.17605/OSF.IO/2NBSG)` `[//doi.org/10.17605/OSF.IO/2NBSG](https://doi.org/10.17605/OSF.IO/2NBSG)`, released under a CC BY 4.0 license. In particular, they include (1) Excel files containing the data for and analyses for creating and Fig. 2, (2) figure images in multiple formats, and (3) a full version of this paper with all appendices. Our other code is intellectual property of a corporation— Starbucks Research—and there is no feasible way to share it publicly.",
+          "bm25": 44.840055694223906,
+          "ce_score": 0.04424299672245979,
+          "cos_score": 0.2042299211025238,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 11,
+          "paragraph": "**Note 2:** the “ `-narrow` ” versions of the bibliography style use the font “PTSansNarrow-TLF” for typesetting the DOIs in a compact way. This font needs to be available on your L [A] TEX system. [It is part of the “paratype” package, and](https://www.ctan.org/pkg/paratype) many distributions (such as MikTeX) have it automatically installed. If you do not have this package yet and want to use",
+          "bm25": 46.89736325557298,
+          "ce_score": 0.013943897560238838,
+          "cos_score": -0.019017551094293594,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 49,
+          "paragraph": "The authors wish to thank A, B, and C. This work was supported in part by a grant from XYZ.",
+          "bm25": 45.323095127947624,
+          "ce_score": 0.0021030455827713013,
+          "cos_score": 0.026120338588953018,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 8,
+          "paragraph": "The style automatically looks for image files with the correct extension (eps for regular L [A] TEX; pdf, png, and jpg for pdfL [A] TEX), in a set of given subfolders (figures/, pictures/, images/). It is thus sufficient to use “ _\\_ `includegraphics` _{_ `CypressView` _}_ ” (instead of “ _\\_ `includegraphics` _{_ `pictures/CypressView.jpg` _}_ ”).",
+          "bm25": 36.64278110490044,
+          "ce_score": 0.0017399671487510204,
+          "cos_score": 0.05444689095020294,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 18,
+          "paragraph": "Do not trust bibliographic data from other services such as Mendeley.com, Google Scholar, or similar; these are even more likely to be incorrect or incomplete.",
+          "bm25": 36.027850496050256,
+          "ce_score": 0.0002962459111586213,
+          "cos_score": 0.07500892877578735,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [6] J. Hutt. Artificial reference paper 4. _Fake Journal 2_, 10(2):1–4, 2025. doi: 10.1080/13658816.2020.1720692 1",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 51,
+          "paragraph": "[2] Chewbacca. Artificial reference paper hop-2 no.5. _Fake Journal 2_, 10(2):1–4, 2020. 2",
+          "bm25": 28.713294623711317,
+          "ce_score": 0.07946594059467316,
+          "cos_score": 0.5537310242652893,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 54,
+          "paragraph": "[5] D. Vader. Artificial reference paper hop-2 no.4. _Fake Journal 1_, 10(2):1–4, 2023. 2, 3",
+          "bm25": 22.873148922025198,
+          "ce_score": 0.03805482015013695,
+          "cos_score": 0.5646088123321533,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 53,
+          "paragraph": "[4] J. P. Tennant and T. Ross-Hellauer. The limitations to our understanding of peer review. _Research integrity and peer review_, 5(1):6, 2020. 3",
+          "bm25": 4.276365598669426,
+          "ce_score": 0.002846276154741645,
+          "cos_score": 0.18757173418998718,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 24,
+          "paragraph": "**–** paper “Marching Cubes: A High Resolution 3D Surface Construction Algorithm”",
+          "bm25": 3.538967443055376,
+          "ce_score": 0.0005056216032244265,
+          "cos_score": 0.12464310228824615,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 47,
+          "paragraph": "Figure 1 image credit: Scott Miller / Special to the Vancouver Sun, January 22, 2009, page A6.",
+          "bm25": 3.1885746269112794,
+          "ce_score": 0.00010816408757818863,
+          "cos_score": 0.08910965919494629,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

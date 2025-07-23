@@ -1,0 +1,157 @@
+{
+  "ref_id": 18,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+      "top_k": [
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 2,
+          "paragraph": "**Abstract** —Data visualization is regularly promoted for its ability to reveal stories within data, yet these “data stories” differ in important ways from traditional forms of storytelling. Storytellers, especially online journalists, have increasingly been integrating visualizations into their narratives, in some cases allowing the visualization to function in place of a written story. In this paper, we systematically review the design space of this emerging class of visualizations. Drawing on case studies from news media to visualization research, we identify distinct genres of narrative visualization. We characterize these design differences, together with interactivity and messaging, in terms of the balance between the narrative flow intended by the author (imposed by graphical elements and the interface) and story discovery on the part of the reader (often through interactive exploration). Our framework suggests design strategies for narrative visualization, including promising under-explored approaches to journalistic storytelling and educational media.",
+          "bm25": 45.66344325512693,
+          "ce_score": 0.4295574724674225,
+          "cos_score": 0.6568372249603271,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 46,
+          "paragraph": "A related topic is reader engagement. The examples we analyzed tended to have “hard leads”—brief summaries describing the content of the visualization—whereas journalism often adopts more mysterious leads [2] to promote engagement. How can “stimulating default views” for visualizations best capture readers’ attention and personally engage them in the world of the narrative? Moreover, narrative visualizations put data at the forefront of storytelling, yet others [2, 7] have noted that a myopic focus on data may be a stumbling block to narrative flow and reader engagement. The strategies discussed above suggest ways to incorporate statistics in concert with narrative, potentially enhancing readers’ engagement with data. As Blundell [2] notes, _“We’re supposed to be tellers of tales as well as purveyors of_ _facts. When we don’t live up to that responsibility we don’t get read.”_",
+          "bm25": 33.74671304385991,
+          "ce_score": 0.18945366144180298,
+          "cos_score": 0.5918708443641663,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 33,
+          "paragraph": "[20] provides a robust taxonomy of visual elements that contribute to storytelling. Our ideas evolved as we analyzed more examples and observed emerging patterns. These observations allowed us to further organize the design features into increasingly coherent categories, such as genre types for narrative visualizations and different methods of integrating visualizations with accompanying text. Our final categories depict unique patterns for narrative visualization, distinguishing itself from other forms visual storytelling. For example, interactive visualizations allow users to manipulate the display, introducing design decisions that do not apply to non-interactive media. We represent the design space in a table that relates each example to specific design strategies observed across the dataset. In total we analyzed 58 visualizations using the case study method illustrated in Section 3. The examples were taken from online journalism (71%), business (20%), and visualization research (9%). We optimized our",
+          "bm25": 37.14443249955269,
+          "ce_score": 0.13798008859157562,
+          "cos_score": 0.6211926937103271,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 44,
+          "paragraph": "In this paper, we conducted a design space analysis of narrative visualization—visualizations intended to convey stories—based on a corpus of 58 collected examples from online journalism, graphic design, comics, business, art, and visualization research. Our analysis highlights visual and interactive devices that support storytelling with data, and we identify distinct genres of visualization using narrative structures such as the martini glass, interactive slideshow, and drill-down story. In particular, we note a central concern in the design of narrative visualizations: the balance between author-driven",
+          "bm25": 55.41579463003418,
+          "ce_score": 0.1171896904706955,
+          "cos_score": 0.6613702774047852,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 21,
+          "paragraph": "ensure that the viewer does not lose his place in the narrative during this exploratory stage, with orientation provided by the consistency of the visual platform, the updating progress bar, and the timeline slider.",
+          "bm25": 37.97518959246123,
+          "ce_score": 0.009747866541147232,
+          "cos_score": 0.3960992693901062,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 2,
+          "paragraph": "**Abstract** —Data visualization is regularly promoted for its ability to reveal stories within data, yet these “data stories” differ in important ways from traditional forms of storytelling. Storytellers, especially online journalists, have increasingly been integrating visualizations into their narratives, in some cases allowing the visualization to function in place of a written story. In this paper, we systematically review the design space of this emerging class of visualizations. Drawing on case studies from news media to visualization research, we identify distinct genres of narrative visualization. We characterize these design differences, together with interactivity and messaging, in terms of the balance between the narrative flow intended by the author (imposed by graphical elements and the interface) and story discovery on the part of the reader (often through interactive exploration). Our framework suggests design strategies for narrative visualization, including promising under-explored approaches to journalistic storytelling and educational media.",
+          "bm25": 62.708449837742485,
+          "ce_score": 0.8181847929954529,
+          "cos_score": 0.7788002490997314,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 44,
+          "paragraph": "In this paper, we conducted a design space analysis of narrative visualization—visualizations intended to convey stories—based on a corpus of 58 collected examples from online journalism, graphic design, comics, business, art, and visualization research. Our analysis highlights visual and interactive devices that support storytelling with data, and we identify distinct genres of visualization using narrative structures such as the martini glass, interactive slideshow, and drill-down story. In particular, we note a central concern in the design of narrative visualizations: the balance between author-driven",
+          "bm25": 60.737602864265526,
+          "ce_score": 0.7262440323829651,
+          "cos_score": 0.7727553248405457,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 33,
+          "paragraph": "[20] provides a robust taxonomy of visual elements that contribute to storytelling. Our ideas evolved as we analyzed more examples and observed emerging patterns. These observations allowed us to further organize the design features into increasingly coherent categories, such as genre types for narrative visualizations and different methods of integrating visualizations with accompanying text. Our final categories depict unique patterns for narrative visualization, distinguishing itself from other forms visual storytelling. For example, interactive visualizations allow users to manipulate the display, introducing design decisions that do not apply to non-interactive media. We represent the design space in a table that relates each example to specific design strategies observed across the dataset. In total we analyzed 58 visualizations using the case study method illustrated in Section 3. The examples were taken from online journalism (71%), business (20%), and visualization research (9%). We optimized our",
+          "bm25": 48.98574326607298,
+          "ce_score": 0.31549522280693054,
+          "cos_score": 0.7099888324737549,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 46,
+          "paragraph": "A related topic is reader engagement. The examples we analyzed tended to have “hard leads”—brief summaries describing the content of the visualization—whereas journalism often adopts more mysterious leads [2] to promote engagement. How can “stimulating default views” for visualizations best capture readers’ attention and personally engage them in the world of the narrative? Moreover, narrative visualizations put data at the forefront of storytelling, yet others [2, 7] have noted that a myopic focus on data may be a stumbling block to narrative flow and reader engagement. The strategies discussed above suggest ways to incorporate statistics in concert with narrative, potentially enhancing readers’ engagement with data. As Blundell [2] notes, _“We’re supposed to be tellers of tales as well as purveyors of_ _facts. When we don’t live up to that responsibility we don’t get read.”_",
+          "bm25": 44.48076132128279,
+          "ce_score": 0.22885118424892426,
+          "cos_score": 0.6878714561462402,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 6,
+          "paragraph": "Storytelling and visual expression are integral parts of human culture; storytelling has even been referred to as _“the world’s second-oldest_ _profession”_ [12]. Without summarizing millennia of achievement, we describe a few of the key concepts informing narrative visualization.",
+          "bm25": 47.65645268483706,
+          "ce_score": 0.21626704931259155,
+          "cos_score": 0.6614362001419067,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [18] E. Segel and J. Heer. Narrative visualization: Telling stories with data. _IEEE Transactions on Visualization and Computer Graphics_, 16(6):1139–1148, 2010. doi: 10.1109/TVCG.2010.179 1",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 1,
+          "paragraph": "Narrative Visualization: Telling Stories with Data",
+          "bm25": 14.603764818076604,
+          "ce_score": 0.999663233757019,
+          "cos_score": 0.8190616369247437,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 61,
+          "paragraph": "[14] J. Heer and G. G. Robertson. Animated transitions in statistical data graphics. _IEEE Trans. Vis. and Comp. Graphics_, 13(6):1240–1247, 2007.",
+          "bm25": 9.712482723835281,
+          "ce_score": 0.10965215414762497,
+          "cos_score": 0.483561635017395,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 60,
+          "paragraph": "[13] J. Heer, J. Mackinlay, C. Stolte, and M. Agrawala. Graphical histories for visualization: Supporting analysis, communication, and evaluation. _IEEE Trans. Vis. and Comp. Graphics_, 14(6):1189–1196, 2008.",
+          "bm25": 13.148869675192314,
+          "ce_score": 0.049488797783851624,
+          "cos_score": 0.6739253997802734,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 72,
+          "paragraph": "[25] F. B. Vi´egas, M. Wattenberg, F. van Ham, J. Kriss, and M. McKeon. Many Eyes: a site for visualization at internet scale. _IEEE Trans. Vis. and_ _Comp. Graphics_, 13(6):1121–1128, 2007.",
+          "bm25": 7.859530308802295,
+          "ce_score": 0.009221582673490047,
+          "cos_score": 0.5673436522483826,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 54,
+          "paragraph": "[7] L. Danzico. Telling stories using data: An interview with Jonathan Harris. http://bit.ly/jh-int, 2008.",
+          "bm25": 11.184017908351407,
+          "ce_score": 0.003351667197421193,
+          "cos_score": 0.5630534291267395,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

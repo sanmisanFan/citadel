@@ -1,0 +1,107 @@
+{
+  "ref_id": 19,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "Geographic models are often used to answer _why_ questions regarding underlying spatial phenomena such as why do voter preferences generally exhibit strong spatial dependency. In order to answer such questions, researchers have developed sophisticated spatial modeling techniques and software, such as multiscale geographically weighted regression [21], to identify the determinants of the spatial patterns of data we observe in both the human and natural environments. However, these models generate output that needs local contextual information to be interpreted properly. Without such information, advanced spatial modeling techniques do not gain their full potential. While a variety of geovisual analytics systems [19] have been developed to explore spatial statistics with the help of interactive maps and narrative annotations, these applications tend to visualize only basic statistical results, and, to our knowledge, none of them explain spatial modeling results.",
+      "top_k": [
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 45,
+          "paragraph": "Refer to the instructions for this section (Sec. 4). Below is an example you can follow that includes the actual supplemental material for this template: All supplemental materials are available on OSF at `[https:](https://doi.org/10.17605/OSF.IO/2NBSG)` `[//doi.org/10.17605/OSF.IO/2NBSG](https://doi.org/10.17605/OSF.IO/2NBSG)`, released under a CC BY 4.0 license. In particular, they include (1) Excel files containing the data for and analyses for creating and Fig. 2, (2) figure images in multiple formats, and (3) a full version of this paper with all appendices. Our other code is intellectual property of a corporation— Starbucks Research—and there is no feasible way to share it publicly.",
+          "bm25": 21.943416064613352,
+          "ce_score": 0.004608445800840855,
+          "cos_score": 0.1641630232334137,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 30,
+          "paragraph": "In the Figure Credits section at the end of the paper, you should credit the original sources of any figures that were reproduced or modified. Include any license details necessary, as well as links to the original materials whenever possible. For credits to figures from academic papers, include a citation that is listed in the **References** section. An example is provided below.",
+          "bm25": 21.053386064688794,
+          "ce_score": 0.003875032067298889,
+          "cos_score": 0.09905445575714111,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 11,
+          "paragraph": "**Note 2:** the “ `-narrow` ” versions of the bibliography style use the font “PTSansNarrow-TLF” for typesetting the DOIs in a compact way. This font needs to be available on your L [A] TEX system. [It is part of the “paratype” package, and](https://www.ctan.org/pkg/paratype) many distributions (such as MikTeX) have it automatically installed. If you do not have this package yet and want to use",
+          "bm25": 34.55443015200412,
+          "ce_score": 0.002116226824000478,
+          "cos_score": -0.06648463010787964,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 18,
+          "paragraph": "Do not trust bibliographic data from other services such as Mendeley.com, Google Scholar, or similar; these are even more likely to be incorrect or incomplete.",
+          "bm25": 40.79220268660099,
+          "ce_score": 0.0008338891202583909,
+          "cos_score": 0.14503517746925354,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 22,
+          "paragraph": "**–** town with country of publisher (the town can be abbreviated for well-known towns such as New York or Berlin)",
+          "bm25": 29.01147737433737,
+          "ce_score": 0.0002540367131587118,
+          "cos_score": 0.2534402012825012,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [19] L. Skywalker and O.-W. Kenobi. Artificial reference paper 2. _Fake Journal 2_, 10(2):1–4, 2025. doi: 10.1080/13658816.2020.1720692 1",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 51,
+          "paragraph": "[2] O.-W. Kenobi and Q.-G. Jinn. Artificial reference paper hop-2 no.1. _Fake Journal 1_, 10(2):1–4, 2025. doi: 10.1080/13658816.2020. 1720692 2, 3",
+          "bm25": 34.04158454696292,
+          "ce_score": 0.3251352310180664,
+          "cos_score": 0.6106862425804138,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 50,
+          "paragraph": "[1] Q.-G. Jinn and M. Windu. Artificial reference paper hop-2 no.3. _Fake_ _Journal 1_, 10(2):1–4, 2025. doi: 10.1080/13658816.2020.1720692 2",
+          "bm25": 26.019204190036646,
+          "ce_score": 0.05082495138049126,
+          "cos_score": 0.5590176582336426,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 52,
+          "paragraph": "[3] N. Max. Optical models for direct volume rendering. _IEEE Trans-_ _actions on Visualization and Computer Graphics_, 1(2):99–108, June doi: 10.1109/2945.468400 3",
+          "bm25": 3.738057516113756,
+          "ce_score": 0.004092811606824398,
+          "cos_score": 0.15211260318756104,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 54,
+          "paragraph": "[5] G. Wyvill and C. McPheeters. Data structure for _soft_ objects. _The Visual_ _Computer_, 2(4):227–234, Aug. 1986. doi: 10.1007/BF01900346 3",
+          "bm25": 3.85536057624285,
+          "ce_score": 0.0036627824883908033,
+          "cos_score": 0.21180111169815063,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 37,
+          "paragraph": "Figure 2: A visualization of the 1990–2016 data from, recreated based on Fig. 1 from [3] and is in the public domain.",
+          "bm25": 4.004520974446683,
+          "ce_score": 0.0003243341052439064,
+          "cos_score": 0.12741225957870483,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

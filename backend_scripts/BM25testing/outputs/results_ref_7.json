@@ -1,0 +1,157 @@
+{
+  "ref_id": 7,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+      "top_k": [
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 6,
+          "paragraph": "Today, researchers have a good understanding of the visualization design space, to the point where they can find suitable techniques for most datasets and tasks. Although more research is clearly needed in this area, the body of existing work provides useful ways of working with data. However, solid knowledge about the best ways to present and communicate data is still lacking. Humans have always tied facts together into stories, effectively presenting information and making a point in a memorable way. In addition to offering an incredibly popular way of conserving data and passing it on, stories also provide the connective tissue between facts that make them memorable. [1] The use of elements from storytelling is therefore the next logical step in visualization research, specifically because storytelling can offer an effective way to present data.",
+          "bm25": 44.91396918046337,
+          "ce_score": 0.25293323397636414,
+          "cos_score": 0.6846020817756653,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 61,
+          "paragraph": "Interaction is one of the most important aspects of visualization. The ability not only to see the data but also to quickly change the view, add different data, and so on makes analyzing it much faster and more effective. Stories are traditionally told without interaction, and unlike analysis processes, are predefined and meant to be delivered in their entirety. Among the attempts at interactive storytelling, computer games are perhaps the most interesting and certainly the most popular. However, it is debatable whether games are stories and not just worlds that the player can explore, similar to traditional data exploration or analysis. Clearly, there are uses for interaction in visualization stories that do not interfere with the story arc. At the very least, opening up a visualization for interaction at the story’s end provides a convenient starting point for exploration and goes beyond a simple slideshow. Pausing the story for interaction is another easy-to-imagine scenario, particularly in response to questions from the audience when using visualization in a live presentation.",
+          "bm25": 37.09135870992698,
+          "ce_score": 0.17282482981681824,
+          "cos_score": 0.5840043425559998,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 31,
+          "paragraph": "Although scenarios in which individuals or small groups need to present their research results might not seem different from the previous scenario, they do potentially involve more interaction between the presenter and the audience. This requires the presentation tool to be more flexible than a simple slideshow so that the presenter can answer the multitude of questions that might come up during the presentation. For example, in a discussion of quarterly results, questions about specific sales or marketing measures might be asked that were not part of the story but are of interest to people in the audience. In addition to being able to ask and answer questions, it is often useful to record the kinds of questions asked so they can be reviewed later. A well-presented story is likely to lead to new questions for consideration when creating a revision or that the presenter should follow up on. In this way, the presentation becomes a vehicle not only for dissemination of information but also for collecting and condensing additional knowledge.",
+          "bm25": 36.25353733824961,
+          "ce_score": 0.10406425595283508,
+          "cos_score": 0.34132859110832214,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 29,
+          "paragraph": "Most business presentations employ live speakers in front of live audiences. A good example of this model is Hans Rosling’s Gapminder presentation at the 2006 TED conference (http://on.ted.com/s8BV). The main difference compared to self-running presentations is that presenters can respond to questions. A presentation based on a live visualization lets the presenter pause the story and interact in response to questions. The presentation can even adapt to changes made at one point that carry forward through subsequent presentation steps. In addition to the usual kinds of interactions used in visualization, the additional layer of annotation, highlighting, and so on can be especially useful in this setting.",
+          "bm25": 42.010787767784706,
+          "ce_score": 0.030055899173021317,
+          "cos_score": 0.3750697374343872,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 48,
+          "paragraph": "depicts the size of Napoleon’s army at different stages during the campaign as the width of the tan and black line. Drawn on top of a minimally styled map, the line provides both temporal and spatial information. The left-to-right direction is a natural one, making it easy for people to follow who are used to that reading direction. The connection with the temperature chart at the bottom also provides a hint regarding the primary cause of the",
+          "bm25": 46.12589820420769,
+          "ce_score": 0.0008875152561813593,
+          "cos_score": 0.27221447229385376,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "Many of these systems utilize annotations to enhance the visual narratives, and Kosara and Mackinlay [7] emphasize the importance of annotations for facilitating storytelling in visualization. Recent annotation work [15] has focused on the semi-automatic creation",
+      "top_k": [
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 43,
+          "paragraph": "Other design choices exist, of course, but this focused example represents a pragmatic yet interesting take on the visual storytelling design space.",
+          "bm25": 17.655104167795187,
+          "ce_score": 0.784929096698761,
+          "cos_score": 0.5347809791564941,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 10,
+          "paragraph": "Some of visualization’s earliest examples aimed to show and explain, not analyze. For example, Florence Nightingale used charts not to analyze data about the causes of death in the Crimean War, but to emphasize the size of the problem to numerically illiterate politicians. Similarly, John Snow’s map of cholera cases in 1850s London was not intended to find the water pump that was spreading the disease, but to present Snow’s evidence after he identified it using other means. [2] Likewise, Charles Minard’s map of Napoleon’s march on Moscow was primarily a means of telling the story of the soldiers’ plight and less an analytic tool for understanding complex",
+          "bm25": 15.143652311536687,
+          "ce_score": 0.706732451915741,
+          "cos_score": 0.3843742609024048,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 23,
+          "paragraph": "Visualization researchers present information in a variety of settings in front of many diverse audiences. Each of the following scenarios has requirements related to the techniques used, the presentation structure, the amount of anticipated interaction, and so on.",
+          "bm25": 15.312638575539868,
+          "ce_score": 0.09420697391033173,
+          "cos_score": 0.5429948568344116,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 17,
+          "paragraph": "Data-based infographics are often considered bad visualization—and, when done for marketing purposes, they often are. However, visual journalism has a history of incorporating informative and well-designed graphics that attract readers’ attention without distracting from the data. Although little work has been done on understanding these techniques from an academic perspective, interest in the area is growing. [8]",
+          "bm25": 19.624300239505605,
+          "ce_score": 0.026854291558265686,
+          "cos_score": 0.5553333759307861,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 60,
+          "paragraph": "However, the features that set a visualization apart are exactly the ones that make it memorable. Scott Bateman and colleagues’ study [7] provided the first glimpse into this topic, but the study’s design had flaws, the kinds of visualizations and infographics it used were limited, and it lacked interactivity. The space of possible questions to ask and configurations to test is huge, so the results of studies in this area will be of immediate use to many of the people working with data.",
+          "bm25": 15.276726033643087,
+          "ce_score": 0.015255067497491837,
+          "cos_score": 0.48924970626831055,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [7] R. Kosara and J. Mackinlay. Storytelling: The next step for visualization. _Computer_, 46(5):44–50, 2013. doi: 10.1109/MC.2013.36 1",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 1,
+          "paragraph": "**Robert Kosara and Jock Mackinlay,** _**Tableau Software, Seattle**_",
+          "bm25": 7.786434880413584,
+          "ce_score": 0.2857019007205963,
+          "cos_score": 0.46177786588668823,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 6,
+          "paragraph": "Today, researchers have a good understanding of the visualization design space, to the point where they can find suitable techniques for most datasets and tasks. Although more research is clearly needed in this area, the body of existing work provides useful ways of working with data. However, solid knowledge about the best ways to present and communicate data is still lacking. Humans have always tied facts together into stories, effectively presenting information and making a point in a memorable way. In addition to offering an incredibly popular way of conserving data and passing it on, stories also provide the connective tissue between facts that make them memorable. [1] The use of elements from storytelling is therefore the next logical step in visualization research, specifically because storytelling can offer an effective way to present data.",
+          "bm25": 6.181594872971051,
+          "ce_score": 0.0362233929336071,
+          "cos_score": 0.6816077828407288,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 60,
+          "paragraph": "However, the features that set a visualization apart are exactly the ones that make it memorable. Scott Bateman and colleagues’ study [7] provided the first glimpse into this topic, but the study’s design had flaws, the kinds of visualizations and infographics it used were limited, and it lacked interactivity. The space of possible questions to ask and configurations to test is huge, so the results of studies in this area will be of immediate use to many of the people working with data.",
+          "bm25": 5.359402900749268,
+          "ce_score": 0.015646036714315414,
+          "cos_score": 0.590705394744873,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 82,
+          "paragraph": "M. Austin, _Useful Fictions: Evolution, Anxiety, and the_ _Origins of Literature_, Univ. Nebraska Press, 2011. S. Johnson, _The Ghost Map,_ Riverhead Trade, 2007. N. Gershon and W. Page, “What Storytelling Can Do for Information Visualization,” _Comm. ACM_, vol. 44, no. 8, 2001, pp. 31-37. E. Segel and J. Heer, “Narrative Visualization: Telling Stories with Data,” _Trans. Visualization and Computer Graphics_, vol. 16, no. 6, 2010, pp. 1139-1148. J. Hullman and N. Diakopoulos, “Visualization Rhetoric: Framing Effects in Narrative Visualization,” _Trans._",
+          "bm25": 6.529271862698625,
+          "ce_score": 0.0020827141124755144,
+          "cos_score": 0.6467569470405579,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 36,
+          "paragraph": "In addition to transitions, Gapminder also demonstrates the effectiveness of building views up gradually so the audience can follow along, even when the visualization is relatively complex. Figure 1 shows an example of the use of Gapminder **,** with several steps first explaining a distribution and percentiles, a stacked area chart, and a scatterplot. The entire transition is quite complex, but by breaking it up into small steps and using entertaining but apt imagery, the audience can follow it",
+          "bm25": 5.341444564209267,
+          "ce_score": 0.0019034803844988346,
+          "cos_score": 0.5067999362945557,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

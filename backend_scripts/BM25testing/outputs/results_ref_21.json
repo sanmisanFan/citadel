@@ -1,0 +1,207 @@
+{
+  "ref_id": 21,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "Geographic models are often used to answer _why_ questions regarding underlying spatial phenomena such as why do voter preferences generally exhibit strong spatial dependency. In order to answer such questions, researchers have developed sophisticated spatial modeling techniques and software, such as multiscale geographically weighted regression [21], to identify the determinants of the spatial patterns of data we observe in both the human and natural environments. However, these models generate output that needs local contextual information to be interpreted properly. Without such information, advanced spatial modeling techniques do not gain their full potential. While a variety of geovisual analytics systems [19] have been developed to explore spatial statistics with the help of interactive maps and narrative annotations, these applications tend to visualize only basic statistical results, and, to our knowledge, none of them explain spatial modeling results.",
+      "top_k": [
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 45,
+          "paragraph": "Refer to the instructions for this section (Sec. 4). Below is an example you can follow that includes the actual supplemental material for this template: All supplemental materials are available on OSF at `[https:](https://doi.org/10.17605/OSF.IO/2NBSG)` `[//doi.org/10.17605/OSF.IO/2NBSG](https://doi.org/10.17605/OSF.IO/2NBSG)`, released under a CC BY 4.0 license. In particular, they include (1) Excel files containing the data for and analyses for creating and Fig. 2, (2) figure images in multiple formats, and (3) a full version of this paper with all appendices. Our other code is intellectual property of a corporation— Starbucks Research—and there is no feasible way to share it publicly.",
+          "bm25": 22.45981971687758,
+          "ce_score": 0.004608445800840855,
+          "cos_score": 0.1641630232334137,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 30,
+          "paragraph": "In the Figure Credits section at the end of the paper, you should credit the original sources of any figures that were reproduced or modified. Include any license details necessary, as well as links to the original materials whenever possible. For credits to figures from academic papers, include a citation that is listed in the **References** section. An example is provided below.",
+          "bm25": 21.79649396348679,
+          "ce_score": 0.003875032067298889,
+          "cos_score": 0.09905445575714111,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 11,
+          "paragraph": "**Note 2:** the “ `-narrow` ” versions of the bibliography style use the font “PTSansNarrow-TLF” for typesetting the DOIs in a compact way. This font needs to be available on your L [A] TEX system. [It is part of the “paratype” package, and](https://www.ctan.org/pkg/paratype) many distributions (such as MikTeX) have it automatically installed. If you do not have this package yet and want to use",
+          "bm25": 35.14065785041481,
+          "ce_score": 0.002116226824000478,
+          "cos_score": -0.06648463010787964,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 18,
+          "paragraph": "Do not trust bibliographic data from other services such as Mendeley.com, Google Scholar, or similar; these are even more likely to be incorrect or incomplete.",
+          "bm25": 40.82232049535273,
+          "ce_score": 0.0008338891202583909,
+          "cos_score": 0.14503517746925354,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 22,
+          "paragraph": "**–** town with country of publisher (the town can be abbreviated for well-known towns such as New York or Berlin)",
+          "bm25": 29.029955708489446,
+          "ce_score": 0.0002540367131587118,
+          "cos_score": 0.2534402012825012,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 45,
+          "paragraph": "Refer to the instructions for this section (Sec. 4). Below is an example you can follow that includes the actual supplemental material for this template: All supplemental materials are available on OSF at `[https:](https://doi.org/10.17605/OSF.IO/2NBSG)` `[//doi.org/10.17605/OSF.IO/2NBSG](https://doi.org/10.17605/OSF.IO/2NBSG)`, released under a CC BY 4.0 license. In particular, they include (1) Excel files containing the data for and analyses for creating and Fig. 2, (2) figure images in multiple formats, and (3) a full version of this paper with all appendices. Our other code is intellectual property of a corporation— Starbucks Research—and there is no feasible way to share it publicly.",
+          "bm25": 34.330588212561814,
+          "ce_score": 0.06619967520236969,
+          "cos_score": 0.2748255133628845,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 29,
+          "paragraph": "In support of transparent research practices and long-term open science goals, you are encouraged to make your supplemental materials available on a publicly-accessible repository. Please describe the available supplemental materials in the Supplemental Materials section. These details could include (1) what materials are available, (2) where they are hosted, and (3) any necessary omissions.",
+          "bm25": 26.820647886855923,
+          "ce_score": 0.024026192724704742,
+          "cos_score": 0.08818167448043823,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 37,
+          "paragraph": "Figure 2: A visualization of the 1990–2016 data from, recreated based on Fig. 1 from [1] and is in the public domain.",
+          "bm25": 21.938958832782017,
+          "ce_score": 0.019493775442242622,
+          "cos_score": 0.39809849858283997,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 9,
+          "paragraph": "For adding hyperlinks and DOIs to the list of references, you can use “ _\\_ `bibliographystyle` _{_ `abbrv-doi-hyperref-narrow` _}_ ” (instead of “ _\\_ `bibliographystyle` _{_ `abbrv` _}_ ”). It uses the doi and url fields in a bibTEX entry and turns the entire reference into a link, giving priority to the doi. The doi can be entered with or without the “ `http://dx.doi.org/` ” url part. See the examples in the bibTEX file and the bibliography at the end of this template.",
+          "bm25": 25.668723604626326,
+          "ce_score": 0.008942915126681328,
+          "cos_score": 0.0030117779970169067,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 49,
+          "paragraph": "The authors wish to thank A, B, and C. This work was supported in part by a grant from XYZ.",
+          "bm25": 23.3088031393742,
+          "ce_score": 0.005306939594447613,
+          "cos_score": 0.09063445031642914,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
+      "top_k": [
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 45,
+          "paragraph": "Refer to the instructions for this section (Sec. 4). Below is an example you can follow that includes the actual supplemental material for this template: All supplemental materials are available on OSF at `[https:](https://doi.org/10.17605/OSF.IO/2NBSG)` `[//doi.org/10.17605/OSF.IO/2NBSG](https://doi.org/10.17605/OSF.IO/2NBSG)`, released under a CC BY 4.0 license. In particular, they include (1) Excel files containing the data for and analyses for creating and Fig. 2, (2) figure images in multiple formats, and (3) a full version of this paper with all appendices. Our other code is intellectual property of a corporation— Starbucks Research—and there is no feasible way to share it publicly.",
+          "bm25": 14.443487215447313,
+          "ce_score": 0.009310083463788033,
+          "cos_score": 0.055108435451984406,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 29,
+          "paragraph": "In support of transparent research practices and long-term open science goals, you are encouraged to make your supplemental materials available on a publicly-accessible repository. Please describe the available supplemental materials in the Supplemental Materials section. These details could include (1) what materials are available, (2) where they are hosted, and (3) any necessary omissions.",
+          "bm25": 18.589436758230335,
+          "ce_score": 0.00573377963155508,
+          "cos_score": -0.020876970142126083,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 37,
+          "paragraph": "Figure 2: A visualization of the 1990–2016 data from, recreated based on Fig. 1 from [1] and is in the public domain.",
+          "bm25": 11.430955991174656,
+          "ce_score": 0.005414354149252176,
+          "cos_score": 0.19551333785057068,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 11,
+          "paragraph": "**Note 2:** the “ `-narrow` ” versions of the bibliography style use the font “PTSansNarrow-TLF” for typesetting the DOIs in a compact way. This font needs to be available on your L [A] TEX system. [It is part of the “paratype” package, and](https://www.ctan.org/pkg/paratype) many distributions (such as MikTeX) have it automatically installed. If you do not have this package yet and want to use",
+          "bm25": 11.984497108556722,
+          "ce_score": 0.004936120472848415,
+          "cos_score": -0.0580810010433197,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 10,
+          "paragraph": "**Note 1:** occasionally (for some L [A] TEX distributions) this hyper-linked bibTEX style may lead to **compilation er-** **rors** (“ `pdfendlink ended up in different nesting` `level ...` ”) if a reference entry is broken across two pages (due to a bug in hyperref). In this case make sure you have the latest version of the hyperref package (i. e., update your L [A] TEX installation/packages) or, alternatively, revert back to “ _\\_ `bibliographystyle` _{_ `abbrv-doi-narrow` _}_ ” (at the expense of removing hyperlinks from the bibliography) and try “ _\\_ `bibliographystyle` _{_ `abbrv-doi-hyperref-narrow` _}_ ” again after some more editing.",
+          "bm25": 13.768889729857447,
+          "ce_score": 0.003084322437644005,
+          "cos_score": -0.0634978786110878,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [21] H. Solo and O.-W. Kenobi. Artificial reference paper 1. _Fake Journal 1_, 34(7):1378–1397, 2025. doi: 10.1080/13658816.2020.1720692 1",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 51,
+          "paragraph": "[2] O.-W. Kenobi and Q.-G. Jinn. Artificial reference paper hop-2 no.1. _Fake Journal 1_, 10(2):1–4, 2025. doi: 10.1080/13658816.2020. 1720692 2, 3",
+          "bm25": 33.413351256646045,
+          "ce_score": 0.25623828172683716,
+          "cos_score": 0.7258347272872925,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 53,
+          "paragraph": "[4] A. Skywalker and Q.-G. Jinn. Artificial reference paper hop-2 no.2. _Fake Journal 2_, 10(2):1–4, 2025. doi: 10.1080/13658816.2020. 1720692 2",
+          "bm25": 24.96642245352961,
+          "ce_score": 0.05949421226978302,
+          "cos_score": 0.6490969657897949,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 52,
+          "paragraph": "[3] W. E. Lorensen and H. E. Cline. Marching cubes: A high resolution 3D surface construction algorithm. _SIGGRAPH Computer Graphics_, 21(4):163–169, Aug. 1987. doi: 10.1145/37402.37422 3",
+          "bm25": 7.626110193627685,
+          "ce_score": 0.004018683917820454,
+          "cos_score": 0.13507679104804993,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 54,
+          "paragraph": "[5] G. Wyvill and C. McPheeters. Data structure for _soft_ objects. _The Visual_ _Computer_, 2(4):227–234, Aug. 1986. doi: 10.1007/BF01900346 3",
+          "bm25": 3.8578161782132465,
+          "ce_score": 0.0032990730833262205,
+          "cos_score": 0.26449188590049744,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 37,
+          "paragraph": "Figure 2: A visualization of the 1990–2016 data from, recreated based on Fig. 1 from [1] and is in the public domain.",
+          "bm25": 4.007241392262528,
+          "ce_score": 0.0002559310232754797,
+          "cos_score": 0.11986605823040009,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

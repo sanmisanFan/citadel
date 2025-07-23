@@ -1,0 +1,107 @@
+{
+  "ref_id": 9,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "of presentation-like storytelling visualizations and explored mechanisms for automatically generating annotations by integrating deeplearning feature extraction techniques with a natural language generation process [9]. Annotations in such systems are used to describe salient patterns and facilitate storytelling [23].",
+      "top_k": [
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 18,
+          "paragraph": "**Annotation Assisted Story-telling** Visualization plays an essential role in telling stories behind the data. Segel and Heer [53] refer to this kind of visualiza­ tion as _narrative visualization_, and provide a comprehensive review on its design space. They discover that the change of scenes [58] used in visual media (e.g., comics and films) is also applicable to visualization [20] to orient the viewer’s at­ tention. Meanwhile, highlighting and annotations can be used for pointing out key observations from the data or adding other intended message [28]. Kosara and Mackinlay [36] emphasize the importance of annotations for making the visualization a part of the story, which is evidenced by experiment results in live presentations [9]. Based on that, Lee et al. [39] state the need for supportive tools for efficiently creating, customizing and manipulating annotations.",
+          "bm25": 15.77216758012128,
+          "ce_score": 0.8223811984062195,
+          "cos_score": 0.7142984867095947,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 4,
+          "paragraph": "**ABSTRACT** In this paper, we propose a technique for automatically an­ notating visualizations according to the textual description. In our approach, visual elements in the target visualization, along with their visual properties, are identified and extracted with a Mask R-CNN model. Meanwhile, the description is parsed to generate visual search requests. Based on the identi­ fication results and search requests, each descriptive sentence is displayed beside the described focal areas as annotations. Different sentences are presented in various scenes of the gen­ erated animation to promote a vivid step-by-step presentation. With a user-customized style, the animation can guide the au­ dience’s attention via proper highlighting such as emphasizing specific features or isolating part of the data. We demonstrate the utility and usability of our method through a user study with various use cases.",
+          "bm25": 15.051038798126777,
+          "ce_score": 0.3458104133605957,
+          "cos_score": 0.6084629893302917,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 162,
+          "paragraph": "To achieve that, we adopt the state-of-the-art object detection model for effectively extracting information from the visual­ ization. Natural language processing models and techniques are used for generating search queries from the description. By fulfilling the visual searches, we are able to locate the focal image areas of the entities described in each sentence. We provide various types of highlighting and annotating choices to help the presenters customize their presentations. Case stud­ ies with multiple use cases demonstrate the effectiveness of our approach. In the future, we plan to extend our technique for more accurate, real-time, speech-controlled visualization annotating.",
+          "bm25": 15.968339160062111,
+          "ce_score": 0.12579728662967682,
+          "cos_score": 0.5477464199066162,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 31,
+          "paragraph": "According to Srinivasan and Heer [56], NLIs for visualiza­ tions commonly serve two purposes: generating visualizations and triggering interactions with an existing visualization. In the former case, the system identifies high-level utterances such as data-relevant questions [2] and statements [14, 37] to understand user’s demands for specific visualization or infographics [13]. Since the language is parsed into data queries, this kind of system usually works with a database.",
+          "bm25": 19.292870886291293,
+          "ce_score": 0.020960703492164612,
+          "cos_score": 0.44749730825424194,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 159,
+          "paragraph": "In the NLP module, we base our detection on a universal language model, and predefined vocabularies and sentence structures. The current settings can already achieve accurate information extraction in most cases. However, when there is a new situation, configuration works are still required since different structures are handled case by case. A more intel­ ligent way is to collect descriptions for visualizations and train an end-to-end language model for directly translating vis-descriptions into structured data. More NLP functions like coreference resolution can be added to enhance the degree of freedom in users’ expression, though there is no technical difficulty in such extensions.",
+          "bm25": 18.909132661616653,
+          "ce_score": 0.008420160971581936,
+          "cos_score": 0.49386417865753174,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [9] C. Lai, Z. Lin, R. Jiang, Y. Han, C. Liu, and X. Yuan. Automatic annotation synchronizing with textual description for visualization. _Proceedings of the ACM Conference on Human Factors in Computing Systems_, pp. 1–13, 2020. doi: 10.1145/3313831.3376443 2",
+      "top_k": [
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 197,
+          "paragraph": "[29] Jessica Hullman, Nicholas Diakopoulos, and Eytan Adar. Contextifier: automatic generation of annotated stock visualizations. In _2013 ACM SIGCHI Conference_ _on Human Factors in Computing Systems, CHI ’13,_ _Paris, France, April 27 - May 2, 2013_ . 2707–2716.",
+          "bm25": 22.836568513035168,
+          "ce_score": 0.026362285017967224,
+          "cos_score": 0.6945257186889648,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 189,
+          "paragraph": "[22] Jeffrey Heer, Fernanda B. Viégas, and Martin Wattenberg. 2007. Voyagers and voyeurs: supporting asynchronous collaborative information visualization. In _Proceedings of the 2007 Conference on Human Factors_ _in Computing Systems, CHI 2007, San Jose, California,_ _USA, April 28 - May 3, 2007_ . 1029–1038.",
+          "bm25": 24.649584404053137,
+          "ce_score": 0.025365017354488373,
+          "cos_score": 0.6195377111434937,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 175,
+          "paragraph": "[10] Sagnik Ray Choudhury, Shuting Wang, and C. Lee Giles. 2016a. Curve Separation for Line Graphs in Scholarly Documents. In _Proceedings of the 16th ACM/IEEE-CS_ _on Joint Conference on Digital Libraries, JCDL 2016,_ _Newark, NJ, USA, June 19 - 23, 2016_ . 277–278.",
+          "bm25": 22.795800126666382,
+          "ce_score": 0.017152752727270126,
+          "cos_score": 0.30599328875541687,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 212,
+          "paragraph": "[43] Gonzalo Gabriel Méndez, Miguel A. Nacenta, and Sebastien Vandenheste. 2016. iVoLVER: Interactive Visual Language for Visualization Extraction and Reconstruction. In _Proceedings of the 2016 CHI_ _Conference on Human Factors in Computing Systems,_ _San Jose, CA, USA, May 7-12, 2016_ . 4073–4085.",
+          "bm25": 19.797315183586587,
+          "ce_score": 0.012424780055880547,
+          "cos_score": 0.6347360610961914,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 188,
+          "paragraph": "[21] Jeffrey Heer and Maureen C. Stone. 2012. Color naming models for color selection, image editing and palette design. In _CHI Conference on Human Factors in_ _Computing Systems, CHI ’12, Austin, TX, USA - May 05_",
+          "bm25": 26.91905099371831,
+          "ce_score": 0.007661497686058283,
+          "cos_score": 0.3423653841018677,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}

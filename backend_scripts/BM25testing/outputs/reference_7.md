@@ -675,8 +675,6 @@ vol. 16, no. 6, 2010, pp. 1139-1148.
 Framing Effects in Narrative Visualization,” _Trans._
 
 
-
-
 ##### **50 computer**
 
 

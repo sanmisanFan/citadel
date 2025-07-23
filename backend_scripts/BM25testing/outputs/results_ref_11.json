@@ -1,0 +1,107 @@
+{
+  "ref_id": 11,
+  "cross_encoder": "BAAI/bge-reranker-large",
+  "cosine_model": "all-MiniLM-L6-v2",
+  "results": [
+    {
+      "citation_context": "The design space of narrative visualization [18, 5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 5,
+          "paragraph": "Data-driven stories presented in online articles combine the expressive power of visualizations with a textual narrative. In these stories, visualizations provide an overview of the data while the accompanying text highlights insights and blends in the backdrop of the story. Both representations—visualization and text—are closely related and complement each other. It is found that the spatial arrangement and interactive linking of both representations influence the readers’ engagement, comprehension, and recall of information [OKCP19, ZOM19]. Existing research has already explored the design space of distinct design strategies, overall structuring, and interactivity within such stories [SH10]. However, the focus stays rather broad and we lack an in-depth classification of the textual content according to its role in the story and how different parts of the text connects with the visualization. Better understanding of this fine-grained interplay between visualization and textual narration can reveal best practices of such stories and inform research supporting their creation.",
+          "bm25": 59.10488275010413,
+          "ce_score": 0.6179366707801819,
+          "cos_score": 0.7674112915992737,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 109,
+          "paragraph": "We have observed that multiple visualizations can be combined into one story where text often serves as glue between the visualizations (Q2.2). For automatic approaches, it might be easier to focus on visualization-dominated stories (Q2.2) instead of telling a complex narrative through text. Particularly, _**text-in-vis**_ elements are easier to generate and mix with existing interactive visualization approaches. We assume that automated approaches would profit from interactions to link the text and visualization. For instance, it would be easier in an automated approach to make every implicit co-referencing link between a text and visualization explicit by highlighting the linked textual and visual content on hover.",
+          "bm25": 53.86188483938313,
+          "ce_score": 0.18760216236114502,
+          "cos_score": 0.6640512943267822,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 21,
+          "paragraph": "al. [BLHR _[∗]_ 19] facilitate the authoring of timeline narratives. In contrast, the second type of authoring approaches provide automatic support. Among these, _Datashot_ [WSZ _[∗]_ 19] automatically derives data facts from tabular data and generate infographics to provide an overview. _Calliope_ [SXS _[∗]_ 21] supports automatic generation of a story sequence directly from a given dataset. Metoyer et al.’s [MZJS18] approach automatically integrates short textual annotations at various points on the visualization when users highlight a passage of text.",
+          "bm25": 51.02136701386469,
+          "ce_score": 0.10536427795886993,
+          "cos_score": 0.62738037109375,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 90,
+          "paragraph": "Another threat to validity is how much we, as authors, might have biased the results. The authors are from the visualization com munity and might tentatively overestimate the role of the visual content presentation. Our motivation to investigate the interplay of text and visualization might interfere with a neutral and objective interpretation of this interplay (Q2). In general, assigning codes is always subjective. We counterbalanced this by partly redundant coding of two coders and joint discussions of potentially ambiguous and conflicting code assignment.",
+          "bm25": 52.31343802209586,
+          "ce_score": 0.1051085889339447,
+          "cos_score": 0.42574208974838257,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 10,
+          "paragraph": "The main objective of this research is to achieve a more accessible and self-explanatory data reporting and to support journalists and visualization experts with a set of best practices to make their stories adaptable to the interests of the individual readers. To do so, we aim at understanding the fine-grained interplay of geographic visualizations and textual narration through an empirical analysis of a selection of data-driven stories. We investigate the role of every sentence within each of the narrative categories and how sentences are interwoven with the visual representation. Besides, we explore the positioning and sequential patterns among various parts of the stories. In particular, we seek to answer the following research questions:",
+          "bm25": 53.23336719172138,
+          "ce_score": 0.08256745338439941,
+          "cos_score": 0.8050606846809387,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "citation_context": "- [11] S. Latif, S. Chen, and F. Beck. A deeper understanding of visualization-text interplay in geographic data-driven stories. _Computer Graphics Forum_, 40(3):311–322, 2021. doi: 10.1111/cgf.14309 1",
+      "top_k": [
+        {
+          "bm25_rank": 1,
+          "paragraph_index": 15,
+          "paragraph": "_S. Latif, S. Chen, & F. Beck / Visualization–Text Interplay in Geographic Data-driven Stories_",
+          "bm25": 18.682291112581765,
+          "ce_score": 0.9996775388717651,
+          "cos_score": 0.8715523481369019,
+          "rank": 1
+        },
+        {
+          "bm25_rank": 2,
+          "paragraph_index": 28,
+          "paragraph": "_S. Latif, S. Chen, & F. Beck / Visualization–Text Interplay in Geographic Data-driven Stories_",
+          "bm25": 18.682291112581765,
+          "ce_score": 0.9996775388717651,
+          "cos_score": 0.8715522289276123,
+          "rank": 2
+        },
+        {
+          "bm25_rank": 3,
+          "paragraph_index": 42,
+          "paragraph": "_S. Latif, S. Chen, & F. Beck / Visualization–Text Interplay in Geographic Data-driven Stories_",
+          "bm25": 18.682291112581765,
+          "ce_score": 0.9996775388717651,
+          "cos_score": 0.8715522289276123,
+          "rank": 3
+        },
+        {
+          "bm25_rank": 4,
+          "paragraph_index": 46,
+          "paragraph": "_S. Latif, S. Chen, & F. Beck / Visualization–Text Interplay in Geographic Data-driven Stories_",
+          "bm25": 18.682291112581765,
+          "ce_score": 0.9996775388717651,
+          "cos_score": 0.8715522289276123,
+          "rank": 4
+        },
+        {
+          "bm25_rank": 5,
+          "paragraph_index": 52,
+          "paragraph": "_S. Latif, S. Chen, & F. Beck / Visualization–Text Interplay in Geographic Data-driven Stories_",
+          "bm25": 18.682291112581765,
+          "ce_score": 0.9996775388717651,
+          "cos_score": 0.8715523481369019,
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}
