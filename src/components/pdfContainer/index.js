@@ -14,241 +14,235 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import './style.css';
 
-//import samplePDF from "../../data/test.pdf";
-
-/*pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString();*/
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-export const PDFContainer = ({ 
-  file,
-  citation,
-  anomalous,
-  anomalousColorScheme,
-  sentenceAnnotationList,
-  currentPage,
-  setCurrentPage,
-  activeHighlight,
-  setActiveHighlight,
-  setAnomalous
+export const PDFContainer = ({
+    file,
+    citation,
+    anomalous,
+    anomalousColorScheme,
+    sentenceAnnotationList,
+    currentPage,
+    setCurrentPage,
+    activeHighlight,
+    setActiveHighlight,
+    setAnomalous
 }) => {
-  const viewerRef = useRef(null);
+    const viewerRef = useRef(null);
 
-  const [numPages, setNumPages] = useState(null);
-  const [width, setWidth] = useState(0);
-  const [pdfScale, setPdfScale] = useState(1);
-  const [renderedPages, setRenderedPages] = useState({});
+    const [numPages, setNumPages] = useState(null);
+    const [width, setWidth] = useState(0);
+    const [pdfScale, setPdfScale] = useState(1);
+    const [renderedPages, setRenderedPages] = useState({});
 
-  const onDocumentLoadSuccess = ({ numPages }) => {
-    setNumPages(numPages);
-  };
+    const onDocumentLoadSuccess = ({ numPages }) => {
+        setNumPages(numPages);
+    };
 
-  const onPageRenderSuccess = (pageNumber) => {
-    setRenderedPages((prev) => ({
-      ...prev,
-      [pageNumber]: true,
-    }));
-  };
+    const onPageRenderSuccess = (pageNumber) => {
+        setRenderedPages((prev) => ({
+            ...prev,
+            [pageNumber]: true,
+        }));
+    };
 
-  const handleScroll = () => {
-    if (!viewerRef.current) return;
+    const handleScroll = () => {
+        if (!viewerRef.current) return;
 
-    const viewer = viewerRef.current;
-    const pageElements = Array.from(viewer.querySelectorAll(".react-pdf__Page"));
-    const scrollTop = viewer.scrollTop;
+        const viewer = viewerRef.current;
+        const pageElements = Array.from(viewer.querySelectorAll(".react-pdf__Page"));
+        const scrollTop = viewer.scrollTop;
 
-    // Find the first page that is at least partially visible
-    for (let i = 0; i < pageElements.length; i++) {
-      const page = pageElements[i];
-      const { offsetTop, clientHeight } = page;
-      if (scrollTop >= offsetTop - clientHeight / 2 && scrollTop < offsetTop + clientHeight / 2) {
-        setCurrentPage(i + 1);
-        break;
-      }
-    }
-  };
-
-  // Function to scroll to the corresponding page
-  const scrollToPage = (pageNumber) => {
-    if (!viewerRef.current) return;
-
-    const pageElement = viewerRef.current.querySelector(
-      `.react-pdf__Page[data-page-number="${pageNumber}"]`
-    );
-
-    if (pageElement) {
-      pageElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
-  const applyHighlightsReact = () => {
-    if (!viewerRef.current) return;
-
-    const viewer = viewerRef.current;
-    const pageElements = viewer.querySelectorAll(".react-pdf__Page");
-
-    pageElements.forEach((pageElement) => {
-      const textContentLayer = pageElement.querySelector(".react-pdf__Page__textContent");
-
-      if (textContentLayer) {
-        // Clear existing highlights
-        textContentLayer
-          .querySelectorAll(".sentence-highlight-container")
-          .forEach((c) => c.remove());
-
-        const pageNumber = Number(pageElement.dataset.pageNumber);
-
-        sentenceAnnotationList
-          .filter((highlight) => highlight.page === pageNumber)
-          .forEach((highlight) => {
-            // Find the citation marker span to use as disambiguation anchor.
-            const anchorSpan = findCitationAnchorSpan(
-              textContentLayer,
-              highlight.citationMarker
-            );
-
-            // Auto-detect sentence position from the rendered text layer DOM.
-            const rects = findSentenceInTextLayer(
-              textContentLayer,
-              highlight.sentence,
-              anchorSpan
-            );
-
-            if (!rects.length) {
-              console.warn(
-                `[Highlight] Sentence not found on page ${pageNumber}:`,
-                highlight.sentence
-              );
-              return;
+        // Find the first page that is at least partially visible
+        for (let i = 0; i < pageElements.length; i++) {
+            const page = pageElements[i];
+            const { offsetTop, clientHeight } = page;
+            if (scrollTop >= offsetTop - clientHeight / 2 && scrollTop < offsetTop + clientHeight / 2) {
+                setCurrentPage(i + 1);
+                break;
             }
+        }
+    };
 
-            rects.forEach((rect) => {
-              const highlightContainer = document.createElement("div");
-              highlightContainer.className = "sentence-highlight-container";
-              highlightContainer.style.position = "absolute";
-              highlightContainer.style.left = `${rect.x}px`;
-              highlightContainer.style.top = `${rect.y}px`;
-              highlightContainer.style.width = `${rect.width}px`;
-              highlightContainer.style.height = `${rect.height}px`;
+    // Function to scroll to the corresponding page
+    const scrollToPage = (pageNumber) => {
+        if (!viewerRef.current) return;
 
-              const root = createRoot(highlightContainer);
-              root.render(
-                <SentenceAnnotation
-                  issueID={highlight.issueID}
-                  issueName={highlight.issueName}
-                  issueCategory={highlight.issueCategory}
-                  baseColor={highlight.baseColor}
-                  boxColor={highlight.boxColor}
-                  activeHighlight={activeHighlight}
-                  anomalous={anomalous}
-                  citation={citation}
-                  onClick={(issueID) => setActiveHighlight(issueID)}
-                />
-              );
-              textContentLayer.appendChild(highlightContainer);
-            });
-          });
-      }
-    });
-  };
-
-  useEffect(() => {
-    // render anomalous highlight
-    if (Object.keys(renderedPages).length === numPages) {
-      //console.log("activeHighlight:", activeHighlight);
-      setTimeout(() => {
-        applyHighlightsReact();
-       }, 100);
-    }
-  }, [renderedPages, sentenceAnnotationList, activeHighlight]);
-
-  useEffect(() => {
-    if (Object.keys(renderedPages).length === numPages) {
-      setTimeout(() => {
-       citationHighlight(
-          viewerRef, 
-          citation, 
-          anomalous, 
-          anomalousColorScheme,
-          activeHighlight,
-          setActiveHighlight
+        const pageElement = viewerRef.current.querySelector(
+            `.react-pdf__Page[data-page-number="${pageNumber}"]`
         );
-      }, 100);
-      
-    }
-  }, [renderedPages, citation, anomalous, activeHighlight]);
 
-  useEffect(() => {
-    if (activeHighlight !== null) {
-      const selectedAnomalous = anomalous.find(e => e.id === activeHighlight);
-      if (selectedAnomalous) {
-        scrollToPage(selectedAnomalous.page);
-      }
-    }
-  }, [activeHighlight, anomalous]);
+        if (pageElement) {
+            pageElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    };
 
-  useEffect(() => {
-    if (viewerRef.current) {
-      setWidth(viewerRef.current.offsetWidth);
-    }
-  }, []);
+    const applyHighlightsReact = () => {
+        if (!viewerRef.current) return;
 
-  useEffect(() => {
-    const viewer = viewerRef.current;
-    if (viewer) {
-      viewer.addEventListener("scroll", handleScroll);
-      return () => viewer.removeEventListener("scroll", handleScroll);
-    }
-  }, []);
+        const viewer = viewerRef.current;
+        const pageElements = viewer.querySelectorAll(".react-pdf__Page");
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        height: '100vh',
-        borderRight: "1px solid #ddd"
-      }}
-    >
-      <ToolBar
-        setPdfScale={setPdfScale}
-        currentPage={currentPage}
-      />
-      <div
-        ref={viewerRef}
-        className="pdf-container"
-        style={{
-          
-        }}
-      >
-        {/* Floating Panel */
-        <FloatingPanel
-          anomalous={anomalous}
-          anomalousColorScheme={anomalousColorScheme}
-          setAnomalous={setAnomalous}
-        />}
+        pageElements.forEach((pageElement) => {
+            const textContentLayer = pageElement.querySelector(".react-pdf__Page__textContent");
 
-        {/* PDF Viewer */}
-        <Document
-          file={file}
-          onLoadSuccess={onDocumentLoadSuccess}
-          className="pdf-document"
+            if (textContentLayer) {
+                // Clear existing highlights
+                textContentLayer
+                    .querySelectorAll(".sentence-highlight-container")
+                    .forEach((c) => c.remove());
+
+                const pageNumber = Number(pageElement.dataset.pageNumber);
+
+                sentenceAnnotationList
+                    .filter((highlight) => highlight.page === pageNumber)
+                    .forEach((highlight) => {
+                        // Find the citation marker span to use as disambiguation anchor.
+                        const anchorSpan = findCitationAnchorSpan(
+                            textContentLayer,
+                            highlight.citationMarker
+                        );
+
+                        // Auto-detect sentence position from the rendered text layer DOM.
+                        const rects = findSentenceInTextLayer(
+                            textContentLayer,
+                            highlight.sentence,
+                            anchorSpan
+                        );
+
+                        if (!rects.length) {
+                            console.warn(
+                                `[Highlight] Sentence not found on page ${pageNumber}:`,
+                                highlight.sentence
+                            );
+                            return;
+                        }
+
+                        rects.forEach((rect) => {
+                            const highlightContainer = document.createElement("div");
+                            highlightContainer.className = "sentence-highlight-container";
+                            highlightContainer.style.position = "absolute";
+                            highlightContainer.style.left = `${rect.x}px`;
+                            highlightContainer.style.top = `${rect.y}px`;
+                            highlightContainer.style.width = `${rect.width}px`;
+                            highlightContainer.style.height = `${rect.height}px`;
+
+                            const root = createRoot(highlightContainer);
+                            root.render(
+                                <SentenceAnnotation
+                                    issueID={highlight.issueID}
+                                    issueName={highlight.issueName}
+                                    issueCategory={highlight.issueCategory}
+                                    baseColor={highlight.baseColor}
+                                    boxColor={highlight.boxColor}
+                                    activeHighlight={activeHighlight}
+                                    anomalous={anomalous}
+                                    citation={citation}
+                                    onClick={(issueID) => setActiveHighlight(issueID)}
+                                />
+                            );
+                            textContentLayer.appendChild(highlightContainer);
+                        });
+                    });
+            }
+        });
+    };
+
+    useEffect(() => {
+        // render anomalous highlight
+        if (Object.keys(renderedPages).length === numPages) {
+            //console.log("activeHighlight:", activeHighlight);
+            setTimeout(() => {
+                applyHighlightsReact();
+            }, 100);
+        }
+    }, [renderedPages, sentenceAnnotationList, activeHighlight]);
+
+    useEffect(() => {
+        if (Object.keys(renderedPages).length === numPages) {
+            setTimeout(() => {
+                citationHighlight(
+                    viewerRef,
+                    citation,
+                    anomalous,
+                    anomalousColorScheme,
+                    activeHighlight,
+                    setActiveHighlight
+                );
+            }, 100);
+
+        }
+    }, [renderedPages, citation, anomalous, activeHighlight]);
+
+    useEffect(() => {
+        if (activeHighlight !== null) {
+            const selectedAnomalous = anomalous.find(e => e.id === activeHighlight);
+            if (selectedAnomalous) {
+                scrollToPage(selectedAnomalous.page);
+            }
+        }
+    }, [activeHighlight, anomalous]);
+
+    useEffect(() => {
+        if (viewerRef.current) {
+            setWidth(viewerRef.current.offsetWidth);
+        }
+    }, []);
+
+    useEffect(() => {
+        const viewer = viewerRef.current;
+        if (viewer) {
+            viewer.addEventListener("scroll", handleScroll);
+            return () => viewer.removeEventListener("scroll", handleScroll);
+        }
+    }, []);
+
+    return (
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                height: '100vh',
+                borderRight: "1px solid #ddd"
+            }}
         >
-          {Array.from(new Array(numPages), (el, index) => (
-            <Page
-              key={`page_${index + 1}`}
-              pageNumber={index + 1}
-              className="pdf-page"
-              width={width}
-              scale={pdfScale}
-              renderAnnotationLayer={false}
-              onRenderSuccess={() => onPageRenderSuccess(index + 1)}
+            <ToolBar
+                setPdfScale={setPdfScale}
+                currentPage={currentPage}
             />
-          ))}
-        </Document>
-      </div>
-    </div>
-  );
+            <div
+                ref={viewerRef}
+                className="pdf-container"
+                style={{
+
+                }}
+            >
+                {/* Floating Panel */
+                    <FloatingPanel
+                        anomalous={anomalous}
+                        anomalousColorScheme={anomalousColorScheme}
+                        setAnomalous={setAnomalous}
+                    />}
+
+                {/* PDF Viewer */}
+                <Document
+                    file={file}
+                    onLoadSuccess={onDocumentLoadSuccess}
+                    className="pdf-document"
+                >
+                    {Array.from(new Array(numPages), (el, index) => (
+                        <Page
+                            key={`page_${index + 1}`}
+                            pageNumber={index + 1}
+                            className="pdf-page"
+                            width={width}
+                            scale={pdfScale}
+                            renderAnnotationLayer={false}
+                            onRenderSuccess={() => onPageRenderSuccess(index + 1)}
+                        />
+                    ))}
+                </Document>
+            </div>
+        </div>
+    );
 };
