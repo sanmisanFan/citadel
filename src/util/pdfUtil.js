@@ -39,6 +39,106 @@ export const findSentenceCoordinates = (textItems, sentence) => {
   return null;
 };
 
+/**
+ * Find the <span> element in the rendered text layer that contains the citation
+ * marker (e.g. "[21]"). Used as a proximity anchor for disambiguation.
+ */
+export const findCitationAnchorSpan = (textLayerEl, citationMarker) => {
+  if (!citationMarker || !textLayerEl) return null;
+  return (
+    Array.from(textLayerEl.querySelectorAll("span")).find((s) =>
+      s.textContent.includes(citationMarker)
+    ) || null
+  );
+};
+
+/**
+ * Find a sentence's bounding rects in the rendered PDF text layer DOM.
+ *
+ * Each PDF line is one or more <span> elements. We build a character-indexed
+ * map over the concatenated (normalised) text of all spans so we can locate
+ * a substring match and resolve it back to individual spans.
+ *
+ * When the same sentence appears more than once on the page, anchorEl
+ * (the citation-marker span) is used to pick the occurrence that is
+ * visually closest — by vertical distance — to that marker.
+ *
+ * Returns an array of { x, y, width, height } pixel rects measured
+ * relative to textLayerEl. One rect per involved span (= per visual line).
+ */
+export const findSentenceInTextLayer = (textLayerEl, sentenceText, anchorEl = null) => {
+  if (!textLayerEl || !sentenceText) return [];
+
+  const spans = Array.from(textLayerEl.querySelectorAll("span"));
+  if (!spans.length) return [];
+
+  const norm = (s) => s.replace(/\s+/g, " ").trim().toLowerCase();
+  const target = norm(sentenceText);
+  if (!target) return [];
+
+  // Build normalised full text + per-character span-index map.
+  // We add a single space between spans so that words at span boundaries
+  // are not accidentally merged.
+  const charSpanMap = [];
+  let fullText = "";
+
+  spans.forEach((span, spanIdx) => {
+    const t = norm(span.textContent);
+    for (let j = 0; j < t.length; j++) charSpanMap.push(spanIdx);
+    fullText += t;
+    // separator (not attributed to any span)
+    fullText += " ";
+    charSpanMap.push(-1);
+  });
+
+  // Collect every occurrence of target in fullText.
+  const occurrences = [];
+  let pos = 0;
+  while (pos < fullText.length) {
+    const idx = fullText.indexOf(target, pos);
+    if (idx === -1) break;
+    const spanSet = new Set();
+    for (let i = idx; i < idx + target.length; i++) {
+      const si = charSpanMap[i];
+      if (si !== -1) spanSet.add(si);
+    }
+    if (spanSet.size > 0) occurrences.push({ idx, spanIndices: [...spanSet] });
+    pos = idx + 1;
+  }
+
+  if (!occurrences.length) return [];
+
+  // Choose the occurrence closest to the anchor (citation marker span).
+  let chosen = occurrences[0];
+  if (occurrences.length > 1 && anchorEl) {
+    const layerRect = textLayerEl.getBoundingClientRect();
+    const anchorY = anchorEl.getBoundingClientRect().top - layerRect.top;
+    let minDist = Infinity;
+    for (const occ of occurrences) {
+      const firstSpan = spans[occ.spanIndices[0]];
+      const dist = Math.abs(
+        firstSpan.getBoundingClientRect().top - layerRect.top - anchorY
+      );
+      if (dist < minDist) {
+        minDist = dist;
+        chosen = occ;
+      }
+    }
+  }
+
+  // Convert matched span bounding boxes to coords relative to the text layer.
+  const layerRect = textLayerEl.getBoundingClientRect();
+  return chosen.spanIndices.map((si) => {
+    const r = spans[si].getBoundingClientRect();
+    return {
+      x: r.left - layerRect.left,
+      y: r.top - layerRect.top,
+      width: r.width,
+      height: r.height,
+    };
+  });
+};
+
 // Function to find the bounding box for a specific citation (e.g. "[14]") within text items
 export const findCitationCoordinates = (textItems, targetCitation) => {
   const results = [];

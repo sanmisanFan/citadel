@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useState, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { pdfjs, Document, Page, Outline } from 'react-pdf';
-//import { extractAndHighlightCitation } from "../../util/pdfUtil";
+import { findSentenceInTextLayer, findCitationAnchorSpan } from "../../util/pdfUtil";
 
 import { citationHighlight } from "../../util/annotationCtrl";
 
@@ -34,8 +34,6 @@ export const PDFContainer = ({
   setActiveHighlight,
   setAnomalous
 }) => {
-  //const targetSentence = "understand the experience of people that were there [3]";
-  const bboxHeightOffest = 0.005;
   const viewerRef = useRef(null);
 
   const [numPages, setNumPages] = useState(null);
@@ -87,57 +85,70 @@ export const PDFContainer = ({
 
   const applyHighlightsReact = () => {
     if (!viewerRef.current) return;
-  
+
     const viewer = viewerRef.current;
     const pageElements = viewer.querySelectorAll(".react-pdf__Page");
-  
+
     pageElements.forEach((pageElement) => {
       const textContentLayer = pageElement.querySelector(".react-pdf__Page__textContent");
-  
+
       if (textContentLayer) {
-        // Clear existing React Highlights
-        const existingContainers = textContentLayer.querySelectorAll(".sentence-highlight-container");
-        existingContainers.forEach((container) => container.remove());
-  
-        // Get the transformation scale from the text layer
-        const { width: layerWidth, height: layerHeight } = textContentLayer.getBoundingClientRect();
-        
-        // Filter highlights for the current page
+        // Clear existing highlights
+        textContentLayer
+          .querySelectorAll(".sentence-highlight-container")
+          .forEach((c) => c.remove());
+
+        const pageNumber = Number(pageElement.dataset.pageNumber);
+
         sentenceAnnotationList
-          .filter((highlight) => highlight.page === Number(pageElement.dataset.pageNumber))
+          .filter((highlight) => highlight.page === pageNumber)
           .forEach((highlight) => {
-            // Convert normalized coordinates to pixel values
-            const highlightX = highlight.bbox.x * layerWidth;
-            const highlightY = highlight.bbox.y * layerHeight;
-            const highlightWidth = highlight.bbox.width * layerWidth;
-            const highlightHeight = (highlight.bbox.height + bboxHeightOffest) * layerHeight;
-  
-            // Create a container for the individual highlight
-            const highlightContainer = document.createElement("div");
-            highlightContainer.className = "sentence-highlight-container";
-            highlightContainer.style.position = "absolute";
-            highlightContainer.style.left = `${highlightX}px`;
-            highlightContainer.style.top = `${highlightY}px`;
-            highlightContainer.style.width = `${highlightWidth}px`;
-            highlightContainer.style.height = `${highlightHeight}px`;
-  
-            // Mount the React Highlight component
-            const root = createRoot(highlightContainer);
-            root.render(
-              <SentenceAnnotation
-                issueID={highlight.issueID}
-                issueName={highlight.issueName}
-                issueCategory={highlight.issueCategory}
-                baseColor={highlight.baseColor}
-                boxColor={highlight.boxColor}
-                activeHighlight={activeHighlight}
-                anomalous={anomalous} // Pass the anomalous data
-                citation={citation} // Pass the citation data
-                onClick={(issueID) => setActiveHighlight(issueID)}
-              />
+            // Find the citation marker span to use as disambiguation anchor.
+            const anchorSpan = findCitationAnchorSpan(
+              textContentLayer,
+              highlight.citationMarker
             );
-            // Append the highlight container to the text layer
-            textContentLayer.appendChild(highlightContainer);
+
+            // Auto-detect sentence position from the rendered text layer DOM.
+            const rects = findSentenceInTextLayer(
+              textContentLayer,
+              highlight.sentence,
+              anchorSpan
+            );
+
+            if (!rects.length) {
+              console.warn(
+                `[Highlight] Sentence not found on page ${pageNumber}:`,
+                highlight.sentence
+              );
+              return;
+            }
+
+            rects.forEach((rect) => {
+              const highlightContainer = document.createElement("div");
+              highlightContainer.className = "sentence-highlight-container";
+              highlightContainer.style.position = "absolute";
+              highlightContainer.style.left = `${rect.x}px`;
+              highlightContainer.style.top = `${rect.y}px`;
+              highlightContainer.style.width = `${rect.width}px`;
+              highlightContainer.style.height = `${rect.height}px`;
+
+              const root = createRoot(highlightContainer);
+              root.render(
+                <SentenceAnnotation
+                  issueID={highlight.issueID}
+                  issueName={highlight.issueName}
+                  issueCategory={highlight.issueCategory}
+                  baseColor={highlight.baseColor}
+                  boxColor={highlight.boxColor}
+                  activeHighlight={activeHighlight}
+                  anomalous={anomalous}
+                  citation={citation}
+                  onClick={(issueID) => setActiveHighlight(issueID)}
+                />
+              );
+              textContentLayer.appendChild(highlightContainer);
+            });
           });
       }
     });

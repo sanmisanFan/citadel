@@ -106,20 +106,28 @@ function App() {
       const baseColor = anomalousColorScheme[e.name]['category'][e.category.name]['baseColor'];
       const boxColor = anomalousColorScheme[e.name]['category'][e.category.name]['boxColor'];
       const sentenceList = e.sentence;
-      // construct sentence highlight object
+
+      // Derive the inline citation marker (e.g. "[21]") from the paper field.
+      // Used as a disambiguation anchor when the same sentence appears on the page more than once.
+      const citationMarker =
+        e.paper && e.paper.length > 0
+          ? (() => {
+              const cit = citation.find((c) => e.paper.includes(c.id));
+              return cit ? `[${cit.cite_number}]` : null;
+            })()
+          : null;
+
       sentenceList.forEach(sentenceObj=>{
-        //loadAndExtract(sentenceObj.sentence, page);
-        const sentenceHighlight = {
-          issueID: issueID,
-          issueName: issueName,
-          issueCategory: issueCategory,
-          page: page,
-          baseColor: baseColor,
-          boxColor: boxColor,
+        _sentenceHighlights.push({
+          issueID,
+          issueName,
+          issueCategory,
+          page,
+          baseColor,
+          boxColor,
           sentence: sentenceObj.sentence,
-          bbox: sentenceObj.bbox
-        };
-        _sentenceHighlights.push(sentenceHighlight);
+          citationMarker,
+        });
       });
     });
     setSentenceAnnotationList(_sentenceHighlights);
@@ -153,8 +161,8 @@ function App() {
   }, [anomalousRaw]);
 
   useEffect(() => {
-    anomalous.length > 0 && initSentenceHightlights();
-  }, [anomalous]);
+    anomalous.length > 0 && citation.length > 0 && initSentenceHightlights();
+  }, [anomalous, citation]);
 
   /*useEffect(() => {
     initAuthor();
