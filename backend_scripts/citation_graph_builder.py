@@ -1,13 +1,18 @@
 import json
+import sys
+
+directory = "outputs"
+if len(sys.argv) > 1:
+    directory = sys.argv[1]
 
 # Load input JSON files with UTF-8 encoding
-with open('outputs/enriched_papers_with_bboxes.json', 'r', encoding='utf-8') as f:
+with open(f"{directory}/enriched_papers_with_bboxes.json", "r", encoding="utf-8") as f:
     enriched_papers = json.load(f)
 
-with open('outputs/second_hop_references.json', 'r', encoding='utf-8') as f:
+with open(f"{directory}/second_hop_references.json", "r", encoding="utf-8") as f:
     second_hop = json.load(f)
 
-with open('outputs/entity_keys.json', 'r', encoding='utf-8') as f:
+with open(f"{directory}/entity_keys.json", "r", encoding="utf-8") as f:
     entity_keys = json.load(f)
 
 # Step 1: Prepare hop 1 citation keys and ref_id mapping
@@ -34,12 +39,14 @@ for paper in enriched_papers:
     for mention in paper.get("reference_mentions", []):
         for cit in mention.get("citations", []):
             if cit["citation"] == f"[{cite_number}]":
-                cite_positions.append({
-                    "page": mention["page"],
-                    "has_issue": False,
-                    "issues": [],
-                    "bbox": cit["bbox"]
-                })
+                cite_positions.append(
+                    {
+                        "page": mention["page"],
+                        "has_issue": False,
+                        "issues": [],
+                        "bbox": cit["bbox"],
+                    }
+                )
 
     citation_obj = {
         "id": citation_key,
@@ -48,11 +55,12 @@ for paper in enriched_papers:
         "venue": paper.get("venue", ""),
         "year": paper.get("year", None),
         "title": paper.get("title", ""),
-        "source": f"{', '.join([str(entity_keys['authors'].get(a, {}).get('raw_name')) or str(entity_keys['authors'].get(a, {}).get('name')) or 'Unknown Author' for a in paper.get('authors', [])])}. \"{paper.get('title', 'Unknown Title')},\" {paper.get('raw_venue', 'Unknown Venue')}, {paper.get('year', 'Unknown Year')}.",
+        "source": f'{", ".join([str(entity_keys["authors"].get(a, {}).get("raw_name")) or str(entity_keys["authors"].get(a, {}).get("name")) or "Unknown Author" for a in paper.get("authors", [])])}. "{paper.get("title", "Unknown Title")}," {paper.get("raw_venue", "Unknown Venue")}, {paper.get("year", "Unknown Year")}.',
         "hop": 1,
         "cite_positions": cite_positions,
+        "doi": paper.get("doi", "https://google.com"),
         "has_issue": False,
-        "citation_graph": []  # To be populated later
+        "citation_graph": [],  # To be populated later
     }
     citations.append(citation_obj)
     seen_citation_keys.add(citation_key)
@@ -62,20 +70,32 @@ for paper in enriched_papers:
     semantic_scholar_id = paper.get("semantic_scholar_id")
     if semantic_scholar_id in second_hop:
         hop2_refs = second_hop[semantic_scholar_id].get("references", [])
-        hop1_to_hop2[citation_key] = []  # Initialize empty list, to be filled with unique hop 2 keys
+        hop1_to_hop2[
+            citation_key
+        ] = []  # Initialize empty list, to be filled with unique hop 2 keys
 
 # Step 3: Process hop 2 citations, checking for duplicates by title
 hop2_counter = max_ref_id + 1
 
 for paper_id, data in second_hop.items():
-    hop1_citation_key = next((p["citation_key"] for p in enriched_papers if p.get("semantic_scholar_id") == paper_id), None)
+    hop1_citation_key = next(
+        (
+            p["citation_key"]
+            for p in enriched_papers
+            if p.get("semantic_scholar_id") == paper_id
+        ),
+        None,
+    )
     for ref in data.get("references", []):
         title = ref["title"].lower().strip() if ref.get("title") else "Unknown Title"
         existing_citation_key = title_to_citation_key.get(title)
 
         if existing_citation_key and existing_citation_key in hop1_citation_keys:
             # Duplicate title found in hop 1, link it to hop 1 citation
-            if hop1_citation_key and existing_citation_key not in hop1_to_hop2[hop1_citation_key]:
+            if (
+                hop1_citation_key
+                and existing_citation_key not in hop1_to_hop2[hop1_citation_key]
+            ):
                 hop1_to_hop2[hop1_citation_key].append(existing_citation_key)
             continue  # Skip adding a new citation object
 
@@ -88,12 +108,12 @@ for paper_id, data in second_hop.items():
                 "venue": ref.get("venue", ""),
                 "year": ref.get("year", None),
                 "title": ref.get("title", ""),
-                "source": f"{', '.join([entity_keys['authors'][a]['name'] for a in ref['authors'] if a in entity_keys['authors']])}. \"{ref['title']},\" {ref.get('venue', '')}, {ref.get('year', '')}.",
+                "source": f'{", ".join([entity_keys["authors"][a]["name"] for a in ref["authors"] if a in entity_keys["authors"]])}. "{ref["title"]}," {ref.get("venue", "")}, {ref.get("year", "")}.',
                 "doi": ref.get("doi", None),
                 "hop": 2,
                 "cite_positions": [],
                 "has_issue": False,
-                "citation_graph": []
+                "citation_graph": [],
             }
             citations.append(citation_obj)
             seen_citation_keys.add(citation_key)
@@ -117,7 +137,9 @@ for citation in citations:
             "venue": citation["venue"],
             "year": citation["year"],
             "doi": citation["doi"],
-            "raw_venue": hop1_papers_dict.get(citation["id"], {}).get("raw_venue", citation["venue"])
+            "raw_venue": hop1_papers_dict.get(citation["id"], {}).get(
+                "raw_venue", citation["venue"]
+            ),
         }
 
 # Step 6: Create author_citations and author_venues mappings
@@ -145,7 +167,7 @@ for author_id, author_data in entity_keys["authors"].items():
         "orcid": author_data.get("orcid", None),
         "citation": author_citations.get(author_id, []),
         "venue": author_venues.get(author_id, []),
-        "author_graph": []
+        "author_graph": [],
     }
     authors.append(author_obj)
 
@@ -157,7 +179,7 @@ for venue_id, standardized_name in entity_keys["venues"].items():
         "year": set(),
         "author": set(),
         "citation": set(),
-        "standardized_name": standardized_name
+        "standardized_name": standardized_name,
     }
 
 for citation in citations:
@@ -187,23 +209,26 @@ for venue_id, data in venue_data.items():
         "id": venue_id,
         "type": "Unknown",
         "raw_name": data["raw_name"],
-        "short": data["standardized_name"][:10] if data["standardized_name"] else "Unknown",
+        "short": data["standardized_name"][:10]
+        if data["standardized_name"]
+        else "Unknown",
         "standardized_name": data["standardized_name"],
         "year": data["year"],
         "author": data["author"],
         "citation": data["citation"],
-        "venue_graph": []
+        "venue_graph": [],
     }
     venues.append(venue_obj)
 
 # Step 10: Save to JSON files with UTF-8 encoding
-with open('outputs/citations.json', 'w', encoding='utf-8') as f:
+with open(f"{directory}/citations.json", "w", encoding="utf-8") as f:
     json.dump({"citations": citations}, f, indent=2)
 
-with open('outputs/authors.json', 'w', encoding='utf-8') as f:
+with open(f"{directory}/authors.json", "w", encoding="utf-8") as f:
     json.dump({"authors": authors}, f, indent=2)
 
-with open('outputs/venues.json', 'w', encoding='utf-8') as f:
+with open(f"{directory}/venues.json", "w", encoding="utf-8") as f:
     json.dump({"venues": venues}, f, indent=2)
 
 print("JSON files generated: citations.json, authors.json, venues.json")
+

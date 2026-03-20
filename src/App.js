@@ -127,12 +127,6 @@ function App() {
         setSentenceAnnotationList(_sentenceHighlights);
     };
 
-    /** init author list */
-    /*const initAuthor = () => {
-      const authorList = JSON.parse(JSON.stringify(authorRaw.authors));
-      setAuthor(authorList);
-    };*/
-
     /** PDF file on load */
     useEffect(() => {
         setPdfData(samplePDF);

@@ -12,9 +12,9 @@
         "2010"
       ],
       "author": [
-        "author-1",
+        "author-2",
         "author-3",
-        "author-2"
+        "author-1"
       ],
       "citation": [
         "citation-1"
@@ -33,8 +33,8 @@
         "2017"
       ],
       "author": [
-        "author-4",
         "author-5",
+        "author-4",
         "author-2"
       ],
       "citation": [
@@ -54,11 +54,11 @@
         "2014"
       ],
       "author": [
-        "author-7",
-        "author-10",
+        "author-8",
         "author-6",
+        "author-10",
         "author-9",
-        "author-8"
+        "author-7"
       ],
       "citation": [
         "citation-3"
@@ -76,499 +76,499 @@
       "short": "IEEE Trans",
       "standardized_name": "IEEE Transactions on Visualization and Computer Graphics",
       "year": [
-        "2009",
-        "2022",
         "2012",
-        "2019",
-        "2016",
-        "2013",
         "2017",
-        "2008",
-        "2014",
-        "2020",
-        "2005",
         "2006",
-        "2007",
+        "2016",
+        "2022",
+        "2008",
+        "2019",
+        "2013",
+        "2009",
         "2010",
         "2015",
+        "2014",
+        "2011",
+        "2020",
+        "2007",
         "2018",
         "2001",
-        "2011"
+        "2005"
       ],
       "author": [
-        "author-1016",
-        "author-201",
-        "author-1470",
-        "author-142",
-        "author-620",
-        "author-1227",
-        "author-10",
-        "author-282",
-        "author-689",
-        "author-767",
-        "author-13",
-        "author-14",
-        "author-1326",
-        "author-1242",
-        "author-1295",
-        "author-858",
-        "author-1049",
-        "author-1020",
-        "author-182",
-        "author-7",
-        "author-594",
-        "author-184",
-        "author-1256",
-        "author-481",
-        "author-624",
-        "author-1305",
-        "author-990",
-        "author-884",
-        "author-964",
-        "author-764",
-        "author-1329",
-        "author-586",
-        "author-1080",
-        "author-888",
-        "author-28",
-        "author-366",
-        "author-194",
-        "author-1290",
-        "author-593",
-        "author-1226",
-        "author-192",
-        "author-836",
-        "author-1055",
-        "author-921",
-        "author-895",
-        "author-693",
-        "author-543",
-        "author-302",
-        "author-1349",
-        "author-780",
-        "author-1529",
-        "author-591",
-        "author-1014",
-        "author-1316",
-        "author-1079",
-        "author-965",
-        "author-477",
-        "author-945",
-        "author-244",
-        "author-602",
-        "author-587",
-        "author-680",
-        "author-1084",
-        "author-1246",
-        "author-718",
-        "author-484",
-        "author-1056",
-        "author-1483",
-        "author-1011",
-        "author-687",
-        "author-1077",
-        "author-592",
-        "author-1245",
-        "author-1482",
-        "author-45",
-        "author-60",
-        "author-47",
-        "author-684",
-        "author-950",
-        "author-1485",
-        "author-483",
-        "author-1178",
-        "author-766",
-        "author-1072",
-        "author-388",
-        "author-857",
-        "author-891",
-        "author-428",
-        "author-478",
-        "author-889",
-        "author-141",
-        "author-240",
-        "author-76",
-        "author-926",
-        "author-925",
-        "author-1348",
-        "author-545",
-        "author-176",
-        "author-794",
-        "author-590",
-        "author-1288",
-        "author-1166",
-        "author-585",
-        "author-1352",
-        "author-360",
-        "author-188",
-        "author-1019",
-        "author-842",
-        "author-619",
-        "author-583",
-        "author-844",
-        "author-919",
-        "author-242",
-        "author-510",
-        "author-1353",
-        "author-815",
-        "author-966",
-        "author-1471",
-        "author-505",
-        "author-1286",
-        "author-488",
-        "author-1249",
-        "author-869",
-        "author-1321",
-        "author-663",
-        "author-185",
-        "author-268",
-        "author-1050",
-        "author-1218",
-        "author-1306",
-        "author-1180",
-        "author-202",
-        "author-1302",
-        "author-883",
-        "author-187",
-        "author-623",
-        "author-1230",
-        "author-57",
-        "author-1304",
-        "author-203",
-        "author-831",
-        "author-299",
-        "author-792",
-        "author-887",
-        "author-239",
-        "author-303",
-        "author-833",
-        "author-1163",
-        "author-36",
-        "author-1318",
-        "author-843",
-        "author-1248",
-        "author-874",
-        "author-584",
-        "author-480",
-        "author-885",
-        "author-946",
-        "author-300",
-        "author-722",
-        "author-1225",
-        "author-1032",
-        "author-1291",
-        "author-198",
-        "author-1158",
-        "author-539",
-        "author-725",
-        "author-724",
-        "author-439",
-        "author-1320",
-        "author-834",
-        "author-1191",
-        "author-1328",
-        "author-226",
-        "author-512",
-        "author-283",
-        "author-227",
-        "author-1189",
-        "author-546",
-        "author-204",
-        "author-943",
-        "author-1073",
-        "author-765",
-        "author-1038",
-        "author-229",
-        "author-960",
-        "author-18",
-        "author-386",
-        "author-1086",
-        "author-279",
-        "author-1017",
-        "author-50",
-        "author-749",
-        "author-1528",
-        "author-1327",
-        "author-1479",
-        "author-496",
-        "author-1037",
-        "author-544",
-        "author-1331",
-        "author-1315",
-        "author-292",
-        "author-1285",
-        "author-1297",
-        "author-1231",
-        "author-1229",
-        "author-688",
-        "author-886",
-        "author-1015",
-        "author-837",
-        "author-1012",
-        "author-384",
-        "author-793",
-        "author-1287",
-        "author-1296",
-        "author-962",
-        "author-189",
-        "author-37",
-        "author-538",
-        "author-1319",
-        "author-622",
-        "author-694",
-        "author-1484",
-        "author-1228",
-        "author-222",
-        "author-882",
-        "author-768",
-        "author-948",
-        "author-686",
-        "author-1010",
-        "author-1051",
-        "author-537",
-        "author-1021",
-        "author-621",
-        "author-835",
-        "author-963",
-        "author-1157",
-        "author-685",
-        "author-191",
-        "author-923",
-        "author-937",
-        "author-1332",
-        "author-1477",
-        "author-730",
-        "author-241",
-        "author-625",
-        "author-46",
-        "author-180",
-        "author-681",
-        "author-1243",
-        "author-32",
-        "author-427",
-        "author-1013",
-        "author-506",
-        "author-933",
-        "author-922",
-        "author-175",
-        "author-856",
-        "author-732",
-        "author-1317",
-        "author-59",
-        "author-304",
-        "author-393",
-        "author-72",
-        "author-1258",
-        "author-845",
-        "author-1330",
-        "author-199",
-        "author-692",
-        "author-190",
-        "author-682",
-        "author-504",
-        "author-34",
-        "author-988",
-        "author-924",
-        "author-156",
-        "author-1478",
-        "author-890",
-        "author-947",
-        "author-582",
-        "author-58",
-        "author-581",
-        "author-1325",
-        "author-830",
-        "author-38",
-        "author-446",
-        "author-1501",
-        "author-1351",
-        "author-243",
         "author-769",
-        "author-1293",
-        "author-1289",
-        "author-1105",
-        "author-487",
-        "author-1292",
-        "author-1052",
-        "author-1391",
-        "author-1048",
-        "author-1415",
-        "author-832",
-        "author-479",
-        "author-1185",
-        "author-588",
-        "author-482",
-        "author-230",
-        "author-11",
-        "author-1294",
-        "author-429",
-        "author-683",
-        "author-186",
-        "author-411",
-        "author-1078",
-        "author-1179",
-        "author-679",
-        "author-1164",
-        "author-949",
-        "author-1250",
-        "author-359",
-        "author-200",
-        "author-183",
-        "author-49",
-        "author-1244",
-        "author-723",
-        "author-17",
-        "author-476",
-        "author-48",
-        "author-12",
-        "author-1350",
-        "author-485",
+        "author-1226",
+        "author-439",
         "author-193",
-        "author-1303",
-        "author-1054",
-        "author-1070",
-        "author-475",
-        "author-278",
-        "author-855",
-        "author-35",
-        "author-854",
-        "author-1087",
-        "author-1053",
-        "author-1018",
-        "author-1298",
-        "author-1071",
-        "author-1165",
-        "author-137",
-        "author-486",
-        "author-989",
-        "author-731",
-        "author-135",
+        "author-1010",
+        "author-686",
+        "author-1292",
+        "author-693",
+        "author-1055",
         "author-1476",
+        "author-1258",
+        "author-268",
+        "author-283",
+        "author-360",
+        "author-446",
+        "author-49",
+        "author-842",
+        "author-1249",
+        "author-895",
+        "author-1250",
+        "author-1485",
+        "author-1327",
+        "author-303",
+        "author-1291",
+        "author-512",
+        "author-59",
+        "author-175",
+        "author-692",
+        "author-186",
+        "author-189",
+        "author-924",
+        "author-1072",
+        "author-963",
+        "author-990",
+        "author-1319",
+        "author-858",
+        "author-1483",
+        "author-384",
+        "author-1178",
+        "author-1287",
+        "author-1332",
+        "author-1256",
+        "author-989",
+        "author-587",
+        "author-1348",
+        "author-725",
+        "author-1288",
+        "author-14",
+        "author-583",
+        "author-182",
+        "author-685",
+        "author-393",
+        "author-585",
+        "author-475",
+        "author-184",
+        "author-948",
+        "author-1037",
+        "author-884",
+        "author-192",
+        "author-950",
+        "author-960",
+        "author-427",
+        "author-1243",
+        "author-1191",
+        "author-1086",
+        "author-965",
+        "author-34",
+        "author-176",
+        "author-764",
+        "author-1013",
+        "author-1242",
+        "author-32",
+        "author-47",
+        "author-300",
+        "author-38",
+        "author-1248",
+        "author-1529",
+        "author-1329",
+        "author-142",
+        "author-919",
+        "author-194",
+        "author-188",
+        "author-890",
+        "author-180",
+        "author-722",
+        "author-834",
+        "author-1052",
+        "author-544",
+        "author-619",
+        "author-539",
+        "author-46",
+        "author-988",
+        "author-882",
+        "author-428",
+        "author-279",
+        "author-1391",
+        "author-156",
+        "author-1318",
+        "author-486",
+        "author-682",
+        "author-724",
+        "author-886",
+        "author-1328",
+        "author-240",
+        "author-1353",
+        "author-622",
+        "author-1297",
+        "author-921",
+        "author-504",
+        "author-680",
+        "author-204",
+        "author-856",
+        "author-191",
+        "author-1163",
+        "author-226",
+        "author-203",
+        "author-844",
+        "author-1157",
+        "author-1054",
+        "author-546",
+        "author-37",
+        "author-282",
+        "author-1228",
+        "author-1331",
+        "author-483",
+        "author-925",
+        "author-477",
+        "author-1326",
+        "author-1011",
+        "author-1051",
+        "author-1352",
+        "author-278",
+        "author-480",
+        "author-18",
+        "author-1053",
+        "author-1079",
+        "author-1303",
+        "author-496",
+        "author-923",
+        "author-869",
+        "author-1350",
+        "author-1080",
+        "author-581",
+        "author-478",
+        "author-545",
+        "author-845",
+        "author-681",
+        "author-1180",
+        "author-1289",
+        "author-1019",
+        "author-766",
+        "author-199",
+        "author-765",
+        "author-185",
+        "author-476",
+        "author-1012",
+        "author-1325",
+        "author-854",
+        "author-479",
+        "author-731",
+        "author-623",
+        "author-792",
+        "author-227",
+        "author-48",
+        "author-833",
+        "author-1293",
+        "author-239",
+        "author-962",
+        "author-586",
+        "author-602",
+        "author-1166",
+        "author-1290",
+        "author-537",
+        "author-429",
+        "author-1294",
+        "author-1315",
+        "author-1056",
+        "author-302",
+        "author-1020",
+        "author-1050",
+        "author-1470",
+        "author-593",
+        "author-1049",
+        "author-484",
+        "author-1073",
+        "author-843",
+        "author-1482",
+        "author-229",
+        "author-836",
+        "author-945",
+        "author-831",
+        "author-1528",
+        "author-141",
+        "author-1014",
+        "author-1320",
+        "author-1048",
+        "author-933",
+        "author-543",
+        "author-624",
+        "author-588",
+        "author-60",
+        "author-72",
+        "author-538",
+        "author-190",
+        "author-591",
+        "author-793",
+        "author-937",
+        "author-780",
+        "author-1015",
+        "author-1164",
+        "author-1317",
+        "author-1477",
+        "author-35",
+        "author-1231",
+        "author-885",
+        "author-1087",
+        "author-1218",
+        "author-482",
+        "author-1165",
+        "author-1501",
+        "author-1302",
+        "author-1244",
+        "author-687",
+        "author-1479",
+        "author-230",
+        "author-388",
+        "author-1230",
+        "author-794",
+        "author-855",
+        "author-946",
+        "author-50",
+        "author-488",
+        "author-730",
+        "author-222",
+        "author-1286",
+        "author-292",
+        "author-966",
+        "author-386",
+        "author-620",
+        "author-1351",
+        "author-1305",
+        "author-487",
+        "author-1084",
+        "author-1021",
+        "author-1016",
+        "author-411",
+        "author-304",
+        "author-57",
+        "author-1018",
+        "author-506",
+        "author-592",
+        "author-1295",
+        "author-832",
+        "author-883",
+        "author-718",
+        "author-481",
+        "author-768",
+        "author-242",
+        "author-36",
+        "author-830",
+        "author-694",
+        "author-1227",
+        "author-723",
+        "author-359",
+        "author-76",
+        "author-187",
+        "author-1306",
+        "author-947",
+        "author-243",
+        "author-1078",
+        "author-1285",
+        "author-1032",
+        "author-135",
+        "author-815",
+        "author-888",
+        "author-732",
+        "author-299",
+        "author-684",
+        "author-200",
+        "author-505",
+        "author-1179",
+        "author-1298",
+        "author-594",
+        "author-1321",
+        "author-1484",
+        "author-663",
+        "author-11",
+        "author-1085",
+        "author-137",
+        "author-835",
+        "author-1349",
+        "author-1158",
+        "author-1225",
+        "author-366",
+        "author-13",
+        "author-183",
+        "author-241",
+        "author-12",
+        "author-625",
+        "author-10",
+        "author-590",
+        "author-922",
+        "author-749",
+        "author-1070",
+        "author-202",
+        "author-1471",
+        "author-1415",
+        "author-28",
+        "author-485",
+        "author-1077",
+        "author-679",
+        "author-7",
+        "author-926",
+        "author-1038",
+        "author-621",
+        "author-857",
+        "author-1304",
+        "author-887",
+        "author-1017",
+        "author-1316",
+        "author-943",
+        "author-874",
+        "author-45",
+        "author-964",
+        "author-1105",
+        "author-837",
+        "author-1071",
+        "author-17",
+        "author-510",
+        "author-1330",
+        "author-1478",
+        "author-1189",
+        "author-689",
+        "author-198",
+        "author-949",
+        "author-582",
+        "author-688",
+        "author-1185",
         "author-760",
-        "author-1085"
+        "author-1246",
+        "author-889",
+        "author-1245",
+        "author-58",
+        "author-201",
+        "author-244",
+        "author-1229",
+        "author-683",
+        "author-767",
+        "author-1296",
+        "author-584",
+        "author-891"
       ],
       "citation": [
-        "citation-297",
-        "citation-588",
-        "citation-14",
-        "citation-503",
-        "citation-118",
-        "citation-540",
-        "citation-575",
-        "citation-266",
-        "citation-382",
-        "citation-383",
-        "citation-576",
-        "citation-107",
-        "citation-287",
-        "citation-291",
-        "citation-580",
-        "citation-144",
-        "citation-542",
-        "citation-242",
-        "citation-556",
-        "citation-574",
-        "citation-122",
-        "citation-18",
-        "citation-596",
-        "citation-573",
-        "citation-470",
-        "citation-449",
-        "citation-23",
-        "citation-691",
-        "citation-124",
-        "citation-592",
-        "citation-572",
-        "citation-102",
-        "citation-577",
-        "citation-450",
-        "citation-241",
-        "citation-472",
-        "citation-78",
-        "citation-106",
-        "citation-578",
-        "citation-153",
-        "citation-693",
-        "citation-4",
-        "citation-346",
-        "citation-455",
-        "citation-563",
-        "citation-343",
-        "citation-114",
-        "citation-110",
-        "citation-546",
-        "citation-671",
-        "citation-582",
-        "citation-687",
-        "citation-421",
-        "citation-401",
-        "citation-744",
-        "citation-369",
-        "citation-512",
-        "citation-607",
-        "citation-453",
-        "citation-610",
-        "citation-625",
-        "citation-265",
-        "citation-101",
-        "citation-506",
-        "citation-509",
-        "citation-5",
-        "citation-384",
-        "citation-303",
-        "citation-268",
-        "citation-123",
-        "citation-240",
-        "citation-334",
-        "citation-547",
-        "citation-289",
-        "citation-593",
-        "citation-466",
-        "citation-502",
         "citation-370",
-        "citation-590",
-        "citation-414",
-        "citation-428",
-        "citation-332",
+        "citation-382",
+        "citation-4",
+        "citation-102",
+        "citation-475",
+        "citation-610",
+        "citation-110",
+        "citation-451",
+        "citation-546",
+        "citation-575",
+        "citation-106",
+        "citation-503",
+        "citation-466",
+        "citation-343",
+        "citation-438",
+        "citation-286",
         "citation-452",
+        "citation-572",
+        "citation-588",
         "citation-640",
         "citation-465",
-        "citation-413",
-        "citation-347",
-        "citation-438",
-        "citation-460",
-        "citation-602",
-        "citation-579",
-        "citation-584",
-        "citation-595",
-        "citation-703",
-        "citation-288",
-        "citation-363",
-        "citation-451",
-        "citation-331",
-        "citation-400",
-        "citation-475",
-        "citation-191",
-        "citation-13",
-        "citation-562",
         "citation-17",
-        "citation-147",
-        "citation-402",
-        "citation-286",
-        "citation-399",
-        "citation-677",
-        "citation-571",
-        "citation-549",
-        "citation-292",
-        "citation-601",
-        "citation-304",
-        "citation-335",
+        "citation-240",
+        "citation-449",
         "citation-675",
+        "citation-593",
+        "citation-592",
+        "citation-304",
+        "citation-266",
+        "citation-331",
+        "citation-332",
+        "citation-472",
+        "citation-582",
+        "citation-334",
+        "citation-399",
+        "citation-578",
+        "citation-153",
+        "citation-414",
+        "citation-287",
+        "citation-693",
+        "citation-744",
+        "citation-346",
+        "citation-292",
+        "citation-5",
         "citation-351",
-        "citation-391",
+        "citation-595",
+        "citation-470",
+        "citation-455",
+        "citation-625",
+        "citation-18",
+        "citation-579",
+        "citation-453",
+        "citation-335",
+        "citation-144",
+        "citation-241",
+        "citation-574",
+        "citation-577",
+        "citation-607",
+        "citation-123",
+        "citation-265",
+        "citation-506",
+        "citation-297",
+        "citation-401",
+        "citation-460",
+        "citation-512",
+        "citation-602",
+        "citation-402",
+        "citation-107",
+        "citation-384",
+        "citation-590",
+        "citation-124",
+        "citation-78",
+        "citation-421",
+        "citation-242",
+        "citation-101",
+        "citation-509",
+        "citation-703",
+        "citation-147",
+        "citation-268",
+        "citation-369",
+        "citation-347",
+        "citation-428",
+        "citation-540",
+        "citation-23",
+        "citation-563",
+        "citation-413",
+        "citation-549",
+        "citation-14",
+        "citation-13",
+        "citation-118",
+        "citation-114",
+        "citation-556",
+        "citation-122",
+        "citation-383",
+        "citation-562",
+        "citation-580",
+        "citation-573",
+        "citation-601",
+        "citation-671",
+        "citation-571",
+        "citation-576",
+        "citation-691",
+        "citation-583",
+        "citation-687",
+        "citation-677",
+        "citation-289",
+        "citation-547",
+        "citation-191",
+        "citation-303",
         "citation-589",
-        "citation-583"
+        "citation-391",
+        "citation-502",
+        "citation-291",
+        "citation-584",
+        "citation-400",
+        "citation-450",
+        "citation-363",
+        "citation-542",
+        "citation-596",
+        "citation-288"
       ],
       "venue_graph": []
     },
@@ -582,25 +582,25 @@
       "short": "Fake Journ",
       "standardized_name": "Fake Journal 2",
       "year": [
-        "2025",
-        "2020"
+        "2020",
+        "2025"
       ],
       "author": [
-        "author-15",
-        "author-52",
         "author-1474",
+        "author-56",
+        "author-354",
         "author-55",
         "author-51",
         "author-1413",
-        "author-56",
-        "author-354"
+        "author-15",
+        "author-52"
       ],
       "citation": [
+        "citation-22",
+        "citation-187",
         "citation-19",
         "citation-6",
-        "citation-673",
-        "citation-187",
-        "citation-22"
+        "citation-673"
       ],
       "venue_graph": []
     },
@@ -617,10 +617,10 @@
         "2002"
       ],
       "author": [
-        "author-17",
-        "author-246",
         "author-16",
-        "author-166"
+        "author-166",
+        "author-17",
+        "author-246"
       ],
       "citation": [
         "citation-7",
@@ -637,29 +637,29 @@
       "short": "ACM Confer",
       "standardized_name": "ACM Conference on Human Factors in Computing Systems",
       "year": [
-        "2009",
         "2020",
+        "2009",
         "2016"
       ],
       "author": [
-        "author-21",
-        "author-22",
-        "author-26",
-        "author-63",
-        "author-65",
         "author-19",
+        "author-63",
         "author-20",
-        "author-25",
-        "author-64",
+        "author-22",
         "author-18",
-        "author-23",
+        "author-41",
         "author-24",
-        "author-41"
+        "author-26",
+        "author-65",
+        "author-64",
+        "author-23",
+        "author-25",
+        "author-21"
       ],
       "citation": [
-        "citation-25",
+        "citation-9",
         "citation-8",
-        "citation-9"
+        "citation-25"
       ],
       "venue_graph": []
     },
@@ -676,12 +676,12 @@
         "2019"
       ],
       "author": [
-        "author-28",
         "author-764",
-        "author-1081",
-        "author-768",
         "author-769",
-        "author-27"
+        "author-1081",
+        "author-27",
+        "author-28",
+        "author-768"
       ],
       "citation": [
         "citation-10",
@@ -700,26 +700,26 @@
       "standardized_name": "Computer Graphics Forum",
       "year": [
         "2017",
-        "2014",
         "2023",
+        "2014",
         "2021"
       ],
       "author": [
-        "author-28",
-        "author-45",
         "author-33",
         "author-44",
+        "author-45",
         "author-1480",
-        "author-1481",
         "author-30",
-        "author-27",
+        "author-28",
         "author-32",
-        "author-31",
-        "author-29"
+        "author-27",
+        "author-1481",
+        "author-29",
+        "author-31"
       ],
       "citation": [
-        "citation-12",
         "citation-11",
+        "citation-12",
         "citation-16",
         "citation-676"
       ],
@@ -738,10 +738,10 @@
       ],
       "author": [
         "author-39",
-        "author-40",
-        "author-43",
         "author-42",
-        "author-41"
+        "author-41",
+        "author-43",
+        "author-40"
       ],
       "citation": [
         "citation-15"
@@ -777,21 +777,21 @@
       "short": "Fake Journ",
       "standardized_name": "Fake Journal 1",
       "year": [
-        "2025",
-        "2023"
+        "2023",
+        "2025"
       ],
       "author": [
-        "author-52",
-        "author-55",
         "author-358",
+        "author-55",
+        "author-1413",
         "author-1414",
-        "author-1413"
+        "author-52"
       ],
       "citation": [
+        "citation-638",
         "citation-639",
-        "citation-190",
         "citation-21",
-        "citation-638"
+        "citation-190"
       ],
       "venue_graph": []
     },
@@ -807,8 +807,8 @@
         "2002"
       ],
       "author": [
-        "author-62",
-        "author-61"
+        "author-61",
+        "author-62"
       ],
       "citation": [
         "citation-24"
@@ -840,44 +840,44 @@
       "standardized_name": "International Journal of Geographical Information Science",
       "year": [
         "1993",
-        "1999",
-        "1994",
         "2010",
+        "2011",
+        "1999",
         "1996",
-        "2011"
+        "1994"
       ],
       "author": [
-        "author-1589",
-        "author-70",
-        "author-1544",
-        "author-213",
-        "author-219",
-        "author-1588",
-        "author-225",
-        "author-1543",
-        "author-223",
         "author-191",
-        "author-84",
-        "author-224",
-        "author-1590",
-        "author-72",
-        "author-639",
-        "author-1546",
-        "author-222",
         "author-226",
-        "author-1545",
-        "author-220",
+        "author-225",
+        "author-221",
+        "author-72",
+        "author-1588",
+        "author-222",
+        "author-1590",
+        "author-84",
+        "author-70",
+        "author-224",
+        "author-213",
         "author-227",
-        "author-71",
-        "author-221"
+        "author-223",
+        "author-220",
+        "author-1544",
+        "author-219",
+        "author-639",
+        "author-1589",
+        "author-1543",
+        "author-1546",
+        "author-1545",
+        "author-71"
       ],
       "citation": [
-        "citation-111",
         "citation-113",
-        "citation-711",
+        "citation-29",
+        "citation-111",
         "citation-730",
         "citation-43",
-        "citation-29"
+        "citation-711"
       ],
       "venue_graph": []
     },
@@ -888,131 +888,131 @@
       "short": "Computer g",
       "standardized_name": "Computer graphics forum (Print)",
       "year": [
-        "2009",
         "2012",
-        "2019",
-        "2016",
-        "2013",
         "2017",
-        "2014",
+        "2016",
+        "2009",
+        "2013",
+        "2019",
         "2015",
+        "2014",
         "2011"
       ],
       "author": [
-        "author-809",
-        "author-943",
-        "author-219",
-        "author-282",
-        "author-912",
-        "author-814",
-        "author-930",
-        "author-933",
-        "author-752",
-        "author-927",
-        "author-758",
-        "author-811",
-        "author-131",
-        "author-360",
-        "author-808",
-        "author-939",
+        "author-180",
+        "author-722",
+        "author-537",
+        "author-801",
         "author-804",
-        "author-294",
+        "author-696",
+        "author-429",
         "author-755",
-        "author-1300",
-        "author-697",
-        "author-749",
-        "author-931",
+        "author-135",
+        "author-802",
         "author-815",
-        "author-805",
-        "author-1299",
-        "author-663",
-        "author-913",
-        "author-38",
-        "author-934",
-        "author-942",
-        "author-185",
-        "author-292",
-        "author-803",
-        "author-750",
-        "author-179",
-        "author-293",
-        "author-487",
-        "author-929",
-        "author-187",
-        "author-133",
-        "author-134",
-        "author-301",
-        "author-908",
+        "author-930",
         "author-807",
         "author-299",
-        "author-189",
-        "author-813",
-        "author-538",
-        "author-907",
-        "author-756",
-        "author-928",
-        "author-936",
-        "author-429",
-        "author-940",
+        "author-133",
+        "author-1300",
         "author-1301",
-        "author-696",
-        "author-751",
-        "author-757",
-        "author-498",
-        "author-754",
-        "author-722",
-        "author-801",
-        "author-753",
-        "author-220",
-        "author-802",
-        "author-484",
-        "author-938",
-        "author-909",
-        "author-132",
-        "author-537",
-        "author-941",
-        "author-621",
-        "author-45",
-        "author-898",
-        "author-497",
-        "author-810",
-        "author-937",
-        "author-695",
-        "author-932",
-        "author-759",
-        "author-944",
-        "author-935",
-        "author-180",
-        "author-806",
-        "author-910",
-        "author-812",
         "author-283",
-        "author-135",
-        "author-760"
+        "author-360",
+        "author-484",
+        "author-810",
+        "author-756",
+        "author-751",
+        "author-663",
+        "author-909",
+        "author-941",
+        "author-301",
+        "author-910",
+        "author-132",
+        "author-932",
+        "author-929",
+        "author-933",
+        "author-811",
+        "author-928",
+        "author-812",
+        "author-814",
+        "author-134",
+        "author-131",
+        "author-944",
+        "author-759",
+        "author-752",
+        "author-538",
+        "author-942",
+        "author-282",
+        "author-937",
+        "author-189",
+        "author-220",
+        "author-749",
+        "author-806",
+        "author-219",
+        "author-697",
+        "author-179",
+        "author-621",
+        "author-907",
+        "author-913",
+        "author-753",
+        "author-292",
+        "author-809",
+        "author-803",
+        "author-943",
+        "author-898",
+        "author-45",
+        "author-927",
+        "author-487",
+        "author-931",
+        "author-497",
+        "author-757",
+        "author-758",
+        "author-936",
+        "author-294",
+        "author-808",
+        "author-185",
+        "author-908",
+        "author-813",
+        "author-750",
+        "author-760",
+        "author-38",
+        "author-935",
+        "author-912",
+        "author-754",
+        "author-805",
+        "author-939",
+        "author-293",
+        "author-1299",
+        "author-498",
+        "author-934",
+        "author-695",
+        "author-938",
+        "author-940",
+        "author-187"
       ],
       "citation": [
-        "citation-359",
-        "citation-246",
-        "citation-148",
-        "citation-415",
-        "citation-417",
-        "citation-75",
-        "citation-344",
-        "citation-247",
-        "citation-376",
-        "citation-336",
-        "citation-581",
-        "citation-374",
-        "citation-345",
         "citation-358",
-        "citation-360",
-        "citation-375",
-        "citation-544",
-        "citation-419",
-        "citation-418",
         "citation-408",
+        "citation-544",
+        "citation-336",
+        "citation-344",
+        "citation-148",
+        "citation-246",
+        "citation-415",
+        "citation-376",
+        "citation-375",
+        "citation-359",
+        "citation-247",
+        "citation-273",
+        "citation-374",
+        "citation-419",
+        "citation-345",
         "citation-416",
-        "citation-273"
+        "citation-75",
+        "citation-581",
+        "citation-417",
+        "citation-360",
+        "citation-418"
       ],
       "venue_graph": []
     },
@@ -1024,164 +1024,164 @@
       "standardized_name": "International Conference on Human Factors in Computing Systems",
       "year": [
         "2012",
-        "2016",
-        "2013",
         "2017",
+        "2016",
         "2008",
-        "2005",
-        "2014",
-        "1999",
-        "1994",
-        "2007",
         "2015",
+        "2013",
         "2010",
+        "2014",
+        "2011",
+        "2007",
+        "1999",
         "2018",
-        "2011"
+        "2005",
+        "1994"
       ],
       "author": [
-        "author-361",
-        "author-290",
-        "author-385",
-        "author-1045",
-        "author-176",
-        "author-1189",
-        "author-142",
-        "author-282",
-        "author-761",
-        "author-286",
-        "author-1507",
-        "author-175",
-        "author-1513",
-        "author-431",
-        "author-1520",
-        "author-229",
-        "author-1508",
-        "author-1620",
-        "author-386",
-        "author-291",
-        "author-1506",
-        "author-287",
-        "author-280",
-        "author-1498",
-        "author-763",
-        "author-136",
-        "author-500",
-        "author-279",
-        "author-709",
-        "author-705",
-        "author-1521",
-        "author-1599",
-        "author-911",
-        "author-288",
-        "author-624",
-        "author-708",
-        "author-502",
-        "author-1252",
-        "author-426",
-        "author-762",
-        "author-1044",
-        "author-1312",
-        "author-703",
-        "author-166",
-        "author-1501",
-        "author-593",
-        "author-140",
-        "author-192",
-        "author-1594",
-        "author-434",
-        "author-470",
-        "author-1598",
-        "author-1596",
-        "author-499",
-        "author-384",
-        "author-1047",
-        "author-134",
-        "author-645",
-        "author-436",
-        "author-1046",
-        "author-299",
-        "author-707",
-        "author-1500",
-        "author-1597",
-        "author-303",
-        "author-1595",
-        "author-704",
-        "author-289",
-        "author-1253",
-        "author-1621",
-        "author-529",
-        "author-1622",
-        "author-945",
-        "author-531",
-        "author-946",
-        "author-643",
-        "author-1314",
         "author-537",
-        "author-1313",
-        "author-387",
-        "author-706",
-        "author-17",
-        "author-281",
-        "author-710",
-        "author-501",
-        "author-45",
-        "author-485",
-        "author-432",
-        "author-246",
-        "author-702",
+        "author-290",
         "author-193",
-        "author-278",
-        "author-536",
-        "author-530",
-        "author-730",
-        "author-1499",
         "author-1502",
-        "author-388",
-        "author-137",
-        "author-503",
-        "author-1509",
-        "author-486",
-        "author-283",
+        "author-140",
         "author-135",
-        "author-141",
+        "author-431",
+        "author-1044",
+        "author-299",
+        "author-361",
         "author-425",
-        "author-430"
+        "author-761",
+        "author-593",
+        "author-1498",
+        "author-706",
+        "author-283",
+        "author-279",
+        "author-502",
+        "author-1499",
+        "author-1045",
+        "author-229",
+        "author-281",
+        "author-486",
+        "author-1521",
+        "author-1047",
+        "author-1506",
+        "author-1595",
+        "author-385",
+        "author-945",
+        "author-1507",
+        "author-1621",
+        "author-136",
+        "author-141",
+        "author-166",
+        "author-137",
+        "author-1513",
+        "author-1253",
+        "author-426",
+        "author-434",
+        "author-703",
+        "author-303",
+        "author-911",
+        "author-470",
+        "author-289",
+        "author-708",
+        "author-645",
+        "author-430",
+        "author-624",
+        "author-175",
+        "author-134",
+        "author-707",
+        "author-1509",
+        "author-288",
+        "author-1598",
+        "author-705",
+        "author-282",
+        "author-1520",
+        "author-1599",
+        "author-702",
+        "author-1622",
+        "author-762",
+        "author-1314",
+        "author-436",
+        "author-384",
+        "author-1313",
+        "author-278",
+        "author-1596",
+        "author-1501",
+        "author-709",
+        "author-485",
+        "author-291",
+        "author-388",
+        "author-536",
+        "author-246",
+        "author-1500",
+        "author-501",
+        "author-946",
+        "author-730",
+        "author-1252",
+        "author-286",
+        "author-1594",
+        "author-386",
+        "author-192",
+        "author-45",
+        "author-499",
+        "author-280",
+        "author-387",
+        "author-531",
+        "author-17",
+        "author-503",
+        "author-1189",
+        "author-1620",
+        "author-643",
+        "author-1312",
+        "author-176",
+        "author-704",
+        "author-500",
+        "author-1046",
+        "author-710",
+        "author-763",
+        "author-1508",
+        "author-432",
+        "author-287",
+        "author-142",
+        "author-1597",
+        "author-530",
+        "author-529"
       ],
       "citation": [
-        "citation-340",
-        "citation-420",
-        "citation-201",
-        "citation-688",
-        "citation-749",
-        "citation-464",
-        "citation-256",
-        "citation-685",
-        "citation-551",
-        "citation-698",
-        "citation-146",
-        "citation-248",
-        "citation-339",
-        "citation-559",
-        "citation-735",
-        "citation-142",
-        "citation-695",
-        "citation-217",
         "citation-267",
+        "citation-685",
         "citation-220",
-        "citation-736",
-        "citation-192",
-        "citation-143",
-        "citation-587",
-        "citation-409",
-        "citation-552",
-        "citation-362",
         "citation-278",
-        "citation-737",
-        "citation-223",
-        "citation-213",
-        "citation-76",
+        "citation-362",
+        "citation-256",
+        "citation-552",
+        "citation-587",
+        "citation-690",
+        "citation-143",
+        "citation-248",
+        "citation-735",
+        "citation-736",
+        "citation-559",
+        "citation-464",
+        "citation-695",
         "citation-684",
-        "citation-690"
+        "citation-146",
+        "citation-223",
+        "citation-737",
+        "citation-749",
+        "citation-420",
+        "citation-698",
+        "citation-142",
+        "citation-688",
+        "citation-192",
+        "citation-217",
+        "citation-213",
+        "citation-551",
+        "citation-201",
+        "citation-339",
+        "citation-409",
+        "citation-76",
+        "citation-340"
       ],
       "venue_graph": []
     },
@@ -1213,107 +1213,107 @@
       "year": [
         "2012",
         "2017",
-        "2014",
         "2015",
+        "2014",
         "2011"
       ],
       "author": [
-        "author-893",
-        "author-917",
-        "author-387",
-        "author-919",
-        "author-1066",
-        "author-624",
-        "author-903",
-        "author-242",
-        "author-299",
-        "author-621",
-        "author-902",
-        "author-1069",
-        "author-900",
-        "author-427",
-        "author-210",
-        "author-211",
-        "author-898",
-        "author-193",
-        "author-1075",
-        "author-914",
-        "author-1076",
-        "author-912",
-        "author-797",
         "author-191",
-        "author-906",
-        "author-905",
-        "author-838",
-        "author-841",
-        "author-663",
-        "author-901",
-        "author-843",
-        "author-913",
-        "author-795",
+        "author-1069",
         "author-766",
-        "author-366",
-        "author-194",
-        "author-1065",
-        "author-839",
-        "author-897",
-        "author-208",
-        "author-918",
-        "author-1074",
-        "author-934",
-        "author-896",
-        "author-920",
-        "author-894",
         "author-18",
-        "author-386",
-        "author-1159",
+        "author-894",
         "author-243",
-        "author-188",
-        "author-916",
-        "author-796",
-        "author-969",
-        "author-892",
-        "author-602",
-        "author-209",
-        "author-143",
-        "author-840",
-        "author-728",
-        "author-587",
-        "author-1068",
-        "author-428",
-        "author-895",
+        "author-795",
+        "author-897",
+        "author-210",
+        "author-906",
         "author-1160",
-        "author-842",
-        "author-212",
-        "author-38",
-        "author-1162",
-        "author-718",
-        "author-384",
-        "author-1067",
-        "author-915",
-        "author-904",
         "author-430",
-        "author-899"
+        "author-587",
+        "author-893",
+        "author-915",
+        "author-193",
+        "author-624",
+        "author-1074",
+        "author-366",
+        "author-209",
+        "author-840",
+        "author-903",
+        "author-621",
+        "author-1159",
+        "author-211",
+        "author-902",
+        "author-920",
+        "author-918",
+        "author-905",
+        "author-839",
+        "author-901",
+        "author-299",
+        "author-718",
+        "author-212",
+        "author-841",
+        "author-896",
+        "author-913",
+        "author-914",
+        "author-242",
+        "author-38",
+        "author-1067",
+        "author-969",
+        "author-912",
+        "author-208",
+        "author-428",
+        "author-916",
+        "author-143",
+        "author-386",
+        "author-842",
+        "author-796",
+        "author-838",
+        "author-843",
+        "author-917",
+        "author-1162",
+        "author-900",
+        "author-1076",
+        "author-892",
+        "author-898",
+        "author-1068",
+        "author-728",
+        "author-919",
+        "author-934",
+        "author-384",
+        "author-1065",
+        "author-895",
+        "author-194",
+        "author-663",
+        "author-904",
+        "author-387",
+        "author-797",
+        "author-1066",
+        "author-1075",
+        "author-899",
+        "author-602",
+        "author-188",
+        "author-427"
       ],
       "citation": [
-        "citation-371",
-        "citation-403",
+        "citation-405",
         "citation-411",
         "citation-214",
-        "citation-412",
-        "citation-505",
-        "citation-410",
-        "citation-404",
-        "citation-469",
-        "citation-471",
-        "citation-79",
-        "citation-405",
-        "citation-406",
-        "citation-103",
-        "citation-385",
         "citation-504",
-        "citation-372",
-        "citation-109"
+        "citation-505",
+        "citation-403",
+        "citation-385",
+        "citation-404",
+        "citation-410",
+        "citation-103",
+        "citation-109",
+        "citation-412",
+        "citation-471",
+        "citation-469",
+        "citation-406",
+        "citation-79",
+        "citation-371",
+        "citation-372"
       ],
       "venue_graph": []
     },
@@ -1327,13 +1327,13 @@
         "2012"
       ],
       "author": [
-        "author-148",
         "author-149",
+        "author-146",
         "author-147",
-        "author-151",
-        "author-150",
         "author-145",
-        "author-146"
+        "author-148",
+        "author-151",
+        "author-150"
       ],
       "citation": [
         "citation-81"
@@ -1365,20 +1365,20 @@
       "short": "Annual Mee",
       "standardized_name": "Annual Meeting of the Association for Computational Linguistics",
       "year": [
-        "1994",
-        "2011"
+        "2011",
+        "1994"
       ],
       "author": [
-        "author-154",
-        "author-153",
-        "author-1519",
         "author-1518",
+        "author-1519",
+        "author-153",
         "author-151",
+        "author-154",
         "author-152"
       ],
       "citation": [
-        "citation-83",
-        "citation-697"
+        "citation-697",
+        "citation-83"
       ],
       "venue_graph": []
     },
@@ -1392,8 +1392,8 @@
         "2010"
       ],
       "author": [
-        "author-155",
-        "author-156"
+        "author-156",
+        "author-155"
       ],
       "citation": [
         "citation-84"
@@ -1407,45 +1407,45 @@
       "short": "ACM Sympos",
       "standardized_name": "ACM Symposium on User Interface Software and Technology",
       "year": [
-        "2009",
         "2016",
-        "2014",
-        "2010",
         "2015",
+        "2009",
+        "2010",
+        "2014",
         "2011"
       ],
       "author": [
-        "author-548",
-        "author-510",
-        "author-45",
-        "author-142",
-        "author-513",
-        "author-549",
-        "author-282",
-        "author-1241",
-        "author-435",
-        "author-536",
-        "author-498",
-        "author-386",
-        "author-547",
         "author-434",
-        "author-511",
-        "author-137",
         "author-433",
-        "author-401",
+        "author-510",
+        "author-514",
+        "author-547",
         "author-512",
-        "author-535",
-        "author-141",
+        "author-435",
+        "author-513",
+        "author-536",
         "author-425",
-        "author-514"
+        "author-548",
+        "author-1241",
+        "author-282",
+        "author-386",
+        "author-535",
+        "author-549",
+        "author-401",
+        "author-498",
+        "author-142",
+        "author-45",
+        "author-511",
+        "author-141",
+        "author-137"
       ],
       "citation": [
-        "citation-258",
-        "citation-85",
-        "citation-251",
-        "citation-543",
+        "citation-269",
         "citation-219",
-        "citation-269"
+        "citation-543",
+        "citation-85",
+        "citation-258",
+        "citation-251"
       ],
       "venue_graph": []
     },
@@ -1456,24 +1456,24 @@
       "short": "Proceeding",
       "standardized_name": "Proceedings of the VLDB Endowment",
       "year": [
-        "2017",
         "2008",
+        "2017",
         "2014"
       ],
       "author": [
-        "author-158",
-        "author-157",
-        "author-1510",
         "author-1491",
-        "author-173",
-        "author-1492",
-        "author-161",
-        "author-1511",
-        "author-160",
-        "author-1493",
-        "author-159",
         "author-1490",
-        "author-1512"
+        "author-161",
+        "author-173",
+        "author-1493",
+        "author-1512",
+        "author-159",
+        "author-160",
+        "author-157",
+        "author-1492",
+        "author-1510",
+        "author-1511",
+        "author-158"
       ],
       "citation": [
         "citation-689",
@@ -1492,9 +1492,9 @@
         "2004"
       ],
       "author": [
-        "author-164",
         "author-163",
-        "author-140"
+        "author-140",
+        "author-164"
       ],
       "citation": [
         "citation-88"
@@ -1545,9 +1545,9 @@
         "2013"
       ],
       "author": [
-        "author-173",
+        "author-160",
         "author-172",
-        "author-160"
+        "author-173"
       ],
       "citation": [
         "citation-94"
@@ -1571,8 +1571,8 @@
         "author-45"
       ],
       "citation": [
-        "citation-530",
-        "citation-97"
+        "citation-97",
+        "citation-530"
       ],
       "venue_graph": []
     },
@@ -1586,8 +1586,8 @@
         "2014"
       ],
       "author": [
-        "author-197",
-        "author-196"
+        "author-196",
+        "author-197"
       ],
       "citation": [
         "citation-105"
@@ -1603,57 +1603,57 @@
       "year": [
         "2008",
         "2015",
-        "2011",
         "2010",
+        "2011",
         "2018",
         "2005"
       ],
       "author": [
-        "author-1308",
-        "author-217",
-        "author-218",
-        "author-70",
-        "author-246",
-        "author-193",
-        "author-215",
-        "author-538",
-        "author-930",
-        "author-761",
-        "author-927",
-        "author-1489",
-        "author-429",
-        "author-1307",
-        "author-1310",
-        "author-663",
-        "author-1280",
-        "author-932",
-        "author-214",
-        "author-366",
-        "author-229",
-        "author-166",
-        "author-216",
-        "author-808",
-        "author-292",
-        "author-192",
-        "author-1309",
-        "author-1311",
         "author-180",
-        "author-183",
+        "author-932",
+        "author-216",
         "author-1488",
-        "author-71",
+        "author-808",
+        "author-193",
+        "author-429",
+        "author-217",
+        "author-366",
         "author-221",
-        "author-32"
+        "author-1309",
+        "author-1489",
+        "author-930",
+        "author-246",
+        "author-183",
+        "author-218",
+        "author-32",
+        "author-761",
+        "author-538",
+        "author-292",
+        "author-70",
+        "author-192",
+        "author-229",
+        "author-1310",
+        "author-1308",
+        "author-1311",
+        "author-214",
+        "author-1307",
+        "author-927",
+        "author-663",
+        "author-215",
+        "author-166",
+        "author-1280",
+        "author-71"
       ],
       "citation": [
-        "citation-112",
-        "citation-680",
-        "citation-126",
-        "citation-567",
-        "citation-121",
         "citation-585",
         "citation-216",
+        "citation-126",
+        "citation-112",
         "citation-586",
-        "citation-510"
+        "citation-567",
+        "citation-680",
+        "citation-510",
+        "citation-121"
       ],
       "venue_graph": []
     },
@@ -1667,11 +1667,11 @@
         "2010"
       ],
       "author": [
-        "author-72",
-        "author-233",
-        "author-231",
         "author-234",
-        "author-232"
+        "author-72",
+        "author-231",
+        "author-232",
+        "author-233"
       ],
       "citation": [
         "citation-115"
@@ -1685,16 +1685,16 @@
       "short": "MIS Q.",
       "standardized_name": "MIS Q.",
       "year": [
-        "2004",
-        "2010"
+        "2010",
+        "2004"
       ],
       "author": [
         "author-968",
+        "author-967",
         "author-250",
         "author-251",
-        "author-249",
         "author-252",
-        "author-967"
+        "author-249"
       ],
       "citation": [
         "citation-128",
@@ -1709,12 +1709,12 @@
       "short": "Technometr",
       "standardized_name": "Technometrics",
       "year": [
-        "2002",
-        "1985"
+        "1985",
+        "2002"
       ],
       "author": [
-        "author-1002",
-        "author-259"
+        "author-259",
+        "author-1002"
       ],
       "citation": [
         "citation-133",
@@ -1732,9 +1732,9 @@
         "2013"
       ],
       "author": [
-        "author-213",
-        "author-260",
         "author-261",
+        "author-260",
+        "author-213",
         "author-72",
         "author-71"
       ],
@@ -1753,8 +1753,8 @@
         "2008"
       ],
       "author": [
-        "author-262",
-        "author-263"
+        "author-263",
+        "author-262"
       ],
       "citation": [
         "citation-135"
@@ -1768,37 +1768,37 @@
       "short": "Journal of",
       "standardized_name": "Journal of machine learning research",
       "year": [
-        "2005",
+        "2003",
         "2011",
-        "2003"
+        "2005"
       ],
       "author": [
-        "author-1125",
+        "author-264",
+        "author-1122",
+        "author-1126",
+        "author-1134",
+        "author-1118",
+        "author-1113",
+        "author-1112",
         "author-1116",
         "author-1120",
-        "author-1111",
-        "author-1113",
-        "author-1135",
         "author-1123",
-        "author-1122",
-        "author-1112",
-        "author-1121",
-        "author-1117",
-        "author-264",
-        "author-1134",
-        "author-1126",
-        "author-1115",
-        "author-265",
-        "author-1124",
-        "author-1118",
+        "author-1135",
+        "author-1111",
         "author-1119",
+        "author-1125",
+        "author-1121",
+        "author-1127",
         "author-1114",
-        "author-1127"
+        "author-1124",
+        "author-1117",
+        "author-265",
+        "author-1115"
       ],
       "citation": [
-        "citation-491",
+        "citation-487",
         "citation-137",
-        "citation-487"
+        "citation-491"
       ],
       "venue_graph": []
     },
@@ -1809,30 +1809,30 @@
       "short": "Internatio",
       "standardized_name": "International Working Conference on Advanced Visual Interfaces",
       "year": [
-        "2004",
         "2008",
-        "2014"
+        "2014",
+        "2004"
       ],
       "author": [
+        "author-297",
+        "author-1242",
+        "author-180",
         "author-360",
         "author-446",
-        "author-1362",
-        "author-297",
         "author-298",
-        "author-386",
-        "author-300",
-        "author-296",
-        "author-299",
         "author-239",
-        "author-180",
-        "author-1242"
+        "author-299",
+        "author-386",
+        "author-1362",
+        "author-300",
+        "author-296"
       ],
       "citation": [
+        "citation-151",
         "citation-228",
         "citation-150",
-        "citation-545",
-        "citation-151",
-        "citation-608"
+        "citation-608",
+        "citation-545"
       ],
       "venue_graph": []
     },
@@ -1866,8 +1866,8 @@
       "author": [
         "author-308",
         "author-306",
-        "author-309",
-        "author-307"
+        "author-307",
+        "author-309"
       ],
       "citation": [
         "citation-156"
@@ -1898,18 +1898,18 @@
       "short": "Knowledge-",
       "standardized_name": "Knowledge-Based Systems",
       "year": [
-        "1995",
-        "2001"
+        "2001",
+        "1995"
       ],
       "author": [
         "author-1139",
-        "author-1140",
         "author-1138",
+        "author-1140",
         "author-315"
       ],
       "citation": [
-        "citation-161",
-        "citation-493"
+        "citation-493",
+        "citation-161"
       ],
       "venue_graph": []
     },
@@ -1941,8 +1941,8 @@
         "1999"
       ],
       "author": [
-        "author-318",
-        "author-319"
+        "author-319",
+        "author-318"
       ],
       "citation": [
         "citation-163"
@@ -1956,21 +1956,21 @@
       "short": "TOGS",
       "standardized_name": "TOGS",
       "year": [
-        "1995",
         "1991",
+        "1995",
         "1986"
       ],
       "author": [
-        "author-574",
-        "author-17",
-        "author-576",
         "author-1524",
-        "author-575"
+        "author-574",
+        "author-575",
+        "author-17",
+        "author-576"
       ],
       "citation": [
-        "citation-700",
+        "citation-282",
         "citation-168",
-        "citation-282"
+        "citation-700"
       ],
       "venue_graph": []
     },
@@ -1981,35 +1981,35 @@
       "short": "Science",
       "standardized_name": "Science",
       "year": [
-        "2009",
         "2014",
         "2011",
+        "2009",
         "1981"
       ],
       "author": [
-        "author-847",
-        "author-849",
-        "author-1171",
-        "author-1172",
-        "author-1173",
-        "author-1170",
-        "author-1175",
-        "author-334",
-        "author-1167",
         "author-850",
         "author-332",
-        "author-1169",
-        "author-848",
-        "author-1433",
-        "author-1174",
+        "author-849",
+        "author-1172",
         "author-1168",
-        "author-1434"
+        "author-1173",
+        "author-1433",
+        "author-1171",
+        "author-334",
+        "author-848",
+        "author-1170",
+        "author-847",
+        "author-1167",
+        "author-1174",
+        "author-1169",
+        "author-1434",
+        "author-1175"
       ],
       "citation": [
-        "citation-648",
         "citation-389",
+        "citation-507",
         "citation-173",
-        "citation-507"
+        "citation-648"
       ],
       "venue_graph": []
     },
@@ -2072,22 +2072,22 @@
       "short": "The Visual",
       "standardized_name": "The Visual Computer",
       "year": [
+        "1986",
         "2005",
-        "2016",
-        "1986"
+        "2016"
       ],
       "author": [
-        "author-339",
+        "author-1504",
         "author-1503",
-        "author-1505",
-        "author-1418",
         "author-1419",
-        "author-1504"
+        "author-1505",
+        "author-339",
+        "author-1418"
       ],
       "citation": [
-        "citation-642",
+        "citation-179",
         "citation-686",
-        "citation-179"
+        "citation-642"
       ],
       "venue_graph": []
     },
@@ -2120,11 +2120,11 @@
         "2021"
       ],
       "author": [
-        "author-349",
         "author-353",
-        "author-351",
         "author-350",
-        "author-352"
+        "author-349",
+        "author-352",
+        "author-351"
       ],
       "citation": [
         "citation-186"
@@ -2159,8 +2159,8 @@
         "2020"
       ],
       "author": [
-        "author-356",
-        "author-357"
+        "author-357",
+        "author-356"
       ],
       "citation": [
         "citation-189"
@@ -2192,56 +2192,56 @@
       "short": "IEEE Compu",
       "standardized_name": "IEEE Computer Graphics and Applications",
       "year": [
-        "2009",
         "2012",
-        "2014",
-        "2006",
         "2015",
+        "2009",
+        "2014",
         "2011",
+        "2006",
         "1989"
       ],
       "author": [
-        "author-844",
+        "author-507",
         "author-1567",
         "author-537",
-        "author-1570",
-        "author-1566",
-        "author-539",
-        "author-299",
-        "author-621",
-        "author-189",
         "author-1571",
-        "author-368",
-        "author-538",
+        "author-367",
+        "author-366",
+        "author-621",
         "author-1573",
+        "author-1568",
+        "author-729",
         "author-1569",
-        "author-507",
-        "author-369",
-        "author-838",
+        "author-1566",
+        "author-844",
+        "author-299",
+        "author-538",
+        "author-539",
         "author-841",
         "author-730",
-        "author-366",
-        "author-367",
+        "author-189",
+        "author-542",
+        "author-838",
+        "author-293",
+        "author-369",
         "author-845",
         "author-1572",
-        "author-542",
-        "author-1105",
         "author-244",
-        "author-293",
         "author-728",
-        "author-1568",
-        "author-729"
+        "author-368",
+        "author-1105",
+        "author-1570"
       ],
       "citation": [
+        "citation-722",
+        "citation-196",
         "citation-259",
         "citation-386",
         "citation-262",
-        "citation-350",
-        "citation-722",
-        "citation-485",
-        "citation-196",
         "citation-387",
-        "citation-349"
+        "citation-485",
+        "citation-349",
+        "citation-350"
       ],
       "venue_graph": []
     },
@@ -2257,19 +2257,19 @@
         "1995"
       ],
       "author": [
-        "author-405",
-        "author-1142",
-        "author-373",
         "author-404",
-        "author-403",
+        "author-1142",
         "author-1141",
-        "author-371",
-        "author-372"
+        "author-405",
+        "author-403",
+        "author-373",
+        "author-372",
+        "author-371"
       ],
       "citation": [
-        "citation-207",
         "citation-205",
         "citation-494",
+        "citation-207",
         "citation-198"
       ],
       "venue_graph": []
@@ -2284,10 +2284,10 @@
         "2015"
       ],
       "author": [
-        "author-377",
+        "author-376",
         "author-375",
         "author-374",
-        "author-376"
+        "author-377"
       ],
       "citation": [
         "citation-199"
@@ -2301,38 +2301,38 @@
       "short": "Knowledge ",
       "standardized_name": "Knowledge Discovery and Data Mining",
       "year": [
-        "1999",
         "2015",
+        "2000",
+        "1999",
         "2001",
-        "2005",
-        "2000"
+        "2005"
       ],
       "author": [
-        "author-381",
+        "author-382",
+        "author-1005",
+        "author-379",
         "author-452",
         "author-463",
-        "author-464",
-        "author-380",
-        "author-378",
-        "author-451",
-        "author-379",
-        "author-1008",
-        "author-382",
-        "author-448",
-        "author-449",
         "author-1006",
-        "author-1005",
-        "author-383",
-        "author-462",
+        "author-380",
         "author-450",
-        "author-1007"
+        "author-448",
+        "author-378",
+        "author-1007",
+        "author-381",
+        "author-449",
+        "author-462",
+        "author-1008",
+        "author-383",
+        "author-451",
+        "author-464"
       ],
       "citation": [
-        "citation-226",
-        "citation-446",
         "citation-447",
         "citation-200",
-        "citation-233"
+        "citation-233",
+        "citation-446",
+        "citation-226"
       ],
       "venue_graph": []
     },
@@ -2343,35 +2343,35 @@
       "short": "Internatio",
       "standardized_name": "International Conference on Intelligent User Interfaces",
       "year": [
-        "2009",
-        "2020",
         "2017",
         "2015",
+        "2009",
+        "2020",
         "2018"
       ],
       "author": [
-        "author-697",
-        "author-695",
+        "author-720",
+        "author-392",
+        "author-389",
+        "author-691",
+        "author-690",
         "author-1514",
-        "author-596",
+        "author-695",
         "author-926",
+        "author-721",
+        "author-596",
+        "author-595",
         "author-390",
         "author-391",
-        "author-721",
-        "author-296",
-        "author-595",
-        "author-690",
-        "author-392",
-        "author-720",
-        "author-389",
-        "author-691"
+        "author-697",
+        "author-296"
       ],
       "citation": [
-        "citation-333",
-        "citation-293",
-        "citation-202",
         "citation-342",
-        "citation-692"
+        "citation-333",
+        "citation-692",
+        "citation-202",
+        "citation-293"
       ],
       "venue_graph": []
     },
@@ -2386,17 +2386,17 @@
         "2016"
       ],
       "author": [
-        "author-394",
-        "author-1088",
-        "author-396",
+        "author-1089",
         "author-395",
-        "author-393",
         "author-400",
-        "author-403",
-        "author-398",
+        "author-396",
+        "author-1088",
         "author-399",
-        "author-397",
-        "author-1089"
+        "author-403",
+        "author-394",
+        "author-398",
+        "author-393",
+        "author-397"
       ],
       "citation": [
         "citation-203",
@@ -2411,22 +2411,22 @@
       "short": "AAAI Confe",
       "standardized_name": "AAAI Conference on Artificial Intelligence",
       "year": [
+        "2012",
         "2008",
-        "2015",
-        "2012"
+        "2015"
       ],
       "author": [
-        "author-402",
-        "author-1593",
-        "author-401",
         "author-436",
+        "author-401",
         "author-140",
-        "author-435",
+        "author-402",
+        "author-372",
         "author-299",
-        "author-371",
         "author-425",
         "author-430",
-        "author-372"
+        "author-1593",
+        "author-371",
+        "author-435"
       ],
       "citation": [
         "citation-204",
@@ -2446,8 +2446,8 @@
       ],
       "author": [
         "author-1095",
-        "author-404",
         "author-405",
+        "author-404",
         "author-403"
       ],
       "citation": [
@@ -2466,11 +2466,11 @@
         "2014"
       ],
       "author": [
-        "author-409",
-        "author-406",
         "author-411",
-        "author-408",
+        "author-406",
+        "author-409",
         "author-410",
+        "author-408",
         "author-407"
       ],
       "citation": [
@@ -2488,13 +2488,13 @@
         "2013"
       ],
       "author": [
+        "author-422",
+        "author-418",
+        "author-423",
         "author-424",
         "author-419",
         "author-420",
-        "author-422",
-        "author-421",
-        "author-418",
-        "author-423"
+        "author-421"
       ],
       "citation": [
         "citation-212",
@@ -2529,8 +2529,8 @@
         "2011"
       ],
       "author": [
-        "author-419",
-        "author-418"
+        "author-418",
+        "author-419"
       ],
       "citation": [
         "citation-218"
@@ -2547,32 +2547,32 @@
         "2009"
       ],
       "author": [
-        "author-972",
-        "author-242",
-        "author-1182",
-        "author-440",
-        "author-219",
-        "author-439",
-        "author-971",
         "author-973",
-        "author-663",
-        "author-438",
-        "author-1184",
         "author-243",
+        "author-439",
         "author-983",
-        "author-969",
+        "author-1183",
         "author-1181",
+        "author-242",
+        "author-971",
+        "author-969",
+        "author-440",
+        "author-1184",
+        "author-220",
+        "author-438",
+        "author-219",
+        "author-1182",
         "author-970",
         "author-895",
-        "author-220",
-        "author-1183",
+        "author-663",
+        "author-972",
         "author-437"
       ],
       "citation": [
-        "citation-430",
-        "citation-431",
         "citation-511",
-        "citation-221"
+        "citation-431",
+        "citation-221",
+        "citation-430"
       ],
       "venue_graph": []
     },
@@ -2583,23 +2583,23 @@
       "short": "Workshop o",
       "standardized_name": "Workshop on Beyond Time and Errors: Novel Evaluation Methods for Visualization",
       "year": [
-        "2006",
-        "2008"
+        "2008",
+        "2006"
       ],
       "author": [
-        "author-1337",
-        "author-537",
-        "author-166",
-        "author-512",
         "author-446",
+        "author-537",
+        "author-1337",
         "author-230",
         "author-299",
-        "author-1355"
+        "author-1355",
+        "author-166",
+        "author-512"
       ],
       "citation": [
-        "citation-224",
+        "citation-598",
         "citation-604",
-        "citation-598"
+        "citation-224"
       ],
       "venue_graph": []
     },
@@ -2613,15 +2613,15 @@
         "2005"
       ],
       "author": [
-        "author-1360",
-        "author-366",
-        "author-1359",
-        "author-1333",
         "author-1358",
-        "author-1357",
         "author-1336",
+        "author-447",
+        "author-1357",
+        "author-1360",
         "author-1356",
-        "author-447"
+        "author-1333",
+        "author-1359",
+        "author-366"
       ],
       "citation": [
         "citation-225",
@@ -2674,8 +2674,8 @@
         "2000"
       ],
       "author": [
-        "author-466",
-        "author-467"
+        "author-467",
+        "author-466"
       ],
       "citation": [
         "citation-235"
@@ -2692,8 +2692,8 @@
         "2014"
       ],
       "author": [
-        "author-468",
-        "author-469"
+        "author-469",
+        "author-468"
       ],
       "citation": [
         "citation-236"
@@ -2711,9 +2711,9 @@
       ],
       "author": [
         "author-471",
-        "author-472",
+        "author-473",
         "author-474",
-        "author-473"
+        "author-472"
       ],
       "citation": [
         "citation-238"
@@ -2730,11 +2730,11 @@
         "2017"
       ],
       "author": [
-        "author-492",
+        "author-493",
         "author-491",
         "author-490",
-        "author-493",
-        "author-489"
+        "author-489",
+        "author-492"
       ],
       "citation": [
         "citation-243"
@@ -2753,22 +2753,22 @@
         "1998"
       ],
       "author": [
-        "author-533",
+        "author-493",
+        "author-495",
+        "author-1637",
+        "author-1638",
         "author-491",
         "author-490",
-        "author-534",
-        "author-1636",
-        "author-493",
-        "author-1638",
-        "author-495",
+        "author-533",
         "author-1635",
-        "author-494",
-        "author-1637"
+        "author-1636",
+        "author-534",
+        "author-494"
       ],
       "citation": [
+        "citation-261",
         "citation-244",
-        "citation-755",
-        "citation-261"
+        "citation-755"
       ],
       "venue_graph": []
     },
@@ -2780,25 +2780,25 @@
       "standardized_name": "Eurographics Conference on Visualization",
       "year": [
         "2017",
-        "2013",
-        "2019"
+        "2019",
+        "2013"
       ],
       "author": [
+        "author-283",
         "author-1256",
         "author-733",
-        "author-512",
-        "author-1258",
         "author-735",
-        "author-283",
+        "author-734",
+        "author-696",
         "author-496",
         "author-1257",
-        "author-734",
-        "author-696"
+        "author-1258",
+        "author-512"
       ],
       "citation": [
         "citation-557",
-        "citation-352",
-        "citation-245"
+        "citation-245",
+        "citation-352"
       ],
       "venue_graph": []
     },
@@ -2809,85 +2809,85 @@
       "short": "IEEE Pacif",
       "standardized_name": "IEEE Pacific Visualization Symposium",
       "year": [
-        "2009",
         "2016",
-        "2013",
-        "2014",
         "2015",
+        "2013",
+        "2009",
+        "2014",
         "2011"
       ],
       "author": [
-        "author-339",
-        "author-863",
-        "author-770",
-        "author-775",
-        "author-952",
-        "author-217",
-        "author-780",
-        "author-1296",
-        "author-823",
-        "author-825",
+        "author-867",
+        "author-872",
+        "author-868",
         "author-818",
-        "author-777",
-        "author-951",
-        "author-861",
-        "author-778",
-        "author-851",
-        "author-820",
+        "author-775",
+        "author-953",
         "author-551",
         "author-853",
-        "author-781",
-        "author-824",
+        "author-822",
         "author-774",
+        "author-226",
+        "author-770",
+        "author-824",
+        "author-773",
+        "author-776",
+        "author-951",
         "author-771",
-        "author-867",
-        "author-873",
-        "author-869",
+        "author-217",
+        "author-366",
+        "author-772",
         "author-821",
-        "author-872",
-        "author-683",
-        "author-868",
-        "author-866",
-        "author-870",
-        "author-862",
         "author-852",
         "author-552",
-        "author-782",
-        "author-859",
-        "author-865",
-        "author-874",
-        "author-366",
-        "author-776",
-        "author-779",
-        "author-953",
-        "author-822",
-        "author-819",
-        "author-772",
-        "author-954",
-        "author-226",
-        "author-773",
-        "author-864",
-        "author-283",
-        "author-682",
+        "author-781",
+        "author-861",
+        "author-869",
+        "author-823",
+        "author-817",
+        "author-777",
+        "author-339",
         "author-718",
         "author-860",
+        "author-865",
+        "author-778",
+        "author-825",
+        "author-864",
+        "author-779",
+        "author-851",
+        "author-859",
+        "author-283",
+        "author-870",
+        "author-780",
+        "author-952",
+        "author-873",
+        "author-819",
+        "author-862",
+        "author-866",
+        "author-871",
+        "author-954",
+        "author-874",
+        "author-682",
         "author-240",
-        "author-817",
-        "author-871"
+        "author-820",
+        "author-782",
+        "author-683",
+        "author-1296",
+        "author-863"
       ],
       "citation": [
-        "citation-378",
-        "citation-393",
-        "citation-364",
-        "citation-365",
-        "citation-594",
-        "citation-394",
-        "citation-366",
-        "citation-379",
         "citation-392",
-        "citation-390",
+        "citation-380",
+        "citation-365",
         "citation-422",
-        "citation-380"
+        "citation-366",
+        "citation-378",
+        "citation-364",
+        "citation-394",
+        "citation-393",
+        "citation-390",
+        "citation-594",
+        "citation-379"
       ],
       "venue_graph": []
     },
@@ -2898,33 +2898,33 @@
       "short": "Computer V",
       "standardized_name": "Computer Vision and Pattern Recognition",
       "year": [
-        "2006",
         "2015",
+        "2006",
         "2016"
       ],
       "author": [
-        "author-508",
-        "author-532",
+        "author-493",
+        "author-555",
         "author-1618",
-        "author-533",
-        "author-1616",
+        "author-1614",
         "author-491",
         "author-490",
-        "author-1617",
+        "author-508",
+        "author-532",
+        "author-533",
+        "author-1616",
         "author-534",
-        "author-555",
-        "author-1619",
-        "author-493",
-        "author-1614",
-        "author-1615",
+        "author-1617",
         "author-509",
-        "author-494"
+        "author-494",
+        "author-1619",
+        "author-1615"
       ],
       "citation": [
-        "citation-250",
-        "citation-747",
         "citation-746",
-        "citation-257"
+        "citation-257",
+        "citation-747",
+        "citation-250"
       ],
       "venue_graph": []
     },
@@ -2939,19 +2939,19 @@
         "2016"
       ],
       "author": [
-        "author-789",
-        "author-1100",
-        "author-517",
-        "author-787",
-        "author-790",
-        "author-1101",
         "author-791",
-        "author-518",
-        "author-519",
-        "author-786",
+        "author-790",
         "author-515",
+        "author-517",
+        "author-789",
+        "author-519",
+        "author-516",
+        "author-787",
+        "author-786",
         "author-788",
-        "author-516"
+        "author-1101",
+        "author-1100",
+        "author-518"
       ],
       "citation": [
         "citation-482",
@@ -2971,11 +2971,11 @@
       ],
       "author": [
         "author-525",
-        "author-520",
-        "author-523",
         "author-524",
+        "author-522",
+        "author-523",
         "author-521",
-        "author-522"
+        "author-520"
       ],
       "citation": [
         "citation-253"
@@ -3065,34 +3065,34 @@
         "2010"
       ],
       "author": [
-        "author-962",
-        "author-210",
+        "author-550",
+        "author-1176",
         "author-551",
-        "author-958",
-        "author-961",
-        "author-186",
+        "author-210",
+        "author-1177",
+        "author-512",
         "author-366",
         "author-552",
-        "author-208",
-        "author-960",
-        "author-292",
-        "author-918",
         "author-920",
-        "author-1176",
-        "author-959",
-        "author-512",
-        "author-1177",
+        "author-957",
+        "author-918",
+        "author-186",
         "author-212",
-        "author-550",
-        "author-957"
+        "author-292",
+        "author-959",
+        "author-208",
+        "author-961",
+        "author-958",
+        "author-960",
+        "author-962"
       ],
       "citation": [
-        "citation-270",
         "citation-508",
-        "citation-427",
-        "citation-425",
+        "citation-270",
+        "citation-424",
         "citation-426",
-        "citation-424"
+        "citation-427",
+        "citation-425"
       ],
       "venue_graph": []
     },
@@ -3106,10 +3106,10 @@
         "2010"
       ],
       "author": [
-        "author-552",
         "author-553",
-        "author-551",
-        "author-550"
+        "author-550",
+        "author-552",
+        "author-551"
       ],
       "citation": [
         "citation-271"
@@ -3126,9 +3126,9 @@
         "2009"
       ],
       "author": [
-        "author-556",
-        "author-557",
         "author-554",
+        "author-557",
+        "author-556",
         "author-555"
       ],
       "citation": [
@@ -3183,10 +3183,10 @@
         "2007"
       ],
       "author": [
-        "author-563",
-        "author-564",
         "author-565",
-        "author-566"
+        "author-566",
+        "author-563",
+        "author-564"
       ],
       "citation": [
         "citation-277"
@@ -3240,10 +3240,10 @@
         "2001"
       ],
       "author": [
-        "author-571",
         "author-572",
+        "author-570",
         "author-573",
-        "author-570"
+        "author-571"
       ],
       "citation": [
         "citation-281"
@@ -3260,8 +3260,8 @@
         "2000"
       ],
       "author": [
-        "author-589",
-        "author-562"
+        "author-562",
+        "author-589"
       ],
       "citation": [
         "citation-290"
@@ -3279,14 +3279,14 @@
         "2018"
       ],
       "author": [
-        "author-597",
-        "author-598",
         "author-637",
-        "author-599"
+        "author-599",
+        "author-597",
+        "author-598"
       ],
       "citation": [
-        "citation-696",
-        "citation-294"
+        "citation-294",
+        "citation-696"
       ],
       "venue_graph": []
     },
@@ -3300,10 +3300,10 @@
         "2017"
       ],
       "author": [
-        "author-28",
         "author-602",
+        "author-600",
         "author-601",
-        "author-600"
+        "author-28"
       ],
       "citation": [
         "citation-295"
@@ -3357,11 +3357,11 @@
         "2017"
       ],
       "author": [
-        "author-609",
-        "author-610",
-        "author-611",
         "author-608",
-        "author-612"
+        "author-612",
+        "author-609",
+        "author-611",
+        "author-610"
       ],
       "citation": [
         "citation-299"
@@ -3396,8 +3396,8 @@
         "2015"
       ],
       "author": [
-        "author-616",
         "author-615",
+        "author-616",
         "author-617"
       ],
       "citation": [
@@ -3415,9 +3415,9 @@
         "2014"
       ],
       "author": [
+        "author-612",
         "author-618",
         "author-610",
-        "author-612",
         "author-608"
       ],
       "citation": [
@@ -3435,11 +3435,11 @@
         "2008"
       ],
       "author": [
-        "author-626",
-        "author-606",
+        "author-628",
         "author-627",
-        "author-598",
-        "author-628"
+        "author-606",
+        "author-626",
+        "author-598"
       ],
       "citation": [
         "citation-305"
@@ -3456,10 +3456,10 @@
         "2008"
       ],
       "author": [
-        "author-630",
         "author-629",
-        "author-598",
-        "author-628"
+        "author-628",
+        "author-630",
+        "author-598"
       ],
       "citation": [
         "citation-306"
@@ -3476,8 +3476,8 @@
         "2007"
       ],
       "author": [
-        "author-631",
-        "author-628"
+        "author-628",
+        "author-631"
       ],
       "citation": [
         "citation-307"
@@ -3491,24 +3491,24 @@
       "short": "Internatio",
       "standardized_name": "International Conference on Computational Logic",
       "year": [
+        "2000",
         "2005",
-        "2012",
-        "2000"
+        "2012"
       ],
       "author": [
-        "author-607",
+        "author-667",
+        "author-666",
         "author-632",
         "author-633",
-        "author-667",
-        "author-598",
         "author-637",
-        "author-666",
-        "author-665"
+        "author-665",
+        "author-607",
+        "author-598"
       ],
       "citation": [
         "citation-322",
-        "citation-308",
-        "citation-311"
+        "citation-311",
+        "citation-308"
       ],
       "venue_graph": []
     },
@@ -3540,12 +3540,12 @@
         "1995"
       ],
       "author": [
-        "author-645",
-        "author-596",
-        "author-644",
         "author-642",
+        "author-596",
+        "author-1009",
+        "author-645",
         "author-643",
-        "author-1009"
+        "author-644"
       ],
       "citation": [
         "citation-497",
@@ -3560,23 +3560,23 @@
       "short": "Artificial",
       "standardized_name": "Artificial Intelligence",
       "year": [
-        "1997",
         "1993",
+        "1997",
         "1999"
       ],
       "author": [
         "author-650",
+        "author-649",
+        "author-1195",
         "author-1196",
+        "author-1547",
         "author-647",
         "author-648",
-        "author-649",
-        "author-646",
-        "author-1547",
-        "author-1195"
+        "author-646"
       ],
       "citation": [
-        "citation-522",
         "citation-316",
+        "citation-522",
         "citation-712"
       ],
       "venue_graph": []
@@ -3591,8 +3591,8 @@
         "2005"
       ],
       "author": [
-        "author-669",
         "author-637",
+        "author-669",
         "author-670"
       ],
       "citation": [
@@ -3627,10 +3627,10 @@
         "2020"
       ],
       "author": [
+        "author-675",
         "author-677",
-        "author-676",
         "author-678",
-        "author-675"
+        "author-676"
       ],
       "citation": [
         "citation-330"
@@ -3648,12 +3648,12 @@
         "2018"
       ],
       "author": [
-        "author-28",
-        "author-594",
-        "author-1335",
         "author-1334",
+        "author-1336",
+        "author-594",
         "author-1333",
-        "author-1336"
+        "author-28",
+        "author-1335"
       ],
       "citation": [
         "citation-338",
@@ -3671,17 +3671,17 @@
         "2018"
       ],
       "author": [
-        "author-713",
-        "author-711",
         "author-712",
-        "author-477",
-        "author-714",
         "author-715",
-        "author-718",
-        "author-717",
-        "author-719",
+        "author-711",
         "author-693",
-        "author-716"
+        "author-477",
+        "author-718",
+        "author-714",
+        "author-713",
+        "author-716",
+        "author-719",
+        "author-717"
       ],
       "citation": [
         "citation-341"
@@ -3698,8 +3698,8 @@
         "2010"
       ],
       "author": [
-        "author-726",
-        "author-727"
+        "author-727",
+        "author-726"
       ],
       "citation": [
         "citation-348"
@@ -3716,10 +3716,10 @@
         "2018"
       ],
       "author": [
-        "author-718",
-        "author-538",
         "author-299",
-        "author-736"
+        "author-718",
+        "author-736",
+        "author-538"
       ],
       "citation": [
         "citation-353"
@@ -3736,12 +3736,12 @@
         "2016"
       ],
       "author": [
-        "author-742",
-        "author-743",
-        "author-741",
-        "author-744",
         "author-739",
         "author-621",
+        "author-741",
+        "author-742",
+        "author-744",
+        "author-743",
         "author-740"
       ],
       "citation": [
@@ -3760,9 +3760,9 @@
       ],
       "author": [
         "author-745",
-        "author-748",
         "author-746",
         "author-747",
+        "author-748",
         "author-740"
       ],
       "citation": [
@@ -3798,8 +3798,8 @@
       ],
       "author": [
         "author-785",
-        "author-783",
-        "author-784"
+        "author-784",
+        "author-783"
       ],
       "citation": [
         "citation-367"
@@ -3817,30 +3817,30 @@
         "2015"
       ],
       "author": [
-        "author-1061",
-        "author-799",
+        "author-1490",
         "author-1060",
         "author-1062",
-        "author-1093",
-        "author-798",
-        "author-800",
-        "author-1063",
-        "author-1064",
-        "author-1092",
         "author-1493",
+        "author-800",
+        "author-1061",
         "author-1094",
-        "author-1058",
-        "author-1057",
-        "author-1059",
         "author-1491",
-        "author-1492",
+        "author-1092",
+        "author-1057",
+        "author-1064",
         "author-403",
-        "author-1490"
+        "author-798",
+        "author-1492",
+        "author-1063",
+        "author-1093",
+        "author-1058",
+        "author-1059",
+        "author-799"
       ],
       "citation": [
+        "citation-478",
         "citation-468",
         "citation-681",
-        "citation-478",
         "citation-373"
       ],
       "venue_graph": []
@@ -3856,9 +3856,9 @@
       ],
       "author": [
         "author-827",
+        "author-826",
         "author-828",
-        "author-829",
-        "author-826"
+        "author-829"
       ],
       "citation": [
         "citation-381"
@@ -3892,15 +3892,15 @@
         "2013"
       ],
       "author": [
-        "author-877",
-        "author-875",
         "author-876",
+        "author-875",
+        "author-879",
         "author-878",
-        "author-879"
+        "author-877"
       ],
       "citation": [
-        "citation-396",
-        "citation-395"
+        "citation-395",
+        "citation-396"
       ],
       "venue_graph": []
     },
@@ -3985,13 +3985,13 @@
         "2004"
       ],
       "author": [
-        "author-975",
         "author-999",
-        "author-977",
+        "author-976",
+        "author-975",
         "author-979",
         "author-1000",
+        "author-977",
         "author-978",
-        "author-976",
         "author-998"
       ],
       "citation": [
@@ -4027,19 +4027,19 @@
         "2008"
       ],
       "author": [
-        "author-464",
         "author-463",
+        "author-663",
+        "author-462",
         "author-337",
-        "author-982",
+        "author-981",
         "author-983",
         "author-984",
-        "author-462",
-        "author-663",
-        "author-981"
+        "author-982",
+        "author-464"
       ],
       "citation": [
-        "citation-436",
-        "citation-435"
+        "citation-435",
+        "citation-436"
       ],
       "venue_graph": []
     },
@@ -4050,14 +4050,14 @@
       "short": "SKDD",
       "standardized_name": "SKDD",
       "year": [
-        "2007",
-        "2014"
+        "2014",
+        "2007"
       ],
       "author": [
         "author-985",
         "author-987",
-        "author-986",
         "author-1096",
+        "author-986",
         "author-899"
       ],
       "citation": [
@@ -4076,15 +4076,15 @@
         "2007"
       ],
       "author": [
-        "author-687",
-        "author-1272",
         "author-993",
-        "author-1270",
-        "author-994",
-        "author-992",
-        "author-991",
+        "author-959",
         "author-1271",
-        "author-959"
+        "author-687",
+        "author-994",
+        "author-1270",
+        "author-991",
+        "author-1272",
+        "author-992"
       ],
       "citation": [
         "citation-561",
@@ -4119,13 +4119,13 @@
         "2016"
       ],
       "author": [
-        "author-183",
         "author-1012",
-        "author-1010",
         "author-1011",
-        "author-663",
         "author-1014",
-        "author-602"
+        "author-183",
+        "author-663",
+        "author-602",
+        "author-1010"
       ],
       "citation": [
         "citation-454"
@@ -4142,13 +4142,13 @@
         "2014"
       ],
       "author": [
+        "author-1032",
         "author-466",
         "author-1035",
+        "author-1033",
         "author-1034",
-        "author-1036",
         "author-1031",
-        "author-1032",
-        "author-1033"
+        "author-1036"
       ],
       "citation": [
         "citation-459"
@@ -4183,9 +4183,9 @@
       ],
       "author": [
         "author-1041",
-        "author-475",
         "author-718",
         "author-1042",
+        "author-475",
         "author-1043"
       ],
       "citation": [
@@ -4203,14 +4203,14 @@
         "2017"
       ],
       "author": [
-        "author-1013",
-        "author-183",
         "author-1012",
-        "author-1010",
         "author-1011",
-        "author-663",
+        "author-1013",
         "author-1014",
-        "author-602"
+        "author-183",
+        "author-663",
+        "author-602",
+        "author-1010"
       ],
       "citation": [
         "citation-467"
@@ -4245,9 +4245,9 @@
         "2016"
       ],
       "author": [
-        "author-1091",
         "author-1090",
-        "author-139"
+        "author-139",
+        "author-1091"
       ],
       "citation": [
         "citation-477"
@@ -4264,9 +4264,9 @@
         "2013"
       ],
       "author": [
-        "author-1099",
+        "author-1098",
         "author-1097",
-        "author-1098"
+        "author-1099"
       ],
       "citation": [
         "citation-481"
@@ -4283,8 +4283,8 @@
         "2012"
       ],
       "author": [
-        "author-1103",
-        "author-1102"
+        "author-1102",
+        "author-1103"
       ],
       "citation": [
         "citation-483"
@@ -4318,11 +4318,11 @@
         "2011"
       ],
       "author": [
-        "author-1106",
-        "author-1110",
         "author-1107",
         "author-1108",
-        "author-1109"
+        "author-1106",
+        "author-1109",
+        "author-1110"
       ],
       "citation": [
         "citation-486"
@@ -4374,15 +4374,15 @@
       "short": "Data minin",
       "standardized_name": "Data mining and knowledge discovery",
       "year": [
-        "2004",
-        "2008"
+        "2008",
+        "2004"
       ],
       "author": [
-        "author-1577",
-        "author-1579",
+        "author-1580",
         "author-1578",
         "author-1133",
-        "author-1580"
+        "author-1579",
+        "author-1577"
       ],
       "citation": [
         "citation-725",
@@ -4400,9 +4400,9 @@
         "2000"
       ],
       "author": [
-        "author-1137",
         "author-1136",
-        "author-1003"
+        "author-1003",
+        "author-1137"
       ],
       "citation": [
         "citation-492"
@@ -4452,23 +4452,23 @@
       "standardized_name": "Machine-mediated learning",
       "year": [
         "2006",
-        "2004",
-        "1996"
+        "1996",
+        "2004"
       ],
       "author": [
-        "author-265",
-        "author-1627",
-        "author-1608",
-        "author-1150",
         "author-1626",
+        "author-1627",
+        "author-1609",
+        "author-1150",
+        "author-265",
         "author-1639",
-        "author-1609"
+        "author-1608"
       ],
       "citation": [
-        "citation-743",
-        "citation-756",
+        "citation-499",
         "citation-752",
-        "citation-499"
+        "citation-743",
+        "citation-756"
       ],
       "venue_graph": []
     },
@@ -4479,23 +4479,23 @@
       "short": "Psychology",
       "standardized_name": "Psychology Review",
       "year": [
-        "1956",
         "2003",
-        "2019"
+        "2019",
+        "1956"
       ],
       "author": [
-        "author-1156",
         "author-1155",
-        "author-1422",
+        "author-1156",
         "author-1153",
-        "author-1384",
-        "author-1154"
+        "author-1154",
+        "author-1422",
+        "author-1384"
       ],
       "citation": [
-        "citation-501",
-        "citation-660",
+        "citation-661",
         "citation-621",
-        "citation-661"
+        "citation-501",
+        "citation-660"
       ],
       "venue_graph": []
     },
@@ -4520,13 +4520,13 @@
         "2008"
       ],
       "author": [
-        "author-551",
-        "author-552",
-        "author-926",
         "author-859",
-        "author-1188",
         "author-1187",
-        "author-1251"
+        "author-552",
+        "author-551",
+        "author-1251",
+        "author-926",
+        "author-1188"
       ],
       "citation": [
         "citation-550",
@@ -4544,9 +4544,9 @@
         "2008"
       ],
       "author": [
-        "author-38",
+        "author-933",
         "author-189",
-        "author-933"
+        "author-38"
       ],
       "citation": [
         "citation-515"
@@ -4564,15 +4564,15 @@
       ],
       "author": [
         "author-336",
-        "author-1361",
         "author-283",
-        "author-1190",
+        "author-1191",
         "author-1189",
-        "author-1191"
+        "author-1361",
+        "author-1190"
       ],
       "citation": [
-        "citation-606",
-        "citation-516"
+        "citation-516",
+        "citation-606"
       ],
       "venue_graph": []
     },
@@ -4586,16 +4586,16 @@
         "2004"
       ],
       "author": [
-        "author-246",
-        "author-166",
         "author-283",
         "author-1275",
-        "author-1191"
+        "author-1191",
+        "author-246",
+        "author-166"
       ],
       "citation": [
-        "citation-517",
         "citation-565",
-        "citation-518"
+        "citation-518",
+        "citation-517"
       ],
       "venue_graph": []
     },
@@ -4609,9 +4609,9 @@
         "2004"
       ],
       "author": [
-        "author-1192",
         "author-294",
-        "author-189"
+        "author-189",
+        "author-1192"
       ],
       "citation": [
         "citation-519"
@@ -4663,10 +4663,10 @@
         "1990"
       ],
       "author": [
-        "author-1525",
+        "author-1200",
         "author-1201",
-        "author-1526",
-        "author-1200"
+        "author-1525",
+        "author-1526"
       ],
       "citation": [
         "citation-701",
@@ -4736,11 +4736,11 @@
         "2013"
       ],
       "author": [
+        "author-1260",
         "author-1263",
         "author-1262",
-        "author-1260",
-        "author-1261",
-        "author-1259"
+        "author-1259",
+        "author-1261"
       ],
       "citation": [
         "citation-558"
@@ -4757,13 +4757,13 @@
         "2010"
       ],
       "author": [
-        "author-133",
-        "author-1265",
-        "author-1264",
+        "author-1269",
         "author-1267",
-        "author-1268",
+        "author-1265",
+        "author-133",
         "author-1266",
-        "author-1269"
+        "author-1264",
+        "author-1268"
       ],
       "citation": [
         "citation-560"
@@ -4795,24 +4795,24 @@
       "short": "Int. J. Hu",
       "standardized_name": "Int. J. Hum. Comput. Stud.",
       "year": [
-        "2002",
-        "2000"
+        "2000",
+        "2002"
       ],
       "author": [
-        "author-1277",
-        "author-1276",
-        "author-1533",
-        "author-1629",
         "author-317",
+        "author-1628",
         "author-455",
         "author-1630",
-        "author-454",
-        "author-1628"
+        "author-1629",
+        "author-1533",
+        "author-1277",
+        "author-1276",
+        "author-454"
       ],
       "citation": [
-        "citation-566",
         "citation-706",
-        "citation-753"
+        "citation-753",
+        "citation-566"
       ],
       "venue_graph": []
     },
@@ -4837,9 +4837,9 @@
         "2014"
       ],
       "author": [
+        "author-1105",
         "author-1282",
         "author-1284",
-        "author-1105",
         "author-1283"
       ],
       "citation": [
@@ -4857,13 +4857,13 @@
         "2009"
       ],
       "author": [
-        "author-1323",
         "author-1322",
-        "author-1324",
+        "author-1323",
         "author-1035",
-        "author-1179",
+        "author-1033",
         "author-1178",
-        "author-1033"
+        "author-1324",
+        "author-1179"
       ],
       "citation": [
         "citation-591"
@@ -4880,9 +4880,9 @@
         "2007"
       ],
       "author": [
-        "author-1293",
         "author-1346",
-        "author-1347"
+        "author-1347",
+        "author-1293"
       ],
       "citation": [
         "citation-600"
@@ -4952,19 +4952,19 @@
         "1997"
       ],
       "author": [
-        "author-1372",
-        "author-1370",
-        "author-575",
-        "author-1377",
-        "author-1371",
-        "author-576",
-        "author-1375",
-        "author-1374",
-        "author-1376",
-        "author-1373",
-        "author-1086",
         "author-1378",
-        "author-1369"
+        "author-1086",
+        "author-1377",
+        "author-1369",
+        "author-1371",
+        "author-1370",
+        "author-1373",
+        "author-575",
+        "author-1375",
+        "author-1376",
+        "author-1372",
+        "author-576",
+        "author-1374"
       ],
       "citation": [
         "citation-615"
@@ -4981,10 +4981,10 @@
         "1995"
       ],
       "author": [
-        "author-1381",
-        "author-1382",
         "author-1379",
-        "author-1380"
+        "author-1380",
+        "author-1381",
+        "author-1382"
       ],
       "citation": [
         "citation-616"
@@ -5035,8 +5035,8 @@
         "2001"
       ],
       "author": [
-        "author-1396",
-        "author-1395"
+        "author-1395",
+        "author-1396"
       ],
       "citation": [
         "citation-629"
@@ -5086,13 +5086,13 @@
       "short": "Psychologi",
       "standardized_name": "Psychological bulletin",
       "year": [
-        "2010",
-        "2001"
+        "2001",
+        "2010"
       ],
       "author": [
+        "author-1421",
         "author-1424",
         "author-1442",
-        "author-1421",
         "author-1420"
       ],
       "citation": [
@@ -5108,20 +5108,20 @@
       "short": "Personalit",
       "standardized_name": "Personality and Social Psychology Bulletin",
       "year": [
-        "2009",
-        "2008"
+        "2008",
+        "2009"
       ],
       "author": [
-        "author-1428",
         "author-1431",
-        "author-1430",
         "author-1429",
-        "author-1436",
-        "author-1432"
+        "author-1432",
+        "author-1428",
+        "author-1430",
+        "author-1436"
       ],
       "citation": [
-        "citation-651",
-        "citation-647"
+        "citation-647",
+        "citation-651"
       ],
       "venue_graph": []
     },
@@ -5136,12 +5136,12 @@
         "2007"
       ],
       "author": [
-        "author-1451",
-        "author-1450",
-        "author-1428",
         "author-1421",
         "author-1431",
-        "author-1429"
+        "author-1450",
+        "author-1429",
+        "author-1451",
+        "author-1428"
       ],
       "citation": [
         "citation-649",
@@ -5156,32 +5156,32 @@
       "short": "Journal of",
       "standardized_name": "Journal of Personality and Social Psychology",
       "year": [
+        "1998",
         "2004",
         "2008",
-        "1998",
         "1988",
         "2005"
       ],
       "author": [
-        "author-1452",
-        "author-1438",
-        "author-1460",
-        "author-1420",
-        "author-1421",
         "author-1461",
-        "author-1453",
-        "author-1422",
-        "author-1462",
+        "author-1421",
+        "author-1438",
+        "author-1420",
         "author-1437",
         "author-1463",
-        "author-1459"
+        "author-1462",
+        "author-1459",
+        "author-1422",
+        "author-1453",
+        "author-1460",
+        "author-1452"
       ],
       "citation": [
-        "citation-658",
-        "citation-652",
         "citation-664",
         "citation-657",
-        "citation-665"
+        "citation-665",
+        "citation-658",
+        "citation-652"
       ],
       "venue_graph": []
     },
@@ -5195,9 +5195,9 @@
         "2007"
       ],
       "author": [
-        "author-1442",
+        "author-1425",
         "author-1441",
-        "author-1425"
+        "author-1442"
       ],
       "citation": [
         "citation-654"
@@ -5214,13 +5214,13 @@
         "2007"
       ],
       "author": [
-        "author-1448",
+        "author-1449",
+        "author-1445",
+        "author-1447",
         "author-1443",
         "author-1444",
         "author-1446",
-        "author-1447",
-        "author-1445",
-        "author-1449"
+        "author-1448"
       ],
       "citation": [
         "citation-655"
@@ -5237,8 +5237,8 @@
         "1990"
       ],
       "author": [
-        "author-1468",
-        "author-1469"
+        "author-1469",
+        "author-1468"
       ],
       "citation": [
         "citation-669"
@@ -5255,8 +5255,8 @@
         "1987"
       ],
       "author": [
-        "author-1472",
-        "author-1473"
+        "author-1473",
+        "author-1472"
       ],
       "citation": [
         "citation-672"
@@ -5321,11 +5321,11 @@
         "2017"
       ],
       "author": [
-        "author-1496",
         "author-1494",
         "author-1497",
+        "author-483",
         "author-1495",
-        "author-483"
+        "author-1496"
       ],
       "citation": [
         "citation-683"
@@ -5343,8 +5343,8 @@
       ],
       "author": [
         "author-1517",
-        "author-1515",
-        "author-1516"
+        "author-1516",
+        "author-1515"
       ],
       "citation": [
         "citation-694"
@@ -5361,8 +5361,8 @@
         "1992"
       ],
       "author": [
-        "author-1522",
         "author-1415",
+        "author-1522",
         "author-1523"
       ],
       "citation": [
@@ -5381,11 +5381,11 @@
       ],
       "author": [
         "author-1553",
-        "author-1555",
-        "author-1550",
         "author-1554",
-        "author-1552",
-        "author-1551"
+        "author-1555",
+        "author-1551",
+        "author-1550",
+        "author-1552"
       ],
       "citation": [
         "citation-715"
@@ -5402,11 +5402,11 @@
         "1996"
       ],
       "author": [
-        "author-459",
-        "author-1556",
-        "author-1557",
         "author-1558",
-        "author-1559"
+        "author-1557",
+        "author-1559",
+        "author-459",
+        "author-1556"
       ],
       "citation": [
         "citation-718",
@@ -5424,9 +5424,9 @@
         "1999"
       ],
       "author": [
-        "author-1585",
+        "author-1586",
         "author-1587",
-        "author-1586"
+        "author-1585"
       ],
       "citation": [
         "citation-729"
@@ -5461,16 +5461,16 @@
         "2007"
       ],
       "author": [
-        "author-1603",
         "author-1605",
         "author-1602",
         "author-791",
         "author-1604",
-        "author-430"
+        "author-430",
+        "author-1603"
       ],
       "citation": [
-        "citation-740",
-        "citation-739"
+        "citation-739",
+        "citation-740"
       ],
       "venue_graph": []
     },
@@ -5484,9 +5484,9 @@
         "2007"
       ],
       "author": [
-        "author-246",
+        "author-299",
         "author-503",
-        "author-299"
+        "author-246"
       ],
       "citation": [
         "citation-741"
@@ -5503,9 +5503,9 @@
         "2007"
       ],
       "author": [
-        "author-1099",
+        "author-1606",
         "author-1607",
-        "author-1606"
+        "author-1099"
       ],
       "citation": [
         "citation-742"
@@ -5522,10 +5522,10 @@
         "2006"
       ],
       "author": [
-        "author-1610",
+        "author-1611",
         "author-1613",
-        "author-1612",
-        "author-1611"
+        "author-1610",
+        "author-1612"
       ],
       "citation": [
         "citation-745"
@@ -5542,8 +5542,8 @@
         "2005"
       ],
       "author": [
-        "author-1604",
-        "author-791"
+        "author-791",
+        "author-1604"
       ],
       "citation": [
         "citation-748"
@@ -5560,9 +5560,9 @@
         "2004"
       ],
       "author": [
-        "author-1624",
+        "author-1623",
         "author-140",
-        "author-1623"
+        "author-1624"
       ],
       "citation": [
         "citation-750"
@@ -5579,9 +5579,9 @@
         "2004"
       ],
       "author": [
+        "author-1101",
         "author-549",
-        "author-1625",
-        "author-1101"
+        "author-1625"
       ],
       "citation": [
         "citation-751"
@@ -5598,9 +5598,9 @@
         "2002"
       ],
       "author": [
-        "author-1634",
-        "author-1631",
         "author-1633",
+        "author-1631",
+        "author-1634",
         "author-1632"
       ],
       "citation": [
@@ -5618,8 +5618,8 @@
         "2005"
       ],
       "author": [
-        "author-1641",
-        "author-1640"
+        "author-1640",
+        "author-1641"
       ],
       "citation": [
         "citation-757"

@@ -17,8 +17,7 @@ export const HighlightBbox = ({
         ? anomalousColorScheme[issue.name]['category'][issue.category.name]['boxColor']
         : null;
 
-    console.log(cite, citeObj);
-
+    // const doiString = `https://doi.org/${citeObj.doi}`;
     const popContent = (
         <div
             style={{
