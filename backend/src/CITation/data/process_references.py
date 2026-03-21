@@ -60,7 +60,8 @@ def extract_references_section(md_content):
     match = section_regex.search(md_content)
     if match:
         return match.group(1).strip()
-    return ""
+    else:
+        raise ValueError("References section not found!")
 
 
 def split_references(references_text):
@@ -77,13 +78,13 @@ def split_references(references_text):
     return entries
 
 
+# TODO: this breaks on sample.md. works on test.md though
 def process_markdown_string(content: str):
     """
     Step 2 of pipeline. Returns in-memory versions of reference_mentions.json and rawreferences.txt.
     """
     # Extract and group reference mentions
     grouped_references = group_references_by_number(content)
-    print(grouped_references)
 
     # Sort the reference keys in ascending order
     def sort_key(x):
@@ -96,11 +97,18 @@ def process_markdown_string(content: str):
 
     # Extract and split the references section
     references_section = extract_references_section(content)
-    if not references_section:
-        print("No references section found.")
-        return []
-
     references_list = split_references(references_section)
+
+    """
+    # what does this code do? hopefully the same thing as what I did here.
+    for ref in flor.loop("refid", sorted_keys): # where does sorted_keys come from?
+        if references_list:
+            flor.log("reference", references_list[ref - 1])
+        texts = grouped_references[ref]
+        for i in flor.loop("txtid", range(len(texts))): # same with texts?
+            flor.log("reftext", texts[i]) 
+    """
+
     return reference_mentions, references_list
 
 

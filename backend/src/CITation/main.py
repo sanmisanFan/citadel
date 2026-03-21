@@ -1,7 +1,8 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
-from .lib import pdf_to_md_str
-from .process_references import process_markdown_string
+from .data.utils import pdf_to_md_str
+
+from .data.process_references import process_markdown_string
 import os
 import sys
 
