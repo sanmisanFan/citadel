@@ -1,6 +1,5 @@
-import os
 import re
-import flor
+from pathlib import Path
 
 
 def extract_reference_numbers(citation_str):
@@ -78,7 +77,34 @@ def split_references(references_text):
     return entries
 
 
-def process_markdown_file(md_file_path):
+def process_markdown_string(content: str):
+    """
+    Step 2 of pipeline. Returns in-memory versions of reference_mentions.json and rawreferences.txt.
+    """
+    # Extract and group reference mentions
+    grouped_references = group_references_by_number(content)
+    print(grouped_references)
+
+    # Sort the reference keys in ascending order
+    def sort_key(x):
+        try:
+            return int(x)
+        except (ValueError, TypeError):
+            return float("inf")
+
+    reference_mentions = sorted(grouped_references.keys(), key=sort_key)
+
+    # Extract and split the references section
+    references_section = extract_references_section(content)
+    if not references_section:
+        print("No references section found.")
+        return []
+
+    references_list = split_references(references_section)
+    return reference_mentions, references_list
+
+
+def process_markdown_file(md_file_path: Path):
     """
     Reads a Markdown file, extracts reference mentions and the references section,
     and saves the results to a JSON file and a text file.
@@ -88,46 +114,4 @@ def process_markdown_file(md_file_path):
     with open(md_file_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Extract and group reference mentions
-    grouped_references = group_references_by_number(content)
-
-    # Sort the reference keys in ascending order
-    def sort_key(x):
-        try:
-            return int(x)
-        except (ValueError, TypeError):
-            return float("inf")
-
-    sorted_keys = sorted(grouped_references.keys(), key=sort_key)
-
-    # Extract and split the references section
-    references_section = extract_references_section(content)
-    if not references_section:
-        print("No references section found.")
-        references_list = []
-    else:
-        references_list = split_references(references_section)
-
-    # Save references to text file
-    for ref in flor.loop("refid", sorted_keys):
-        if references_list:
-            flor.log("reference", references_list[ref - 1])
-        texts = grouped_references[ref]
-        for i in flor.loop("txtid", range(len(texts))):
-            flor.log("reftext", texts[i])
-
-
-# Example usage
-if __name__ == "__main__":
-    # listdir in
-    root = flor.arg("read_dir", default="outputs/")
-    documents = [
-        each
-        for each in os.listdir(root)
-        if os.path.isdir(os.path.join(root, each))
-        and os.path.exists(os.path.join(root, each, f"{each}.md"))
-    ]
-    for doc in flor.loop("document", documents):
-        # md_file = "outputs/test/test.md"  # Your input Markdown file
-        md_file = os.path.join(root, doc, f"{doc}.md")
-        process_markdown_file(md_file)
+    process_markdown_string(content)
