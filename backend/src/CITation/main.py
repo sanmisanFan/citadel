@@ -37,19 +37,11 @@ async def process_pdf(file: UploadFile):
     )  # get references
     processor = PaperProcessor()
     enriched, entity_keys = processor.process_papers(raw_references, reference_mentions)
-    """
-### 3. `raw_ref_to_json.py`
-  - `outputs/rawreferences.txt`
-  - `outputs/reference_mentions.json`
-- **Output**:
-  - `outputs/enriched_papers.json`
-  - `outputs/entity_keys.json`
-- **Run**:
-  ```bash
-  python raw_ref_to_json.py
-  ```
 
+
+"""
 ### 4. `summarize.py`
+# can we guarantee we'll have the pdfs themselves? not always true...
 
 - Summarizes referenced papers using GPT.
 - **Input**: `reference_papers/*.pdf`

@@ -7,6 +7,8 @@ import json
 # TODO: Make agnostic to LLM choice
 # also, is using an LLM really the best way to do this?
 # could we not just do this programatically?
+# even if it is the best way to do it, do we need to run the LLM on each entry separately?
+# would not just throwing the entire dict at the LLM work fine?
 
 
 class PaperProcessor:
