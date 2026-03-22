@@ -1,7 +1,7 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
 from .data.utils import pdf_to_md_str
-
+from .data.raw_ref_to_json import PaperProcessor
 from .data.process_references import process_markdown_string
 import os
 import sys
@@ -35,7 +35,8 @@ async def process_pdf(file: UploadFile):
     reference_mentions, raw_references = process_markdown_string(
         md_text
     )  # get references
-
+    processor = PaperProcessor()
+    enriched, entity_keys = processor.process_papers(raw_references, reference_mentions)
     """
 ### 3. `raw_ref_to_json.py`
   - `outputs/rawreferences.txt`

@@ -109,7 +109,7 @@ def process_markdown_string(content: str):
             flor.log("reftext", texts[i]) 
     """
 
-    return reference_mentions, references_list
+    return grouped_references, references_list
 
 
 def process_markdown_file(md_file_path: Path):
