@@ -15,9 +15,9 @@ SEMANTIC_SCHOLAR_URL = "https://api.semanticscholar.org/graph/v1"
 
 
 class PaperProcessor:
-    def __init__(self, client):
-        self.max_retries = 3
-        self.request_delay = 5
+    def __init__(self, client, max_retries=3, request_delay=2):
+        self.max_retries = max_retries
+        self.request_delay = request_delay
 
         self.gpt_client = client
 
@@ -293,8 +293,8 @@ Example:
             paper_id = self.search_paper(title)
             s2_data = None
             if paper_id:
-                sleep(5)
                 print(f"DEBUG: Found paper ID {paper_id} for paper {i}")
+                sleep(self.request_delay)
                 s2_data = self.retry_api_call(self.get_paper_details, paper_id)
             else:
                 print(
@@ -510,7 +510,14 @@ Example:
         print("DEBUG: Assigning entity keys...")
         enriched, entity_keys = self.assign_entity_keys(enriched)
 
-        return enriched, entity_keys
+        enriched_dict = {}
+        for x in enriched:
+            ref_id = x.get("ref_id")
+            if not ref_id:
+                raise ValueError("Paper missing reference id!")
+            enriched_dict[ref_id] = x
+
+        return enriched_dict, entity_keys
 
     def retry_api_call(self, func, *args):
         attempts = 0

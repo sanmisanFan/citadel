@@ -32,7 +32,6 @@ def test_paper_processor(test_md, gpt_client):
 
     pp = PaperProcessor(gpt_client)
     enriched, entity_keys = pp.process_papers(raw_references[:5], reference_mentions)
-    print("Number of papers processed: ", len(enriched), " ", len(entity_keys))
 
     print(enriched)
     with open(data_dir / "enriched.json", "w") as f:
@@ -48,8 +47,13 @@ def test_citation_relevance(test_md, gpt_client):
     with open(data_dir / "enriched.json", "r") as f:
         enriched = json.load(f)
 
+    trunced_ref_mentions = {}
+    for x in reference_mentions.keys():
+        if x in [1, 2, 3, 4, 5]:
+            trunced_ref_mentions[x] = reference_mentions[x]
+
     citation_assessments = process_citation_mentions(
-        reference_mentions, enriched, gpt_client
+        trunced_ref_mentions, enriched, gpt_client
     )
     # why not just update this in process_citation_mentions?
     # or better yet, just keep these as separate objects?

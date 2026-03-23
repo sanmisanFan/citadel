@@ -1,6 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 .vscode/
 
+.pytest_cache
+api_key
+s2_key
+
 backend_scripts/outputs/
 backend_scripts/documents/
 

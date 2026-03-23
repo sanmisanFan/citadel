@@ -59,10 +59,11 @@ def process_citation_mentions(citation_mentions, enriched, client):
     assessments = {}
 
     for ref_number, text_excerpts in citation_mentions.items():
-        citation_key = f"[{ref_number}]"  # Convert to string format like "[1]"
+        citation_key = f"{ref_number}"  # Convert to string format like "[1]"
 
         # Check if a summary exists for this citation key
         enriched_data = enriched.get(citation_key)
+
         summary_text = enriched_data.get("abstract", None)
         if not summary_text:
             print(f"Skipping {citation_key}: No abstract available.")
@@ -103,16 +104,9 @@ def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
             assessment_lookup[excerpt] = assessment["assessment"]
 
     # Update enriched_papers with assessments
-    for paper in enriched_papers:
-        ref_id = paper.get("ref_id")
-        if ref_id is None:
-            print(
-                f"Warning: Paper with title '{paper.get('title')}' has no ref_id. Skipping."
-            )
-            continue
-
+    for ref_id, paper in enriched_papers.items():
         # Convert ref_id to citation key format for consistency
-        citation_key = f"[{ref_id}]"
+        citation_key = int(ref_id)
 
         if "reference_mentions" in paper and paper["reference_mentions"]:
             updated_mentions = []
