@@ -29,7 +29,7 @@ async def process_pdf(file: UploadFile):
         raise HTTPException(
             status_code=400, detail="Uploaded file does not appear to be a valid PDF."
         )
-
+    # TODO: https://github.com/allenai/olmocr for pdf conversion
     # following pipeline from backend_scripts
     md_text = pdf_to_md_str(contents)  # convert pdf to md
     reference_mentions, raw_references = process_markdown_string(

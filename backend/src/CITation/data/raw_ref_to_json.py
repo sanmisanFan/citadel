@@ -10,18 +10,24 @@ import json
 # even if it is the best way to do it, do we need to run the LLM on each entry separately?
 # would not just throwing the entire dict at the LLM work fine?
 
+OPENALEX_URL = "https://api.openalex.org/works"
+SEMANTIC_SCHOLAR_URL = "https://api.semanticscholar.org/graph/v1"
+
 
 class PaperProcessor:
     def __init__(self):
-        self.s2_base = "https://api.semanticscholar.org/graph/v1"
         self.max_retries = 3
-        self.request_delay = 1
+        self.request_delay = 5
 
         if "OPENAI_API_KEY" not in os.environ:
             raise ValueError("$OPENAI_API_KEY not set.")
 
         self.gpt_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        self.s2_api_key = os.getenv("S2_API_KEY")
+
+        if "S2_API_KEY" in os.environ and os.getenv("S2_API_KEY") != "":
+            self.s2_api_key = os.getenv("S2_API_KEY")
+        else:
+            self.s2_api_key = None
         self.author_map = {}  # (identifier_type, identifier) -> {"author": dict, "key": str}
         self.author_counter = 1
 
@@ -43,7 +49,7 @@ class PaperProcessor:
 
         print(
             "DEBUG: Initialized PaperProcessor with Semantic Scholar base URL:",
-            self.s2_base,
+            SEMANTIC_SCHOLAR_URL,
         )
         if self.s2_api_key:
             print("DEBUG: Semantic Scholar API key loaded successfully.")
@@ -51,11 +57,12 @@ class PaperProcessor:
             print("WARNING: No semantic scholar API key provided.")
             # raise ValueError("No Semantic Scholar API key provided!")
 
+    # TODO: can we do this either programatically or as one call?
     def parse_reference_with_gpt(self, ref_text):
         prompt = f"""
-Parse this academic reference into JSON format with the following keys: authors (array), title, venue, raw_venue, year, pages, arxiv_id, and doi.
+Parse this academic reference into JSON format with the following keys: authors (array), title, venue, raw_venue, year, pages, arxiv_id, doi and abstract.
 If the venue name in the reference appears abbreviated, expand it to its full name and save the expanded version in "venue",
-while preserving the original text in "raw_venue". Handle incomplete information using null for missing fields.
+while preserving the original text in "raw_venue". Use the DOI or axiv link to extract the abstract for the reference. If you are unable to find the abstract using the DOI, search for it using the title in Google Scholar. If you are still unable to find the abstract, please return the reason why in the JSON field for the abstract. DO NOT summarize the paper, return only the abstract verbatim. Handle incomplete information using null for missing fields.
 
 Reference: "{ref_text}"
 
@@ -69,18 +76,19 @@ Example:
   "year": 2023,
   "pages": "123-145",
   "arxiv_id": "1234.5678",
-  "doi": "10.1234/abcd"
+  "doi": "10.1234/abcd",
+  "abstract": "Lorem ipsum..."
 }}
 """
+
         print("DEBUG: Sending GPT prompt for reference:", ref_text)
         try:
-            response = self.gpt_client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=[{"role": "user", "content": prompt}],
-                response_format={"type": "json_object"},
-                temperature=0.1,
+            response = self.gpt_client.responses.create(
+                model="gpt-4o-mini",
+                tools=[{"type": "web_search"}],
+                input=f"{prompt}\n\nReturn ONLY valid JSON as a plain text string without formatting.",
             )
-            gpt_output = response.choices[0].message.content
+            gpt_output = response.output_text
             print("DEBUG: Received GPT response:", gpt_output)
             result = json.loads(gpt_output)
             if "authors" in result:
@@ -106,7 +114,7 @@ Example:
                 print(f"DEBUG: Successfully parsed reference {idx}")
                 paper_data["ref_id"] = idx
                 parsed_papers.append(paper_data)
-                sleep(1)
+                # sleep(1)
             else:
                 print(f"DEBUG: Failed to parse reference {idx}: {ref}")
         return parsed_papers
@@ -119,7 +127,7 @@ Example:
         print(f"DEBUG: Fetching Semantic Scholar details for paper ID: {paper_id}")
         try:
             response = requests.get(
-                f"{self.s2_base}/paper/{paper_id}",
+                f"{SEMANTIC_SCHOLAR_URL}/paper/{paper_id}",
                 params={"fields": fields},
                 headers={"x-api-key": self.s2_api_key},
                 timeout=15,
@@ -134,11 +142,10 @@ Example:
             return None
 
     def get_paper_details_openalex(self, title):
-        openalex_url = "https://api.openalex.org/works"
         params = {"filter": f"title.search:{title}", "per-page": 1}
         print(f"DEBUG: Fetching OpenAlex details for title: {title}")
         try:
-            response = requests.get(openalex_url, params=params, timeout=15)
+            response = requests.get(OPENALEX_URL, params=params, timeout=15)
             response.raise_for_status()
             data = response.json()
             if "results" in data and len(data["results"]) > 0:
@@ -277,6 +284,7 @@ Example:
                     "doi": paper.get("doi"),
                     "ref_id": paper.get("ref_id"),
                     "is_artificial": True,
+                    "abstract": "This is not a real paper.",
                 }
                 enriched.append(enriched_paper)
                 continue
@@ -284,9 +292,11 @@ Example:
             print(
                 f"DEBUG: Searching Semantic Scholar for paper {i} with title: {title}"
             )
+            # we hit the API twice here? can we have it so that search_paper just returns the results we want the first time?
             paper_id = self.search_paper(title)
             s2_data = None
             if paper_id:
+                sleep(5)
                 print(f"DEBUG: Found paper ID {paper_id} for paper {i}")
                 s2_data = self.retry_api_call(self.get_paper_details, paper_id)
             else:
@@ -354,6 +364,7 @@ Example:
             "arxiv_id": paper.get("arxiv_id"),
             "doi": paper.get("doi"),
             "ref_id": paper.get("ref_id"),
+            "abstract": paper.get("abstract"),
         }
 
     def _format_authors(self, authors):
@@ -398,6 +409,7 @@ Example:
         )
         merged = {
             "title": s2.get("title", parsed.get("title")),
+            "abstract": parsed.get("abstract"),
             "authors": self._merge_authors(
                 parsed.get("authors", []), s2.get("authors", []), openalex_authors
             ),
@@ -448,6 +460,7 @@ Example:
             "external_ids": {"OpenAlex": openalex.get("id")},
             "semantic_scholar_id": None,
             "arxiv_id": parsed.get("arxiv_id"),
+            "abstract": parsed.get("abstract"),
             "doi": openalex.get("doi", parsed.get("doi")),
         }
         if "ref_id" in parsed:
@@ -515,10 +528,11 @@ Example:
 
     def search_paper(self, title):
         print("DEBUG: Searching Semantic Scholar for title:", title)
-        search_url = f"{self.s2_base}/paper/search"
+        search_url = f"{SEMANTIC_SCHOLAR_URL}/paper/search"
         params = {
             "query": title,
             "fields": "paperId,title,venue,year,authors",
+            #
             "limit": 1,
         }
         try:
