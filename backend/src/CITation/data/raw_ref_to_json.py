@@ -15,14 +15,11 @@ SEMANTIC_SCHOLAR_URL = "https://api.semanticscholar.org/graph/v1"
 
 
 class PaperProcessor:
-    def __init__(self):
+    def __init__(self, client):
         self.max_retries = 3
         self.request_delay = 5
 
-        if "OPENAI_API_KEY" not in os.environ:
-            raise ValueError("$OPENAI_API_KEY not set.")
-
-        self.gpt_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.gpt_client = client
 
         if "S2_API_KEY" in os.environ and os.getenv("S2_API_KEY") != "":
             self.s2_api_key = os.getenv("S2_API_KEY")

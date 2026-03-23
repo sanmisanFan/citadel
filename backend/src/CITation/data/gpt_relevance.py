@@ -1,13 +1,6 @@
 import os
 import json
-from openai import OpenAI
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
-def load_json(file_path):
-    """Load JSON data from a file."""
-    with open(file_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
 
 def map_references_to_summaries(paper_summaries):
     """Map reference numbers from pdf_summaries.json to citation keys (e.g., '[1]') and their summaries."""
@@ -19,7 +12,8 @@ def map_references_to_summaries(paper_summaries):
         mapping[key] = summary
     return mapping
 
-def assess_citation_relevance(citation_key, context_text, summary_text):
+
+def assess_citation_relevance(citation_key, context_text, summary_text, client):
     """Assesses relevance using GPT-4 Turbo with explicit reasoning."""
     prompt = f"""
 You are an expert academic researcher. Your task is to evaluate the contextual relevance of the citation {citation_key} in the provided text excerpt, and to clearly explain your reasoning.
@@ -55,47 +49,49 @@ Explanation: [Your detailed 2-3 sentence analysis, including key evidence and re
         messages=[{"role": "user", "content": prompt}],
         max_tokens=200,
         temperature=0.2,
-        top_p=0.95
+        top_p=0.95,
     )
     return response.choices[0].message.content
 
-def process_citation_mentions(citation_mentions, paper_summary_mapping):
+
+def process_citation_mentions(citation_mentions, enriched, client):
     """Process each citation mention individually, skipping if no summary is available."""
     assessments = {}
-    
-    for entry in citation_mentions:
-        ref_number = entry.get("reference")  # Integer like 1, 2, etc.
+
+    for ref_number, text_excerpts in citation_mentions.items():
         citation_key = f"[{ref_number}]"  # Convert to string format like "[1]"
-        text_excerpts = entry.get("texts", [])
-        
+
         # Check if a summary exists for this citation key
-        summary_text = paper_summary_mapping.get(citation_key)
+        enriched_data = enriched.get(citation_key)
+        summary_text = enriched_data.get("abstract", None)
         if not summary_text:
-            print(f"Skipping {citation_key}: No summary available in pdf_summaries.json.")
+            print(f"Skipping {citation_key}: No abstract available.")
             continue
-        
+
         print(f"Processing {len(text_excerpts)} mentions for {citation_key}...")
         citation_assessments = []
-        
+
         for idx, text in enumerate(text_excerpts, 1):
             print(f"  Assessing mention {idx}/{len(text_excerpts)}...")
             try:
-                assessment = assess_citation_relevance(citation_key, text, summary_text)
-                citation_assessments.append({
-                    "excerpt": text,
-                    "assessment": assessment
-                })
+                assessment = assess_citation_relevance(
+                    citation_key, text, summary_text, client
+                )
+                citation_assessments.append({"excerpt": text, "assessment": assessment})
             except Exception as e:
                 print(f"Error processing mention {idx}: {str(e)}")
-                citation_assessments.append({
-                    "excerpt": text,
-                    "assessment": "Assessment failed",
-                    "error": str(e)
-                })
-        
+                citation_assessments.append(
+                    {
+                        "excerpt": text,
+                        "assessment": "Assessment failed",
+                        "error": str(e),
+                    }
+                )
+
         assessments[citation_key] = citation_assessments
-    
+
     return assessments
+
 
 def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
     """Assign relevance scores to the reference_mentions in enriched_papers.json."""
@@ -110,12 +106,14 @@ def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
     for paper in enriched_papers:
         ref_id = paper.get("ref_id")
         if ref_id is None:
-            print(f"Warning: Paper with title '{paper.get('title')}' has no ref_id. Skipping.")
+            print(
+                f"Warning: Paper with title '{paper.get('title')}' has no ref_id. Skipping."
+            )
             continue
-        
+
         # Convert ref_id to citation key format for consistency
         citation_key = f"[{ref_id}]"
-        
+
         if "reference_mentions" in paper and paper["reference_mentions"]:
             updated_mentions = []
             for mention in paper["reference_mentions"]:
@@ -123,60 +121,34 @@ def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
                     # Parse the assessment to extract the score
                     assessment_text = assessment_lookup[mention]
                     try:
-                        score_line = assessment_text.split('\n')[0]  # "Score: [number]"
-                        score = int(score_line.split(': ')[1])
+                        score_line = assessment_text.split("\n")[0]  # "Score: [number]"
+                        score = int(score_line.split(": ")[1])
                     except (IndexError, ValueError) as e:
-                        print(f"Error parsing score for mention in {citation_key}: {assessment_text}. Setting score to None.")
+                        print(
+                            f"Error parsing score for mention in {citation_key}: {assessment_text}. Setting score to None."
+                        )
                         score = None
-                    
-                    updated_mentions.append({
-                        "text": mention,
-                        "relevance_score": score,
-                        "assessment": assessment_text
-                    })
+
+                    updated_mentions.append(
+                        {
+                            "text": mention,
+                            "relevance_score": score,
+                            "assessment": assessment_text,
+                        }
+                    )
                 else:
                     # If no assessment exists (e.g., skipped due to no summary), keep original text
-                    updated_mentions.append({
-                        "text": mention,
-                        "relevance_score": None,
-                        "assessment": "No assessment available"
-                    })
+                    updated_mentions.append(
+                        {
+                            "text": mention,
+                            "relevance_score": None,
+                            "assessment": "No assessment available",
+                        }
+                    )
             paper["reference_mentions"] = updated_mentions
         else:
-            print(f"No reference_mentions found for {citation_key} in enriched_papers.json.")
-    
+            print(
+                f"No reference_mentions found for {citation_key} in enriched_papers.json."
+            )
+
     return enriched_papers
-
-def main():
-    citation_mentions_file = "outputs/reference_mentions.json"
-    paper_summaries_file = "outputs/pdf_summaries.json"
-    enriched_papers_file = "outputs/enriched_papers.json"
-    output_assessments_file = "outputs/detailed_citation_assessments.json"
-    output_enriched_papers_file = "outputs/enriched_papers_with_scores.json"
-
-    # Load data
-    citation_mentions = load_json(citation_mentions_file)
-    paper_summaries = load_json(paper_summaries_file)
-    enriched_papers = load_json(enriched_papers_file)
-    
-    # Map reference numbers to summaries
-    paper_summary_mapping = map_references_to_summaries(paper_summaries)
-
-    # Process all citations with individual text excerpts
-    citation_assessments = process_citation_mentions(citation_mentions, paper_summary_mapping)
-
-    # Save detailed assessments
-    with open(output_assessments_file, "w", encoding="utf-8") as f:
-        json.dump(citation_assessments, f, indent=2, ensure_ascii=False)
-    print(f"Detailed assessments saved to {output_assessments_file}")
-
-    # Assign scores to enriched_papers
-    updated_enriched_papers = assign_scores_to_enriched_papers(enriched_papers, citation_assessments)
-
-    # Save updated enriched_papers
-    with open(output_enriched_papers_file, "w", encoding="utf-8") as f:
-        json.dump(updated_enriched_papers, f, indent=2, ensure_ascii=False)
-    print(f"Updated enriched papers with scores saved to {output_enriched_papers_file}")
-
-if __name__ == "__main__":
-    main()

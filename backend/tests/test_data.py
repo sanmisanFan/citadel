@@ -3,7 +3,10 @@ from CITation.data.process_references import (
     extract_references_section,
 )
 from CITation.data.raw_ref_to_json import PaperProcessor
-from CITation.data.utils import get_doi
+from CITation.data.gpt_relevance import (
+    process_citation_mentions,
+    assign_scores_to_enriched_papers,
+)
 
 from pathlib import Path
 import pytest
@@ -23,18 +26,11 @@ def test_process_references(test_md):
     print(reference_mentions, raw_references)
 
 
-def test_get_doi(test_md):
-    reference_mentions, raw_references = process_markdown_string(test_md)
-    print(reference_mentions, raw_references)
-    for x in raw_references:
-        get_doi(x)
-
-
 @pytest.mark.slow
-def test_paper_processor(test_md):
+def test_paper_processor(test_md, gpt_client):
     reference_mentions, raw_references = process_markdown_string(test_md)
 
-    pp = PaperProcessor()
+    pp = PaperProcessor(gpt_client)
     enriched, entity_keys = pp.process_papers(raw_references[:5], reference_mentions)
     print("Number of papers processed: ", len(enriched), " ", len(entity_keys))
 
@@ -44,3 +40,22 @@ def test_paper_processor(test_md):
 
     with open(data_dir / "entity_keys.json", "w") as f:
         json.dump(entity_keys, f)
+
+
+@pytest.mark.slow
+def test_citation_relevance(test_md, gpt_client):
+    reference_mentions, raw_references = process_markdown_string(test_md)
+    with open(data_dir / "enriched.json", "r") as f:
+        enriched = json.load(f)
+
+    citation_assessments = process_citation_mentions(
+        reference_mentions, enriched, gpt_client
+    )
+    # why not just update this in process_citation_mentions?
+    # or better yet, just keep these as separate objects?
+    updated_enriched_papers = assign_scores_to_enriched_papers(
+        enriched, citation_assessments
+    )
+
+    with open(data_dir / "updated_enriched.json", "w") as f:
+        json.dump(updated_enriched_papers, f)
