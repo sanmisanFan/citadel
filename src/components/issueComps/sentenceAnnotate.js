@@ -1,5 +1,3 @@
-import { Popover } from "antd";
-
 export const SentenceAnnotation = ({
   issueID,
   issueName,
@@ -9,9 +7,10 @@ export const SentenceAnnotation = ({
   activeHighlight,
   onClick
 }) => {
+  const isActive = activeHighlight === issueID;
+
   return(
     <div
-      //className="highlight"
       id={"sentenceAnnotation_"+issueID}
       style={{
         position: "absolute",
@@ -19,24 +18,38 @@ export const SentenceAnnotation = ({
         top: 0,
         width: "100%",
         height: "100%",
-        background: activeHighlight === issueID ? boxColor : "",
-        //transition: "all 0.2s ease-out",
-        //border: activeHighlight === cite.issues[0] && "3px solid blue",
-        borderBottom: "3px solid",
-        borderBottomColor: baseColor,
-        //borderRadius: 8,
-        //opacity: 0.5,
         cursor: "pointer",
-        pointerEvents: "auto"
+        pointerEvents: "auto",
       }}
-      onClick={() => onClick(activeHighlight === issueID ? null : issueID)}
-      /*onMouseEnter={(e) => {
-        e.target.style.border = "3px solid blue";
-      }}
-      onMouseLeave={(e) => {
-        e.target.style.border = "";
-      }}*/
+      onClick={() => onClick(isActive ? null : issueID)}
     >
+      {/* Background highlight - only when active, behind text */}
+      {isActive && (
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            width: "100%",
+            height: "100%",
+            background: boxColor,
+            pointerEvents: "none",
+            zIndex: -1,
+          }}
+        />
+      )}
+      {/* Underline - positioned at bottom, outside of text area */}
+      <div
+        style={{
+          position: "absolute",
+          left: 0,
+          bottom: -2,
+          width: "100%",
+          height: "2px",
+          background: baseColor,
+          pointerEvents: "none",
+        }}
+      />
     </div>
   );
 };

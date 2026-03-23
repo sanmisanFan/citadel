@@ -290,7 +290,7 @@
       "explanation": "Computed p=0.025025 is not < reported p=.01 (±0.001).",
       "sentence": [
         {
-          "sentence": "F (2, 46) = 4, p < .01",
+          "sentence": "F(2,46) = 4, p < .01",
           "bbox": {
             "height": 0.01132121212121212,
             "width": 0.14,
@@ -311,10 +311,10 @@
       },
       "paper": null,
       "page": 2,
-      "explanation": "Wrong F-test results, computed p = 0.347.",
+      "explanation": "Computed p-value does not match reported value.",
       "sentence": [
         {
-          "sentence": "F (0.47, 1.73) = 0.9, p = 0.756",
+          "sentence": "t(123) = .45, p = 0.65",
           "bbox": {
             "height": 0.01132121212121212,
             "width": 0.18,
@@ -335,10 +335,10 @@
       },
       "paper": null,
       "page": 2,
-      "explanation": "Wrong F-test results, computed p = 0.347.",
+      "explanation": "Statistical values reported inconsistently across sections.",
       "sentence": [
         {
-          "sentence": "F (0.47, 1.73) = 0.9, p = 0.756",
+          "sentence": "t(123) = .45, p = 0.65",
           "bbox": {
             "height": 0.01132121212121212,
             "width": 0.18,
