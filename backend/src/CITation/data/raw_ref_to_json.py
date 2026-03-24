@@ -15,6 +15,7 @@ from typing import Literal
 OPENALEX_URL = "https://api.openalex.org/works"
 SEMANTIC_SCHOLAR_URL = "https://api.semanticscholar.org/graph/v1"
 # https://api.semanticscholar.org/api-docs
+OPENALEX_CHUNK_SIZE = 100
 
 # TODO: Use Pydantic to type and validate the metadata we're getting
 MetadataSource = Literal["S2", "OpenAlex"] | None
@@ -31,7 +32,7 @@ class PaperProcessor:
         self,
         client,
         max_retries=3,
-        request_delay=2,
+        request_delay=1,
         missing_ref_callback=missing_reference_callback_debug,
     ):
         self.max_retries = max_retries
@@ -563,6 +564,7 @@ Example:
         return merged
 
     def assign_entity_keys(self, enriched):
+        d = {}
         entity_keys = {
             "authors": {v["key"]: v["author"] for v in self.author_map.values()},
             "citations": {},
@@ -589,7 +591,8 @@ Example:
                 else:
                     v_key = venue_key_map[venue_str]
                 paper["venue"] = v_key
-        return enriched, entity_keys
+            d[paper["ref_id"]] = paper
+        return d, entity_keys
 
     def retry_api_call(self, func, *args):
         attempts = 0
@@ -624,27 +627,23 @@ Example:
         # TODO: probably make this into one function
         enriched, entity_keys = self.assign_entity_keys_with_refs(enriched, entity_keys)
 
-        enriched_dict = {}
-        for x in enriched:
-            ref_id = x.get("ref_id")
-            if not ref_id:
-                raise ValueError("Paper missing reference id!")
-            enriched_dict[ref_id] = x
+        return enriched, entity_keys
 
-        return enriched_dict, entity_keys
-
-    # these next few functions are from second_hop.py
-    def get_openalex_work_details(self, work_id):
-        """Fetch details for an OpenAlex work by ID."""
-        work_id_short = work_id.split("/")[-1]
-        url = f"{OPENALEX_URL}/{work_id_short}"
-        print(f"DEBUG: Fetching OpenAlex work details for ID: {url}")
+    def get_openalex_work_details(self, work_ids):
+        """Fetch details for multiple openalex works by ID."""
+        # can batch with ?filter=ids.openalex:{id1}|{id2}|{id3}...
+        url = f"{OPENALEX_URL}?filter=ids.openalex:"
+        for i, x in enumerate(work_ids):
+            work_id_short = x.split("/")[-1]
+            url += str(work_id_short)
+            if i != len(work_ids) - 1:
+                url += "|"
         try:
             response = requests.get(url, timeout=15)
             response.raise_for_status()
             data = response.json()
             print(f"DEBUG: Received OpenAlex work details for {url}:", data)
-            return data
+            return data["results"]
         except Exception as e:
             print(f"DEBUG: Error fetching OpenAlex work details for {url}: {e}")
             return None
@@ -881,6 +880,7 @@ Example:
 
         return references_data, entity_keys
 
+    # same here, this likely can be the logic for merge_data
     def _merge_ref_data(self, s2=None, openalex=None, is_artificial_parent=False):
         """Merge Semantic Scholar or OpenAlex data, applying nameMap for artificial parent papers."""
         if s2:
@@ -949,6 +949,19 @@ Example:
                 self.missing_ref_callback(paper)
             return []
 
+        if ref_source == "openalex":
+            chunks = [
+                refs[i : i + OPENALEX_CHUNK_SIZE] for i in range(0, len(refs), 25)
+            ]
+            for chunk in chunks:
+                details = self.retry_api_call(self.get_openalex_work_details, chunk)
+                for d in details:
+                    merged = self._merge_ref_data(
+                        openalex=d,
+                        is_artificial_parent="artificial paper" in title.lower(),
+                    )
+                    enriched_refs.append(merged)
+
         for ref in refs:
             if ref_source == "s2":
                 details = self.retry_api_call(self.get_paper_details, ref)
@@ -962,18 +975,6 @@ Example:
                         f"DEBUG: Semantic Scholar failed for {ref}, skipping reference."
                     )
                     continue
-            else:
-                details = self.retry_api_call(self.get_openalex_work_details, ref)
-                if details:
-                    merged = self._merge_ref_data(
-                        openalex=details,
-                        is_artificial_parent="artificial paper" in title.lower(),
-                    )
-                else:
-                    print(
-                        f"DEBUG: OpenAlex failed for work ID {ref}, skipping reference."
-                    )
-                    continue
-            enriched_refs.append(merged)
+
             sleep(self.request_delay)
         return enriched_refs
