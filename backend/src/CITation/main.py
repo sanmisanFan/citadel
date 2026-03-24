@@ -64,50 +64,6 @@ async def process_pdf(file: UploadFile):
 
 """
 
-### 5. `gpt_relevance.py`
-
-- Uses GPT to score citation relevance.
-- **Input**:
-  - `outputs/reference_mentions.json`
-  - `outputs/pdf_summaries.json`
-  - `outputs/enriched_papers.json`
-- **Output**:
-  - `outputs/detailed_citation_assessments.json`
-  - `outputs/enriched_papers_with_scores.json`
-- **Run**:
-  ```bash
-  python gpt_relevance.py
-  ```
-
-### 6. `cit_locator.py`
-
-- Locates and annotates citation mentions in the original PDF.
-- **Input**:
-  - `test.pdf`
-  - `outputs/enriched_papers_with_scores.json`
-- **Output**:
-  - `outputs/annotated_test.pdf`
-  - `outputs/enriched_papers_with_bboxes.json`
-  - `outputs/annotated_results.json`
-- **Run**:
-  ```bash
-  python cit_locator.py
-  ```
-
-### 7. `second_hop.py`
-
-- Fetches second-hop citations and updates the graph.
-- **Input**:
-  - `outputs/enriched_papers_with_bboxes.json`
-  - `outputs/entity_keys.json`
-- **Output**:
-  - `outputs/second_hop_references.json`
-  - Updates `outputs/entity_keys.json`
-- **Run**:
-  ```bash
-  python second_hop.py
-  ```
-
 ### 8. `citation_graph_builder.py`
 
 - Builds final citation, author, and venue graphs.

@@ -1,7 +1,6 @@
 // https://sanmisanfan.github.io/ReviewerApp-demo/
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { pdfjs } from "react-pdf";
-//import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 import { Col, Row, Spin } from 'antd';
 import 'antd/dist/reset.css';
 import './App.css';
@@ -9,9 +8,6 @@ import './App.css';
 /** React DOM Components */
 import { PDFContainer } from "./components/pdfContainer";
 import { VisContainer } from "./components/visContainer";
-
-/** Import utilitie functions */
-import { extractAndHighlight } from "./util/pdfUtil";
 
 /** Import annotation configure */
 import { anomalousColorScheme } from "./annotationConfig";
@@ -22,15 +18,10 @@ import venueRaw from "./data/case1/venues.json";
 import citationRaw from "./data/case1/citation.json";
 import anomalousRaw from "./data/case1/anomalous.json";
 import authorGraphDataRaw from "./data/case1/community_graph.json";
-//import authorGraphData from "./data/case1/author_graph.json";
 
 /** load test PDF - should be uploaded by user */
 import samplePDF from "./data/case1/reviewerAPP_case1.pdf";
 
-/*pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString();*/
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 

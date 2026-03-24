@@ -6,7 +6,7 @@ import fitz  # PyMuPDF
 
 
 def pdf_to_str(content) -> str:
-    """Converts a PDF to plain text via PyMuPDF.
+    """Converts PDF bytes to plain text via PyMuPDF.
     Args:
         content (bytes): The contents of the PDF as bytes.
 
@@ -38,3 +38,18 @@ def pdf_to_md_str(content) -> str:
 
     res = to_markdown(doc, ignore_graphics=True, ignore_images=True, show_progress=True)
     return res
+
+
+def get_openalex_authors(openalex):
+    return [
+        {
+            "name": authorship.get("author", {}).get("display_name"),
+            "orcid": authorship.get("author", {}).get("orcid"),
+        }
+        for authorship in openalex.get("authorships", [])
+    ]
+
+
+def get_openalex_refs(openalex) -> list[str] | None:
+    refs = openalex.get("referenced_works", []) + openalex.get("related_works", [])
+    return refs if len(refs) > 0 else None

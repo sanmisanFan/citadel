@@ -3,6 +3,8 @@ from time import sleep
 import os
 from openai import OpenAI
 import json
+from .utils import get_openalex_authors, get_openalex_refs
+from typing import Literal
 
 # TODO: Make agnostic to LLM choice
 # also, is using an LLM really the best way to do this?
@@ -12,13 +14,29 @@ import json
 
 OPENALEX_URL = "https://api.openalex.org/works"
 SEMANTIC_SCHOLAR_URL = "https://api.semanticscholar.org/graph/v1"
+# https://api.semanticscholar.org/api-docs
+
+# TODO: Use Pydantic to type and validate the metadata we're getting
+MetadataSource = Literal["S2", "OpenAlex"] | None
+
+
+# warns the user that the references for the paper cannot be extracted
+# TODO: ask user for location on disk or skip missing reference.
+def missing_reference_callback_debug(x):
+    print(f"References for paper {x} cannot be extracted. Missing PDF.")
 
 
 class PaperProcessor:
-    def __init__(self, client, max_retries=3, request_delay=2):
+    def __init__(
+        self,
+        client,
+        max_retries=3,
+        request_delay=2,
+        missing_ref_callback=missing_reference_callback_debug,
+    ):
         self.max_retries = max_retries
         self.request_delay = request_delay
-
+        self.missing_ref_callback = missing_ref_callback
         self.gpt_client = client
 
         if "S2_API_KEY" in os.environ and os.getenv("S2_API_KEY") != "":
@@ -55,6 +73,11 @@ class PaperProcessor:
             # raise ValueError("No Semantic Scholar API key provided!")
 
     # TODO: can we do this either programatically or as one call?
+    # well, each paper should always have a title at least right?
+    # if we can reliably extract titles from the text, we can search semantic scholar first
+    # then check for the abstract. if the abstract contains a DOI link, we scrape it and give it to
+    # chatgpt, or maybe we'll get lucky and get the abstract right off the bat
+    # if not, default to using this instead
     def parse_reference_with_gpt(self, ref_text):
         prompt = f"""
 Parse this academic reference into JSON format with the following keys: authors (array), title, venue, raw_venue, year, pages, arxiv_id, doi and abstract.
@@ -116,10 +139,50 @@ Example:
                 print(f"DEBUG: Failed to parse reference {idx}: {ref}")
         return parsed_papers
 
+    def search_paper(self, title: str):
+        """Given a paper title, tries to find its entry in semantic scholar.
+        Sadly, this API endpoint only gives a small amount of all of the data we need,
+        so we hit their API again with the paperID.
+
+        Args:
+            title: Title of the paper.
+        """
+        print("DEBUG: Searching Semantic Scholar for title:", title)
+        # https://api.semanticscholar.org/api-docs/#tag/Paper-Data/operation/get_graph_paper_title_search
+
+        search_url = f"{SEMANTIC_SCHOLAR_URL}/paper/search/match"
+        params = {
+            "query": title,
+            "fields": "paperId,title,venue,year,authors",
+            "limit": 1,
+        }
+        try:
+            response = requests.get(
+                search_url,
+                params=params,
+                headers={"x-api-key": self.s2_api_key},
+                timeout=15,
+            )
+            print(
+                "DEBUG: Semantic Scholar search response status:", response.status_code
+            )
+            response.raise_for_status()
+            data = response.json()
+            if "data" in data and len(data["data"]) > 0:
+                first_paper = data["data"][0]
+                print("DEBUG: Found paper via title search:", first_paper)
+                return first_paper["paperId"]
+            else:
+                print("DEBUG: No results found for title search.")
+                return None
+        except Exception as e:
+            print("DEBUG: search_paper error:", e)
+            return None
+
     def get_paper_details(self, paper_id):
         fields = (
             "title,authors.name,authors.authorId,authors.externalIds,"
-            "venue,year,citationCount,fieldsOfStudy,externalIds,paperId"
+            "venue,year,citationCount,fieldsOfStudy,externalIds,paperId,openAccessPdf,references"
         )
         print(f"DEBUG: Fetching Semantic Scholar details for paper ID: {paper_id}")
         try:
@@ -133,6 +196,12 @@ Example:
             response.raise_for_status()
             data = response.json()
             print("DEBUG: Received Semantic Scholar data:", data)
+            pdf_data = data.get("openAccessPdf", None)
+            data["pdf_url"] = None
+            if pdf_data is not None:
+                if data["openAccessPdf"]["url"] != "":
+                    data["pdf_url"] = data["openAccessPdf"]["url"]
+
             return data
         except requests.exceptions.RequestException as e:
             print(f"DEBUG: API request failed for paper ID {paper_id}: {e}")
@@ -289,8 +358,9 @@ Example:
             print(
                 f"DEBUG: Searching Semantic Scholar for paper {i} with title: {title}"
             )
-            # we hit the API twice here? can we have it so that search_paper just returns the results we want the first time?
+            # this gets the paper id from semantic scholar, but we need to hit their API again for the rest of the metadata.
             paper_id = self.search_paper(title)
+
             s2_data = None
             if paper_id:
                 print(f"DEBUG: Found paper ID {paper_id} for paper {i}")
@@ -301,34 +371,39 @@ Example:
                     f"DEBUG: No paper found in Semantic Scholar for paper {i} with title: {title}"
                 )
 
-            need_openalex = False
+            # we use openalex if 1. we don't have any data 2. we need references or 3. the authors aren't formatted correctly.
+            need_openalex_for_authors = False
+            need_openalex_for_refs = False
             if s2_data and "authors" in s2_data:
                 for author in s2_data.get("authors", []):
                     orcid = (author.get("externalIds") or {}).get("ORCID")
                     if not orcid:
-                        need_openalex = True
+                        need_openalex_for_authors = True
                         break
-            else:
-                need_openalex = True
+                if not s2_data.get("references"):
+                    # and s2_data.get("pdf_url") is None:
+                    # originally thought we rely on reading the pdf for references, but openalex is pretty robust wrt refs
+                    need_openalex_for_refs = True
 
             openalex_data = None
             openalex_authors = None
-            if need_openalex:
+            openalex_refs = None
+            if not s2_data or need_openalex_for_authors or need_openalex_for_refs:
                 print(
-                    f"DEBUG: ORCID missing or Semantic Scholar data not available for paper {i}, attempting OpenAlex"
+                    f"DEBUG: ORCID missing or Semantic Scholar data not available for paper {i}, attempting OpenAlex..."
                 )
                 openalex_data = self.get_paper_details_openalex(title)
                 if openalex_data:
-                    openalex_authors = [
-                        {
-                            "name": authorship.get("author", {}).get("display_name"),
-                            "orcid": authorship.get("author", {}).get("orcid"),
-                        }
-                        for authorship in openalex_data.get("authorships", [])
-                    ]
+                    if need_openalex_for_authors:
+                        openalex_authors = get_openalex_authors(openalex_data)
+
+                    if need_openalex_for_refs:
+                        openalex_refs = get_openalex_refs(openalex_data)
 
             if s2_data:
-                merged = self._merge_data(paper, s2_data, openalex_authors)
+                merged = self._merge_data(
+                    paper, s2_data, openalex_authors, openalex_refs
+                )
                 merged["is_artificial"] = False
                 print(f"DEBUG: Merged data for paper {i}: {merged}")
                 enriched.append(merged)
@@ -339,7 +414,7 @@ Example:
                 enriched.append(merged)
             else:
                 print(
-                    f"DEBUG: No data found for paper {i} on both Semantic Scholar and OpenAlex"
+                    f"DEBUG: No data found for paper {i} on either Semantic Scholar or OpenAlex."
                 )
                 enriched_paper = self._format_gpt_only(paper)
                 enriched_paper["is_artificial"] = False
@@ -397,13 +472,31 @@ Example:
             formatted.append(author_key)
         return formatted
 
-    def _merge_data(self, parsed, s2, openalex_authors=None):
+    def _merge_data(self, parsed, s2, openalex_authors=None, openalex_refs=None):
         venue_full = parsed.get("venue") if "venue" in parsed else s2.get("venue")
         raw_venue = (
             parsed.get("raw_venue")
             if "raw_venue" in parsed
             else s2.get("venue", parsed.get("venue"))
         )
+
+        refs = None
+        ref_source = None
+        if s2.get("references"):
+            refs = s2["references"]
+            ref_source = "s2"
+        elif openalex_refs:
+            refs = openalex_refs
+            ref_source = "openalex"
+
+        """
+        if refs is None and s2.get("pdf_url") is None:
+            # TODO: add ability to upload pdfs during this process
+            print(
+                f"WARNING: Could not extract references nor locate PDF for {s2.get('title', parsed.get('title'))}."
+            )
+        """
+
         merged = {
             "title": s2.get("title", parsed.get("title")),
             "abstract": parsed.get("abstract"),
@@ -417,6 +510,9 @@ Example:
             "fields_of_study": s2.get("fieldsOfStudy", []),
             "external_ids": s2.get("externalIds", {}),
             "semantic_scholar_id": s2.get("paperId"),
+            "references": refs,
+            "ref_source": ref_source,
+            "pdf_url": s2.get("pdf_url", None),
             "arxiv_id": parsed.get("arxiv_id"),
             "doi": s2.get("externalIds", {}).get("DOI", parsed.get("doi")),
         }
@@ -427,13 +523,10 @@ Example:
 
     def _merge_data_openalex(self, parsed, openalex):
         title = openalex.get("display_name", parsed.get("title"))
-        openalex_authors = [
-            {
-                "name": authorship.get("author", {}).get("display_name"),
-                "orcid": authorship.get("author", {}).get("orcid"),
-            }
-            for authorship in openalex.get("authorships", [])
-        ]
+        openalex_authors = get_openalex_authors(openalex)
+        refs = get_openalex_refs(openalex)
+        ref_source = "openalex" if refs is not None else None
+
         venue_full = (
             parsed.get("venue")
             if "venue" in parsed
@@ -444,6 +537,7 @@ Example:
             if "raw_venue" in parsed
             else openalex.get("host_venue", {}).get("display_name", parsed.get("venue"))
         )
+
         merged = {
             "title": title,
             "authors": self._merge_authors(
@@ -455,7 +549,10 @@ Example:
             "citation_count": openalex.get("citation_count", 0),
             "fields_of_study": openalex.get("concepts", []),
             "external_ids": {"OpenAlex": openalex.get("id")},
+            "references": refs,
+            "ref_source": ref_source,
             "semantic_scholar_id": None,
+            "pdf_url": None,
             "arxiv_id": parsed.get("arxiv_id"),
             "abstract": parsed.get("abstract"),
             "doi": openalex.get("doi", parsed.get("doi")),
@@ -494,31 +591,6 @@ Example:
                 paper["venue"] = v_key
         return enriched, entity_keys
 
-    def process_papers(self, raw_references, ref_mentions):
-        print("DEBUG: Starting processing of papers")
-        print("DEBUG: Parsing input file with GPT...")
-        parsed = self.load_and_parse_input(raw_references)
-
-        print("DEBUG: Enriching data...")
-        enriched = self.enrich_paper_data(parsed)
-
-        for paper in enriched:
-            ref_id = paper.get("ref_id")
-            if ref_id and ref_id in ref_mentions:
-                paper["reference_mentions"] = ref_mentions[ref_id]
-
-        print("DEBUG: Assigning entity keys...")
-        enriched, entity_keys = self.assign_entity_keys(enriched)
-
-        enriched_dict = {}
-        for x in enriched:
-            ref_id = x.get("ref_id")
-            if not ref_id:
-                raise ValueError("Paper missing reference id!")
-            enriched_dict[ref_id] = x
-
-        return enriched_dict, entity_keys
-
     def retry_api_call(self, func, *args):
         attempts = 0
         while attempts < self.max_retries:
@@ -530,34 +602,378 @@ Example:
             sleep(self.request_delay)
         return None
 
-    def search_paper(self, title):
-        print("DEBUG: Searching Semantic Scholar for title:", title)
-        search_url = f"{SEMANTIC_SCHOLAR_URL}/paper/search"
-        params = {
-            "query": title,
-            "fields": "paperId,title,venue,year,authors",
-            #
-            "limit": 1,
-        }
+    def process_papers(self, raw_references, ref_mentions):
+        print("DEBUG: Starting processing of papers")
+        print("DEBUG: Parsing input file with GPT...")
+        parsed = self.load_and_parse_input(raw_references)
+
+        print("DEBUG: Enriching data...")
+        enriched = self.enrich_paper_data(parsed)
+
+        # process second hops here
+        for paper in enriched:
+            ref_id = paper.get("ref_id")
+            if ref_id and ref_id in ref_mentions:
+                paper["reference_mentions"] = ref_mentions[ref_id]
+            enriched_refs = self.process_second_hops(paper)
+            paper["enriched_references"] = enriched_refs
+
+        # build dict of entity keys
+        print("DEBUG: Assigning entity keys...")
+        enriched, entity_keys = self.assign_entity_keys(enriched)
+        # TODO: probably make this into one function
+        enriched, entity_keys = self.assign_entity_keys_with_refs(enriched, entity_keys)
+
+        enriched_dict = {}
+        for x in enriched:
+            ref_id = x.get("ref_id")
+            if not ref_id:
+                raise ValueError("Paper missing reference id!")
+            enriched_dict[ref_id] = x
+
+        return enriched_dict, entity_keys
+
+    # these next few functions are from second_hop.py
+    def get_openalex_work_details(self, work_id):
+        """Fetch details for an OpenAlex work by ID."""
+        work_id_short = work_id.split("/")[-1]
+        url = f"{OPENALEX_URL}/{work_id_short}"
+        print(f"DEBUG: Fetching OpenAlex work details for ID: {url}")
         try:
-            response = requests.get(
-                search_url,
-                params=params,
-                headers={"x-api-key": self.s2_api_key},
-                timeout=15,
-            )
-            print(
-                "DEBUG: Semantic Scholar search response status:", response.status_code
-            )
+            response = requests.get(url, timeout=15)
             response.raise_for_status()
             data = response.json()
-            if "data" in data and len(data["data"]) > 0:
-                first_paper = data["data"][0]
-                print("DEBUG: Found paper via title search:", first_paper)
-                return first_paper["paperId"]
-            else:
-                print("DEBUG: No results found for title search.")
-                return None
+            print(f"DEBUG: Received OpenAlex work details for {url}:", data)
+            return data
         except Exception as e:
-            print("DEBUG: search_paper error:", e)
+            print(f"DEBUG: Error fetching OpenAlex work details for {url}: {e}")
             return None
+
+    def _merge_ref_authors(
+        self, s2_authors=None, openalex_authors=None, is_artificial_parent=False
+    ):
+        """Merge author lists, applying nameMap for artificial parent papers."""
+        if s2_authors is None and openalex_authors is None:
+            return []
+        merged_authors = []
+        authors = s2_authors if s2_authors is not None else openalex_authors
+        max_length = len(authors) if authors else 0
+        for i in range(max_length):
+            api_author = authors[i] if i < len(authors) else {}
+            name = api_author.get("name")
+            s2_id = api_author.get("authorId") if s2_authors else None
+            orcid = None
+            if api_author:
+                ext_ids = api_author.get("externalIds") or {}
+                orcid = ext_ids.get("ORCID")
+            if not orcid and openalex_authors and i < len(openalex_authors):
+                orcid = openalex_authors[i].get("orcid")
+            # Apply nameMap for artificial parent papers
+            mapped_name = (
+                self.fake_author_mapping.get(name, name)
+                if is_artificial_parent and name
+                else name
+            )
+            merged_authors.append(
+                {"name": mapped_name, "s2_id": s2_id, "orcid": orcid, "raw_name": name}
+            )
+        print("DEBUG: Merged authors:", merged_authors)
+        return merged_authors
+
+    # this can really be one function I think, but for now we'll do it the old way
+    def assign_entity_keys_with_refs(self, references_data, entity_keys):
+        """Assign unique keys, merging authors by raw_name and name for artificial parent papers."""
+        author_key_map = {}  # (name_lower, orcid) or (raw_name) -> {"author": dict, "key": str}
+        venue_key_map = {v: k for k, v in entity_keys["venues"].items()}
+
+        doi_map = {}
+        openalex_map = {}
+        s2_map = {}
+        title_map = {}
+
+        existing_citation_ids = [
+            int(k.split("-")[1])
+            for k in entity_keys["citations"].keys()
+            if k.startswith("citation-")
+        ]
+        citation_counter = (
+            max(existing_citation_ids) + 1 if existing_citation_ids else 1
+        )
+        author_counter = (
+            max([int(k.split("-")[1]) for k in entity_keys["authors"].keys()] + [0]) + 1
+        )
+        venue_counter = (
+            max([int(k.split("-")[1]) for k in entity_keys["venues"].keys()] + [0]) + 1
+        )
+
+        # Populate existing author and citation maps
+        for a_key, author in entity_keys["authors"].items():
+            name_lower = author.get("name", "").lower().strip()
+            orcid = author.get("orcid")
+            raw_name = author.get("raw_name")
+            if name_lower and orcid:
+                author_key_map[(name_lower, orcid)] = {"author": author, "key": a_key}
+            elif raw_name:
+                author_key_map[("raw_name", raw_name)] = {
+                    "author": author,
+                    "key": a_key,
+                }
+
+        for citation_key, citation_data in entity_keys["citations"].items():
+            ext_ids = citation_data.get("external_ids", {})
+            doi = ext_ids.get("DOI")
+            openalex_id = ext_ids.get("OpenAlex")
+            s2_id = citation_data.get("semantic_scholar_id")
+            title_lower = (
+                citation_data.get("title", "").lower().strip()
+                if citation_data.get("title") is not None
+                else ""
+            )
+            if doi:
+                doi_map[doi] = citation_key
+            if openalex_id:
+                openalex_map[openalex_id] = citation_key
+            if s2_id:
+                s2_map[s2_id] = citation_key
+            if title_lower:
+                title_map[title_lower] = citation_key
+
+        for paper_id, data in references_data.items():
+            is_artificial_parent = "artificial paper" in data["title"].lower()
+            enriched_refs = data.get("enriched_references", None)
+            if enriched_refs is None:
+                continue
+            for ref in enriched_refs:
+                new_authors = []
+                for author in ref.get("authors", []):
+                    name = author.get("name", "").strip()
+                    raw_name = author.get("raw_name")
+                    orcid = author.get("orcid")
+                    s2_id = author.get("s2_id")
+
+                    # Apply nameMap for artificial parent papers
+                    if is_artificial_parent and raw_name:
+                        name = self.fake_author_mapping.get(raw_name, raw_name)
+
+                    # Check for existing author by (name, orcid) or raw_name
+                    author_key = None
+                    name_lower = name.lower() if name else ""
+                    if name_lower and orcid and (name_lower, orcid) in author_key_map:
+                        author_key = author_key_map[(name_lower, orcid)]["key"]
+                        existing = author_key_map[(name_lower, orcid)]["author"]
+                        existing["raw_name"] = raw_name or existing["raw_name"]
+                        existing["s2_id"] = s2_id or existing["s2_id"]
+                    elif raw_name and ("raw_name", raw_name) in author_key_map:
+                        author_key = author_key_map[("raw_name", raw_name)]["key"]
+                        existing = author_key_map[("raw_name", raw_name)]["author"]
+                        existing["name"] = name or existing["name"]
+                        existing["s2_id"] = s2_id or existing["s2_id"]
+                        existing["orcid"] = orcid or existing["orcid"]
+                        if name_lower and orcid:
+                            author_key_map[(name_lower, orcid)] = {
+                                "author": existing,
+                                "key": author_key,
+                            }
+                    elif name_lower and name_lower in [
+                        k[0] for k in author_key_map.keys() if k[0] != "raw_name"
+                    ]:
+                        for (k_type, k_value), v in author_key_map.items():
+                            if (
+                                k_type != "raw_name"
+                                and k_value == name_lower
+                                and not v["author"].get("orcid")
+                            ):
+                                author_key = v["key"]
+                                existing = v["author"]
+                                existing["raw_name"] = raw_name or existing["raw_name"]
+                                existing["s2_id"] = s2_id or existing["s2_id"]
+                                existing["orcid"] = orcid or existing["orcid"]
+                                if orcid:
+                                    author_key_map[(name_lower, orcid)] = {
+                                        "author": existing,
+                                        "key": author_key,
+                                    }
+                                break
+
+                    if not author_key:
+                        author_key = f"author-{author_counter}"
+                        author["name"] = name
+                        author["key"] = author_key
+                        if name_lower and orcid:
+                            author_key_map[(name_lower, orcid)] = {
+                                "author": author,
+                                "key": author_key,
+                            }
+                        if raw_name:
+                            author_key_map[("raw_name", raw_name)] = {
+                                "author": author,
+                                "key": author_key,
+                            }
+                        entity_keys["authors"][author_key] = author
+                        author_counter += 1
+
+                    new_authors.append(author_key)
+                ref["authors"] = new_authors
+
+                venue = ref.get("venue")
+                if venue:
+                    venue_str = str(venue)
+                    if venue_str in venue_key_map:
+                        v_key = venue_key_map[venue_str]
+                    else:
+                        v_key = f"venue-{venue_counter}"
+                        venue_key_map[venue_str] = v_key
+                        entity_keys["venues"][v_key] = venue_str
+                        venue_counter += 1
+                    ref["venue"] = v_key
+
+                ext_ids = ref.get("external_ids", {})
+                doi = ext_ids.get("DOI")
+                openalex_id = ext_ids.get("OpenAlex")
+                s2_id = ref.get("semantic_scholar_id")
+                title_lower = (
+                    ref.get("title", "").lower().strip()
+                    if ref.get("title") is not None
+                    else ""
+                )
+
+                existing_key = None
+                if doi and doi in doi_map:
+                    existing_key = doi_map[doi]
+                elif openalex_id and openalex_id in openalex_map:
+                    existing_key = openalex_map[openalex_id]
+                elif s2_id and s2_id in s2_map:
+                    existing_key = s2_map[s2_id]
+                elif title_lower and title_lower in title_map:
+                    existing_key = title_map[title_lower]
+
+                if existing_key:
+                    citation_key = existing_key
+                    print(
+                        f"DEBUG: Reusing existing citation key {citation_key} for {ref.get('title')}"
+                    )
+                else:
+                    citation_key = f"citation-{citation_counter}"
+                    citation_counter += 1
+                    entity_keys["citations"][citation_key] = {
+                        "title": ref.get("title", ""),
+                        "authors": ref["authors"],
+                        "venue": ref["venue"],
+                        "year": ref["year"],
+                        "citation_count": ref.get("citation_count", 0),
+                        "fields_of_study": ref.get("fields_of_study", []),
+                        "external_ids": ref.get("external_ids", {}),
+                        "semantic_scholar_id": ref.get("semantic_scholar_id"),
+                        "arxiv_id": ref.get("arxiv_id"),
+                        "doi": ref["doi"],
+                        "second_hop": "yes",
+                    }
+                    if doi:
+                        doi_map[doi] = citation_key
+                    if openalex_id:
+                        openalex_map[openalex_id] = citation_key
+                    if s2_id:
+                        s2_map[s2_id] = citation_key
+                    if title_lower:
+                        title_map[title_lower] = citation_key
+
+                ref["citation_key"] = citation_key
+
+        return references_data, entity_keys
+
+    def _merge_ref_data(self, s2=None, openalex=None, is_artificial_parent=False):
+        """Merge Semantic Scholar or OpenAlex data, applying nameMap for artificial parent papers."""
+        if s2:
+            merged = {
+                "title": s2.get("title"),
+                "authors": self._merge_ref_authors(
+                    s2_authors=s2.get("authors", []),
+                    is_artificial_parent=is_artificial_parent,
+                ),
+                "year": s2.get("year"),
+                "venue": s2.get("venue"),
+                "citation_count": s2.get("citationCount", 0),
+                "fields_of_study": s2.get("fieldsOfStudy", []),
+                "external_ids": s2.get("externalIds", {}),
+                "semantic_scholar_id": s2.get("paperId"),
+                "arxiv_id": None,
+                "doi": s2.get("externalIds", {}).get("DOI"),
+            }
+        elif openalex:
+            merged = {
+                "title": openalex.get("title"),
+                "authors": self._merge_ref_authors(
+                    openalex_authors=[
+                        {
+                            "name": a["author"]["display_name"],
+                            "externalIds": {"ORCID": a["author"]["orcid"]},
+                        }
+                        for a in openalex.get("authorships", [])
+                    ],
+                    is_artificial_parent=is_artificial_parent,
+                ),
+                "year": openalex.get("publication_year"),
+                "venue": openalex.get("host_venue", {}).get("display_name"),
+                "citation_count": openalex.get("cited_by_count", 0),
+                "fields_of_study": [
+                    c["display_name"] for c in openalex.get("concepts", [])
+                ],
+                "external_ids": {
+                    "DOI": openalex.get("doi"),
+                    "OpenAlex": openalex.get("id"),
+                },
+                "semantic_scholar_id": None,
+                "arxiv_id": None,
+                "doi": openalex.get("doi"),
+            }
+        else:
+            merged = {}
+        print("DEBUG: _merge_data output:", merged)
+        return merged
+
+    def process_second_hops(self, paper):
+        if paper["is_artificial"]:
+            return []
+
+        refs = paper["references"]
+        ref_source = paper["ref_source"]
+        pdf_url = paper["pdf_url"]
+        title = paper.get("title")
+
+        enriched_refs = []
+        if not refs:
+            if pdf_url is None:
+                self.missing_ref_callback(paper)
+            else:
+                # TODO: download the PDF URL and extract references automatically
+                self.missing_ref_callback(paper)
+            return []
+
+        for ref in refs:
+            if ref_source == "s2":
+                details = self.retry_api_call(self.get_paper_details, ref)
+                if details:
+                    merged = self._merge_ref_data(
+                        s2=details,
+                        is_artificial_parent="artificial paper" in title.lower(),
+                    )
+                else:
+                    print(
+                        f"DEBUG: Semantic Scholar failed for {ref}, skipping reference."
+                    )
+                    continue
+            else:
+                details = self.retry_api_call(self.get_openalex_work_details, ref)
+                if details:
+                    merged = self._merge_ref_data(
+                        openalex=details,
+                        is_artificial_parent="artificial paper" in title.lower(),
+                    )
+                else:
+                    print(
+                        f"DEBUG: OpenAlex failed for work ID {ref}, skipping reference."
+                    )
+                    continue
+            enriched_refs.append(merged)
+            sleep(self.request_delay)
+        return enriched_refs
