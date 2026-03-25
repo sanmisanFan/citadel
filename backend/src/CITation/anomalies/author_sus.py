@@ -1,7 +1,7 @@
 import json
 import networkx as nx
 import matplotlib.pyplot as plt
-from .utils import get_citation_keys
+from ..data.utils import get_citation_keys
 
 
 # using the updated data from extraction
@@ -156,54 +156,48 @@ def build_suspicious_authors_graph(authors, citations):
         for node in scc:
             node_group_hop01[node] = gid
 
-    suspicious_sccs_g = (
-        {
-            "nodes": [{"id": n, "group": node_group_suspicious[n]} for n in G.nodes()],
-            "links": [
-                {"source": u, "target": v, "value": d["weight"]}
-                for u, v, d in G.edges(data=True)
-            ],
-        },
-    )
+    suspicious_sccs_g = {
+        "nodes": [{"id": n, "group": node_group_suspicious[n]} for n in G.nodes()],
+        "links": [
+            {"source": u, "target": v, "value": d["weight"]}
+            for u, v, d in G.edges(data=True)
+        ],
+    }
 
-    sus_hop1_sccs = (
-        {
-            "nodes": [{"id": n, "group": node_group_hop01[n]} for n in G.nodes()],
-            "links": [
-                {"source": u, "target": v, "value": d["weight"]}
-                for u, v, d in G.edges(data=True)
-            ],
-        },
-    )
+    sus_hop1_sccs = {
+        "nodes": [{"id": n, "group": node_group_hop01[n]} for n in G.nodes()],
+        "links": [
+            {"source": u, "target": v, "value": d["weight"]}
+            for u, v, d in G.edges(data=True)
+        ],
+    }
 
-    sccs_info = (
-        {
-            "original_sccs": [
-                {
-                    "group_id": scc_group_map[frozenset(scc)],
-                    "authors": [author_to_name.get(a, a) for a in scc],
-                    "author_ids": list(scc),
-                    "all_hop01": all(a in hop0_or_hop1_authors for a in scc),
-                    "edges": [
-                        {"source": u, "target": v, "weight": G[u][v]["weight"]}
-                        for u, v in G.subgraph(scc).edges()
-                    ],
-                }
-                for scc in suspicious_sccs
-            ],
-            "hop0_or_hop1_sccs": [
-                {
-                    "group_id": scc_group_map[frozenset(scc)],
-                    "authors": [author_to_name.get(a, a) for a in scc],
-                    "author_ids": list(scc),
-                    "edges": [
-                        {"source": u, "target": v, "weight": G[u][v]["weight"]}
-                        for u, v in G.subgraph(scc).edges()
-                    ],
-                }
-                for scc in hop01_sccs
-            ],
-        },
-    )
+    sccs_info = {
+        "original_sccs": [
+            {
+                "group_id": scc_group_map[frozenset(scc)],
+                "authors": [author_to_name.get(a, a) for a in scc],
+                "author_ids": list(scc),
+                "all_hop01": all(a in hop0_or_hop1_authors for a in scc),
+                "edges": [
+                    {"source": u, "target": v, "weight": G[u][v]["weight"]}
+                    for u, v in G.subgraph(scc).edges()
+                ],
+            }
+            for scc in suspicious_sccs
+        ],
+        "hop0_or_hop1_sccs": [
+            {
+                "group_id": scc_group_map[frozenset(scc)],
+                "authors": [author_to_name.get(a, a) for a in scc],
+                "author_ids": list(scc),
+                "edges": [
+                    {"source": u, "target": v, "weight": G[u][v]["weight"]}
+                    for u, v in G.subgraph(scc).edges()
+                ],
+            }
+            for scc in hop01_sccs
+        ],
+    }
 
     return suspicious_sccs_g, sus_hop1_sccs, sccs_info

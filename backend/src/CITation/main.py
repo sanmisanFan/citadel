@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 from .data.utils import pdf_to_md_str
 from .data.raw_ref_to_json import PaperProcessor
 from .data.process_references import process_markdown_string
-from .data.gpt_relevance import (
+from .anomalies.gpt_relevance import (
     process_citation_mentions,
     assign_scores_to_enriched_papers,
 )
