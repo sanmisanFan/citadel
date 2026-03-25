@@ -8,11 +8,13 @@ from CITation.data.gpt_relevance import (
     assign_scores_to_enriched_papers,
 )
 
-from CITation.data.citation_graph_builder import extract_info
+from CITation.data.citation_graph_builder import extract_info, build_author_graph
 
 from pathlib import Path
 import pytest
 import json
+
+from CITation.data.author_sus import build_suspicious_authors_graph
 
 data_dir = Path(__file__).parent / "data"
 
@@ -74,10 +76,23 @@ def test_extraction(test_paper_metadata):
     with open(data_dir / "entity_keys.json", "r") as f:
         entity_keys = json.load(f)
 
-    citations, authors, venues = extract_info(
-        enriched, entity_keys, test_paper_metadata
-    )
+    citations, authors, venues = extract_info(entity_keys, test_paper_metadata)
 
     print(citations)
     print(authors)
     print(venues)
+
+    ag = build_author_graph(citations)
+    print(ag)
+
+
+def test_sus_authors(test_paper_metadata):
+    with open(data_dir / "entity_keys.json", "r") as f:
+        entity_keys = json.load(f)
+
+    citations, authors, venues = extract_info(entity_keys, test_paper_metadata)
+    suspicious_sccs_g, sus_hop1_sccs, sccs_info = build_suspicious_authors_graph(
+        authors, citations
+    )
+
+    print(suspicious_sccs_g, sus_hop1_sccs, sccs_info)

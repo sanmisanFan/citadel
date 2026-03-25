@@ -1,4 +1,5 @@
 from .datatypes import PaperMetadata
+from collections import defaultdict
 
 
 def extract_info(entity_keys, new_paper: PaperMetadata):
@@ -144,7 +145,7 @@ def extract_info(entity_keys, new_paper: PaperMetadata):
     new_citation_entry = {
         "citation_key": new_citation_id,
         "cite_number": 0,
-        "author": author_ids_for_new_paper,
+        "authors": author_ids_for_new_paper,
         "venue": "venue-??",  # or update with a real venue ID if you have one
         "year": new_paper["year"],
         "title": new_paper["title"],
@@ -173,3 +174,40 @@ def extract_info(entity_keys, new_paper: PaperMetadata):
                 break
 
     return citations, authors, venues
+
+
+def build_author_graph(citations):
+    # 2. Build a dictionary mapping citation_id -> list of authors
+    citation_to_authors = {}
+    for citation_id, c in citations.items():
+        citation_authors = c["authors"]  # e.g. ["author-1", "author-2", ...]
+        citation_to_authors[citation_id] = citation_authors
+
+    # 3. Initialize a counter for (citing_author -> cited_author) edges
+    author_citation_counter = defaultdict(int)
+
+    # 4. Traverse each citation's citation_graph
+    for c in citations.values():
+        citing_authors = c["authors"]
+        # 'citation_graph' is a list of cited citation IDs
+        # don't need the citation_graph object, can just look at references and get keys from there
+        citation_graph = [
+            x.get("citation_key", "") for x in c.get("enriched_references", [])
+        ]
+        for cited_citation_id in citation_graph:
+            # Find the authors of the cited paper
+            cited_authors = citation_to_authors.get(cited_citation_id, [])
+            # Increment the counter for each pair (citing_author, cited_author)
+            for a_citing in citing_authors:
+                for a_cited in cited_authors:
+                    author_citation_counter[(a_citing, a_cited)] += 1
+
+    # 5. Convert the counter dictionary to the desired list-of-dicts format
+    edges = []
+    for (author_src, author_tgt), count in author_citation_counter.items():
+        edges.append({"source": author_src, "target": author_tgt, "value": count})
+
+    # Sort edges by descending 'value' if you wish (optional)
+    edges.sort(key=lambda x: x["value"], reverse=True)
+
+    return edges

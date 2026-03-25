@@ -579,6 +579,9 @@ Example:
             citation_counter += 1
             paper["citation_key"] = citation_key
             entity_keys["citations"][citation_key] = paper
+            # citation_graph = [
+            #    x.get("citation_key", "") for x in paper.get("enriched_references", [])
+            # ]
 
             venue = paper.get("venue")
             if venue:
@@ -592,6 +595,7 @@ Example:
                     v_key = venue_key_map[venue_str]
                 paper["venue"] = v_key
             paper["hop"] = 1
+            # paper["citation_graph"] = citation_graph
             d[paper["ref_id"]] = paper
         return d, entity_keys
 
@@ -619,6 +623,8 @@ Example:
             ref_id = paper.get("ref_id")
             if ref_id and ref_id in ref_mentions:
                 paper["reference_mentions"] = ref_mentions[ref_id]
+            # this should really just be stored in enriched separately, keyed by citation_key
+            # then enriched_references should be a list of keys pointing to the references
             enriched_refs = self.process_second_hops(paper)
             paper["enriched_references"] = enriched_refs
 

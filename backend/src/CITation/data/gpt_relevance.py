@@ -1,18 +1,3 @@
-import os
-import json
-
-
-def map_references_to_summaries(paper_summaries):
-    """Map reference numbers from pdf_summaries.json to citation keys (e.g., '[1]') and their summaries."""
-    mapping = {}
-    for entry in paper_summaries:
-        ref_number = entry.get("reference")  # String like "1", "2", etc.
-        summary = entry.get("summary", "")
-        key = f"[{ref_number}]"  # Convert to citation key format like "[1]"
-        mapping[key] = summary
-    return mapping
-
-
 def assess_citation_relevance(citation_key, context_text, summary_text, client):
     """Assesses relevance using GPT-4 Turbo with explicit reasoning."""
     prompt = f"""

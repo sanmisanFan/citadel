@@ -53,3 +53,7 @@ def get_openalex_authors(openalex):
 def get_openalex_refs(openalex) -> list[str] | None:
     refs = openalex.get("referenced_works", []) + openalex.get("related_works", [])
     return refs if len(refs) > 0 else None
+
+
+def get_citation_keys(citation):
+    return [x.get("citation_key", "") for x in citation.get("enriched_references", [])]
