@@ -32,3 +32,8 @@ packages = ["backend/src/CITation"]
 dev = [
     "pytest>=9.0.2",
 ]
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow",
+]
