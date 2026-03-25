@@ -27,6 +27,11 @@ def test_process_references(test_md):
     print(reference_mentions, raw_references)
 
 
+def test_process_references_sample(sample):
+    reference_mentions, raw_references = process_markdown_string(sample)
+    print(reference_mentions, raw_references)
+
+
 @pytest.mark.slow
 def test_paper_processor(test_md, gpt_client):
     reference_mentions, raw_references = process_markdown_string(test_md)

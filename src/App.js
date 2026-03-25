@@ -1,9 +1,10 @@
 // https://sanmisanfan.github.io/ReviewerApp-demo/
 import { useState, useEffect } from "react";
 import { pdfjs } from "react-pdf";
-import { Col, Row, Spin } from 'antd';
-import 'antd/dist/reset.css';
+import { Col, Row, Spin, Flex, Upload, Input, Button } from 'antd';
 import './App.css';
+import { InboxOutlined } from '@ant-design/icons';
+import TextInputArray from "./components/textInputArray.js"
 
 /** React DOM Components */
 import { PDFContainer } from "./components/pdfContainer";
@@ -12,15 +13,16 @@ import { VisContainer } from "./components/visContainer";
 /** Import annotation configure */
 import { anomalousColorScheme } from "./annotationConfig";
 
-/** Import TEST Data */
+/** Import TEST Data 
 import authorRaw from "./data/case1/authors.json";
 import venueRaw from "./data/case1/venues.json";
 import citationRaw from "./data/case1/citation.json";
 import anomalousRaw from "./data/case1/anomalous.json";
 import authorGraphDataRaw from "./data/case1/community_graph.json";
 
-/** load test PDF - should be uploaded by user */
+// load test PDF - should be uploaded by user 
 import samplePDF from "./data/case1/reviewerAPP_case1.pdf";
+*/
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -28,6 +30,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 function App() {
     // global init
     const [pdfData, setPdfData] = useState(null);
+    const [title, setTitle] = useState("");
+    const [authors, setAuthors] = useState([""]);
+    const [year, setYear] = useState("");
+
     const [citation, setCitation] = useState([]);
     const [anomalous, setAnomalous] = useState([]);
     const [author, setAuthor] = useState([]);
@@ -37,8 +43,17 @@ function App() {
     const [currentPage, setCurrentPage] = useState(1);
     const [activeHighlight, setActiveHighlight] = useState(null);
 
+    const uploadPdf = (file) => {
+        setPdfData(file);
+    };
+
+    const onSubmit = () => {
+        //TODO: add validation for each metadata field
+        console.log(pdfData, title, authors, year);
+    };
+
     /** init citation list */
-    const initCitations = () => {
+    /*const initCitations = () => {
         const citationsList = JSON.parse(JSON.stringify(citationRaw.citations))
             .filter(e => e.hop === 1);
 
@@ -70,14 +85,12 @@ function App() {
         setCitation(citationsList);
     };
 
-    /** init anomalous list */
     const initAnomalous = () => {
         const anomalousList = JSON.parse(JSON.stringify(anomalousRaw.identifiedIssue));
         anomalousList.map(e => e.filter = false);
         setAnomalous(anomalousList);
     };
 
-    /** extract */
     const initSentenceHightlights = () => {
         const anomalousList = JSON.parse(JSON.stringify(anomalous));
         const _sentenceHighlights = [];
@@ -118,17 +131,14 @@ function App() {
         setSentenceAnnotationList(_sentenceHighlights);
     };
 
-    /** PDF file on load */
     useEffect(() => {
         setPdfData(samplePDF);
     }, []);
 
-    /** load citation objects */
     useEffect(() => {
         initCitations();
     }, [citationRaw, authorRaw, venueRaw]);
 
-    /** load detected anomalous */
     useEffect(() => {
         initAnomalous();
     }, [anomalousRaw]);
@@ -136,10 +146,33 @@ function App() {
     useEffect(() => {
         anomalous.length > 0 && citation.length > 0 && initSentenceHightlights();
     }, [anomalous, citation]);
+    */
 
     return (
         <div className="App">
             <div className="mainContainer">
+                <Flex vertical gap="medium" align="center">
+                    <h1>CITADEL</h1>
+                    <Upload className="pdf_upload" multiple={false} action={uploadPdf}>
+                        <Flex vertical align="center">
+                            <p>
+                                <InboxOutlined />
+                            </p>
+                            <p>Please upload a PDF. Click or drag a file to upload.</p>
+                        </Flex>
+                    </Upload>
+                    {pdfData != null &&
+                        <Flex vertical gap="medium" align="center">
+                            <p>Please fill out the following fields:</p>
+                            <Input placeholder="Paper title" onChange={(e) => setTitle(e.currentTarget.value)} />
+                            <TextInputArray updateCallback={setAuthors} unitName={"author"} />
+                            <Input placeholder="Year" onChange={(e) => setYear(e.currentTarget.value)} />
+                            <Button onClick={onSubmit}>Submit</Button>
+                        </Flex>
+                    }
+                </Flex>
+            </div>
+            {/*<div className="mainContainer">
                 <Row>
                     <Col span={14}>
                         {pdfData !== null && <PDFContainer
@@ -170,8 +203,8 @@ function App() {
                         />
                     </Col>
                 </Row>
-            </div>
-        </div>
+            </div>*/}
+        </div >
     );
 }
 

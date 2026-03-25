@@ -31,6 +31,16 @@
   margin-right: 24px;
 }
 
+/* ugly css for now, need to figure out how to load in antd style */
+.pdf_upload {
+    border: 1px dashed grey;
+}
+
+.pdf_upload:hover {
+    border: 1px solid grey;
+
+}
+
 /** Redefine card style features */
 .ant-card-head-title{
   flex: none;
