@@ -176,6 +176,7 @@ def extract_info(entity_keys, new_paper: PaperMetadata):
     return citations, authors, venues
 
 
+# not used?
 def build_author_graph(citations):
     # 2. Build a dictionary mapping citation_id -> list of authors
     citation_to_authors = {}

@@ -7,7 +7,11 @@ from .anomalies.gpt_relevance import (
     process_citation_mentions,
     assign_scores_to_enriched_papers,
 )
-from .data.citation_graph_builder import extract_info
+from .anomalies.author_sus import build_suspicious_authors_graph
+from .anomalies.detect_anomalies import find_anomalies
+from .anomalies.venue_sus import detect_suspicious_venues
+
+from .data.citation_graph_builder import extract_info, build_author_graph
 from openai import OpenAI
 
 import os
@@ -65,16 +69,36 @@ async def process_pdf(file: UploadFile):
 
     # need to read from user
     p_md = {}
-
-    # so in the end we have the "enriched" paper data and the entity_keys list -
-    # the entity keys list contains
-    # authors - who all have a unique ID assigned to them, plus their names and orcids
-    # venues, who all have a unique venue ID assigned
-    # citations - a list of all of the references, 1st and second hop included... this data contains a lot of duplicate
-    # information
-    # enriched is the same as citations, but only contains the one hop references
-    # papers that were directly referenced in the paper being analyzed have additional info, like where in the text they were
-    # mentioned, and a relevance score. they also contain a list of all of the references for this paper
     citations, authors, venues = extract_info(
         updated_enriched_papers, entity_keys, p_md
     )
+    # not used?
+    suspicious_sccs_g, sus_hop1_sccs, sccs_info = build_suspicious_authors_graph(
+        authors, citations
+    )
+
+    anomalous_data = find_anomalies(updated_enriched_papers, sus_hop1_sccs, citations)
+    # not used?
+    export_data_suspicious, export_data_hop, scc_details = detect_suspicious_venues(
+        citations, venues
+    )
+
+    ag = build_author_graph(citations)
+
+    """
+    import authorRaw from "./data/case1/authors.json";
+    import venueRaw from "./data/case1/venues.json";
+    import citationRaw from "./data/case1/citation.json";
+    import anomalousRaw from "./data/case1/anomalous.json";
+    import authorGraphDataRaw from "./data/case1/community_graph.json"; # I assume this is from build_author_graph
+    """
+
+    result = {
+        "authors": authors,
+        "venues": venues,
+        "citations": citations,
+        "anomalous": anomalous_data,
+        "authorGraph": ag,
+    }
+
+    return result
