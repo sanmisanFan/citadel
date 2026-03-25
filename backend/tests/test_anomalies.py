@@ -8,6 +8,8 @@ from CITation.anomalies.gpt_relevance import (
 )
 from CITation.anomalies.author_sus import build_suspicious_authors_graph
 from CITation.anomalies.detect_anomalies import find_anomalies
+from CITation.anomalies.venue_sus import detect_suspicious_venues
+
 from CITation.data.process_references import process_markdown_string
 from CITation.data.citation_graph_builder import extract_info
 
@@ -62,3 +64,15 @@ def test_anomalies(test_paper_metadata):
     )
     anomalies = find_anomalies(enriched, sus_hop1_sccs, citations)
     print(anomalies)
+
+
+def test_sus_venues(test_paper_metadata):
+    with open(data_dir / "entity_keys.json", "r") as f:
+        entity_keys = json.load(f)
+
+    citations, authors, venues = extract_info(entity_keys, test_paper_metadata)
+    export_data_suspicious, export_data_hop, scc_details = detect_suspicious_venues(
+        citations, venues
+    )
+
+    print(export_data_suspicious, export_data_hop, scc_details)
