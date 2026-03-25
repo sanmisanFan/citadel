@@ -7,6 +7,7 @@ from .data.gpt_relevance import (
     process_citation_mentions,
     assign_scores_to_enriched_papers,
 )
+from .data.citation_graph_builder import extract_info
 from openai import OpenAI
 
 import os
@@ -24,6 +25,7 @@ def serve_frontend():
     return {"test"}
 
 
+# TODO: update with additional papermetadata
 @app.post("/process_pdf")
 async def process_pdf(file: UploadFile):
     if file.content_type != "application/pdf":
@@ -61,43 +63,24 @@ async def process_pdf(file: UploadFile):
         enriched, citation_assessments
     )
 
+    # need to read from user
+    p_md = {}
+
+    # so in the end we have the "enriched" paper data and the entity_keys list -
+    # the entity keys list contains
+    # authors - who all have a unique ID assigned to them, plus their names and orcids
+    # venues, who all have a unique venue ID assigned
+    # citations - a list of all of the references, 1st and second hop included... this data contains a lot of duplicate
+    # information
+    # enriched is the same as citations, but only contains the one hop references
+    # papers that were directly referenced in the paper being analyzed have additional info, like where in the text they were
+    # mentioned, and a relevance score. they also contain a list of all of the references for this paper
+    citations, authors, venues = extract_info(
+        updated_enriched_papers, entity_keys, p_md
+    )
+
 
 """
-
-### 8. `citation_graph_builder.py`
-
-- Builds final citation, author, and venue graphs.
-- **Input**:
-  - `outputs/enriched_papers_with_bboxes.json`
-  - `outputs/second_hop_references.json`
-  - `outputs/entity_keys.json`
-- **Output**:
-  - `outputs/citations.json`
-  - `outputs/authors.json`
-  - `outputs/venues.json`
-- **Run**:
-  ```bash
-  python citation_graph_builder.py
-  ```
-
-### 9. `paper_details.py`
-
-- Adds the primary paper (hop=0) into the citation, author, and venue graphs.
-- **Input**:
-  - `outputs/citations.json`
-  - `outputs/authors.json`
-  - `outputs/venues.json`
-  - `outputs/entity_keys.json`
-- **Output**:
-  - `outputs/citations_updated.json`
-  - `outputs/authors_updated.json`
-  - `outputs/venues_updated.json`
-  - `outputs/entity_keys_updated.json`
-- **Run**:
-  ```bash
-  python paper_details.py
-  ```
-- Note: Creates `citation-0` for the main paper and links all hop-1 references to it.
 
 ### 10. `generate_anomalous_json.py`
 

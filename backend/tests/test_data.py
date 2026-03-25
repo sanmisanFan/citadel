@@ -8,6 +8,8 @@ from CITation.data.gpt_relevance import (
     assign_scores_to_enriched_papers,
 )
 
+from CITation.data.citation_graph_builder import extract_info
+
 from pathlib import Path
 import pytest
 import json
@@ -63,3 +65,19 @@ def test_citation_relevance(test_md, gpt_client):
 
     with open(data_dir / "updated_enriched.json", "w") as f:
         json.dump(updated_enriched_papers, f)
+
+
+def test_extraction(test_paper_metadata):
+    with open(data_dir / "enriched.json", "r") as f:
+        enriched = json.load(f)
+
+    with open(data_dir / "entity_keys.json", "r") as f:
+        entity_keys = json.load(f)
+
+    citations, authors, venues = extract_info(
+        enriched, entity_keys, test_paper_metadata
+    )
+
+    print(citations)
+    print(authors)
+    print(venues)

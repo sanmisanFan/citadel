@@ -2,6 +2,7 @@ import re
 from pathlib import Path
 
 
+# TODO: add tests
 def extract_reference_numbers(citation_str):
     """
     Extracts individual reference numbers from a citation string.
@@ -49,6 +50,7 @@ def group_references_by_number(md_content):
     return groups
 
 
+# add test
 def extract_references_section(md_content):
     """
     Extracts the "References" section from Markdown content.

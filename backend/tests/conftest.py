@@ -28,6 +28,15 @@ def test_md():
     return txt
 
 
+@pytest.fixture
+def test_paper_metadata():
+    return {
+        "title": "A Demo Manuscript as a ReviewerApp Study Case",
+        "authors": ["Han Solo", "Luke Skywalker", "Obi-Wan Kenobi"],
+        "year": "2026",
+    }
+
+
 @pytest.fixture(scope="session")
 def gpt_client():
     if "OPENAI_API_KEY" not in os.environ:

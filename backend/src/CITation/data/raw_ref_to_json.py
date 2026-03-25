@@ -591,6 +591,7 @@ Example:
                 else:
                     v_key = venue_key_map[venue_str]
                 paper["venue"] = v_key
+            paper["hop"] = 1
             d[paper["ref_id"]] = paper
         return d, entity_keys
 
@@ -865,7 +866,7 @@ Example:
                         "semantic_scholar_id": ref.get("semantic_scholar_id"),
                         "arxiv_id": ref.get("arxiv_id"),
                         "doi": ref["doi"],
-                        "second_hop": "yes",
+                        "hop": 2,
                     }
                     if doi:
                         doi_map[doi] = citation_key
