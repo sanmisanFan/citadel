@@ -8,7 +8,7 @@ from fastapi import (
 from fastapi.responses import JSONResponse
 from .data.utils import pdf_to_md_str
 from .data.raw_ref_to_json import PaperProcessor
-from .data.process_references import process_markdown_string
+from .data.process_references import process_markdown_string, parse_references
 from .anomalies.gpt_relevance import (
     process_citation_mentions,
     assign_scores_to_enriched_papers,
@@ -22,6 +22,7 @@ from openai import OpenAI
 
 import os
 import sys
+import asyncio
 
 if "OPENAI_API_KEY" not in os.environ:
     print("ERROR: $OPENAI_API_KEY not set!")
@@ -43,6 +44,20 @@ async def process_pdf_ws(ws: WebSocket):
         file_metadata = await ws.receive_json()
         contents = await ws.receive_bytes()
 
+        progress_q: asyncio.Queue = asyncio.Queue()
+        loop = asyncio.get_running_loop()
+
+        def progress(msg_type: str, msg: str, data: dict | None = None):
+            progress_q.put_nowait({"type": msg_type, "msg": msg, "data": data})
+
+        async def sender():
+            while True:
+                event = await progress_q.get()
+                await ws.send_json(event)
+                if event["type"] == "end":
+                    break
+
+        sender_task = asyncio.create_task(sender())
         # TODO: could we ask the user where the references are?
         if file_metadata["mime_type"] != "application/pdf":
             raise WebSocketException(code=1003, reason="Only PDF files are allowed.")
@@ -57,63 +72,74 @@ async def process_pdf_ws(ws: WebSocket):
         gpt_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         # TODO: https://github.com/allenai/olmocr for pdf conversion
 
-        await ws.send_json({"type": "info", "msg": "Converting pdf to markdown..."})
-        md_text = pdf_to_md_str(contents)
+        # ugly, but forces fastapi to send the messages
+        progress("info", "Converting pdf to markdown...")
+        # await asyncio.sleep(0)
+        md_text = await asyncio.to_thread(pdf_to_md_str, contents)
 
-        await ws.send_json({"type": "info", "msg": "Extracting references..."})
-        reference_mentions, raw_references = process_markdown_string(md_text)
-
-        await ws.send_json({"type": "info", "msg": "Processing papers..."})
-
-        processor = PaperProcessor(gpt_client)
-        enriched, entity_keys = processor.process_papers(
-            raw_references, reference_mentions
+        progress("info", "Extracting references...")
+        reference_mentions, raw_references = await asyncio.to_thread(
+            process_markdown_string, md_text
         )
 
-        await ws.send_json({"type": "info", "msg": "Running relevance assessment..."})
-        citation_assessments = process_citation_mentions(
-            reference_mentions, enriched, gpt_client
+        progress("info", "Processing papers...")
+        # await asyncio.sleep(0)
+
+        # TODO: figure out how to send messages from process_papers
+        processor = PaperProcessor()
+        parsed = await asyncio.to_thread(parse_references, gpt_client, raw_references)
+
+        enriched, entity_keys = await asyncio.to_thread(
+            processor.process_papers, parsed, reference_mentions
+        )
+
+        progress("info", "Running relevance assessment...")
+        # await asyncio.sleep(0)
+
+        citation_assessments = await asyncio.to_thread(
+            process_citation_mentions, reference_mentions, enriched, gpt_client
         )
         # why not just update this in process_citation_mentions?
         # or better yet, just keep these as separate objects?
-        updated_enriched_papers = assign_scores_to_enriched_papers(
-            enriched, citation_assessments
+        updated_enriched_papers = await asyncio.to_thread(
+            assign_scores_to_enriched_papers(enriched, citation_assessments)
         )
 
-        await ws.send_json({"type": "info", "msg": "Building graphs..."})
-        citations, authors, venues = extract_info(entity_keys, paper_metadata)
+        progress("info", "Building graphs...")
+        # await asyncio.sleep(0)
+
+        citations, authors, venues = await asyncio.to_thread(
+            extract_info, entity_keys, paper_metadata
+        )
 
         # not used?
-        suspicious_sccs_g, sus_hop1_sccs, sccs_info = build_suspicious_authors_graph(
-            authors, citations
+        suspicious_sccs_g, sus_hop1_sccs, sccs_info = await asyncio.to_thread(
+            build_suspicious_authors_graph, authors, citations
         )
 
-        anomalous_data = find_anomalies(
-            updated_enriched_papers, sus_hop1_sccs, citations
+        anomalous_data = await asyncio.to_thread(
+            find_anomalies, updated_enriched_papers, sus_hop1_sccs, citations
         )
         # not used?
-        export_data_suspicious, export_data_hop, scc_details = detect_suspicious_venues(
-            citations, venues
+        export_data_suspicious, export_data_hop, scc_details = await asyncio.to_thread(
+            detect_suspicious_venues, citations, venues
         )
 
-        ag = build_author_graph(citations)
+        ag = await asyncio.to_thread(build_author_graph, citations)
 
-        """
-        import authorRaw from "./data/case1/authors.json";
-        import venueRaw from "./data/case1/venues.json";
-        import citationRaw from "./data/case1/citation.json";
-        import anomalousRaw from "./data/case1/anomalous.json";
-        import authorGraphDataRaw from "./data/case1/community_graph.json"; # I assume this is from build_author_graph
-        """
-
-        result = {
-            "authors": authors,
-            "venues": venues,
-            "citations": citations,
-            "anomalous": anomalous_data,
-            "authorGraph": ag,
-        }
-        await ws.send_json({"type": "end", "data": result})
+        await progress_q.put(
+            {
+                "type": "end",
+                "data": {
+                    "authors": authors,
+                    "venues": venues,
+                    "citations": citations,
+                    "anomalous": anomalous_data,
+                    "authorGraph": ag,
+                },
+            }
+        )
+        await sender_task
 
     except WebSocketDisconnect:
         print("Disconnected.")

@@ -30,7 +30,6 @@ def missing_reference_callback_debug(x):
 class PaperProcessor:
     def __init__(
         self,
-        client,
         max_retries=3,
         request_delay=1,
         missing_ref_callback=missing_reference_callback_debug,
@@ -38,12 +37,13 @@ class PaperProcessor:
         self.max_retries = max_retries
         self.request_delay = request_delay
         self.missing_ref_callback = missing_ref_callback
-        self.gpt_client = client
+        self.s2_api_key: str = ""
 
         if "S2_API_KEY" in os.environ and os.getenv("S2_API_KEY") != "":
             self.s2_api_key = os.getenv("S2_API_KEY")
         else:
-            self.s2_api_key = None
+            raise ValueError("No Semantic Scholar API key was provided.")
+
         self.author_map = {}  # (identifier_type, identifier) -> {"author": dict, "key": str}
         self.author_counter = 1
 
@@ -62,83 +62,6 @@ class PaperProcessor:
             "Chewbacca": "Chewbacca",
             "D. Vader": "Darth Vader",
         }
-
-        print(
-            "DEBUG: Initialized PaperProcessor with Semantic Scholar base URL:",
-            SEMANTIC_SCHOLAR_URL,
-        )
-        if self.s2_api_key:
-            print("DEBUG: Semantic Scholar API key loaded successfully.")
-        else:
-            print("WARNING: No semantic scholar API key provided.")
-            # raise ValueError("No Semantic Scholar API key provided!")
-
-    # TODO: can we do this either programatically or as one call?
-    # well, each paper should always have a title at least right?
-    # if we can reliably extract titles from the text, we can search semantic scholar first
-    # then check for the abstract. if the abstract contains a DOI link, we scrape it and give it to
-    # chatgpt, or maybe we'll get lucky and get the abstract right off the bat
-    # if not, default to using this instead
-    def parse_reference_with_gpt(self, ref_text):
-        prompt = f"""
-Parse this academic reference into JSON format with the following keys: authors (array), title, venue, raw_venue, year, pages, arxiv_id, doi and abstract.
-If the venue name in the reference appears abbreviated, expand it to its full name and save the expanded version in "venue",
-while preserving the original text in "raw_venue". Use the DOI or axiv link to extract the abstract for the reference. If you are unable to find the abstract using the DOI, search for it using the title in Google Scholar. If you are still unable to find the abstract, please return the reason why in the JSON field for the abstract. DO NOT summarize the paper, return only the abstract verbatim. Handle incomplete information using null for missing fields.
-
-Reference: "{ref_text}"
-
-Return JSON only, no commentary.
-Example:
-{{
-  "authors": ["Author 1", "Author 2"],
-  "title": "Paper Title",
-  "venue": "International Conference on Very Large Data Bases",
-  "raw_venue": "VLDB",
-  "year": 2023,
-  "pages": "123-145",
-  "arxiv_id": "1234.5678",
-  "doi": "10.1234/abcd",
-  "abstract": "Lorem ipsum..."
-}}
-"""
-
-        print("DEBUG: Sending GPT prompt for reference:", ref_text)
-        try:
-            response = self.gpt_client.responses.create(
-                model="gpt-4o-mini",
-                tools=[{"type": "web_search"}],
-                input=f"{prompt}\n\nReturn ONLY valid JSON as a plain text string without formatting.",
-            )
-            gpt_output = response.output_text
-            print("DEBUG: Received GPT response:", gpt_output)
-            result = json.loads(gpt_output)
-            if "authors" in result:
-                result["authors"] = [
-                    author
-                    for author in result["authors"]
-                    if "et al" not in author.lower()
-                ]
-            return result
-        except Exception as e:
-            print(
-                f"DEBUG: GPT parsing failed for reference: {ref_text} with error: {e}"
-            )
-            return None
-
-    def load_and_parse_input(self, references):
-        print(f"DEBUG: Found {len(references)} references in the input file")
-        parsed_papers = []
-        for idx, ref in enumerate(references, 1):
-            print(f"DEBUG: Parsing reference {idx}: {ref}")
-            paper_data = self.parse_reference_with_gpt(ref)
-            if paper_data:
-                print(f"DEBUG: Successfully parsed reference {idx}")
-                paper_data["ref_id"] = idx
-                parsed_papers.append(paper_data)
-                # sleep(1)
-            else:
-                print(f"DEBUG: Failed to parse reference {idx}: {ref}")
-        return parsed_papers
 
     def search_paper(self, title: str):
         """Given a paper title, tries to find its entry in semantic scholar.
@@ -180,10 +103,11 @@ Example:
             print("DEBUG: search_paper error:", e)
             return None
 
+    # for a single paper
     def get_paper_details(self, paper_id):
         fields = (
             "title,authors.name,authors.authorId,authors.externalIds,"
-            "venue,year,citationCount,fieldsOfStudy,externalIds,paperId,openAccessPdf,references"
+            "venue,year,citationCount,fieldsOfStudy,externalIds,paperId,openAccessPdf,references,tldr"
         )
         print(f"DEBUG: Fetching Semantic Scholar details for paper ID: {paper_id}")
         try:
@@ -206,6 +130,38 @@ Example:
             return data
         except requests.exceptions.RequestException as e:
             print(f"DEBUG: API request failed for paper ID {paper_id}: {e}")
+            return None
+
+    # for multiple papers
+    def get_s2_multi_paper_details(self, refs):
+        fields = (
+            "title,authors.name,authors.authorId,authors.externalIds,"
+            "venue,year,citationCount,fieldsOfStudy,externalIds,paperId"
+        )
+        ids = [x["paperId"] for x in refs]
+        # remove nones... apparently you can have a title but not an id in semantic scholar
+        ids = [x for x in ids if x is not None]
+        print(
+            f"DEBUG: Fetching Semantic Scholar details for multiple paper ids: {','.join(ids)}"
+        )
+
+        try:
+            response = requests.post(
+                f"{SEMANTIC_SCHOLAR_URL}/paper/batch",
+                params={"fields": fields},
+                data=json.dumps({"ids": ids}),
+                headers={
+                    "x-api-key": self.s2_api_key,
+                    "Content-Type": "application/json",
+                },
+                timeout=15,
+            )
+            print("DEBUG: Semantic Scholar API response status:", response.status_code)
+            response.raise_for_status()
+            data = response.json()
+            return data
+        except requests.exceptions.RequestException as e:
+            print(f"DEBUG: API request failed for paper ID {','.join(ids)}: {e}")
             return None
 
     def get_paper_details_openalex(self, title):
@@ -438,6 +394,7 @@ Example:
             "doi": paper.get("doi"),
             "ref_id": paper.get("ref_id"),
             "abstract": paper.get("abstract"),
+            "could_not_find": True,
         }
 
     def _format_authors(self, authors):
@@ -498,9 +455,15 @@ Example:
             )
         """
 
+        abstract = parsed.get("abstract", None)
+        if not abstract:
+            s2_tldr = s2.get("tldr")
+            if s2_tldr:
+                abstract = s2_tldr.get("text", None)
+
         merged = {
             "title": s2.get("title", parsed.get("title")),
-            "abstract": parsed.get("abstract"),
+            "abstract": abstract,
             "authors": self._merge_authors(
                 parsed.get("authors", []), s2.get("authors", []), openalex_authors
             ),
@@ -610,11 +573,7 @@ Example:
             sleep(self.request_delay)
         return None
 
-    def process_papers(self, raw_references, ref_mentions):
-        print("DEBUG: Starting processing of papers")
-        print("DEBUG: Parsing input file with GPT...")
-        parsed = self.load_and_parse_input(raw_references)
-
+    def process_papers(self, parsed, ref_mentions):
         print("DEBUG: Enriching data...")
         enriched = self.enrich_paper_data(parsed)
 
@@ -942,46 +901,52 @@ Example:
         if paper["is_artificial"]:
             return []
 
-        refs = paper["references"]
-        ref_source = paper["ref_source"]
-        pdf_url = paper["pdf_url"]
-        title = paper.get("title")
+        refs = paper.get("references", None)
+        ref_source = paper.get("ref_source", None)
+        pdf_url = paper.get("pdf_url", None)
+        title = paper.get("title", None)
 
         enriched_refs = []
         if not refs:
-            if pdf_url is None:
+            # TODO: pathological case where we couldn't find any info on the paper
+            if paper.get("could_not_find"):
+                self.missing_ref_callback(paper)
+            elif pdf_url is None:
                 self.missing_ref_callback(paper)
             else:
                 # TODO: download the PDF URL and extract references automatically
                 self.missing_ref_callback(paper)
             return []
 
+        refs = [x for x in refs if x is not None]
         if ref_source == "openalex":
             chunks = [
                 refs[i : i + OPENALEX_CHUNK_SIZE] for i in range(0, len(refs), 25)
             ]
             for chunk in chunks:
                 details = self.retry_api_call(self.get_openalex_work_details, chunk)
+                if details:
+                    for d in details:
+                        merged = self._merge_ref_data(
+                            openalex=d,
+                            is_artificial_parent="artificial paper" in title.lower(),
+                        )
+                        enriched_refs.append(merged)
+                else:
+                    print(f"DEBUG: OpenAlex failed for {refs}, skipping references.")
+
+        if ref_source == "s2":
+            # TODO: retry_api_call needs to be patched for when it 404s
+            details = self.retry_api_call(self.get_s2_multi_paper_details, refs)
+            if details:
                 for d in details:
                     merged = self._merge_ref_data(
-                        openalex=d,
+                        s2=d,
                         is_artificial_parent="artificial paper" in title.lower(),
                     )
                     enriched_refs.append(merged)
-
-        for ref in refs:
-            if ref_source == "s2":
-                details = self.retry_api_call(self.get_paper_details, ref)
-                if details:
-                    merged = self._merge_ref_data(
-                        s2=details,
-                        is_artificial_parent="artificial paper" in title.lower(),
-                    )
-                else:
-                    print(
-                        f"DEBUG: Semantic Scholar failed for {ref}, skipping reference."
-                    )
-                    continue
+            else:
+                print(f"DEBUG: Semantic Scholar failed for {refs}, skipping reference.")
 
             sleep(self.request_delay)
         return enriched_refs

@@ -1,6 +1,8 @@
 import re
 from pathlib import Path
 from markdown_it import MarkdownIt
+import json
+from .datatypes import ParsedReference
 
 
 # TODO: add tests
@@ -118,7 +120,6 @@ def extract_references_section(md_content: str) -> list[str]:
     return references
 
 
-# TODO: this breaks on sample.md. works on test.md though
 def process_markdown_string(content: str):
     """
     Step 2 of pipeline. Returns in-memory versions of reference_mentions.json and rawreferences.txt.
@@ -154,3 +155,60 @@ def process_markdown_file(md_file_path: Path):
         content = f.read()
 
     process_markdown_string(content)
+
+
+def parse_reference_with_gpt(gpt_client, ref_text: str) -> ParsedReference | None:
+    prompt = f"""
+Parse this academic reference into JSON format with the following keys: authors (array), title, venue, raw_venue, year, pages, arxiv_id, doi and abstract.
+If the venue name in the reference appears abbreviated, expand it to its full name and save the expanded version in "venue",
+while preserving the original text in "raw_venue". Use the DOI or axiv link to extract the abstract for the reference. If you are unable to find the abstract using the DOI, search for it using the title in Google Scholar. If you are still unable to find the abstract, leave it as `null`. DO NOT summarize the paper, return only the abstract verbatim. Handle incomplete information using null for missing fields.
+
+Reference: "{ref_text}"
+
+Return JSON only, no commentary.
+Example:
+{{
+  "authors": ["Author 1", "Author 2"],
+  "title": "Paper Title",
+  "venue": "International Conference on Very Large Data Bases",
+  "raw_venue": "VLDB",
+  "year": 2023,
+  "pages": "123-145",
+  "arxiv_id": "1234.5678",
+  "doi": "10.1234/abcd",
+  "abstract": "Lorem ipsum..."
+}}
+"""
+
+    try:
+        response = gpt_client.responses.create(
+            model="gpt-4o-mini",
+            tools=[{"type": "web_search"}],
+            input=f"{prompt}\n\nReturn ONLY valid JSON as a plain text string without formatting.",
+        )
+        gpt_output = response.output_text
+        print("DEBUG: Received GPT response:", gpt_output)
+        result = json.loads(gpt_output)
+        if "authors" in result:
+            result["authors"] = [
+                author for author in result["authors"] if "et al" not in author.lower()
+            ]
+        return result
+    except Exception as e:
+        print(f"DEBUG: GPT parsing failed for reference: {ref_text} with error: {e}")
+        return None
+
+
+def parse_references(gpt_client, references: list[str]) -> list[ParsedReference]:
+    print(f"DEBUG: Found {len(references)} references in the input file")
+    parsed_papers = []
+    for idx, ref in enumerate(references, 1):
+        print(f"DEBUG: Parsing reference {idx}: {ref}")
+        paper_data = parse_reference_with_gpt(gpt_client, ref)
+        if paper_data:
+            print(f"DEBUG: Successfully parsed reference {idx}")
+            paper_data["ref_id"] = idx
+            parsed_papers.append(paper_data)
+        else:
+            print(f"DEBUG: Failed to parse reference {idx}: {ref}")
+    return parsed_papers
