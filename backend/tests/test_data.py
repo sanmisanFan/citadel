@@ -1,17 +1,11 @@
-from CITation.data.process_references import (
-    process_markdown_string,
-    extract_references_section,
-)
+from CITation.data.process_references import process_markdown_string
 from CITation.data.raw_ref_to_json import PaperProcessor
-
 
 from CITation.data.citation_graph_builder import extract_info, build_author_graph
 
 from pathlib import Path
 import pytest
 import json
-
-from CITation.anomalies.author_sus import build_suspicious_authors_graph
 
 data_dir = Path(__file__).parent / "data"
 
@@ -25,11 +19,13 @@ def test_process_references_no_references(sample_no_ref):
 def test_process_references(test_md):
     reference_mentions, raw_references = process_markdown_string(test_md)
     print(reference_mentions, raw_references)
+    assert len(raw_references) == 25
 
 
 def test_process_references_sample(sample):
     reference_mentions, raw_references = process_markdown_string(sample)
     print(reference_mentions, raw_references)
+    assert len(raw_references) == 58
 
 
 @pytest.mark.slow

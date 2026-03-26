@@ -1,5 +1,6 @@
 import re
 from pathlib import Path
+from markdown_it import MarkdownIt
 
 
 # TODO: add tests
@@ -51,33 +52,70 @@ def group_references_by_number(md_content):
 
 
 # add test
-def extract_references_section(md_content):
+def extract_references_section(md_content: str) -> list[str]:
     """
     Extracts the "References" section from Markdown content.
+    Instead of using regex, uses the markdown-it parser to find a heading with
+    the word "references" in it and cleanly only grabs list items.
     """
-    section_regex = re.compile(
-        r"^#+.*?\bReferences?\b.*?$(.*?)(?=^#+|\Z)",
-        re.IGNORECASE | re.DOTALL | re.MULTILINE,
-    )
-    match = section_regex.search(md_content)
-    if match:
-        return match.group(1).strip()
-    else:
+
+    md = MarkdownIt()
+    tokens = md.parse(md_content)
+
+    refs_start = -1
+    refs_level = 0
+
+    i = 0
+    while i < len(tokens):
+        token = tokens[i]
+
+        if token.type == "heading_open":
+            level = int(token.tag[1])  # "h2" -> 2, etc.
+
+            # The heading text is usually in the next inline token
+            if i + 1 < len(tokens) and tokens[i + 1].type == "inline":
+                title = tokens[i + 1].content.strip().lower()
+
+                if "reference" in title:
+                    refs_start = i
+                    refs_level = level
+                    break
+        i += 1
+
+    if refs_start == -1:
         raise ValueError("References section not found!")
 
+    content_tokens = []
+    i = refs_start + 1
 
-def split_references(references_text):
-    """
-    Splits the references text into individual reference entries.
-    Assumes each reference starts on a new line beginning with '-', '*', or '+'.
-    Converts internal newlines in entries to spaces.
-    """
-    split_pattern = re.compile(r"^[\-\*\+]\s+", re.MULTILINE)
-    raw_entries = split_pattern.split(references_text)
-    entries = [
-        entry.strip().replace("\n", " ") for entry in raw_entries if entry.strip()
-    ]
-    return entries
+    while i < len(tokens):
+        token = tokens[i]
+
+        if token.type == "heading_open":
+            level = int(token.tag[1])
+            if level <= refs_level:
+                break
+
+        content_tokens.append(token)
+        i += 1
+
+    # --- Extract only list item text ---
+    references = []
+    in_list_item = False
+
+    for token in content_tokens:
+        if token.type == "list_item_open":
+            in_list_item = True
+
+        elif token.type == "list_item_close":
+            in_list_item = False
+
+        elif in_list_item and token.type == "inline":
+            text = token.content.strip()
+            if text:  # skip empty
+                references.append(text)
+
+    return references
 
 
 # TODO: this breaks on sample.md. works on test.md though
@@ -95,23 +133,14 @@ def process_markdown_string(content: str):
         except (ValueError, TypeError):
             return float("inf")
 
-    reference_mentions = sorted(grouped_references.keys(), key=sort_key)
+    sorted_grouped_references = {
+        key: grouped_references[key]
+        for key in sorted(grouped_references.keys(), key=sort_key)
+    }
 
-    # Extract and split the references section
     references_section = extract_references_section(content)
-    references_list = split_references(references_section)
 
-    """
-    # what does this code do? hopefully the same thing as what I did here.
-    for ref in flor.loop("refid", sorted_keys): # where does sorted_keys come from?
-        if references_list:
-            flor.log("reference", references_list[ref - 1])
-        texts = grouped_references[ref]
-        for i in flor.loop("txtid", range(len(texts))): # same with texts?
-            flor.log("reftext", texts[i]) 
-    """
-
-    return grouped_references, references_list
+    return sorted_grouped_references, references_section
 
 
 def process_markdown_file(md_file_path: Path):

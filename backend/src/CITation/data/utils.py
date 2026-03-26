@@ -1,8 +1,8 @@
-import tempfile
 from pathlib import Path
-import uuid
 from pymupdf4llm import to_markdown
 import fitz  # PyMuPDF
+# from marker.converters.pdf import PdfConverter
+# from marker.models import create_model_dict
 
 
 def pdf_to_str(content) -> str:
@@ -38,6 +38,34 @@ def pdf_to_md_str(content) -> str:
 
     res = to_markdown(doc, ignore_graphics=True, ignore_images=True, show_progress=True)
     return res
+
+
+# doesn't work properly... wants openai version 1.109...
+"""
+def pdf_to_md_str_marker(content) -> str:
+    fname = uuid.uuid4()
+
+    # https://github.com/datalab-to/marker
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmpdir_path = Path(tmpdir)
+        pdf_path = tmpdir_path / f"{fname}.pdf"
+
+        pdf_path.write_bytes(content)
+
+        config = {
+            "output_format": "markdown",
+            "force_ocr": False,
+            "strip_existing_ocr": False,
+        }
+
+        converter = PdfConverter(
+            config=config,
+            artifact_dict=create_model_dict(),
+        )
+
+        res = converter(pdf_path)
+        return res
+"""
 
 
 def get_openalex_authors(openalex):

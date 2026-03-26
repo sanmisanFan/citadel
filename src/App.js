@@ -26,6 +26,7 @@ import samplePDF from "./data/case1/reviewerAPP_case1.pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
+const BACKEND_URL = (process.env.BACKEND_URL) ? process.env.BACKEND_URL : "localhost:8000";
 
 function App() {
     // global init
@@ -33,6 +34,7 @@ function App() {
     const [title, setTitle] = useState("");
     const [authors, setAuthors] = useState([""]);
     const [year, setYear] = useState("");
+    const [isProcessed, setIsProcessed] = useState(false);
 
     const [citation, setCitation] = useState([]);
     const [anomalous, setAnomalous] = useState([]);
@@ -48,8 +50,34 @@ function App() {
     };
 
     const onSubmit = () => {
+        const ws = new WebSocket(`ws://${BACKEND_URL}/ws/process_pdf`);
         //TODO: add validation for each metadata field
         console.log(pdfData, title, authors, year);
+
+        ws.onopen = () => {
+            ws.send(JSON.stringify({
+                title,
+                authors,
+                year,
+
+            }));
+
+            ws.send(JSON.stringify({
+                filename: pdfData.name,
+                mime_type: pdfData.type,
+                size: pdfData.size,
+            }));
+
+            pdfData.arrayBuffer().then((buffer) => {
+                ws.binaryType = "arraybuffer";
+                ws.send(buffer);
+            });
+        };
+
+        ws.onmessage = (e) => {
+            console.log(e.data);
+        };
+
     };
 
     /** init citation list */
@@ -111,7 +139,7 @@ function App() {
                     e.paper && e.paper.length > 0
                         ? (() => {
                             const cit = citation.find((c) => e.paper.includes(c.id));
-                            return cit ? `[${cit.cite_number}]` : null;
+                            return cit ? `[${ cit.cite_number }]` : null;
                         })()
                         : null;
 
