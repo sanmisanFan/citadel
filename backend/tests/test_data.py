@@ -1,4 +1,4 @@
-from CITation.data.process_references import process_markdown_string
+from CITation.data.process_references import process_markdown_string, parse_references
 from CITation.data.raw_ref_to_json import PaperProcessor
 
 from CITation.data.citation_graph_builder import extract_info, build_author_graph
@@ -28,12 +28,36 @@ def test_process_references_sample(sample):
     assert len(raw_references) == 58
 
 
+# TODO: tests need to be done in order correctly
+@pytest.mark.slow
+def test_parsing_samples(sample, gpt_client):
+    reference_mentions, raw_references = process_markdown_string(sample)
+    parsed = parse_references(gpt_client, raw_references)
+    with open(data_dir / "sample_parsed_refs.json", "w") as f:
+        json.dump(parsed, f)
+
+
+def test_sample_paper_processor(sample, gpt_client):
+    reference_mentions, raw_references = process_markdown_string(sample)
+    pp = PaperProcessor()
+    with open(data_dir / "sample_parsed_refs.json", "r") as f:
+        parsed = json.load(f)
+    enriched, entity_keys = pp.process_papers(parsed, reference_mentions)
+
+    with open(data_dir / "sample_enriched.json", "w") as f:
+        json.dump(enriched, f)
+
+    with open(data_dir / "sample_entity_keys.json", "w") as f:
+        json.dump(entity_keys, f)
+
+
 @pytest.mark.slow
 def test_paper_processor(test_md, gpt_client):
     reference_mentions, raw_references = process_markdown_string(test_md)
 
-    pp = PaperProcessor(gpt_client)
-    enriched, entity_keys = pp.process_papers(raw_references[:5], reference_mentions)
+    parsed = parse_references(gpt_client, raw_references)
+    pp = PaperProcessor()
+    enriched, entity_keys = pp.process_papers(parsed, reference_mentions)
 
     print(enriched)
     with open(data_dir / "enriched.json", "w") as f:
