@@ -54,6 +54,7 @@ async def process_pdf_ws(ws: WebSocket):
             while True:
                 event = await progress_q.get()
                 await ws.send_json(event)
+                await asyncio.sleep(0)
                 if event["type"] == "end":
                     break
 
@@ -74,16 +75,15 @@ async def process_pdf_ws(ws: WebSocket):
 
         # ugly, but forces fastapi to send the messages
         progress("info", "Converting pdf to markdown...")
-        # await asyncio.sleep(0)
         md_text = await asyncio.to_thread(pdf_to_md_str, contents)
 
+        # TODO: try https://github.com/grobidOrg/grobid to extract reference metadata
         progress("info", "Extracting references...")
         reference_mentions, raw_references = await asyncio.to_thread(
             process_markdown_string, md_text
         )
 
         progress("info", "Processing papers...")
-        # await asyncio.sleep(0)
 
         # TODO: figure out how to send messages from process_papers
         processor = PaperProcessor()
@@ -94,7 +94,6 @@ async def process_pdf_ws(ws: WebSocket):
         )
 
         progress("info", "Running relevance assessment...")
-        # await asyncio.sleep(0)
 
         citation_assessments = await asyncio.to_thread(
             process_citation_mentions, reference_mentions, enriched, gpt_client
@@ -102,11 +101,10 @@ async def process_pdf_ws(ws: WebSocket):
         # why not just update this in process_citation_mentions?
         # or better yet, just keep these as separate objects?
         updated_enriched_papers = await asyncio.to_thread(
-            assign_scores_to_enriched_papers(enriched, citation_assessments)
+            assign_scores_to_enriched_papers, enriched, citation_assessments
         )
 
         progress("info", "Building graphs...")
-        # await asyncio.sleep(0)
 
         citations, authors, venues = await asyncio.to_thread(
             extract_info, entity_keys, paper_metadata
@@ -130,10 +128,10 @@ async def process_pdf_ws(ws: WebSocket):
         await progress_q.put(
             {
                 "type": "end",
-                "data": {
+                "results": {
                     "authors": authors,
                     "venues": venues,
-                    "citations": citations,
+                    "citations": list(citations.values()),
                     "anomalous": anomalous_data,
                     "authorGraph": ag,
                 },

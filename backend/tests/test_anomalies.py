@@ -17,23 +17,17 @@ data_dir = Path(__file__).parent / "data"
 
 
 @pytest.mark.slow
-def test_citation_relevance(test_md, gpt_client):
-    reference_mentions, raw_references = process_markdown_string(test_md)
-    with open(data_dir / "enriched.json", "r") as f:
-        enriched = json.load(f)
-
-    trunced_ref_mentions = {}
-    for x in reference_mentions.keys():
-        if x in [1, 2, 3, 4, 5]:
-            trunced_ref_mentions[x] = reference_mentions[x]
+def test_citation_relevance(
+    sample_enriched, sample_entity_keys, sample_refs_and_mentions, gpt_client
+):
+    ref_mentions, _ = sample_refs_and_mentions
 
     citation_assessments = process_citation_mentions(
-        trunced_ref_mentions, enriched, gpt_client
+        ref_mentions, sample_enriched, gpt_client
     )
-    # why not just update this in process_citation_mentions?
-    # or better yet, just keep these as separate objects?
+
     updated_enriched_papers = assign_scores_to_enriched_papers(
-        enriched, citation_assessments
+        sample_enriched, citation_assessments
     )
 
     with open(data_dir / "updated_enriched.json", "w") as f:

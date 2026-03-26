@@ -29,6 +29,7 @@ Please provide your answer in exactly the following format:
 Score: [number]
 Explanation: [Your detailed 2-3 sentence analysis, including key evidence and reasoning]
 """
+    # why not return the data as a json or something to make parsing easier later?
     response = client.chat.completions.create(
         model="gpt-4-turbo-preview",
         messages=[{"role": "user", "content": prompt}],
@@ -47,34 +48,38 @@ def process_citation_mentions(citation_mentions, enriched, client):
         citation_key = f"{ref_number}"  # Convert to string format like "[1]"
 
         # Check if a summary exists for this citation key
+        # sometimes the OCR freaks out and finds citations that don't exist...
         enriched_data = enriched.get(citation_key)
 
-        summary_text = enriched_data.get("abstract", None)
-        if not summary_text:
-            print(f"Skipping {citation_key}: No abstract available.")
-            continue
+        if enriched_data:
+            summary_text = enriched_data.get("abstract", None)
+            if not summary_text:
+                print(f"Skipping {citation_key}: No abstract available.")
+                continue
 
-        print(f"Processing {len(text_excerpts)} mentions for {citation_key}...")
-        citation_assessments = []
+            print(f"Processing {len(text_excerpts)} mentions for {citation_key}...")
+            citation_assessments = []
 
-        for idx, text in enumerate(text_excerpts, 1):
-            print(f"  Assessing mention {idx}/{len(text_excerpts)}...")
-            try:
-                assessment = assess_citation_relevance(
-                    citation_key, text, summary_text, client
-                )
-                citation_assessments.append({"excerpt": text, "assessment": assessment})
-            except Exception as e:
-                print(f"Error processing mention {idx}: {str(e)}")
-                citation_assessments.append(
-                    {
-                        "excerpt": text,
-                        "assessment": "Assessment failed",
-                        "error": str(e),
-                    }
-                )
+            for idx, text in enumerate(text_excerpts, 1):
+                print(f"  Assessing mention {idx}/{len(text_excerpts)}...")
+                try:
+                    assessment = assess_citation_relevance(
+                        citation_key, text, summary_text, client
+                    )
+                    citation_assessments.append(
+                        {"excerpt": text, "assessment": assessment}
+                    )
+                except Exception as e:
+                    print(f"Error processing mention {idx}: {str(e)}")
+                    citation_assessments.append(
+                        {
+                            "excerpt": text,
+                            "assessment": "Assessment failed",
+                            "error": str(e),
+                        }
+                    )
 
-        assessments[citation_key] = citation_assessments
+            assessments[citation_key] = citation_assessments
 
     return assessments
 

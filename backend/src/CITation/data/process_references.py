@@ -4,6 +4,9 @@ from markdown_it import MarkdownIt
 import json
 from .datatypes import ParsedReference
 
+# I think this can be replaced with one call to grobid https://grobid.readthedocs.io/en/update-documentation/getting_started/
+# we can keep this as a fallback if grobid is not available, but this isn't nearly as reliable
+
 
 # TODO: add tests
 def extract_reference_numbers(citation_str):

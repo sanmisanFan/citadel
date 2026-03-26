@@ -27,6 +27,11 @@ def missing_reference_callback_debug(x):
     print(f"References for paper {x} cannot be extracted. Missing PDF.")
 
 
+# TODO: I'm pretty sure we can search by DOI / arxiv links for multiple papers at once.
+# this would really speed up the process
+# https://api.semanticscholar.org/api-docs#tag/Paper-Data/operation/post_graph_get_papers
+
+
 class PaperProcessor:
     def __init__(
         self,

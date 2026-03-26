@@ -21,7 +21,7 @@ def generate_anomalous_json(enriched_papers):
         citation_key = paper.get("citation_key", "unknown")
 
         for mention in paper.get("reference_mentions", []):
-            relevance_score = mention.get("relevance_score")
+            relevance_score = mention.get("relevance_score", None)
 
             # Identify low relevancy citations (score 1, 2, or 3, but not 0)
             if relevance_score is not None and 0 < relevance_score <= 3:
