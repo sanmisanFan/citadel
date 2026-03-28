@@ -122,6 +122,7 @@ function App() {
                                 : null;
 
                         sentenceList.forEach(sentenceObj => {
+                            console.log(`Adding highlight: ${issueID}, page ${page}, sentence: "${sentenceObj.sentence?.substring(0, 50)}..."`);
                             _sentenceHighlights.push({
                                 issueID,
                                 issueName,

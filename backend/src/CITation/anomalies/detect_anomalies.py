@@ -135,11 +135,11 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
     for node in hop1_sccs_data.get("nodes", []):
         author_to_group[node["id"]] = node.get("group", 0)
 
-    # Build a set of edges (source, target)
+    # Build a set of edges (source, target) with weights
     links_data = hop1_sccs_data.get("links", [])
-    scc_edges = set()
+    scc_edges = {}
     for edge in links_data:
-        scc_edges.add((edge["source"], edge["target"]))
+        scc_edges[(edge["source"], edge["target"])] = edge.get("value", 1)
 
     citation_to_authors = {c_id: c["author"] for c_id, c in citations.items()}
 
@@ -153,9 +153,16 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
         if ck:
             citation_key_to_paper[ck] = paper
 
+    # Get hop-0 (current paper being reviewed) authors
+    hop0_author_ids = set()
+    for c_id, c in citations.items():
+        if c.get("hop") == 0:
+            hop0_author_ids.update(c.get("author", []))
+
     # Check each hop-1 citation for SCC involvement
     for citation_key, citation in citations.items():
-        if citation.get("hop") != 1:
+        hop = citation.get("hop")
+        if hop != 1:
             continue
 
         # Skip if already has an anomaly
@@ -165,15 +172,20 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
         cited_authors = citation.get("author", [])
         is_self_citation = False
         is_citation_ring = False
+        overlapping_author_ids = []
 
         for author_id in cited_authors:
             author_group = author_to_group.get(author_id, 0)
             if author_group != 0:
-                if (author_id, author_id) in scc_edges:
+                # Check if this author is also an author of the current paper (hop-0)
+                if author_id in hop0_author_ids:
                     is_self_citation = True
+                    overlapping_author_ids.append(author_id)
+                elif (author_id, author_id) in scc_edges:
+                    is_self_citation = True
+                    overlapping_author_ids.append(author_id)
                 else:
                     is_citation_ring = True
-                break
 
         if is_self_citation or is_citation_ring:
             # Find the mention text from enriched papers
@@ -186,6 +198,25 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
 
             category_name = "selfCitation" if is_self_citation else "citationRing"
             display_name = "Self Citation" if is_self_citation else "Citation Ring"
+
+            # Get citation details for better explanation
+            cite_number = citation.get("cite_number", "?")
+            title = citation.get("title", "Unknown title")
+
+            # Build informative explanation
+            if is_self_citation:
+                num_overlapping = len(overlapping_author_ids)
+                explanation = (
+                    f"[{cite_number}] Self-citation detected (hop-{hop} reference).\n"
+                    f"{num_overlapping} author(s) of this reference are also authors of the manuscript being reviewed.\n"
+                    f"Title: \"{title[:80]}{'...' if len(title) > 80 else ''}\""
+                )
+            else:
+                explanation = (
+                    f"[{cite_number}] Citation ring pattern detected (hop-{hop} reference).\n"
+                    f"Authors of this paper show unusually high mutual citation rates with manuscript authors.\n"
+                    f"Title: \"{title[:80]}{'...' if len(title) > 80 else ''}\""
+                )
 
             issue = {
                 "id": f"issue-{issue_id}",
@@ -201,7 +232,7 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
                 },
                 "paper": [citation_key],
                 "page": 1,
-                "explanation": f"This citation involves authors who are part of a suspicious citation pattern ({display_name.lower()}).",
+                "explanation": explanation,
                 "sentence": [{"sentence": mention_text, "bbox": None}],
             }
             anomalous_issues.append(issue)

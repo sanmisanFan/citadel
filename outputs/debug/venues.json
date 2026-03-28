@@ -8,12 +8,12 @@
     "short": "Geographic",
     "standardized_name": "Geographical Analysis",
     "year": [
-      "2010"
+      "1996"
     ],
     "author": [
       "author-3",
-      "author-2",
-      "author-1"
+      "author-1",
+      "author-2"
     ],
     "citation": [
       "citation-1"
@@ -32,9 +32,9 @@
       "2017"
     ],
     "author": [
-      "author-2",
       "author-4",
-      "author-5"
+      "author-5",
+      "author-2"
     ],
     "citation": [
       "citation-2"
@@ -45,21 +45,35 @@
     "id": "venue-3",
     "type": "Conference",
     "raw_name": [
-      "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems"
+      "Proceedings of the ACM Conference on Human Factors in Computing Systems"
     ],
     "short": "Proceeding",
-    "standardized_name": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+    "standardized_name": "Proceedings of the ACM Conference on Human Factors in Computing Systems",
     "year": [
+      "2009",
+      "2020",
       "2014"
     ],
     "author": [
+      "author-66",
+      "author-64",
+      "author-42",
+      "author-7",
+      "author-9",
+      "author-65",
+      "author-26",
       "author-10",
       "author-6",
-      "author-9",
-      "author-8",
-      "author-7"
+      "author-22",
+      "author-21",
+      "author-25",
+      "author-24",
+      "author-23",
+      "author-8"
     ],
     "citation": [
+      "citation-9",
+      "citation-25",
       "citation-3"
     ],
     "venue_graph": []
@@ -74,143 +88,143 @@
     "short": "IEEE Trans",
     "standardized_name": "IEEE Transactions on Visualization and Computer Graphics",
     "year": [
-      "2010",
-      "2013",
-      "2014",
-      "2005",
-      "2017",
+      "2018",
       "2016",
       "2020",
-      "2018",
+      "2005",
       "2011",
-      "2019"
+      "2013",
+      "2019",
+      "2017",
+      "2010",
+      "2014"
     ],
     "author": [
-      "author-1005",
-      "author-961",
-      "author-770",
-      "author-48",
-      "author-974",
-      "author-781",
-      "author-651",
-      "author-49",
-      "author-652",
-      "author-782",
-      "author-972",
-      "author-1014",
-      "author-735",
-      "author-615",
-      "author-28",
-      "author-997",
-      "author-964",
-      "author-1006",
-      "author-727",
-      "author-50",
-      "author-553",
-      "author-555",
-      "author-10",
-      "author-613",
-      "author-51",
-      "author-400",
-      "author-14",
-      "author-780",
-      "author-963",
-      "author-517",
-      "author-714",
-      "author-969",
-      "author-971",
-      "author-559",
-      "author-36",
-      "author-1003",
-      "author-59",
-      "author-716",
-      "author-962",
-      "author-730",
-      "author-968",
-      "author-729",
-      "author-630",
-      "author-1004",
-      "author-720",
-      "author-656",
-      "author-724",
-      "author-1012",
-      "author-649",
-      "author-47",
-      "author-12",
-      "author-995",
-      "author-13",
-      "author-7",
-      "author-654",
-      "author-722",
-      "author-616",
-      "author-761",
-      "author-966",
+      "author-951",
+      "author-594",
       "author-37",
-      "author-647",
-      "author-650",
-      "author-718",
-      "author-648",
-      "author-970",
-      "author-653",
-      "author-965",
-      "author-414",
-      "author-715",
-      "author-967",
-      "author-614",
-      "author-38",
-      "author-61",
-      "author-717",
-      "author-996",
-      "author-58",
-      "author-60",
-      "author-769",
-      "author-695",
-      "author-39",
-      "author-771",
-      "author-723",
-      "author-721",
-      "author-621",
-      "author-973",
-      "author-719",
-      "author-11",
-      "author-35",
       "author-46",
-      "author-998",
-      "author-618",
-      "author-416",
-      "author-994",
-      "author-713",
-      "author-728",
-      "author-1011",
+      "author-50",
+      "author-949",
+      "author-61",
+      "author-600",
+      "author-726",
+      "author-460",
+      "author-941",
+      "author-49",
+      "author-560",
+      "author-659",
+      "author-501",
+      "author-911",
+      "author-669",
+      "author-499",
+      "author-672",
+      "author-662",
+      "author-664",
+      "author-663",
+      "author-909",
+      "author-338",
+      "author-668",
+      "author-58",
+      "author-714",
+      "author-38",
+      "author-39",
+      "author-483",
+      "author-680",
+      "author-958",
+      "author-640",
+      "author-920",
+      "author-596",
+      "author-11",
+      "author-667",
+      "author-674",
+      "author-36",
+      "author-599",
+      "author-660",
+      "author-910",
+      "author-950",
+      "author-12",
+      "author-47",
+      "author-505",
+      "author-715",
+      "author-10",
+      "author-912",
+      "author-35",
+      "author-952",
+      "author-960",
+      "author-917",
+      "author-916",
+      "author-658",
+      "author-919",
+      "author-944",
+      "author-7",
+      "author-562",
+      "author-51",
+      "author-661",
+      "author-507",
+      "author-913",
+      "author-918",
+      "author-675",
+      "author-725",
+      "author-59",
+      "author-907",
+      "author-14",
+      "author-666",
+      "author-665",
+      "author-706",
+      "author-354",
+      "author-593",
+      "author-957",
+      "author-597",
+      "author-727",
+      "author-943",
+      "author-576",
+      "author-352",
+      "author-567",
       "author-561",
-      "author-1013"
+      "author-915",
+      "author-595",
+      "author-908",
+      "author-942",
+      "author-28",
+      "author-959",
+      "author-48",
+      "author-716",
+      "author-60",
+      "author-914",
+      "author-564",
+      "author-673",
+      "author-13",
+      "author-598",
+      "author-559",
+      "author-940"
     ],
     "citation": [
-      "citation-287",
-      "citation-405",
-      "citation-4",
-      "citation-23",
-      "citation-17",
+      "citation-311",
+      "citation-295",
+      "citation-294",
+      "citation-383",
+      "citation-386",
       "citation-5",
-      "citation-319",
-      "citation-320",
-      "citation-328",
-      "citation-407",
-      "citation-331",
-      "citation-13",
-      "citation-332",
-      "citation-317",
-      "citation-288",
-      "citation-400",
-      "citation-14",
-      "citation-281",
-      "citation-336",
-      "citation-316",
-      "citation-410",
+      "citation-263",
+      "citation-256",
+      "citation-381",
       "citation-18",
-      "citation-276",
-      "citation-401",
-      "citation-275"
+      "citation-4",
+      "citation-307",
+      "citation-291",
+      "citation-13",
+      "citation-251",
+      "citation-262",
+      "citation-23",
+      "citation-306",
+      "citation-17",
+      "citation-376",
+      "citation-250",
+      "citation-303",
+      "citation-14",
+      "citation-377",
+      "citation-292"
     ],
     "venue_graph": []
   },
@@ -226,17 +240,17 @@
       "2025"
     ],
     "author": [
-      "author-53",
       "author-57",
-      "author-56",
+      "author-53",
       "author-15",
+      "author-56",
       "author-52"
     ],
     "citation": [
-      "citation-22",
+      "citation-19",
       "citation-6",
-      "citation-21",
-      "citation-19"
+      "citation-22",
+      "citation-21"
     ],
     "venue_graph": []
   },
@@ -252,8 +266,8 @@
       "2013"
     ],
     "author": [
-      "author-17",
-      "author-16"
+      "author-16",
+      "author-17"
     ],
     "citation": [
       "citation-7"
@@ -283,31 +297,28 @@
   },
   {
     "id": "venue-8",
-    "type": "Conference",
+    "type": "Unknown",
     "raw_name": [
-      "Proceedings of the ACM Conference on Human Factors in Computing Systems"
+      "",
+      "Visual Informatics"
     ],
-    "short": "Proceeding",
-    "standardized_name": "Proceedings of the ACM Conference on Human Factors in Computing Systems",
+    "short": "Visual Inf",
+    "standardized_name": "Visual Informatics",
     "year": [
-      "2020",
-      "2009"
+      "2017",
+      "2019"
     ],
     "author": [
-      "author-21",
-      "author-66",
-      "author-25",
-      "author-65",
-      "author-24",
-      "author-23",
-      "author-22",
-      "author-42",
-      "author-64",
-      "author-26"
+      "author-27",
+      "author-760",
+      "author-28",
+      "author-756",
+      "author-953",
+      "author-954"
     ],
     "citation": [
-      "citation-25",
-      "citation-9"
+      "citation-384",
+      "citation-10"
     ],
     "venue_graph": []
   },
@@ -315,63 +326,36 @@
     "id": "venue-9",
     "type": "Unknown",
     "raw_name": [
-      "Visual Informatics",
-      ""
-    ],
-    "short": "Visual Inf",
-    "standardized_name": "Visual Informatics",
-    "year": [
-      "2019",
-      "2017"
-    ],
-    "author": [
-      "author-1008",
-      "author-27",
-      "author-811",
-      "author-1007",
-      "author-815",
-      "author-28"
-    ],
-    "citation": [
-      "citation-10",
-      "citation-408"
-    ],
-    "venue_graph": []
-  },
-  {
-    "id": "venue-10",
-    "type": "Unknown",
-    "raw_name": [
       "Computer Graphics Forum"
     ],
     "short": "Computer G",
     "standardized_name": "Computer Graphics Forum",
     "year": [
-      "2021",
       "2017",
+      "2021",
       "2014"
     ],
     "author": [
+      "author-27",
+      "author-33",
+      "author-31",
+      "author-30",
+      "author-28",
+      "author-32",
+      "author-46",
       "author-29",
       "author-34",
-      "author-32",
-      "author-27",
-      "author-31",
-      "author-33",
-      "author-45",
-      "author-46",
-      "author-30",
-      "author-28"
+      "author-45"
     ],
     "citation": [
-      "citation-16",
       "citation-12",
-      "citation-11"
+      "citation-11",
+      "citation-16"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-11",
+    "id": "venue-10",
     "type": "Conference",
     "raw_name": [
       "IEEE Pacific Symposium on Visualization"
@@ -382,11 +366,11 @@
       "2017"
     ],
     "author": [
-      "author-41",
-      "author-40",
-      "author-44",
       "author-42",
-      "author-43"
+      "author-44",
+      "author-43",
+      "author-40",
+      "author-41"
     ],
     "citation": [
       "citation-15"
@@ -394,7 +378,7 @@
     "venue_graph": []
   },
   {
-    "id": "venue-12",
+    "id": "venue-11",
     "type": "Journal",
     "raw_name": [
       "Journal of Experimental Social Psychology"
@@ -414,7 +398,7 @@
     "venue_graph": []
   },
   {
-    "id": "venue-13",
+    "id": "venue-12",
     "type": "Unknown",
     "raw_name": [
       "Computers and Geosciences"
@@ -434,7 +418,7 @@
     "venue_graph": []
   },
   {
-    "id": "venue-14",
+    "id": "venue-13",
     "type": "Conference",
     "raw_name": [
       ""
@@ -442,30 +426,30 @@
     "short": "Internatio",
     "standardized_name": "International Conference on Intelligent User Interfaces",
     "year": [
-      "2020",
+      "2017",
       "2018",
-      "2017"
+      "2020"
     ],
     "author": [
-      "author-726",
-      "author-759",
-      "author-733",
-      "author-622",
-      "author-760",
-      "author-623",
-      "author-731",
-      "author-725",
-      "author-624"
+      "author-670",
+      "author-570",
+      "author-705",
+      "author-678",
+      "author-569",
+      "author-671",
+      "author-568",
+      "author-704",
+      "author-676"
     ],
     "citation": [
-      "citation-277",
-      "citation-327",
-      "citation-318"
+      "citation-293",
+      "citation-302",
+      "citation-252"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-15",
+    "id": "venue-14",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -476,17 +460,17 @@
       "2018"
     ],
     "author": [
-      "author-627",
-      "author-626",
-      "author-625"
+      "author-573",
+      "author-572",
+      "author-571"
     ],
     "citation": [
-      "citation-278"
+      "citation-253"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-16",
+    "id": "venue-15",
     "type": "Conference",
     "raw_name": [
       ""
@@ -497,18 +481,18 @@
       "2017"
     ],
     "author": [
-      "author-629",
-      "author-628",
+      "author-576",
+      "author-575",
       "author-28",
-      "author-630"
+      "author-574"
     ],
     "citation": [
-      "citation-279"
+      "citation-254"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-17",
+    "id": "venue-16",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -519,17 +503,17 @@
       "2017"
     ],
     "author": [
-      "author-631",
-      "author-632",
-      "author-633"
+      "author-579",
+      "author-578",
+      "author-577"
     ],
     "citation": [
-      "citation-280"
+      "citation-255"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-18",
+    "id": "venue-17",
     "type": "Journal",
     "raw_name": [
       ""
@@ -540,16 +524,16 @@
       "2017"
     ],
     "author": [
-      "author-635",
-      "author-634"
+      "author-581",
+      "author-580"
     ],
     "citation": [
-      "citation-282"
+      "citation-257"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-19",
+    "id": "venue-18",
     "type": "Journal",
     "raw_name": [
       ""
@@ -560,19 +544,19 @@
       "2017"
     ],
     "author": [
-      "author-636",
-      "author-638",
-      "author-640",
-      "author-637",
-      "author-639"
+      "author-586",
+      "author-582",
+      "author-584",
+      "author-583",
+      "author-585"
     ],
     "citation": [
-      "citation-283"
+      "citation-258"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-20",
+    "id": "venue-19",
     "type": "Conference",
     "raw_name": [
       ""
@@ -583,16 +567,16 @@
       "2015"
     ],
     "author": [
-      "author-641",
-      "author-642"
+      "author-587",
+      "author-588"
     ],
     "citation": [
-      "citation-284"
+      "citation-259"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-21",
+    "id": "venue-20",
     "type": "Conference",
     "raw_name": [
       ""
@@ -603,17 +587,17 @@
       "2015"
     ],
     "author": [
-      "author-644",
-      "author-645",
-      "author-643"
+      "author-591",
+      "author-590",
+      "author-589"
     ],
     "citation": [
-      "citation-285"
+      "citation-260"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-22",
+    "id": "venue-21",
     "type": "Journal",
     "raw_name": [
       ""
@@ -624,18 +608,18 @@
       "2014"
     ],
     "author": [
-      "author-636",
-      "author-646",
-      "author-640",
-      "author-638"
+      "author-584",
+      "author-586",
+      "author-582",
+      "author-592"
     ],
     "citation": [
-      "citation-286"
+      "citation-261"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-23",
+    "id": "venue-22",
     "type": "Conference",
     "raw_name": [
       ""
@@ -643,42 +627,42 @@
     "short": "Internatio",
     "standardized_name": "International Conference on Human Factors in Computing Systems",
     "year": [
-      "2018",
-      "2013"
+      "2013",
+      "2018"
     ],
     "author": [
-      "author-960",
-      "author-740",
-      "author-749",
-      "author-538",
-      "author-742",
-      "author-741",
-      "author-956",
-      "author-958",
-      "author-743",
-      "author-735",
-      "author-746",
-      "author-957",
-      "author-748",
-      "author-747",
-      "author-656",
-      "author-655",
-      "author-959",
-      "author-620",
-      "author-745",
-      "author-744",
-      "author-654"
+      "author-693",
+      "author-692",
+      "author-687",
+      "author-690",
+      "author-600",
+      "author-694",
+      "author-601",
+      "author-566",
+      "author-483",
+      "author-688",
+      "author-680",
+      "author-904",
+      "author-484",
+      "author-903",
+      "author-906",
+      "author-689",
+      "author-902",
+      "author-905",
+      "author-686",
+      "author-691",
+      "author-685"
     ],
     "citation": [
-      "citation-324",
-      "citation-289",
-      "citation-399",
-      "citation-325"
+      "citation-375",
+      "citation-300",
+      "citation-299",
+      "citation-264"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-24",
+    "id": "venue-23",
     "type": "Conference",
     "raw_name": [
       ""
@@ -689,19 +673,19 @@
       "2008"
     ],
     "author": [
-      "author-659",
-      "author-658",
-      "author-657",
-      "author-634",
-      "author-626"
+      "author-572",
+      "author-580",
+      "author-604",
+      "author-603",
+      "author-602"
     ],
     "citation": [
-      "citation-290"
+      "citation-265"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-25",
+    "id": "venue-24",
     "type": "Conference",
     "raw_name": [
       ""
@@ -712,18 +696,18 @@
       "2008"
     ],
     "author": [
-      "author-626",
-      "author-659",
-      "author-660",
-      "author-661"
+      "author-604",
+      "author-572",
+      "author-606",
+      "author-605"
     ],
     "citation": [
-      "citation-291"
+      "citation-266"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-26",
+    "id": "venue-25",
     "type": "Conference",
     "raw_name": [
       ""
@@ -734,16 +718,16 @@
       "2007"
     ],
     "author": [
-      "author-662",
-      "author-659"
+      "author-607",
+      "author-604"
     ],
     "citation": [
-      "citation-292"
+      "citation-267"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-27",
+    "id": "venue-26",
     "type": "Conference",
     "raw_name": [
       ""
@@ -756,24 +740,24 @@
       "2012"
     ],
     "author": [
-      "author-698",
-      "author-635",
-      "author-664",
-      "author-663",
-      "author-700",
-      "author-668",
-      "author-699",
-      "author-626"
+      "author-581",
+      "author-613",
+      "author-572",
+      "author-644",
+      "author-643",
+      "author-609",
+      "author-645",
+      "author-608"
     ],
     "citation": [
-      "citation-296",
-      "citation-307",
-      "citation-293"
+      "citation-271",
+      "citation-268",
+      "citation-282"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-28",
+    "id": "venue-27",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -784,15 +768,15 @@
       "2000"
     ],
     "author": [
-      "author-667"
+      "author-612"
     ],
     "citation": [
-      "citation-295"
+      "citation-270"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-29",
+    "id": "venue-28",
     "type": "Conference",
     "raw_name": [
       ""
@@ -804,21 +788,21 @@
       "1987"
     ],
     "author": [
-      "author-674",
-      "author-792",
-      "author-677",
-      "author-675",
-      "author-624",
-      "author-676"
+      "author-737",
+      "author-570",
+      "author-620",
+      "author-621",
+      "author-619",
+      "author-622"
     ],
     "citation": [
-      "citation-435",
-      "citation-300"
+      "citation-411",
+      "citation-275"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-30",
+    "id": "venue-29",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -829,19 +813,19 @@
       "1993"
     ],
     "author": [
-      "author-678",
-      "author-679",
-      "author-682",
-      "author-681",
-      "author-680"
+      "author-627",
+      "author-624",
+      "author-625",
+      "author-626",
+      "author-623"
     ],
     "citation": [
-      "citation-301"
+      "citation-276"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-31",
+    "id": "venue-30",
     "type": "Journal",
     "raw_name": [
       ""
@@ -852,17 +836,17 @@
       "2005"
     ],
     "author": [
-      "author-704",
-      "author-668",
-      "author-703"
+      "author-649",
+      "author-613",
+      "author-648"
     ],
     "citation": [
-      "citation-310"
+      "citation-285"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-32",
+    "id": "venue-31",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -873,15 +857,15 @@
       "1977"
     ],
     "author": [
-      "author-686"
+      "author-631"
     ],
     "citation": [
-      "citation-314"
+      "citation-289"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-33",
+    "id": "venue-32",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -892,18 +876,18 @@
       "2020"
     ],
     "author": [
-      "author-710",
-      "author-711",
-      "author-712",
-      "author-709"
+      "author-657",
+      "author-655",
+      "author-656",
+      "author-654"
     ],
     "citation": [
-      "citation-315"
+      "citation-290"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-34",
+    "id": "venue-33",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -911,31 +895,31 @@
     "short": "Computer g",
     "standardized_name": "Computer graphics forum (Print)",
     "year": [
-      "2019",
-      "2017"
+      "2017",
+      "2019"
     ],
     "author": [
-      "author-733",
-      "author-762",
-      "author-764",
-      "author-765",
-      "author-731",
-      "author-763",
-      "author-695",
-      "author-761",
-      "author-735",
-      "author-732",
-      "author-654"
+      "author-708",
+      "author-709",
+      "author-678",
+      "author-640",
+      "author-707",
+      "author-706",
+      "author-680",
+      "author-676",
+      "author-677",
+      "author-600",
+      "author-710"
     ],
     "citation": [
-      "citation-329",
-      "citation-321",
-      "citation-330"
+      "citation-305",
+      "citation-296",
+      "citation-304"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-35",
+    "id": "venue-34",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -946,16 +930,16 @@
       "2018"
     ],
     "author": [
-      "author-621",
+      "author-567",
       "author-28"
     ],
     "citation": [
-      "citation-323"
+      "citation-298"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-36",
+    "id": "venue-35",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -966,25 +950,25 @@
       "2018"
     ],
     "author": [
-      "author-752",
-      "author-750",
-      "author-751",
-      "author-755",
-      "author-758",
-      "author-753",
-      "author-757",
-      "author-756",
-      "author-729",
-      "author-754",
-      "author-555"
+      "author-697",
+      "author-674",
+      "author-698",
+      "author-501",
+      "author-700",
+      "author-701",
+      "author-695",
+      "author-702",
+      "author-699",
+      "author-703",
+      "author-696"
     ],
     "citation": [
-      "citation-326"
+      "citation-301"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-37",
+    "id": "venue-36",
     "type": "Conference",
     "raw_name": [],
     "short": "IEEE Pacif",
@@ -995,7 +979,7 @@
     "venue_graph": []
   },
   {
-    "id": "venue-38",
+    "id": "venue-37",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1006,16 +990,16 @@
       "2010"
     ],
     "author": [
-      "author-774",
-      "author-775"
+      "author-720",
+      "author-719"
     ],
     "citation": [
-      "citation-333"
+      "citation-308"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-39",
+    "id": "venue-38",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1028,33 +1012,41 @@
       "2009"
     ],
     "author": [
-      "author-776",
-      "author-777",
-      "author-1041",
-      "author-780",
-      "author-778",
-      "author-779"
+      "author-722",
+      "author-988",
+      "author-721",
+      "author-724",
+      "author-723",
+      "author-725"
     ],
     "citation": [
-      "citation-422",
-      "citation-334",
-      "citation-335"
+      "citation-398",
+      "citation-309",
+      "citation-310"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-39",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Proceeding",
+    "standardized_name": "Proceedings 1996 IEEE Symposium on Visual Languages",
+    "year": [
+      "1996"
+    ],
+    "author": [
+      "author-728"
+    ],
+    "citation": [
+      "citation-312"
     ],
     "venue_graph": []
   },
   {
     "id": "venue-40",
-    "type": "Conference",
-    "raw_name": [],
-    "short": "Proceeding",
-    "standardized_name": "Proceedings 1996 IEEE Symposium on Visual Languages",
-    "year": [],
-    "author": [],
-    "citation": [],
-    "venue_graph": []
-  },
-  {
-    "id": "venue-41",
     "type": "Conference",
     "raw_name": [
       ""
@@ -1065,18 +1057,18 @@
       "2019"
     ],
     "author": [
-      "author-785",
-      "author-732",
-      "author-784",
-      "author-786"
+      "author-731",
+      "author-729",
+      "author-730",
+      "author-677"
     ],
     "citation": [
-      "citation-337"
+      "citation-313"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-42",
+    "id": "venue-41",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1087,18 +1079,18 @@
       "2018"
     ],
     "author": [
-      "author-695",
-      "author-757",
-      "author-787",
-      "author-414"
+      "author-702",
+      "author-352",
+      "author-732",
+      "author-640"
     ],
     "citation": [
-      "citation-338"
+      "citation-314"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-43",
+    "id": "venue-42",
     "type": "Journal",
     "raw_name": [
       ""
@@ -1109,19 +1101,19 @@
       "2018"
     ],
     "author": [
-      "author-954",
-      "author-955",
-      "author-757",
-      "author-953",
-      "author-553"
+      "author-900",
+      "author-702",
+      "author-901",
+      "author-499",
+      "author-899"
     ],
     "citation": [
-      "citation-398"
+      "citation-374"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-44",
+    "id": "venue-43",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1132,22 +1124,22 @@
       "2017"
     ],
     "author": [
-      "author-696",
-      "author-977",
-      "author-978",
-      "author-860",
-      "author-976",
-      "author-630",
-      "author-975",
-      "author-979"
+      "author-576",
+      "author-805",
+      "author-923",
+      "author-922",
+      "author-925",
+      "author-924",
+      "author-641",
+      "author-921"
     ],
     "citation": [
-      "citation-402"
+      "citation-378"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-45",
+    "id": "venue-44",
     "type": "Preprint",
     "raw_name": [
       ""
@@ -1155,31 +1147,31 @@
     "short": "arXiv.org",
     "standardized_name": "arXiv.org",
     "year": [
-      "2015",
-      "2017"
+      "2017",
+      "2015"
     ],
     "author": [
-      "author-983",
-      "author-985",
-      "author-1020",
-      "author-986",
-      "author-1021",
-      "author-984",
-      "author-981",
-      "author-1016",
-      "author-987",
-      "author-982",
-      "author-1022",
-      "author-980"
+      "author-968",
+      "author-933",
+      "author-962",
+      "author-929",
+      "author-969",
+      "author-931",
+      "author-932",
+      "author-926",
+      "author-928",
+      "author-930",
+      "author-967",
+      "author-927"
     ],
     "citation": [
-      "citation-413",
-      "citation-403"
+      "citation-379",
+      "citation-389"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-46",
+    "id": "venue-45",
     "type": "Conference",
     "raw_name": [
       ""
@@ -1187,34 +1179,34 @@
     "short": "IEEE Confe",
     "standardized_name": "IEEE Conference on Visual Analytics Science and Technology",
     "year": [
-      "2011",
-      "2017"
+      "2017",
+      "2011"
     ],
     "author": [
-      "author-990",
-      "author-999",
-      "author-988",
-      "author-1040",
-      "author-992",
-      "author-991",
-      "author-989",
-      "author-1000",
-      "author-993",
-      "author-757",
-      "author-1039",
-      "author-1001",
       "author-18",
-      "author-1002"
+      "author-986",
+      "author-935",
+      "author-948",
+      "author-936",
+      "author-945",
+      "author-937",
+      "author-947",
+      "author-934",
+      "author-702",
+      "author-987",
+      "author-939",
+      "author-946",
+      "author-938"
     ],
     "citation": [
-      "citation-406",
-      "citation-404",
-      "citation-421"
+      "citation-397",
+      "citation-380",
+      "citation-382"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-47",
+    "id": "venue-46",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1225,16 +1217,16 @@
       "2016"
     ],
     "author": [
-      "author-1009",
-      "author-1010"
+      "author-956",
+      "author-955"
     ],
     "citation": [
-      "citation-409"
+      "citation-385"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-48",
+    "id": "venue-47",
     "type": "Conference",
     "raw_name": [
       ""
@@ -1245,17 +1237,17 @@
       "2016"
     ],
     "author": [
-      "author-1015",
-      "author-1017",
-      "author-1016"
+      "author-963",
+      "author-962",
+      "author-961"
     ],
     "citation": [
-      "citation-411"
+      "citation-387"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-49",
+    "id": "venue-48",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1266,17 +1258,17 @@
       "2016"
     ],
     "author": [
-      "author-1019",
-      "author-1018",
-      "author-209"
+      "author-964",
+      "author-965",
+      "author-966"
     ],
     "citation": [
-      "citation-412"
+      "citation-388"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-50",
+    "id": "venue-49",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1287,20 +1279,20 @@
       "2015"
     ],
     "author": [
-      "author-1026",
-      "author-1027",
-      "author-1023",
-      "author-1028",
-      "author-1024",
-      "author-1025"
+      "author-974",
+      "author-971",
+      "author-975",
+      "author-970",
+      "author-972",
+      "author-973"
     ],
     "citation": [
-      "citation-414"
+      "citation-390"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-51",
+    "id": "venue-50",
     "type": "Conference",
     "raw_name": [
       ""
@@ -1311,16 +1303,16 @@
       "2014"
     ],
     "author": [
-      "author-1016",
-      "author-1029"
+      "author-962",
+      "author-976"
     ],
     "citation": [
-      "citation-415"
+      "citation-391"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-52",
+    "id": "venue-51",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1331,15 +1323,15 @@
       "2014"
     ],
     "author": [
-      "author-1030"
+      "author-977"
     ],
     "citation": [
-      "citation-416"
+      "citation-392"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-53",
+    "id": "venue-52",
     "type": "Conference",
     "raw_name": [
       ""
@@ -1350,17 +1342,17 @@
       "2013"
     ],
     "author": [
-      "author-1033",
-      "author-1031",
-      "author-1032"
+      "author-979",
+      "author-978",
+      "author-980"
     ],
     "citation": [
-      "citation-417"
+      "citation-393"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-54",
+    "id": "venue-53",
     "type": "Conference",
     "raw_name": [
       ""
@@ -1371,16 +1363,16 @@
       "2013"
     ],
     "author": [
-      "author-1035",
-      "author-1034"
+      "author-981",
+      "author-982"
     ],
     "citation": [
-      "citation-418"
+      "citation-394"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-55",
+    "id": "venue-54",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1391,16 +1383,16 @@
       "2012"
     ],
     "author": [
-      "author-1036",
-      "author-1037"
+      "author-983",
+      "author-984"
     ],
     "citation": [
-      "citation-419"
+      "citation-395"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-56",
+    "id": "venue-55",
     "type": "Journal",
     "raw_name": [
       ""
@@ -1411,15 +1403,15 @@
       "2012"
     ],
     "author": [
-      "author-1038"
+      "author-985"
     ],
     "citation": [
-      "citation-420"
+      "citation-396"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-57",
+    "id": "venue-56",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1430,19 +1422,19 @@
       "2011"
     ],
     "author": [
-      "author-1045",
-      "author-1046",
-      "author-1042",
-      "author-1044",
-      "author-1043"
+      "author-992",
+      "author-990",
+      "author-993",
+      "author-989",
+      "author-991"
     ],
     "citation": [
-      "citation-423"
+      "citation-399"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-58",
+    "id": "venue-57",
     "type": "Journal",
     "raw_name": [
       ""
@@ -1450,38 +1442,38 @@
     "short": "Journal of",
     "standardized_name": "Journal of machine learning research",
     "year": [
-      "2005",
-      "2011"
+      "2011",
+      "2005"
     ],
     "author": [
-      "author-1061",
-      "author-1053",
-      "author-1058",
-      "author-1057",
-      "author-1047",
-      "author-1070",
-      "author-1059",
-      "author-1054",
-      "author-1062",
-      "author-1052",
-      "author-1071",
-      "author-1051",
-      "author-1048",
-      "author-1055",
-      "author-1050",
-      "author-1063",
-      "author-1049",
-      "author-1060",
-      "author-1056"
+      "author-1006",
+      "author-999",
+      "author-994",
+      "author-995",
+      "author-1007",
+      "author-998",
+      "author-1018",
+      "author-997",
+      "author-1000",
+      "author-1001",
+      "author-1008",
+      "author-1009",
+      "author-1004",
+      "author-1003",
+      "author-1010",
+      "author-1017",
+      "author-1002",
+      "author-996",
+      "author-1005"
     ],
     "citation": [
-      "citation-424",
-      "citation-428"
+      "citation-400",
+      "citation-404"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-59",
+    "id": "venue-58",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1492,17 +1484,17 @@
       "2010"
     ],
     "author": [
-      "author-1066",
-      "author-1065",
-      "author-1064"
+      "author-1013",
+      "author-1012",
+      "author-1011"
     ],
     "citation": [
-      "citation-425"
+      "citation-401"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-60",
+    "id": "venue-59",
     "type": "Journal",
     "raw_name": [
       ""
@@ -1513,17 +1505,17 @@
       "2009"
     ],
     "author": [
-      "author-1068",
-      "author-1046",
-      "author-1067"
+      "author-993",
+      "author-1015",
+      "author-1014"
     ],
     "citation": [
-      "citation-426"
+      "citation-402"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-61",
+    "id": "venue-60",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1534,15 +1526,15 @@
       "2008"
     ],
     "author": [
-      "author-1069"
+      "author-1016"
     ],
     "citation": [
-      "citation-427"
+      "citation-403"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-62",
+    "id": "venue-61",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1553,16 +1545,16 @@
       "2005"
     ],
     "author": [
-      "author-1072",
-      "author-882"
+      "author-828",
+      "author-1019"
     ],
     "citation": [
-      "citation-429"
+      "citation-405"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-63",
+    "id": "venue-62",
     "type": "Conference",
     "raw_name": [
       ""
@@ -1573,17 +1565,17 @@
       "2000"
     ],
     "author": [
-      "author-1073",
-      "author-1074",
-      "author-790"
+      "author-1020",
+      "author-735",
+      "author-1021"
     ],
     "citation": [
-      "citation-430"
+      "citation-406"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-64",
+    "id": "venue-63",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1594,17 +1586,17 @@
       "1995"
     ],
     "author": [
-      "author-1076",
-      "author-1077",
-      "author-1075"
+      "author-1023",
+      "author-1022",
+      "author-1024"
     ],
     "citation": [
-      "citation-431"
+      "citation-407"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-65",
+    "id": "venue-64",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1615,16 +1607,16 @@
       "1995"
     ],
     "author": [
-      "author-1078",
-      "author-1079"
+      "author-1025",
+      "author-1026"
     ],
     "citation": [
-      "citation-432"
+      "citation-408"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-66",
+    "id": "venue-65",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1635,16 +1627,16 @@
       "1994"
     ],
     "author": [
-      "author-1045",
-      "author-1080"
+      "author-1027",
+      "author-992"
     ],
     "citation": [
-      "citation-433"
+      "citation-409"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-67",
+    "id": "venue-66",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1655,15 +1647,15 @@
       "1978"
     ],
     "author": [
-      "author-1087"
+      "author-1034"
     ],
     "citation": [
-      "citation-436"
+      "citation-412"
     ],
     "venue_graph": []
   },
   {
-    "id": "venue-68",
+    "id": "venue-67",
     "type": "Unknown",
     "raw_name": [
       ""
@@ -1674,10 +1666,10 @@
       "2004"
     ],
     "author": [
-      "author-1092"
+      "author-1039"
     ],
     "citation": [
-      "citation-437"
+      "citation-413"
     ],
     "venue_graph": []
   }

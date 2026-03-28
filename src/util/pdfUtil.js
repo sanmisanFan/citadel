@@ -53,6 +53,46 @@ export const findCitationAnchorSpan = (textLayerEl, citationMarker) => {
 };
 
 /**
+ * Normalize text for matching - handles whitespace and case.
+ */
+const normBasic = (s) => s.replace(/\s+/g, " ").trim().toLowerCase();
+
+/**
+ * Aggressive normalization for statistical notation - removes all spaces
+ * and normalizes unicode variants of mathematical characters.
+ */
+const normAggressive = (s) => {
+  return s
+    .replace(/\s+/g, "")  // Remove all whitespace
+    .toLowerCase()
+    // Normalize unicode variants
+    .replace(/[\u2212\u2013\u2014]/g, "-")  // Various dashes to hyphen
+    .replace(/[\u2264]/g, "<=")  // ≤
+    .replace(/[\u2265]/g, ">=")  // ≥
+    .replace(/[\u2260]/g, "!=")  // ≠
+    .replace(/[\u00d7]/g, "x")   // ×
+    .replace(/['']/g, "'")       // Smart quotes
+    .replace(/[""]/g, '"');      // Smart double quotes
+};
+
+/**
+ * Check if the sentence looks like statistical notation
+ * (contains patterns like F(, t(, p<, p=, etc.)
+ */
+const isStatisticalNotation = (s) => {
+  const statPatterns = [
+    /[fFtT]\s*\(/,           // F( or t(
+    /[pP]\s*[<>=]/,          // p<, p>, p=
+    /chi\s*2/i,              // chi2 or chi-squared
+    /\bdf\s*=/i,             // df=
+    /\br\s*=/i,              // r=
+    /\bn\s*=/i,              // n=
+    /=\s*\d+\.?\d*/,         // = followed by number
+  ];
+  return statPatterns.some((pattern) => pattern.test(s));
+};
+
+/**
  * Find a sentence's bounding rects in the rendered PDF text layer DOM.
  *
  * Each PDF line is one or more <span> elements. We build a character-indexed
@@ -72,13 +112,16 @@ export const findSentenceInTextLayer = (textLayerEl, sentenceText, anchorEl = nu
   const spans = Array.from(textLayerEl.querySelectorAll("span"));
   if (!spans.length) return [];
 
-  const norm = (s) => s.replace(/\s+/g, " ").trim().toLowerCase();
+  // Determine if we should use aggressive matching for statistical notation
+  const useAggressive = isStatisticalNotation(sentenceText);
+  const norm = useAggressive ? normAggressive : normBasic;
+
   const target = norm(sentenceText);
   if (!target) return [];
 
   // Build normalised full text + per-character span-index map.
-  // We add a single space between spans so that words at span boundaries
-  // are not accidentally merged.
+  // For basic normalization, we add a single space between spans.
+  // For aggressive normalization (stats), we don't add separators.
   const charSpanMap = [];
   let fullText = "";
 
@@ -86,24 +129,34 @@ export const findSentenceInTextLayer = (textLayerEl, sentenceText, anchorEl = nu
     const t = norm(span.textContent);
     for (let j = 0; j < t.length; j++) charSpanMap.push(spanIdx);
     fullText += t;
-    // separator (not attributed to any span)
-    fullText += " ";
-    charSpanMap.push(-1);
+    if (!useAggressive) {
+      // separator (not attributed to any span)
+      fullText += " ";
+      charSpanMap.push(-1);
+    }
   });
 
   // Collect every occurrence of target in fullText.
-  const occurrences = [];
-  let pos = 0;
-  while (pos < fullText.length) {
-    const idx = fullText.indexOf(target, pos);
-    if (idx === -1) break;
-    const spanSet = new Set();
-    for (let i = idx; i < idx + target.length; i++) {
-      const si = charSpanMap[i];
-      if (si !== -1) spanSet.add(si);
-    }
-    if (spanSet.size > 0) occurrences.push({ idx, spanIndices: [...spanSet] });
-    pos = idx + 1;
+  let occurrences = findOccurrences(fullText, target, charSpanMap);
+
+  // If no matches found and we used basic normalization, try aggressive
+  if (!occurrences.length && !useAggressive) {
+    const aggressiveTarget = normAggressive(sentenceText);
+    let aggressiveFullText = "";
+    const aggressiveCharSpanMap = [];
+
+    spans.forEach((span, spanIdx) => {
+      const t = normAggressive(span.textContent);
+      for (let j = 0; j < t.length; j++) aggressiveCharSpanMap.push(spanIdx);
+      aggressiveFullText += t;
+    });
+
+    occurrences = findOccurrences(aggressiveFullText, aggressiveTarget, aggressiveCharSpanMap);
+  }
+
+  // If still no matches, try substring matching for key parts of statistical notation
+  if (!occurrences.length && isStatisticalNotation(sentenceText)) {
+    occurrences = findStatisticalMatch(spans, sentenceText);
   }
 
   if (!occurrences.length) return [];
@@ -139,10 +192,89 @@ export const findSentenceInTextLayer = (textLayerEl, sentenceText, anchorEl = nu
   });
 };
 
+/**
+ * Helper to find all occurrences of target in fullText
+ */
+const findOccurrences = (fullText, target, charSpanMap) => {
+  const occurrences = [];
+  let pos = 0;
+  while (pos < fullText.length) {
+    const idx = fullText.indexOf(target, pos);
+    if (idx === -1) break;
+    const spanSet = new Set();
+    for (let i = idx; i < idx + target.length; i++) {
+      const si = charSpanMap[i];
+      if (si !== -1) spanSet.add(si);
+    }
+    if (spanSet.size > 0) occurrences.push({ idx, spanIndices: [...spanSet] });
+    pos = idx + 1;
+  }
+  return occurrences;
+};
+
+/**
+ * Fallback matching for statistical notation - finds spans containing
+ * key statistical markers (F, t, p values with their numbers)
+ */
+const findStatisticalMatch = (spans, sentenceText) => {
+  // Extract the key pattern: test type and parameters
+  // e.g., "F(2,46)=4" or "t(123)=.45" or "p<.01"
+  const normalized = normAggressive(sentenceText);
+
+  // Try to find spans that contain parts of the statistical expression
+  const spanIndices = [];
+
+  for (let i = 0; i < spans.length; i++) {
+    const spanText = normAggressive(spans[i].textContent);
+
+    // Check if this span contains key parts of the statistical notation
+    // Look for test statistics (F, t, chi) or p-values
+    const hasTestStat = /[ft]\(\d/.test(spanText) || /chi2?\(/.test(spanText);
+    const hasPValue = /p[<>=]/.test(spanText);
+    const hasNumbers = /\d+\.?\d*/.test(spanText);
+
+    // Check if the normalized target overlaps with this span's content
+    if (spanText && normalized.includes(spanText.substring(0, Math.min(5, spanText.length)))) {
+      spanIndices.push(i);
+    } else if (spanText && spanText.includes(normalized.substring(0, Math.min(5, normalized.length)))) {
+      spanIndices.push(i);
+    } else if ((hasTestStat || hasPValue) && hasNumbers) {
+      // Check if this span's content appears in our target
+      if (normalized.includes(spanText) || spanText.includes(normalized)) {
+        spanIndices.push(i);
+      }
+    }
+  }
+
+  // Also try to find consecutive spans that together form the statistical expression
+  if (spanIndices.length === 0) {
+    const fullNorm = spans.map(s => normAggressive(s.textContent)).join("");
+    const idx = fullNorm.indexOf(normalized);
+    if (idx !== -1) {
+      // Find which spans contribute to this match
+      let charCount = 0;
+      for (let i = 0; i < spans.length; i++) {
+        const spanLen = normAggressive(spans[i].textContent).length;
+        const spanEnd = charCount + spanLen;
+        if (spanEnd > idx && charCount < idx + normalized.length) {
+          spanIndices.push(i);
+        }
+        charCount = spanEnd;
+      }
+    }
+  }
+
+  if (spanIndices.length > 0) {
+    return [{ idx: 0, spanIndices: [...new Set(spanIndices)].sort((a, b) => a - b) }];
+  }
+
+  return [];
+};
+
 // Function to find the bounding box for a specific citation (e.g. "[14]") within text items
 export const findCitationCoordinates = (textItems, targetCitation) => {
   const results = [];
-  
+
   textItems.forEach((item) => {
     // Find the starting index of the target citation within the text item
     const index = item.text.indexOf(targetCitation);
@@ -150,13 +282,13 @@ export const findCitationCoordinates = (textItems, targetCitation) => {
       // Estimate the average width per character
       const totalChars = item.text.length;
       if (totalChars === 0) return; // safeguard
-      
+
       const charWidth = item.width / totalChars;
       // Calculate the width of the citation substring
       const citationWidth = charWidth * targetCitation.length;
       // Calculate the x-offset for the citation substring
       const citationX = item.x + (index * charWidth);
-      
+
       results.push({
         citation: targetCitation,
         x: citationX,
@@ -166,7 +298,7 @@ export const findCitationCoordinates = (textItems, targetCitation) => {
       });
     }
   });
-  
+
   return results;
 };
 
@@ -220,10 +352,10 @@ export const extractAndHighlightCitation = async (pdf, targetCitation, pageNumbe
   try {
     const page = await pdf.getPage(pageNumber);
     const viewport = page.getViewport({ scale: 1 });
-  
+
     const textItems = await extractTextFromPage(pdf, pageNumber);
     const citations = findCitationCoordinates(textItems, targetCitation);
-  
+
     // Normalize coordinates for the target citation relative to the page viewport
     const normalizedCitations = citations.map(citation => ({
       citation: citation.citation,
@@ -232,7 +364,7 @@ export const extractAndHighlightCitation = async (pdf, targetCitation, pageNumbe
       width: citation.width / viewport.width,
       height: citation.height / viewport.height,
     }));
-  
+
     console.log('Normalized citation coordinates:', normalizedCitations, targetCitation);
     //return normalizedCitations;
   } catch (error) {

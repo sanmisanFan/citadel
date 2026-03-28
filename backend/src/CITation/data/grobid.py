@@ -320,3 +320,117 @@ def find_parent(root: ET.Element, child: ET.Element) -> ET.Element | None:
         if child in parent:
             return parent
     return None
+
+
+def extract_formula_coordinates_with_grobid(pdf_content: bytes) -> list[dict]:
+    """
+    Extract formula/equation coordinates from PDF using grobid.
+    This includes statistical test notations like F(2,46) = 4, p < .01
+
+    Args:
+        pdf_content: Raw PDF file bytes
+
+    Returns:
+        List of dicts with 'text', 'page', 'x', 'y', 'width', 'height'
+    """
+    url = f"{GROBID_URL}/api/processFulltextDocument"
+
+    try:
+        response = requests.post(
+            url,
+            files={"input": ("paper.pdf", pdf_content, "application/pdf")},
+            data={
+                "teiCoordinates": ["formula", "ref", "p"],
+                "includeRawAffiliations": "0",
+            },
+            timeout=GROBID_TIMEOUT,
+        )
+
+        if response.status_code != 200:
+            print(f"DEBUG grobid: Formula extraction failed with status {response.status_code}")
+            return []
+
+        return parse_formula_coordinates(response.text)
+
+    except requests.RequestException as e:
+        print(f"DEBUG grobid: Formula extraction request failed: {e}")
+        return []
+
+
+def parse_formula_coordinates(tei_xml: str) -> list[dict]:
+    """
+    Parse grobid TEI XML to extract formula coordinates.
+
+    Args:
+        tei_xml: TEI XML string from grobid fulltext endpoint
+
+    Returns:
+        List of dicts with formula text and coordinates
+    """
+    formulas = []
+
+    try:
+        root = ET.fromstring(tei_xml)
+    except ET.ParseError as e:
+        print(f"DEBUG grobid: Failed to parse formula XML: {e}")
+        return []
+
+    # Find all formula elements with coordinates
+    for formula in root.findall(".//tei:formula[@coords]", TEI_NS):
+        coords_str = formula.get("coords", "")
+        text = "".join(formula.itertext()).strip()
+
+        if not coords_str or not text:
+            continue
+
+        # Parse coordinates: "page,x,y,width,height" (can have multiple boxes separated by ;)
+        for coord_part in coords_str.split(";"):
+            parts = coord_part.strip().split(",")
+            if len(parts) >= 5:
+                try:
+                    formulas.append({
+                        "text": text,
+                        "page": int(parts[0]),
+                        "x": float(parts[1]),
+                        "y": float(parts[2]),
+                        "width": float(parts[3]),
+                        "height": float(parts[4]),
+                    })
+                except (ValueError, IndexError) as e:
+                    print(f"DEBUG grobid: Failed to parse coords '{coord_part}': {e}")
+                    continue
+
+    # Also look for inline formulas in paragraphs
+    for p in root.findall(".//tei:p", TEI_NS):
+        p_coords = p.get("coords", "")
+        p_text = "".join(p.itertext()).strip()
+
+        # Check if paragraph contains statistical test patterns
+        import re
+        stat_patterns = [
+            r'[FfTt]\s*\([^)]+\)\s*=\s*[\d.]+\s*,?\s*[pP]\s*[<>=]\s*[\d.]+',
+            r'[χXx]\s*[²2]?\s*\([^)]+\)\s*=\s*[\d.]+\s*,?\s*[pP]\s*[<>=]\s*[\d.]+',
+        ]
+
+        for pattern in stat_patterns:
+            for match in re.finditer(pattern, p_text):
+                if p_coords:
+                    # Use paragraph coordinates as approximation
+                    for coord_part in p_coords.split(";"):
+                        parts = coord_part.strip().split(",")
+                        if len(parts) >= 5:
+                            try:
+                                formulas.append({
+                                    "text": match.group(0),
+                                    "page": int(parts[0]),
+                                    "x": float(parts[1]),
+                                    "y": float(parts[2]),
+                                    "width": float(parts[3]),
+                                    "height": float(parts[4]),
+                                    "is_paragraph_coords": True,  # Flag that these are paragraph-level coords
+                                })
+                            except (ValueError, IndexError):
+                                continue
+
+    print(f"DEBUG grobid: Found {len(formulas)} formula coordinates")
+    return formulas

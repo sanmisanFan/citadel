@@ -16,12 +16,14 @@ from .anomalies.gpt_relevance import (
 from .anomalies.author_sus import build_suspicious_authors_graph
 from .anomalies.detect_anomalies import find_anomalies
 from .anomalies.venue_sus import detect_suspicious_venues
+from .anomalies.stat_check import generate_statistical_anomalies
 
 from .data.citation_graph_builder import extract_info, build_author_graph
 from .data.grobid import (
     is_grobid_available,
     extract_references_with_grobid,
     extract_citation_mentions_with_grobid,
+    extract_formula_coordinates_with_grobid,
 )
 from openai import OpenAI
 
@@ -92,6 +94,13 @@ def save_debug_outputs(
         "reference_mentions.json": reference_mentions,
     }
 
+    # DEBUGGING: Save markdown text for stat check inspection
+    if tracker_summary and "md_text" in tracker_summary:
+        md_filepath = DEBUG_OUTPUT_DIR / "paper_markdown.md"
+        with open(md_filepath, "w", encoding="utf-8") as f:
+            f.write(tracker_summary["md_text"])
+        print(f"DEBUG: Saved {md_filepath}")
+
     # DEBUGGING: Add pipeline tracking summary if available
     if tracker_summary:
         outputs["pipeline_summary.json"] = tracker_summary
@@ -107,7 +116,6 @@ def save_debug_outputs(
 
 def extract_references_grobid_with_fallback(
     pdf_content: bytes,
-    md_text: str,
     gpt_client,
     progress_fn,
 ):
@@ -117,14 +125,14 @@ def extract_references_grobid_with_fallback(
 
     Args:
         pdf_content: Raw PDF bytes
-        md_text: Markdown text (used for fallback and citation mentions)
         gpt_client: OpenAI client for GPT parsing fallback
         progress_fn: Function to report progress
 
     Returns:
-        Tuple of (parsed_references, reference_mentions)
+        Tuple of (parsed_references, reference_mentions, md_text or None)
     """
     use_grobid = is_grobid_available()
+    md_text = None  # Only create markdown if needed
 
     if use_grobid:
         progress_fn("info", "Extracting references with grobid...")
@@ -139,22 +147,27 @@ def extract_references_grobid_with_fallback(
                 # If grobid didn't get good citation context, fall back to markdown parsing
                 if not reference_mentions:
                     print("DEBUG: Grobid citation mentions empty, using markdown fallback")
+                    progress_fn("info", "Converting PDF to markdown for citation mentions...")
+                    md_text = pdf_to_md_str(pdf_content)
                     reference_mentions, _ = process_markdown_string(md_text)
 
-                return parsed_refs, reference_mentions
+                return parsed_refs, reference_mentions, md_text
             else:
                 print("DEBUG: Grobid returned no references, falling back to markdown+GPT")
         except Exception as e:
             print(f"DEBUG: Grobid failed: {e}, falling back to markdown+GPT")
 
     # Fallback: markdown parsing + GPT
+    progress_fn("info", "Converting PDF to markdown...")
+    md_text = pdf_to_md_str(pdf_content)
+
     progress_fn("info", "Extracting references from markdown...")
     reference_mentions, raw_references = process_markdown_string(md_text)
 
     progress_fn("info", "Parsing references with GPT...")
     parsed_refs = parse_references(gpt_client, raw_references)
 
-    return parsed_refs, reference_mentions
+    return parsed_refs, reference_mentions, md_text
 
 if "OPENAI_API_KEY" not in os.environ:
     print("ERROR: $OPENAI_API_KEY not set!")
@@ -209,18 +222,12 @@ async def process_pdf_ws(ws: WebSocket):
         gpt_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         # TODO: https://github.com/allenai/olmocr for pdf conversion
 
-        # ugly, but forces fastapi to send the messages
-        progress("info", "Converting pdf to markdown...")
-        t0 = time()
-        md_text = await asyncio.to_thread(pdf_to_md_str, contents)
-        pipeline_tracker.record("pdf_to_markdown", time() - t0)
-
         # Try grobid first, fall back to markdown+GPT
+        # Markdown is only created if needed (grobid fallback)
         t0 = time()
-        parsed, reference_mentions = await asyncio.to_thread(
+        parsed, reference_mentions, md_text = await asyncio.to_thread(
             extract_references_grobid_with_fallback,
             contents,
-            md_text,
             gpt_client,
             progress,
         )
@@ -271,6 +278,52 @@ async def process_pdf_ws(ws: WebSocket):
         )
 
         ag = await asyncio.to_thread(build_author_graph, citations)
+
+        # Run statistical validation using plain text extracted from PDF
+        progress("info", "Checking statistical tests...")
+
+        # DEBUG: Extract plain text and check what statistical tests are found
+        from .anomalies.stat_check import find_all_tests, pdf_to_plain_text, preprocess_text
+        DEBUG_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+        plain_text = pdf_to_plain_text(contents)
+        preprocessed_text = preprocess_text(plain_text)
+
+        # Save plain text for debugging
+        plain_debug_path = DEBUG_OUTPUT_DIR / "paper_plain_text.txt"
+        with open(plain_debug_path, "w", encoding="utf-8") as f:
+            f.write(preprocessed_text)
+        print(f"DEBUG: Saved plain text to {plain_debug_path}")
+
+        found_tests = find_all_tests(preprocessed_text)
+        print(f"DEBUG: Statistical tests found in plain text:")
+        print(f"  F-tests: {found_tests['f_tests']}")
+        print(f"  t-tests: {found_tests['t_tests']}")
+        print(f"  chi-square: {found_tests['chi_square_tests']}")
+
+        # Extract formula coordinates from GROBID for precise highlighting
+        formula_coords = None
+        if is_grobid_available():
+            print("DEBUG: Extracting formula coordinates from GROBID...")
+            formula_coords = await asyncio.to_thread(
+                extract_formula_coordinates_with_grobid, contents
+            )
+            print(f"DEBUG: Found {len(formula_coords) if formula_coords else 0} formula coordinates from GROBID")
+            # Save formula coords for debugging
+            if formula_coords:
+                formula_coords_path = DEBUG_OUTPUT_DIR / "formula_coords.json"
+                with open(formula_coords_path, "w", encoding="utf-8") as f:
+                    json.dump(formula_coords, f, indent=2)
+                print(f"DEBUG: Saved formula coords to {formula_coords_path}")
+        else:
+            print("DEBUG: GROBID not available, skipping formula coordinate extraction")
+
+        stat_anomalies = await asyncio.to_thread(
+            generate_statistical_anomalies, contents, len(anomalous_data.get("identifiedIssue", [])) + 1,
+            0.01, formula_coords
+        )
+        anomalous_data["identifiedIssue"].extend(stat_anomalies)
+        print(f"DEBUG: Found {len(stat_anomalies)} statistical anomalies")
 
         # Set has_issue and id on citations based on anomalies
         anomalous_citation_keys = set()

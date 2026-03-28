@@ -13,13 +13,13 @@
         }
       },
       "paper": [
-        "citation-3"
+        "citation-1"
       ],
       "page": 1,
-      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "explanation": "[?] Self-citation detected (hop-1 reference).\n2 author(s) of this reference are also authors of the manuscript being reviewed.\nTitle: \"Geographically Weighted Regression: A Method for Exploring Spatial Nonstationari...\"",
       "sentence": [
         {
-          "sentence": "",
+          "sentence": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis. In this work, we focus on two local spatial models widely used in spatial analysis: Geographically Weighted Regression (GWR) [1], and its recent extension, Multiscale Geographically Weighted Regression (MGWR) [2]. GWR extends the classical linear regression model [20] by capturing spatial heterogeneity with influence spreading over the space in a constant scale. MGWR further improves GWR models where local influences are modeled in different spatial windows.",
           "bbox": null
         }
       ]
@@ -29,18 +29,18 @@
       "name": "citation",
       "displayName": "Citation Anomalous",
       "category": {
-        "name": "selfCitation",
-        "displayName": "Self Citation",
+        "name": "citationRing",
+        "displayName": "Citation Ring",
         "options": {
-          "citationRing": false,
-          "selfCitation": true
+          "citationRing": true,
+          "selfCitation": false
         }
       },
       "paper": [
-        "citation-5"
+        "citation-3"
       ],
       "page": 1,
-      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "explanation": "[?] Citation ring pattern detected (hop-1 reference).\nAuthors of this paper show unusually high mutual citation rates with manuscript authors.\nTitle: \"NewsViews: an automated pipeline for creating custom geovisualizations for news\"",
       "sentence": [
         {
           "sentence": "",
@@ -53,18 +53,18 @@
       "name": "citation",
       "displayName": "Citation Anomalous",
       "category": {
-        "name": "selfCitation",
-        "displayName": "Self Citation",
+        "name": "citationRing",
+        "displayName": "Citation Ring",
         "options": {
-          "citationRing": false,
-          "selfCitation": true
+          "citationRing": true,
+          "selfCitation": false
         }
       },
       "paper": [
-        "citation-10"
+        "citation-5"
       ],
       "page": 1,
-      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "explanation": "[?] Citation ring pattern detected (hop-1 reference).\nAuthors of this paper show unusually high mutual citation rates with manuscript authors.\nTitle: \"Visualization Rhetoric: Framing Effects in Narrative Visualization\"",
       "sentence": [
         {
           "sentence": "",
@@ -85,13 +85,13 @@
         }
       },
       "paper": [
-        "citation-11"
+        "citation-10"
       ],
       "page": 1,
-      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "explanation": "[?] Self-citation detected (hop-1 reference).\n2 author(s) of this reference are also authors of the manuscript being reviewed.\nTitle: \"Interactive map reports summarizing bivariate geographic data\"",
       "sentence": [
         {
-          "sentence": "The design space of narrative visualization [18,5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+          "sentence": "",
           "bbox": null
         }
       ]
@@ -109,10 +109,10 @@
         }
       },
       "paper": [
-        "citation-16"
+        "citation-11"
       ],
       "page": 1,
-      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "explanation": "[?] Self-citation detected (hop-1 reference).\n3 author(s) of this reference are also authors of the manuscript being reviewed.\nTitle: \"A Deeper Understanding of Visualization‐Text Interplay in Geographic Data‐driven...\"",
       "sentence": [
         {
           "sentence": "The design space of narrative visualization [18,5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
@@ -133,13 +133,13 @@
         }
       },
       "paper": [
-        "citation-17"
+        "citation-16"
       ],
       "page": 1,
-      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "explanation": "[?] Self-citation detected (hop-1 reference).\n1 author(s) of this reference are also authors of the manuscript being reviewed.\nTitle: \"Authoring Narrative Visualizations with Ellipsis\"",
       "sentence": [
         {
-          "sentence": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22,12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics. Most closely related to our work are the techniques that explain models from feature-level observation. Mühlbacher and Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+          "sentence": "The design space of narrative visualization [18,5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
           "bbox": null
         }
       ]
@@ -157,14 +157,86 @@
         }
       },
       "paper": [
+        "citation-17"
+      ],
+      "page": 1,
+      "explanation": "[?] Self-citation detected (hop-1 reference).\n1 author(s) of this reference are also authors of the manuscript being reviewed.\nTitle: \"Visual Parameter Space Analysis: A Conceptual Framework\"",
+      "sentence": [
+        {
+          "sentence": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22,12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics. Most closely related to our work are the techniques that explain models from feature-level observation. Mühlbacher and Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-8",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "selfCitation",
+        "displayName": "Self Citation",
+        "options": {
+          "citationRing": false,
+          "selfCitation": true
+        }
+      },
+      "paper": [
         "citation-18"
       ],
       "page": 1,
-      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "explanation": "[?] Self-citation detected (hop-1 reference).\n1 author(s) of this reference are also authors of the manuscript being reviewed.\nTitle: \"Narrative Visualization: Telling Stories with Data\"",
       "sentence": [
         {
           "sentence": "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
           "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-stat-9",
+      "name": "statistic",
+      "displayName": "Statistical Anomaly",
+      "category": {
+        "name": "testFailure",
+        "displayName": "Test Failure",
+        "options": {}
+      },
+      "paper": [],
+      "page": 2,
+      "explanation": "F-test (ANOVA) validation failed.\nReported: F(2.0,46.0)=4.0, p<0.01\nIssues: Computed p=0.0250 is not < 0.01",
+      "sentence": [
+        {
+          "sentence": "F(2,46) = 4, p < .01",
+          "bbox": {
+            "x": 63.96,
+            "y": 674.31,
+            "width": 230.09,
+            "height": 7.77
+          }
+        }
+      ]
+    },
+    {
+      "id": "issue-stat-10",
+      "name": "statistic",
+      "displayName": "Statistical Anomaly",
+      "category": {
+        "name": "testFailure",
+        "displayName": "Test Failure",
+        "options": {}
+      },
+      "paper": [],
+      "page": 2,
+      "explanation": "F-test (ANOVA) validation failed.\nReported: F(0.47,1.73)=0.9, p=0.756\nIssues: Reported p=0.756 doesn't match computed p=0.3470",
+      "sentence": [
+        {
+          "sentence": "F(0.47,1.73) = 0.9, p = 0.756.",
+          "bbox": {
+            "x": 63.96,
+            "y": 674.31,
+            "width": 230.09,
+            "height": 7.77
+          }
         }
       ]
     }
