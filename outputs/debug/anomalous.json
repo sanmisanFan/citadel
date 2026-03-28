@@ -1,0 +1,172 @@
+{
+  "identifiedIssue": [
+    {
+      "id": "issue-1",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "selfCitation",
+        "displayName": "Self Citation",
+        "options": {
+          "citationRing": false,
+          "selfCitation": true
+        }
+      },
+      "paper": [
+        "citation-3"
+      ],
+      "page": 1,
+      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "sentence": [
+        {
+          "sentence": "",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-2",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "selfCitation",
+        "displayName": "Self Citation",
+        "options": {
+          "citationRing": false,
+          "selfCitation": true
+        }
+      },
+      "paper": [
+        "citation-5"
+      ],
+      "page": 1,
+      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "sentence": [
+        {
+          "sentence": "",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-3",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "selfCitation",
+        "displayName": "Self Citation",
+        "options": {
+          "citationRing": false,
+          "selfCitation": true
+        }
+      },
+      "paper": [
+        "citation-10"
+      ],
+      "page": 1,
+      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "sentence": [
+        {
+          "sentence": "",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-4",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "selfCitation",
+        "displayName": "Self Citation",
+        "options": {
+          "citationRing": false,
+          "selfCitation": true
+        }
+      },
+      "paper": [
+        "citation-11"
+      ],
+      "page": 1,
+      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "sentence": [
+        {
+          "sentence": "The design space of narrative visualization [18,5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-5",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "selfCitation",
+        "displayName": "Self Citation",
+        "options": {
+          "citationRing": false,
+          "selfCitation": true
+        }
+      },
+      "paper": [
+        "citation-16"
+      ],
+      "page": 1,
+      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "sentence": [
+        {
+          "sentence": "The design space of narrative visualization [18,5] has been widely explored in the visualization community and a diverse set of storytelling and annotation methods have been developed to reveal observations in data and to convey key messages to an audience. Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations. For example, NewsViews [3] generates interactive maps with narrative annotations automatically from a given news article. Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-6",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "selfCitation",
+        "displayName": "Self Citation",
+        "options": {
+          "citationRing": false,
+          "selfCitation": true
+        }
+      },
+      "paper": [
+        "citation-17"
+      ],
+      "page": 1,
+      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "sentence": [
+        {
+          "sentence": "Narrative visualization is directly related to the concept of explainability, where the visualization authors seek to couple images and text to explain an underlying data analysis. With respect to model explainability, the visual analytics community has developed a variety of systems to support the interactive explanation of machine learning models (e.g. [22,12]). Several model-independent approaches, e.g. EnsembleMatrix [25] and RuleMatrix [13], focus on the classifier's input-output behaviors to provide insight into the model classification results. EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics. Most closely related to our work are the techniques that explain models from feature-level observation. Mühlbacher and Piringer [14] facilitated feature selection and optimization in regression models by partitioning the feature space into disjoint regions for visualization. Sedlmair et al. [17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain. Goodwin et al. [4] extended visual parameter space analysis to the spatial domain, enabling the exploration of correlations between multiple variables that vary geographically at different spatial scales. While these techniques focus on explanations for domain experts, our work is designed to support explanations to experts and support their use of external information to contextualize these relationships and communicate their findings to a general audience. Our choice of text templates, as opposed to large language models, for narrative generation is to support control for reliability and reproducibility. All text generated must have a verifiable source and the generation of text for the analysis should always return the same results to ensure that the resulting analyses are not subject to misinformation.",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-7",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "selfCitation",
+        "displayName": "Self Citation",
+        "options": {
+          "citationRing": false,
+          "selfCitation": true
+        }
+      },
+      "paper": [
+        "citation-18"
+      ],
+      "page": 1,
+      "explanation": "This citation involves authors who are part of a suspicious citation pattern (self citation).",
+      "sentence": [
+        {
+          "sentence": "In this paper, we present a visual analytics framework designed to support spatial data modeling, analysis and reporting. Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7]. The framework provides multiple types of explanation support throughout the spatial analysis pipeline. In the model calibration stage, our framework interprets the functionality of the spatial model configuration and recommends parameter settings. Then, the framework summarizes and explains model outputs by adopting template-based text annotations, linking with external knowledge repositories to provide relevant contextual information. All visualizations, model results, and annotations can be captured in an interactive report authoring widget, enabling analysts to generate documentation that explains their spatial analyses.",
+          "bbox": null
+        }
+      ]
+    }
+  ]
+}

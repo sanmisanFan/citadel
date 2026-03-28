@@ -8,7 +8,7 @@ def extract_info(entity_keys, new_paper: PaperMetadata):
     author_citations = {}
     author_venues = {}
     for citation_key, citation in citations.items():
-        for author_id in citation["authors"]:
+        for author_id in citation["author"]:
             if author_id not in author_citations:
                 author_citations[author_id] = []
             author_citations[author_id].append(citation_key)
@@ -48,7 +48,7 @@ def extract_info(entity_keys, new_paper: PaperMetadata):
         if venue_id and venue_id in venue_data:
             venue_data[venue_id]["raw_name"].add(citation.get("raw_venue", ""))
             venue_data[venue_id]["year"].add(str(citation.get("year", "")))
-            for author_id in citation["authors"]:
+            for author_id in citation["author"]:
                 venue_data[venue_id]["author"].add(author_id)
             venue_data[venue_id]["citation"].add(citation_key)
 
@@ -58,12 +58,24 @@ def extract_info(entity_keys, new_paper: PaperMetadata):
         venue_data[venue_id]["author"] = list(venue_data[venue_id]["author"])
         venue_data[venue_id]["citation"] = list(venue_data[venue_id]["citation"])
 
-    # why do this again?
+    # Infer venue type from name
+    def infer_venue_type(name):
+        if not name:
+            return "Unknown"
+        name_lower = name.lower()
+        if any(kw in name_lower for kw in ["conference", "symposium", "workshop", "proceedings"]):
+            return "Conference"
+        elif any(kw in name_lower for kw in ["journal", "transactions", "review", "letters"]):
+            return "Journal"
+        elif "arxiv" in name_lower:
+            return "Preprint"
+        return "Unknown"
+
     venues = []
     for venue_id, data in venue_data.items():
         venue_obj = {
             "id": venue_id,
-            "type": "Unknown",
+            "type": infer_venue_type(data["standardized_name"]),
             "raw_name": data["raw_name"],
             "short": data["standardized_name"][:10]
             if data["standardized_name"]
@@ -145,7 +157,7 @@ def extract_info(entity_keys, new_paper: PaperMetadata):
     new_citation_entry = {
         "citation_key": new_citation_id,
         "cite_number": 0,
-        "authors": author_ids_for_new_paper,
+        "author": author_ids_for_new_paper,
         "venue": "venue-??",  # or update with a real venue ID if you have one
         "year": new_paper["year"],
         "title": new_paper["title"],
@@ -181,7 +193,7 @@ def build_author_graph(citations):
     # 2. Build a dictionary mapping citation_id -> list of authors
     citation_to_authors = {}
     for citation_id, c in citations.items():
-        citation_authors = c["authors"]  # e.g. ["author-1", "author-2", ...]
+        citation_authors = c["author"]  # e.g. ["author-1", "author-2", ...]
         citation_to_authors[citation_id] = citation_authors
 
     # 3. Initialize a counter for (citing_author -> cited_author) edges
@@ -189,7 +201,7 @@ def build_author_graph(citations):
 
     # 4. Traverse each citation's citation_graph
     for c in citations.values():
-        citing_authors = c["authors"]
+        citing_authors = c["author"]
         # 'citation_graph' is a list of cited citation IDs
         # don't need the citation_graph object, can just look at references and get keys from there
         citation_graph = [
@@ -204,11 +216,35 @@ def build_author_graph(citations):
                     author_citation_counter[(a_citing, a_cited)] += 1
 
     # 5. Convert the counter dictionary to the desired list-of-dicts format
-    edges = []
+    links = []
     for (author_src, author_tgt), count in author_citation_counter.items():
-        edges.append({"source": author_src, "target": author_tgt, "value": count})
+        links.append({"source": author_src, "target": author_tgt, "value": count})
 
-    # Sort edges by descending 'value' if you wish (optional)
-    edges.sort(key=lambda x: x["value"], reverse=True)
+    # Sort links by descending 'value' if you wish (optional)
+    links.sort(key=lambda x: x["value"], reverse=True)
 
-    return edges
+    # 6. Build nodes from all unique authors in edges
+    unique_authors = set()
+    for link in links:
+        unique_authors.add(link["source"])
+        unique_authors.add(link["target"])
+
+    # Determine group based on citation hop (1 = hop 1 authors, 2 = hop 2+)
+    nodes = []
+    for author_id in unique_authors:
+        # Find citations this author belongs to
+        group = 0  # default
+        for citation_id, authors in citation_to_authors.items():
+            if author_id in authors:
+                citation = citations.get(citation_id, {})
+                hop = citation.get("hop", 2)
+                if hop == 0:
+                    group = 0  # Primary paper author
+                elif hop == 1:
+                    group = 1  # Hop 1 author
+                else:
+                    group = 2  # Hop 2+ author
+                break
+        nodes.append({"id": author_id, "group": group})
+
+    return {"nodes": nodes, "links": links}

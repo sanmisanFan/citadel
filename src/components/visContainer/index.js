@@ -40,7 +40,8 @@ export const VisContainer = ({
     const [adjacencyMatrixData, setAdjacencyMatrixData] = useState(null);
 
     const authorGraphDataProcess = () => {
-        if (!authorGraphDataRaw || !author) return;
+        if (!authorGraphDataRaw || !author) return null;
+        if (!authorGraphDataRaw.nodes || !authorGraphDataRaw.links) return null;
 
         // add author names to author nodes
         const authorGraphDataRaw_ = JSON.parse(JSON.stringify(authorGraphDataRaw));
@@ -66,7 +67,8 @@ export const VisContainer = ({
     };
 
     const adjacencyMatrixDataProcess = () => {
-        if (!authorGraphDataRaw || !author || !citation) return;
+        if (!authorGraphDataRaw || !author || !citation) return null;
+        if (!authorGraphDataRaw.nodes || !authorGraphDataRaw.links) return null;
 
         // add author names to author nodes
         const authorGraphDataRaw_ = JSON.parse(JSON.stringify(authorGraphDataRaw));

@@ -38,11 +38,13 @@ class PaperProcessor:
         max_retries=3,
         request_delay=1,
         missing_ref_callback=missing_reference_callback_debug,
+        gpt_client=None,
     ):
         self.max_retries = max_retries
         self.request_delay = request_delay
         self.missing_ref_callback = missing_ref_callback
         self.s2_api_key: str = ""
+        self.gpt_client = gpt_client
 
         if "S2_API_KEY" in os.environ and os.getenv("S2_API_KEY") != "":
             self.s2_api_key = os.getenv("S2_API_KEY")
@@ -67,6 +69,50 @@ class PaperProcessor:
             "Chewbacca": "Chewbacca",
             "D. Vader": "Darth Vader",
         }
+
+    def fetch_abstract_with_gpt(self, title: str, doi: str = None) -> str | None:
+        """
+        Use GPT to fetch the abstract for a paper using its title and/or DOI.
+
+        Args:
+            title: Paper title
+            doi: Optional DOI
+
+        Returns:
+            Abstract text or None if not found
+        """
+        if not self.gpt_client:
+            return None
+
+        identifier = f"DOI: {doi}" if doi else f"Title: {title}"
+
+        prompt = f"""Find the abstract for this academic paper:
+{identifier}
+
+If you can find the paper's abstract, return ONLY the abstract text verbatim.
+If you cannot find the abstract, return exactly: NOT_FOUND
+
+Do not include any other text, explanations, or formatting."""
+
+        try:
+            response = self.gpt_client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=500,
+                temperature=0.1,
+            )
+            result = response.choices[0].message.content.strip()
+
+            if result == "NOT_FOUND" or len(result) < 50:
+                print(f"DEBUG: GPT could not find abstract for: {title}")
+                return None
+
+            print(f"DEBUG: GPT found abstract for: {title}")
+            return result
+
+        except Exception as e:
+            print(f"DEBUG: GPT abstract fetch failed for {title}: {e}")
+            return None
 
     def search_paper(self, title: str):
         """Given a paper title, tries to find its entry in semantic scholar.
@@ -168,6 +214,92 @@ class PaperProcessor:
         except requests.exceptions.RequestException as e:
             print(f"DEBUG: API request failed for paper ID {','.join(ids)}: {e}")
             return None
+
+    def batch_lookup_by_identifiers(self, parsed_data):
+        """
+        Batch lookup papers by DOI or arXiv ID using S2 /paper/batch endpoint.
+
+        Args:
+            parsed_data: List of parsed references with doi/arxiv_id fields
+
+        Returns:
+            Dict mapping ref_id to S2 paper data for found papers
+        """
+        fields = (
+            "title,authors.name,authors.authorId,authors.externalIds,"
+            "venue,year,citationCount,fieldsOfStudy,externalIds,paperId,openAccessPdf,references,tldr"
+        )
+
+        # Build list of identifiers and track which ref_id they belong to
+        ids = []
+        id_to_ref = {}  # Maps S2 identifier string to ref_id
+
+        for paper in parsed_data:
+            ref_id = paper.get("ref_id")
+            doi = paper.get("doi")
+            arxiv_id = paper.get("arxiv_id")
+
+            # Skip artificial papers
+            title = paper.get("title", "")
+            if "artificial reference paper" in title.lower():
+                continue
+
+            # Prefer DOI, then arXiv
+            if doi:
+                s2_id = f"DOI:{doi}"
+                ids.append(s2_id)
+                id_to_ref[s2_id] = ref_id
+            elif arxiv_id:
+                s2_id = f"ARXIV:{arxiv_id}"
+                ids.append(s2_id)
+                id_to_ref[s2_id] = ref_id
+
+        if not ids:
+            print("DEBUG: No DOIs or arXiv IDs found for batch lookup")
+            return {}
+
+        print(f"DEBUG: Batch looking up {len(ids)} papers by DOI/arXiv")
+
+        # S2 batch endpoint has a limit of 500 papers per request
+        results = {}
+        batch_size = 500
+
+        for i in range(0, len(ids), batch_size):
+            batch_ids = ids[i:i + batch_size]
+            try:
+                response = requests.post(
+                    f"{SEMANTIC_SCHOLAR_URL}/paper/batch",
+                    params={"fields": fields},
+                    data=json.dumps({"ids": batch_ids}),
+                    headers={
+                        "x-api-key": self.s2_api_key,
+                        "Content-Type": "application/json",
+                    },
+                    timeout=30,
+                )
+                response.raise_for_status()
+                data = response.json()
+
+                # Map results back to ref_ids
+                for j, paper_data in enumerate(data):
+                    if paper_data is not None:  # S2 returns null for not found
+                        s2_id = batch_ids[j]
+                        ref_id = id_to_ref[s2_id]
+                        # Add pdf_url from openAccessPdf
+                        pdf_data = paper_data.get("openAccessPdf")
+                        paper_data["pdf_url"] = pdf_data.get("url") if pdf_data else None
+                        results[ref_id] = paper_data
+                        print(f"DEBUG: Found paper for ref {ref_id} via batch lookup")
+
+                if i + batch_size < len(ids):
+                    sleep(self.request_delay)
+
+            except requests.exceptions.RequestException as e:
+                print(f"DEBUG: Batch lookup failed: {e}")
+                # Continue with what we have
+
+        print(f"DEBUG: Batch lookup found {len(results)}/{len(ids)} papers")
+        return results
 
     def get_paper_details_openalex(self, title):
         params = {"filter": f"title.search:{title}", "per-page": 1}
@@ -287,6 +419,11 @@ class PaperProcessor:
     def enrich_paper_data(self, parsed_data):
         print("DEBUG: Starting enrichment of GPT parsed data")
         enriched = []
+
+        # First, batch lookup papers by DOI/arXiv ID
+        batch_results = self.batch_lookup_by_identifiers(parsed_data)
+        print(f"DEBUG: Batch lookup returned {len(batch_results)} results")
+
         for i, paper in enumerate(parsed_data, 1):
             title = paper.get("title")
             if not title:
@@ -300,7 +437,7 @@ class PaperProcessor:
                 )
                 enriched_paper = {
                     "title": paper.get("title"),
-                    "authors": self._format_authors(paper.get("authors", [])),
+                    "author": self._format_authors(paper.get("authors", [])),
                     "year": paper.get("year"),
                     "venue": paper.get("venue"),
                     "raw_venue": paper.get("raw_venue"),
@@ -317,21 +454,28 @@ class PaperProcessor:
                 enriched.append(enriched_paper)
                 continue
 
-            print(
-                f"DEBUG: Searching Semantic Scholar for paper {i} with title: {title}"
-            )
-            # this gets the paper id from semantic scholar, but we need to hit their API again for the rest of the metadata.
-            paper_id = self.search_paper(title)
+            # Check if we already have S2 data from batch lookup
+            ref_id = paper.get("ref_id")
+            s2_data = batch_results.get(ref_id)
 
-            s2_data = None
-            if paper_id:
-                print(f"DEBUG: Found paper ID {paper_id} for paper {i}")
-                sleep(self.request_delay)
-                s2_data = self.retry_api_call(self.get_paper_details, paper_id)
+            # Fall back to title search if batch lookup didn't find it
+            if s2_data:
+                print(f"DEBUG: Paper {i} found via batch DOI/arXiv lookup")
             else:
                 print(
-                    f"DEBUG: No paper found in Semantic Scholar for paper {i} with title: {title}"
+                    f"DEBUG: Searching Semantic Scholar for paper {i} with title: {title}"
                 )
+                # this gets the paper id from semantic scholar, but we need to hit their API again for the rest of the metadata.
+                paper_id = self.search_paper(title)
+
+                if paper_id:
+                    print(f"DEBUG: Found paper ID {paper_id} for paper {i}")
+                    sleep(self.request_delay)
+                    s2_data = self.retry_api_call(self.get_paper_details, paper_id)
+                else:
+                    print(
+                        f"DEBUG: No paper found in Semantic Scholar for paper {i} with title: {title}"
+                    )
 
             # we use openalex if 1. we don't have any data 2. we need references or 3. the authors aren't formatted correctly.
             need_openalex_for_authors = False
@@ -387,7 +531,7 @@ class PaperProcessor:
     def _format_gpt_only(self, paper):
         return {
             "title": paper.get("title"),
-            "authors": self._format_authors(paper.get("authors", [])),
+            "author": self._format_authors(paper.get("authors", [])),
             "year": paper.get("year"),
             "venue": paper.get("venue"),
             "raw_venue": paper.get("raw_venue"),
@@ -466,10 +610,16 @@ class PaperProcessor:
             if s2_tldr:
                 abstract = s2_tldr.get("text", None)
 
+        # GPT fallback for abstract if still not found
+        if not abstract:
+            title = s2.get("title", parsed.get("title"))
+            doi = s2.get("externalIds", {}).get("DOI", parsed.get("doi"))
+            abstract = self.fetch_abstract_with_gpt(title, doi)
+
         merged = {
             "title": s2.get("title", parsed.get("title")),
             "abstract": abstract,
-            "authors": self._merge_authors(
+            "author": self._merge_authors(
                 parsed.get("authors", []), s2.get("authors", []), openalex_authors
             ),
             "year": s2.get("year", parsed.get("year")),
@@ -509,7 +659,7 @@ class PaperProcessor:
 
         merged = {
             "title": title,
-            "authors": self._merge_authors(
+            "author": self._merge_authors(
                 parsed.get("authors", []), [], openalex_authors
             ),
             "year": openalex.get("publication_year", parsed.get("year")),
@@ -827,7 +977,7 @@ class PaperProcessor:
                     citation_counter += 1
                     entity_keys["citations"][citation_key] = {
                         "title": ref.get("title", ""),
-                        "authors": ref["authors"],
+                        "author": ref["authors"],
                         "venue": ref["venue"],
                         "year": ref["year"],
                         "citation_count": ref.get("citation_count", 0),

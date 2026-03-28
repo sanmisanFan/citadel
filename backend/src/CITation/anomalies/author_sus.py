@@ -12,12 +12,12 @@ def build_suspicious_authors_graph(authors, citations):
     # 3. Build lookup dictionaries
     author_to_name = {author["id"]: author["standardized_name"] for author in authors}
     citation_to_authors = {
-        c_key: citation["authors"] for c_key, citation in citations.items()
+        c_key: citation["author"] for c_key, citation in citations.items()
     }
 
     # 4. Add weighted edges based on citation relationships
     for citation in citations.values():
-        citing_author_ids = citation["authors"]
+        citing_author_ids = citation["author"]
         cited_citation_ids = get_citation_keys(citation)
 
         for cited_citation_id in cited_citation_ids:

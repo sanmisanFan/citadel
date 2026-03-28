@@ -1,0 +1,1684 @@
+[
+  {
+    "id": "venue-1",
+    "type": "Unknown",
+    "raw_name": [
+      "Geographical Analysis"
+    ],
+    "short": "Geographic",
+    "standardized_name": "Geographical Analysis",
+    "year": [
+      "2010"
+    ],
+    "author": [
+      "author-3",
+      "author-2",
+      "author-1"
+    ],
+    "citation": [
+      "citation-1"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-2",
+    "type": "Unknown",
+    "raw_name": [
+      "Annals of the American Association of Geographers"
+    ],
+    "short": "Annals of ",
+    "standardized_name": "Annals of the American Association of Geographers",
+    "year": [
+      "2017"
+    ],
+    "author": [
+      "author-2",
+      "author-4",
+      "author-5"
+    ],
+    "citation": [
+      "citation-2"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-3",
+    "type": "Conference",
+    "raw_name": [
+      "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems"
+    ],
+    "short": "Proceeding",
+    "standardized_name": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+    "year": [
+      "2014"
+    ],
+    "author": [
+      "author-10",
+      "author-6",
+      "author-9",
+      "author-8",
+      "author-7"
+    ],
+    "citation": [
+      "citation-3"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-4",
+    "type": "Journal",
+    "raw_name": [
+      "",
+      "IEEE Transactions on Visualization and Computer Graphics"
+    ],
+    "short": "IEEE Trans",
+    "standardized_name": "IEEE Transactions on Visualization and Computer Graphics",
+    "year": [
+      "2010",
+      "2013",
+      "2014",
+      "2005",
+      "2017",
+      "2016",
+      "2020",
+      "2018",
+      "2011",
+      "2019"
+    ],
+    "author": [
+      "author-1005",
+      "author-961",
+      "author-770",
+      "author-48",
+      "author-974",
+      "author-781",
+      "author-651",
+      "author-49",
+      "author-652",
+      "author-782",
+      "author-972",
+      "author-1014",
+      "author-735",
+      "author-615",
+      "author-28",
+      "author-997",
+      "author-964",
+      "author-1006",
+      "author-727",
+      "author-50",
+      "author-553",
+      "author-555",
+      "author-10",
+      "author-613",
+      "author-51",
+      "author-400",
+      "author-14",
+      "author-780",
+      "author-963",
+      "author-517",
+      "author-714",
+      "author-969",
+      "author-971",
+      "author-559",
+      "author-36",
+      "author-1003",
+      "author-59",
+      "author-716",
+      "author-962",
+      "author-730",
+      "author-968",
+      "author-729",
+      "author-630",
+      "author-1004",
+      "author-720",
+      "author-656",
+      "author-724",
+      "author-1012",
+      "author-649",
+      "author-47",
+      "author-12",
+      "author-995",
+      "author-13",
+      "author-7",
+      "author-654",
+      "author-722",
+      "author-616",
+      "author-761",
+      "author-966",
+      "author-37",
+      "author-647",
+      "author-650",
+      "author-718",
+      "author-648",
+      "author-970",
+      "author-653",
+      "author-965",
+      "author-414",
+      "author-715",
+      "author-967",
+      "author-614",
+      "author-38",
+      "author-61",
+      "author-717",
+      "author-996",
+      "author-58",
+      "author-60",
+      "author-769",
+      "author-695",
+      "author-39",
+      "author-771",
+      "author-723",
+      "author-721",
+      "author-621",
+      "author-973",
+      "author-719",
+      "author-11",
+      "author-35",
+      "author-46",
+      "author-998",
+      "author-618",
+      "author-416",
+      "author-994",
+      "author-713",
+      "author-728",
+      "author-1011",
+      "author-561",
+      "author-1013"
+    ],
+    "citation": [
+      "citation-287",
+      "citation-405",
+      "citation-4",
+      "citation-23",
+      "citation-17",
+      "citation-5",
+      "citation-319",
+      "citation-320",
+      "citation-328",
+      "citation-407",
+      "citation-331",
+      "citation-13",
+      "citation-332",
+      "citation-317",
+      "citation-288",
+      "citation-400",
+      "citation-14",
+      "citation-281",
+      "citation-336",
+      "citation-316",
+      "citation-410",
+      "citation-18",
+      "citation-276",
+      "citation-401",
+      "citation-275"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-5",
+    "type": "Journal",
+    "raw_name": [
+      "Fake Journal"
+    ],
+    "short": "Fake Journ",
+    "standardized_name": "Fake Journal",
+    "year": [
+      "2025"
+    ],
+    "author": [
+      "author-53",
+      "author-57",
+      "author-56",
+      "author-15",
+      "author-52"
+    ],
+    "citation": [
+      "citation-22",
+      "citation-6",
+      "citation-21",
+      "citation-19"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-6",
+    "type": "Unknown",
+    "raw_name": [
+      "Computer"
+    ],
+    "short": "Computer",
+    "standardized_name": "Computer",
+    "year": [
+      "2013"
+    ],
+    "author": [
+      "author-17",
+      "author-16"
+    ],
+    "citation": [
+      "citation-7"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-7",
+    "type": "Conference",
+    "raw_name": [
+      "Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems"
+    ],
+    "short": "Proceeding",
+    "standardized_name": "Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems",
+    "year": [
+      "2016"
+    ],
+    "author": [
+      "author-18",
+      "author-20",
+      "author-19"
+    ],
+    "citation": [
+      "citation-8"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-8",
+    "type": "Conference",
+    "raw_name": [
+      "Proceedings of the ACM Conference on Human Factors in Computing Systems"
+    ],
+    "short": "Proceeding",
+    "standardized_name": "Proceedings of the ACM Conference on Human Factors in Computing Systems",
+    "year": [
+      "2020",
+      "2009"
+    ],
+    "author": [
+      "author-21",
+      "author-66",
+      "author-25",
+      "author-65",
+      "author-24",
+      "author-23",
+      "author-22",
+      "author-42",
+      "author-64",
+      "author-26"
+    ],
+    "citation": [
+      "citation-25",
+      "citation-9"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-9",
+    "type": "Unknown",
+    "raw_name": [
+      "Visual Informatics",
+      ""
+    ],
+    "short": "Visual Inf",
+    "standardized_name": "Visual Informatics",
+    "year": [
+      "2019",
+      "2017"
+    ],
+    "author": [
+      "author-1008",
+      "author-27",
+      "author-811",
+      "author-1007",
+      "author-815",
+      "author-28"
+    ],
+    "citation": [
+      "citation-10",
+      "citation-408"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-10",
+    "type": "Unknown",
+    "raw_name": [
+      "Computer Graphics Forum"
+    ],
+    "short": "Computer G",
+    "standardized_name": "Computer Graphics Forum",
+    "year": [
+      "2021",
+      "2017",
+      "2014"
+    ],
+    "author": [
+      "author-29",
+      "author-34",
+      "author-32",
+      "author-27",
+      "author-31",
+      "author-33",
+      "author-45",
+      "author-46",
+      "author-30",
+      "author-28"
+    ],
+    "citation": [
+      "citation-16",
+      "citation-12",
+      "citation-11"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-11",
+    "type": "Conference",
+    "raw_name": [
+      "IEEE Pacific Symposium on Visualization"
+    ],
+    "short": "IEEE Pacif",
+    "standardized_name": "IEEE Pacific Symposium on Visualization",
+    "year": [
+      "2017"
+    ],
+    "author": [
+      "author-41",
+      "author-40",
+      "author-44",
+      "author-42",
+      "author-43"
+    ],
+    "citation": [
+      "citation-15"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-12",
+    "type": "Journal",
+    "raw_name": [
+      "Journal of Experimental Social Psychology"
+    ],
+    "short": "Journal of",
+    "standardized_name": "Journal of Experimental Social Psychology",
+    "year": [
+      "2011"
+    ],
+    "author": [
+      "author-54",
+      "author-55"
+    ],
+    "citation": [
+      "citation-20"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-13",
+    "type": "Unknown",
+    "raw_name": [
+      "Computers and Geosciences"
+    ],
+    "short": "Computers ",
+    "standardized_name": "Computers and Geosciences",
+    "year": [
+      "2002"
+    ],
+    "author": [
+      "author-63",
+      "author-62"
+    ],
+    "citation": [
+      "citation-24"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-14",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Internatio",
+    "standardized_name": "International Conference on Intelligent User Interfaces",
+    "year": [
+      "2020",
+      "2018",
+      "2017"
+    ],
+    "author": [
+      "author-726",
+      "author-759",
+      "author-733",
+      "author-622",
+      "author-760",
+      "author-623",
+      "author-731",
+      "author-725",
+      "author-624"
+    ],
+    "citation": [
+      "citation-277",
+      "citation-327",
+      "citation-318"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-15",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Natural La",
+    "standardized_name": "Natural Language Engineering",
+    "year": [
+      "2018"
+    ],
+    "author": [
+      "author-627",
+      "author-626",
+      "author-625"
+    ],
+    "citation": [
+      "citation-278"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-16",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "IEEE Worki",
+    "standardized_name": "IEEE Working Conference on Software Visualization",
+    "year": [
+      "2017"
+    ],
+    "author": [
+      "author-629",
+      "author-628",
+      "author-28",
+      "author-630"
+    ],
+    "citation": [
+      "citation-279"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-17",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "IEEE Compu",
+    "standardized_name": "IEEE Computational Intelligence Magazine",
+    "year": [
+      "2017"
+    ],
+    "author": [
+      "author-631",
+      "author-632",
+      "author-633"
+    ],
+    "citation": [
+      "citation-280"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-18",
+    "type": "Journal",
+    "raw_name": [
+      ""
+    ],
+    "short": "Journal of",
+    "standardized_name": "Journal of Artificial Intelligence Research",
+    "year": [
+      "2017"
+    ],
+    "author": [
+      "author-635",
+      "author-634"
+    ],
+    "citation": [
+      "citation-282"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-19",
+    "type": "Journal",
+    "raw_name": [
+      ""
+    ],
+    "short": "Internatio",
+    "standardized_name": "International Journal of Intelligent Systems",
+    "year": [
+      "2017"
+    ],
+    "author": [
+      "author-636",
+      "author-638",
+      "author-640",
+      "author-637",
+      "author-639"
+    ],
+    "citation": [
+      "citation-283"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-20",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Annual Int",
+    "standardized_name": "Annual International Conference of the IEEE Engineering in Medicine and Biology Society",
+    "year": [
+      "2015"
+    ],
+    "author": [
+      "author-641",
+      "author-642"
+    ],
+    "citation": [
+      "citation-284"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-21",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Italian Na",
+    "standardized_name": "Italian National Conference on Sensors",
+    "year": [
+      "2015"
+    ],
+    "author": [
+      "author-644",
+      "author-645",
+      "author-643"
+    ],
+    "citation": [
+      "citation-285"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-22",
+    "type": "Journal",
+    "raw_name": [
+      ""
+    ],
+    "short": "IEEE trans",
+    "standardized_name": "IEEE transactions on fuzzy systems",
+    "year": [
+      "2014"
+    ],
+    "author": [
+      "author-636",
+      "author-646",
+      "author-640",
+      "author-638"
+    ],
+    "citation": [
+      "citation-286"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-23",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Internatio",
+    "standardized_name": "International Conference on Human Factors in Computing Systems",
+    "year": [
+      "2018",
+      "2013"
+    ],
+    "author": [
+      "author-960",
+      "author-740",
+      "author-749",
+      "author-538",
+      "author-742",
+      "author-741",
+      "author-956",
+      "author-958",
+      "author-743",
+      "author-735",
+      "author-746",
+      "author-957",
+      "author-748",
+      "author-747",
+      "author-656",
+      "author-655",
+      "author-959",
+      "author-620",
+      "author-745",
+      "author-744",
+      "author-654"
+    ],
+    "citation": [
+      "citation-324",
+      "citation-289",
+      "citation-399",
+      "citation-325"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-24",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "European C",
+    "standardized_name": "European Conference on Artificial Intelligence",
+    "year": [
+      "2008"
+    ],
+    "author": [
+      "author-659",
+      "author-658",
+      "author-657",
+      "author-634",
+      "author-626"
+    ],
+    "citation": [
+      "citation-290"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-25",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Internatio",
+    "standardized_name": "International Conference on Natural Language Generation",
+    "year": [
+      "2008"
+    ],
+    "author": [
+      "author-626",
+      "author-659",
+      "author-660",
+      "author-661"
+    ],
+    "citation": [
+      "citation-291"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-26",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "European W",
+    "standardized_name": "European Workshop on Natural Language Generation",
+    "year": [
+      "2007"
+    ],
+    "author": [
+      "author-662",
+      "author-659"
+    ],
+    "citation": [
+      "citation-292"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-27",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Internatio",
+    "standardized_name": "International Conference on Computational Logic",
+    "year": [
+      "2005",
+      "2000",
+      "2012"
+    ],
+    "author": [
+      "author-698",
+      "author-635",
+      "author-664",
+      "author-663",
+      "author-700",
+      "author-668",
+      "author-699",
+      "author-626"
+    ],
+    "citation": [
+      "citation-296",
+      "citation-307",
+      "citation-293"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-28",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Cartograph",
+    "standardized_name": "Cartographica",
+    "year": [
+      "2000"
+    ],
+    "author": [
+      "author-667"
+    ],
+    "citation": [
+      "citation-295"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-29",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Internatio",
+    "standardized_name": "International Joint Conference on Artificial Intelligence",
+    "year": [
+      "1995",
+      "1987"
+    ],
+    "author": [
+      "author-674",
+      "author-792",
+      "author-677",
+      "author-675",
+      "author-624",
+      "author-676"
+    ],
+    "citation": [
+      "citation-435",
+      "citation-300"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-30",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Artificial",
+    "standardized_name": "Artificial Intelligence",
+    "year": [
+      "1993"
+    ],
+    "author": [
+      "author-678",
+      "author-679",
+      "author-682",
+      "author-681",
+      "author-680"
+    ],
+    "citation": [
+      "citation-301"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-31",
+    "type": "Journal",
+    "raw_name": [
+      ""
+    ],
+    "short": "Journal of",
+    "standardized_name": "Journal of Research and Practice in Information Technology",
+    "year": [
+      "2005"
+    ],
+    "author": [
+      "author-704",
+      "author-668",
+      "author-703"
+    ],
+    "citation": [
+      "citation-310"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-32",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Addison-We",
+    "standardized_name": "Addison-Wesley series in behavioral science : quantitative methods",
+    "year": [
+      "1977"
+    ],
+    "author": [
+      "author-686"
+    ],
+    "citation": [
+      "citation-314"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-33",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Evaluation",
+    "standardized_name": "Evaluation and Program Planning",
+    "year": [
+      "2020"
+    ],
+    "author": [
+      "author-710",
+      "author-711",
+      "author-712",
+      "author-709"
+    ],
+    "citation": [
+      "citation-315"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-34",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Computer g",
+    "standardized_name": "Computer graphics forum (Print)",
+    "year": [
+      "2019",
+      "2017"
+    ],
+    "author": [
+      "author-733",
+      "author-762",
+      "author-764",
+      "author-765",
+      "author-731",
+      "author-763",
+      "author-695",
+      "author-761",
+      "author-735",
+      "author-732",
+      "author-654"
+    ],
+    "citation": [
+      "citation-329",
+      "citation-321",
+      "citation-330"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-35",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Computing ",
+    "standardized_name": "Computing in science & engineering (Print)",
+    "year": [
+      "2018"
+    ],
+    "author": [
+      "author-621",
+      "author-28"
+    ],
+    "citation": [
+      "citation-323"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-36",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Inf.",
+    "standardized_name": "Inf.",
+    "year": [
+      "2018"
+    ],
+    "author": [
+      "author-752",
+      "author-750",
+      "author-751",
+      "author-755",
+      "author-758",
+      "author-753",
+      "author-757",
+      "author-756",
+      "author-729",
+      "author-754",
+      "author-555"
+    ],
+    "citation": [
+      "citation-326"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-37",
+    "type": "Conference",
+    "raw_name": [],
+    "short": "IEEE Pacif",
+    "standardized_name": "IEEE Pacific Visualization Symposium",
+    "year": [],
+    "author": [],
+    "citation": [],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-38",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "J. Spatial",
+    "standardized_name": "J. Spatial Inf. Sci.",
+    "year": [
+      "2010"
+    ],
+    "author": [
+      "author-774",
+      "author-775"
+    ],
+    "citation": [
+      "citation-333"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-39",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "IEEE Compu",
+    "standardized_name": "IEEE Computer Graphics and Applications",
+    "year": [
+      "2011",
+      "2006",
+      "2009"
+    ],
+    "author": [
+      "author-776",
+      "author-777",
+      "author-1041",
+      "author-780",
+      "author-778",
+      "author-779"
+    ],
+    "citation": [
+      "citation-422",
+      "citation-334",
+      "citation-335"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-40",
+    "type": "Conference",
+    "raw_name": [],
+    "short": "Proceeding",
+    "standardized_name": "Proceedings 1996 IEEE Symposium on Visual Languages",
+    "year": [],
+    "author": [],
+    "citation": [],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-41",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Eurographi",
+    "standardized_name": "Eurographics Conference on Visualization",
+    "year": [
+      "2019"
+    ],
+    "author": [
+      "author-785",
+      "author-732",
+      "author-784",
+      "author-786"
+    ],
+    "citation": [
+      "citation-337"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-42",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Immersive ",
+    "standardized_name": "Immersive Analytics",
+    "year": [
+      "2018"
+    ],
+    "author": [
+      "author-695",
+      "author-757",
+      "author-787",
+      "author-414"
+    ],
+    "citation": [
+      "citation-338"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-43",
+    "type": "Journal",
+    "raw_name": [
+      ""
+    ],
+    "short": "ACM Transa",
+    "standardized_name": "ACM Transactions on Intelligent Systems and Technology",
+    "year": [
+      "2018"
+    ],
+    "author": [
+      "author-954",
+      "author-955",
+      "author-757",
+      "author-953",
+      "author-553"
+    ],
+    "citation": [
+      "citation-398"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-44",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Neurocompu",
+    "standardized_name": "Neurocomputing",
+    "year": [
+      "2017"
+    ],
+    "author": [
+      "author-696",
+      "author-977",
+      "author-978",
+      "author-860",
+      "author-976",
+      "author-630",
+      "author-975",
+      "author-979"
+    ],
+    "citation": [
+      "citation-402"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-45",
+    "type": "Preprint",
+    "raw_name": [
+      ""
+    ],
+    "short": "arXiv.org",
+    "standardized_name": "arXiv.org",
+    "year": [
+      "2015",
+      "2017"
+    ],
+    "author": [
+      "author-983",
+      "author-985",
+      "author-1020",
+      "author-986",
+      "author-1021",
+      "author-984",
+      "author-981",
+      "author-1016",
+      "author-987",
+      "author-982",
+      "author-1022",
+      "author-980"
+    ],
+    "citation": [
+      "citation-413",
+      "citation-403"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-46",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "IEEE Confe",
+    "standardized_name": "IEEE Conference on Visual Analytics Science and Technology",
+    "year": [
+      "2011",
+      "2017"
+    ],
+    "author": [
+      "author-990",
+      "author-999",
+      "author-988",
+      "author-1040",
+      "author-992",
+      "author-991",
+      "author-989",
+      "author-1000",
+      "author-993",
+      "author-757",
+      "author-1039",
+      "author-1001",
+      "author-18",
+      "author-1002"
+    ],
+    "citation": [
+      "citation-406",
+      "citation-404",
+      "citation-421"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-47",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "The AI Mag",
+    "standardized_name": "The AI Magazine",
+    "year": [
+      "2016"
+    ],
+    "author": [
+      "author-1009",
+      "author-1010"
+    ],
+    "citation": [
+      "citation-409"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-48",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Internatio",
+    "standardized_name": "International Conference on Machine Learning",
+    "year": [
+      "2016"
+    ],
+    "author": [
+      "author-1015",
+      "author-1017",
+      "author-1016"
+    ],
+    "citation": [
+      "citation-411"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-49",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "North Amer",
+    "standardized_name": "North American Chapter of the Association for Computational Linguistics",
+    "year": [
+      "2016"
+    ],
+    "author": [
+      "author-1019",
+      "author-1018",
+      "author-209"
+    ],
+    "citation": [
+      "citation-412"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-50",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Knowledge ",
+    "standardized_name": "Knowledge Discovery and Data Mining",
+    "year": [
+      "2015"
+    ],
+    "author": [
+      "author-1026",
+      "author-1027",
+      "author-1023",
+      "author-1028",
+      "author-1024",
+      "author-1025"
+    ],
+    "citation": [
+      "citation-414"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-51",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Internatio",
+    "standardized_name": "International Conference on Artificial Intelligence and Statistics",
+    "year": [
+      "2014"
+    ],
+    "author": [
+      "author-1016",
+      "author-1029"
+    ],
+    "citation": [
+      "citation-415"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-52",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "SKDD",
+    "standardized_name": "SKDD",
+    "year": [
+      "2014"
+    ],
+    "author": [
+      "author-1030"
+    ],
+    "citation": [
+      "citation-416"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-53",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "Internatio",
+    "standardized_name": "International Conference on Learning Representations",
+    "year": [
+      "2013"
+    ],
+    "author": [
+      "author-1033",
+      "author-1031",
+      "author-1032"
+    ],
+    "citation": [
+      "citation-417"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-54",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "European C",
+    "standardized_name": "European Conference on Computer Vision",
+    "year": [
+      "2013"
+    ],
+    "author": [
+      "author-1035",
+      "author-1034"
+    ],
+    "citation": [
+      "citation-418"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-55",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Prime",
+    "standardized_name": "Prime",
+    "year": [
+      "2012"
+    ],
+    "author": [
+      "author-1036",
+      "author-1037"
+    ],
+    "citation": [
+      "citation-419"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-56",
+    "type": "Journal",
+    "raw_name": [
+      ""
+    ],
+    "short": "Internatio",
+    "standardized_name": "International Journal of Public Health",
+    "year": [
+      "2012"
+    ],
+    "author": [
+      "author-1038"
+    ],
+    "citation": [
+      "citation-420"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-57",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Decision S",
+    "standardized_name": "Decision Support Systems",
+    "year": [
+      "2011"
+    ],
+    "author": [
+      "author-1045",
+      "author-1046",
+      "author-1042",
+      "author-1044",
+      "author-1043"
+    ],
+    "citation": [
+      "citation-423"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-58",
+    "type": "Journal",
+    "raw_name": [
+      ""
+    ],
+    "short": "Journal of",
+    "standardized_name": "Journal of machine learning research",
+    "year": [
+      "2005",
+      "2011"
+    ],
+    "author": [
+      "author-1061",
+      "author-1053",
+      "author-1058",
+      "author-1057",
+      "author-1047",
+      "author-1070",
+      "author-1059",
+      "author-1054",
+      "author-1062",
+      "author-1052",
+      "author-1071",
+      "author-1051",
+      "author-1048",
+      "author-1055",
+      "author-1050",
+      "author-1063",
+      "author-1049",
+      "author-1060",
+      "author-1056"
+    ],
+    "citation": [
+      "citation-424",
+      "citation-428"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-59",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Computatio",
+    "standardized_name": "Computational Statistics & Data Analysis",
+    "year": [
+      "2010"
+    ],
+    "author": [
+      "author-1066",
+      "author-1065",
+      "author-1064"
+    ],
+    "citation": [
+      "citation-425"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-60",
+    "type": "Journal",
+    "raw_name": [
+      ""
+    ],
+    "short": "IEEE Trans",
+    "standardized_name": "IEEE Transactions on Knowledge and Data Engineering",
+    "year": [
+      "2009"
+    ],
+    "author": [
+      "author-1068",
+      "author-1046",
+      "author-1067"
+    ],
+    "citation": [
+      "citation-426"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-61",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Data minin",
+    "standardized_name": "Data mining and knowledge discovery",
+    "year": [
+      "2008"
+    ],
+    "author": [
+      "author-1069"
+    ],
+    "citation": [
+      "citation-427"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-62",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "VIS 05. IE",
+    "standardized_name": "VIS 05. IEEE Visualization, 2005.",
+    "year": [
+      "2005"
+    ],
+    "author": [
+      "author-1072",
+      "author-882"
+    ],
+    "citation": [
+      "citation-429"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-63",
+    "type": "Conference",
+    "raw_name": [
+      ""
+    ],
+    "short": "ACM SIGMOD",
+    "standardized_name": "ACM SIGMOD Conference",
+    "year": [
+      "2000"
+    ],
+    "author": [
+      "author-1073",
+      "author-1074",
+      "author-790"
+    ],
+    "citation": [
+      "citation-430"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-64",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Knowledge-",
+    "standardized_name": "Knowledge-Based Systems",
+    "year": [
+      "1995"
+    ],
+    "author": [
+      "author-1076",
+      "author-1077",
+      "author-1075"
+    ],
+    "citation": [
+      "citation-431"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-65",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Neural Inf",
+    "standardized_name": "Neural Information Processing Systems",
+    "year": [
+      "1995"
+    ],
+    "author": [
+      "author-1078",
+      "author-1079"
+    ],
+    "citation": [
+      "citation-432"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-66",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Data & Kno",
+    "standardized_name": "Data & Knowledge Engineering",
+    "year": [
+      "1994"
+    ],
+    "author": [
+      "author-1045",
+      "author-1080"
+    ],
+    "citation": [
+      "citation-433"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-67",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "at - Autom",
+    "standardized_name": "at - Automatisierungstechnik",
+    "year": [
+      "1978"
+    ],
+    "author": [
+      "author-1087"
+    ],
+    "citation": [
+      "citation-436"
+    ],
+    "venue_graph": []
+  },
+  {
+    "id": "venue-68",
+    "type": "Unknown",
+    "raw_name": [
+      ""
+    ],
+    "short": "Machine-me",
+    "standardized_name": "Machine-mediated learning",
+    "year": [
+      "2004"
+    ],
+    "author": [
+      "author-1092"
+    ],
+    "citation": [
+      "citation-437"
+    ],
+    "venue_graph": []
+  }
+]

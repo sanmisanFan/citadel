@@ -40,3 +40,5 @@ parse
 statcheck
 generate_citation_network
 fetch_pubmed
+
+CLAUDE.md

@@ -30,6 +30,9 @@ export const citationHighlight = (
         const id = e.id;
         const citePos = e.cite_positions;
 
+        // Skip if no cite_positions available
+        if (!citePos) return;
+
         // Filter citations for the current page
         citePos
         .filter((cite) => cite.page === Number(pageElement.dataset.pageNumber))

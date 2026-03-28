@@ -82,7 +82,7 @@ def update_anomalous_with_hop1_sccs(anomalous_data, hop1_sccs_data, citations):
     for edge in links_data:
         scc_edges.add((edge["source"], edge["target"]))
 
-    citation_to_authors = {c_id: c["authors"] for c_id, c in citations.items()}
+    citation_to_authors = {c_id: c["author"] for c_id, c in citations.items()}
 
     # 3) Update each anomalous issue
     for issue in anomalous_data["identifiedIssue"]:
@@ -122,6 +122,108 @@ def update_anomalous_with_hop1_sccs(anomalous_data, hop1_sccs_data, citations):
     return anomalous_data
 
 
+def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_issue_ids):
+    """
+    Create anomalies for citation rings/self-citations based on SCC data,
+    even if the citations don't have low relevancy scores.
+    """
+    anomalous_issues = []
+    issue_id = max([int(id.split("-")[1]) for id in existing_issue_ids] + [0]) + 1
+
+    # Build a lookup: author -> SCC group
+    author_to_group = {}
+    for node in hop1_sccs_data.get("nodes", []):
+        author_to_group[node["id"]] = node.get("group", 0)
+
+    # Build a set of edges (source, target)
+    links_data = hop1_sccs_data.get("links", [])
+    scc_edges = set()
+    for edge in links_data:
+        scc_edges.add((edge["source"], edge["target"]))
+
+    citation_to_authors = {c_id: c["author"] for c_id, c in citations.items()}
+
+    # Track which citations already have anomalies
+    already_flagged = existing_issue_ids
+
+    # Build a lookup from citation_key to enriched paper data
+    citation_key_to_paper = {}
+    for paper in enriched_papers.values():
+        ck = paper.get("citation_key")
+        if ck:
+            citation_key_to_paper[ck] = paper
+
+    # Check each hop-1 citation for SCC involvement
+    for citation_key, citation in citations.items():
+        if citation.get("hop") != 1:
+            continue
+
+        # Skip if already has an anomaly
+        if citation_key in already_flagged:
+            continue
+
+        cited_authors = citation.get("author", [])
+        is_self_citation = False
+        is_citation_ring = False
+
+        for author_id in cited_authors:
+            author_group = author_to_group.get(author_id, 0)
+            if author_group != 0:
+                if (author_id, author_id) in scc_edges:
+                    is_self_citation = True
+                else:
+                    is_citation_ring = True
+                break
+
+        if is_self_citation or is_citation_ring:
+            # Find the mention text from enriched papers
+            mention_text = ""
+            paper = citation_key_to_paper.get(citation_key)
+            if paper:
+                mentions = paper.get("reference_mentions", [])
+                if mentions:
+                    mention_text = mentions[0].get("text", "")
+
+            category_name = "selfCitation" if is_self_citation else "citationRing"
+            display_name = "Self Citation" if is_self_citation else "Citation Ring"
+
+            issue = {
+                "id": f"issue-{issue_id}",
+                "name": "citation",
+                "displayName": "Citation Anomalous",
+                "category": {
+                    "name": category_name,
+                    "displayName": display_name,
+                    "options": {
+                        "citationRing": is_citation_ring,
+                        "selfCitation": is_self_citation,
+                    },
+                },
+                "paper": [citation_key],
+                "page": 1,
+                "explanation": f"This citation involves authors who are part of a suspicious citation pattern ({display_name.lower()}).",
+                "sentence": [{"sentence": mention_text, "bbox": None}],
+            }
+            anomalous_issues.append(issue)
+            issue_id += 1
+
+    return anomalous_issues
+
+
 def find_anomalies(enriched, hop1_sccs_data, citations):
     anomalous_data = generate_anomalous_json(enriched)
-    return update_anomalous_with_hop1_sccs(anomalous_data, hop1_sccs_data, citations)
+    anomalous_data = update_anomalous_with_hop1_sccs(anomalous_data, hop1_sccs_data, citations)
+
+    # Get existing issue paper IDs to avoid duplicates
+    existing_paper_ids = set()
+    for issue in anomalous_data.get("identifiedIssue", []):
+        for paper_key in issue.get("paper", []):
+            existing_paper_ids.add(paper_key)
+
+    # Generate additional anomalies for SCCs not already flagged
+    scc_anomalies = generate_scc_anomalies(
+        hop1_sccs_data, citations, enriched, existing_paper_ids
+    )
+    anomalous_data["identifiedIssue"].extend(scc_anomalies)
+
+    return anomalous_data

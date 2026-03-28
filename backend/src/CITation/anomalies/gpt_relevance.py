@@ -31,7 +31,8 @@ Explanation: [Your detailed 2-3 sentence analysis, including key evidence and re
 """
     # why not return the data as a json or something to make parsing easier later?
     response = client.chat.completions.create(
-        model="gpt-4-turbo-preview",
+        #model="gpt-4-turbo-preview",
+        model="gpt-4o",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=200,
         temperature=0.2,
@@ -49,7 +50,8 @@ def process_citation_mentions(citation_mentions, enriched, client):
 
         # Check if a summary exists for this citation key
         # sometimes the OCR freaks out and finds citations that don't exist...
-        enriched_data = enriched.get(citation_key)
+        # Try both string and int keys since enriched may use either
+        enriched_data = enriched.get(citation_key) or enriched.get(int(ref_number))
 
         if enriched_data:
             summary_text = enriched_data.get("abstract", None)

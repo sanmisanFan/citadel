@@ -10,6 +10,14 @@ export const anomalousColorScheme = {
       retractedPaper: {
         baseColor: "rgba(251,180,185,1)",
         boxColor: "rgba(251,180,185,0.3)"
+      },
+      selfCitation: {
+        baseColor: "rgba(255,127,14,1)",
+        boxColor: "rgba(255,127,14,0.3)"
+      },
+      citationRing: {
+        baseColor: "rgba(214,39,40,1)",
+        boxColor: "rgba(214,39,40,0.3)"
       }
     }
   },
