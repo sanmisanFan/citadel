@@ -237,7 +237,7 @@ def reconstruct_raw_reference(ref: ParsedReference) -> str:
     return ". ".join(parts) if parts else ""
 
 
-def extract_citation_mentions_with_grobid(pdf_content: bytes) -> dict[int, list[str]]:
+def extract_citation_mentions_with_grobid(pdf_content: bytes) -> dict[int, list[dict]]:
     """
     Extract citation mentions (in-text citations) from PDF using grobid.
 
@@ -247,7 +247,7 @@ def extract_citation_mentions_with_grobid(pdf_content: bytes) -> dict[int, list[
         pdf_content: Raw PDF file bytes
 
     Returns:
-        Dictionary mapping reference numbers to list of context sentences
+        Dictionary mapping reference numbers to list of {text, page} dicts
     """
     url = f"{GROBID_URL}/api/processFulltextDocument"
 
@@ -255,7 +255,7 @@ def extract_citation_mentions_with_grobid(pdf_content: bytes) -> dict[int, list[
         response = requests.post(
             url,
             files={"input": ("paper.pdf", pdf_content, "application/pdf")},
-            data={"consolidateCitations": "0", "teiCoordinates": "ref"},
+            data={"consolidateCitations": "0", "teiCoordinates": ["ref", "p"]},
             timeout=GROBID_TIMEOUT,
         )
 
@@ -268,17 +268,17 @@ def extract_citation_mentions_with_grobid(pdf_content: bytes) -> dict[int, list[
         return {}
 
 
-def parse_citation_mentions(tei_xml: str) -> dict[int, list[str]]:
+def parse_citation_mentions(tei_xml: str) -> dict[int, list[dict]]:
     """
-    Parse grobid fulltext TEI XML to extract citation contexts.
+    Parse grobid fulltext TEI XML to extract citation contexts with page numbers.
 
     Args:
         tei_xml: TEI XML string from grobid fulltext endpoint
 
     Returns:
-        Dictionary mapping reference numbers to list of context sentences
+        Dictionary mapping reference numbers to list of {text, page} dicts
     """
-    mentions: dict[int, list[str]] = {}
+    mentions: dict[int, list[dict]] = {}
 
     try:
         root = ET.fromstring(tei_xml)
@@ -296,20 +296,30 @@ def parse_citation_mentions(tei_xml: str) -> dict[int, list[str]]:
             # Get the parent paragraph for context
             parent = ref
             context = ""
+            page_num = 1  # Default to page 1
             for _ in range(5):  # Walk up to 5 levels to find paragraph
                 parent = find_parent(root, parent)
                 if parent is None:
                     break
                 if parent.tag.endswith("}p") or parent.tag == "p":
                     context = "".join(parent.itertext()).strip()
+                    # Try to get page number from paragraph coordinates
+                    coords = parent.get("coords", "")
+                    if coords:
+                        # Coords format: "page,x,y,width,height;..."
+                        first_coord = coords.split(";")[0]
+                        parts = first_coord.split(",")
+                        if parts and parts[0].isdigit():
+                            page_num = int(parts[0])
                     break
 
             if context:
                 if ref_num not in mentions:
                     mentions[ref_num] = []
-                # Avoid duplicate contexts
-                if context not in mentions[ref_num]:
-                    mentions[ref_num].append(context)
+                # Avoid duplicate contexts (check by text)
+                existing_texts = [m["text"] for m in mentions[ref_num]]
+                if context not in existing_texts:
+                    mentions[ref_num].append({"text": context, "page": page_num})
 
     return mentions
 

@@ -62,20 +62,29 @@ def process_citation_mentions(citation_mentions, enriched, client):
             print(f"Processing {len(text_excerpts)} mentions for {citation_key}...")
             citation_assessments = []
 
-            for idx, text in enumerate(text_excerpts, 1):
+            for idx, mention in enumerate(text_excerpts, 1):
+                # Handle both old format (string) and new format (dict with text/page)
+                if isinstance(mention, dict):
+                    text = mention.get("text", "")
+                    page = mention.get("page", 1)
+                else:
+                    text = mention
+                    page = 1
+
                 print(f"  Assessing mention {idx}/{len(text_excerpts)}...")
                 try:
                     assessment = assess_citation_relevance(
                         citation_key, text, summary_text, client
                     )
                     citation_assessments.append(
-                        {"excerpt": text, "assessment": assessment}
+                        {"excerpt": text, "page": page, "assessment": assessment}
                     )
                 except Exception as e:
                     print(f"Error processing mention {idx}: {str(e)}")
                     citation_assessments.append(
                         {
                             "excerpt": text,
+                            "page": page,
                             "assessment": "Assessment failed",
                             "error": str(e),
                         }
@@ -89,11 +98,15 @@ def process_citation_mentions(citation_mentions, enriched, client):
 def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
     """Assign relevance scores to the reference_mentions in enriched_papers.json."""
     # Create a lookup dictionary for assessments by excerpt text
+    # Now includes page info: {excerpt: {assessment, page}}
     assessment_lookup = {}
     for citation_key, assessments in citation_assessments.items():
         for assessment in assessments:
             excerpt = assessment["excerpt"]
-            assessment_lookup[excerpt] = assessment["assessment"]
+            assessment_lookup[excerpt] = {
+                "assessment": assessment["assessment"],
+                "page": assessment.get("page", 1)
+            }
 
     # Update enriched_papers with assessments
     for ref_id, paper in enriched_papers.items():
@@ -103,9 +116,19 @@ def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
         if "reference_mentions" in paper and paper["reference_mentions"]:
             updated_mentions = []
             for mention in paper["reference_mentions"]:
-                if mention in assessment_lookup:
+                # Handle both old format (string) and new format (dict with text/page)
+                if isinstance(mention, dict):
+                    mention_text = mention.get("text", "")
+                    mention_page = mention.get("page", 1)
+                else:
+                    mention_text = mention
+                    mention_page = 1
+
+                if mention_text in assessment_lookup:
                     # Parse the assessment to extract the score
-                    assessment_text = assessment_lookup[mention]
+                    assessment_data = assessment_lookup[mention_text]
+                    assessment_text = assessment_data["assessment"]
+                    page = assessment_data.get("page", mention_page)
                     try:
                         score_line = assessment_text.split("\n")[0]  # "Score: [number]"
                         score = int(score_line.split(": ")[1])
@@ -117,7 +140,8 @@ def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
 
                     updated_mentions.append(
                         {
-                            "text": mention,
+                            "text": mention_text,
+                            "page": page,
                             "relevance_score": score,
                             "assessment": assessment_text,
                         }
@@ -126,7 +150,8 @@ def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
                     # If no assessment exists (e.g., skipped due to no summary), keep original text
                     updated_mentions.append(
                         {
-                            "text": mention,
+                            "text": mention_text,
+                            "page": mention_page,
                             "relevance_score": None,
                             "assessment": "No assessment available",
                         }

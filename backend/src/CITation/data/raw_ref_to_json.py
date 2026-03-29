@@ -696,6 +696,25 @@ Do not include any other text, explanations, or formatting."""
             citation_key = f"citation-{citation_counter}"
             citation_counter += 1
             paper["citation_key"] = citation_key
+
+            # Set cite_number from ref_id (the reference number in the PDF)
+            ref_id = paper.get("ref_id")
+            paper["cite_number"] = ref_id if ref_id else citation_counter - 1
+
+            # Build source field (formatted citation string)
+            authors_list = paper.get("authors", [])
+            if isinstance(authors_list, list) and authors_list:
+                if len(authors_list) > 2:
+                    authors_str = f"{authors_list[0]} et al."
+                else:
+                    authors_str = ", ".join(authors_list)
+            else:
+                authors_str = "Unknown"
+            title = paper.get("title", "Unknown title")
+            venue_name = paper.get("raw_venue", paper.get("venue", ""))
+            year = paper.get("year", "")
+            paper["source"] = f'{authors_str}. "{title}", {venue_name}, {year}.'
+
             entity_keys["citations"][citation_key] = paper
             # citation_graph = [
             #    x.get("citation_key", "") for x in paper.get("enriched_references", [])

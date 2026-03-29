@@ -1,33 +1,33 @@
 {
-  "total_time_seconds": 105.1,
+  "total_time_seconds": 89.12,
   "steps": [
     {
       "step": "reference_extraction",
-      "duration_seconds": 6.22,
+      "duration_seconds": 7.45,
       "details": {
-        "refs": 25,
-        "mentions": 11
+        "refs": 17,
+        "mentions": 17
       }
     },
     {
       "step": "enrichment_s2_openalex",
-      "duration_seconds": 87.88,
+      "duration_seconds": 67.66,
       "details": {
-        "papers": 25
+        "papers": 17
       }
     },
     {
       "step": "relevance_assessment_gpt",
-      "duration_seconds": 8.15,
+      "duration_seconds": 10.31,
       "details": {
-        "assessments": 6
+        "assessments": 8
       }
     },
     {
       "step": "build_graphs_and_anomalies",
-      "duration_seconds": 2.83,
+      "duration_seconds": 3.68,
       "details": {
-        "anomalies": 10
+        "anomalies": 14
       }
     }
   ]

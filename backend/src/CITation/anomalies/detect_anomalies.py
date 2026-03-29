@@ -2,6 +2,46 @@ import json
 import re
 
 
+def extract_citation_sentence(text, citation_key):
+    """
+    Extract just the sentence containing the citation marker from a text excerpt.
+
+    Args:
+        text: Full text excerpt
+        citation_key: Citation key like "citation-5" or just "5"
+
+    Returns:
+        The sentence containing the citation, or a truncated version if not found
+    """
+    if not text:
+        return ""
+
+    # Extract the number from citation key
+    cite_num = citation_key.replace("citation-", "") if "citation-" in citation_key else citation_key
+
+    # Pattern to find citation markers like [5], [5,6], etc.
+    citation_pattern = rf'\[{cite_num}(?:,\s*\d+)*\]|\[(?:\d+,\s*)*{cite_num}(?:,\s*\d+)*\]'
+
+    # Split text into sentences (simple split on . ! ?)
+    sentences = re.split(r'(?<=[.!?])\s+', text)
+
+    for sentence in sentences:
+        if re.search(citation_pattern, sentence):
+            # Found a sentence with our citation
+            return sentence.strip()
+
+    # If citation not found in any sentence, return a truncated excerpt
+    # Find the citation marker and extract surrounding context
+    match = re.search(citation_pattern, text)
+    if match:
+        start = max(0, match.start() - 100)
+        end = min(len(text), match.end() + 100)
+        return text[start:end].strip()
+
+    # Last resort: return first 200 chars
+    return text[:200].strip() + "..." if len(text) > 200 else text.strip()
+
+
 def generate_anomalous_json(enriched_papers):
     """
     Reads an enriched papers JSON file, extracts citations with low relevancy scores (1, 2, or 3 but not 0),
@@ -26,6 +66,7 @@ def generate_anomalous_json(enriched_papers):
             # Identify low relevancy citations (score 1, 2, or 3, but not 0)
             if relevance_score is not None and 0 < relevance_score <= 3:
                 raw_explanation = mention.get("assessment", "No explanation provided.")
+                page_num = mention.get("page", 1)  # Get page number from mention
 
                 # (1) Remove "score: X" text (case-insensitive)
                 no_score = re.sub(r"(?i)\bscore:\s*\d+", "", raw_explanation).strip()
@@ -42,6 +83,10 @@ def generate_anomalous_json(enriched_papers):
                     else "No explanation provided."
                 )
 
+                # Extract just the sentence containing the citation, not the whole paragraph
+                full_text = mention.get("text", "")
+                sentence_text = extract_citation_sentence(full_text, citation_key)
+
                 issue = {
                     "id": f"issue-{issue_id}",
                     "name": "citation",
@@ -52,9 +97,9 @@ def generate_anomalous_json(enriched_papers):
                         "options": {"citationRing": False, "selfCitation": False},
                     },
                     "paper": [citation_key],
-                    "page": 1,  # Can be customized if you extract page info
+                    "page": page_num,  # Use actual page number from citation mention
                     "explanation": final_explanation,
-                    "sentence": [{"sentence": mention.get("text", ""), "bbox": None}],
+                    "sentence": [{"sentence": sentence_text, "bbox": None}],
                 }
                 anomalous_issues.append(issue)
                 issue_id += 1
@@ -194,7 +239,9 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
             if paper:
                 mentions = paper.get("reference_mentions", [])
                 if mentions:
-                    mention_text = mentions[0].get("text", "")
+                    full_text = mentions[0].get("text", "")
+                    # Extract just the sentence containing the citation
+                    mention_text = extract_citation_sentence(full_text, citation_key)
 
             category_name = "selfCitation" if is_self_citation else "citationRing"
             display_name = "Self Citation" if is_self_citation else "Citation Ring"
