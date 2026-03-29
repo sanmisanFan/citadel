@@ -36,7 +36,7 @@ class PaperProcessor:
     def __init__(
         self,
         max_retries=3,
-        request_delay=1,
+        request_delay=0.5,
         missing_ref_callback=missing_reference_callback_debug,
         gpt_client=None,
     ):
@@ -70,9 +70,9 @@ class PaperProcessor:
             "D. Vader": "Darth Vader",
         }
 
-    def fetch_abstract_with_gpt(self, title: str, doi: str = None) -> str | None:
+    def fetch_abstract_with_web_search(self, title: str, doi: str = None) -> str | None:
         """
-        Use GPT to fetch the abstract for a paper using its title and/or DOI.
+        Use OpenAI web search to find the abstract for a paper.
 
         Args:
             title: Paper title
@@ -80,6 +80,51 @@ class PaperProcessor:
 
         Returns:
             Abstract text or None if not found
+        """
+        if not self.gpt_client:
+            return None
+
+        identifier = f'"{title}"'
+        if doi:
+            identifier += f" DOI:{doi}"
+
+        prompt = f"""Search for the academic paper: {identifier}
+
+Find and return ONLY the paper's abstract. Do not include the title, authors, or any other information.
+If you cannot find the abstract, return exactly: NOT_FOUND"""
+
+        try:
+            # Use the Responses API with web search tool
+            response = self.gpt_client.responses.create(
+                model="gpt-4o-mini",
+                tools=[{"type": "web_search_preview"}],
+                input=prompt,
+            )
+
+            # Extract text from response
+            result = ""
+            for item in response.output:
+                if item.type == "message":
+                    for content in item.content:
+                        if content.type == "output_text":
+                            result = content.text.strip()
+                            break
+
+            if not result or result == "NOT_FOUND" or len(result) < 50:
+                print(f"DEBUG: Web search could not find abstract for: {title}")
+                return None
+
+            print(f"DEBUG: Web search found abstract for: {title}")
+            return result
+
+        except Exception as e:
+            print(f"DEBUG: Web search abstract fetch failed for {title}: {e}")
+            # Fall back to regular GPT (from training data)
+            return self._fetch_abstract_with_gpt_fallback(title, doi)
+
+    def _fetch_abstract_with_gpt_fallback(self, title: str, doi: str = None) -> str | None:
+        """
+        Fallback: Use GPT training data to find abstract (less reliable).
         """
         if not self.gpt_client:
             return None
@@ -104,14 +149,14 @@ Do not include any other text, explanations, or formatting."""
             result = response.choices[0].message.content.strip()
 
             if result == "NOT_FOUND" or len(result) < 50:
-                print(f"DEBUG: GPT could not find abstract for: {title}")
+                print(f"DEBUG: GPT fallback could not find abstract for: {title}")
                 return None
 
-            print(f"DEBUG: GPT found abstract for: {title}")
+            print(f"DEBUG: GPT fallback found abstract for: {title}")
             return result
 
         except Exception as e:
-            print(f"DEBUG: GPT abstract fetch failed for {title}: {e}")
+            print(f"DEBUG: GPT fallback failed for {title}: {e}")
             return None
 
     def search_paper(self, title: str):
@@ -318,6 +363,73 @@ Do not include any other text, explanations, or formatting."""
             print(f"DEBUG: OpenAlex API request failed for title {title}: {e}")
             return None
 
+    def batch_lookup_openalex_by_dois(self, parsed_data):
+        """
+        Batch lookup papers on OpenAlex by DOI.
+        Uses the filter=doi:doi1|doi2|doi3 syntax for efficient batch requests.
+
+        Args:
+            parsed_data: List of parsed references with doi fields
+
+        Returns:
+            Dict mapping ref_id to OpenAlex paper data for found papers
+        """
+        # Collect DOIs and map them to ref_ids
+        doi_to_ref = {}
+        for paper in parsed_data:
+            ref_id = paper.get("ref_id")
+            doi = paper.get("doi")
+            if doi and ref_id:
+                # Clean DOI - remove URL prefix if present
+                clean_doi = doi.replace("https://doi.org/", "").replace("http://doi.org/", "")
+                doi_to_ref[clean_doi] = ref_id
+
+        if not doi_to_ref:
+            print("DEBUG: No DOIs found for OpenAlex batch lookup")
+            return {}
+
+        results = {}
+        dois = list(doi_to_ref.keys())
+
+        # OpenAlex allows up to 50 DOIs per request with the filter syntax
+        batch_size = 50
+
+        print(f"DEBUG: OpenAlex batch lookup for {len(dois)} DOIs...")
+
+        for i in range(0, len(dois), batch_size):
+            batch_dois = dois[i:i + batch_size]
+            # Build filter: doi:doi1|doi2|doi3
+            doi_filter = "|".join(batch_dois)
+            params = {
+                "filter": f"doi:{doi_filter}",
+                "per-page": batch_size,
+            }
+
+            try:
+                response = requests.get(OPENALEX_URL, params=params, timeout=30)
+                response.raise_for_status()
+                data = response.json()
+
+                for work in data.get("results", []):
+                    # Extract DOI from the work and map back to ref_id
+                    work_doi = work.get("doi", "")
+                    if work_doi:
+                        # OpenAlex returns DOI as full URL, clean it
+                        clean_work_doi = work_doi.replace("https://doi.org/", "").replace("http://doi.org/", "")
+                        if clean_work_doi in doi_to_ref:
+                            ref_id = doi_to_ref[clean_work_doi]
+                            results[ref_id] = work
+                            print(f"DEBUG: Found OpenAlex data for ref {ref_id} via batch DOI lookup")
+
+                if i + batch_size < len(dois):
+                    sleep(self.request_delay)
+
+            except Exception as e:
+                print(f"DEBUG: OpenAlex batch DOI lookup failed: {e}")
+
+        print(f"DEBUG: OpenAlex batch lookup found {len(results)}/{len(dois)} papers")
+        return results
+
     def _merge_authors(self, parsed_authors, s2_authors, openalex_authors=None):
         """
         Merge author lists, reusing entity keys if ORCID, s2_id, raw_name, or name matches.
@@ -420,9 +532,13 @@ Do not include any other text, explanations, or formatting."""
         print("DEBUG: Starting enrichment of GPT parsed data")
         enriched = []
 
-        # First, batch lookup papers by DOI/arXiv ID
+        # First, batch lookup papers by DOI/arXiv ID on Semantic Scholar
         batch_results = self.batch_lookup_by_identifiers(parsed_data)
-        print(f"DEBUG: Batch lookup returned {len(batch_results)} results")
+        print(f"DEBUG: S2 batch lookup returned {len(batch_results)} results")
+
+        # Also batch lookup on OpenAlex by DOI for papers that may need it
+        openalex_batch_results = self.batch_lookup_openalex_by_dois(parsed_data)
+        print(f"DEBUG: OpenAlex batch lookup returned {len(openalex_batch_results)} results")
 
         for i, paper in enumerate(parsed_data, 1):
             title = paper.get("title")
@@ -457,6 +573,7 @@ Do not include any other text, explanations, or formatting."""
             # Check if we already have S2 data from batch lookup
             ref_id = paper.get("ref_id")
             s2_data = batch_results.get(ref_id)
+            made_individual_api_call = False
 
             # Fall back to title search if batch lookup didn't find it
             if s2_data:
@@ -467,6 +584,7 @@ Do not include any other text, explanations, or formatting."""
                 )
                 # this gets the paper id from semantic scholar, but we need to hit their API again for the rest of the metadata.
                 paper_id = self.search_paper(title)
+                made_individual_api_call = True
 
                 if paper_id:
                     print(f"DEBUG: Found paper ID {paper_id} for paper {i}")
@@ -498,7 +616,15 @@ Do not include any other text, explanations, or formatting."""
                 print(
                     f"DEBUG: ORCID missing or Semantic Scholar data not available for paper {i}, attempting OpenAlex..."
                 )
-                openalex_data = self.get_paper_details_openalex(title)
+                # First check batch results
+                openalex_data = openalex_batch_results.get(ref_id)
+                if openalex_data:
+                    print(f"DEBUG: Paper {i} found via OpenAlex batch DOI lookup")
+                else:
+                    # Fall back to title search if not in batch results
+                    openalex_data = self.get_paper_details_openalex(title)
+                    made_individual_api_call = True
+
                 if openalex_data:
                     if need_openalex_for_authors:
                         openalex_authors = get_openalex_authors(openalex_data)
@@ -525,7 +651,10 @@ Do not include any other text, explanations, or formatting."""
                 enriched_paper = self._format_gpt_only(paper)
                 enriched_paper["is_artificial"] = False
                 enriched.append(enriched_paper)
-            sleep(self.request_delay)
+
+            # Only sleep if we made individual API calls (not batch)
+            if made_individual_api_call:
+                sleep(self.request_delay)
         return enriched
 
     def _format_gpt_only(self, paper):
@@ -610,11 +739,11 @@ Do not include any other text, explanations, or formatting."""
             if s2_tldr:
                 abstract = s2_tldr.get("text", None)
 
-        # GPT fallback for abstract if still not found
+        # Web search fallback for abstract if still not found
         if not abstract:
             title = s2.get("title", parsed.get("title"))
             doi = s2.get("externalIds", {}).get("DOI", parsed.get("doi"))
-            abstract = self.fetch_abstract_with_gpt(title, doi)
+            abstract = self.fetch_abstract_with_web_search(title, doi)
 
         merged = {
             "title": s2.get("title", parsed.get("title")),
@@ -657,6 +786,27 @@ Do not include any other text, explanations, or formatting."""
             else openalex.get("host_venue", {}).get("display_name", parsed.get("venue"))
         )
 
+        # Try to get abstract from OpenAlex abstract_inverted_index
+        abstract = parsed.get("abstract")
+        if not abstract:
+            abstract_inverted = openalex.get("abstract_inverted_index")
+            if abstract_inverted:
+                # Reconstruct abstract from inverted index
+                try:
+                    word_positions = []
+                    for word, positions in abstract_inverted.items():
+                        for pos in positions:
+                            word_positions.append((pos, word))
+                    word_positions.sort(key=lambda x: x[0])
+                    abstract = " ".join(word for _, word in word_positions)
+                except Exception as e:
+                    print(f"DEBUG: Failed to reconstruct OpenAlex abstract: {e}")
+
+        # Web search fallback if still no abstract
+        if not abstract:
+            doi = openalex.get("doi", parsed.get("doi"))
+            abstract = self.fetch_abstract_with_web_search(title, doi)
+
         merged = {
             "title": title,
             "author": self._merge_authors(
@@ -673,7 +823,7 @@ Do not include any other text, explanations, or formatting."""
             "semantic_scholar_id": None,
             "pdf_url": None,
             "arxiv_id": parsed.get("arxiv_id"),
-            "abstract": parsed.get("abstract"),
+            "abstract": abstract,
             "doi": openalex.get("doi", parsed.get("doi")),
         }
         if "ref_id" in parsed:
