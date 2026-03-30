@@ -1,13 +1,12 @@
 .App {
-  /*text-align: center;*/
   width: 100%;
   height: 100%;
-  /*font-family: Lato, Sans-Serif, serif !important;*/
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 ::-webkit-scrollbar {
-  width: 0; /* remove scrollbar space */
-  background: transparent; /* optional: just make scrollbar invisible */
+  width: 0;
+  background: transparent;
 }
 
 .headContainer {
@@ -17,7 +16,7 @@
 
 .mainContainer {
   min-height: 100vh;
-  background-color: #dee2e6 /*rgb(237, 239, 240)*/;
+  background-color: #f5f6f8;
 }
 
 .logo {
@@ -31,14 +30,313 @@
   margin-right: 24px;
 }
 
-/* ugly css for now, need to figure out how to load in antd style */
-.pdf_upload {
-    border: 1px dashed grey;
+/* ==================== Upload Page Styles ==================== */
+
+.upload-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
 }
 
-.pdf_upload:hover {
-    border: 1px solid grey;
+.upload-container {
+  width: 100%;
+  max-width: 640px;
+}
 
+.upload-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.brand-title {
+  margin: 0 !important;
+  font-weight: 600 !important;
+  color: #1a2a3a !important;
+  letter-spacing: -0.5px;
+}
+
+.brand-subtitle {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  color: #5a6a7a;
+}
+
+.upload-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+}
+
+.upload-section,
+.metadata-section {
+  margin-bottom: 8px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.section-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #1a2a3a;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.section-title {
+  font-size: 16px;
+  color: #1a2a3a;
+}
+
+.section-divider {
+  margin: 24px 0 !important;
+  border-color: #e8eaec !important;
+}
+
+/* PDF Dragger */
+.pdf-dragger {
+  border: 2px dashed #d0d5dc !important;
+  border-radius: 8px !important;
+  background: #fafbfc !important;
+  transition: all 0.2s ease;
+}
+
+.pdf-dragger:hover {
+  border-color: #1890ff !important;
+  background: #f0f7ff !important;
+}
+
+.pdf-dragger .ant-upload {
+  padding: 32px 20px !important;
+}
+
+.upload-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.upload-icon {
+  font-size: 48px;
+  color: #8c9bab;
+}
+
+.upload-text {
+  font-size: 15px;
+  color: #3a4a5a;
+}
+
+.upload-hint {
+  font-size: 13px;
+}
+
+.upload-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.upload-success-icon {
+  font-size: 36px;
+  color: #52c41a;
+  margin-bottom: 8px;
+}
+
+.file-size {
+  font-size: 13px;
+}
+
+/* Form Fields */
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3a4a5a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.field-label .anticon {
+  color: #8c9bab;
+}
+
+/* Author Input Array */
+.author-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.author-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.author-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.author-row .ant-input {
+  flex: 1;
+}
+
+.author-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.author-actions .ant-btn {
+  padding: 4px 12px;
+  height: 32px;
+  font-size: 13px;
+}
+
+/* Submit Section */
+.submit-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.submit-button {
+  height: 48px;
+  padding: 0 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  background: #1a2a3a;
+  border-color: #1a2a3a;
+}
+
+.submit-button:hover {
+  background: #2a3a4a !important;
+  border-color: #2a3a4a !important;
+}
+
+.processing-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  width: 100%;
+}
+
+.progress-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.progress-status {
+  font-size: 15px;
+  color: #1a2a3a;
+}
+
+.progress-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-icon {
+  color: #52c41a;
+  font-size: 14px;
+}
+
+.step-text {
+  font-size: 13px;
+}
+
+.processing-text {
+  color: #5a6a7a;
+}
+
+/* Footer */
+.upload-footer {
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 20px;
+}
+
+.upload-footer .ant-typography {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ==================== Missing Abstracts Modal ==================== */
+
+.missing-abstracts-modal {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.missing-list .ant-list-item {
+  padding: 12px 0 !important;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.missing-paper-title {
+  font-size: 13px;
+  color: #3a4a5a;
+}
+
+.missing-list .ant-list-item-meta {
+  align-items: center;
+}
+
+.missing-list .ant-btn-primary {
+  background: #52c41a;
+  border-color: #52c41a;
+}
+
+.missing-list .ant-btn-primary:hover {
+  background: #73d13d !important;
+  border-color: #73d13d !important;
 }
 
 /** Redefine card style features */

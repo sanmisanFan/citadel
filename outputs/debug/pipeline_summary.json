@@ -1,9 +1,9 @@
 {
-  "total_time_seconds": 113.75,
+  "total_time_seconds": 146.82,
   "steps": [
     {
       "step": "reference_extraction",
-      "duration_seconds": 7.08,
+      "duration_seconds": 6.65,
       "details": {
         "refs": 17,
         "mentions": 17
@@ -11,21 +11,21 @@
     },
     {
       "step": "enrichment_s2_openalex",
-      "duration_seconds": 84.56,
+      "duration_seconds": 113.6,
       "details": {
         "papers": 17
       }
     },
     {
       "step": "relevance_assessment_gpt",
-      "duration_seconds": 18.4,
+      "duration_seconds": 23.0,
       "details": {
         "assessments": 13
       }
     },
     {
       "step": "build_graphs_and_anomalies",
-      "duration_seconds": 3.68,
+      "duration_seconds": 3.54,
       "details": {
         "anomalies": 15
       }

@@ -9,14 +9,14 @@
         "displayName": "Low Relevancy",
         "options": {
           "citationRing": false,
-          "selfCitation": true
+          "selfCitation": false
         }
       },
       "paper": [
         "citation-1"
       ],
       "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and only minimally discussed. The excerpt briefly notes the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection using deep learning. There is no direct connection between the paper's focus on IoT and the discussion of medical image segmentation in the text.",
+      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
       "sentence": [
         {
           "sentence": "Fortunately, convolutional neural networks (CNNs) have become famous for scientific photograph segmentation due to their better accuracy and processing pace [1].CNNs generate consequences based totally on found-out styles from supplied example information and can discover relationships between unique clinical images and words to them.",
@@ -40,7 +40,7 @@
         "citation-2"
       ],
       "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and only minimally discussed. The excerpt briefly notes the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection using deep learning. There is no direct connection between the paper's focus on IoT and the discussion of medical image segmentation in the text.",
+      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
       "sentence": [
         {
           "sentence": "furthermore, CNNs can investigate and combine more than one pics of different modalities collectively, such as MRI and X-ray photos, and generate a pleasant standard result from the combination [2].",
@@ -64,7 +64,7 @@
         "citation-3"
       ],
       "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and only minimally discussed. The excerpt briefly notes the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection using deep learning. There is no direct connection between the paper's focus on IoT and the discussion of medical image segmentation in the text.",
+      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
       "sentence": [
         {
           "sentence": "As deep studying technology continues to evolve, the possibilities for correct and well-timed clinical imaging segmentation become more practical [3].",
@@ -88,7 +88,7 @@
         "citation-4"
       ],
       "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and only minimally discussed. The excerpt briefly notes the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection using deep learning. There is no direct connection between the paper's focus on IoT and the discussion of medical image segmentation in the text.",
+      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
       "sentence": [
         {
           "sentence": "By leveraging the strength of Convolutional Neural Networks (CNNs), developers, physicians, and different medical personnel can accurately segment various images for diagnostic, research, and even therapeutic functions [4].",
@@ -112,7 +112,7 @@
         "citation-5"
       ],
       "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and only minimally discussed. The excerpt briefly notes the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection using deep learning. There is no direct connection between the paper's focus on IoT and the discussion of medical image segmentation in the text.",
+      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
       "sentence": [
         {
           "sentence": "This powerful capability permits segmentation networks to accurately pick out and classify objects in scientific pix even as simultaneously spotting intricate structures [5].The development and alertness of Deep getting-to-know for clinical photograph Segmentation has seen full-size innovation in recent years.",
@@ -136,7 +136,7 @@
         "citation-6"
       ],
       "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and only minimally discussed. The excerpt briefly notes the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection using deep learning. There is no direct connection between the paper's focus on IoT and the discussion of medical image segmentation in the text.",
+      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
       "sentence": [
         {
           "sentence": "it consists of CT scans, MRIs, and X-rays for various medical programs, including detecting tumors, figuring out bone fractures, and conducting pathological analysis [6].",
@@ -160,7 +160,7 @@
         "citation-8"
       ],
       "page": 3,
-      "explanation": "The mention of citation 9 in the text excerpt is peripheral and minimally discussed. The excerpt claims that CNNs are easy to use and require fewer parameters, which is a broad statement. The cited paper summary discusses a specific model, ConvUNeXt, which reduces parameters for medical image segmentation. While there is a thematic connection regarding parameter efficiency, the excerpt does not engage with the specific methods or results of the cited paper, making the reference only marginally relevant.",
+      "explanation": "The mention of citation 9 in the text excerpt is peripheral and only minimally discussed. The excerpt claims that CNNs require fewer parameters and offer higher accuracy, but it does not directly engage with the specific methods or results of the cited paper. The cited paper focuses on a specific model, ConvUNeXt, which reduces parameters and improves performance in medical image segmentation. However, the excerpt does not discuss these specific contributions or how they relate to the general statement about CNNs, making the citation only marginally relevant.",
       "sentence": [
         {
           "sentence": "Ease of use: CNNs are typically sincere to apply, requiring fewer parameters to be adjusted, while imparting higher accuracy than conventional algorithms [8][9].",
@@ -184,7 +184,7 @@
         "citation-9"
       ],
       "page": 3,
-      "explanation": "The mention of citation 9 in the text excerpt is peripheral and minimally discussed. The excerpt claims that CNNs are easy to use and require fewer parameters, which is a broad statement. The cited paper summary discusses a specific model, ConvUNeXt, which reduces parameters for medical image segmentation. While there is a thematic connection regarding parameter efficiency, the excerpt does not engage with the specific methods or results of the cited paper, making the reference only marginally relevant.",
+      "explanation": "The mention of citation 9 in the text excerpt is peripheral and only minimally discussed. The excerpt claims that CNNs require fewer parameters and offer higher accuracy, but it does not directly engage with the specific methods or results of the cited paper. The cited paper focuses on a specific model, ConvUNeXt, which reduces parameters and improves performance in medical image segmentation. However, the excerpt does not discuss these specific contributions or how they relate to the general statement about CNNs, making the citation only marginally relevant.",
       "sentence": [
         {
           "sentence": "Ease of use: CNNs are typically sincere to apply, requiring fewer parameters to be adjusted, while imparting higher accuracy than conventional algorithms [8][9].",
@@ -208,7 +208,7 @@
         "citation-12"
       ],
       "page": 3,
-      "explanation": "The mention of citation 15 in the text is peripheral and minimally discussed. The excerpt briefly mentions the computational expense and scalability issues of deep learning models in medical imaging, which could relate to the efficiency improvements suggested by the Double Attention Res-U-Net architecture in the cited paper. However, there is no direct engagement with the methods or results of the cited work, and the connection is implied rather than explicitly stated.",
+      "explanation": "The mention of citation 15 in the text is peripheral and only minimally discussed. The excerpt briefly touches on the issue of computational efficiency in deep learning models for medical image segmentation, which is a general challenge in the field. The cited paper introduces a specific architecture, Double Attention Res-U-Net, which might address such challenges, but the text does not engage with the specific methods or results of the paper. Instead, it only alludes to the broader context of computational demands in medical image segmentation, without a direct discussion of the cited work's contributions.",
       "sentence": [
         {
           "sentence": "Moreover, studies into area-precise understanding have to be conducted, as this could also help improve the functionality of modern-day deep-gaining knowledge state modern algorithms to segment medical snapshots [12] successfully.",
@@ -232,7 +232,7 @@
         "citation-13"
       ],
       "page": 3,
-      "explanation": "The mention of citation 15 in the text is peripheral and minimally discussed. The excerpt briefly mentions the computational expense and scalability issues of deep learning models in medical imaging, which could relate to the efficiency improvements suggested by the Double Attention Res-U-Net architecture in the cited paper. However, there is no direct engagement with the methods or results of the cited work, and the connection is implied rather than explicitly stated.",
+      "explanation": "The mention of citation 15 in the text is peripheral and only minimally discussed. The excerpt briefly touches on the issue of computational efficiency in deep learning models for medical image segmentation, which is a general challenge in the field. The cited paper introduces a specific architecture, Double Attention Res-U-Net, which might address such challenges, but the text does not engage with the specific methods or results of the paper. Instead, it only alludes to the broader context of computational demands in medical image segmentation, without a direct discussion of the cited work's contributions.",
       "sentence": [
         {
           "sentence": "However, there are various demanding situations-each in phrases trendy the accuracy and efficiency modern day deep trendy-that want to be addressed for the hit implementation of cutting-edge convolutional neural networks for medical picture segmentation [13].The accuracy of cutting-edge deep brand new networks for scientific image segmentation depends on the amount of today's statistics available.",
@@ -256,7 +256,7 @@
         "citation-14"
       ],
       "page": 3,
-      "explanation": "The mention of citation 15 in the text is peripheral and minimally discussed. The excerpt briefly mentions the computational expense and scalability issues of deep learning models in medical imaging, which could relate to the efficiency improvements suggested by the Double Attention Res-U-Net architecture in the cited paper. However, there is no direct engagement with the methods or results of the cited work, and the connection is implied rather than explicitly stated.",
+      "explanation": "The mention of citation 15 in the text is peripheral and only minimally discussed. The excerpt briefly touches on the issue of computational efficiency in deep learning models for medical image segmentation, which is a general challenge in the field. The cited paper introduces a specific architecture, Double Attention Res-U-Net, which might address such challenges, but the text does not engage with the specific methods or results of the paper. Instead, it only alludes to the broader context of computational demands in medical image segmentation, without a direct discussion of the cited work's contributions.",
       "sentence": [
         {
           "sentence": "Performance is another challenge ultra-modern deep ultra-modern for clinical photo segmentation [14].",
@@ -280,7 +280,7 @@
         "citation-15"
       ],
       "page": 3,
-      "explanation": "The mention of citation 15 in the text is peripheral and minimally discussed. The excerpt briefly mentions the computational expense and scalability issues of deep learning models in medical imaging, which could relate to the efficiency improvements suggested by the Double Attention Res-U-Net architecture in the cited paper. However, there is no direct engagement with the methods or results of the cited work, and the connection is implied rather than explicitly stated.",
+      "explanation": "The mention of citation 15 in the text is peripheral and only minimally discussed. The excerpt briefly touches on the issue of computational efficiency in deep learning models for medical image segmentation, which is a general challenge in the field. The cited paper introduces a specific architecture, Double Attention Res-U-Net, which might address such challenges, but the text does not engage with the specific methods or results of the paper. Instead, it only alludes to the broader context of computational demands in medical image segmentation, without a direct discussion of the cited work's contributions.",
       "sentence": [
         {
           "sentence": "This lack of performance can limit the scalability of modern deep latest in medical programs [15].",
@@ -304,7 +304,7 @@
         "citation-16"
       ],
       "page": 3,
-      "explanation": "The mention of citation 17 in the text is peripheral and only minimally discussed. The excerpt briefly acknowledges challenges in deep learning for medical image segmentation but does not engage with the specific content, methods, or results of the cited paper, which discusses an adaptive momentum rate for optimization. There is no direct connection or discussion of the paper's focus on momentum rate adjustments in the context of the challenges mentioned in the excerpt.",
+      "explanation": "The mention of citation 17 in the text excerpt is peripheral and only minimally discussed. The excerpt briefly acknowledges challenges in deep learning for medical image segmentation but does not engage with the specific content, methods, or results of the cited paper, which focuses on an adaptive momentum rate for optimization. There is no direct connection between the challenges mentioned in the excerpt and the adaptive momentum rate proposed in the cited paper.",
       "sentence": [
         {
           "sentence": "Overfitting is the tendency of state-of-the-art networks to \"drown\" information instead of generalizing and latest from it [16].",
@@ -328,7 +328,7 @@
         "citation-17"
       ],
       "page": 3,
-      "explanation": "The mention of citation 17 in the text is peripheral and only minimally discussed. The excerpt briefly acknowledges challenges in deep learning for medical image segmentation but does not engage with the specific content, methods, or results of the cited paper, which discusses an adaptive momentum rate for optimization. There is no direct connection or discussion of the paper's focus on momentum rate adjustments in the context of the challenges mentioned in the excerpt.",
+      "explanation": "The mention of citation 17 in the text excerpt is peripheral and only minimally discussed. The excerpt briefly acknowledges challenges in deep learning for medical image segmentation but does not engage with the specific content, methods, or results of the cited paper, which focuses on an adaptive momentum rate for optimization. There is no direct connection between the challenges mentioned in the excerpt and the adaptive momentum rate proposed in the cited paper.",
       "sentence": [
         {
           "sentence": "Even though deep getting to know modern scientific photo segmentation is a promising generation, several challenges need to be addressed to ensure its success [17].",

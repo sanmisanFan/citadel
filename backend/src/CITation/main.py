@@ -4,8 +4,12 @@ from fastapi import (
     WebSocket,
     WebSocketException,
     WebSocketDisconnect,
+    File,
+    UploadFile,
+    Form,
 )
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from .data.utils import pdf_to_md_str
 from .data.raw_ref_to_json import PaperProcessor
 from .data.process_references import process_markdown_string, parse_references
@@ -24,6 +28,7 @@ from .data.grobid import (
     extract_references_with_grobid,
     extract_citation_mentions_with_grobid,
     extract_formula_coordinates_with_grobid,
+    extract_abstract_with_grobid,
 )
 from openai import OpenAI
 
@@ -174,6 +179,15 @@ if "OPENAI_API_KEY" not in os.environ:
     sys.exit(1)
 
 app = FastAPI()
+
+# Add CORS middleware for frontend API calls
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
@@ -366,3 +380,114 @@ async def process_pdf_ws(ws: WebSocket):
 
     except WebSocketDisconnect:
         print("Disconnected.")
+
+
+@app.post("/api/extract_abstract")
+async def extract_abstract_from_pdf(
+    file: UploadFile = File(...),
+    citation_id: str = Form(...),
+):
+    """
+    Extract abstract from a PDF file using GROBID.
+    Used when a referenced paper is missing its abstract.
+
+    Args:
+        file: PDF file upload
+        citation_id: ID of the citation to update
+
+    Returns:
+        Dict with citation_id, abstract, title, authors
+    """
+    if not is_grobid_available():
+        raise HTTPException(
+            status_code=503,
+            detail="GROBID service is not available. Please start GROBID first."
+        )
+
+    contents = await file.read()
+
+    result = await asyncio.to_thread(extract_abstract_with_grobid, contents)
+
+    if result is None:
+        raise HTTPException(
+            status_code=422,
+            detail="Could not extract abstract from PDF. The PDF may not have an abstract section."
+        )
+
+    return {
+        "citation_id": citation_id,
+        "abstract": result.get("abstract"),
+        "title": result.get("title"),
+        "authors": result.get("authors", []),
+    }
+
+
+@app.post("/api/extract_abstracts")
+async def extract_abstracts_batch(
+    files: list[UploadFile] = File(...),
+    citation_ids: str = Form(...),  # Comma-separated citation IDs
+):
+    """
+    Extract abstracts from multiple PDFs using GROBID.
+    Accepts multipart form data with multiple files and comma-separated citation IDs.
+
+    Args:
+        files: List of PDF file uploads
+        citation_ids: Comma-separated citation IDs matching the files order
+
+    Returns:
+        Dict with results for each citation
+    """
+    if not is_grobid_available():
+        raise HTTPException(
+            status_code=503,
+            detail="GROBID service is not available. Please start GROBID first."
+        )
+
+    ids = citation_ids.split(",")
+
+    if len(files) != len(ids):
+        raise HTTPException(
+            status_code=400,
+            detail=f"Number of files ({len(files)}) doesn't match number of citation IDs ({len(ids)})"
+        )
+
+    results = []
+
+    for file, cid in zip(files, ids):
+        contents = await file.read()
+        print(f"DEBUG: Processing file '{file.filename}' ({len(contents)} bytes) for citation {cid}")
+
+        if len(contents) == 0:
+            print(f"DEBUG: Warning - file '{file.filename}' is empty!")
+            results.append({
+                "citation_id": cid.strip(),
+                "abstract": None,
+                "success": False,
+                "error": "Empty file received",
+            })
+            continue
+
+        result = await asyncio.to_thread(extract_abstract_with_grobid, contents)
+
+        if result and result.get("abstract"):
+            results.append({
+                "citation_id": cid.strip(),
+                "abstract": result.get("abstract"),
+                "title": result.get("title"),
+                "authors": result.get("authors", []),
+                "success": True,
+            })
+        else:
+            results.append({
+                "citation_id": cid.strip(),
+                "abstract": None,
+                "success": False,
+                "error": "Could not extract abstract from PDF",
+            })
+
+    return {
+        "results": results,
+        "total": len(results),
+        "successful": sum(1 for r in results if r["success"]),
+    }

@@ -444,3 +444,164 @@ def parse_formula_coordinates(tei_xml: str) -> list[dict]:
 
     print(f"DEBUG grobid: Found {len(formulas)} formula coordinates")
     return formulas
+
+
+def extract_abstract_with_grobid(pdf_content: bytes) -> dict | None:
+    """
+    Extract abstract and header info from a PDF using GROBID.
+
+    Uses the processHeaderDocument endpoint which extracts:
+    - Title
+    - Authors
+    - Abstract
+    - Affiliations
+
+    Args:
+        pdf_content: Raw PDF file bytes
+
+    Returns:
+        Dict with 'title', 'authors', 'abstract' or None if extraction fails
+    """
+    url = f"{GROBID_URL}/api/processHeaderDocument"
+
+    try:
+        response = requests.post(
+            url,
+            files={"input": ("paper.pdf", pdf_content, "application/pdf")},
+            timeout=GROBID_TIMEOUT,
+        )
+
+        print(f"DEBUG grobid: Header extraction status: {response.status_code}")
+        print(f"DEBUG grobid: Response content type: {response.headers.get('content-type', 'unknown')}")
+        print(f"DEBUG grobid: Response length: {len(response.text)} chars")
+        print(f"DEBUG grobid: Response preview: {response.text[:500] if response.text else 'EMPTY'}")
+
+        if response.status_code == 204:
+            print("DEBUG grobid: No content returned (204)")
+            return None
+
+        if response.status_code != 200:
+            print(f"DEBUG grobid: Header extraction failed with status {response.status_code}")
+            print(f"DEBUG grobid: Error response: {response.text[:500]}")
+            return None
+
+        # Check if response looks like XML
+        if not response.text or not response.text.strip().startswith('<?xml') and not response.text.strip().startswith('<'):
+            print(f"DEBUG grobid: Response is not XML: {response.text[:200]}")
+            print("DEBUG grobid: Trying fulltext endpoint as fallback...")
+            return extract_abstract_with_fulltext(pdf_content)
+
+        result = parse_header_tei(response.text)
+
+        # If header parsing failed or no abstract, try fulltext
+        if result is None or not result.get("abstract"):
+            print("DEBUG grobid: Header extraction incomplete, trying fulltext...")
+            return extract_abstract_with_fulltext(pdf_content)
+
+        return result
+
+    except requests.RequestException as e:
+        print(f"DEBUG grobid: Header extraction request failed: {e}")
+        # Try fulltext as fallback
+        print("DEBUG grobid: Trying fulltext endpoint as fallback...")
+        return extract_abstract_with_fulltext(pdf_content)
+
+
+def parse_header_tei(tei_xml: str) -> dict | None:
+    """
+    Parse GROBID TEI XML header output to extract abstract.
+
+    Args:
+        tei_xml: TEI XML string from GROBID processHeaderDocument
+
+    Returns:
+        Dict with 'title', 'authors', 'abstract' or None
+    """
+    try:
+        root = ET.fromstring(tei_xml)
+    except ET.ParseError as e:
+        print(f"DEBUG grobid: Failed to parse header XML: {e}")
+        return None
+
+    result = {
+        "title": None,
+        "authors": [],
+        "abstract": None,
+    }
+
+    # Extract title - try multiple paths
+    title_elem = root.find(".//tei:titleStmt/tei:title", TEI_NS)
+    if title_elem is None:
+        title_elem = root.find(".//tei:title[@type='main']", TEI_NS)
+    if title_elem is None:
+        title_elem = root.find(".//tei:title", TEI_NS)
+    if title_elem is not None:
+        result["title"] = "".join(title_elem.itertext()).strip()
+
+    # Extract authors
+    for author in root.findall(".//tei:sourceDesc//tei:author", TEI_NS):
+        persname = author.find("tei:persName", TEI_NS)
+        if persname is not None:
+            forename = persname.find("tei:forename", TEI_NS)
+            surname = persname.find("tei:surname", TEI_NS)
+
+            name_parts = []
+            if forename is not None and forename.text:
+                name_parts.append(forename.text.strip())
+            if surname is not None and surname.text:
+                name_parts.append(surname.text.strip())
+
+            if name_parts:
+                result["authors"].append(" ".join(name_parts))
+
+    # Extract abstract - try multiple paths
+    abstract_elem = root.find(".//tei:profileDesc/tei:abstract", TEI_NS)
+    if abstract_elem is None:
+        abstract_elem = root.find(".//tei:abstract", TEI_NS)
+
+    if abstract_elem is not None:
+        # Get all text content from the abstract element (may have nested <p> tags)
+        abstract_text = "".join(abstract_elem.itertext()).strip()
+        if abstract_text:
+            result["abstract"] = abstract_text
+
+    # Check if we got an abstract
+    if result["abstract"]:
+        print(f"DEBUG grobid: Extracted abstract ({len(result['abstract'])} chars)")
+        return result
+    else:
+        print("DEBUG grobid: No abstract found in header")
+        return None
+
+
+def extract_abstract_with_fulltext(pdf_content: bytes) -> dict | None:
+    """
+    Extract abstract using GROBID's fulltext endpoint as fallback.
+    This processes the entire document which is slower but more robust.
+
+    Args:
+        pdf_content: Raw PDF file bytes
+
+    Returns:
+        Dict with 'title', 'authors', 'abstract' or None
+    """
+    url = f"{GROBID_URL}/api/processFulltextDocument"
+
+    try:
+        response = requests.post(
+            url,
+            files={"input": ("paper.pdf", pdf_content, "application/pdf")},
+            data={"consolidateHeader": "1"},
+            timeout=GROBID_TIMEOUT,
+        )
+
+        if response.status_code != 200:
+            print(f"DEBUG grobid: Fulltext extraction failed with status {response.status_code}")
+            return None
+
+        # Parse the fulltext TEI - abstract is in the same location
+        return parse_header_tei(response.text)
+
+    except requests.RequestException as e:
+        print(f"DEBUG grobid: Fulltext extraction request failed: {e}")
+        return None

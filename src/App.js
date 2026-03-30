@@ -1,9 +1,9 @@
 // https://sanmisanfan.github.io/ReviewerApp-demo/
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { pdfjs } from "react-pdf";
-import { Col, Row, Spin, Flex, Upload, Input, Button } from 'antd';
+import { Col, Row, Spin, Flex, Upload, Input, Button, Typography, Divider, Card, Space, Progress, Alert, Modal, List } from 'antd';
 import './App.css';
-import { InboxOutlined } from '@ant-design/icons';
+import { CloudUploadOutlined, FileTextOutlined, UserOutlined, CalendarOutlined, CheckCircleOutlined } from '@ant-design/icons';
 import TextInputArray from "./components/textInputArray.js"
 
 /** React DOM Components */
@@ -12,6 +12,9 @@ import { VisContainer } from "./components/visContainer";
 
 /** Import annotation configure */
 import { anomalousColorScheme } from "./annotationConfig";
+
+const { Title, Text, Paragraph } = Typography;
+const { Dragger } = Upload;
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -34,6 +37,12 @@ function App() {
 
     const [currentPage, setCurrentPage] = useState(1);
     const [activeHighlight, setActiveHighlight] = useState(null);
+    const [isProcessing, setIsProcessing] = useState(false);
+    const [progressStatus, setProgressStatus] = useState("");
+    const [progressSteps, setProgressSteps] = useState([]);
+    const [missingAbstracts, setMissingAbstracts] = useState([]);
+    const [showMissingModal, setShowMissingModal] = useState(false);
+    const [abstractPdfs, setAbstractPdfs] = useState({});
 
     const uploadPdf = (file) => {
         setPdfData(file);
@@ -67,7 +76,14 @@ function App() {
         ws.onmessage = (e) => {
             const data = JSON.parse(e.data);
             console.log(data);
-            //TODO: make sure this works properly
+
+            // Handle progress messages
+            if (data.type === "info") {
+                setProgressStatus(data.msg);
+                setProgressSteps(prev => [...prev, { msg: data.msg, time: new Date().toLocaleTimeString() }]);
+                return;
+            }
+
             if (data !== null && data.type === "end") {
                 const results = data.results;
 
@@ -140,70 +156,349 @@ function App() {
                 setVenue(venueRaw);
                 setCitation(citationsList);
                 setSentenceAnnotationList(_sentenceHighlights);
-                // not sure what author graph is needed here...
                 setAuthorGraph(authorGraphRaw);
+
+                // Track papers missing abstracts
+                const papersWithoutAbstract = citationRaw
+                    .filter(c => c.hop === 1 && !c.abstract)
+                    .map(c => ({
+                        id: c.id,
+                        title: c.title,
+                        cite_number: c.cite_number,
+                        authors: c.author,
+                    }));
+                setMissingAbstracts(papersWithoutAbstract);
+
+                setIsProcessing(false);
                 setIsProcessed(true);
+
+                // Show modal if there are missing abstracts
+                if (papersWithoutAbstract.length > 0) {
+                    setShowMissingModal(true);
+                }
+            }
+        };
+
+        ws.onerror = (error) => {
+            console.error("WebSocket error:", error);
+            setIsProcessing(false);
+            setProgressStatus("Connection error. Please try again.");
+        };
+
+        ws.onclose = () => {
+            if (!isProcessed) {
+                setProgressStatus("Connection closed.");
             }
         };
     };
-    //TODO: add labels around fields, fix antd CSS
+
+    const handleSubmit = () => {
+        setIsProcessing(true);
+        setProgressStatus("Connecting to server...");
+        setProgressSteps([]);
+        onSubmit();
+    };
+
     return (
         <div className="App">
             <div className="mainContainer">
-                {!isProcessed && <Flex vertical gap="medium" align="center">
-                    <h1>CITADEL</h1>
-                    <Upload className="pdf_upload" multiple={false} action={uploadPdf}>
-                        <Flex vertical align="center">
-                            <p>
-                                <InboxOutlined />
-                            </p>
-                            <p>Please upload a PDF. Click here or drag a file to upload.</p>
-                        </Flex>
-                    </Upload>
-                    {pdfData != null &&
-                        <Flex vertical gap="medium" align="center">
-                            <p>Please fill out the following fields:</p>
-                            <Input placeholder="Paper title" onChange={(e) => setTitle(e.currentTarget.value)} />
-                            <TextInputArray updateCallback={setAuthors} unitName={"author"} />
-                            <Input placeholder="Year" onChange={(e) => setYear(e.currentTarget.value)} />
-                            <Button onClick={onSubmit}>Submit</Button>
-                        </Flex>
+                {!isProcessed && (
+                    <div className="upload-page">
+                        <div className="upload-container">
+                            {/* Header */}
+                            <div className="upload-header">
+                                <Title level={1} className="brand-title">CITADEL</Title>
+                                <Text type="secondary" className="brand-subtitle">
+                                    Citation Analysis &amp; Anomaly Detection for Academic Papers
+                                </Text>
+                            </div>
+
+                            {/* Main Upload Card */}
+                            <Card className="upload-card" bordered={false}>
+                                {/* Step 1: Upload PDF */}
+                                <div className="upload-section">
+                                    <div className="section-header">
+                                        <Text strong className="section-number">1</Text>
+                                        <Text strong className="section-title">Upload Manuscript</Text>
+                                    </div>
+
+                                    <Dragger
+                                        className="pdf-dragger"
+                                        multiple={false}
+                                        accept=".pdf"
+                                        showUploadList={false}
+                                        beforeUpload={(file) => {
+                                            uploadPdf(file);
+                                            return false;
+                                        }}
+                                    >
+                                        {pdfData ? (
+                                            <div className="upload-success">
+                                                <CheckCircleOutlined className="upload-success-icon" />
+                                                <Text strong>{pdfData.name}</Text>
+                                                <Text type="secondary" className="file-size">
+                                                    {(pdfData.size / 1024 / 1024).toFixed(2)} MB
+                                                </Text>
+                                            </div>
+                                        ) : (
+                                            <div className="upload-prompt">
+                                                <CloudUploadOutlined className="upload-icon" />
+                                                <Text strong className="upload-text">
+                                                    Drop your PDF here or click to browse
+                                                </Text>
+                                                <Text type="secondary" className="upload-hint">
+                                                    Supports PDF files up to 50MB
+                                                </Text>
+                                            </div>
+                                        )}
+                                    </Dragger>
+                                </div>
+
+                                {/* Step 2: Paper Metadata */}
+                                {pdfData && (
+                                    <>
+                                        <Divider className="section-divider" />
+                                        <div className="metadata-section">
+                                            <div className="section-header">
+                                                <Text strong className="section-number">2</Text>
+                                                <Text strong className="section-title">Paper Metadata</Text>
+                                            </div>
+
+                                            <div className="form-grid">
+                                                <div className="form-field">
+                                                    <label className="field-label">
+                                                        <FileTextOutlined /> Paper Title
+                                                    </label>
+                                                    <Input
+                                                        size="large"
+                                                        placeholder="Enter the full title of the paper"
+                                                        value={title}
+                                                        onChange={(e) => setTitle(e.currentTarget.value)}
+                                                    />
+                                                </div>
+
+                                                <div className="form-field">
+                                                    <label className="field-label">
+                                                        <UserOutlined /> Authors
+                                                    </label>
+                                                    <TextInputArray
+                                                        updateCallback={setAuthors}
+                                                        unitName="Author"
+                                                    />
+                                                </div>
+
+                                                <div className="form-field form-field-year">
+                                                    <label className="field-label">
+                                                        <CalendarOutlined /> Publication Year
+                                                    </label>
+                                                    <Input
+                                                        size="large"
+                                                        placeholder="e.g., 2024"
+                                                        value={year}
+                                                        onChange={(e) => setYear(e.currentTarget.value)}
+                                                        style={{ maxWidth: 150 }}
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <Divider className="section-divider" />
+
+                                        {/* Submit Section */}
+                                        <div className="submit-section">
+                                            {isProcessing ? (
+                                                <div className="processing-state">
+                                                    <Spin size="large" />
+                                                    <div className="progress-info">
+                                                        <Text strong className="progress-status">
+                                                            {progressStatus}
+                                                        </Text>
+                                                        <div className="progress-steps">
+                                                            {progressSteps.slice(-5).map((step, idx) => (
+                                                                <div key={idx} className="progress-step">
+                                                                    <CheckCircleOutlined className="step-icon" />
+                                                                    <Text type="secondary" className="step-text">
+                                                                        {step.msg}
+                                                                    </Text>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ) : (
+                                                <Button
+                                                    type="primary"
+                                                    size="large"
+                                                    className="submit-button"
+                                                    onClick={handleSubmit}
+                                                    disabled={!title || !year || authors.every(a => !a)}
+                                                >
+                                                    Analyze Paper
+                                                </Button>
+                                            )}
+                                        </div>
+                                    </>
+                                )}
+                            </Card>
+
+                            {/* Footer */}
+                            <div className="upload-footer">
+                                <Text type="secondary">
+                                    CITADEL analyzes citation patterns, detects anomalies, and identifies potential issues in academic manuscripts.
+                                </Text>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {isProcessed && (
+                    <div className="mainContainer">
+                        <Row>
+                            <Col span={14}>
+                                {pdfData !== null && <PDFContainer
+                                    file={pdfData}
+                                    citation={citation}
+                                    anomalous={anomalous}
+                                    anomalousColorScheme={anomalousColorScheme}
+                                    sentenceAnnotationList={sentenceAnnotationList}
+                                    currentPage={currentPage}
+                                    setCurrentPage={setCurrentPage}
+                                    activeHighlight={activeHighlight}
+                                    setActiveHighlight={setActiveHighlight}
+                                    setAnomalous={setAnomalous}
+                                />}
+                            </Col>
+                            <Col span={10}>
+                                <VisContainer
+                                    file={pdfData}
+                                    citation={citation}
+                                    author={author}
+                                    venue={venue}
+                                    anomalous={anomalous}
+                                    anomalousColorScheme={anomalousColorScheme}
+                                    currentPage={currentPage}
+                                    activeHighlight={activeHighlight}
+                                    setActiveHighlight={setActiveHighlight}
+                                    authorGraphDataRaw={authorGraph}
+                                />
+                            </Col>
+                        </Row>
+                    </div>
+                )}
+
+                {/* Missing Abstracts Modal */}
+                <Modal
+                    title={
+                        <Space>
+                            <FileTextOutlined />
+                            <span>Missing Abstracts</span>
+                        </Space>
                     }
-                </Flex>}
-                {isProcessed && <div className="mainContainer">
-                    <Row>
-                        <Col span={14}>
-                            {pdfData !== null && <PDFContainer
-                                file={pdfData}
-                                citation={citation}
-                                anomalous={anomalous}
-                                anomalousColorScheme={anomalousColorScheme}
-                                sentenceAnnotationList={sentenceAnnotationList}
-                                currentPage={currentPage}
-                                setCurrentPage={setCurrentPage}
-                                activeHighlight={activeHighlight}
-                                setActiveHighlight={setActiveHighlight}
-                                setAnomalous={setAnomalous}
-                            />}
-                        </Col>
-                        <Col span={10}>
-                            <VisContainer
-                                file={pdfData}
-                                citation={citation}
-                                author={author}
-                                venue={venue}
-                                anomalous={anomalous}
-                                anomalousColorScheme={anomalousColorScheme}
-                                currentPage={currentPage}
-                                activeHighlight={activeHighlight}
-                                setActiveHighlight={setActiveHighlight}
-                                authorGraphDataRaw={authorGraph}
-                            />
-                        </Col>
-                    </Row>
-                </div>}
+                    open={showMissingModal}
+                    onCancel={() => setShowMissingModal(false)}
+                    footer={[
+                        <Button key="skip" onClick={() => setShowMissingModal(false)}>
+                            Skip for Now
+                        </Button>,
+                        <Button
+                            key="submit"
+                            type="primary"
+                            disabled={Object.keys(abstractPdfs).length === 0}
+                            loading={isProcessing}
+                            onClick={async () => {
+                                setIsProcessing(true);
+                                const formData = new FormData();
+                                const citationIds = [];
+
+                                // Add files and collect IDs
+                                Object.entries(abstractPdfs).forEach(([citationId, file]) => {
+                                    formData.append('files', file);
+                                    citationIds.push(citationId);
+                                });
+                                formData.append('citation_ids', citationIds.join(','));
+
+                                try {
+                                    const response = await fetch(`http://${BACKEND_URL}/api/extract_abstracts`, {
+                                        method: 'POST',
+                                        body: formData,
+                                    });
+
+                                    if (response.ok) {
+                                        const data = await response.json();
+                                        console.log("Extracted abstracts:", data);
+
+                                        // Update citations with new abstracts
+                                        // (In a full implementation, you'd update the citation state here)
+                                        alert(`Successfully extracted ${data.successful}/${data.total} abstracts!`);
+                                    } else {
+                                        const error = await response.json();
+                                        alert(`Error: ${error.detail || 'Failed to extract abstracts'}`);
+                                    }
+                                } catch (err) {
+                                    console.error("Extract error:", err);
+                                    alert("Failed to connect to server. Is GROBID running?");
+                                }
+
+                                setIsProcessing(false);
+                                setShowMissingModal(false);
+                                setAbstractPdfs({});
+                            }}
+                        >
+                            Extract Abstracts
+                        </Button>
+                    ]}
+                    width={600}
+                >
+                    <div className="missing-abstracts-modal">
+                        <Alert
+                            message={`${missingAbstracts.length} referenced papers are missing abstracts`}
+                            description="You can optionally upload PDFs for these papers to extract their abstracts. This will improve citation relevance analysis."
+                            type="info"
+                            showIcon
+                            style={{ marginBottom: 16 }}
+                        />
+                        <List
+                            className="missing-list"
+                            dataSource={missingAbstracts}
+                            renderItem={(paper) => (
+                                <List.Item
+                                    actions={[
+                                        <Upload
+                                            key="upload"
+                                            accept=".pdf"
+                                            showUploadList={false}
+                                            beforeUpload={(file) => {
+                                                setAbstractPdfs(prev => ({
+                                                    ...prev,
+                                                    [paper.id]: file
+                                                }));
+                                                return false;
+                                            }}
+                                        >
+                                            <Button
+                                                size="small"
+                                                type={abstractPdfs[paper.id] ? "primary" : "default"}
+                                            >
+                                                {abstractPdfs[paper.id] ? "PDF Added" : "Add PDF"}
+                                            </Button>
+                                        </Upload>
+                                    ]}
+                                >
+                                    <List.Item.Meta
+                                        title={
+                                            <Text className="missing-paper-title">
+                                                [{paper.cite_number}] {paper.title?.substring(0, 60)}
+                                                {paper.title?.length > 60 ? "..." : ""}
+                                            </Text>
+                                        }
+                                    />
+                                </List.Item>
+                            )}
+                        />
+                    </div>
+                </Modal>
             </div>
-        </div >
+        </div>
     );
 }
 

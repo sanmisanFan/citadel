@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
+import { Input, Button } from 'antd';
+import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 
-import { Input, Button, Flex } from 'antd';
-
-// dynamically create text inputs for text fields that have multiple inputs e.g. authors
+// Dynamically create text inputs for fields with multiple values (e.g., authors)
 const TextInputArray = ({ updateCallback, unitName }) => {
     const [content, setContent] = useState([""]);
 
@@ -11,13 +11,13 @@ const TextInputArray = ({ updateCallback, unitName }) => {
         setContent([...content]);
     };
 
-    const onAddButton = (e) => {
+    const onAddButton = () => {
         setContent(previous => [...previous, ""]);
     };
 
-    const onRemoveButton = (e) => {
+    const onRemoveButton = (index) => {
         if (content.length > 1) {
-            setContent(previous => previous.slice(0, -1));
+            setContent(previous => previous.filter((_, i) => i !== index));
         }
     };
 
@@ -27,13 +27,39 @@ const TextInputArray = ({ updateCallback, unitName }) => {
         }
     }, [content, updateCallback]);
 
-    return <Flex vertical gap="small">
-        <Flex>
-            <Button type="primary" onClick={onAddButton}>+</Button>
-            <Button type="primary" disabled={content.length === 1} onClick={onRemoveButton}>-</Button>
-        </Flex>
-        {content.map((s, i) => <Input key={i} placeholder={`${unitName} ${i}`} value={s} onChange={(e) => updateContent(e, i)} />)}
-    </Flex>
+    return (
+        <div className="author-input-container">
+            <div className="author-inputs">
+                {content.map((s, i) => (
+                    <div key={i} className="author-row">
+                        <Input
+                            size="large"
+                            placeholder={`${unitName} ${i + 1}`}
+                            value={s}
+                            onChange={(e) => updateContent(e, i)}
+                        />
+                        {content.length > 1 && (
+                            <Button
+                                type="text"
+                                icon={<MinusOutlined />}
+                                onClick={() => onRemoveButton(i)}
+                                style={{ color: '#8c9bab' }}
+                            />
+                        )}
+                    </div>
+                ))}
+            </div>
+            <div className="author-actions">
+                <Button
+                    type="dashed"
+                    icon={<PlusOutlined />}
+                    onClick={onAddButton}
+                >
+                    Add {unitName}
+                </Button>
+            </div>
+        </div>
+    );
 };
 
 export default TextInputArray;
