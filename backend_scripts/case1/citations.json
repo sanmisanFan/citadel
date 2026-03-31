@@ -14,6 +14,7 @@
       "source": "C. Brunsdon, A. Stewart Fotheringham, M. E. Charlton. \"Geographically Weighted Regression: A Method for Exploring Spatial Nonstationarity,\" Geographical Analysis, 2010.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1111/J.1538-4632.1996.TB00936.X",
       "has_issue": false,
       "citation_graph": [
         "citation-26",
@@ -51,6 +52,7 @@
       "source": "A. Stewart Fotheringham, Wenbai Yang, W. Kang. \"Multiscale Geographically Weighted Regression (MGWR),\" Annals of the American Association of Geographers, 2017.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "https://doi.org/10.1080/24694452.2017.1352480",
       "has_issue": false,
       "citation_graph": []
     },
@@ -70,6 +72,7 @@
       "source": "T. Gao, J. Hullman, E. Adar, B. Hecht, N. Diakopoulos. \"NewsViews: an automated pipeline for creating custom geovisualizations for news,\" CHI, 2014.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1145/2556288.2557228",
       "has_issue": false,
       "citation_graph": [
         "citation-74",
@@ -117,6 +120,7 @@
       "source": "S. Goodwin, J. Dykes, A. Slingsby, C. Turkay. \"Visualizing Multiple Variables Across Scale and Geography,\" IEEE Transactions on Visualization and Computer Graphics, 2016.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1109/TVCG.2015.2467199",
       "has_issue": false,
       "citation_graph": [
         "citation-100",
@@ -178,6 +182,7 @@
       "source": "J. Hullman, N. Diakopoulos. \"Visualization Rhetoric: Framing Effects in Narrative Visualization,\" IEEE TVCG, 2011.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1109/TVCG.2011.255",
       "has_issue": false,
       "citation_graph": [
         "citation-141",
@@ -253,6 +258,7 @@
           }
         }
       ],
+      "doi": "10.1080/13658816.2020.1720692",
       "has_issue": false,
       "citation_graph": []
     },
@@ -269,6 +275,7 @@
       "source": "R. Kosara, J. Mackinlay. \"Storytelling: The Next Step for Visualization,\" Computer, 2013.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1109/MC.2013.36",
       "has_issue": false,
       "citation_graph": [
         "citation-5",
@@ -298,6 +305,7 @@
       "source": "Josua Krause, A. Perer, K. Ng. \"Interacting with Predictions: Visual Inspection of Black-box Machine Learning Models,\" CHI, 2016.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1145/2858036.2858529",
       "has_issue": false,
       "citation_graph": [
         "citation-198",
@@ -363,6 +371,7 @@
       "source": "C. Lai, Z. Lin, R. Jiang, Y. Han, C. Liu, X. Yuan. \"Automatic Annotation Synchronizing with Textual Description for Visualization,\" CHI, 2020.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1145/3313831.3376443",
       "has_issue": false,
       "citation_graph": [
         "citation-240",
@@ -442,6 +451,7 @@
       "source": "S. Chen, Fabian Beck. \"Interactive map reports summarizing bivariate geographic data,\" Visual Informatics, 2019.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1016/J.VISINF.2019.03.004",
       "has_issue": false,
       "citation_graph": [
         "citation-291",
@@ -503,6 +513,7 @@
       "source": "S. Chen, S. Chen, Fabian Beck, Fabian Beck. \"A Deeper Understanding of Visualization\u2010Text Interplay in Geographic Data\u2010driven Stories,\" CGF, 2021.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1111/cgf.14309",
       "has_issue": false,
       "citation_graph": [
         "citation-330",
@@ -558,6 +569,7 @@
       "source": "Y. Lu, R. Garcia, B. Hansen, Michael Gleicher, R. Maciejewski. \"The State\u2010of\u2010the\u2010Art in Predictive Visual Analytics,\" CGF, 2017.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1111/cgf.13210",
       "has_issue": false,
       "citation_graph": [
         "citation-356",
@@ -696,6 +708,7 @@
       "source": "Y. Ming, H. Qu, E. Bertini. \"RuleMatrix: Visualizing and Understanding Classifiers with Rules,\" IEEE TVCG, 2018.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1109/TVCG.2018.2864812",
       "has_issue": false,
       "citation_graph": [
         "citation-463",
@@ -759,6 +772,7 @@
       "source": "T. Muhlbacher, H. Piringer. \"A Partition-Based Framework for Building and Validating Regression Models,\" IEEE Trans. Vis. Comput. Graph., 2013.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1109/TVCG.2013.125",
       "has_issue": false,
       "citation_graph": [
         "citation-501",
@@ -840,6 +854,7 @@
           }
         }
       ],
+      "doi": "10.1109/PACIFICVIS.2017.8031599",
       "has_issue": false,
       "citation_graph": [
         "citation-538",
@@ -891,6 +906,7 @@
       "source": "A. Satyanarayan, Jeffrey Heer. \"Authoring Narrative Visualizations with Ellipsis,\" Computer Graphics Forum, 2014.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1111/cgf.12392",
       "has_issue": false,
       "citation_graph": [
         "citation-347",
@@ -940,6 +956,7 @@
           }
         }
       ],
+      "doi": "10.1109/TVCG.2014.2346321",
       "has_issue": false,
       "citation_graph": [
         "citation-567",
@@ -1030,6 +1047,7 @@
       "source": "E. Segel, Jeffrey Heer. \"Narrative Visualization: Telling Stories with Data,\" IEEE TVCG, 2010.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1109/TVCG.2010.179",
       "has_issue": false,
       "citation_graph": [
         "citation-624",
@@ -1066,6 +1084,7 @@
       "source": "L. Skywalker, O.-W. Kenobi. \"Artificial reference paper 2,\" _Fake Journal 2_, 2025.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1080/13658816.2020.1720692",
       "has_issue": false,
       "citation_graph": []
     },
@@ -1082,6 +1101,7 @@
       "source": "D. Smeesters, J. Liu. \"The effect of color (red versus blue) on assimilation versus contrast in prime-to-behavior effects,\" J. Exp. Soc. Psychol., 2011.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1016/J.JESP.2011.02.010",
       "has_issue": false,
       "citation_graph": [
         "citation-643",
@@ -1150,6 +1170,7 @@
           }
         }
       ],
+      "doi": "10.1080/13658816.2020.1720692",
       "has_issue": false,
       "citation_graph": []
     },
@@ -1166,6 +1187,7 @@
       "source": "H. Solo, L. Organa. \"Artificial reference paper 5,\" Fake Journal 2, 2025.",
       "hop": 1,
       "cite_positions": [],
+      "doi": "10.1080/13658816.2020.1720692",
       "has_issue": false,
       "citation_graph": []
     },
@@ -1196,6 +1218,7 @@
           }
         }
       ],
+      "doi": "10.1109/TVCG.2018.2865145",
       "has_issue": false,
       "citation_graph": [
         "citation-680",
@@ -1267,6 +1290,7 @@
           }
         }
       ],
+      "doi": "10.1016/S0098-3004(02)00031-6",
       "has_issue": false,
       "citation_graph": [
         "citation-705",
@@ -1328,6 +1352,7 @@
           }
         }
       ],
+      "doi": "10.1145/1518701.1518895",
       "has_issue": false,
       "citation_graph": [
         "citation-734",

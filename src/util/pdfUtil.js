@@ -274,7 +274,7 @@ const findStatisticalMatch = (spans, sentenceText) => {
 // Function to find the bounding box for a specific citation (e.g. "[14]") within text items
 export const findCitationCoordinates = (textItems, targetCitation) => {
   const results = [];
-  
+
   textItems.forEach((item) => {
     // Find the starting index of the target citation within the text item
     const index = item.text.indexOf(targetCitation);
@@ -282,13 +282,13 @@ export const findCitationCoordinates = (textItems, targetCitation) => {
       // Estimate the average width per character
       const totalChars = item.text.length;
       if (totalChars === 0) return; // safeguard
-      
+
       const charWidth = item.width / totalChars;
       // Calculate the width of the citation substring
       const citationWidth = charWidth * targetCitation.length;
       // Calculate the x-offset for the citation substring
       const citationX = item.x + (index * charWidth);
-      
+
       results.push({
         citation: targetCitation,
         x: citationX,
@@ -298,7 +298,7 @@ export const findCitationCoordinates = (textItems, targetCitation) => {
       });
     }
   });
-  
+
   return results;
 };
 
@@ -352,10 +352,10 @@ export const extractAndHighlightCitation = async (pdf, targetCitation, pageNumbe
   try {
     const page = await pdf.getPage(pageNumber);
     const viewport = page.getViewport({ scale: 1 });
-  
+
     const textItems = await extractTextFromPage(pdf, pageNumber);
     const citations = findCitationCoordinates(textItems, targetCitation);
-  
+
     // Normalize coordinates for the target citation relative to the page viewport
     const normalizedCitations = citations.map(citation => ({
       citation: citation.citation,
@@ -364,7 +364,7 @@ export const extractAndHighlightCitation = async (pdf, targetCitation, pageNumbe
       width: citation.width / viewport.width,
       height: citation.height / viewport.height,
     }));
-  
+
     console.log('Normalized citation coordinates:', normalizedCitations, targetCitation);
     //return normalizedCitations;
   } catch (error) {

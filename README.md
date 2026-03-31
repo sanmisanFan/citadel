@@ -1,12 +1,13 @@
 # Research Reviewer Project
 
 
+
 * Automated static checks for thorough and consistent pre-review. 
 * Visualization-supported peer review.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Introducation - FanL
+## Introduction - FanL
 The frontend of this project is build based on React + Antd UI framework. Citation_Stacking/ folder contains all the scripts from Akshit.
 
 ## Getting started
@@ -15,6 +16,11 @@ Do I run the front-end after the python processing scripts?
 ```
 make run
 ```
+
+The project's Python dependencies are managed by `uv`. With `uv` installed, run `uv sync`. To start the Python backend in development mode, run `uv run fastapi dev`. The back-end uses ChatGPT to process the pdf files. You need to have a valid openAI API key set in your environment variables for it to work; please set `OPENAI_API_KEY` accordingly.
+
+Tests can be run with `uv run pytest`.
+
 
 ## PDF Statistical Test Validator
 

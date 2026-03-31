@@ -2,6 +2,10 @@
 .vscode/
 CLAUDE.md
 
+.pytest_cache
+api_key
+s2_key
+
 backend_scripts/outputs/
 backend_scripts/documents/
 
@@ -37,3 +41,5 @@ parse
 statcheck
 generate_citation_network
 fetch_pubmed
+
+CLAUDE.md

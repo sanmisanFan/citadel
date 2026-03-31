@@ -10,7 +10,7 @@
       "year": 2008,
       "title": "paper title",
       "source": "A. Krizhevsky, I. Sutskever, and G. E. Hinton, “Imagenet classification with deep convolutional neural networks,” in Advances in neural information processing systems, 2012, pp. 1097–1105.",
-      "doi": "doi link",
+      "doi": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
       "layer": 1,
       "cite_positions": [
         {
@@ -40,7 +40,7 @@
       "year": 2008,
       "title": "paper title",
       "source": "K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning for image recognition,” in Proceedings of the IEEE conference on computer vision and pattern recognition, 2016, pp. 770–778.",
-      "doi": "doi link",
+      "doi": "https://doi.org/10.1109/CVPR.2016.90",
       "layer": 1,
       "cite_positions": [
         {
@@ -72,7 +72,7 @@
       "year": 2008,
       "title": "paper title",
       "source": "C. Finn, P. Abbeel, and S. Levine, “Model-agnostic meta-learning for fast adaptation of deep networks,” in Proceedings of the 34th International Conference on Machine Learning-Volume 70. JMLR. org, 2017, pp. 1126–1135.",
-      "doi": "doi link",
+      "doi": "https://arxiv.org/abs/1603.05027",
       "layer": 1,
       "cite_positions": [
         {
@@ -106,7 +106,7 @@
       "year": 2008,
       "title": "paper title",
       "source": "M. A. Jamal, G.-J. Qi, and M. Shah, “Task-agnostic meta-learning for few-shot learning,” arXiv preprint arXiv:1805.07722, 2018.",
-      "doi": "doi link",
+      "doi": "https://arxiv.org/abs/1703.03400",
       "layer": 1,
       "cite_positions": [
         {
@@ -136,7 +136,7 @@
       "year": 2008,
       "title": "paper title",
       "source": "X. Li, Q. Sun, Y. Liu, Q. Zhou, S. Zheng, T.-S. Chua, and B. Schiele, “Learning to self-train for semi-supervised few-shot classification,” in Advances in Neural Information Processing Systems, 2019, pp. 10 276–10 286",
-      "doi": "doi link",
+      "doi": "https://proceedings.neurips.cc/paper/2019/hash/bf25356fd2a6e038f1a3a59c26687e80-Abstract.html",
       "layer": 1,
       "cite_positions": [
         {
@@ -179,7 +179,7 @@
       "year": 2008,
       "title": "paper title",
       "source": "G. E. Hinton, A. Krizhevsky, and S. D. Wang, “Transforming autoencoders,” in International Conference on Artificial Neural Networks. Springer, 2011, pp. 44–51.",
-      "doi": "doi link",
+      "doi": "https://doi.org/10.1007/978-3-642-21735-7_6",
       "layer": 1,
       "cite_positions": [
         {
