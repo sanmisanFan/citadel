@@ -151,10 +151,15 @@ def extract_references_grobid_with_fallback(
 
                 # If grobid didn't get good citation context, fall back to markdown parsing
                 if not reference_mentions:
-                    print("DEBUG: Grobid citation mentions empty, using markdown fallback")
+                    print("DEBUG: Grobid citation mentions empty, trying markdown fallback")
                     progress_fn("info", "Converting PDF to markdown for citation mentions...")
-                    md_text = pdf_to_md_str(pdf_content)
-                    reference_mentions, _ = process_markdown_string(md_text)
+                    try:
+                        md_text = pdf_to_md_str(pdf_content)
+                        reference_mentions, _ = process_markdown_string(md_text)
+                    except ValueError as e:
+                        print(f"DEBUG: Markdown fallback failed: {e}")
+                        print("DEBUG: Proceeding with empty citation mentions")
+                        reference_mentions = {}
 
                 return parsed_refs, reference_mentions, md_text
             else:
@@ -167,7 +172,13 @@ def extract_references_grobid_with_fallback(
     md_text = pdf_to_md_str(pdf_content)
 
     progress_fn("info", "Extracting references from markdown...")
-    reference_mentions, raw_references = process_markdown_string(md_text)
+    try:
+        reference_mentions, raw_references = process_markdown_string(md_text)
+    except ValueError as e:
+        print(f"DEBUG: Could not find references section: {e}")
+        progress_fn("info", "References section not found in PDF. The paper may have non-standard formatting.")
+        # Return empty results - the pipeline can still proceed
+        return [], {}, md_text
 
     progress_fn("info", "Parsing references with GPT...")
     parsed_refs = parse_references(gpt_client, raw_references)

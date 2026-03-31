@@ -1,33 +1,42 @@
 def assess_citation_relevance(citation_key, context_text, summary_text, client):
     """Assesses relevance using GPT-4 Turbo with explicit reasoning."""
     prompt = f"""
-You are an expert academic researcher. Your task is to evaluate the contextual relevance of the citation {citation_key} in the provided text excerpt, and to clearly explain your reasoning.
+You are an expert academic researcher. Your task is to evaluate the contextual relevance of citation [{citation_key}] in the provided text excerpt.
 
-Here is the text excerpt where {citation_key} is mentioned:
+IMPORTANT: Focus ONLY on citation [{citation_key}]. The text may contain other citation numbers - ignore them completely. Only evaluate how [{citation_key}] is used.
+
+Here is the text excerpt where [{citation_key}] is mentioned:
 -----------------------------
 {context_text}
 -----------------------------
 
-Below is the summary of the cited paper corresponding to {citation_key}:
+Below is the summary/abstract of the cited paper corresponding to [{citation_key}]:
 -----------------------------
 {summary_text}
 -----------------------------
 
 Instructions:
-1. First, decide if this mention is substantive (i.e., the text engages with the paper’s content, methods, or results) or if it is merely a bibliographic reference.
-2. If the excerpt is only a reference list entry (just publication details with no discussion), then:
+1. First, decide if the mention of [{citation_key}] is substantive (i.e., the text engages with that paper's content, methods, or results) or if it is merely a bibliographic reference.
+2. A "reference list entry" is ONLY text that appears in the References/Bibliography section, containing just publication metadata like:
+   "[19] Smith, J. (2020). Paper Title. Journal Name, 10(2), 123-456."
+
+   If the text contains ANY discussion, description, or context about what the cited work does or claims, it is NOT a reference list entry - even if the description is brief.
+
+   Only output Score: 0 for actual bibliography entries. If in doubt, give a low score (1-3) instead of 0.
+
+   If the excerpt is a true reference list entry (just publication details, no discussion), then:
    - Output Score: 0
    - Explanation: "Reference list entry with no substantive discussion."
-3. If the mention is substantive, rate its relevance on a scale from 1 to 10 using these guidelines:
-   - 10: The text provides a detailed, direct discussion of the paper’s methods and results.
-   - 7-9: The text contains an important contextual reference that significantly influences the discussion.
-   - 4-6: The text offers general background information about the paper.
-   - 1-3: The mention is peripheral or only minimally discussed.
-4. In your response, first provide the Score and then give a detailed Explanation that explicitly states the evidence and reasoning behind your score. Mention key phrases or elements from both the excerpt and the paper summary that informed your judgment.
+3. If the mention of [{citation_key}] is substantive, rate its relevance on a scale from 1 to 10 using these guidelines:
+   - 10: The text provides a detailed, direct discussion of [{citation_key}]'s methods and results.
+   - 7-9: The text contains an important contextual reference to [{citation_key}] that significantly influences the discussion.
+   - 4-6: The text offers general background information referencing [{citation_key}].
+   - 1-3: The mention of [{citation_key}] is peripheral or only minimally discussed.
+4. In your response, first provide the Score and then give a detailed Explanation. Only discuss citation [{citation_key}], not other citations in the text.
 
 Please provide your answer in exactly the following format:
 Score: [number]
-Explanation: [Your detailed 2-3 sentence analysis, including key evidence and reasoning]
+Explanation: [Your detailed 2-3 sentence analysis about citation [{citation_key}] only]
 """
     # why not return the data as a json or something to make parsing easier later?
     response = client.chat.completions.create(
@@ -97,13 +106,15 @@ def process_citation_mentions(citation_mentions, enriched, client):
 
 def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
     """Assign relevance scores to the reference_mentions in enriched_papers.json."""
-    # Create a lookup dictionary for assessments by excerpt text
-    # Now includes page info: {excerpt: {assessment, page}}
+    # Create a lookup dictionary for assessments by (citation_key, excerpt) tuple
+    # This prevents overwriting when multiple citations share the same excerpt text
     assessment_lookup = {}
     for citation_key, assessments in citation_assessments.items():
         for assessment in assessments:
             excerpt = assessment["excerpt"]
-            assessment_lookup[excerpt] = {
+            # Key by both citation_key and excerpt to avoid collisions
+            lookup_key = (str(citation_key), excerpt)
+            assessment_lookup[lookup_key] = {
                 "assessment": assessment["assessment"],
                 "page": assessment.get("page", 1)
             }
@@ -111,7 +122,7 @@ def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
     # Update enriched_papers with assessments
     for ref_id, paper in enriched_papers.items():
         # Convert ref_id to citation key format for consistency
-        citation_key = int(ref_id)
+        citation_key = str(ref_id)
 
         if "reference_mentions" in paper and paper["reference_mentions"]:
             updated_mentions = []
@@ -124,9 +135,11 @@ def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
                     mention_text = mention
                     mention_page = 1
 
-                if mention_text in assessment_lookup:
+                # Look up by both citation_key and excerpt
+                lookup_key = (citation_key, mention_text)
+                if lookup_key in assessment_lookup:
                     # Parse the assessment to extract the score
-                    assessment_data = assessment_lookup[mention_text]
+                    assessment_data = assessment_lookup[lookup_key]
                     assessment_text = assessment_data["assessment"]
                     page = assessment_data.get("page", mention_page)
                     try:

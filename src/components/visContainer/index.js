@@ -33,7 +33,8 @@ export const VisContainer = ({
     currentPage,
     activeHighlight,
     setActiveHighlight,
-    authorGraphDataRaw
+    authorGraphDataRaw,
+    mainPaperAuthors = []  // Authors of the paper being reviewed
 }) => {
 
     const [authorGraphData, setAuthorGraphData] = useState(null);
@@ -175,6 +176,7 @@ export const VisContainer = ({
                             author={author}
                             venue={venue}
                             anomalousColorScheme={anomalousColorScheme}
+                            mainPaperAuthors={mainPaperAuthors}
                         />
                 }
             </div>

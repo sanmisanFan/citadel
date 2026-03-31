@@ -323,6 +323,9 @@
 .missing-paper-title {
   font-size: 13px;
   color: #3a4a5a;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.4;
 }
 
 .missing-list .ant-list-item-meta {
@@ -337,6 +340,67 @@
 .missing-list .ant-btn-primary:hover {
   background: #73d13d !important;
   border-color: #73d13d !important;
+}
+
+/* ==================== Resizable Split Pane ==================== */
+
+.split-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #f5f6f8;
+  user-select: none;
+}
+
+.split-panel {
+  height: 100%;
+  overflow: hidden;
+}
+
+.pdf-panel {
+  min-width: 30%;
+  max-width: 75%;
+}
+
+.analysis-panel {
+  min-width: 25%;
+  max-width: 70%;
+  overflow-y: auto;
+}
+
+.split-divider {
+  width: 8px;
+  background: #e8eaec;
+  cursor: col-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.split-divider:hover,
+.split-divider.dragging {
+  background: #d0d5dc;
+}
+
+.divider-handle {
+  width: 4px;
+  height: 40px;
+  background: #b0b8c0;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+
+.split-divider:hover .divider-handle,
+.split-divider.dragging .divider-handle {
+  background: #8090a0;
+}
+
+/* Ensure proper scrolling in analysis panel */
+.analysis-panel > div {
+  height: 100%;
+  overflow-y: auto;
 }
 
 /** Redefine card style features */

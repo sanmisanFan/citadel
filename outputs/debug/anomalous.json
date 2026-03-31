@@ -13,13 +13,13 @@
         }
       },
       "paper": [
-        "citation-1"
+        "citation-6"
       ],
-      "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
+      "page": 1,
+      "explanation": "The mention of citation [6] in the text is minimal and peripheral. It is used to support a general statement about the limitations of geographic information systems and notebooks in integrating external knowledge sources for contextualizing models. There is no detailed discussion or engagement with the specific content, methods, or results of the cited paper.",
       "sentence": [
         {
-          "sentence": "Fortunately, convolutional neural networks (CNNs) have become famous for scientific photograph segmentation due to their better accuracy and processing pace [1].CNNs generate consequences based totally on found-out styles from supplied example information and can discover relationships between unique clinical images and words to them.",
+          "sentence": "However, these systems and notebooks do not support integrated external knowledge sources to help contextualize models [6].",
           "bbox": null
         }
       ]
@@ -33,17 +33,17 @@
         "displayName": "Low Relevancy",
         "options": {
           "citationRing": false,
-          "selfCitation": true
+          "selfCitation": false
         }
       },
       "paper": [
-        "citation-2"
+        "citation-21"
       ],
-      "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
+      "page": 1,
+      "explanation": "The mention of [21] is peripheral, as it is only cited as a source of inspiration for the visual analytics framework's design, specifically in the context of explainable machine learning. There is no detailed discussion or engagement with the specific content, methods, or results of [21], making its relevance minimal in the context of the excerpt.",
       "sentence": [
         {
-          "sentence": "furthermore, CNNs can investigate and combine more than one pics of different modalities collectively, such as MRI and X-ray photos, and generate a pleasant standard result from the combination [2].",
+          "sentence": "Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7].",
           "bbox": null
         }
       ]
@@ -61,302 +61,287 @@
         }
       },
       "paper": [
-        "citation-3"
+        "citation-21"
       ],
-      "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
+      "page": 1,
+      "explanation": "The mention of [21] in the text is minimal and serves as a general reference to the existence of various spatial prediction models. There is no substantive engagement with the content, methods, or results of the cited paper, making it a peripheral mention in the context of the discussion.",
       "sentence": [
         {
-          "sentence": "As deep studying technology continues to evolve, the possibilities for correct and well-timed clinical imaging segmentation become more practical [3].",
+          "sentence": "Various spatial prediction models [21] and spatial data analysis tools [24] have been developed to support geographic analysis.",
           "bbox": null
         }
       ]
     },
     {
-      "id": "issue-4",
+      "id": "issue-22",
       "name": "citation",
       "displayName": "Citation Anomalous",
       "category": {
-        "name": "lowRelevancy",
-        "displayName": "Low Relevancy",
+        "name": "citationRing",
+        "displayName": "Citation Ring",
         "options": {
-          "citationRing": false,
-          "selfCitation": false
+          "citationRing": true,
+          "selfCitation": false,
+          "overlappingAuthorIds": []
         }
       },
       "paper": [
-        "citation-4"
+        "citation-3"
       ],
-      "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
+      "page": 1,
+      "explanation": "[3] Citation ring pattern detected.\nAuthors of this paper show unusually high mutual citation rates with manuscript authors.\nTitle: \"NewsViews: an automated pipeline for creating custom geovisualizations for news\"",
       "sentence": [
         {
-          "sentence": "By leveraging the strength of Convolutional Neural Networks (CNNs), developers, physicians, and different medical personnel can accurately segment various images for diagnostic, research, and even therapeutic functions [4].",
+          "sentence": "",
           "bbox": null
         }
       ]
     },
     {
-      "id": "issue-5",
+      "id": "issue-23",
       "name": "citation",
       "displayName": "Citation Anomalous",
       "category": {
-        "name": "lowRelevancy",
-        "displayName": "Low Relevancy",
+        "name": "citationRing",
+        "displayName": "Citation Ring",
         "options": {
-          "citationRing": false,
-          "selfCitation": true
+          "citationRing": true,
+          "selfCitation": false,
+          "overlappingAuthorIds": []
         }
       },
       "paper": [
         "citation-5"
       ],
-      "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
+      "page": 1,
+      "explanation": "[5] Citation ring pattern detected.\nAuthors of this paper show unusually high mutual citation rates with manuscript authors.\nTitle: \"Visualization Rhetoric: Framing Effects in Narrative Visualization\"",
       "sentence": [
         {
-          "sentence": "This powerful capability permits segmentation networks to accurately pick out and classify objects in scientific pix even as simultaneously spotting intricate structures [5].The development and alertness of Deep getting-to-know for clinical photograph Segmentation has seen full-size innovation in recent years.",
+          "sentence": "",
           "bbox": null
         }
       ]
     },
     {
-      "id": "issue-6",
+      "id": "issue-24",
       "name": "citation",
       "displayName": "Citation Anomalous",
       "category": {
-        "name": "lowRelevancy",
-        "displayName": "Low Relevancy",
+        "name": "citationRing",
+        "displayName": "Citation Ring",
         "options": {
-          "citationRing": false,
-          "selfCitation": false
-        }
-      },
-      "paper": [
-        "citation-6"
-      ],
-      "page": 2,
-      "explanation": "The mention of citation 5 in the text is peripheral and minimally discussed. The excerpt briefly mentions the capability of CNNs to recognize intricate structures in medical images, but it does not engage with the specific content, methods, or results of the cited paper, which focuses on a technique for IoT traffic detection. There is no direct discussion or contextual relevance between the paper's focus on IoT and the excerpt's focus on medical image segmentation.",
-      "sentence": [
-        {
-          "sentence": "it consists of CT scans, MRIs, and X-rays for various medical programs, including detecting tumors, figuring out bone fractures, and conducting pathological analysis [6].",
-          "bbox": null
-        }
-      ]
-    },
-    {
-      "id": "issue-7",
-      "name": "citation",
-      "displayName": "Citation Anomalous",
-      "category": {
-        "name": "lowRelevancy",
-        "displayName": "Low Relevancy",
-        "options": {
-          "citationRing": false,
-          "selfCitation": true
+          "citationRing": true,
+          "selfCitation": false,
+          "overlappingAuthorIds": []
         }
       },
       "paper": [
         "citation-8"
       ],
-      "page": 3,
-      "explanation": "The mention of citation 9 in the text excerpt is peripheral and only minimally discussed. The excerpt claims that CNNs require fewer parameters and offer higher accuracy, but it does not directly engage with the specific methods or results of the cited paper. The cited paper focuses on a specific model, ConvUNeXt, which reduces parameters and improves performance in medical image segmentation. However, the excerpt does not discuss these specific contributions or how they relate to the general statement about CNNs, making the citation only marginally relevant.",
+      "page": 2,
+      "explanation": "[8] Citation ring pattern detected.\nAuthors of this paper show unusually high mutual citation rates with manuscript authors.\nTitle: \"Interacting with Predictions: Visual Inspection of Black-box Machine Learning Mo...\"",
       "sentence": [
         {
-          "sentence": "Ease of use: CNNs are typically sincere to apply, requiring fewer parameters to be adjusted, while imparting higher accuracy than conventional algorithms [8][9].",
+          "sentence": "EnsembleMatrix provides a visual summary of the model outputs, RuleMatrix uses a matrix-based visualization to explain classification results, and Prospector [8] explores the relationship between feature values and predictions by using partial dependence diagnostics.",
           "bbox": null
         }
       ]
     },
     {
-      "id": "issue-8",
+      "id": "issue-25",
       "name": "citation",
       "displayName": "Citation Anomalous",
       "category": {
-        "name": "lowRelevancy",
-        "displayName": "Low Relevancy",
-        "options": {
-          "citationRing": false,
-          "selfCitation": false
-        }
-      },
-      "paper": [
-        "citation-9"
-      ],
-      "page": 3,
-      "explanation": "The mention of citation 9 in the text excerpt is peripheral and only minimally discussed. The excerpt claims that CNNs require fewer parameters and offer higher accuracy, but it does not directly engage with the specific methods or results of the cited paper. The cited paper focuses on a specific model, ConvUNeXt, which reduces parameters and improves performance in medical image segmentation. However, the excerpt does not discuss these specific contributions or how they relate to the general statement about CNNs, making the citation only marginally relevant.",
-      "sentence": [
-        {
-          "sentence": "Ease of use: CNNs are typically sincere to apply, requiring fewer parameters to be adjusted, while imparting higher accuracy than conventional algorithms [8][9].",
-          "bbox": null
-        }
-      ]
-    },
-    {
-      "id": "issue-9",
-      "name": "citation",
-      "displayName": "Citation Anomalous",
-      "category": {
-        "name": "lowRelevancy",
-        "displayName": "Low Relevancy",
-        "options": {
-          "citationRing": false,
-          "selfCitation": true
-        }
-      },
-      "paper": [
-        "citation-12"
-      ],
-      "page": 3,
-      "explanation": "The mention of citation 15 in the text is peripheral and only minimally discussed. The excerpt briefly touches on the issue of computational efficiency in deep learning models for medical image segmentation, which is a general challenge in the field. The cited paper introduces a specific architecture, Double Attention Res-U-Net, which might address such challenges, but the text does not engage with the specific methods or results of the paper. Instead, it only alludes to the broader context of computational demands in medical image segmentation, without a direct discussion of the cited work's contributions.",
-      "sentence": [
-        {
-          "sentence": "Moreover, studies into area-precise understanding have to be conducted, as this could also help improve the functionality of modern-day deep-gaining knowledge state modern algorithms to segment medical snapshots [12] successfully.",
-          "bbox": null
-        }
-      ]
-    },
-    {
-      "id": "issue-10",
-      "name": "citation",
-      "displayName": "Citation Anomalous",
-      "category": {
-        "name": "lowRelevancy",
-        "displayName": "Low Relevancy",
-        "options": {
-          "citationRing": false,
-          "selfCitation": false
-        }
-      },
-      "paper": [
-        "citation-13"
-      ],
-      "page": 3,
-      "explanation": "The mention of citation 15 in the text is peripheral and only minimally discussed. The excerpt briefly touches on the issue of computational efficiency in deep learning models for medical image segmentation, which is a general challenge in the field. The cited paper introduces a specific architecture, Double Attention Res-U-Net, which might address such challenges, but the text does not engage with the specific methods or results of the paper. Instead, it only alludes to the broader context of computational demands in medical image segmentation, without a direct discussion of the cited work's contributions.",
-      "sentence": [
-        {
-          "sentence": "However, there are various demanding situations-each in phrases trendy the accuracy and efficiency modern day deep trendy-that want to be addressed for the hit implementation of cutting-edge convolutional neural networks for medical picture segmentation [13].The accuracy of cutting-edge deep brand new networks for scientific image segmentation depends on the amount of today's statistics available.",
-          "bbox": null
-        }
-      ]
-    },
-    {
-      "id": "issue-11",
-      "name": "citation",
-      "displayName": "Citation Anomalous",
-      "category": {
-        "name": "lowRelevancy",
-        "displayName": "Low Relevancy",
-        "options": {
-          "citationRing": false,
-          "selfCitation": false
-        }
-      },
-      "paper": [
-        "citation-14"
-      ],
-      "page": 3,
-      "explanation": "The mention of citation 15 in the text is peripheral and only minimally discussed. The excerpt briefly touches on the issue of computational efficiency in deep learning models for medical image segmentation, which is a general challenge in the field. The cited paper introduces a specific architecture, Double Attention Res-U-Net, which might address such challenges, but the text does not engage with the specific methods or results of the paper. Instead, it only alludes to the broader context of computational demands in medical image segmentation, without a direct discussion of the cited work's contributions.",
-      "sentence": [
-        {
-          "sentence": "Performance is another challenge ultra-modern deep ultra-modern for clinical photo segmentation [14].",
-          "bbox": null
-        }
-      ]
-    },
-    {
-      "id": "issue-12",
-      "name": "citation",
-      "displayName": "Citation Anomalous",
-      "category": {
-        "name": "lowRelevancy",
-        "displayName": "Low Relevancy",
-        "options": {
-          "citationRing": false,
-          "selfCitation": false
-        }
-      },
-      "paper": [
-        "citation-15"
-      ],
-      "page": 3,
-      "explanation": "The mention of citation 15 in the text is peripheral and only minimally discussed. The excerpt briefly touches on the issue of computational efficiency in deep learning models for medical image segmentation, which is a general challenge in the field. The cited paper introduces a specific architecture, Double Attention Res-U-Net, which might address such challenges, but the text does not engage with the specific methods or results of the paper. Instead, it only alludes to the broader context of computational demands in medical image segmentation, without a direct discussion of the cited work's contributions.",
-      "sentence": [
-        {
-          "sentence": "This lack of performance can limit the scalability of modern deep latest in medical programs [15].",
-          "bbox": null
-        }
-      ]
-    },
-    {
-      "id": "issue-13",
-      "name": "citation",
-      "displayName": "Citation Anomalous",
-      "category": {
-        "name": "lowRelevancy",
-        "displayName": "Low Relevancy",
-        "options": {
-          "citationRing": false,
-          "selfCitation": false
-        }
-      },
-      "paper": [
-        "citation-16"
-      ],
-      "page": 3,
-      "explanation": "The mention of citation 17 in the text excerpt is peripheral and only minimally discussed. The excerpt briefly acknowledges challenges in deep learning for medical image segmentation but does not engage with the specific content, methods, or results of the cited paper, which focuses on an adaptive momentum rate for optimization. There is no direct connection between the challenges mentioned in the excerpt and the adaptive momentum rate proposed in the cited paper.",
-      "sentence": [
-        {
-          "sentence": "Overfitting is the tendency of state-of-the-art networks to \"drown\" information instead of generalizing and latest from it [16].",
-          "bbox": null
-        }
-      ]
-    },
-    {
-      "id": "issue-14",
-      "name": "citation",
-      "displayName": "Citation Anomalous",
-      "category": {
-        "name": "lowRelevancy",
-        "displayName": "Low Relevancy",
-        "options": {
-          "citationRing": false,
-          "selfCitation": false
-        }
-      },
-      "paper": [
-        "citation-17"
-      ],
-      "page": 3,
-      "explanation": "The mention of citation 17 in the text excerpt is peripheral and only minimally discussed. The excerpt briefly acknowledges challenges in deep learning for medical image segmentation but does not engage with the specific content, methods, or results of the cited paper, which focuses on an adaptive momentum rate for optimization. There is no direct connection between the challenges mentioned in the excerpt and the adaptive momentum rate proposed in the cited paper.",
-      "sentence": [
-        {
-          "sentence": "Even though deep getting to know modern scientific photo segmentation is a promising generation, several challenges need to be addressed to ensure its success [17].",
-          "bbox": null
-        }
-      ]
-    },
-    {
-      "id": "issue-18",
-      "name": "citation",
-      "displayName": "Citation Anomalous",
-      "category": {
-        "name": "selfCitation",
-        "displayName": "Self Citation",
+        "name": "citationRing",
+        "displayName": "Citation Ring",
         "options": {
           "citationRing": true,
-          "selfCitation": true
+          "selfCitation": false,
+          "overlappingAuthorIds": []
         }
       },
       "paper": [
         "citation-10"
       ],
       "page": 1,
-      "explanation": "[10] Self-citation detected (hop-1 reference).\n1 author(s) of this reference are also authors of the manuscript being reviewed.\nTitle: \"An Innovation in the Development of a Mobile Radio Model for a Dual-Band Transce...\"",
+      "explanation": "[10] Citation ring pattern detected.\nAuthors of this paper show unusually high mutual citation rates with manuscript authors.\nTitle: \"Interactive map reports summarizing bivariate geographic data\"",
       "sentence": [
         {
-          "sentence": "Moreover, the utility of ultra-modern deep mastering to clinical picture segmentation provides a greater accurate and automatic method to a challenge that historically calls for manual segmentation [10].",
+          "sentence": "",
           "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-26",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "citationRing",
+        "displayName": "Citation Ring",
+        "options": {
+          "citationRing": true,
+          "selfCitation": false,
+          "overlappingAuthorIds": []
+        }
+      },
+      "paper": [
+        "citation-11"
+      ],
+      "page": 1,
+      "explanation": "[11] Citation ring pattern detected.\nAuthors of this paper show unusually high mutual citation rates with manuscript authors.\nTitle: \"A Deeper Understanding of Visualization‐Text Interplay in Geographic Data‐driven...\"",
+      "sentence": [
+        {
+          "sentence": "Latif and Beck [10] introduce a bivariate map design that integrates template-based text annotations, and they later extend their work to investigate the interplay of text and visualization in geographic storytelling [11].",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-27",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "citationRing",
+        "displayName": "Citation Ring",
+        "options": {
+          "citationRing": true,
+          "selfCitation": false,
+          "overlappingAuthorIds": []
+        }
+      },
+      "paper": [
+        "citation-16"
+      ],
+      "page": 1,
+      "explanation": "[16] Citation ring pattern detected.\nAuthors of this paper show unusually high mutual citation rates with manuscript authors.\nTitle: \"Authoring Narrative Visualizations with Ellipsis\"",
+      "sentence": [
+        {
+          "sentence": "Such narrative visualization techniques have been adopted by a variety of geovisual analytics applications [16] that have integrated story authoring tools with spatial data visualizations.",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-28",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "citationRing",
+        "displayName": "Citation Ring",
+        "options": {
+          "citationRing": true,
+          "selfCitation": false,
+          "overlappingAuthorIds": []
+        }
+      },
+      "paper": [
+        "citation-17"
+      ],
+      "page": 2,
+      "explanation": "[17] Citation ring pattern detected.\nAuthors of this paper show unusually high mutual citation rates with manuscript authors.\nTitle: \"Visual Parameter Space Analysis: A Conceptual Framework\"",
+      "sentence": [
+        {
+          "sentence": "[17] proposed an abstract conceptual framework to discuss the visual parameter space analysis problems independent of the application domain.",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-29",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "citationRing",
+        "displayName": "Citation Ring",
+        "options": {
+          "citationRing": true,
+          "selfCitation": false,
+          "overlappingAuthorIds": []
+        }
+      },
+      "paper": [
+        "citation-18"
+      ],
+      "page": 1,
+      "explanation": "[18] Citation ring pattern detected.\nAuthors of this paper show unusually high mutual citation rates with manuscript authors.\nTitle: \"Narrative Visualization: Telling Stories with Data\"",
+      "sentence": [
+        {
+          "sentence": "Our approach is inspired by research in explainable machine learning [21] and a combination of narrative visualization [18] and storytelling techniques [7].",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-30",
+      "name": "citation",
+      "displayName": "Citation Anomalous",
+      "category": {
+        "name": "citationRing",
+        "displayName": "Citation Ring",
+        "options": {
+          "citationRing": true,
+          "selfCitation": false,
+          "overlappingAuthorIds": []
+        }
+      },
+      "paper": [
+        "citation-25"
+      ],
+      "page": 1,
+      "explanation": "[25] Citation ring pattern detected.\nAuthors of this paper show unusually high mutual citation rates with manuscript authors.\nTitle: \"EnsembleMatrix: interactive visualization to support machine learning with multi...\"",
+      "sentence": [
+        {
+          "sentence": "",
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "issue-stat-13",
+      "name": "statistic",
+      "displayName": "Statistical Anomaly",
+      "category": {
+        "name": "testFailure",
+        "displayName": "Test Failure",
+        "options": {}
+      },
+      "paper": [],
+      "page": 2,
+      "explanation": "F-test (ANOVA) validation failed.\nReported: F(2.0,46.0)=4.0, p<0.01\nIssues: Computed p=0.0250 is not < 0.01",
+      "sentence": [
+        {
+          "sentence": "F(2,46) = 4, p < .01",
+          "bbox": {
+            "x": 63.96,
+            "y": 674.31,
+            "width": 230.09,
+            "height": 7.77
+          }
+        }
+      ]
+    },
+    {
+      "id": "issue-stat-14",
+      "name": "statistic",
+      "displayName": "Statistical Anomaly",
+      "category": {
+        "name": "testFailure",
+        "displayName": "Test Failure",
+        "options": {}
+      },
+      "paper": [],
+      "page": 2,
+      "explanation": "F-test (ANOVA) validation failed.\nReported: F(0.47,1.73)=0.9, p=0.756\nIssues: Reported p=0.756 doesn't match computed p=0.3470",
+      "sentence": [
+        {
+          "sentence": "F(0.47,1.73) = 0.9, p = 0.756.",
+          "bbox": {
+            "x": 63.96,
+            "y": 674.31,
+            "width": 230.09,
+            "height": 7.77
+          }
         }
       ]
     }

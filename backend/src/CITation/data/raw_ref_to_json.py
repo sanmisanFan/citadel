@@ -428,6 +428,7 @@ Do not include any other text, explanations, or formatting."""
                 print(f"DEBUG: OpenAlex batch DOI lookup failed: {e}")
 
         print(f"DEBUG: OpenAlex batch lookup found {len(results)}/{len(dois)} papers")
+        print(f"DEBUG: OpenAlex batch result keys: {list(results.keys())}")
         return results
 
     def _merge_authors(self, parsed_authors, s2_authors, openalex_authors=None):
@@ -572,7 +573,8 @@ Do not include any other text, explanations, or formatting."""
 
             # Check if we already have S2 data from batch lookup
             ref_id = paper.get("ref_id")
-            s2_data = batch_results.get(ref_id)
+            # Try both int and string keys for batch results
+            s2_data = batch_results.get(ref_id) or batch_results.get(str(ref_id)) or batch_results.get(int(ref_id) if str(ref_id).isdigit() else ref_id)
             made_individual_api_call = False
 
             # Fall back to title search if batch lookup didn't find it
@@ -612,18 +614,24 @@ Do not include any other text, explanations, or formatting."""
             openalex_data = None
             openalex_authors = None
             openalex_refs = None
-            if not s2_data or need_openalex_for_authors or need_openalex_for_refs:
-                print(
-                    f"DEBUG: ORCID missing or Semantic Scholar data not available for paper {i}, attempting OpenAlex..."
-                )
-                # First check batch results
-                openalex_data = openalex_batch_results.get(ref_id)
+
+            # Only fetch OpenAlex if we NEED it (missing S2 data or missing refs)
+            # Skip individual OpenAlex calls just for ORCID - it's not critical
+            need_openalex = not s2_data or need_openalex_for_refs
+
+            if need_openalex or need_openalex_for_authors:
+                # First check batch results (fast) - try both int and string keys
+                openalex_data = openalex_batch_results.get(ref_id) or openalex_batch_results.get(str(ref_id)) or openalex_batch_results.get(int(ref_id) if str(ref_id).isdigit() else ref_id)
                 if openalex_data:
                     print(f"DEBUG: Paper {i} found via OpenAlex batch DOI lookup")
-                else:
-                    # Fall back to title search if not in batch results
+                elif need_openalex:
+                    # Only do individual lookup if we really need OpenAlex data (not just ORCID)
+                    print(f"DEBUG: Paper {i} not in OpenAlex batch, doing individual lookup...")
                     openalex_data = self.get_paper_details_openalex(title)
                     made_individual_api_call = True
+                else:
+                    # Just needed ORCID but not in batch - skip individual lookup
+                    print(f"DEBUG: Paper {i} - ORCID missing but skipping individual OpenAlex lookup (not critical)")
 
                 if openalex_data:
                     if need_openalex_for_authors:
@@ -634,7 +642,7 @@ Do not include any other text, explanations, or formatting."""
 
             if s2_data:
                 merged = self._merge_data(
-                    paper, s2_data, openalex_authors, openalex_refs
+                    paper, s2_data, openalex_authors, openalex_refs, openalex_data
                 )
                 merged["is_artificial"] = False
                 print(f"DEBUG: Merged data for paper {i}: {merged}")
@@ -708,7 +716,7 @@ Do not include any other text, explanations, or formatting."""
             formatted.append(author_key)
         return formatted
 
-    def _merge_data(self, parsed, s2, openalex_authors=None, openalex_refs=None):
+    def _merge_data(self, parsed, s2, openalex_authors=None, openalex_refs=None, openalex_data=None):
         venue_full = parsed.get("venue") if "venue" in parsed else s2.get("venue")
         raw_venue = (
             parsed.get("raw_venue")
@@ -734,12 +742,29 @@ Do not include any other text, explanations, or formatting."""
         """
 
         abstract = parsed.get("abstract", None)
+
+        # Try S2 tldr first
         if not abstract:
             s2_tldr = s2.get("tldr")
             if s2_tldr:
                 abstract = s2_tldr.get("text", None)
 
-        # Web search fallback for abstract if still not found
+        # Try OpenAlex abstract_inverted_index before web search
+        if not abstract and openalex_data:
+            abstract_inverted = openalex_data.get("abstract_inverted_index")
+            if abstract_inverted:
+                try:
+                    word_positions = []
+                    for word, positions in abstract_inverted.items():
+                        for pos in positions:
+                            word_positions.append((pos, word))
+                    word_positions.sort(key=lambda x: x[0])
+                    abstract = " ".join(word for _, word in word_positions)
+                    print(f"DEBUG: Got abstract from OpenAlex inverted index")
+                except Exception as e:
+                    print(f"DEBUG: Failed to reconstruct OpenAlex abstract: {e}")
+
+        # Web search fallback for abstract only if absolutely necessary
         if not abstract:
             title = s2.get("title", parsed.get("title"))
             doi = s2.get("externalIds", {}).get("DOI", parsed.get("doi"))

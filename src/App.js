@@ -34,6 +34,7 @@ function App() {
     const [venue, setVenue] = useState([]);
     const [sentenceAnnotationList, setSentenceAnnotationList] = useState([]);
     const [authorGraph, setAuthorGraph] = useState(null);
+    const [mainPaperAuthorIds, setMainPaperAuthorIds] = useState([]);
 
     const [currentPage, setCurrentPage] = useState(1);
     const [activeHighlight, setActiveHighlight] = useState(null);
@@ -43,6 +44,27 @@ function App() {
     const [missingAbstracts, setMissingAbstracts] = useState([]);
     const [showMissingModal, setShowMissingModal] = useState(false);
     const [abstractPdfs, setAbstractPdfs] = useState({});
+    const [splitPosition, setSplitPosition] = useState(58); // percentage for PDF panel width
+    const [isDragging, setIsDragging] = useState(false);
+
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        e.preventDefault();
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        const container = document.querySelector('.split-container');
+        if (!container) return;
+        const rect = container.getBoundingClientRect();
+        const newPosition = ((e.clientX - rect.left) / rect.width) * 100;
+        // Clamp between 30% and 75%
+        setSplitPosition(Math.min(75, Math.max(30, newPosition)));
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
 
     const uploadPdf = (file) => {
         setPdfData(file);
@@ -97,13 +119,13 @@ function App() {
 
                 authorRaw.forEach(author => {
                     author.has_issue = citationsList.some(citation =>
-                        citation.author.includes(author.id) && citation.has_issue
+                        citation.author && citation.author.includes(author.id) && citation.has_issue
                     );
                 });
 
                 venueRaw.forEach(venue => {
                     venue.has_issue = citationsList.some(citation =>
-                        citation.venue.includes(venue.id) && citation.has_issue
+                        citation.venue && citation.venue.includes(venue.id) && citation.has_issue
                     );
                 });
 
@@ -168,6 +190,12 @@ function App() {
                         authors: c.author,
                     }));
                 setMissingAbstracts(papersWithoutAbstract);
+
+                // Extract main paper authors (hop === 0)
+                const mainPaper = citationRaw.find(c => c.hop === 0);
+                if (mainPaper && mainPaper.author) {
+                    setMainPaperAuthorIds(mainPaper.author);
+                }
 
                 setIsProcessing(false);
                 setIsProcessed(true);
@@ -352,37 +380,47 @@ function App() {
                 )}
 
                 {isProcessed && (
-                    <div className="mainContainer">
-                        <Row>
-                            <Col span={14}>
-                                {pdfData !== null && <PDFContainer
-                                    file={pdfData}
-                                    citation={citation}
-                                    anomalous={anomalous}
-                                    anomalousColorScheme={anomalousColorScheme}
-                                    sentenceAnnotationList={sentenceAnnotationList}
-                                    currentPage={currentPage}
-                                    setCurrentPage={setCurrentPage}
-                                    activeHighlight={activeHighlight}
-                                    setActiveHighlight={setActiveHighlight}
-                                    setAnomalous={setAnomalous}
-                                />}
-                            </Col>
-                            <Col span={10}>
-                                <VisContainer
-                                    file={pdfData}
-                                    citation={citation}
-                                    author={author}
-                                    venue={venue}
-                                    anomalous={anomalous}
-                                    anomalousColorScheme={anomalousColorScheme}
-                                    currentPage={currentPage}
-                                    activeHighlight={activeHighlight}
-                                    setActiveHighlight={setActiveHighlight}
-                                    authorGraphDataRaw={authorGraph}
-                                />
-                            </Col>
-                        </Row>
+                    <div
+                        className="split-container"
+                        onMouseMove={handleMouseMove}
+                        onMouseUp={handleMouseUp}
+                        onMouseLeave={handleMouseUp}
+                    >
+                        <div className="split-panel pdf-panel" style={{ width: `${splitPosition}%` }}>
+                            {pdfData !== null && <PDFContainer
+                                file={pdfData}
+                                citation={citation}
+                                anomalous={anomalous}
+                                anomalousColorScheme={anomalousColorScheme}
+                                sentenceAnnotationList={sentenceAnnotationList}
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                                activeHighlight={activeHighlight}
+                                setActiveHighlight={setActiveHighlight}
+                                setAnomalous={setAnomalous}
+                            />}
+                        </div>
+                        <div
+                            className={`split-divider ${isDragging ? 'dragging' : ''}`}
+                            onMouseDown={handleMouseDown}
+                        >
+                            <div className="divider-handle" />
+                        </div>
+                        <div className="split-panel analysis-panel" style={{ width: `${100 - splitPosition}%` }}>
+                            <VisContainer
+                                file={pdfData}
+                                citation={citation}
+                                author={author}
+                                venue={venue}
+                                anomalous={anomalous}
+                                anomalousColorScheme={anomalousColorScheme}
+                                currentPage={currentPage}
+                                activeHighlight={activeHighlight}
+                                setActiveHighlight={setActiveHighlight}
+                                authorGraphDataRaw={authorGraph}
+                                mainPaperAuthors={mainPaperAuthorIds}
+                            />
+                        </div>
                     </div>
                 )}
 
@@ -487,8 +525,7 @@ function App() {
                                     <List.Item.Meta
                                         title={
                                             <Text className="missing-paper-title">
-                                                [{paper.cite_number}] {paper.title?.substring(0, 60)}
-                                                {paper.title?.length > 60 ? "..." : ""}
+                                                [{paper.cite_number}] {paper.title}
                                             </Text>
                                         }
                                     />

@@ -1,7 +1,10 @@
 import { useEffect, useCallback, useState } from "react";
-import { Card, Row, Col, Descriptions, Tag, Space } from 'antd';
+import { Card, Row, Col, Descriptions, Tag, Space, Alert, Typography } from 'antd';
+import { LinkOutlined, UserOutlined, WarningOutlined } from '@ant-design/icons';
 
 import "./style.css";
+
+const { Text } = Typography;
 
 export const ContentCard = ({
   width,
@@ -12,7 +15,8 @@ export const ContentCard = ({
   citation,
   author,
   venue,
-  anomalousColorScheme
+  anomalousColorScheme,
+  mainPaperAuthors  // Authors of the paper being reviewed
 }) => {
   const selectedAnomalous = anomalous.find(e => e.id === activeHighlight);
   const baseColor = anomalousColorScheme[selectedAnomalous.name]['baseColor'];
@@ -40,15 +44,68 @@ export const ContentCard = ({
 
   // Function to format the authors, if available
   const formatAuthors = (authorIds) => {
-    //console.log(author);
     if (!authorIds) return "N/A";
 
     const authorNames = authorIds.map(authorId => {
       const authorObj = author.find(a => a.id === authorId);
-      //console.log("authorObj", authorObj, authorId);
       return authorObj ? `${authorObj.standardized_name}` : "Unknown Author";
     });
     return authorNames.join(", ");
+  };
+
+  // Find overlapping authors between citation and main paper for self-citation detection
+  const findOverlappingAuthors = (citationAuthorIds) => {
+    if (!citationAuthorIds || !mainPaperAuthors) return [];
+
+    const overlapping = [];
+    citationAuthorIds.forEach(authorId => {
+      if (mainPaperAuthors.includes(authorId)) {
+        const authorObj = author.find(a => a.id === authorId);
+        if (authorObj) {
+          overlapping.push(authorObj.standardized_name);
+        }
+      }
+    });
+    return overlapping;
+  };
+
+  // Generate relationship explanation
+  const getRelationshipInfo = (citationObj) => {
+    if (!citationObj) return null;
+
+    const isSelfCitation = category.options?.selfCitation;
+    const isCitationRing = category.options?.citationRing;
+    const overlappingAuthorIds = category.options?.overlappingAuthorIds || [];
+
+    if (isSelfCitation) {
+      // Use overlapping author IDs from backend if available, otherwise try to find them
+      let overlappingNames = [];
+      if (overlappingAuthorIds.length > 0) {
+        overlappingNames = overlappingAuthorIds.map(authorId => {
+          const authorObj = author.find(a => a.id === authorId);
+          return authorObj ? authorObj.standardized_name : authorId;
+        });
+      } else {
+        overlappingNames = findOverlappingAuthors(citationObj.author);
+      }
+
+      return {
+        type: 'self-citation',
+        message: `This paper shares ${overlappingNames.length || 'some'} author(s) with your manuscript`,
+        authors: overlappingNames,
+        color: '#eb2f96'
+      };
+    }
+
+    if (isCitationRing) {
+      return {
+        type: 'citation-ring',
+        message: 'Authors of this paper show unusually high mutual citation patterns',
+        color: '#722ed1'
+      };
+    }
+
+    return null;
   };
   
   // Function to format the venues, if available
@@ -62,10 +119,38 @@ export const ContentCard = ({
   const citationInfo = paper && paper.length > 0 ? (
     paper.map((citationId, index) => {
       const citationObj = citation.find(c=>c.id===citationId);
-      console.log("citationObj", citationObj);
-      
+      const relationshipInfo = citationObj ? getRelationshipInfo(citationObj) : null;
+
       return (
         <div key={`citation-${index}`} style={{padding: 5}}>
+          {/* Relationship Alert */}
+          {relationshipInfo && (
+            <Alert
+              type={relationshipInfo.type === 'self-citation' ? 'warning' : 'info'}
+              showIcon
+              icon={relationshipInfo.type === 'self-citation' ? <UserOutlined /> : <LinkOutlined />}
+              style={{ marginBottom: 12 }}
+              message={
+                <Text strong style={{ color: relationshipInfo.color }}>
+                  {relationshipInfo.type === 'self-citation' ? 'Self-Citation Detected' : 'Citation Ring Pattern'}
+                </Text>
+              }
+              description={
+                <div>
+                  <Text>{relationshipInfo.message}</Text>
+                  {relationshipInfo.authors && relationshipInfo.authors.length > 0 && (
+                    <div style={{ marginTop: 8 }}>
+                      <Text type="secondary">Shared authors: </Text>
+                      {relationshipInfo.authors.map((name, i) => (
+                        <Tag key={i} color="magenta" style={{ margin: 2 }}>{name}</Tag>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              }
+            />
+          )}
+
           <Descriptions size="small" >
             <Descriptions.Item label={`Author`} span={3}>
               {citationObj && formatAuthors(citationObj.author)}

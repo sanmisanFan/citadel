@@ -31,8 +31,8 @@ export const AnomalousListCard = ({
 
   // Tooltip content for each tag
   const tagTooltips = {
-    citationRing: "Citations within the same paper or among a close network of papers.",
-    selfCitation: "Citations referring to the authors' own previous work.",
+    citationRing: "A pattern where authors cite each other at unusually high rates, potentially indicating coordinated citation behavior to inflate metrics.",
+    selfCitation: "The cited paper shares one or more authors with the manuscript being reviewed. While self-citation is normal, excessive self-citation can indicate bias.",
   };
 
 

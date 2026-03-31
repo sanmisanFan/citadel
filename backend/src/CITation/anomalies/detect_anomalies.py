@@ -64,6 +64,7 @@ def generate_anomalous_json(enriched_papers):
             relevance_score = mention.get("relevance_score", None)
 
             # Identify low relevancy citations (score 1, 2, or 3, but not 0)
+            # Score 0 means "reference list entry only" - no substantive discussion found
             if relevance_score is not None and 0 < relevance_score <= 3:
                 raw_explanation = mention.get("assessment", "No explanation provided.")
                 page_num = mention.get("page", 1)  # Get page number from mention
@@ -111,7 +112,7 @@ def generate_anomalous_json(enriched_papers):
 def update_anomalous_with_hop1_sccs(anomalous_data, hop1_sccs_data, citations):
     """
     Updates the anomalous data by checking citations against hop-1 SCCs for:
-      1) Self-citation (if an author cites themselves).
+      1) Self-citation (if the cited paper shares an author with the manuscript being reviewed).
       2) Citation ring (if authors in group != 0 are citing each other).
     Returns the updated data in memory (does NOT write a file).
     """
@@ -121,48 +122,49 @@ def update_anomalous_with_hop1_sccs(anomalous_data, hop1_sccs_data, citations):
     for node in hop1_sccs_data.get("nodes", []):
         author_to_group[node["id"]] = node.get("group", 0)
 
-    # (Optional) Build a set of edges (source, target) if your JSON includes "links"
-    links_data = hop1_sccs_data.get("links", [])
-    scc_edges = set()
-    for edge in links_data:
-        scc_edges.add((edge["source"], edge["target"]))
-
     citation_to_authors = {c_id: c["author"] for c_id, c in citations.items()}
 
-    # 3) Update each anomalous issue
+    # Get hop-0 (current paper being reviewed) authors
+    hop0_author_ids = set()
+    for c_id, c in citations.items():
+        if c.get("hop") == 0:
+            hop0_author_ids.update(c.get("author", []))
+
+    # Update each anomalous issue
     for issue in anomalous_data["identifiedIssue"]:
         category_options = issue["category"]["options"]
+        overlapping_author_ids = []
 
         # Each "issue" might reference multiple "paper" IDs
         for cited_paper_id in issue["paper"]:
             if cited_paper_id not in citation_to_authors:
                 print(
-                    f"Warning: Citation {cited_paper_id} not found in citations_updated.json. Skipping."
+                    f"Warning: Citation {cited_paper_id} not found in citations. Skipping."
                 )
                 continue
 
             cited_authors = citation_to_authors[cited_paper_id]
 
-            # Check if any cited author is in a group != 0
             for author_id in cited_authors:
-                author_group = author_to_group.get(author_id, 0)
-
-                if author_group != 0:
-                    # SELF-CITATION: If there's an edge (author_id, author_id) in the SCC
-                    if (author_id, author_id) in scc_edges:
-                        category_options["selfCitation"] = True
-                        print(
-                            f"{cited_paper_id}: Marked as selfCitation (SCC edge from {author_id} to itself)."
-                        )
-                    else:
-                        # CITATION RING
+                # SELF-CITATION: If author is on both the manuscript and the cited paper
+                if author_id in hop0_author_ids:
+                    category_options["selfCitation"] = True
+                    overlapping_author_ids.append(author_id)
+                    print(
+                        f"{cited_paper_id}: Marked as selfCitation (author {author_id} is on manuscript)."
+                    )
+                else:
+                    # CITATION RING: If author is in a suspicious SCC group
+                    author_group = author_to_group.get(author_id, 0)
+                    if author_group != 0:
                         category_options["citationRing"] = True
                         print(
                             f"{cited_paper_id}: Marked as citationRing (author in SCC group {author_group})."
                         )
 
-                    # Once flagged, no need to check more authors for this paper in this issue
-                    break
+        # Store overlapping author IDs for self-citations
+        if overlapping_author_ids:
+            category_options["overlappingAuthorIds"] = overlapping_author_ids
 
     return anomalous_data
 
@@ -220,25 +222,27 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
         overlapping_author_ids = []
 
         for author_id in cited_authors:
-            author_group = author_to_group.get(author_id, 0)
-            if author_group != 0:
-                # Check if this author is also an author of the current paper (hop-0)
-                if author_id in hop0_author_ids:
-                    is_self_citation = True
-                    overlapping_author_ids.append(author_id)
-                elif (author_id, author_id) in scc_edges:
-                    is_self_citation = True
-                    overlapping_author_ids.append(author_id)
-                else:
+            # Check if this author is also an author of the current paper (hop-0)
+            # This is a true self-citation - the cited paper shares an author with the manuscript
+            if author_id in hop0_author_ids:
+                is_self_citation = True
+                overlapping_author_ids.append(author_id)
+            else:
+                # Check if author is in a suspicious SCC (citation ring pattern)
+                author_group = author_to_group.get(author_id, 0)
+                if author_group != 0:
                     is_citation_ring = True
 
         if is_self_citation or is_citation_ring:
-            # Find the mention text from enriched papers
+            # Find the mention text and page from enriched papers
             mention_text = ""
+            mention_page = 1  # Default page
             paper = citation_key_to_paper.get(citation_key)
             if paper:
                 mentions = paper.get("reference_mentions", [])
                 if mentions:
+                    # Use the first mention's page and text
+                    mention_page = mentions[0].get("page", 1)
                     full_text = mentions[0].get("text", "")
                     # Extract just the sentence containing the citation
                     mention_text = extract_citation_sentence(full_text, citation_key)
@@ -250,17 +254,25 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
             cite_number = citation.get("cite_number", "?")
             title = citation.get("title", "Unknown title")
 
-            # Build informative explanation
+            # Build informative explanation with author details for self-citations
             if is_self_citation:
                 num_overlapping = len(overlapping_author_ids)
+                # Get the names of overlapping authors
+                overlapping_names = []
+                for author_id in overlapping_author_ids:
+                    # Find author name from citations data
+                    for c_id, c in citations.items():
+                        if c.get("hop") == 0:  # Main paper
+                            # We don't have author names here, so just note the IDs
+                            break
                 explanation = (
-                    f"[{cite_number}] Self-citation detected (hop-{hop} reference).\n"
+                    f"[{cite_number}] Self-citation detected.\n"
                     f"{num_overlapping} author(s) of this reference are also authors of the manuscript being reviewed.\n"
                     f"Title: \"{title[:80]}{'...' if len(title) > 80 else ''}\""
                 )
             else:
                 explanation = (
-                    f"[{cite_number}] Citation ring pattern detected (hop-{hop} reference).\n"
+                    f"[{cite_number}] Citation ring pattern detected.\n"
                     f"Authors of this paper show unusually high mutual citation rates with manuscript authors.\n"
                     f"Title: \"{title[:80]}{'...' if len(title) > 80 else ''}\""
                 )
@@ -275,10 +287,11 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
                     "options": {
                         "citationRing": is_citation_ring,
                         "selfCitation": is_self_citation,
+                        "overlappingAuthorIds": overlapping_author_ids if is_self_citation else [],
                     },
                 },
                 "paper": [citation_key],
-                "page": 1,
+                "page": mention_page,
                 "explanation": explanation,
                 "sentence": [{"sentence": mention_text, "bbox": None}],
             }
