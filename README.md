@@ -1,100 +1,100 @@
-# Research Reviewer Project
+# Citadel
 
+Citadel is a research-paper review tool. Upload a PDF and the backend extracts
+its references, scores each citation's relevance with an LLM, builds
+citation/author/venue graphs, flags anomalies (low-relevance citations,
+suspicious author/venue communities, statcheck mismatches), and the frontend
+visualizes the results alongside the PDF.
 
+The Python package is `CITation`; the FastAPI app is `CITation.main:app`.
 
-* Automated static checks for thorough and consistent pre-review. 
-* Visualization-supported peer review.
+## Architecture
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **Backend** — FastAPI app in [backend/src/CITation/](backend/src/CITation/).
+  Exposes a WebSocket (`/ws/process_pdf`) that runs the full pipeline on an
+  uploaded PDF, plus REST endpoints for batch abstract extraction. Pipeline
+  steps live in [data/](backend/src/CITation/data/) (extraction, enrichment,
+  graph building) and [anomalies/](backend/src/CITation/anomalies/) (relevance,
+  author/venue suspicion, statcheck).
+- **Frontend** — React + Ant Design app in [src/](src/). PDF viewer in
+  [src/components/pdfContainer/](src/components/pdfContainer/), graph and
+  anomaly visualizations in [src/components/visContainer/](src/components/visContainer/).
+- **GROBID** (optional but recommended) — used for reference extraction,
+  citation-mention location, formula coordinate extraction (for statcheck
+  highlights), and abstract recovery for missing-metadata references. The
+  backend falls back to `pymupdf4llm` + GPT parsing when GROBID is unavailable.
 
-## Introduction - FanL
-The frontend of this project is build based on React + Antd UI framework. Citation_Stacking/ folder contains all the scripts from Akshit.
+## Prerequisites
 
-## Getting started
-Do I run the front-end after the python processing scripts?
+- Python ≥ 3.11 with [`uv`](https://docs.astral.sh/uv/)
+- Node.js (for the React frontend)
+- `OPENAI_API_KEY` set in the environment
+- Docker (optional, to run GROBID locally)
 
-```
-make run
-```
+## Setup
 
-The project's Python dependencies are managed by `uv`. With `uv` installed, run `uv sync`. To start the Python backend in development mode, run `uv run fastapi dev`. The back-end uses ChatGPT to process the pdf files. You need to have a valid openAI API key set in your environment variables for it to work; please set `OPENAI_API_KEY` accordingly.
+Install Python and JS dependencies:
 
-Tests can be run with `uv run pytest`.
-
-
-## PDF Statistical Test Validator
-
-This project converts PDF files to text, extracts statistical test results (F-tests, t-tests, and Chi-square tests), and validates the reported p-values.
-
-```
-make statcheck
-```
-
-To use the script, simply provide the path to a PDF file. The script will extract the text, find statistical tests, and validate the p-values.
-
-```
-pdf_path = 'path/to/your/pdf/p4045.pdf'
-process_pdf_file(pdf_path)
-```
-
-## Synthetic Paper Generator and Citation Network Visualisation
-
-This project generates synthetic research papers with random titles, authors, and references, and visualizes the citation network using NetworkX and Matplotlib.
-
-```
-make generate_citation_network
+```bash
+uv sync
+npm install
 ```
 
-Then, run the following command to visualize the citation network:
+(Optional) start GROBID:
 
-``` 
-make visualize_citation_network
+```bash
+docker run --rm -p 8070:8070 lfoppiano/grobid:0.8.0
 ```
 
-### Reading the Citaion Network Graph
-* Nodes:
-    - Blue nodes: Represent the authors.
-    - Lightblue nodes: Represent the papers.
-* Edges:
-    - Blue edges: Connect an author to their own paper.
-    - Green edges: Represent citations from one paper to another author.
-    - Red edges: Indicate bidirectional citations between two authors (citation ring).
+Override the GROBID URL with `GROBID_URL` if it's not on `localhost:8070`.
 
+## Running
 
+In separate terminals:
 
-## Available Scripts
+```bash
+# Backend (FastAPI, http://localhost:8000)
+uv run fastapi dev backend/src/CITation/main.py
 
-In the project directory, you can run:
+# Frontend (React, http://localhost:3000)
+npm start
+```
 
-### `yarn start`
+The frontend talks to the backend at `localhost:8000` by default; override with
+the `BACKEND_URL` env var when starting `npm start`. CORS is configured for
+`localhost:3000` only.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `WebSocket /ws/process_pdf` — main pipeline. The client sends paper metadata
+  (JSON), file metadata (JSON), then PDF bytes. The server streams `info`
+  progress events and a final `end` event with `{citations, authors, venues,
+  anomalous, authorGraph}`.
+- `POST /api/extract_abstract` — single-PDF abstract extraction via GROBID.
+  Requires GROBID.
+- `POST /api/extract_abstracts` — batch version.
 
-### `yarn test`
+## Debug outputs
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Each pipeline run writes intermediate JSON (enriched papers, citations,
+authors, venues, anomalies, author graph, reference mentions, plain text,
+formula coordinates, pipeline timing summary) to `outputs/debug/` for
+inspection.
 
-### `yarn build`
+## Tests
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+uv run pytest
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Backend tests live in [backend/tests/](backend/tests/). Mark slow tests with
+`@pytest.mark.slow`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Legacy scripts
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The top-level `*.py` files (`statcheck.py`, `synthetic.py`, `stackinggraph.py`,
+`pubmedPaperExtraction.py`, `florMatrix.py`) and [backend_scripts/](backend_scripts/)
+are earlier standalone tools that predate the integrated FastAPI pipeline.
+They are kept for reference but are not part of the running application.
+See [backend_scripts/README.md](backend_scripts/README.md) for the historical
+script-by-script pipeline.
