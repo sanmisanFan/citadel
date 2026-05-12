@@ -35,6 +35,26 @@ def pdf_to_md_str(content) -> str:
     return res
 
 
+def pdf_to_md_cascading(content) -> str:
+    """Convert PDF bytes to markdown, preferring olmocr and falling back to pymupdf4llm.
+
+    olmocr generally produces higher-fidelity markdown (especially for OCR-heavy
+    PDFs) but requires the CLI to be installed; pymupdf4llm is always available.
+    """
+    from .olmocr import is_olmocr_available, pdf_to_md_str_olmocr
+
+    if is_olmocr_available():
+        try:
+            md = pdf_to_md_str_olmocr(content)
+            if md.strip():
+                return md
+            print("DEBUG: olmocr returned empty markdown, falling back to pymupdf4llm")
+        except Exception as e:
+            print(f"DEBUG: olmocr failed ({e}), falling back to pymupdf4llm")
+
+    return pdf_to_md_str(content)
+
+
 def get_openalex_authors(openalex):
     return [
         {

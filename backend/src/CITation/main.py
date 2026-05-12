@@ -10,7 +10,7 @@ from fastapi import (
 )
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from .data.utils import pdf_to_md_str
+from .data.utils import pdf_to_md_cascading
 from .data.raw_ref_to_json import PaperProcessor
 from .data.process_references import process_markdown_string, parse_references
 from .anomalies.gpt_relevance import (
@@ -153,7 +153,7 @@ def extract_references_grobid_with_fallback(
                 if not reference_mentions:
                     print("DEBUG: Grobid citation mentions empty, using markdown fallback")
                     progress_fn("info", "Converting PDF to markdown for citation mentions...")
-                    md_text = pdf_to_md_str(pdf_content)
+                    md_text = pdf_to_md_cascading(pdf_content)
                     reference_mentions, _ = process_markdown_string(md_text)
 
                 return parsed_refs, reference_mentions, md_text
@@ -164,7 +164,7 @@ def extract_references_grobid_with_fallback(
 
     # Fallback: markdown parsing + GPT
     progress_fn("info", "Converting PDF to markdown...")
-    md_text = pdf_to_md_str(pdf_content)
+    md_text = pdf_to_md_cascading(pdf_content)
 
     progress_fn("info", "Extracting references from markdown...")
     reference_mentions, raw_references = process_markdown_string(md_text)
@@ -234,10 +234,10 @@ async def process_pdf_ws(ws: WebSocket):
             )
 
         gpt_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        # TODO: https://github.com/allenai/olmocr for pdf conversion
 
         # Try grobid first, fall back to markdown+GPT
-        # Markdown is only created if needed (grobid fallback)
+        # Markdown is only created if needed (grobid fallback); pdf_to_md_cascading
+        # prefers olmocr and falls back to pymupdf4llm.
         t0 = time()
         parsed, reference_mentions, md_text = await asyncio.to_thread(
             extract_references_grobid_with_fallback,

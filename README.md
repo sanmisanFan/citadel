@@ -21,8 +21,12 @@ The Python package is `CITation`; the FastAPI app is `CITation.main:app`.
   anomaly visualizations in [src/components/visContainer/](src/components/visContainer/).
 - **GROBID** (optional but recommended) — used for reference extraction,
   citation-mention location, formula coordinate extraction (for statcheck
-  highlights), and abstract recovery for missing-metadata references. The
-  backend falls back to `pymupdf4llm` + GPT parsing when GROBID is unavailable.
+  highlights), and abstract recovery for missing-metadata references.
+- **PDF → markdown cascade** — when markdown is needed (GROBID missing or
+  unable to locate citation mentions), the backend tries
+  [olmocr](https://github.com/allenai/olmocr) first and falls back to
+  `pymupdf4llm`. olmocr is not a hard dependency; install it separately if
+  you want to use it.
 
 ## Prerequisites
 
@@ -47,6 +51,19 @@ docker run --rm -p 8070:8070 lfoppiano/grobid:0.8.0
 ```
 
 Override the GROBID URL with `GROBID_URL` if it's not on `localhost:8070`.
+
+(Optional) install olmocr for higher-fidelity PDF → markdown conversion.
+It's heavy (vision model, expects a GPU), so it's not in `pyproject.toml`.
+Add it to this project's venv if you want it:
+
+```bash
+uv add olmocr
+```
+
+The backend invokes it via `python -m olmocr.pipeline` by default; override
+with `OLMOCR_CMD` (e.g. `OLMOCR_CMD="my-olmocr-wrapper"`) and the per-PDF
+timeout with `OLMOCR_TIMEOUT` (seconds, default 900). When olmocr isn't
+available the backend silently falls back to `pymupdf4llm`.
 
 ## Running
 
