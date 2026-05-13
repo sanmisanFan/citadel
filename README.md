@@ -227,6 +227,33 @@ discrepancies inside citation lists (`[22,30,32]` vs `[22, 30, 32]`) and
 the multi-sentence excerpts GROBID sometimes returns when its sentence
 splitter misses a boundary in the extracted mention text.
 
+When the citation marker is nowhere in the GROBID paragraph handed to
+`extract_citation_sentence` ([backend/src/CITation/anomalies/detect_anomalies.py](backend/src/CITation/anomalies/detect_anomalies.py)),
+the function now returns `""` instead of the paragraph's first 200
+characters. The old fallback silently attributed every such anomaly to
+the same paragraph-opening string, so distinct citations collapsed onto
+one (often un-locatable) sentence and the frontend logged repeated
+`[Highlight] Sentence not found` warnings. Empty sentences are already
+treated as "no body location" by [src/App.js](src/App.js) — the anomaly
+is still listed but no sentence underline is drawn.
+
+To make the active anomaly unambiguous when several share a line, the
+sentence underline in
+[src/components/issueComps/sentenceAnnotate.js](src/components/issueComps/sentenceAnnotate.js)
+is now muted (`opacity: 0.35`, 2px) for inactive issues and bold (full
+opacity, 3px) for the selected one — previously only the background
+differed, so a selected anomaly whose sentence couldn't be located
+looked indistinguishable from neighbouring anomalies' underlines.
+[src/components/issueComps/highlightBox.js](src/components/issueComps/highlightBox.js)
+also now activates a citation-marker bbox when *any* issue in
+`cite.issues` matches `activeHighlight` (previously only
+`cite.issues[0]` was checked, so secondary issues never lit up their
+marker). Finally, the selection effect in
+[src/components/pdfContainer/index.js](src/components/pdfContainer/index.js)
+now scrolls to the citation-marker bbox when one is available, instead
+of just to the top of the page — so clicking an anomaly whose sentence
+can't be matched still anchors the viewport on the `[N]` marker.
+
 ## Tests
 
 ```bash

@@ -22,7 +22,7 @@ import './style.css';
 ).toString();*/
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-export const PDFContainer = ({ 
+export const PDFContainer = ({
   file,
   citation,
   anomalous,
@@ -34,6 +34,26 @@ export const PDFContainer = ({
   setActiveHighlight,
   setAnomalous
 }) => {
+  // Find the citation marker bbox for an anomaly so we can scroll directly
+  // to "[6]" instead of just the top of the page. Falls back to null when
+  // the anomaly has no paper link or that citation has no position on the
+  // expected page (e.g. unreferenced).
+  const findCiteBboxForIssue = (issueObj) => {
+    if (!issueObj || !Array.isArray(issueObj.paper)) return null;
+    for (const paperId of issueObj.paper) {
+      const cit = citation.find((c) => c.id === paperId);
+      if (!cit || !Array.isArray(cit.cite_positions)) continue;
+      const onPage = cit.cite_positions.find(
+        (p) => p.page === issueObj.page && Array.isArray(p.issues) && p.issues.includes(issueObj.id)
+      );
+      if (onPage) return { page: onPage.page, bbox: onPage.bbox };
+      const anyMatch = cit.cite_positions.find(
+        (p) => Array.isArray(p.issues) && p.issues.includes(issueObj.id)
+      );
+      if (anyMatch) return { page: anyMatch.page, bbox: anyMatch.bbox };
+    }
+    return null;
+  };
   const viewerRef = useRef(null);
 
   const [numPages, setNumPages] = useState(null);
@@ -201,13 +221,33 @@ export const PDFContainer = ({
   }, [textLayerReadyPages, citation, anomalous, activeHighlight]);
 
   useEffect(() => {
-    if (activeHighlight !== null) {
-      const selectedAnomalous = anomalous.find(e => e.id === activeHighlight);
-      if (selectedAnomalous) {
-        scrollToPage(selectedAnomalous.page);
-      }
+    if (activeHighlight === null || !viewerRef.current) return;
+    const selectedAnomalous = anomalous.find(e => e.id === activeHighlight);
+    if (!selectedAnomalous) return;
+
+    // Prefer scrolling to the citation marker bbox: when the body sentence
+    // can't be located in the text layer (e.g. extract_citation_sentence
+    // returned ""), the marker bbox is still the user's anchor.
+    const citeLoc = findCiteBboxForIssue(selectedAnomalous);
+    const targetPage = (citeLoc && citeLoc.page) || selectedAnomalous.page;
+    if (targetPage == null) return;
+
+    const pageEl = viewerRef.current.querySelector(
+      `.react-pdf__Page[data-page-number="${targetPage}"]`
+    );
+    if (!pageEl) return;
+
+    if (citeLoc && citeLoc.bbox) {
+      const pageRect = pageEl.getBoundingClientRect();
+      const viewerRect = viewerRef.current.getBoundingClientRect();
+      const offsetWithinPage = citeLoc.bbox.y * pageRect.height;
+      const target =
+        pageEl.offsetTop + offsetWithinPage - viewerRect.height / 3;
+      viewerRef.current.scrollTo({ top: Math.max(target, 0), behavior: "smooth" });
+    } else {
+      pageEl.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [activeHighlight, anomalous]);
+  }, [activeHighlight, anomalous, citation]);
 
   useEffect(() => {
     if (viewerRef.current) {

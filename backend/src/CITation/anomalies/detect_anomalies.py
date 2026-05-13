@@ -38,8 +38,12 @@ def extract_citation_sentence(text, citation_key):
         end = min(len(text), match.end() + 100)
         return text[start:end].strip()
 
-    # Last resort: return first 200 chars
-    return text[:200].strip() + "..." if len(text) > 200 else text.strip()
+    # The citation marker is nowhere in the paragraph GROBID handed us.
+    # Returning the first 200 chars here mis-attributes every such anomaly
+    # to the paragraph's opening, so distinct anomalies collide on a single
+    # sentence the frontend then can't locate. Better to surface "no body
+    # location" so the UI can fall back to the citation-marker bbox.
+    return ""
 
 
 def generate_anomalous_json(enriched_papers):
