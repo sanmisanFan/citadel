@@ -19,6 +19,17 @@ def pdf_to_str(content) -> str:
     return text
 
 
+def pdf_first_pages_text(content, n_pages: int = 2) -> str:
+    """Return plain text from the first ``n_pages`` of a PDF.
+
+    Used for fast manuscript metadata extraction (title/authors/year live on
+    the first page; reading the whole document is wasteful for that lookup).
+    """
+    doc = fitz.open(stream=content, filetype="pdf")
+    limit = min(n_pages, doc.page_count)
+    return "\n".join(doc[i].get_text() for i in range(limit))
+
+
 def pdf_to_md_str(content) -> str:
     """Converts a PDF to markdown via PyMuPDF. Used in the initial pre-processing step to
     get a structured text view of the data.

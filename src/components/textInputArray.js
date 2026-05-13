@@ -3,8 +3,15 @@ import { Input, Button } from 'antd';
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 
 // Dynamically create text inputs for fields with multiple values (e.g., authors)
-const TextInputArray = ({ updateCallback, unitName }) => {
+const TextInputArray = ({ updateCallback, unitName, initialValues }) => {
     const [content, setContent] = useState([""]);
+
+    // Re-seed contents when caller provides a fresh set (e.g. auto-extracted authors).
+    useEffect(() => {
+        if (initialValues && initialValues.length > 0) {
+            setContent([...initialValues]);
+        }
+    }, [initialValues]);
 
     const updateContent = (e, i) => {
         content[i] = e.currentTarget.value;

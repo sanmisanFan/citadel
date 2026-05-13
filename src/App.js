@@ -26,6 +26,9 @@ function App() {
     const [title, setTitle] = useState("");
     const [authors, setAuthors] = useState([""]);
     const [year, setYear] = useState("");
+    const [authorsInitial, setAuthorsInitial] = useState(null);
+    const [isExtractingMetadata, setIsExtractingMetadata] = useState(false);
+    const [metadataExtractionError, setMetadataExtractionError] = useState(null);
     const [isProcessed, setIsProcessed] = useState(false);
 
     const [citation, setCitation] = useState([]);
@@ -46,6 +49,36 @@ function App() {
 
     const uploadPdf = (file) => {
         setPdfData(file);
+        autoFillMetadata(file);
+    };
+
+    const autoFillMetadata = async (file) => {
+        setMetadataExtractionError(null);
+        setIsExtractingMetadata(true);
+        try {
+            const formData = new FormData();
+            formData.append("file", file);
+            const response = await fetch(`http://${BACKEND_URL}/api/extract_metadata`, {
+                method: "POST",
+                body: formData,
+            });
+            if (!response.ok) {
+                throw new Error(`Status ${response.status}`);
+            }
+            const data = await response.json();
+            if (data.title) setTitle(data.title);
+            if (data.year !== null && data.year !== undefined) setYear(String(data.year));
+            if (Array.isArray(data.authors) && data.authors.length > 0) {
+                setAuthorsInitial(data.authors);
+            }
+        } catch (err) {
+            console.error("Metadata extraction failed:", err);
+            setMetadataExtractionError(
+                "Couldn't auto-fill metadata — please enter it manually."
+            );
+        } finally {
+            setIsExtractingMetadata(false);
+        }
     };
 
     const onSubmit = () => {
@@ -262,7 +295,24 @@ function App() {
                                             <div className="section-header">
                                                 <Text strong className="section-number">2</Text>
                                                 <Text strong className="section-title">Paper Metadata</Text>
+                                                {isExtractingMetadata && (
+                                                    <Space size={6} style={{ marginLeft: 12 }}>
+                                                        <Spin size="small" />
+                                                        <Text type="secondary">Auto-filling from PDF…</Text>
+                                                    </Space>
+                                                )}
                                             </div>
+                                            <Text type="secondary" style={{ display: "block", marginBottom: 12 }}>
+                                                We pre-fill these from the PDF — review and edit if anything looks off.
+                                            </Text>
+                                            {metadataExtractionError && (
+                                                <Alert
+                                                    type="warning"
+                                                    message={metadataExtractionError}
+                                                    showIcon
+                                                    style={{ marginBottom: 12 }}
+                                                />
+                                            )}
 
                                             <div className="form-grid">
                                                 <div className="form-field">
@@ -284,6 +334,7 @@ function App() {
                                                     <TextInputArray
                                                         updateCallback={setAuthors}
                                                         unitName="Author"
+                                                        initialValues={authorsInitial}
                                                     />
                                                 </div>
 

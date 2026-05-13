@@ -87,6 +87,12 @@ the `BACKEND_URL` env var when starting `npm start`. CORS is configured for
   (JSON), file metadata (JSON), then PDF bytes. The server streams `info`
   progress events and a final `end` event with `{citations, authors, venues,
   anomalous, authorGraph}`.
+- `POST /api/extract_metadata` — pre-fills the upload form. Accepts a PDF
+  multipart upload, reads the first two pages with PyMuPDF, and asks
+  `gpt-4o-mini` (JSON mode) for `{title, authors, year}`. The frontend calls
+  this as soon as a PDF is dropped so the user reviews/edits rather than
+  retypes manuscript metadata; fields stay editable and a warning surfaces if
+  extraction fails.
 - `POST /api/extract_abstract` — single-PDF abstract extraction via GROBID.
   Requires GROBID.
 - `POST /api/extract_abstracts` — batch version.

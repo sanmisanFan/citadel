@@ -10,7 +10,7 @@ from fastapi import (
 )
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from .data.utils import pdf_to_md_cascading
+from .data.utils import pdf_to_md_cascading, pdf_first_pages_text
 from .data.raw_ref_to_json import PaperProcessor
 from .data.process_references import process_markdown_string, parse_references
 from .anomalies.gpt_relevance import (
@@ -380,6 +380,62 @@ async def process_pdf_ws(ws: WebSocket):
 
     except WebSocketDisconnect:
         print("Disconnected.")
+
+
+def _extract_metadata_with_gpt(gpt_client, first_page_text: str) -> dict:
+    """Ask GPT for the manuscript's own title/authors/year from its first page."""
+    prompt = (
+        "Extract the manuscript metadata from the first-page text below. "
+        "Return ONLY a JSON object with keys: title (string), authors (array of strings, "
+        "full names in order, no affiliations or emails), year (integer or null if absent). "
+        "If a field cannot be confidently determined, use null (or an empty array for authors).\n\n"
+        "First-page text:\n-----\n"
+        f"{first_page_text[:6000]}\n-----"
+    )
+    response = gpt_client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}],
+        response_format={"type": "json_object"},
+        temperature=0,
+    )
+    result = json.loads(response.choices[0].message.content)
+    return {
+        "title": result.get("title") or "",
+        "authors": [a for a in (result.get("authors") or []) if isinstance(a, str) and a.strip()],
+        "year": result.get("year"),
+    }
+
+
+@app.post("/api/extract_metadata")
+async def extract_paper_metadata(file: UploadFile = File(...)):
+    """Extract the manuscript's title, authors, and year from its first page.
+
+    Frontend calls this on PDF upload to pre-fill the metadata form; users can
+    still review and override before submitting for analysis.
+    """
+    if file.content_type and file.content_type != "application/pdf":
+        raise HTTPException(status_code=415, detail="Only PDF files are accepted.")
+
+    contents = await file.read()
+
+    try:
+        first_page_text = await asyncio.to_thread(pdf_first_pages_text, contents, 2)
+    except Exception as e:
+        raise HTTPException(status_code=422, detail=f"Could not read PDF: {e}")
+
+    if not first_page_text.strip():
+        return {"title": "", "authors": [], "year": None}
+
+    gpt_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    try:
+        metadata = await asyncio.to_thread(
+            _extract_metadata_with_gpt, gpt_client, first_page_text
+        )
+    except Exception as e:
+        print(f"DEBUG: metadata extraction failed: {e}")
+        raise HTTPException(status_code=502, detail="Metadata extraction failed.")
+
+    return metadata
 
 
 @app.post("/api/extract_abstract")
