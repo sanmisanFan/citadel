@@ -117,6 +117,14 @@ function App() {
                 return;
             }
 
+            // Handle backend error messages
+            if (data.type === "error") {
+                console.error("Backend error:", data.msg);
+                setProgressStatus(`Error: ${data.msg}`);
+                setIsProcessing(false);
+                return;
+            }
+
             if (data !== null && data.type === "end") {
                 const results = data.results;
 
@@ -218,9 +226,11 @@ function App() {
             setProgressStatus("Connection error. Please try again.");
         };
 
-        ws.onclose = () => {
+        ws.onclose = (event) => {
             if (!isProcessed) {
-                setProgressStatus("Connection closed.");
+                const reason = event.reason ? `: ${event.reason}` : "";
+                setProgressStatus(`Connection closed${reason}`);
+                setIsProcessing(false);
             }
         };
     };

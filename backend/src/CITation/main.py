@@ -228,14 +228,21 @@ async def process_pdf_ws(ws: WebSocket):
 
         # TODO: eventually make this a wrapper for other LLMs and expose functions
         # for each type of call the pipeline makes
+        missing_key = None
         if "OPENAI_API_KEY" not in os.environ:
-            raise WebSocketException(
-                code=1011, reason="Backend did not set OpenAI API key."
+            missing_key = "OPENAI_API_KEY"
+        elif not os.getenv("S2_API_KEY"):
+            missing_key = "S2_API_KEY (Semantic Scholar)"
+        if missing_key:
+            await ws.send_json(
+                {
+                    "type": "error",
+                    "msg": f"Backend is missing required environment variable: {missing_key}.",
+                    "data": None,
+                }
             )
-
-        if not os.getenv("S2_API_KEY"):
             raise WebSocketException(
-                code=1011, reason="Backend did not set Semantic Scholar API key."
+                code=1011, reason=f"Backend missing {missing_key}."
             )
 
         gpt_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
