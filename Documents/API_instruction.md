@@ -14,13 +14,13 @@ There are **four** major objects that will be requested from the backend service
 
 - **Venue :** each citation has been published to a venue which can be a Journal, Conference, or a book. All venues are arranged as the **venue objects**
 
-- **Anomalous :** the **Anomalous objects** contain the detected potential anomalous. There are two types of anomalous with sub-categories:
-    - **_Citation anomalous_**:
+- **Anomalous :** the **Anomalous objects** contain the detected potential anomalies. There are two types of anomalies with sub-categories:
+    - **_Citation anomaly_**:
       - Retracted paper
       - Low citation relevance (two potential causes below)
         - Citation cartel
         - Self-citation (spatial citation ring case)
-    - **_Statistical anomalous_**:
+    - **_Statistical anomaly_**:
       - Statistical testing failure
       - Inconsistant value reference(s) in the content
 
@@ -34,7 +34,7 @@ There are **four** major objects that will be requested from the backend service
     {
       "id": "issue-0", // <string> anomalous ID, serves as the primary KEY linked to other objects
       "name": "citation", // <string> citation / statistic / other
-      "displayName": "Citation Anomalous", // <string> Citation Anomalous / Statistical Anomalous / Other
+      "displayName": "Citation Anomaly", // <string> Citation Anomaly / Statistical Anomaly / Other
       "category": { // <null / Dict> the sub-category of the anomalous, set null if we have "other"
         "name": "lowRelevancy", // <string> If citation: lowRelevancy / retractedPaper. If statistic: testFailure / valueInconsistency
         "displayName": "Low Relevancy", // <string> the readable name on the interface

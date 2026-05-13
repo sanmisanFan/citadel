@@ -33,11 +33,15 @@ def build_suspicious_authors_graph(authors, citations):
     # 5. Find strongly connected components (SCCs)
     sccs = list(nx.strongly_connected_components(G))
 
-    # 6. Define "suspicious" as SCCs of size 1-8 with any edge > weight_threshold
+    # 6. Define "suspicious" as SCCs of size 2-8 with any edge > weight_threshold.
+    # Size-1 SCCs are a single author with a self-loop — i.e. heavy self-citation,
+    # not a "ring" (a ring requires at least two authors mutually citing each other),
+    # so they are excluded here to avoid flagging celebrity authors like Kahneman
+    # who self-cite across their own papers.
     weight_threshold = 1
     suspicious_sccs = []
     for scc in sccs:
-        if 1 <= len(scc) <= 8:
+        if 2 <= len(scc) <= 8:
             subgraph = G.subgraph(scc)
             if any(
                 data["weight"] > weight_threshold

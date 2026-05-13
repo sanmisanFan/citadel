@@ -161,6 +161,17 @@ which produced false positives on references whose authors were unrelated to
 the manuscript. Those references now fall through to "Citation Ring" when
 they meet the SCC criterion.
 
+`build_suspicious_authors_graph` in
+[backend/src/CITation/anomalies/author_sus.py](backend/src/CITation/anomalies/author_sus.py)
+now requires suspicious SCCs to contain **at least two authors**
+(`2 <= len(scc) <= 8` instead of `1 <= ...`). A size-1 SCC is a single
+author with a self-loop — i.e. heavy self-citation across their own papers —
+which is normal behavior for prolific authors (e.g. Daniel Kahneman citing
+his own work) and is not a "ring" by any sensible definition. The previous
+threshold flagged those authors as being in a citation-ring group, which
+then propagated to every hop-1 paper they wrote, producing false-positive
+"Citation Ring" anomalies on celebrity references.
+
 A new `Unreferenced` citation anomaly flags bibliography entries that never
 appear in the body of the manuscript. `generate_unreferenced_anomalies` in
 [backend/src/CITation/anomalies/detect_anomalies.py](backend/src/CITation/anomalies/detect_anomalies.py)

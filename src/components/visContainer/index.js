@@ -168,7 +168,7 @@ export const VisContainer = ({
                         <ContentCard
                             width={'60%'}
                             id={'anomalousContainer-card'}
-                            title={'Citation Anomalous'}
+                            title={'Citation Anomaly'}
                             activeHighlight={activeHighlight}
                             anomalous={anomalous}
                             citation={citation}
