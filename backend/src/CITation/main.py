@@ -233,6 +233,11 @@ async def process_pdf_ws(ws: WebSocket):
                 code=1011, reason="Backend did not set OpenAI API key."
             )
 
+        if not os.getenv("S2_API_KEY"):
+            raise WebSocketException(
+                code=1011, reason="Backend did not set Semantic Scholar API key."
+            )
+
         gpt_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
         # Try grobid first, fall back to markdown+GPT

@@ -33,6 +33,7 @@ The Python package is `CITation`; the FastAPI app is `CITation.main:app`.
 - Python ≥ 3.11 with [`uv`](https://docs.astral.sh/uv/)
 - Node.js (for the React frontend)
 - `OPENAI_API_KEY` set in the environment
+- `S2_API_KEY` set in the environment ([Semantic Scholar API key](https://www.semanticscholar.org/product/api))
 - Docker (optional, to run GROBID locally)
 
 ## Setup
