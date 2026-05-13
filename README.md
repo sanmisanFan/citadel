@@ -138,6 +138,32 @@ of hardcoding `page: 1`, so self-citation / citation-ring anomalies surface
 on the page where the citation actually appears (matching what the
 low-relevancy code path already did).
 
+Self-citation is now only flagged when a cited author is also an author of
+the manuscript being reviewed. The previous SCC self-edge fallback in
+`generate_scc_anomalies` / `update_anomalous_with_hop1_sccs`
+([backend/src/CITation/anomalies/detect_anomalies.py](backend/src/CITation/anomalies/detect_anomalies.py))
+labeled hop-1 papers as "Self Citation" whenever any of their authors had a
+self-loop in the SCC graph (i.e. the author cited themselves over time),
+which produced false positives on references whose authors were unrelated to
+the manuscript. Those references now fall through to "Citation Ring" when
+they meet the SCC criterion.
+
+A new `Unreferenced` citation anomaly flags bibliography entries that never
+appear in the body of the manuscript. `generate_unreferenced_anomalies` in
+[backend/src/CITation/anomalies/detect_anomalies.py](backend/src/CITation/anomalies/detect_anomalies.py)
+walks the enriched papers and emits an issue for any reference with no
+`reference_mentions`. The frontend has a corresponding color in
+[src/annotationConfig.js](src/annotationConfig.js) and renders an
+"Unreferenced" tag plus tooltip in
+[src/components/visContainer/anomalousList.js](src/components/visContainer/anomalousList.js),
+[src/components/visContainer/contentCard.js](src/components/visContainer/contentCard.js),
+and
+[src/components/visContainer/authorInfoCard.js](src/components/visContainer/authorInfoCard.js).
+Because unreferenced entries have no body location, the issue is emitted
+with `page: null` and an empty sentence; the anomaly list renders a "—" in
+the page column and [src/App.js](src/App.js) skips registering a body
+highlight for these issues.
+
 ## Tests
 
 ```bash

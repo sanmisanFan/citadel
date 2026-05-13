@@ -1,5 +1,5 @@
-import { useEffect, useCallback, useState, useRef } from "react";
-import { Card, Space, Flex, Badge, Tag, Typography, Tooltip } from 'antd';
+import { useEffect, useRef } from "react";
+import { Card, Flex, Tag, Typography, Tooltip } from 'antd';
 
 import "./style.css";
 
@@ -33,6 +33,7 @@ export const AnomalousListCard = ({
   const tagTooltips = {
     citationRing: "Citations within the same paper or among a close network of papers.",
     selfCitation: "Citations referring to the authors' own previous work.",
+    unreferenced: "Reference listed in the bibliography but never cited in the body of the manuscript.",
   };
 
 
@@ -91,6 +92,15 @@ export const AnomalousListCard = ({
                 </Tooltip>
             );
           }
+          if (options.unreferenced) {
+            optionTags.push(
+              <Tooltip key="unreferenced" title={tagTooltips.unreferenced}>
+                <Tag color="default" style={{fontSize: 10, lineHeight: 1.5}}>
+                  Unreferenced
+                </Tag>
+              </Tooltip>
+            );
+          }
         }
         return (
           <Card
@@ -124,7 +134,7 @@ export const AnomalousListCard = ({
               <Flex vertical gap={5}>
               {optionTags}
               </Flex>
-              <Text type="secondary" style={{fontSize:14}}>Page: {page}</Text>
+              <Text type="secondary" style={{fontSize:14}}>Page: {page ?? '—'}</Text>
             </Flex>
           </Card>
         );

@@ -179,6 +179,10 @@ function App() {
                                 : null;
 
                         sentenceList.forEach(sentenceObj => {
+                            // Skip anomalies without a body location (e.g. Unreferenced).
+                            if (page == null || !sentenceObj.sentence) {
+                                return;
+                            }
                             console.log(`Adding highlight: ${issueID}, page ${page}, sentence: "${sentenceObj.sentence?.substring(0, 50)}..."`);
                             _sentenceHighlights.push({
                                 issueID,

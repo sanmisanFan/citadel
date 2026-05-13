@@ -18,6 +18,10 @@ export const anomalousColorScheme = {
       citationRing: {
         baseColor: "rgba(214,39,40,1)",
         boxColor: "rgba(214,39,40,0.3)"
+      },
+      unreferenced: {
+        baseColor: "rgba(140,140,140,1)",
+        boxColor: "rgba(140,140,140,0.3)"
       }
     }
   },

@@ -111,8 +111,9 @@ def generate_anomalous_json(enriched_papers):
 def update_anomalous_with_hop1_sccs(anomalous_data, hop1_sccs_data, citations):
     """
     Updates the anomalous data by checking citations against hop-1 SCCs for:
-      1) Self-citation (if an author cites themselves).
-      2) Citation ring (if authors in group != 0 are citing each other).
+      1) Self-citation (a cited author is also an author of the manuscript).
+      2) Citation ring (cited author shares an SCC group with manuscript authors
+         but isn't on the manuscript itself).
     Returns the updated data in memory (does NOT write a file).
     """
 
@@ -121,13 +122,13 @@ def update_anomalous_with_hop1_sccs(anomalous_data, hop1_sccs_data, citations):
     for node in hop1_sccs_data.get("nodes", []):
         author_to_group[node["id"]] = node.get("group", 0)
 
-    # (Optional) Build a set of edges (source, target) if your JSON includes "links"
-    links_data = hop1_sccs_data.get("links", [])
-    scc_edges = set()
-    for edge in links_data:
-        scc_edges.add((edge["source"], edge["target"]))
-
     citation_to_authors = {c_id: c["author"] for c_id, c in citations.items()}
+
+    # Manuscript (hop-0) authors — only these qualify as "self" for self-citation.
+    hop0_author_ids = set()
+    for c in citations.values():
+        if c.get("hop") == 0:
+            hop0_author_ids.update(c.get("author", []))
 
     # 3) Update each anomalous issue
     for issue in anomalous_data["identifiedIssue"]:
@@ -148,14 +149,12 @@ def update_anomalous_with_hop1_sccs(anomalous_data, hop1_sccs_data, citations):
                 author_group = author_to_group.get(author_id, 0)
 
                 if author_group != 0:
-                    # SELF-CITATION: If there's an edge (author_id, author_id) in the SCC
-                    if (author_id, author_id) in scc_edges:
+                    if author_id in hop0_author_ids:
                         category_options["selfCitation"] = True
                         print(
-                            f"{cited_paper_id}: Marked as selfCitation (SCC edge from {author_id} to itself)."
+                            f"{cited_paper_id}: Marked as selfCitation (author {author_id} is on the manuscript)."
                         )
                     else:
-                        # CITATION RING
                         category_options["citationRing"] = True
                         print(
                             f"{cited_paper_id}: Marked as citationRing (author in SCC group {author_group})."
@@ -222,11 +221,8 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
         for author_id in cited_authors:
             author_group = author_to_group.get(author_id, 0)
             if author_group != 0:
-                # Check if this author is also an author of the current paper (hop-0)
+                # Self-citation only when the cited author is on the manuscript (hop-0).
                 if author_id in hop0_author_ids:
-                    is_self_citation = True
-                    overlapping_author_ids.append(author_id)
-                elif (author_id, author_id) in scc_edges:
                     is_self_citation = True
                     overlapping_author_ids.append(author_id)
                 else:
@@ -290,6 +286,55 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
     return anomalous_issues
 
 
+def generate_unreferenced_anomalies(enriched_papers, next_issue_id):
+    """
+    Flag references that appear in the bibliography but are never cited in the
+    body of the manuscript (i.e. no reference_mentions). Returns a list of
+    issues with category "unreferenced".
+    """
+    anomalous_issues = []
+    issue_id = next_issue_id
+
+    for paper in enriched_papers.values():
+        citation_key = paper.get("citation_key")
+        if not citation_key:
+            continue
+        mentions = paper.get("reference_mentions", []) or []
+        if mentions:
+            continue
+
+        cite_number = paper.get("cite_number", "?")
+        title = paper.get("title", "Unknown title")
+        explanation = (
+            f"[{cite_number}] Unreferenced bibliography entry.\n"
+            f"This reference is listed in the bibliography but never cited in the body of the manuscript.\n"
+            f"Title: \"{title[:80]}{'...' if len(title) > 80 else ''}\""
+        )
+
+        issue = {
+            "id": f"issue-{issue_id}",
+            "name": "citation",
+            "displayName": "Citation Anomalous",
+            "category": {
+                "name": "unreferenced",
+                "displayName": "Unreferenced",
+                "options": {
+                    "citationRing": False,
+                    "selfCitation": False,
+                    "unreferenced": True,
+                },
+            },
+            "paper": [citation_key],
+            "page": None,
+            "explanation": explanation,
+            "sentence": [{"sentence": "", "bbox": None}],
+        }
+        anomalous_issues.append(issue)
+        issue_id += 1
+
+    return anomalous_issues
+
+
 def find_anomalies(enriched, hop1_sccs_data, citations):
     anomalous_data = generate_anomalous_json(enriched)
     anomalous_data = update_anomalous_with_hop1_sccs(anomalous_data, hop1_sccs_data, citations)
@@ -305,5 +350,22 @@ def find_anomalies(enriched, hop1_sccs_data, citations):
         hop1_sccs_data, citations, enriched, existing_paper_ids
     )
     anomalous_data["identifiedIssue"].extend(scc_anomalies)
+
+    for issue in scc_anomalies:
+        for paper_key in issue.get("paper", []):
+            existing_paper_ids.add(paper_key)
+
+    # Skip papers that already have an anomaly so we don't double-flag.
+    remaining_enriched = {
+        ref_id: paper
+        for ref_id, paper in enriched.items()
+        if paper.get("citation_key") not in existing_paper_ids
+    }
+    next_issue_id = max(
+        [int(issue["id"].split("-")[1]) for issue in anomalous_data["identifiedIssue"]]
+        + [0]
+    ) + 1
+    unreferenced = generate_unreferenced_anomalies(remaining_enriched, next_issue_id)
+    anomalous_data["identifiedIssue"].extend(unreferenced)
 
     return anomalous_data

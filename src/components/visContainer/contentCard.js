@@ -1,5 +1,4 @@
-import { useEffect, useCallback, useState } from "react";
-import { Card, Row, Col, Descriptions, Tag, Space } from 'antd';
+import { Card, Descriptions, Tag } from 'antd';
 
 import "./style.css";
 
@@ -17,8 +16,6 @@ export const ContentCard = ({
   const selectedAnomalous = anomalous.find(e => e.id === activeHighlight);
   const baseColor = anomalousColorScheme[selectedAnomalous.name]['baseColor'];
   const categoryColor = anomalousColorScheme[selectedAnomalous.name]['category'][selectedAnomalous.category.name]['baseColor'];
-  const boxColor = anomalousColorScheme[selectedAnomalous.name]['category'][selectedAnomalous.category.name]['boxColor'];
-  const bgColor = activeHighlight === selectedAnomalous.id && boxColor;
 
   if (!selectedAnomalous) {
     return (
@@ -129,9 +126,12 @@ export const ContentCard = ({
             {(category.options !== null && category.options.selfCitation) && (
               <Tag color="blue" style={{fontSize: 12, lineHeight: 1.5}}>Self Citation</Tag>
             )}
+            {(category.options !== null && category.options.unreferenced) && (
+              <Tag color="default" style={{fontSize: 12, lineHeight: 1.5}}>Unreferenced</Tag>
+            )}
           </Descriptions.Item>
           <Descriptions.Item label="Page">
-            {page}
+            {page ?? '—'}
           </Descriptions.Item>
           {citationInfo && (<Descriptions.Item label="Citation Information">
             {citationInfo}

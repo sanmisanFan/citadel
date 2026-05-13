@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Typography, List, Tooltip, Divider, Space, Tag, Popover } from 'antd';
+import { Typography, List, Tooltip, Divider, Space, Tag } from 'antd';
 import AuthorGraph from './authorGraph'; // Import AuthorGraph component
 
 const { Text, Link } = Typography;
@@ -15,9 +15,6 @@ export const AuthorInfoCard = ({
   if (!author) return null;
 
   const authorCitations = citation.filter(cite => cite.author.includes(author.id));
-  const authorAnomalies = anomalous.filter(anomaly =>
-    anomaly.paper !== null && authorCitations.some(cite => cite.id === anomaly.paper[0])
-  );
 
   // Filter graph data
   const authorNode = authorGraphData.nodes.find(node => node.id === author.id);
@@ -79,7 +76,6 @@ export const AuthorInfoCard = ({
               const citeAnomalies = anomalous.filter(anomaly => anomaly.paper && anomaly.paper.includes(cite.id));
               const hasIssue = cite.has_issue;
               const anomalousNames = citeAnomalies.map(anomaly => anomaly.displayName);
-              const anomalousCategories = citeAnomalies.map(anomaly => anomaly.category.displayName);
               const anomalousOptions = citeAnomalies.map(anomaly => anomaly.category.options);
               const anomalousColors = citeAnomalies.map(anomaly => anomalousColorScheme[anomaly.name]['category'][anomaly.category.name]['baseColor']);
 
@@ -103,7 +99,12 @@ export const AuthorInfoCard = ({
                       Self Citation
                     </Tag>
                   )}
-                </Text>  
+                  {anomalousOptions.length > 0 && anomalousOptions[0] && anomalousOptions[0].unreferenced && (
+                    <Tag color="default" style={{ marginLeft: '8px' }}>
+                      Unreferenced
+                    </Tag>
+                  )}
+                </Text>
                 </List.Item>
               );
             }}
