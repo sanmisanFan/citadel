@@ -108,13 +108,18 @@
 
 /* PDF Dragger */
 .pdf-dragger {
+  background: transparent !important;
+  border: none !important;
+}
+
+.pdf-dragger .ant-upload-drag {
   border: 2px dashed #d0d5dc !important;
   border-radius: 8px !important;
   background: #fafbfc !important;
   transition: all 0.2s ease;
 }
 
-.pdf-dragger:hover {
+.pdf-dragger .ant-upload-drag:hover {
   border-color: #1890ff !important;
   background: #f0f7ff !important;
 }
