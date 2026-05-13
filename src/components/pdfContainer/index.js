@@ -1,11 +1,10 @@
 import { useEffect, useCallback, useState, useRef } from "react";
 import { createRoot } from "react-dom/client";
-import { pdfjs, Document, Page, Outline } from 'react-pdf';
+import { pdfjs, Document, Page } from 'react-pdf';
 import { findSentenceInTextLayer, findCitationAnchorSpan } from "../../util/pdfUtil";
 
 import { citationHighlight } from "../../util/annotationCtrl";
 
-import { HighlightBbox } from "../issueComps/highlightBox";
 import { SentenceAnnotation } from "../issueComps/sentenceAnnotate";
 import { FloatingPanel } from "../issueComps/floatPanel";
 import { ToolBar } from "./toolbar";
@@ -34,26 +33,6 @@ export const PDFContainer = ({
   setActiveHighlight,
   setAnomalous
 }) => {
-  // Find the citation marker bbox for an anomaly so we can scroll directly
-  // to "[6]" instead of just the top of the page. Falls back to null when
-  // the anomaly has no paper link or that citation has no position on the
-  // expected page (e.g. unreferenced).
-  const findCiteBboxForIssue = (issueObj) => {
-    if (!issueObj || !Array.isArray(issueObj.paper)) return null;
-    for (const paperId of issueObj.paper) {
-      const cit = citation.find((c) => c.id === paperId);
-      if (!cit || !Array.isArray(cit.cite_positions)) continue;
-      const onPage = cit.cite_positions.find(
-        (p) => p.page === issueObj.page && Array.isArray(p.issues) && p.issues.includes(issueObj.id)
-      );
-      if (onPage) return { page: onPage.page, bbox: onPage.bbox };
-      const anyMatch = cit.cite_positions.find(
-        (p) => Array.isArray(p.issues) && p.issues.includes(issueObj.id)
-      );
-      if (anyMatch) return { page: anyMatch.page, bbox: anyMatch.bbox };
-    }
-    return null;
-  };
   const viewerRef = useRef(null);
 
   const [numPages, setNumPages] = useState(null);
@@ -92,7 +71,7 @@ export const PDFContainer = ({
     setTextLayerReadyPages(ready);
   }, []);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (!viewerRef.current) return;
 
     const viewer = viewerRef.current;
@@ -108,22 +87,9 @@ export const PDFContainer = ({
         break;
       }
     }
-  };
+  }, [setCurrentPage]);
 
-  // Function to scroll to the corresponding page
-  const scrollToPage = (pageNumber) => {
-    if (!viewerRef.current) return;
-
-    const pageElement = viewerRef.current.querySelector(
-      `.react-pdf__Page[data-page-number="${pageNumber}"]`
-    );
-
-    if (pageElement) {
-      pageElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
-  const applyHighlightsReact = () => {
+  const applyHighlightsReact = useCallback(() => {
     if (!viewerRef.current) return;
 
     const viewer = viewerRef.current;
@@ -192,17 +158,16 @@ export const PDFContainer = ({
           });
       }
     });
-  };
+  }, [sentenceAnnotationList, activeHighlight, anomalous, citation, setActiveHighlight]);
 
   useEffect(() => {
     // render anomalous highlight
     if (Object.keys(textLayerReadyPages).length === numPages) {
-      //console.log("activeHighlight:", activeHighlight);
       setTimeout(() => {
         applyHighlightsReact();
        }, 100);
     }
-  }, [textLayerReadyPages, sentenceAnnotationList, activeHighlight]);
+  }, [textLayerReadyPages, numPages, applyHighlightsReact]);
 
   useEffect(() => {
     if (Object.keys(textLayerReadyPages).length === numPages) {
@@ -218,7 +183,7 @@ export const PDFContainer = ({
       }, 100);
 
     }
-  }, [textLayerReadyPages, citation, anomalous, activeHighlight]);
+  }, [textLayerReadyPages, numPages, citation, anomalous, anomalousColorScheme, activeHighlight, setActiveHighlight]);
 
   useEffect(() => {
     if (activeHighlight === null || !viewerRef.current) return;
@@ -228,7 +193,31 @@ export const PDFContainer = ({
     // Prefer scrolling to the citation marker bbox: when the body sentence
     // can't be located in the text layer (e.g. extract_citation_sentence
     // returned ""), the marker bbox is still the user's anchor.
-    const citeLoc = findCiteBboxForIssue(selectedAnomalous);
+    let citeLoc = null;
+    if (Array.isArray(selectedAnomalous.paper)) {
+      for (const paperId of selectedAnomalous.paper) {
+        const cit = citation.find((c) => c.id === paperId);
+        if (!cit || !Array.isArray(cit.cite_positions)) continue;
+        const onPage = cit.cite_positions.find(
+          (p) =>
+            p.page === selectedAnomalous.page &&
+            Array.isArray(p.issues) &&
+            p.issues.includes(selectedAnomalous.id)
+        );
+        if (onPage) {
+          citeLoc = { page: onPage.page, bbox: onPage.bbox };
+          break;
+        }
+        const anyMatch = cit.cite_positions.find(
+          (p) =>
+            Array.isArray(p.issues) && p.issues.includes(selectedAnomalous.id)
+        );
+        if (anyMatch) {
+          citeLoc = { page: anyMatch.page, bbox: anyMatch.bbox };
+          break;
+        }
+      }
+    }
     const targetPage = (citeLoc && citeLoc.page) || selectedAnomalous.page;
     if (targetPage == null) return;
 
@@ -261,7 +250,7 @@ export const PDFContainer = ({
       viewer.addEventListener("scroll", handleScroll);
       return () => viewer.removeEventListener("scroll", handleScroll);
     }
-  }, []);
+  }, [handleScroll]);
 
   return (
     <div
