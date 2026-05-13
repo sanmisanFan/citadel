@@ -131,6 +131,13 @@ against citations with no resolved author list or venue (the backend leaves
 crashes with `Cannot read properties of null (reading 'includes')` when the
 pipeline returns references without venue metadata.
 
+`generate_scc_anomalies` in
+[backend/src/CITation/anomalies/detect_anomalies.py](backend/src/CITation/anomalies/detect_anomalies.py)
+now reads the page number from the first `reference_mentions` entry instead
+of hardcoding `page: 1`, so self-citation / citation-ring anomalies surface
+on the page where the citation actually appears (matching what the
+low-relevancy code path already did).
+
 ## Tests
 
 ```bash

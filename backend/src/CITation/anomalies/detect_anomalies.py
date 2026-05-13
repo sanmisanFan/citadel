@@ -233,13 +233,15 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
                     is_citation_ring = True
 
         if is_self_citation or is_citation_ring:
-            # Find the mention text from enriched papers
+            # Find the mention text and page from enriched papers
             mention_text = ""
+            page_num = 1
             paper = citation_key_to_paper.get(citation_key)
             if paper:
                 mentions = paper.get("reference_mentions", [])
                 if mentions:
                     full_text = mentions[0].get("text", "")
+                    page_num = mentions[0].get("page", 1)
                     # Extract just the sentence containing the citation
                     mention_text = extract_citation_sentence(full_text, citation_key)
 
@@ -278,7 +280,7 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
                     },
                 },
                 "paper": [citation_key],
-                "page": 1,
+                "page": page_num,
                 "explanation": explanation,
                 "sentence": [{"sentence": mention_text, "bbox": None}],
             }
