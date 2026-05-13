@@ -109,6 +109,13 @@ written to `outputs/debug/paper_markdown.md`; on grobid-only runs that file
 is removed so the directory doesn't surface stale markdown from a prior run.
 The whole `outputs/` directory is gitignored.
 
+The reference-section finder in
+[backend/src/CITation/data/process_references.py](backend/src/CITation/data/process_references.py)
+prefers an exact heading match (`References`, `Bibliography`, `Works Cited`,
+`Literature Cited`) so it doesn't latch onto front-matter sections like
+"ACM Reference Format"; it falls back to the *last* heading containing
+"reference"/"bibliography" if no exact match is found.
+
 ## Tests
 
 ```bash

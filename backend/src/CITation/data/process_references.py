@@ -67,25 +67,40 @@ def extract_references_section(md_content: str) -> list[str]:
     md = MarkdownIt()
     tokens = md.parse(md_content)
 
+    # Strip markdown emphasis / trailing punctuation so "**References**" and
+    # "References:" both reduce to "references".
+    def normalize(title: str) -> str:
+        return re.sub(r"[^a-z ]", "", title.lower()).strip()
+
     refs_start = -1
     refs_level = 0
+
+    # Prefer an exact match on common bibliography headings; this avoids
+    # latching onto things like "ACM Reference Format" that appear earlier
+    # in the document.
+    EXACT_TITLES = {"references", "bibliography", "works cited", "literature cited"}
 
     i = 0
     while i < len(tokens):
         token = tokens[i]
-
-        if token.type == "heading_open":
-            level = int(token.tag[1])  # "h2" -> 2, etc.
-
-            # The heading text is usually in the next inline token
-            if i + 1 < len(tokens) and tokens[i + 1].type == "inline":
-                title = tokens[i + 1].content.strip().lower()
-
-                if "reference" in title:
-                    refs_start = i
-                    refs_level = level
-                    break
+        if token.type == "heading_open" and i + 1 < len(tokens) and tokens[i + 1].type == "inline":
+            level = int(token.tag[1])
+            title = normalize(tokens[i + 1].content)
+            if title in EXACT_TITLES:
+                refs_start = i
+                refs_level = level
+                break
         i += 1
+
+    # Fallback: take the LAST heading containing "reference" or "bibliography"
+    # (real bibliographies live at the end of a paper, not the front matter).
+    if refs_start == -1:
+        for i, token in enumerate(tokens):
+            if token.type == "heading_open" and i + 1 < len(tokens) and tokens[i + 1].type == "inline":
+                title = normalize(tokens[i + 1].content)
+                if "reference" in title or "bibliography" in title:
+                    refs_start = i
+                    refs_level = int(token.tag[1])
 
     if refs_start == -1:
         raise ValueError("References section not found!")
