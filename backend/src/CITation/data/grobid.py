@@ -268,6 +268,21 @@ def extract_citation_mentions_with_grobid(pdf_content: bytes) -> dict[int, list[
         return {}
 
 
+def _page_from_coords(coords: str) -> int | None:
+    """Parse the first page number out of a TEI ``coords`` attribute.
+
+    Coords format: ``"page,x,y,width,height;..."`` (may contain multiple
+    boxes separated by ``;``). Returns ``None`` when no valid page is found.
+    """
+    if not coords:
+        return None
+    first_coord = coords.split(";")[0]
+    parts = first_coord.split(",")
+    if parts and parts[0].isdigit():
+        return int(parts[0])
+    return None
+
+
 def parse_citation_mentions(tei_xml: str) -> dict[int, list[dict]]:
     """
     Parse grobid fulltext TEI XML to extract citation contexts with page numbers.
@@ -293,24 +308,24 @@ def parse_citation_mentions(tei_xml: str) -> dict[int, list[dict]]:
         if match:
             ref_num = int(match.group(1)) + 1  # Convert 0-indexed to 1-indexed
 
-            # Get the parent paragraph for context
+            # Prefer the <ref> element's own coords — that's the exact page
+            # where the citation marker is rendered. Paragraph coords only
+            # tell us where the paragraph starts, which is wrong when a
+            # paragraph spans pages.
+            page_num = _page_from_coords(ref.get("coords", ""))
+
+            # Walk up to find the enclosing paragraph for context (and a
+            # fallback page number if <ref> had no coords).
             parent = ref
             context = ""
-            page_num = 1  # Default to page 1
-            for _ in range(5):  # Walk up to 5 levels to find paragraph
+            for _ in range(5):
                 parent = find_parent(root, parent)
                 if parent is None:
                     break
                 if parent.tag.endswith("}p") or parent.tag == "p":
                     context = "".join(parent.itertext()).strip()
-                    # Try to get page number from paragraph coordinates
-                    coords = parent.get("coords", "")
-                    if coords:
-                        # Coords format: "page,x,y,width,height;..."
-                        first_coord = coords.split(";")[0]
-                        parts = first_coord.split(",")
-                        if parts and parts[0].isdigit():
-                            page_num = int(parts[0])
+                    if page_num is None:
+                        page_num = _page_from_coords(parent.get("coords", ""))
                     break
 
             if context:
@@ -319,7 +334,9 @@ def parse_citation_mentions(tei_xml: str) -> dict[int, list[dict]]:
                 # Avoid duplicate contexts (check by text)
                 existing_texts = [m["text"] for m in mentions[ref_num]]
                 if context not in existing_texts:
-                    mentions[ref_num].append({"text": context, "page": page_num})
+                    mentions[ref_num].append(
+                        {"text": context, "page": page_num if page_num is not None else 1}
+                    )
 
     return mentions
 

@@ -138,6 +138,19 @@ of hardcoding `page: 1`, so self-citation / citation-ring anomalies surface
 on the page where the citation actually appears (matching what the
 low-relevancy code path already did).
 
+`parse_citation_mentions` in
+[backend/src/CITation/data/grobid.py](backend/src/CITation/data/grobid.py)
+now reads the page number from each `<ref>` element's own `coords`
+attribute (the actual citation-marker location) and only falls back to the
+enclosing paragraph's `coords` when the `<ref>` has none. The previous
+implementation always used the paragraph coords, which reported the page
+the paragraph *starts on* — wrong whenever a paragraph spans pages — and
+left the page at the default `1` whenever the paragraph element had no
+coords. This is what was causing every anomaly to appear with "Page: 1"
+in the UI and the click-to-scroll handler in
+[src/components/pdfContainer/index.js](src/components/pdfContainer/index.js)
+to always jump to page 1.
+
 Self-citation is now only flagged when a cited author is also an author of
 the manuscript being reviewed. The previous SCC self-edge fallback in
 `generate_scc_anomalies` / `update_anomalous_with_hop1_sccs`
