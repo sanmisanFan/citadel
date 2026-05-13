@@ -35,7 +35,6 @@ function App() {
     const [anomalous, setAnomalous] = useState([]);
     const [author, setAuthor] = useState([]);
     const [venue, setVenue] = useState([]);
-    const [sentenceAnnotationList, setSentenceAnnotationList] = useState([]);
     const [authorGraph, setAuthorGraph] = useState(null);
 
     const [currentPage, setCurrentPage] = useState(1);
@@ -153,54 +152,12 @@ function App() {
                 console.log("venueList", venueRaw);
 
                 const anomalousList = anomalousRaw.identifiedIssue;
-                anomalousList.map(e => e.filter = false);
+                anomalousList.forEach((e) => { e.filter = false; });
 
-
-                const _sentenceHighlights = [];
-                anomalousList
-                    .filter(e => !e.filter) // Filter out anomalous with filter === true
-                    .forEach(e => {
-                        const issueID = e.id;
-                        const issueName = e.displayName;
-                        const issueCategory = e.category.displayName;
-                        const page = e.page;
-                        const baseColor = anomalousColorScheme[e.name]['category'][e.category.name]['baseColor'];
-                        const boxColor = anomalousColorScheme[e.name]['category'][e.category.name]['boxColor'];
-                        const sentenceList = e.sentence;
-
-                        // Derive the inline citation marker (e.g. "[21]") from the paper field.
-                        // Used as a disambiguation anchor when the same sentence appears on the page more than once.
-                        const citationMarker =
-                            e.paper && e.paper.length > 0
-                                ? (() => {
-                                    const cit = citation.find((c) => e.paper.includes(c.id));
-                                    return cit ? `[${cit.cite_number}]` : null;
-                                })()
-                                : null;
-
-                        sentenceList.forEach(sentenceObj => {
-                            // Skip anomalies without a body location (e.g. Unreferenced).
-                            if (page == null || !sentenceObj.sentence) {
-                                return;
-                            }
-                            console.log(`Adding highlight: ${issueID}, page ${page}, sentence: "${sentenceObj.sentence?.substring(0, 50)}..."`);
-                            _sentenceHighlights.push({
-                                issueID,
-                                issueName,
-                                issueCategory,
-                                page,
-                                baseColor,
-                                boxColor,
-                                sentence: sentenceObj.sentence,
-                                citationMarker,
-                            });
-                        });
-                    });
                 setAnomalous(anomalousList);
                 setAuthor(authorRaw);
                 setVenue(venueRaw);
                 setCitation(citationsList);
-                setSentenceAnnotationList(_sentenceHighlights);
                 setAuthorGraph(authorGraphRaw);
 
                 // Track papers missing abstracts
@@ -425,7 +382,6 @@ function App() {
                                     citation={citation}
                                     anomalous={anomalous}
                                     anomalousColorScheme={anomalousColorScheme}
-                                    sentenceAnnotationList={sentenceAnnotationList}
                                     currentPage={currentPage}
                                     setCurrentPage={setCurrentPage}
                                     activeHighlight={activeHighlight}

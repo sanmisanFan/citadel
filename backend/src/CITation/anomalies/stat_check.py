@@ -627,7 +627,16 @@ def generate_statistical_anomalies(pdf_bytes, start_issue_id=1, tolerance=0.01, 
                         f"Reported: {test_str}\n"
                         f"Issues: {'; '.join(errors)}"
                     ),
-                    "sentence": [{"sentence": sentence, "bbox": bbox}],
+                    "anchors": [
+                        {
+                            "page": page_num,
+                            "marker_bbox": bbox,
+                            "page_width": None,
+                            "page_height": None,
+                            "ref_label": None,
+                            "sentence": sentence,
+                        }
+                    ],
                 }
                 issues.append(issue)
                 issue_id += 1

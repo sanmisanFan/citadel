@@ -1,49 +1,173 @@
-import json
 import re
 
 
-def extract_citation_sentence(text, citation_key):
+# Lowercase tokens that look like sentence terminators but aren't. The
+# splitter consults this set when it sees a period; we don't try to be
+# exhaustive, just to dodge the common scientific-writing offenders that
+# tripped the previous naive splitter (e.g. citations next to "Fig.",
+# "e.g.", or "et al.").
+_SENTENCE_ABBREVIATIONS = frozenset(
+    {
+        "e.g",
+        "i.e",
+        "et al",
+        "fig",
+        "figs",
+        "vs",
+        "etc",
+        "cf",
+        "viz",
+        "p",
+        "pp",
+        "vol",
+        "no",
+        "ed",
+        "eds",
+        "trans",
+        "ref",
+        "refs",
+        "approx",
+        "u.s",
+        "u.k",
+        "ph.d",
+        "m.d",
+        "mr",
+        "mrs",
+        "ms",
+        "dr",
+        "st",
+        "ave",
+        "no",
+        "tab",
+        "eq",
+        "eqs",
+        "sec",
+        "ch",
+    }
+)
+
+
+def split_sentences(text: str) -> list[tuple[int, int]]:
+    """Split text into sentences and return ``(start, end)`` spans into ``text``.
+
+    Aware of the common scientific-writing abbreviations that the previous
+    splitter mis-handled (``Fig.``, ``e.g.``, ``et al.``). Also avoids
+    splitting after a single-letter capitalised token (initials) and inside
+    bracketed citations like ``[1,2,3].`` followed by lowercase.
     """
-    Extract just the sentence containing the citation marker from a text excerpt.
+    if not text:
+        return []
 
-    Args:
-        text: Full text excerpt
-        citation_key: Citation key like "citation-5" or just "5"
+    spans: list[tuple[int, int]] = []
+    start = 0
+    n = len(text)
+    i = 0
+    while i < n:
+        ch = text[i]
+        if ch in ".!?":
+            # Look backwards for the immediate preceding token (letters/dot)
+            # to test against the abbreviation set.
+            j = i - 1
+            while j >= 0 and (text[j].isalpha() or text[j] == "."):
+                j -= 1
+            token = text[j + 1 : i].lower()
 
-    Returns:
-        The sentence containing the citation, or a truncated version if not found
+            # Look ahead past closing brackets/quotes for the gap and the
+            # following character — a sentence break needs whitespace then
+            # a capital letter (or end of string).
+            k = i + 1
+            while k < n and text[k] in ")]}\"'":
+                k += 1
+            gap_end = k
+            while gap_end < n and text[gap_end].isspace():
+                gap_end += 1
+            next_char = text[gap_end] if gap_end < n else ""
+
+            is_terminator = True
+            if token in _SENTENCE_ABBREVIATIONS:
+                is_terminator = False
+            elif ch == "." and len(token) == 1 and token.isalpha():
+                # Single-letter abbreviation / initial (e.g. "J. Smith").
+                is_terminator = False
+            elif gap_end == n:
+                # End of text — record whatever's left as the final sentence.
+                is_terminator = True
+            elif next_char and not (next_char.isupper() or next_char.isdigit() or next_char in "[("):
+                is_terminator = False
+
+            if is_terminator:
+                spans.append((start, k))
+                start = gap_end
+                i = gap_end
+                continue
+        i += 1
+
+    if start < n:
+        spans.append((start, n))
+    return spans
+
+
+def sentence_at_offset(text: str, offset: int) -> str:
+    """Return the sentence in ``text`` that contains ``offset``.
+
+    Never returns ``""`` for a non-empty ``text``: if the offset falls
+    outside every detected sentence span (shouldn't happen with the
+    splitter above, but defensively guarded) we fall back to a 200-char
+    window around the offset.
     """
     if not text:
         return ""
+    offset = max(0, min(offset, len(text)))
+    for s, e in split_sentences(text):
+        if s <= offset < e:
+            return text[s:e].strip()
+    # Fallback window.
+    lo = max(0, offset - 100)
+    hi = min(len(text), offset + 100)
+    return text[lo:hi].strip()
 
-    # Extract the number from citation key
-    cite_num = citation_key.replace("citation-", "") if "citation-" in citation_key else citation_key
 
-    # Pattern to find citation markers like [5], [5,6], etc.
-    citation_pattern = rf'\[{cite_num}(?:,\s*\d+)*\]|\[(?:\d+,\s*)*{cite_num}(?:,\s*\d+)*\]'
+def build_anchors_from_mention(mention: dict) -> list[dict]:
+    """Convert a grobid mention record into per-marker anchor dicts.
 
-    # Split text into sentences (simple split on . ! ?)
-    sentences = re.split(r'(?<=[.!?])\s+', text)
+    Each anchor is what the frontend's ``resolveAnomalyAnchor`` consumes:
+    a page, a normalized marker bbox (when grobid had coords), the sentence
+    that contains the marker, and the marker's visible label.
 
-    for sentence in sentences:
-        if re.search(citation_pattern, sentence):
-            # Found a sentence with our citation
-            return sentence.strip()
+    When a mention has no ``occurrences`` (older shape from the
+    markdown-fallback parser, which doesn't track marker positions), we
+    fall back to a single anchor with no bbox so the frontend can still
+    try sentence-fuzzy + ``[N]`` scan.
+    """
+    text = mention.get("text", "") or ""
+    occurrences = mention.get("occurrences") or []
 
-    # If citation not found in any sentence, return a truncated excerpt
-    # Find the citation marker and extract surrounding context
-    match = re.search(citation_pattern, text)
-    if match:
-        start = max(0, match.start() - 100)
-        end = min(len(text), match.end() + 100)
-        return text[start:end].strip()
+    if not occurrences:
+        return [
+            {
+                "page": mention.get("page"),
+                "marker_bbox": None,
+                "page_width": None,
+                "page_height": None,
+                "ref_label": None,
+                "sentence": text.strip(),
+            }
+        ]
 
-    # The citation marker is nowhere in the paragraph GROBID handed us.
-    # Returning the first 200 chars here mis-attributes every such anomaly
-    # to the paragraph's opening, so distinct anomalies collide on a single
-    # sentence the frontend then can't locate. Better to surface "no body
-    # location" so the UI can fall back to the citation-marker bbox.
-    return ""
+    anchors: list[dict] = []
+    for occ in occurrences:
+        sentence = sentence_at_offset(text, occ.get("char_offset", 0))
+        anchors.append(
+            {
+                "page": occ.get("page"),
+                "marker_bbox": occ.get("marker_bbox"),
+                "page_width": occ.get("page_width"),
+                "page_height": occ.get("page_height"),
+                "ref_label": occ.get("ref_label"),
+                "sentence": sentence,
+            }
+        )
+    return anchors
 
 
 def generate_anomalous_json(enriched_papers):
@@ -70,7 +194,6 @@ def generate_anomalous_json(enriched_papers):
             # Identify low relevancy citations (score 1, 2, or 3, but not 0)
             if relevance_score is not None and 0 < relevance_score <= 3:
                 raw_explanation = mention.get("assessment", "No explanation provided.")
-                page_num = mention.get("page", 1)  # Get page number from mention
 
                 # (1) Remove "score: X" text (case-insensitive)
                 no_score = re.sub(r"(?i)\bscore:\s*\d+", "", raw_explanation).strip()
@@ -87,9 +210,10 @@ def generate_anomalous_json(enriched_papers):
                     else "No explanation provided."
                 )
 
-                # Extract just the sentence containing the citation, not the whole paragraph
-                full_text = mention.get("text", "")
-                sentence_text = extract_citation_sentence(full_text, citation_key)
+                anchors = build_anchors_from_mention(mention)
+                # Primary page for the card display is the first anchor's
+                # page; the frontend uses individual anchors to scroll.
+                page_num = anchors[0]["page"] if anchors else mention.get("page", 1)
 
                 issue = {
                     "id": f"issue-{issue_id}",
@@ -101,9 +225,9 @@ def generate_anomalous_json(enriched_papers):
                         "options": {"citationRing": False, "selfCitation": False},
                     },
                     "paper": [citation_key],
-                    "page": page_num,  # Use actual page number from citation mention
+                    "page": page_num,
                     "explanation": final_explanation,
-                    "sentence": [{"sentence": sentence_text, "bbox": None}],
+                    "anchors": anchors,
                 }
                 anomalous_issues.append(issue)
                 issue_id += 1
@@ -233,17 +357,15 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
                     is_citation_ring = True
 
         if is_self_citation or is_citation_ring:
-            # Find the mention text and page from enriched papers
-            mention_text = ""
-            page_num = 1
+            # Build anchors from every paragraph that mentions this citation,
+            # so a self-citation that's referenced from three different
+            # paragraphs lights up all three markers, not just the first.
+            anchors: list[dict] = []
             paper = citation_key_to_paper.get(citation_key)
             if paper:
-                mentions = paper.get("reference_mentions", [])
-                if mentions:
-                    full_text = mentions[0].get("text", "")
-                    page_num = mentions[0].get("page", 1)
-                    # Extract just the sentence containing the citation
-                    mention_text = extract_citation_sentence(full_text, citation_key)
+                for mention in paper.get("reference_mentions", []) or []:
+                    anchors.extend(build_anchors_from_mention(mention))
+            page_num = anchors[0]["page"] if anchors else 1
 
             category_name = "selfCitation" if is_self_citation else "citationRing"
             display_name = "Self Citation" if is_self_citation else "Citation Ring"
@@ -282,7 +404,7 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
                 "paper": [citation_key],
                 "page": page_num,
                 "explanation": explanation,
-                "sentence": [{"sentence": mention_text, "bbox": None}],
+                "anchors": anchors,
             }
             anomalous_issues.append(issue)
             issue_id += 1
@@ -331,7 +453,7 @@ def generate_unreferenced_anomalies(enriched_papers, next_issue_id):
             "paper": [citation_key],
             "page": None,
             "explanation": explanation,
-            "sentence": [{"sentence": "", "bbox": None}],
+            "anchors": [],
         }
         anomalous_issues.append(issue)
         issue_id += 1

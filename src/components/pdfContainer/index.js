@@ -1,9 +1,12 @@
 import { useEffect, useCallback, useState, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { pdfjs, Document, Page } from 'react-pdf';
-import { findSentenceInTextLayer, findCitationAnchorSpan } from "../../util/pdfUtil";
 
 import { citationHighlight } from "../../util/annotationCtrl";
+import {
+  resolveAllAnchors,
+  resolveAnomalyAnchor,
+} from "../../util/anomalyAnchor";
 
 import { SentenceAnnotation } from "../issueComps/sentenceAnnotate";
 import { FloatingPanel } from "../issueComps/floatPanel";
@@ -13,12 +16,6 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import './style.css';
 
-//import samplePDF from "../../data/test.pdf";
-
-/*pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString();*/
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 export const PDFContainer = ({
@@ -26,7 +23,6 @@ export const PDFContainer = ({
   citation,
   anomalous,
   anomalousColorScheme,
-  sentenceAnnotationList,
   currentPage,
   setCurrentPage,
   activeHighlight,
@@ -45,18 +41,13 @@ export const PDFContainer = ({
   };
 
   // Track when each page's text layer is fully rendered. We can't use
-  // onRenderSuccess (canvas-only) because findSentenceInTextLayer walks the
+  // onRenderSuccess (canvas-only) because anchor resolution walks the
   // text-layer spans — those may not exist yet when the canvas finishes.
   //
   // This callback must be reference-stable: react-pdf's TextLayer lists
   // onRenderSuccess in its layout-effect deps, so a fresh function instance
   // each parent re-render cancels the in-flight text-layer render and
-  // restarts it. Combined with frequent re-renders from scroll
-  // (setCurrentPage) and click (setActiveHighlight) state updates, that
-  // produced thousands of "TextLayer task cancelled" warnings and prevented
-  // highlights from being applied. We can't close over a per-page index
-  // either; instead, on every text-layer completion we rescan the viewer
-  // DOM and mark pages whose .react-pdf__Page__textContent has spans.
+  // restarts it.
   const onPageTextLayerRenderSuccess = useCallback(() => {
     if (!viewerRef.current) return;
     const ready = {};
@@ -78,7 +69,6 @@ export const PDFContainer = ({
     const pageElements = Array.from(viewer.querySelectorAll(".react-pdf__Page"));
     const scrollTop = viewer.scrollTop;
 
-    // Find the first page that is at least partially visible
     for (let i = 0; i < pageElements.length; i++) {
       const page = pageElements[i];
       const { offsetTop, clientHeight } = page;
@@ -89,90 +79,76 @@ export const PDFContainer = ({
     }
   }, [setCurrentPage]);
 
-  const applyHighlightsReact = useCallback(() => {
-    if (!viewerRef.current) return;
-
+  // Draw the secondary sentence underlines. Each underline is grouped per
+  // (page, rect) so N anomalies that resolve to the same line render as
+  // ONE element tagged with all N issue IDs — clicking cycles through
+  // them on subsequent presses.
+  const applySentenceUnderlinesReact = useCallback(() => {
     const viewer = viewerRef.current;
-    const pageElements = viewer.querySelectorAll(".react-pdf__Page");
+    if (!viewer) return;
 
-    pageElements.forEach((pageElement) => {
-      const textContentLayer = pageElement.querySelector(".react-pdf__Page__textContent");
+    viewer.querySelectorAll(".sentence-highlight-container").forEach((c) => c.remove());
 
-      if (textContentLayer) {
-        // Clear existing highlights
-        textContentLayer
-          .querySelectorAll(".sentence-highlight-container")
-          .forEach((c) => c.remove());
+    const groups = resolveAllAnchors(anomalous, viewer);
 
-        const pageNumber = Number(pageElement.dataset.pageNumber);
+    groups.forEach((group) => {
+      const pageEl = viewer.querySelector(
+        `.react-pdf__Page[data-page-number="${group.page}"]`
+      );
+      const textLayer = pageEl?.querySelector(".react-pdf__Page__textContent");
+      if (!textLayer) return;
 
-        sentenceAnnotationList
-          .filter((highlight) => highlight.page === pageNumber)
-          .forEach((highlight) => {
-            // Find the citation marker span to use as disambiguation anchor.
-            const anchorSpan = findCitationAnchorSpan(
-              textContentLayer,
-              highlight.citationMarker
-            );
+      const firstIssue = group.issues[0];
+      const colorScheme = anomalousColorScheme[firstIssue.name];
+      const categoryColors = colorScheme?.category?.[firstIssue.category.name] || {};
+      const baseColor = categoryColors.baseColor;
+      const boxColor = categoryColors.boxColor;
 
-            // Auto-detect sentence position from the rendered text layer DOM.
-            const rects = findSentenceInTextLayer(
-              textContentLayer,
-              highlight.sentence,
-              anchorSpan
-            );
+      const container = document.createElement("div");
+      container.className = "sentence-highlight-container";
+      container.style.position = "absolute";
+      container.style.left = `${group.rect.x}px`;
+      container.style.top = `${group.rect.y}px`;
+      container.style.width = `${group.rect.width}px`;
+      container.style.height = `${group.rect.height}px`;
 
-            if (!rects.length) {
-              console.warn(
-                `[Highlight] Sentence not found on page ${pageNumber}:`,
-                highlight.sentence
-              );
-              return;
-            }
+      const issueIDs = group.issues.map((i) => i.id);
+      const activeMatch = issueIDs.includes(activeHighlight);
+      const displayIssueID = activeMatch ? activeHighlight : issueIDs[0];
 
-            rects.forEach((rect) => {
-              const highlightContainer = document.createElement("div");
-              highlightContainer.className = "sentence-highlight-container";
-              highlightContainer.style.position = "absolute";
-              highlightContainer.style.left = `${rect.x}px`;
-              highlightContainer.style.top = `${rect.y}px`;
-              highlightContainer.style.width = `${rect.width}px`;
-              highlightContainer.style.height = `${rect.height}px`;
-
-              const root = createRoot(highlightContainer);
-              root.render(
-                <SentenceAnnotation
-                  issueID={highlight.issueID}
-                  issueName={highlight.issueName}
-                  issueCategory={highlight.issueCategory}
-                  baseColor={highlight.baseColor}
-                  boxColor={highlight.boxColor}
-                  activeHighlight={activeHighlight}
-                  anomalous={anomalous}
-                  citation={citation}
-                  onClick={(issueID) => setActiveHighlight(issueID)}
-                />
-              );
-              textContentLayer.appendChild(highlightContainer);
-            });
-          });
-      }
+      const root = createRoot(container);
+      root.render(
+        <SentenceAnnotation
+          issueID={displayIssueID}
+          issueName={firstIssue.displayName}
+          issueCategory={firstIssue.category.displayName}
+          baseColor={baseColor}
+          boxColor={boxColor}
+          activeHighlight={activeHighlight}
+          onClick={() => {
+            // Cycle: if the active one is in this group, pick the next; else
+            // jump to the first. Keeps multi-anomaly markers reachable.
+            const idx = issueIDs.indexOf(activeHighlight);
+            const next = idx === -1 ? issueIDs[0] : issueIDs[(idx + 1) % issueIDs.length];
+            setActiveHighlight(next);
+          }}
+        />
+      );
+      textLayer.appendChild(container);
     });
-  }, [sentenceAnnotationList, activeHighlight, anomalous, citation, setActiveHighlight]);
+  }, [anomalous, anomalousColorScheme, activeHighlight, setActiveHighlight]);
 
   useEffect(() => {
-    // render anomalous highlight
     if (Object.keys(textLayerReadyPages).length === numPages) {
-      setTimeout(() => {
-        applyHighlightsReact();
-       }, 100);
+      const t = setTimeout(applySentenceUnderlinesReact, 100);
+      return () => clearTimeout(t);
     }
-  }, [textLayerReadyPages, numPages, applyHighlightsReact]);
+  }, [textLayerReadyPages, numPages, applySentenceUnderlinesReact]);
 
   useEffect(() => {
     if (Object.keys(textLayerReadyPages).length === numPages) {
-      setTimeout(() => {
-       citationHighlight(
+      const t = setTimeout(() => {
+        citationHighlight(
           viewerRef,
           citation,
           anomalous,
@@ -181,105 +157,41 @@ export const PDFContainer = ({
           setActiveHighlight
         );
       }, 100);
-
+      return () => clearTimeout(t);
     }
   }, [textLayerReadyPages, numPages, citation, anomalous, anomalousColorScheme, activeHighlight, setActiveHighlight]);
 
+  // Scroll-to-marker on card click. Walks the active anomaly's anchors
+  // and resolves the first one that lands. Falls back to the page top.
   useEffect(() => {
     if (activeHighlight === null || !viewerRef.current) return;
-    const selectedAnomalous = anomalous.find(e => e.id === activeHighlight);
-    if (!selectedAnomalous) return;
+    const selected = anomalous.find((e) => e.id === activeHighlight);
+    if (!selected) return;
 
-    const citationMarkers = Array.isArray(selectedAnomalous.paper)
-      ? selectedAnomalous.paper
-          .map((paperId) => {
-            const cit = citation.find((c) => c.id === paperId);
-            return cit?.cite_number ? `[${cit.cite_number}]` : null;
-          })
-          .filter(Boolean)
-      : [];
-
-    // Prefer scrolling to the citation marker bbox: when the body sentence
-    // can't be located in the text layer (e.g. extract_citation_sentence
-    // returned ""), the marker bbox is still the user's anchor.
-    let citeLoc = null;
-    let markerAnchor = null;
-    let markerPage = null;
-    if (Array.isArray(selectedAnomalous.paper)) {
-      for (const paperId of selectedAnomalous.paper) {
-        const cit = citation.find((c) => c.id === paperId);
-        if (!cit || !Array.isArray(cit.cite_positions)) continue;
-        const onPage = cit.cite_positions.find(
-          (p) =>
-            p.page === selectedAnomalous.page &&
-            Array.isArray(p.issues) &&
-            p.issues.includes(selectedAnomalous.id)
-        );
-        if (onPage) {
-          citeLoc = { page: onPage.page, bbox: onPage.bbox };
-          break;
-        }
-        const anyMatch = cit.cite_positions.find(
-          (p) =>
-            Array.isArray(p.issues) && p.issues.includes(selectedAnomalous.id)
-        );
-        if (anyMatch) {
-          citeLoc = { page: anyMatch.page, bbox: anyMatch.bbox };
-          break;
-        }
-      }
+    const viewer = viewerRef.current;
+    let resolved = null;
+    for (const anchor of selected.anchors || []) {
+      resolved = resolveAnomalyAnchor(anchor, viewer);
+      if (resolved) break;
     }
 
-    if (!citeLoc && citationMarkers.length) {
-      const pageElements = Array.from(
-        viewerRef.current.querySelectorAll(".react-pdf__Page")
-      );
-
-      for (const pageEl of pageElements) {
-        const textLayer = pageEl.querySelector(".react-pdf__Page__textContent");
-        if (!textLayer) continue;
-
-        const marker = citationMarkers.find((candidate) =>
-          textLayer.textContent?.includes(candidate)
-        );
-        if (!marker) continue;
-
-        markerAnchor = findCitationAnchorSpan(textLayer, marker);
-        markerPage = Number(pageEl.dataset.pageNumber);
-        break;
-      }
-    }
-
-    const targetPage =
-      (citeLoc && citeLoc.page) ||
-      markerPage ||
-      selectedAnomalous.page;
+    const targetPage = resolved?.page ?? selected.page;
     if (targetPage == null) return;
 
-    const pageEl = viewerRef.current.querySelector(
+    const pageEl = viewer.querySelector(
       `.react-pdf__Page[data-page-number="${targetPage}"]`
     );
     if (!pageEl) return;
 
-    if (citeLoc && citeLoc.bbox) {
-      const pageRect = pageEl.getBoundingClientRect();
-      const viewerRect = viewerRef.current.getBoundingClientRect();
-      const offsetWithinPage = citeLoc.bbox.y * pageRect.height;
-      const target =
-        pageEl.offsetTop + offsetWithinPage - viewerRect.height / 3;
-      viewerRef.current.scrollTo({ top: Math.max(target, 0), behavior: "smooth" });
-    } else if (markerAnchor) {
-      const pageRect = pageEl.getBoundingClientRect();
-      const viewerRect = viewerRef.current.getBoundingClientRect();
-      const anchorRect = markerAnchor.getBoundingClientRect();
-      const offsetWithinPage = anchorRect.top - pageRect.top;
-      const target =
-        pageEl.offsetTop + offsetWithinPage - viewerRect.height / 3;
-      viewerRef.current.scrollTo({ top: Math.max(target, 0), behavior: "smooth" });
+    if (resolved?.rects?.length) {
+      const rect = resolved.rects[0];
+      const viewerRect = viewer.getBoundingClientRect();
+      const target = pageEl.offsetTop + rect.y - viewerRect.height / 3;
+      viewer.scrollTo({ top: Math.max(target, 0), behavior: "smooth" });
     } else {
       pageEl.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [activeHighlight, anomalous, citation, textLayerReadyPages]);
+  }, [activeHighlight, anomalous, textLayerReadyPages]);
 
   useEffect(() => {
     if (viewerRef.current) {
@@ -311,18 +223,14 @@ export const PDFContainer = ({
       <div
         ref={viewerRef}
         className="pdf-container"
-        style={{
-          
-        }}
+        style={{}}
       >
-        {/* Floating Panel */
         <FloatingPanel
           anomalous={anomalous}
           anomalousColorScheme={anomalousColorScheme}
           setAnomalous={setAnomalous}
-        />}
+        />
 
-        {/* PDF Viewer */}
         <Document
           file={file}
           onLoadSuccess={onDocumentLoadSuccess}

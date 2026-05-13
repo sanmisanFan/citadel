@@ -355,15 +355,37 @@ async def process_pdf_ws(ws: WebSocket):
         anomalous_data["identifiedIssue"].extend(stat_anomalies)
         print(f"DEBUG: Found {len(stat_anomalies)} statistical anomalies")
 
-        # Set has_issue and id on citations based on anomalies
+        # Set has_issue / id / cite_positions on citations based on anomalies.
+        # cite_positions is one record per [N] marker in the body of the
+        # manuscript; the frontend uses it to draw colored boxes around the
+        # marker glyphs themselves, not around the surrounding sentence.
         anomalous_citation_keys = set()
+        paper_to_issues: dict[str, list[str]] = {}
         for issue in anomalous_data.get("identifiedIssue", []):
             for paper_key in issue.get("paper", []):
                 anomalous_citation_keys.add(paper_key)
+                paper_to_issues.setdefault(paper_key, []).append(issue["id"])
 
         for citation_key, citation in citations.items():
-            citation["id"] = citation_key  # Add id field for frontend compatibility
+            citation["id"] = citation_key
             citation["has_issue"] = citation_key in anomalous_citation_keys
+
+            issues_for_paper = paper_to_issues.get(citation_key, [])
+            positions: list[dict] = []
+            for mention in citation.get("reference_mentions", []) or []:
+                for occ in mention.get("occurrences", []) or []:
+                    positions.append(
+                        {
+                            "page": occ.get("page"),
+                            "bbox": occ.get("marker_bbox"),
+                            "page_width": occ.get("page_width"),
+                            "page_height": occ.get("page_height"),
+                            "ref_label": occ.get("ref_label"),
+                            "has_issue": bool(issues_for_paper),
+                            "issues": list(issues_for_paper),
+                        }
+                    )
+            citation["cite_positions"] = positions
 
         pipeline_tracker.record("build_graphs_and_anomalies", time() - t0, {"anomalies": len(anomalous_data.get("identifiedIssue", []))})
 

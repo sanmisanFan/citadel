@@ -283,30 +283,108 @@ def extract_citation_mentions_with_grobid(pdf_content: bytes) -> dict[int, list[
         return {}
 
 
+def _parse_coord_boxes(coords: str) -> list[dict]:
+    """Parse a TEI ``coords`` attribute into a list of boxes.
+
+    Coords format: ``"page,x,y,width,height;..."`` — a semicolon-separated
+    list of one or more boxes. Returns an empty list when no parseable box
+    is found.
+    """
+    if not coords:
+        return []
+    boxes: list[dict] = []
+    for chunk in coords.split(";"):
+        parts = chunk.strip().split(",")
+        if len(parts) < 5 or not parts[0].isdigit():
+            continue
+        try:
+            boxes.append(
+                {
+                    "page": int(parts[0]),
+                    "x": float(parts[1]),
+                    "y": float(parts[2]),
+                    "width": float(parts[3]),
+                    "height": float(parts[4]),
+                }
+            )
+        except ValueError:
+            continue
+    return boxes
+
+
 def _page_from_coords(coords: str) -> int | None:
     """Parse the first page number out of a TEI ``coords`` attribute.
 
     Coords format: ``"page,x,y,width,height;..."`` (may contain multiple
     boxes separated by ``;``). Returns ``None`` when no valid page is found.
     """
-    if not coords:
-        return None
-    first_coord = coords.split(";")[0]
-    parts = first_coord.split(",")
-    if parts and parts[0].isdigit():
-        return int(parts[0])
-    return None
+    boxes = _parse_coord_boxes(coords)
+    return boxes[0]["page"] if boxes else None
+
+
+def _parse_page_dimensions(root: ET.Element) -> dict[int, dict]:
+    """Read TEI ``<surface>`` elements to learn each page's pixel dimensions.
+
+    Returns ``{page_num: {"width": float, "height": float}}``. Missing
+    surfaces default to US-Letter at 72 DPI on the frontend side; callers
+    should treat a missing entry as "unknown" rather than zero.
+    """
+    dims: dict[int, dict] = {}
+    for surface in root.findall(".//tei:surface", TEI_NS):
+        try:
+            page_num = int(surface.get("n", ""))
+        except ValueError:
+            continue
+        try:
+            width = float(surface.get("lrx", "0")) - float(surface.get("ulx", "0"))
+            height = float(surface.get("lry", "0")) - float(surface.get("uly", "0"))
+        except ValueError:
+            continue
+        if width > 0 and height > 0:
+            dims[page_num] = {"width": width, "height": height}
+    return dims
+
+
+def _flatten_paragraph(elem: ET.Element):
+    """Walk an element in document order, yielding (kind, payload) tuples.
+
+    Each yield is either ``("text", str)`` for character data or
+    ``("ref", ref_elem)`` for a citation marker. The concatenation of all
+    text payloads with the ref labels embedded equals ``"".join(elem.itertext())``.
+    """
+    if elem.text:
+        yield ("text", elem.text)
+    for child in elem:
+        tag = child.tag.split("}", 1)[-1]
+        if tag == "ref" and child.get("type") == "bibr":
+            label = "".join(child.itertext())
+            yield ("ref", child, label)
+        else:
+            yield from _flatten_paragraph(child)
+        if child.tail:
+            yield ("text", child.tail)
 
 
 def parse_citation_mentions(tei_xml: str) -> dict[int, list[dict]]:
     """
-    Parse grobid fulltext TEI XML to extract citation contexts with page numbers.
+    Parse grobid fulltext TEI XML to extract per-citation marker info.
+
+    For each reference number, returns a list of mention records, one per
+    paragraph that cites the reference. Each mention exposes:
+
+    - ``text``: the full paragraph text (kept identical to the old shape so
+      ``gpt_relevance`` can still key its assessment lookup on it),
+    - ``page``: page of the first occurrence of this ref in this paragraph,
+    - ``occurrences``: a list of every ``[N]`` marker inside ``text`` for
+      this ref, each with ``page``, ``marker_bbox`` (in TEI page coords),
+      ``ref_label``, ``char_offset`` (into ``text``), and ``page_width`` /
+      ``page_height`` for downstream normalization.
 
     Args:
         tei_xml: TEI XML string from grobid fulltext endpoint
 
     Returns:
-        Dictionary mapping reference numbers to list of {text, page} dicts
+        Dictionary mapping reference numbers to list of mention records.
     """
     mentions: dict[int, list[dict]] = {}
 
@@ -315,63 +393,105 @@ def parse_citation_mentions(tei_xml: str) -> dict[int, list[dict]]:
     except ET.ParseError:
         return {}
 
-    # Find all ref elements with type="bibr"
-    for ref in root.findall(".//tei:ref[@type='bibr']", TEI_NS):
-        ref_num = _extract_numeric_label("".join(ref.itertext()))
+    page_dims = _parse_page_dimensions(root)
 
-        if ref_num is None:
-            target = ref.get("target", "")
-            # Target format is typically "#b0", "#b1", etc.
-            match = re.match(r"#b(\d+)", target)
-            if match:
-                ref_num = (
-                    int(match.group(1)) + 1
-                )  # Fallback when no label text is available
+    # Walk every paragraph; for each <ref type="bibr"> inside, compute the
+    # character offset into the paragraph text and harvest the bbox. We do
+    # this paragraph-by-paragraph rather than ref-by-ref so we don't pay
+    # O(n) parent-pointer lookups for every marker.
+    for paragraph in root.findall(".//tei:p", TEI_NS):
+        # Build paragraph text and per-ref offsets in one pass.
+        pieces: list[str] = []
+        cursor = 0
+        ref_records: list[tuple[ET.Element, str, int]] = []  # (ref_elem, label, offset)
+        for item in _flatten_paragraph(paragraph):
+            if item[0] == "text":
+                pieces.append(item[1])
+                cursor += len(item[1])
+            elif item[0] == "ref":
+                _, ref_elem, label = item
+                ref_records.append((ref_elem, label, cursor))
+                pieces.append(label)
+                cursor += len(label)
 
-        if ref_num is not None:
+        raw_text = "".join(pieces)
+        # Match the pre-existing paragraph text shape: stripped of leading /
+        # trailing whitespace. Shift each offset by the count of leading
+        # whitespace we strip so offsets remain valid against ``text``.
+        leading = len(raw_text) - len(raw_text.lstrip())
+        text = raw_text.strip()
+        if not text or not ref_records:
+            continue
 
-            # Prefer the <ref> element's own coords — that's the exact page
-            # where the citation marker is rendered. Paragraph coords only
-            # tell us where the paragraph starts, which is wrong when a
-            # paragraph spans pages.
-            page_num = _page_from_coords(ref.get("coords", ""))
+        paragraph_page = _page_from_coords(paragraph.get("coords", ""))
 
-            # Walk up to find the enclosing paragraph for context (and a
-            # fallback page number if <ref> had no coords).
-            parent = ref
-            context = ""
-            for _ in range(5):
-                parent = find_parent(root, parent)
-                if parent is None:
-                    break
-                if parent.tag.endswith("}p") or parent.tag == "p":
-                    context = "".join(parent.itertext()).strip()
-                    if page_num is None:
-                        page_num = _page_from_coords(parent.get("coords", ""))
-                    break
+        # Group ref occurrences by ref_num so a single paragraph that cites
+        # the same ref twice produces one mention with two occurrences.
+        per_ref: dict[int, list[dict]] = {}
+        for ref_elem, label, offset in ref_records:
+            ref_num = _extract_numeric_label(label)
+            if ref_num is None:
+                target = ref_elem.get("target", "")
+                m = re.match(r"#b(\d+)", target)
+                if m:
+                    ref_num = int(m.group(1)) + 1
+            if ref_num is None:
+                continue
 
-            if context:
-                if ref_num not in mentions:
-                    mentions[ref_num] = []
-                # Avoid duplicate contexts (check by text)
-                existing_texts = [m["text"] for m in mentions[ref_num]]
-                if context not in existing_texts:
-                    mentions[ref_num].append(
-                        {
-                            "text": context,
-                            "page": page_num if page_num is not None else 1,
-                        }
-                    )
+            boxes = _parse_coord_boxes(ref_elem.get("coords", ""))
+            # Use the first box as the primary anchor; record the rest so
+            # the frontend can render wrapping markers (rare).
+            if not boxes:
+                # Fall back to paragraph page with no bbox — frontend will
+                # use the sentence fallback for this marker.
+                boxes = [
+                    {
+                        "page": paragraph_page if paragraph_page is not None else 1,
+                        "x": None,
+                        "y": None,
+                        "width": None,
+                        "height": None,
+                    }
+                ]
+
+            primary = boxes[0]
+            page_num = primary["page"]
+            dims = page_dims.get(page_num, {})
+            occurrence = {
+                "page": page_num,
+                "marker_bbox": (
+                    None
+                    if primary.get("x") is None
+                    else {
+                        "x": primary["x"],
+                        "y": primary["y"],
+                        "width": primary["width"],
+                        "height": primary["height"],
+                    }
+                ),
+                "ref_label": label.strip() or f"[{ref_num}]",
+                "char_offset": max(offset - leading, 0),
+                "page_width": dims.get("width"),
+                "page_height": dims.get("height"),
+            }
+            per_ref.setdefault(ref_num, []).append(occurrence)
+
+        for ref_num, occurrences in per_ref.items():
+            mentions.setdefault(ref_num, [])
+            # De-duplicate paragraphs we've already recorded for this ref —
+            # grobid sometimes emits the same paragraph twice when it
+            # straddles a column break.
+            if any(m["text"] == text for m in mentions[ref_num]):
+                continue
+            mentions[ref_num].append(
+                {
+                    "text": text,
+                    "page": occurrences[0]["page"],
+                    "occurrences": occurrences,
+                }
+            )
 
     return mentions
-
-
-def find_parent(root: ET.Element, child: ET.Element) -> ET.Element | None:
-    """Find parent element in XML tree (ElementTree doesn't have parent pointers)."""
-    for parent in root.iter():
-        if child in parent:
-            return parent
-    return None
 
 
 def extract_formula_coordinates_with_grobid(pdf_content: bytes) -> list[dict]:
