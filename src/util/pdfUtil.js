@@ -53,9 +53,24 @@ export const findCitationAnchorSpan = (textLayerEl, citationMarker) => {
 };
 
 /**
- * Normalize text for matching - handles whitespace and case.
+ * Normalize text for matching - handles whitespace, case, and the common
+ * unicode variants where PDF.js text-layer output diverges from the
+ * GROBID-extracted sentence we receive from the backend (ligatures like
+ * ﬁ/ﬂ, smart quotes, em/en dashes, soft hyphens, non-breaking spaces).
  */
-const normBasic = (s) => s.replace(/\s+/g, " ").trim().toLowerCase();
+const normBasic = (s) => {
+  if (!s) return "";
+  return s
+    .normalize("NFKC")
+    .replace(/­/g, "")
+    .replace(/[‘’]/g, "'")
+    .replace(/[“”]/g, '"')
+    .replace(/[–—]/g, "-")
+    .replace(/ /g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+};
 
 /**
  * Aggressive normalization for statistical notation - removes all spaces
@@ -122,14 +137,21 @@ export const findSentenceInTextLayer = (textLayerEl, sentenceText, anchorEl = nu
   // Build normalised full text + per-character span-index map.
   // For basic normalization, we add a single space between spans.
   // For aggressive normalization (stats), we don't add separators.
+  // When a span ends with a hyphen (line-break hyphenation), drop the
+  // hyphen and omit the separator so the broken word becomes contiguous
+  // (e.g. "anom-" + "aly" → "anomaly").
   const charSpanMap = [];
   let fullText = "";
 
   spans.forEach((span, spanIdx) => {
-    const t = norm(span.textContent);
+    let t = norm(span.textContent);
+    const hyphenBreak = !useAggressive && /[A-Za-z]-$/.test(t) && spanIdx < spans.length - 1;
+    if (hyphenBreak) {
+      t = t.slice(0, -1);
+    }
     for (let j = 0; j < t.length; j++) charSpanMap.push(spanIdx);
     fullText += t;
-    if (!useAggressive) {
+    if (!useAggressive && !hyphenBreak) {
       // separator (not attributed to any span)
       fullText += " ";
       charSpanMap.push(-1);

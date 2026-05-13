@@ -39,14 +39,17 @@ export const PDFContainer = ({
   const [numPages, setNumPages] = useState(null);
   const [width, setWidth] = useState(0);
   const [pdfScale, setPdfScale] = useState(1);
-  const [renderedPages, setRenderedPages] = useState({});
+  const [textLayerReadyPages, setTextLayerReadyPages] = useState({});
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
   };
 
-  const onPageRenderSuccess = (pageNumber) => {
-    setRenderedPages((prev) => ({
+  // Track when each page's text layer is fully rendered. We can't use
+  // onRenderSuccess (canvas-only) because findSentenceInTextLayer walks the
+  // text-layer spans — those may not exist yet when the canvas finishes.
+  const onPageTextLayerRenderSuccess = (pageNumber) => {
+    setTextLayerReadyPages((prev) => ({
       ...prev,
       [pageNumber]: true,
     }));
@@ -156,29 +159,29 @@ export const PDFContainer = ({
 
   useEffect(() => {
     // render anomalous highlight
-    if (Object.keys(renderedPages).length === numPages) {
+    if (Object.keys(textLayerReadyPages).length === numPages) {
       //console.log("activeHighlight:", activeHighlight);
       setTimeout(() => {
         applyHighlightsReact();
        }, 100);
     }
-  }, [renderedPages, sentenceAnnotationList, activeHighlight]);
+  }, [textLayerReadyPages, sentenceAnnotationList, activeHighlight]);
 
   useEffect(() => {
-    if (Object.keys(renderedPages).length === numPages) {
+    if (Object.keys(textLayerReadyPages).length === numPages) {
       setTimeout(() => {
        citationHighlight(
-          viewerRef, 
-          citation, 
-          anomalous, 
+          viewerRef,
+          citation,
+          anomalous,
           anomalousColorScheme,
           activeHighlight,
           setActiveHighlight
         );
       }, 100);
-      
+
     }
-  }, [renderedPages, citation, anomalous, activeHighlight]);
+  }, [textLayerReadyPages, citation, anomalous, activeHighlight]);
 
   useEffect(() => {
     if (activeHighlight !== null) {
@@ -244,7 +247,7 @@ export const PDFContainer = ({
               width={width}
               scale={pdfScale}
               renderAnnotationLayer={false}
-              onRenderSuccess={() => onPageRenderSuccess(index + 1)}
+              onRenderTextLayerSuccess={() => onPageTextLayerRenderSuccess(index + 1)}
             />
           ))}
         </Document>

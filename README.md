@@ -194,6 +194,23 @@ the adjective "Anomalous": citation issues now display as "Citation Anomaly"
 and the overview / floating legend read "Anomaly Overview" and "Detected
 Anomalies Legend".
 
+Clicking an anomaly card now reliably highlights the relevant sentence on
+the target page. The PDF viewer in
+[src/components/pdfContainer/index.js](src/components/pdfContainer/index.js)
+previously gated `applyHighlightsReact` on `onRenderSuccess`, which fires
+when each page's *canvas* finishes — but the text layer (whose spans
+`findSentenceInTextLayer` walks) is built afterwards, so highlights raced
+the text layer and intermittently failed with `[Highlight] Sentence not
+found`. The viewer now tracks `onRenderTextLayerSuccess` instead, so
+sentence matching only runs once the spans actually exist.
+`findSentenceInTextLayer` in [src/util/pdfUtil.js](src/util/pdfUtil.js) also
+normalises common unicode variants that diverge between PDF.js text-layer
+output and the GROBID-extracted backend sentence (ligatures `ﬁ`/`ﬂ`, smart
+quotes, em/en dashes, soft hyphens, non-breaking spaces) via NFKC, and
+stitches words broken across spans by line-break hyphenation (e.g.
+`"anom-"` + `"aly"` → `"anomaly"`) so the broken word matches the backend's
+unhyphenated form.
+
 ## Tests
 
 ```bash
