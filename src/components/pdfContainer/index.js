@@ -190,10 +190,21 @@ export const PDFContainer = ({
     const selectedAnomalous = anomalous.find(e => e.id === activeHighlight);
     if (!selectedAnomalous) return;
 
+    const citationMarkers = Array.isArray(selectedAnomalous.paper)
+      ? selectedAnomalous.paper
+          .map((paperId) => {
+            const cit = citation.find((c) => c.id === paperId);
+            return cit?.cite_number ? `[${cit.cite_number}]` : null;
+          })
+          .filter(Boolean)
+      : [];
+
     // Prefer scrolling to the citation marker bbox: when the body sentence
     // can't be located in the text layer (e.g. extract_citation_sentence
     // returned ""), the marker bbox is still the user's anchor.
     let citeLoc = null;
+    let markerAnchor = null;
+    let markerPage = null;
     if (Array.isArray(selectedAnomalous.paper)) {
       for (const paperId of selectedAnomalous.paper) {
         const cit = citation.find((c) => c.id === paperId);
@@ -218,7 +229,31 @@ export const PDFContainer = ({
         }
       }
     }
-    const targetPage = (citeLoc && citeLoc.page) || selectedAnomalous.page;
+
+    if (!citeLoc && citationMarkers.length) {
+      const pageElements = Array.from(
+        viewerRef.current.querySelectorAll(".react-pdf__Page")
+      );
+
+      for (const pageEl of pageElements) {
+        const textLayer = pageEl.querySelector(".react-pdf__Page__textContent");
+        if (!textLayer) continue;
+
+        const marker = citationMarkers.find((candidate) =>
+          textLayer.textContent?.includes(candidate)
+        );
+        if (!marker) continue;
+
+        markerAnchor = findCitationAnchorSpan(textLayer, marker);
+        markerPage = Number(pageEl.dataset.pageNumber);
+        break;
+      }
+    }
+
+    const targetPage =
+      (citeLoc && citeLoc.page) ||
+      markerPage ||
+      selectedAnomalous.page;
     if (targetPage == null) return;
 
     const pageEl = viewerRef.current.querySelector(
@@ -233,10 +268,18 @@ export const PDFContainer = ({
       const target =
         pageEl.offsetTop + offsetWithinPage - viewerRect.height / 3;
       viewerRef.current.scrollTo({ top: Math.max(target, 0), behavior: "smooth" });
+    } else if (markerAnchor) {
+      const pageRect = pageEl.getBoundingClientRect();
+      const viewerRect = viewerRef.current.getBoundingClientRect();
+      const anchorRect = markerAnchor.getBoundingClientRect();
+      const offsetWithinPage = anchorRect.top - pageRect.top;
+      const target =
+        pageEl.offsetTop + offsetWithinPage - viewerRect.height / 3;
+      viewerRef.current.scrollTo({ top: Math.max(target, 0), behavior: "smooth" });
     } else {
       pageEl.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [activeHighlight, anomalous, citation]);
+  }, [activeHighlight, anomalous, citation, textLayerReadyPages]);
 
   useEffect(() => {
     if (viewerRef.current) {

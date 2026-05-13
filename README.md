@@ -151,6 +151,15 @@ in the UI and the click-to-scroll handler in
 [src/components/pdfContainer/index.js](src/components/pdfContainer/index.js)
 to always jump to page 1.
 
+The anomaly click-to-scroll handler in
+[src/components/pdfContainer/index.js](src/components/pdfContainer/index.js)
+now verifies the rendered PDF text for the actual inline citation marker
+(for example `[7]`) before falling back to the backend-provided anomaly
+page. This prevents jumps to stale pages when the pipeline returns a
+citation-ring/self-citation anomaly with an empty sentence and a misaligned
+page number, which is currently possible when upstream citation-mention
+mapping is off.
+
 Self-citation is now only flagged when a cited author is also an author of
 the manuscript being reviewed. The previous SCC self-edge fallback in
 `generate_scc_anomalies` / `update_anomalous_with_hop1_sccs`
