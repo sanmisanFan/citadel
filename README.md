@@ -219,6 +219,13 @@ GROBID-extracted backend sentence (ligatures `ﬁ`/`ﬂ`, smart quotes, em/en
 dashes, soft hyphens, non-breaking spaces) via NFKC, and stitches words
 broken across spans by line-break hyphenation (e.g. `"anom-"` + `"aly"` →
 `"anomaly"`) so the broken word matches the backend's unhyphenated form.
+On top of that, a last-resort alphanumeric-only pass (`normAlnum`) runs
+when basic and aggressive matching both fail, with a leading-prefix
+fallback that walks back from the full target length so a tail mismatch
+doesn't lose the whole match. This tolerates punctuation/whitespace
+discrepancies inside citation lists (`[22,30,32]` vs `[22, 30, 32]`) and
+the multi-sentence excerpts GROBID sometimes returns when its sentence
+splitter misses a boundary in the extracted mention text.
 
 ## Tests
 

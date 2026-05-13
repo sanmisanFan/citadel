@@ -73,6 +73,24 @@ const normBasic = (s) => {
 };
 
 /**
+ * Alphanumeric-only normalization. Used as a last-resort fallback when both
+ * basic and aggressive matching fail — typically because the backend
+ * sentence and the PDF text layer disagree on punctuation/whitespace inside
+ * citation lists (e.g. "[22,30,32]" vs "[22, 30, 32]") or because GROBID
+ * returned a multi-sentence excerpt whose punctuation doesn't line up with
+ * the PDF's. Stripping every non-alphanumeric character is lossy but very
+ * tolerant, and false-positive matches are unlikely for sentence-length
+ * targets.
+ */
+const normAlnum = (s) => {
+  if (!s) return "";
+  return s
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "");
+};
+
+/**
  * Aggressive normalization for statistical notation - removes all spaces
  * and normalizes unicode variants of mathematical characters.
  */
@@ -174,6 +192,40 @@ export const findSentenceInTextLayer = (textLayerEl, sentenceText, anchorEl = nu
     });
 
     occurrences = findOccurrences(aggressiveFullText, aggressiveTarget, aggressiveCharSpanMap);
+  }
+
+  // Last resort: alphanumeric-only matching. Tolerates any punctuation /
+  // whitespace difference between the backend sentence and the PDF text
+  // layer (e.g. "[22,30,32]" vs "[22, 30, 32]"), at the cost of being
+  // lossy. Safe for sentence-length targets because random collisions are
+  // vanishingly unlikely.
+  if (!occurrences.length) {
+    const alnumTarget = normAlnum(sentenceText);
+    if (alnumTarget.length >= 12) {
+      let alnumFullText = "";
+      const alnumCharSpanMap = [];
+      spans.forEach((span, spanIdx) => {
+        const t = normAlnum(span.textContent);
+        for (let j = 0; j < t.length; j++) alnumCharSpanMap.push(spanIdx);
+        alnumFullText += t;
+      });
+      occurrences = findOccurrences(alnumFullText, alnumTarget, alnumCharSpanMap);
+
+      // If the full target still doesn't fit (e.g. GROBID returned a
+      // multi-sentence excerpt that the PDF breaks differently), try the
+      // longest leading prefix that does fit. We walk back a few chars at
+      // a time so a small tail mismatch doesn't lose the whole match.
+      if (!occurrences.length) {
+        for (let len = alnumTarget.length - 1; len >= 40; len -= 10) {
+          const prefix = alnumTarget.slice(0, len);
+          const prefixHits = findOccurrences(alnumFullText, prefix, alnumCharSpanMap);
+          if (prefixHits.length) {
+            occurrences = prefixHits;
+            break;
+          }
+        }
+      }
+    }
   }
 
   // If still no matches, try substring matching for key parts of statistical notation
