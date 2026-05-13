@@ -54,6 +54,11 @@ def is_olmocr_available() -> bool:
 def pdf_to_md_str_olmocr(pdf_content: bytes) -> str:
     """Convert PDF bytes to markdown by shelling out to olmocr.
 
+    Emits ``<!-- olmocr-page: N -->`` HTML-comment markers at each page
+    boundary using the ``attributes.pdf_page_numbers`` spans from olmocr's
+    Dolma JSONL output. Downstream parsers (group_references_by_number)
+    attribute each cited line to its source page using these markers.
+
     Raises subprocess.CalledProcessError / TimeoutExpired on failure so the
     caller can decide whether to fall back.
     """
@@ -79,8 +84,16 @@ def pdf_to_md_str_olmocr(pdf_content: bytes) -> str:
                 if not line:
                     continue
                 record = json.loads(line)
-                text = record.get("text") or record.get("content")
-                if text:
+                text = record.get("text") or record.get("content") or ""
+                if not text:
+                    continue
+                spans = (record.get("attributes") or {}).get("pdf_page_numbers") or []
+                if spans:
+                    for start, end, page_num in spans:
+                        chunks.append(
+                            f"<!-- olmocr-page: {page_num} -->\n\n{text[start:end]}"
+                        )
+                else:
                     chunks.append(text)
 
         return "\n\n".join(chunks)

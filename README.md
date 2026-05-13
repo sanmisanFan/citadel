@@ -116,6 +116,15 @@ prefers an exact heading match (`References`, `Bibliography`, `Works Cited`,
 "ACM Reference Format"; it falls back to the *last* heading containing
 "reference"/"bibliography" if no exact match is found.
 
+When the markdown fallback path runs through olmocr, the converter in
+[backend/src/CITation/data/olmocr.py](backend/src/CITation/data/olmocr.py)
+emits `<!-- olmocr-page: N -->` HTML-comment markers at page boundaries
+(derived from olmocr's Dolma `attributes.pdf_page_numbers` spans), and
+`group_references_by_number` tracks the current page to attach a real
+`page` number to each citation mention — matching the schema GROBID
+produces. Without these markers the markdown-fallback path defaulted every
+mention to page 1, which surfaced in the UI as "Page: 1" on every anomaly.
+
 The frontend's WebSocket result handler in [src/App.js](src/App.js) guards
 against citations with no resolved author list or venue (the backend leaves
 `venue` as `null` when no venue could be inferred) so the page no longer

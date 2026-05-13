@@ -33,16 +33,31 @@ def extract_reference_numbers(citation_str):
     return numbers
 
 
+PAGE_MARKER_RE = re.compile(r"<!--\s*olmocr-page:\s*(\d+)\s*-->")
+
+
 def group_references_by_number(md_content):
     """
     Processes the markdown content line by line, finds citations,
     and groups all lines that mention the same reference number together.
+
+    When the markdown contains ``<!-- olmocr-page: N -->`` markers (emitted
+    by the olmocr converter), each mention is a ``{"text", "page"}`` dict
+    matching grobid's schema. Without markers, mentions are bare line strings
+    for back-compat with the pymupdf fallback path.
     """
-    # Regex to match citations like [1], [2-5], [6,7], etc.
     reference_pattern = re.compile(r"\[\d+(?:[,\s]*\d+)*(?:[,\s]*\d+-\d+)*\]")
     groups = {}
+    current_page = 1
+    saw_marker = False
 
     for line in md_content.splitlines():
+        page_match = PAGE_MARKER_RE.search(line)
+        if page_match:
+            current_page = int(page_match.group(1))
+            saw_marker = True
+            continue
+
         line_text = line.strip()
         matches = reference_pattern.findall(line)
         if matches:
@@ -52,7 +67,12 @@ def group_references_by_number(md_content):
                 for num in ref_nums:
                     if num not in groups:
                         groups[num] = []
-                    groups[num].append(line_text)
+                    entry = (
+                        {"text": line_text, "page": current_page}
+                        if saw_marker
+                        else line_text
+                    )
+                    groups[num].append(entry)
     return groups
 
 
