@@ -42,7 +42,7 @@ export const AnomalousListCard = ({
       //ref={listRef}
       id="anomalousListContainer-card"
       size="small"
-      title="Anomalous List"
+      title="Anomalies List"
       style={{
         width: '40.3%',
         display: "flex",
