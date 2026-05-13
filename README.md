@@ -160,6 +160,15 @@ citation-ring/self-citation anomaly with an empty sentence and a misaligned
 page number, which is currently possible when upstream citation-mention
 mapping is off.
 
+GROBID reference-mention parsing in
+[backend/src/CITation/data/grobid.py](backend/src/CITation/data/grobid.py)
+now prefers the visible TEI citation label (`[22]`, `[7]`, etc.) for both
+bibliography `ref_id` assignment and in-text mention mapping, only falling
+back to internal `target="#bN"` ids when no numeric label text is present.
+This avoids the upstream mismatch where GROBID's internal bibliography ids
+drift from the manuscript's displayed numbering and page-3 mention text gets
+attached to the wrong citation number.
+
 Self-citation is now only flagged when a cited author is also an author of
 the manuscript being reviewed. The previous SCC self-edge fallback in
 `generate_scc_anomalies` / `update_anomalous_with_hop1_sccs`

@@ -22,6 +22,17 @@ GROBID_TIMEOUT = 120  # seconds, PDF processing can be slow
 TEI_NS = {"tei": "http://www.tei-c.org/ns/1.0"}
 
 
+def _extract_numeric_label(text: str | None) -> int | None:
+    """Extract a numeric citation label from TEI text like "7" or "[7]"."""
+    if not text:
+        return None
+    stripped = text.strip()
+    match = re.fullmatch(r"\[?(\d+)\]?", stripped)
+    if match:
+        return int(match.group(1))
+    return None
+
+
 def is_grobid_available() -> bool:
     """Check if grobid service is running and accessible."""
     try:
@@ -95,7 +106,11 @@ def parse_tei_references(
     bibl_structs = root.findall(".//tei:biblStruct", TEI_NS)
 
     for idx, bibl in enumerate(bibl_structs, 1):
-        ref = parse_single_bibl_struct(bibl, idx)
+        label_elem = bibl.find("tei:label", TEI_NS)
+        label_ref_id = _extract_numeric_label(
+            label_elem.text if label_elem is not None else None
+        )
+        ref = parse_single_bibl_struct(bibl, label_ref_id or idx)
         parsed_refs.append(ref)
 
         # Extract raw citation string if available
@@ -302,11 +317,18 @@ def parse_citation_mentions(tei_xml: str) -> dict[int, list[dict]]:
 
     # Find all ref elements with type="bibr"
     for ref in root.findall(".//tei:ref[@type='bibr']", TEI_NS):
-        target = ref.get("target", "")
-        # Target format is typically "#b0", "#b1", etc.
-        match = re.match(r"#b(\d+)", target)
-        if match:
-            ref_num = int(match.group(1)) + 1  # Convert 0-indexed to 1-indexed
+        ref_num = _extract_numeric_label("".join(ref.itertext()))
+
+        if ref_num is None:
+            target = ref.get("target", "")
+            # Target format is typically "#b0", "#b1", etc.
+            match = re.match(r"#b(\d+)", target)
+            if match:
+                ref_num = (
+                    int(match.group(1)) + 1
+                )  # Fallback when no label text is available
+
+        if ref_num is not None:
 
             # Prefer the <ref> element's own coords — that's the exact page
             # where the citation marker is rendered. Paragraph coords only
@@ -335,7 +357,10 @@ def parse_citation_mentions(tei_xml: str) -> dict[int, list[dict]]:
                 existing_texts = [m["text"] for m in mentions[ref_num]]
                 if context not in existing_texts:
                     mentions[ref_num].append(
-                        {"text": context, "page": page_num if page_num is not None else 1}
+                        {
+                            "text": context,
+                            "page": page_num if page_num is not None else 1,
+                        }
                     )
 
     return mentions
@@ -374,7 +399,9 @@ def extract_formula_coordinates_with_grobid(pdf_content: bytes) -> list[dict]:
         )
 
         if response.status_code != 200:
-            print(f"DEBUG grobid: Formula extraction failed with status {response.status_code}")
+            print(
+                f"DEBUG grobid: Formula extraction failed with status {response.status_code}"
+            )
             return []
 
         return parse_formula_coordinates(response.text)
@@ -415,14 +442,16 @@ def parse_formula_coordinates(tei_xml: str) -> list[dict]:
             parts = coord_part.strip().split(",")
             if len(parts) >= 5:
                 try:
-                    formulas.append({
-                        "text": text,
-                        "page": int(parts[0]),
-                        "x": float(parts[1]),
-                        "y": float(parts[2]),
-                        "width": float(parts[3]),
-                        "height": float(parts[4]),
-                    })
+                    formulas.append(
+                        {
+                            "text": text,
+                            "page": int(parts[0]),
+                            "x": float(parts[1]),
+                            "y": float(parts[2]),
+                            "width": float(parts[3]),
+                            "height": float(parts[4]),
+                        }
+                    )
                 except (ValueError, IndexError) as e:
                     print(f"DEBUG grobid: Failed to parse coords '{coord_part}': {e}")
                     continue
@@ -434,9 +463,10 @@ def parse_formula_coordinates(tei_xml: str) -> list[dict]:
 
         # Check if paragraph contains statistical test patterns
         import re
+
         stat_patterns = [
-            r'[FfTt]\s*\([^)]+\)\s*=\s*[\d.]+\s*,?\s*[pP]\s*[<>=]\s*[\d.]+',
-            r'[χXx]\s*[²2]?\s*\([^)]+\)\s*=\s*[\d.]+\s*,?\s*[pP]\s*[<>=]\s*[\d.]+',
+            r"[FfTt]\s*\([^)]+\)\s*=\s*[\d.]+\s*,?\s*[pP]\s*[<>=]\s*[\d.]+",
+            r"[χXx]\s*[²2]?\s*\([^)]+\)\s*=\s*[\d.]+\s*,?\s*[pP]\s*[<>=]\s*[\d.]+",
         ]
 
         for pattern in stat_patterns:
@@ -447,15 +477,17 @@ def parse_formula_coordinates(tei_xml: str) -> list[dict]:
                         parts = coord_part.strip().split(",")
                         if len(parts) >= 5:
                             try:
-                                formulas.append({
-                                    "text": match.group(0),
-                                    "page": int(parts[0]),
-                                    "x": float(parts[1]),
-                                    "y": float(parts[2]),
-                                    "width": float(parts[3]),
-                                    "height": float(parts[4]),
-                                    "is_paragraph_coords": True,  # Flag that these are paragraph-level coords
-                                })
+                                formulas.append(
+                                    {
+                                        "text": match.group(0),
+                                        "page": int(parts[0]),
+                                        "x": float(parts[1]),
+                                        "y": float(parts[2]),
+                                        "width": float(parts[3]),
+                                        "height": float(parts[4]),
+                                        "is_paragraph_coords": True,  # Flag that these are paragraph-level coords
+                                    }
+                                )
                             except (ValueError, IndexError):
                                 continue
 
@@ -489,21 +521,31 @@ def extract_abstract_with_grobid(pdf_content: bytes) -> dict | None:
         )
 
         print(f"DEBUG grobid: Header extraction status: {response.status_code}")
-        print(f"DEBUG grobid: Response content type: {response.headers.get('content-type', 'unknown')}")
+        print(
+            f"DEBUG grobid: Response content type: {response.headers.get('content-type', 'unknown')}"
+        )
         print(f"DEBUG grobid: Response length: {len(response.text)} chars")
-        print(f"DEBUG grobid: Response preview: {response.text[:500] if response.text else 'EMPTY'}")
+        print(
+            f"DEBUG grobid: Response preview: {response.text[:500] if response.text else 'EMPTY'}"
+        )
 
         if response.status_code == 204:
             print("DEBUG grobid: No content returned (204)")
             return None
 
         if response.status_code != 200:
-            print(f"DEBUG grobid: Header extraction failed with status {response.status_code}")
+            print(
+                f"DEBUG grobid: Header extraction failed with status {response.status_code}"
+            )
             print(f"DEBUG grobid: Error response: {response.text[:500]}")
             return None
 
         # Check if response looks like XML
-        if not response.text or not response.text.strip().startswith('<?xml') and not response.text.strip().startswith('<'):
+        if (
+            not response.text
+            or not response.text.strip().startswith("<?xml")
+            and not response.text.strip().startswith("<")
+        ):
             print(f"DEBUG grobid: Response is not XML: {response.text[:200]}")
             print("DEBUG grobid: Trying fulltext endpoint as fallback...")
             return extract_abstract_with_fulltext(pdf_content)
@@ -613,7 +655,9 @@ def extract_abstract_with_fulltext(pdf_content: bytes) -> dict | None:
         )
 
         if response.status_code != 200:
-            print(f"DEBUG grobid: Fulltext extraction failed with status {response.status_code}")
+            print(
+                f"DEBUG grobid: Fulltext extraction failed with status {response.status_code}"
+            )
             return None
 
         # Parse the fulltext TEI - abstract is in the same location
