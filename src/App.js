@@ -138,13 +138,13 @@ function App() {
 
                 authorRaw.forEach(author => {
                     author.has_issue = citationsList.some(citation =>
-                        citation.author.includes(author.id) && citation.has_issue
+                        Array.isArray(citation.author) && citation.author.includes(author.id) && citation.has_issue
                     );
                 });
 
                 venueRaw.forEach(venue => {
                     venue.has_issue = citationsList.some(citation =>
-                        citation.venue.includes(venue.id) && citation.has_issue
+                        citation.venue != null && citation.venue.includes(venue.id) && citation.has_issue
                     );
                 });
 

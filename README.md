@@ -116,6 +116,12 @@ prefers an exact heading match (`References`, `Bibliography`, `Works Cited`,
 "ACM Reference Format"; it falls back to the *last* heading containing
 "reference"/"bibliography" if no exact match is found.
 
+The frontend's WebSocket result handler in [src/App.js](src/App.js) guards
+against citations with no resolved author list or venue (the backend leaves
+`venue` as `null` when no venue could be inferred) so the page no longer
+crashes with `Cannot read properties of null (reading 'includes')` when the
+pipeline returns references without venue metadata.
+
 ## Tests
 
 ```bash
