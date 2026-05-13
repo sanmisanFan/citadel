@@ -48,12 +48,29 @@ export const PDFContainer = ({
   // Track when each page's text layer is fully rendered. We can't use
   // onRenderSuccess (canvas-only) because findSentenceInTextLayer walks the
   // text-layer spans — those may not exist yet when the canvas finishes.
-  const onPageTextLayerRenderSuccess = (pageNumber) => {
-    setTextLayerReadyPages((prev) => ({
-      ...prev,
-      [pageNumber]: true,
-    }));
-  };
+  //
+  // This callback must be reference-stable: react-pdf's TextLayer lists
+  // onRenderSuccess in its layout-effect deps, so a fresh function instance
+  // each parent re-render cancels the in-flight text-layer render and
+  // restarts it. Combined with frequent re-renders from scroll
+  // (setCurrentPage) and click (setActiveHighlight) state updates, that
+  // produced thousands of "TextLayer task cancelled" warnings and prevented
+  // highlights from being applied. We can't close over a per-page index
+  // either; instead, on every text-layer completion we rescan the viewer
+  // DOM and mark pages whose .react-pdf__Page__textContent has spans.
+  const onPageTextLayerRenderSuccess = useCallback(() => {
+    if (!viewerRef.current) return;
+    const ready = {};
+    viewerRef.current
+      .querySelectorAll(".react-pdf__Page__textContent")
+      .forEach((el) => {
+        if (!el.querySelector("span")) return;
+        const pageEl = el.closest(".react-pdf__Page");
+        const num = Number(pageEl?.dataset.pageNumber);
+        if (num) ready[num] = true;
+      });
+    setTextLayerReadyPages(ready);
+  }, []);
 
   const handleScroll = () => {
     if (!viewerRef.current) return;
@@ -247,7 +264,7 @@ export const PDFContainer = ({
               width={width}
               scale={pdfScale}
               renderAnnotationLayer={false}
-              onRenderTextLayerSuccess={() => onPageTextLayerRenderSuccess(index + 1)}
+              onRenderTextLayerSuccess={onPageTextLayerRenderSuccess}
             />
           ))}
         </Document>

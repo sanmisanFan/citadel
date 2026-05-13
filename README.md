@@ -201,15 +201,24 @@ previously gated `applyHighlightsReact` on `onRenderSuccess`, which fires
 when each page's *canvas* finishes — but the text layer (whose spans
 `findSentenceInTextLayer` walks) is built afterwards, so highlights raced
 the text layer and intermittently failed with `[Highlight] Sentence not
-found`. The viewer now tracks `onRenderTextLayerSuccess` instead, so
-sentence matching only runs once the spans actually exist.
-`findSentenceInTextLayer` in [src/util/pdfUtil.js](src/util/pdfUtil.js) also
-normalises common unicode variants that diverge between PDF.js text-layer
-output and the GROBID-extracted backend sentence (ligatures `ﬁ`/`ﬂ`, smart
-quotes, em/en dashes, soft hyphens, non-breaking spaces) via NFKC, and
-stitches words broken across spans by line-break hyphenation (e.g.
-`"anom-"` + `"aly"` → `"anomaly"`) so the broken word matches the backend's
-unhyphenated form.
+found`. The viewer now tracks `onRenderTextLayerSuccess` instead, and the
+callback is wrapped in `useCallback` with no per-page closure so its
+identity is stable across renders. react-pdf's TextLayer lists
+`onRenderSuccess` in its layout-effect dependencies
+(`node_modules/react-pdf/dist/cjs/Page/TextLayer.js`), so a fresh arrow
+function instance on every parent re-render — caused by the scroll
+handler's `setCurrentPage` call and clicks updating `activeHighlight` —
+cancelled the in-flight text-layer render and restarted it, producing
+thousands of `TextLayer task cancelled` console warnings and preventing
+`onRenderTextLayerSuccess` from ever firing for the destination page. With
+a stable callback the text layer renders once and the highlight applies
+on first click. `findSentenceInTextLayer` in
+[src/util/pdfUtil.js](src/util/pdfUtil.js) also normalises common unicode
+variants that diverge between PDF.js text-layer output and the
+GROBID-extracted backend sentence (ligatures `ﬁ`/`ﬂ`, smart quotes, em/en
+dashes, soft hyphens, non-breaking spaces) via NFKC, and stitches words
+broken across spans by line-break hyphenation (e.g. `"anom-"` + `"aly"` →
+`"anomaly"`) so the broken word matches the backend's unhyphenated form.
 
 ## Tests
 
