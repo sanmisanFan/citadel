@@ -42,4 +42,5 @@ statcheck
 generate_citation_network
 fetch_pubmed
 
-CLAUDE.md
+# Session intermediate data (per-run debug artifacts)
+outputs/

@@ -85,9 +85,20 @@ def save_debug_outputs(
     author_graph,
     reference_mentions,
     tracker_summary=None,
+    md_text=None,
 ):
     """DEBUGGING: Save all pipeline outputs to JSON files for debugging."""
     DEBUG_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    md_filepath = DEBUG_OUTPUT_DIR / "paper_markdown.md"
+    if md_text is not None:
+        with open(md_filepath, "w", encoding="utf-8") as f:
+            f.write(md_text)
+        print(f"DEBUG: Saved {md_filepath}")
+    elif md_filepath.exists():
+        # Avoid leaving stale markdown from a previous run masquerading as current.
+        md_filepath.unlink()
+        print(f"DEBUG: Removed stale {md_filepath} (no md_text this run, e.g. grobid path)")
 
     outputs = {
         "enriched_papers.json": enriched_papers,
@@ -98,13 +109,6 @@ def save_debug_outputs(
         "author_graph.json": author_graph,
         "reference_mentions.json": reference_mentions,
     }
-
-    # DEBUGGING: Save markdown text for stat check inspection
-    if tracker_summary and "md_text" in tracker_summary:
-        md_filepath = DEBUG_OUTPUT_DIR / "paper_markdown.md"
-        with open(md_filepath, "w", encoding="utf-8") as f:
-            f.write(tracker_summary["md_text"])
-        print(f"DEBUG: Saved {md_filepath}")
 
     # DEBUGGING: Add pipeline tracking summary if available
     if tracker_summary:
@@ -374,6 +378,7 @@ async def process_pdf_ws(ws: WebSocket):
             ag,
             reference_mentions,
             pipeline_tracker.get_summary(),
+            md_text,
         )
 
         await progress_q.put(

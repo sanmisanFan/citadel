@@ -103,7 +103,11 @@ the `BACKEND_URL` env var when starting `npm start`. CORS is configured for
 Each pipeline run writes intermediate JSON (enriched papers, citations,
 authors, venues, anomalies, author graph, reference mentions, plain text,
 formula coordinates, pipeline timing summary) to `outputs/debug/` for
-inspection.
+inspection. When the pipeline goes through the markdown fallback (no GROBID,
+or GROBID returns no citation mentions), the converted markdown is also
+written to `outputs/debug/paper_markdown.md`; on grobid-only runs that file
+is removed so the directory doesn't surface stale markdown from a prior run.
+The whole `outputs/` directory is gitignored.
 
 ## Tests
 
