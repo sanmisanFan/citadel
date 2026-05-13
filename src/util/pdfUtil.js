@@ -95,7 +95,10 @@ const normAlnum = (s) => {
  * and normalizes unicode variants of mathematical characters.
  */
 const normAggressive = (s) => {
+  if (!s) return "";
   return s
+    .normalize("NFKC")
+    .replace(/­/g, "")
     .replace(/\s+/g, "")  // Remove all whitespace
     .toLowerCase()
     // Normalize unicode variants
@@ -106,6 +109,21 @@ const normAggressive = (s) => {
     .replace(/[\u00d7]/g, "x")   // ×
     .replace(/['']/g, "'")       // Smart quotes
     .replace(/[""]/g, '"');      // Smart double quotes
+};
+
+const stripStatisticalPrefixNoise = (s) => {
+  if (!s) return "";
+
+  const statStart = s.search(/(?:[fFtT]\s*\(|[pP]\s*[<>=]|chi\s*[²2]?\s*\()/i);
+  if (statStart <= 0) return s;
+
+  const prefix = s.slice(0, statStart).trim();
+  const hasPathLikePrefix =
+    /[\\/]/.test(prefix) ||
+    /\.[a-z0-9]{1,8}(?::\d+)?$/i.test(prefix) ||
+    /(?:^|\s)(?:reported|figure|fig|table|tab|equation|eq)\s*:?$/i.test(prefix);
+
+  return hasPathLikePrefix ? s.slice(statStart).trim() : s;
 };
 
 /**
@@ -142,14 +160,18 @@ const isStatisticalNotation = (s) => {
 export const findSentenceInTextLayer = (textLayerEl, sentenceText, anchorEl = null) => {
   if (!textLayerEl || !sentenceText) return [];
 
+  const matchSentenceText = isStatisticalNotation(sentenceText)
+    ? stripStatisticalPrefixNoise(sentenceText)
+    : sentenceText;
+
   const spans = Array.from(textLayerEl.querySelectorAll("span"));
   if (!spans.length) return [];
 
   // Determine if we should use aggressive matching for statistical notation
-  const useAggressive = isStatisticalNotation(sentenceText);
+  const useAggressive = isStatisticalNotation(matchSentenceText);
   const norm = useAggressive ? normAggressive : normBasic;
 
-  const target = norm(sentenceText);
+  const target = norm(matchSentenceText);
   if (!target) return [];
 
   // Build normalised full text + per-character span-index map.
@@ -181,7 +203,7 @@ export const findSentenceInTextLayer = (textLayerEl, sentenceText, anchorEl = nu
 
   // If no matches found and we used basic normalization, try aggressive
   if (!occurrences.length && !useAggressive) {
-    const aggressiveTarget = normAggressive(sentenceText);
+    const aggressiveTarget = normAggressive(matchSentenceText);
     let aggressiveFullText = "";
     const aggressiveCharSpanMap = [];
 
@@ -200,7 +222,7 @@ export const findSentenceInTextLayer = (textLayerEl, sentenceText, anchorEl = nu
   // lossy. Safe for sentence-length targets because random collisions are
   // vanishingly unlikely.
   if (!occurrences.length) {
-    const alnumTarget = normAlnum(sentenceText);
+    const alnumTarget = normAlnum(matchSentenceText);
     if (alnumTarget.length >= 12) {
       let alnumFullText = "";
       const alnumCharSpanMap = [];
@@ -229,8 +251,8 @@ export const findSentenceInTextLayer = (textLayerEl, sentenceText, anchorEl = nu
   }
 
   // If still no matches, try substring matching for key parts of statistical notation
-  if (!occurrences.length && isStatisticalNotation(sentenceText)) {
-    occurrences = findStatisticalMatch(spans, sentenceText);
+  if (!occurrences.length && isStatisticalNotation(matchSentenceText)) {
+    occurrences = findStatisticalMatch(spans, matchSentenceText);
   }
 
   if (!occurrences.length) return [];
@@ -293,7 +315,7 @@ const findOccurrences = (fullText, target, charSpanMap) => {
 const findStatisticalMatch = (spans, sentenceText) => {
   // Extract the key pattern: test type and parameters
   // e.g., "F(2,46)=4" or "t(123)=.45" or "p<.01"
-  const normalized = normAggressive(sentenceText);
+  const normalized = normAggressive(stripStatisticalPrefixNoise(sentenceText));
 
   // Try to find spans that contain parts of the statistical expression
   const spanIndices = [];

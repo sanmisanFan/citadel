@@ -98,6 +98,21 @@ the `BACKEND_URL` env var when starting `npm start`. CORS is configured for
   Requires GROBID.
 - `POST /api/extract_abstracts` — batch version.
 
+## Anomaly Anchors
+
+Anomaly payloads now include explicit anchor metadata so the frontend can
+resolve each issue to the exact citation marker or statistical expression in
+the rendered PDF, instead of relying on page-only navigation.
+
+- Citation anomalies expose `anchors`, where each anchor represents one
+  detected in-text marker occurrence with `{page, marker_bbox, page_width,
+  page_height, ref_label, sentence}`.
+- Citation records returned from `WebSocket /ws/process_pdf` expose
+  `cite_positions`, one entry per in-text `[N]` marker. The PDF viewer uses
+  these to draw marker-level overlays and associate them with issue IDs.
+- When GROBID coordinates are missing, the frontend falls back to the anchor
+  sentence and marker label to resolve the highlight in the PDF text layer.
+
 
 ## Tests
 
