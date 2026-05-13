@@ -188,6 +188,12 @@ with `page: null` and an empty sentence; the anomaly list renders a "—" in
 the page column and [src/App.js](src/App.js) skips registering a body
 highlight for these issues.
 
+UI labels were tightened to use the noun "Anomaly"/"Anomalies" instead of
+the adjective "Anomalous": citation issues now display as "Citation Anomaly"
+(emitted by `detect_anomalies.py`), the details card uses an "Anomaly" row,
+and the overview / floating legend read "Anomaly Overview" and "Detected
+Anomalies Legend".
+
 ## Tests
 
 ```bash

@@ -178,7 +178,7 @@ export const FloatingPanel = ({ currentPage, anomalous, anomalousColorScheme, se
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <h4 style={{ margin: "0" }}>Detected Anomalous Legend:</h4>
+        <h4 style={{ margin: "0" }}>Detected Anomalies Legend:</h4>
         <span onClick={toggleLegend} style={{ cursor: "pointer", fontSize: '12px', textDecoration: 'underline' }}>
             {isLegendOpen ? "Hide Legend" : "Show Legend"}
         </span>

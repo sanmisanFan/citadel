@@ -90,7 +90,7 @@ def generate_anomalous_json(enriched_papers):
                 issue = {
                     "id": f"issue-{issue_id}",
                     "name": "citation",
-                    "displayName": "Citation Anomalous",
+                    "displayName": "Citation Anomaly",
                     "category": {
                         "name": "lowRelevancy",
                         "displayName": "Low Relevancy",
@@ -266,7 +266,7 @@ def generate_scc_anomalies(hop1_sccs_data, citations, enriched_papers, existing_
             issue = {
                 "id": f"issue-{issue_id}",
                 "name": "citation",
-                "displayName": "Citation Anomalous",
+                "displayName": "Citation Anomaly",
                 "category": {
                     "name": category_name,
                     "displayName": display_name,
@@ -314,7 +314,7 @@ def generate_unreferenced_anomalies(enriched_papers, next_issue_id):
         issue = {
             "id": f"issue-{issue_id}",
             "name": "citation",
-            "displayName": "Citation Anomalous",
+            "displayName": "Citation Anomaly",
             "category": {
                 "name": "unreferenced",
                 "displayName": "Unreferenced",

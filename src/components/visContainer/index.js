@@ -16,7 +16,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 /**
  * 
  * <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span>Anomalous Overview</span>
+          <span>Anomaly Overview</span>
           <span onClick={toggleLegend} style={{ cursor: "pointer", fontSize: '12px', textDecoration: 'underline' }}>
               {isLegendOpen ? "Hide Legend" : "Show Legend"}
           </span>

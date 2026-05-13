@@ -27,7 +27,7 @@ export const ContentCard = ({
           width: width,
         }}
       >
-        <p>No anomalous data found for the current selection.</p>
+        <p>No anomaly data found for the current selection.</p>
       </Card>
     );
   }
@@ -113,7 +113,7 @@ export const ContentCard = ({
           <Descriptions.Item label="Type">
             <Tag color={baseColor} style={{fontSize: 12, lineHeight: 1.5}}>{displayName}</Tag>
           </Descriptions.Item>
-          <Descriptions.Item label="Anomalous">
+          <Descriptions.Item label="Anomaly">
             <Tag 
               color={categoryColor}
               style={{fontSize: 12, lineHeight: 1.5}}

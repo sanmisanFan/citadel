@@ -70,7 +70,7 @@ export const AnomalousLegendCard = ({}) => {
       size="small"
       title={
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span style={{ fontWeight: 600, fontSize: 16 }}>Anomalous Overview</span>
+          <span style={{ fontWeight: 600, fontSize: 16 }}>Anomaly Overview</span>
         </div>
       }
       style={{
