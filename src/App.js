@@ -1,7 +1,7 @@
 // https://sanmisanfan.github.io/ReviewerApp-demo/
 import { useState } from "react";
 import { pdfjs } from "react-pdf";
-import { Col, Row, Spin, Flex, Upload, Input, Button, Typography, Divider, Card, Space, Progress, Alert, Modal, List } from 'antd';
+import { Col, Row, Spin, Upload, Input, Button, Typography, Divider, Card, Space, Alert, Modal, List } from 'antd';
 import './App.css';
 import { CloudUploadOutlined, FileTextOutlined, UserOutlined, CalendarOutlined, CheckCircleOutlined } from '@ant-design/icons';
 import TextInputArray from "./components/textInputArray.js"
@@ -13,7 +13,7 @@ import { VisContainer } from "./components/visContainer";
 /** Import annotation configure */
 import { anomalousColorScheme } from "./annotationConfig";
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Text } = Typography;
 const { Dragger } = Upload;
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
