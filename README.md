@@ -121,6 +121,17 @@ the rendered PDF, instead of relying on page-only navigation.
   let one ref's page overwrite another's. The lookup is now keyed by
   `(ref, excerpt)` and the original mention (including its `occurrences`) is
   preserved.
+- Multi-ref groups like `[22,30,32]` are now parsed correctly. GROBID emits
+  these as three sibling `<ref>` tags whose visible labels are `"[22,"`,
+  `"30,"`, and `"32]"`. The previous `_extract_numeric_label` used
+  `re.fullmatch(r"\[?(\d+)\]?", …)`, which failed on the first two (trailing
+  comma) and fell back to GROBID's `target="#b…"` attribute — that mapping is
+  off-by-one in some papers, so marker "22" was being bucketed under
+  `mentions[21]` and surfaced as a stray anchor on page 2. The label parser
+  now uses `re.match(r"\[?(\d+)", …)` (leading digit run), so each marker in
+  a list binds to the visible number; author-year style labels like
+  `"Smith 2020 [5]"` still skip the visible-label path because they don't
+  start with `[` or a digit.
 - The anomalies list is sorted by **page-then-category**: items are ordered
   by the earliest page they appear on, then within a page by category
   severity (`testFailure` → `selfCitation` → `citationRing` → `unreferenced`

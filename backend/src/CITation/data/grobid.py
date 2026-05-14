@@ -23,11 +23,18 @@ TEI_NS = {"tei": "http://www.tei-c.org/ns/1.0"}
 
 
 def _extract_numeric_label(text: str | None) -> int | None:
-    """Extract a numeric citation label from TEI text like "7" or "[7]"."""
+    """Extract a numeric citation label from TEI text like "7", "[7]", or a
+    fragment from a multi-ref group such as "[22," / "30," / "32]" that
+    GROBID emits when "[22,30,32]" is split across sibling ``<ref>`` tags.
+
+    Anchors at the start (optional ``[``) so author-year style labels like
+    "Smith 2020 [5]" don't accidentally bind to "2020"; those should fall
+    back to the ``target`` attribute instead of the visible label.
+    """
     if not text:
         return None
     stripped = text.strip()
-    match = re.fullmatch(r"\[?(\d+)\]?", stripped)
+    match = re.match(r"\[?(\d+)", stripped)
     if match:
         return int(match.group(1))
     return None
