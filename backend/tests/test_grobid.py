@@ -96,3 +96,43 @@ def test_parse_tei_references_uses_numeric_label_for_ref_id():
     assert len(parsed_refs) == 1
     assert parsed_refs[0]["ref_id"] == 22
     assert parsed_refs[0]["title"] == "statcheck"
+
+
+def test_parse_tei_references_recovers_ref_id_from_raw_reference_when_label_missing():
+    """GROBID can drop a non-publication entry (e.g. a software ref like
+    "[1] 2008-2026. GROBID. https://github.com/kermitt2/grobid...") from
+    the biblStruct list and emit the remaining entries without <label>
+    elements. Falling back to enumerate index would then misalign ref_ids
+    with the source PDF's numbering. The leading "[N]" of the raw
+    reference text should be used to recover the original number.
+    """
+    tei_xml = """
+    <TEI xmlns="http://www.tei-c.org/ns/1.0">
+      <listBibl>
+        <biblStruct>
+          <analytic>
+            <title level="a">Peer review and the publication process</title>
+          </analytic>
+          <monogr>
+            <title level="j">Nursing open</title>
+            <imprint><date when="2016" /></imprint>
+          </monogr>
+          <note type="raw_reference">[2] Parveen Azam Ali and Roger Watson. 2016. Peer review and the publication process. Nursing open 3, 4 (2016), 193-202.</note>
+        </biblStruct>
+        <biblStruct>
+          <analytic>
+            <title level="a">statcheck: Extract statistics from articles and recompute p values</title>
+          </analytic>
+          <note type="raw_reference">[8] S. Epskamp and M.B. Nuijten. 2014. statcheck: Extract statistics from articles and recompute p values (R package version 1.0.0.).</note>
+        </biblStruct>
+      </listBibl>
+    </TEI>
+    """
+
+    parsed_refs, _ = parse_tei_references(tei_xml)
+
+    assert len(parsed_refs) == 2
+    assert parsed_refs[0]["ref_id"] == 2
+    assert parsed_refs[0]["title"] == "Peer review and the publication process"
+    assert parsed_refs[1]["ref_id"] == 8
+    assert "statcheck" in parsed_refs[1]["title"]

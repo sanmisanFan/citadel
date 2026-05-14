@@ -137,6 +137,16 @@ the rendered PDF, instead of relying on page-only navigation.
   severity (`testFailure` → `selfCitation` → `citationRing` → `unreferenced`
   → `lowRelevancy`). Issues with no page (e.g. unreferenced bibliography
   entries) sink to the bottom; insertion order from the pipeline breaks ties.
+- `ref_id` (which becomes `cite_number` shown in the UI) is now recovered
+  from the leading `[N]` of GROBID's `<note type="raw_reference">` text when
+  the `<biblStruct>` has no `<label>` element. GROBID can drop a
+  non-publication entry (e.g. a software citation like
+  `[1] 2008-2026. GROBID. https://github.com/kermitt2/grobid…`) from the
+  bibl list and also omit `<label>` for the remaining entries; the previous
+  fallback to `enumerate(..., 1)` then shifted every ref down by one, so
+  `[8] statcheck` showed up as `cite_number=7` and `[7] Algorithm aversion`
+  showed up as `cite_number=6`, breaking the mapping between body-text
+  `[N]` markers and the side-panel citation info.
 
 
 ## Tests

@@ -113,17 +113,30 @@ def parse_tei_references(
     bibl_structs = root.findall(".//tei:biblStruct", TEI_NS)
 
     for idx, bibl in enumerate(bibl_structs, 1):
+        # Extract raw citation string if available
+        raw_cite = bibl.find(".//tei:note[@type='raw_reference']", TEI_NS)
+        raw_cite_text = (
+            raw_cite.text.strip() if raw_cite is not None and raw_cite.text else None
+        )
+
         label_elem = bibl.find("tei:label", TEI_NS)
         label_ref_id = _extract_numeric_label(
             label_elem.text if label_elem is not None else None
         )
+        # GROBID can drop a non-publication entry (e.g. a software ref) from
+        # the biblStruct list and emit the remaining entries without <label>
+        # elements. Falling back to ``idx`` then misaligns ref_ids with the
+        # source PDF's numbering (so "[8] statcheck" becomes ref_id 7). Try
+        # the leading "[N]" of the raw reference text to recover the original
+        # bibliography number before resorting to ``idx``.
+        if label_ref_id is None and raw_cite_text:
+            label_ref_id = _extract_numeric_label(raw_cite_text)
+
         ref = parse_single_bibl_struct(bibl, label_ref_id or idx)
         parsed_refs.append(ref)
 
-        # Extract raw citation string if available
-        raw_cite = bibl.find(".//tei:note[@type='raw_reference']", TEI_NS)
-        if raw_cite is not None and raw_cite.text:
-            raw_refs.append(raw_cite.text.strip())
+        if raw_cite_text:
+            raw_refs.append(raw_cite_text)
         else:
             # Reconstruct from parsed data
             raw_refs.append(reconstruct_raw_reference(ref))
