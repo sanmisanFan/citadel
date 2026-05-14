@@ -51,12 +51,16 @@ def is_grobid_available() -> bool:
 
 def extract_references_with_grobid(
     pdf_content: bytes,
+    label_map: dict[str, int] | None = None,
 ) -> Tuple[list[ParsedReference], list[str]]:
     """
     Extract references from PDF using grobid service.
 
     Args:
         pdf_content: Raw PDF file bytes
+        label_map: Optional ``{xml:id → visible PDF label}`` recovered from
+            the fulltext endpoint. Used to anchor ref_ids to the source PDF
+            numbering when biblStructs lack <label> elements.
 
     Returns:
         Tuple of (parsed_references, raw_reference_strings)
@@ -82,14 +86,48 @@ def extract_references_with_grobid(
                 f"Grobid returned status {response.status_code}: {response.text}"
             )
 
-        return parse_tei_references(response.text)
+        return parse_tei_references(response.text, label_map=label_map)
 
     except requests.RequestException as e:
         raise RuntimeError(f"Grobid request failed: {e}")
 
 
+def extract_target_to_label_map(tei_xml: str) -> dict[str, int]:
+    """Build a ``{biblStruct xml:id → visible PDF label}`` map from
+    ``<ref type="bibr" target="#bN">[K]</ref>`` markers in the body text.
+
+    GROBID's processReferences endpoint frequently emits biblStructs without
+    a ``<label>`` element, and the ``raw_reference`` text strips the leading
+    ``[N]`` prefix. When GROBID also drops a non-publication entry (e.g. a
+    software citation) from the biblStruct list, falling back to the
+    enumerate index misaligns ref_ids with the source PDF's numbering. The
+    fulltext endpoint preserves the original PDF label inside each ``<ref>``
+    marker, so harvesting them lets the bibliography parser recover the
+    correct numbering. The first label seen for a given target wins.
+    """
+    try:
+        root = ET.fromstring(tei_xml)
+    except ET.ParseError:
+        return {}
+
+    label_map: dict[str, int] = {}
+    for ref_elem in root.findall(".//tei:ref[@type='bibr']", TEI_NS):
+        target = ref_elem.get("target", "")
+        if not target.startswith("#"):
+            continue
+        xml_id = target[1:]
+        if xml_id in label_map:
+            continue
+        label = "".join(ref_elem.itertext())
+        ref_num = _extract_numeric_label(label)
+        if ref_num is not None:
+            label_map[xml_id] = ref_num
+    return label_map
+
+
 def parse_tei_references(
     tei_xml: str,
+    label_map: dict[str, int] | None = None,
 ) -> Tuple[list[ParsedReference], list[str]]:
     """
     Parse grobid TEI XML output into structured references.
@@ -127,10 +165,16 @@ def parse_tei_references(
         # the biblStruct list and emit the remaining entries without <label>
         # elements. Falling back to ``idx`` then misaligns ref_ids with the
         # source PDF's numbering (so "[8] statcheck" becomes ref_id 7). Try
-        # the leading "[N]" of the raw reference text to recover the original
-        # bibliography number before resorting to ``idx``.
+        # the leading "[N]" of the raw reference text first; in practice the
+        # production GROBID build strips the "[N]" prefix from raw_reference,
+        # so also consult the xml:id → PDF-label map harvested from the
+        # fulltext endpoint before resorting to ``idx``.
         if label_ref_id is None and raw_cite_text:
             label_ref_id = _extract_numeric_label(raw_cite_text)
+        if label_ref_id is None and label_map:
+            xml_id = bibl.get("{http://www.w3.org/XML/1998/namespace}id", "")
+            if xml_id in label_map:
+                label_ref_id = label_map[xml_id]
 
         ref = parse_single_bibl_struct(bibl, label_ref_id or idx)
         parsed_refs.append(ref)
@@ -272,7 +316,9 @@ def reconstruct_raw_reference(ref: ParsedReference) -> str:
     return ". ".join(parts) if parts else ""
 
 
-def extract_citation_mentions_with_grobid(pdf_content: bytes) -> dict[int, list[dict]]:
+def extract_citation_mentions_with_grobid(
+    pdf_content: bytes,
+) -> Tuple[dict[int, list[dict]], dict[str, int]]:
     """
     Extract citation mentions (in-text citations) from PDF using grobid.
 
@@ -282,7 +328,13 @@ def extract_citation_mentions_with_grobid(pdf_content: bytes) -> dict[int, list[
         pdf_content: Raw PDF file bytes
 
     Returns:
-        Dictionary mapping reference numbers to list of {text, page} dicts
+        Tuple of ``(mentions, label_map)``:
+            - ``mentions``: ``{ref_num → [{text, page, ...}, ...]}``
+            - ``label_map``: ``{biblStruct xml:id → visible PDF label}``,
+              harvested from the same response. Feed this back into
+              :func:`extract_references_with_grobid` to anchor bibliography
+              ref_ids to the source PDF numbering even when GROBID drops a
+              biblStruct entry.
     """
     url = f"{GROBID_URL}/api/processFulltextDocument"
 
@@ -295,12 +347,14 @@ def extract_citation_mentions_with_grobid(pdf_content: bytes) -> dict[int, list[
         )
 
         if response.status_code != 200:
-            return {}
+            return {}, {}
 
-        return parse_citation_mentions(response.text)
+        return parse_citation_mentions(response.text), extract_target_to_label_map(
+            response.text
+        )
 
     except requests.RequestException:
-        return {}
+        return {}, {}
 
 
 def _parse_coord_boxes(coords: str) -> list[dict]:

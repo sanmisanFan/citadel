@@ -1,4 +1,8 @@
-from CITation.data.grobid import parse_citation_mentions, parse_tei_references
+from CITation.data.grobid import (
+    extract_target_to_label_map,
+    parse_citation_mentions,
+    parse_tei_references,
+)
 
 
 def test_parse_citation_mentions_prefers_visible_label_over_target_id():
@@ -136,3 +140,64 @@ def test_parse_tei_references_recovers_ref_id_from_raw_reference_when_label_miss
     assert parsed_refs[0]["title"] == "Peer review and the publication process"
     assert parsed_refs[1]["ref_id"] == 8
     assert "statcheck" in parsed_refs[1]["title"]
+
+
+def test_parse_tei_references_recovers_ref_id_from_fulltext_label_map():
+    """When GROBID's production build emits biblStructs without a <label>
+    AND strips the leading "[N]" from raw_reference, neither in-place hint
+    survives. The fulltext endpoint, however, preserves the original PDF
+    label in each ``<ref type="bibr" target="#bN">[K]</ref>`` marker. The
+    parser accepts an ``xml:id → PDF label`` map (built via
+    :func:`extract_target_to_label_map` over the fulltext response) and
+    must prefer it over the enumerate-index fallback.
+    """
+    references_tei = """
+    <TEI xmlns="http://www.tei-c.org/ns/1.0">
+      <listBibl>
+        <biblStruct xml:id="b0">
+          <analytic>
+            <title level="a">Peer review and the publication process</title>
+          </analytic>
+          <monogr>
+            <title level="j">Nursing open</title>
+            <imprint><date when="2016" /></imprint>
+          </monogr>
+          <note type="raw_reference">Parveen Azam Ali and Roger Watson. 2016. Peer review and the publication process. Nursing open 3, 4 (2016), 193-202.</note>
+        </biblStruct>
+        <biblStruct xml:id="b1">
+          <analytic>
+            <title level="a">Post retraction citations in context</title>
+          </analytic>
+          <note type="raw_reference">Judit Bar-Ilan and Gali Halevi. 2017. Post retraction citations in context.</note>
+        </biblStruct>
+      </listBibl>
+    </TEI>
+    """
+
+    fulltext_tei = """
+    <TEI xmlns="http://www.tei-c.org/ns/1.0">
+      <text>
+        <body>
+          <p coords="2,10,10,500,20">
+            ... external scaffolding rather than better reviewer intentions alone
+            <ref type="bibr" target="#b0">[2]</ref>.
+          </p>
+          <p coords="2,10,30,500,20">
+            ... unacknowledged reliance on retracted sources
+            <ref type="bibr" target="#b1">[3]</ref>.
+          </p>
+        </body>
+      </text>
+    </TEI>
+    """
+
+    label_map = extract_target_to_label_map(fulltext_tei)
+    assert label_map == {"b0": 2, "b1": 3}
+
+    parsed_refs, _ = parse_tei_references(references_tei, label_map=label_map)
+
+    assert len(parsed_refs) == 2
+    assert parsed_refs[0]["ref_id"] == 2
+    assert parsed_refs[0]["title"] == "Peer review and the publication process"
+    assert parsed_refs[1]["ref_id"] == 3
+    assert parsed_refs[1]["title"] == "Post retraction citations in context"

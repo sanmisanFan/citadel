@@ -146,12 +146,20 @@ def extract_references_grobid_with_fallback(
     if use_grobid:
         progress_fn("info", "Extracting references with grobid...")
         try:
-            parsed_refs, raw_refs = extract_references_with_grobid(pdf_content)
+            # Run the fulltext call first so we can harvest a xml:id → PDF
+            # label map from the in-text <ref> markers, then feed it into
+            # the references call. The map anchors bibliography ref_ids to
+            # the source PDF numbering when GROBID drops a non-publication
+            # biblStruct entry (which leaves the survivors unlabelled and
+            # shifts the enumerate-index fallback by one).
+            reference_mentions, label_map = extract_citation_mentions_with_grobid(
+                pdf_content
+            )
+            parsed_refs, raw_refs = extract_references_with_grobid(
+                pdf_content, label_map=label_map
+            )
             if parsed_refs:
                 print(f"DEBUG: Grobid extracted {len(parsed_refs)} references")
-
-                # Try to get citation mentions from grobid fulltext
-                reference_mentions = extract_citation_mentions_with_grobid(pdf_content)
 
                 # If grobid didn't get good citation context, fall back to markdown parsing
                 if not reference_mentions:
