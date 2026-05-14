@@ -33,7 +33,14 @@ export const ContentCard = ({
   }
 
   // Extract relevant information from the selected anomalous object
-  const { displayName, category, paper, page, explanation } = selectedAnomalous;
+  const { displayName, category, paper, page, explanation, anchors } = selectedAnomalous;
+
+  const anchorPages = Array.from(
+    new Set((anchors || []).map(a => a && a.page).filter(p => p != null))
+  ).sort((a, b) => a - b);
+  const pages = anchorPages.length ? anchorPages : (page != null ? [page] : []);
+  const pageLabel = pages.length > 1 ? 'Pages' : 'Page';
+  const pageValue = pages.length ? pages.join(', ') : '—';
 
   // Function to format the authors, if available
   const formatAuthors = (authorIds) => {
@@ -130,8 +137,8 @@ export const ContentCard = ({
               <Tag color="default" style={{fontSize: 12, lineHeight: 1.5}}>Unreferenced</Tag>
             )}
           </Descriptions.Item>
-          <Descriptions.Item label="Page">
-            {page ?? '—'}
+          <Descriptions.Item label={pageLabel}>
+            {pageValue}
           </Descriptions.Item>
           {citationInfo && (<Descriptions.Item label="Citation Information">
             {citationInfo}

@@ -96,66 +96,60 @@ def process_citation_mentions(citation_mentions, enriched, client):
 
 
 def assign_scores_to_enriched_papers(enriched_papers, citation_assessments):
-    """Assign relevance scores to the reference_mentions in enriched_papers.json."""
-    # Create a lookup dictionary for assessments by excerpt text
-    # Now includes page info: {excerpt: {assessment, page}}
+    """Assign relevance scores to the reference_mentions in enriched_papers.json.
+
+    Keyed by (citation_key, excerpt) so the same paragraph can carry
+    different per-ref pages — e.g. an intro paragraph cites [21] on page 1
+    and [3] on page 2; a text-only key would collapse those into one page.
+    Preserves the original mention dict (including ``occurrences``) so
+    downstream anchor resolution can still see every marker.
+    """
     assessment_lookup = {}
     for citation_key, assessments in citation_assessments.items():
         for assessment in assessments:
             excerpt = assessment["excerpt"]
-            assessment_lookup[excerpt] = {
+            assessment_lookup[(str(citation_key), excerpt)] = {
                 "assessment": assessment["assessment"],
-                "page": assessment.get("page", 1)
+                "page": assessment.get("page", 1),
             }
 
-    # Update enriched_papers with assessments
     for ref_id, paper in enriched_papers.items():
-        # Convert ref_id to citation key format for consistency
         citation_key = int(ref_id)
 
         if "reference_mentions" in paper and paper["reference_mentions"]:
             updated_mentions = []
             for mention in paper["reference_mentions"]:
-                # Handle both old format (string) and new format (dict with text/page)
                 if isinstance(mention, dict):
-                    mention_text = mention.get("text", "")
-                    mention_page = mention.get("page", 1)
+                    base = dict(mention)
+                    mention_text = base.get("text", "")
+                    mention_page = base.get("page", 1)
                 else:
+                    base = {"text": mention, "page": 1}
                     mention_text = mention
                     mention_page = 1
 
-                if mention_text in assessment_lookup:
-                    # Parse the assessment to extract the score
-                    assessment_data = assessment_lookup[mention_text]
+                lookup_key = (str(ref_id), mention_text)
+                if lookup_key in assessment_lookup:
+                    assessment_data = assessment_lookup[lookup_key]
                     assessment_text = assessment_data["assessment"]
-                    page = assessment_data.get("page", mention_page)
                     try:
-                        score_line = assessment_text.split("\n")[0]  # "Score: [number]"
+                        score_line = assessment_text.split("\n")[0]
                         score = int(score_line.split(": ")[1])
-                    except (IndexError, ValueError) as e:
+                    except (IndexError, ValueError):
                         print(
                             f"Error parsing score for mention in {citation_key}: {assessment_text}. Setting score to None."
                         )
                         score = None
 
-                    updated_mentions.append(
-                        {
-                            "text": mention_text,
-                            "page": page,
-                            "relevance_score": score,
-                            "assessment": assessment_text,
-                        }
-                    )
+                    base["page"] = mention_page
+                    base["relevance_score"] = score
+                    base["assessment"] = assessment_text
+                    updated_mentions.append(base)
                 else:
-                    # If no assessment exists (e.g., skipped due to no summary), keep original text
-                    updated_mentions.append(
-                        {
-                            "text": mention_text,
-                            "page": mention_page,
-                            "relevance_score": None,
-                            "assessment": "No assessment available",
-                        }
-                    )
+                    base["page"] = mention_page
+                    base["relevance_score"] = None
+                    base["assessment"] = "No assessment available"
+                    updated_mentions.append(base)
             paper["reference_mentions"] = updated_mentions
         else:
             print(

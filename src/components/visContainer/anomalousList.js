@@ -68,7 +68,17 @@ export const AnomalousListCard = ({
         const categoryColor = anomalousColorScheme[e.name]['category'][e.category.name]['baseColor'];
         const boxColor = anomalousColorScheme[e.name]['category'][e.category.name]['boxColor'];
         const bgColor = activeHighlight === e.id && boxColor;
-        const page = e.page;
+        const anchorPages = Array.from(
+          new Set(
+            (e.anchors || [])
+              .map(a => a && a.page)
+              .filter(p => p != null)
+          )
+        ).sort((a, b) => a - b);
+        const pages = anchorPages.length ? anchorPages : (e.page != null ? [e.page] : []);
+        const pageLabel = pages.length > 1
+          ? `Pages: ${pages.join(', ')}`
+          : `Page: ${pages.length === 1 ? pages[0] : '—'}`;
 
         // Extract options and create tags
         const options = e.category.options;
@@ -134,7 +144,7 @@ export const AnomalousListCard = ({
               <Flex vertical gap={5}>
               {optionTags}
               </Flex>
-              <Text type="secondary" style={{fontSize:14}}>Page: {page ?? '—'}</Text>
+              <Text type="secondary" style={{fontSize:14}}>{pageLabel}</Text>
             </Flex>
           </Card>
         );

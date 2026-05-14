@@ -100,6 +100,75 @@ def test_build_anchors_from_mention_emits_one_anchor_per_occurrence():
     assert anchors[1]["ref_label"] == "[3]"
 
 
+def test_assign_scores_preserves_occurrences_and_per_ref_page():
+    """Same paragraph carries different per-ref pages (e.g. the intro
+    paragraph that cites [21] on page 1 and [3] on page 2). A text-only
+    assessment lookup used to overwrite the page across refs and drop the
+    ``occurrences`` array entirely. Keying by (ref, text) and preserving the
+    original mention dict prevents both regressions.
+    """
+    intro_text = (
+        "Critical problems slip through: statistical inconsistencies [21], "
+        "citation manipulation [10,37], and retracted sources [3]."
+    )
+    enriched_papers = {
+        "21": {
+            "citation_key": "citation-21",
+            "reference_mentions": [
+                {
+                    "text": intro_text,
+                    "page": 1,
+                    "occurrences": [
+                        {
+                            "char_offset": intro_text.index("[21]"),
+                            "page": 1,
+                            "marker_bbox": {"x": 10, "y": 20, "width": 5, "height": 6},
+                            "page_width": 612,
+                            "page_height": 792,
+                            "ref_label": "[21]",
+                        }
+                    ],
+                }
+            ],
+        },
+        "3": {
+            "citation_key": "citation-3",
+            "reference_mentions": [
+                {
+                    "text": intro_text,
+                    "page": 2,
+                    "occurrences": [
+                        {
+                            "char_offset": intro_text.index("[3]"),
+                            "page": 2,
+                            "marker_bbox": {"x": 30, "y": 40, "width": 5, "height": 6},
+                            "page_width": 612,
+                            "page_height": 792,
+                            "ref_label": "[3]",
+                        }
+                    ],
+                }
+            ],
+        },
+    }
+    citation_assessments = {
+        "21": [{"excerpt": intro_text, "page": 1, "assessment": "Score: 1\nLow relevance."}],
+        "3": [{"excerpt": intro_text, "page": 2, "assessment": "Score: 2\nWeak support."}],
+    }
+
+    updated = assign_scores_to_enriched_papers(enriched_papers, citation_assessments)
+
+    m21 = updated["21"]["reference_mentions"][0]
+    m3 = updated["3"]["reference_mentions"][0]
+
+    assert m21["page"] == 1
+    assert m3["page"] == 2
+    assert m21["occurrences"][0]["page"] == 1
+    assert m3["occurrences"][0]["page"] == 2
+    assert m21["relevance_score"] == 1
+    assert m3["relevance_score"] == 2
+
+
 def test_generate_anomalous_json_uses_first_anchor_page():
     text = "Prior work [8] improved results. Follow-up studies [8] replicated them."
     enriched = {

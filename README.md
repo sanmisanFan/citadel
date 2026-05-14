@@ -112,6 +112,15 @@ the rendered PDF, instead of relying on page-only navigation.
   these to draw marker-level overlays and associate them with issue IDs.
 - When GROBID coordinates are missing, the frontend falls back to the anchor
   sentence and marker label to resolve the highlight in the PDF text layer.
+- The anomalies list and detail card now derive their page label from every
+  anchor of the issue: a single page renders as `Page: N`, multiple pages as
+  `Pages: i, j, k, …`. This also fixes a bug where a paragraph that cited
+  several references on different pages could show the wrong page for one of
+  them — `assign_scores_to_enriched_papers` previously rebuilt each mention
+  dict from a text-only assessment lookup, which dropped `occurrences` and
+  let one ref's page overwrite another's. The lookup is now keyed by
+  `(ref, excerpt)` and the original mention (including its `occurrences`) is
+  preserved.
 
 
 ## Tests
