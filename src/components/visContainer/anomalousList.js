@@ -36,6 +36,24 @@ export const AnomalousListCard = ({
     unreferenced: "Reference listed in the bibliography but never cited in the body of the manuscript.",
   };
 
+  // Order: by first page the issue appears (null pages — e.g. unreferenced —
+  // go last), then by category severity within the page. Insertion order is
+  // preserved within ties.
+  const CATEGORY_RANK = {
+    testFailure: 0,
+    selfCitation: 1,
+    citationRing: 2,
+    unreferenced: 3,
+    lowRelevancy: 4,
+  };
+  const firstPage = (e) => {
+    const pages = (e.anchors || [])
+      .map(a => a && a.page)
+      .filter(p => p != null);
+    if (pages.length) return Math.min(...pages);
+    return e.page != null ? e.page : Number.POSITIVE_INFINITY;
+  };
+
 
   return (
     <Card
@@ -61,7 +79,16 @@ export const AnomalousListCard = ({
     >
       {anomalous
       .filter(e => !e.filter) // Filter out anomalous with filter === true
-      .map(e => {
+      .map((e, i) => ({ e, i }))
+      .sort((a, b) => {
+        const pageDiff = firstPage(a.e) - firstPage(b.e);
+        if (pageDiff !== 0) return pageDiff;
+        const rankA = CATEGORY_RANK[a.e.category?.name] ?? 99;
+        const rankB = CATEGORY_RANK[b.e.category?.name] ?? 99;
+        if (rankA !== rankB) return rankA - rankB;
+        return a.i - b.i;
+      })
+      .map(({ e }) => {
         const anomalousName = e.displayName;
         const anomalousCategoryName = e.category.displayName;
         const baseColor = anomalousColorScheme[e.name]['baseColor'];

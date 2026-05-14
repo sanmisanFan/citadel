@@ -121,6 +121,11 @@ the rendered PDF, instead of relying on page-only navigation.
   let one ref's page overwrite another's. The lookup is now keyed by
   `(ref, excerpt)` and the original mention (including its `occurrences`) is
   preserved.
+- The anomalies list is sorted by **page-then-category**: items are ordered
+  by the earliest page they appear on, then within a page by category
+  severity (`testFailure` → `selfCitation` → `citationRing` → `unreferenced`
+  → `lowRelevancy`). Issues with no page (e.g. unreferenced bibliography
+  entries) sink to the bottom; insertion order from the pipeline breaks ties.
 
 
 ## Tests
