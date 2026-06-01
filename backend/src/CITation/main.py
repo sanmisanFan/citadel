@@ -8,7 +8,8 @@ from fastapi import (
     UploadFile,
     Form,
 )
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from .data.utils import pdf_to_md_cascading, pdf_first_pages_text
 from .data.raw_ref_to_json import PaperProcessor
@@ -43,6 +44,9 @@ from time import time
 # DEBUGGING: Output directory for debug files
 # =============================================================================
 DEBUG_OUTPUT_DIR = Path("outputs/debug")
+f = Path(__file__)
+this_dir = f.parent
+
 
 # =============================================================================
 # DEBUGGING: Pipeline step tracker for API call monitoring
@@ -50,24 +54,28 @@ DEBUG_OUTPUT_DIR = Path("outputs/debug")
 # =============================================================================
 class PipelineTracker:
     """DEBUGGING: Tracks pipeline steps, durations, and API call counts."""
+
     def __init__(self):
         self.steps = []
         self.start_time = time()
 
     def record(self, step_name: str, duration: float, details: dict = None):
         """DEBUGGING: Record a pipeline step with timing and optional details."""
-        self.steps.append({
-            "step": step_name,
-            "duration_seconds": round(duration, 2),
-            "details": details or {}
-        })
+        self.steps.append(
+            {
+                "step": step_name,
+                "duration_seconds": round(duration, 2),
+                "details": details or {},
+            }
+        )
 
     def get_summary(self):
         """DEBUGGING: Get summary of all pipeline steps."""
         return {
             "total_time_seconds": round(time() - self.start_time, 2),
-            "steps": self.steps
+            "steps": self.steps,
         }
+
 
 # DEBUGGING: Global tracker instance
 pipeline_tracker = None
@@ -98,11 +106,15 @@ def save_debug_outputs(
     elif md_filepath.exists():
         # Avoid leaving stale markdown from a previous run masquerading as current.
         md_filepath.unlink()
-        print(f"DEBUG: Removed stale {md_filepath} (no md_text this run, e.g. grobid path)")
+        print(
+            f"DEBUG: Removed stale {md_filepath} (no md_text this run, e.g. grobid path)"
+        )
 
     outputs = {
         "enriched_papers.json": enriched_papers,
-        "citations.json": list(citations.values()) if isinstance(citations, dict) else citations,
+        "citations.json": list(citations.values())
+        if isinstance(citations, dict)
+        else citations,
         "authors.json": authors,
         "venues.json": venues,
         "anomalous.json": anomalous_data,
@@ -163,14 +175,20 @@ def extract_references_grobid_with_fallback(
 
                 # If grobid didn't get good citation context, fall back to markdown parsing
                 if not reference_mentions:
-                    print("DEBUG: Grobid citation mentions empty, using markdown fallback")
-                    progress_fn("info", "Converting PDF to markdown for citation mentions...")
+                    print(
+                        "DEBUG: Grobid citation mentions empty, using markdown fallback"
+                    )
+                    progress_fn(
+                        "info", "Converting PDF to markdown for citation mentions..."
+                    )
                     md_text = pdf_to_md_cascading(pdf_content)
                     reference_mentions, _ = process_markdown_string(md_text)
 
                 return parsed_refs, reference_mentions, md_text
             else:
-                print("DEBUG: Grobid returned no references, falling back to markdown+GPT")
+                print(
+                    "DEBUG: Grobid returned no references, falling back to markdown+GPT"
+                )
         except Exception as e:
             print(f"DEBUG: Grobid failed: {e}, falling back to markdown+GPT")
 
@@ -186,6 +204,7 @@ def extract_references_grobid_with_fallback(
 
     return parsed_refs, reference_mentions, md_text
 
+
 if "OPENAI_API_KEY" not in os.environ:
     print("ERROR: $OPENAI_API_KEY not set!")
     sys.exit(1)
@@ -200,11 +219,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
-@app.get("/")
-def serve_frontend():
-    return {"test"}
 
 
 @app.websocket("/ws/process_pdf")
@@ -269,7 +283,11 @@ async def process_pdf_ws(ws: WebSocket):
             gpt_client,
             progress,
         )
-        pipeline_tracker.record("reference_extraction", time() - t0, {"refs": len(parsed), "mentions": len(reference_mentions)})
+        pipeline_tracker.record(
+            "reference_extraction",
+            time() - t0,
+            {"refs": len(parsed), "mentions": len(reference_mentions)},
+        )
 
         progress("info", "Processing papers...")
 
@@ -280,7 +298,9 @@ async def process_pdf_ws(ws: WebSocket):
         enriched, entity_keys = await asyncio.to_thread(
             processor.process_papers, parsed, reference_mentions
         )
-        pipeline_tracker.record("enrichment_s2_openalex", time() - t0, {"papers": len(enriched)})
+        pipeline_tracker.record(
+            "enrichment_s2_openalex", time() - t0, {"papers": len(enriched)}
+        )
 
         progress("info", "Running relevance assessment...")
 
@@ -293,7 +313,11 @@ async def process_pdf_ws(ws: WebSocket):
         updated_enriched_papers = await asyncio.to_thread(
             assign_scores_to_enriched_papers, enriched, citation_assessments
         )
-        pipeline_tracker.record("relevance_assessment_gpt", time() - t0, {"assessments": len(citation_assessments)})
+        pipeline_tracker.record(
+            "relevance_assessment_gpt",
+            time() - t0,
+            {"assessments": len(citation_assessments)},
+        )
 
         progress("info", "Building graphs...")
 
@@ -321,7 +345,12 @@ async def process_pdf_ws(ws: WebSocket):
         progress("info", "Checking statistical tests...")
 
         # DEBUG: Extract plain text and check what statistical tests are found
-        from .anomalies.stat_check import find_all_tests, pdf_to_plain_text, preprocess_text
+        from .anomalies.stat_check import (
+            find_all_tests,
+            pdf_to_plain_text,
+            preprocess_text,
+        )
+
         DEBUG_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
         plain_text = pdf_to_plain_text(contents)
@@ -346,7 +375,9 @@ async def process_pdf_ws(ws: WebSocket):
             formula_coords = await asyncio.to_thread(
                 extract_formula_coordinates_with_grobid, contents
             )
-            print(f"DEBUG: Found {len(formula_coords) if formula_coords else 0} formula coordinates from GROBID")
+            print(
+                f"DEBUG: Found {len(formula_coords) if formula_coords else 0} formula coordinates from GROBID"
+            )
             # Save formula coords for debugging
             if formula_coords:
                 formula_coords_path = DEBUG_OUTPUT_DIR / "formula_coords.json"
@@ -357,8 +388,11 @@ async def process_pdf_ws(ws: WebSocket):
             print("DEBUG: GROBID not available, skipping formula coordinate extraction")
 
         stat_anomalies = await asyncio.to_thread(
-            generate_statistical_anomalies, contents, len(anomalous_data.get("identifiedIssue", [])) + 1,
-            0.01, formula_coords
+            generate_statistical_anomalies,
+            contents,
+            len(anomalous_data.get("identifiedIssue", [])) + 1,
+            0.01,
+            formula_coords,
         )
         anomalous_data["identifiedIssue"].extend(stat_anomalies)
         print(f"DEBUG: Found {len(stat_anomalies)} statistical anomalies")
@@ -395,7 +429,11 @@ async def process_pdf_ws(ws: WebSocket):
                     )
             citation["cite_positions"] = positions
 
-        pipeline_tracker.record("build_graphs_and_anomalies", time() - t0, {"anomalies": len(anomalous_data.get("identifiedIssue", []))})
+        pipeline_tracker.record(
+            "build_graphs_and_anomalies",
+            time() - t0,
+            {"anomalies": len(anomalous_data.get("identifiedIssue", []))},
+        )
 
         # debugging: save debug outputs including pipeline summary
         await asyncio.to_thread(
@@ -448,7 +486,9 @@ def _extract_metadata_with_gpt(gpt_client, first_page_text: str) -> dict:
     result = json.loads(response.choices[0].message.content)
     return {
         "title": result.get("title") or "",
-        "authors": [a for a in (result.get("authors") or []) if isinstance(a, str) and a.strip()],
+        "authors": [
+            a for a in (result.get("authors") or []) if isinstance(a, str) and a.strip()
+        ],
         "year": result.get("year"),
     }
 
@@ -504,7 +544,7 @@ async def extract_abstract_from_pdf(
     if not is_grobid_available():
         raise HTTPException(
             status_code=503,
-            detail="GROBID service is not available. Please start GROBID first."
+            detail="GROBID service is not available. Please start GROBID first.",
         )
 
     contents = await file.read()
@@ -514,7 +554,7 @@ async def extract_abstract_from_pdf(
     if result is None:
         raise HTTPException(
             status_code=422,
-            detail="Could not extract abstract from PDF. The PDF may not have an abstract section."
+            detail="Could not extract abstract from PDF. The PDF may not have an abstract section.",
         )
 
     return {
@@ -544,7 +584,7 @@ async def extract_abstracts_batch(
     if not is_grobid_available():
         raise HTTPException(
             status_code=503,
-            detail="GROBID service is not available. Please start GROBID first."
+            detail="GROBID service is not available. Please start GROBID first.",
         )
 
     ids = citation_ids.split(",")
@@ -552,45 +592,74 @@ async def extract_abstracts_batch(
     if len(files) != len(ids):
         raise HTTPException(
             status_code=400,
-            detail=f"Number of files ({len(files)}) doesn't match number of citation IDs ({len(ids)})"
+            detail=f"Number of files ({len(files)}) doesn't match number of citation IDs ({len(ids)})",
         )
 
     results = []
 
     for file, cid in zip(files, ids):
         contents = await file.read()
-        print(f"DEBUG: Processing file '{file.filename}' ({len(contents)} bytes) for citation {cid}")
+        print(
+            f"DEBUG: Processing file '{file.filename}' ({len(contents)} bytes) for citation {cid}"
+        )
 
         if len(contents) == 0:
             print(f"DEBUG: Warning - file '{file.filename}' is empty!")
-            results.append({
-                "citation_id": cid.strip(),
-                "abstract": None,
-                "success": False,
-                "error": "Empty file received",
-            })
+            results.append(
+                {
+                    "citation_id": cid.strip(),
+                    "abstract": None,
+                    "success": False,
+                    "error": "Empty file received",
+                }
+            )
             continue
 
         result = await asyncio.to_thread(extract_abstract_with_grobid, contents)
 
         if result and result.get("abstract"):
-            results.append({
-                "citation_id": cid.strip(),
-                "abstract": result.get("abstract"),
-                "title": result.get("title"),
-                "authors": result.get("authors", []),
-                "success": True,
-            })
+            results.append(
+                {
+                    "citation_id": cid.strip(),
+                    "abstract": result.get("abstract"),
+                    "title": result.get("title"),
+                    "authors": result.get("authors", []),
+                    "success": True,
+                }
+            )
         else:
-            results.append({
-                "citation_id": cid.strip(),
-                "abstract": None,
-                "success": False,
-                "error": "Could not extract abstract from PDF",
-            })
+            results.append(
+                {
+                    "citation_id": cid.strip(),
+                    "abstract": None,
+                    "success": False,
+                    "error": "Could not extract abstract from PDF",
+                }
+            )
 
     return {
         "results": results,
         "total": len(results),
         "successful": sum(1 for r in results if r["success"]),
     }
+
+
+from starlette.exceptions import HTTPException as StarletteHTTPException
+
+
+class SPAStaticFiles(StaticFiles):
+    async def get_response(self, path: str, scope):
+        try:
+            return await super().get_response(path, scope)
+        except StarletteHTTPException as ex:
+            if ex.status_code == 404:
+                # If file not found, serve index.html and let front-end router handle it
+                return await super().get_response("index.html", scope)
+            raise ex
+
+
+app.mount(
+    "/",
+    SPAStaticFiles(directory=f"{this_dir}/build"),
+    name="ReviewerApp-demo",
+)

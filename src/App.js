@@ -18,7 +18,11 @@ const { Dragger } = Upload;
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-const BACKEND_URL = (process.env.BACKEND_URL) ? process.env.BACKEND_URL : "localhost:8000";
+const URL = process.env.NODE_ENV === "production" ? "" : (process.env.BACKEND_URL) ? process.env.BACKEND_URL : "localhost:8000";
+export const API_URL = URL === '' ? `${URL}` : `http://${URL}`;
+
+// will break if not running on SSL secured connection in production
+export const WS_URL = URL === '' ? `wss://${window.location.host}` : `ws://${URL}`;
 
 function App() {
     // global init
@@ -57,7 +61,7 @@ function App() {
         try {
             const formData = new FormData();
             formData.append("file", file);
-            const response = await fetch(`http://${BACKEND_URL}/api/extract_metadata`, {
+            const response = await fetch(`${API_URL}/api/extract_metadata`, {
                 method: "POST",
                 body: formData,
             });
@@ -81,7 +85,7 @@ function App() {
     };
 
     const onSubmit = () => {
-        const ws = new WebSocket(`ws://${BACKEND_URL}/ws/process_pdf`);
+        const ws = new WebSocket(`${WS_URL}/ws/process_pdf`);
         //TODO: add validation for each metadata field
         console.log(pdfData, title, authors, year);
 
@@ -439,7 +443,7 @@ function App() {
                                 formData.append('citation_ids', citationIds.join(','));
 
                                 try {
-                                    const response = await fetch(`http://${BACKEND_URL}/api/extract_abstracts`, {
+                                    const response = await fetch(`${API_URL}/api/extract_abstracts`, {
                                         method: 'POST',
                                         body: formData,
                                     });

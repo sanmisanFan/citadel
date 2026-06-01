@@ -82,6 +82,12 @@ The frontend talks to the backend at `localhost:8000` by default; override with
 the `BACKEND_URL` env var when starting `npm start`. CORS is configured for
 `localhost:3000` only.
 
+
+## Deployment
+If you're deploying this on a web-facing server, you should have the frontend built in production mode and served by the Python API. To do this, first run
+`npm run build`, then copy the resulting build folder into `backend/src/CITation`. Then run `uv run fastapi run`.
+
+
 ## API
 
 - `WebSocket /ws/process_pdf` — main pipeline. The client sends paper metadata
