@@ -193,9 +193,15 @@ if "OPENAI_API_KEY" not in os.environ:
 app = FastAPI()
 
 # Add CORS middleware for frontend API calls
+# Allow localhost for development + production deployment platforms
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ],
+    # Allow Netlify, Vercel, and Cloudflare Pages deployments
+    allow_origin_regex=r"https://.*\.netlify\.app|https://.*\.vercel\.app|https://.*\.pages\.dev",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

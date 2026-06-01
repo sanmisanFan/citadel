@@ -1,0 +1,20 @@
+# Netlify deployment configuration for Research Reviewer frontend
+
+[build]
+  # Build command to create production React build
+  command = "npm run build"
+
+  # Directory to publish (React build output)
+  publish = "build"
+
+# Redirect all routes to index.html for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Build environment settings
+[build.environment]
+  NODE_VERSION = "18"
+  # REACT_APP_BACKEND_URL will be set via Netlify UI environment variables
+  # Format: your-app.onrender.com (without http/https prefix)

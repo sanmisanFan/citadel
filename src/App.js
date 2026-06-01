@@ -18,7 +18,7 @@ const { Dragger } = Upload;
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-const BACKEND_URL = (process.env.BACKEND_URL) ? process.env.BACKEND_URL : "localhost:8000";
+const BACKEND_URL = (process.env.REACT_APP_BACKEND_URL) ? process.env.REACT_APP_BACKEND_URL : "localhost:8000";
 
 function App() {
     // global init
