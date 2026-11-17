@@ -1,388 +1,317 @@
 # Citadel
 
-Citadel is a research-paper review tool. Upload a PDF and the backend extracts
-its references, scores each citation's relevance with an LLM, builds
-citation/author/venue graphs, flags anomalies (low-relevance citations,
-suspicious author/venue communities, statcheck mismatches), and the frontend
-visualizes the results alongside the PDF.
+Citadel is a web application for reviewing research papers and their citation
+networks. Upload a PDF to:
 
-The Python package is `CITation`; the FastAPI app is `CITation.main:app`.
-
-## Architecture
-
-- **Backend** — FastAPI app in [backend/src/CITation/](backend/src/CITation/).
-  Exposes a WebSocket (`/ws/process_pdf`) that runs the full pipeline on an
-  uploaded PDF, plus REST endpoints for batch abstract extraction. Pipeline
-  steps live in [data/](backend/src/CITation/data/) (extraction, enrichment,
-  graph building) and [anomalies/](backend/src/CITation/anomalies/) (relevance,
-  author/venue suspicion, statcheck).
-- **Frontend** — React + Ant Design app in [src/](src/). PDF viewer in
-  [src/components/pdfContainer/](src/components/pdfContainer/), graph and
-  anomaly visualizations in [src/components/visContainer/](src/components/visContainer/).
-- **GROBID** (optional but recommended) — used for reference extraction,
-  citation-mention location, formula coordinate extraction (for statcheck
-  highlights), and abstract recovery for missing-metadata references.
-- **PDF → markdown cascade** — when markdown is needed (GROBID missing or
-  unable to locate citation mentions), the backend tries
-  [olmocr](https://github.com/allenai/olmocr) first and falls back to
-  `pymupdf4llm`. olmocr is not a hard dependency; install it separately if
-  you want to use it.
-
-## Prerequisites
-
-Tools:
-
-- Python ≥ 3.11 with [`uv`](https://docs.astral.sh/uv/)
-- Node.js ≥ 18 with npm (for the React frontend; `react-scripts` 5)
-- GNU Make (for `make dev` and the other shortcuts; the [manual steps](#setup)
-  work without it)
-- Docker, to run GROBID locally. Technically optional, but strongly
-  recommended: without GROBID, references are extracted by converting the PDF
-  to markdown and parsing it with the LLM, which is slower and less accurate.
-
-API keys (in `.env` or exported in your shell):
-
-- `CREATEAI_SERVICE_TOKEN` (required): a service token for an
-  [ASU CreateAI](https://docs.aiml.asu.edu/) project. All LLM calls go through
-  CreateAI's OpenAI-compatible API (`CREATEAI_BASE_URL`, default
-  `https://api-main.aiml.asu.edu/v1`) using `CREATEAI_MODEL` (default
-  `openai/gpt6_1_sol`, GPT‑6.1 Sol). See [LLM model selection](#llm-model-selection).
-- `S2_API_KEY` (required): a [Semantic Scholar API key](https://www.semanticscholar.org/product/api).
-- `OPENALEX_API_KEY` (recommended): an [OpenAlex](https://openalex.org/) API
-  key. Without it, OpenAlex requests share a small free daily budget with
-  everyone on your IP address, and once it runs out the pipeline loses
-  OpenAlex metadata, ORCIDs and second-hop references until midnight UTC. See
-  [OpenAlex](#openalex).
-
-Free ports:
-
-- `3000` (frontend), `8001` (API) and `8070` (GROBID). If 8001 is taken, use
-  `make dev BACKEND_PORT=<port>`. To move GROBID, set `GROBID_URL`; note that
-  `make grobid` still publishes the container on 8070.
+- extract and enrich its references;
+- score whether citations are relevant to the surrounding text;
+- flag statistical, self-citation, citation-ring, and venue or author
+  anomalies;
+- build citation, author, and venue graphs; and
+- review the findings alongside the original PDF.
 
 ## Quick start
+
+### 1. Install the prerequisites
+
+- Python 3.11 or newer
+- [`uv`](https://docs.astral.sh/uv/)
+- Node.js 18 or newer and npm
+- GNU Make
+- Docker (optional, but strongly recommended for GROBID)
+
+Without Docker, Citadel can still run, but PDF reference extraction is slower
+and less accurate because it falls back to language-model-based conversion.
+
+### 2. Set up the project
+
+From the repository root:
+
+```bash
+make setup
+```
+
+This installs the Python and JavaScript dependencies and creates `.env` from
+[`.env.example`](.env.example).
+
+Open `.env` and add the two required credentials:
+
+```dotenv
+CREATEAI_SERVICE_TOKEN=your_createai_token
+S2_API_KEY=your_semantic_scholar_key
+```
+
+An `OPENALEX_API_KEY` is also recommended. See
+[Configuration](#configuration) for details.
+
+### 3. Start the application
 
 ```bash
 make dev
 ```
 
-This installs Python and JS dependencies (re-running only when the lockfiles
-change), creates `.env` from [.env.example](.env.example) for your API keys,
-starts GROBID in Docker if Docker is available and waits until it's ready
-(up to `GROBID_WAIT` seconds, default 180), clears any leftover production
-build so `:8001` only serves the API, and runs the backend (`:8001`) and
-frontend (`:3000`) together with hot reload. **Open the app at
-http://localhost:3000.** Port 8001 is the API only. Opening it in a browser
-(e.g. from VS Code's "port is live" prompt) shows a link to `:3000` and
-`/docs` instead of a bare 404. VS Code Remote users can add
-`"remote.portsAttributes": {"3000": {"onAutoForward": "openBrowser"},
-"8001": {"onAutoForward": "silent"}, "8070": {"onAutoForward": "silent"}}`
-to `.vscode/settings.json` so the auto-forward prompt opens the UI rather
-than the API. Ctrl-C stops both;
-`make stop` stops GROBID. `make serve` runs the production build on `:8001`,
-and `make help` lists everything else.
+On the first run, the command may take a few minutes while Docker starts
+GROBID. Then open:
 
-The API runs on **port 8001**, not FastAPI's default 8000. On a shared host
-another user's service can already hold 8000; the backend then fails to start
-while the frontend keeps sending requests to that other service, which shows up
-as "Couldn't auto-fill metadata" and failed analyses. If 8001 is also taken,
-pick another port with `make dev BACKEND_PORT=8002` (or set `BACKEND_PORT` in
-`.env`); the frontend follows it via `REACT_APP_BACKEND_URL`, which defaults to
-`localhost:$BACKEND_PORT`.
+- **Application:** http://localhost:3000
+- **API documentation:** http://localhost:8001/docs
 
-API keys can go in `.env` or be exported in your shell.
+Port `8001` serves only the API during development; use port `3000` for the
+user interface.
 
-The sections below describe the manual equivalent.
+Stop the backend and frontend with `Ctrl-C`, and stop GROBID with:
 
-## Setup
+```bash
+make stop
+```
 
-Install Python and JS dependencies:
+## How to use Citadel
+
+1. Open http://localhost:3000.
+2. Upload a research-paper PDF.
+3. Review the automatically extracted title, authors, and year.
+4. Start the analysis.
+5. Inspect anomalies, highlighted PDF locations, and the citation, author, and
+   venue graphs.
+
+The first analysis of a paper can take several minutes. Subsequent analyses
+benefit from Citadel's local cache.
+
+## Configuration
+
+Credentials and optional settings can be exported in the shell or stored in
+`.env`. The Makefile reads `.env` automatically.
+
+| Variable | Requirement | Purpose |
+|---|---|---|
+| `CREATEAI_SERVICE_TOKEN` | Required | Authenticates LLM calls through ASU CreateAI. |
+| `S2_API_KEY` | Required | Authenticates Semantic Scholar metadata requests. |
+| `OPENALEX_API_KEY` | Recommended | Avoids the shared OpenAlex free-tier rate limit. |
+| `CREATEAI_MODEL` | Optional | Overrides the default `openai/gpt6_1_sol` model. |
+| `CREATEAI_BASE_URL` | Optional | Overrides the CreateAI OpenAI-compatible API URL. |
+| `GROBID_URL` | Optional | Overrides the default `http://localhost:8070`. |
+| `BACKEND_PORT` | Optional | Overrides the API development port, which defaults to `8001`. |
+| `REACT_APP_BACKEND_URL` | Optional | Overrides the frontend's development backend address. |
+| `OLMOCR_CMD` | Optional | Overrides the optional olmocr command. |
+| `OLMOCR_TIMEOUT` | Optional | Sets the olmocr timeout in seconds. |
+| `CITADEL_CACHE` | Optional | Set to `0` to disable the result cache. |
+| `CITADEL_CACHE_DIR` | Optional | Overrides the default `.cache/citadel` cache directory. |
+| `CITADEL_CACHE_TTL_DAYS` | Optional | Sets the Semantic Scholar/OpenAlex cache lifetime. |
+
+`make dev BACKEND_PORT=8002` starts the API on a different port and updates the
+frontend's backend URL automatically. Ports `3000`, `8001`, and `8070` must be
+available when using the defaults.
+
+### LLM models
+
+Citadel uses the CreateAI OpenAI-compatible API. To list models available to
+your token:
+
+```bash
+curl -s \
+  -H "Authorization: Bearer $CREATEAI_SERVICE_TOKEN" \
+  https://api-main.aiml.asu.edu/v1/models
+```
+
+Set the selected model ID as `CREATEAI_MODEL` in `.env`. All model requests go
+through [`CITation/llm.py`](backend/src/CITation/llm.py), which removes request
+parameters unsupported by the selected model.
+
+## Common commands
+
+| Command | Action |
+|---|---|
+| `make help` | List application targets. |
+| `make dev` | Start the API and React development server. |
+| `make serve` | Build the frontend and serve the complete app from FastAPI. |
+| `make test` | Run the backend test suite. |
+| `make grobid` | Start GROBID and wait until it is ready. |
+| `make stop` | Stop the GROBID container. |
+| `make clear-cache` | Delete all cached external-service results. |
+| `make clear-cache NS=llm` | Delete one cache namespace. |
+
+## Manual setup
+
+Use these steps if GNU Make is unavailable.
+
+Install dependencies:
 
 ```bash
 uv sync
 npm install
+cp .env.example .env
 ```
 
-(Optional) start GROBID:
+Add the required credentials to `.env`, then start the backend and frontend in
+separate terminals:
+
+```bash
+# Terminal 1: API on http://localhost:8001
+uv run fastapi dev backend/src/CITation/main.py --port 8001
+
+# Terminal 2: application on http://localhost:3000
+npm start
+```
+
+To run GROBID manually:
 
 ```bash
 docker run --rm -p 8070:8070 lfoppiano/grobid:0.8.0
 ```
 
-Override the GROBID URL with `GROBID_URL` if it's not on `localhost:8070`.
+The frontend defaults to `localhost:8001`. Override it when starting React if
+the API uses another port:
 
-(Optional) install olmocr for higher-fidelity PDF → markdown conversion.
-It's heavy (vision model, expects a GPU), so it's not in `pyproject.toml`.
-Add it to this project's venv if you want it:
+```bash
+REACT_APP_BACKEND_URL=localhost:9000 npm start
+```
+
+### Optional olmocr support
+
+When GROBID cannot provide the required PDF content, Citadel tries
+[olmocr](https://github.com/allenai/olmocr) before falling back to
+`pymupdf4llm`. olmocr is optional because it is large and generally expects a
+GPU:
 
 ```bash
 uv add olmocr
 ```
 
-The backend invokes it via `python -m olmocr.pipeline` by default; override
-with `OLMOCR_CMD` (e.g. `OLMOCR_CMD="my-olmocr-wrapper"`) and the per-PDF
-timeout with `OLMOCR_TIMEOUT` (seconds, default 900). When olmocr isn't
-available the backend silently falls back to `pymupdf4llm`.
+If olmocr is unavailable, Citadel continues with `pymupdf4llm`.
 
-## Running
+## Production deployment
 
-In separate terminals:
+Build the frontend and let FastAPI serve both the user interface and API:
 
 ```bash
-# Backend (FastAPI, http://localhost:8001)
-uv run fastapi dev backend/src/CITation/main.py --port 8001
-
-# Frontend (React, http://localhost:3000)
-npm start
+npm run build
+uv run fastapi run --port 8001
 ```
 
-The frontend talks to the backend at `localhost:8001` by default; override with
-the `REACT_APP_BACKEND_URL` env var when starting `npm start` (e.g.
-`REACT_APP_BACKEND_URL=localhost:9000 npm start`). CORS is configured for
-`localhost:3000` only.
+The application is then available at http://localhost:8001. FastAPI searches
+for a frontend build in `$FRONTEND_BUILD_DIR`, the repository-level `build/`
+directory, and `backend/src/CITation/build/`, in that order.
 
+When the application is loaded over HTTPS, the PDF-processing WebSocket uses
+`wss://`; otherwise it uses `ws://`.
 
-## LLM model selection
+## Troubleshooting
 
-The default model is GPT‑6.1 Sol (`openai/gpt6_1_sol`), chosen for stronger
-reference parsing and citation-relevance scoring. The previous default,
-`openai/gpt4o`, is no longer offered by CreateAI. Set `CREATEAI_MODEL` to use
-another model. To see which IDs your token can use, run:
+### The app opens but analysis fails
+
+- Confirm `CREATEAI_SERVICE_TOKEN` and `S2_API_KEY` are set in `.env`.
+- Open `http://localhost:8001/docs` to confirm the API is running.
+- If port `8001` is occupied, run `make dev BACKEND_PORT=8002`.
+- Check that the frontend is opened at port `3000`, not the API port.
+
+### Reference extraction is slow or low quality
+
+Check that GROBID is available:
 
 ```bash
-curl -s -H "Authorization: Bearer $CREATEAI_SERVICE_TOKEN" \
-  https://api-main.aiml.asu.edu/v1/models
+curl http://localhost:8070/api/isalive
 ```
 
-Models accept different request parameters. GPT‑6.x models, for example,
-reject `temperature` and `top_p`. Every LLM call therefore goes through
-`llm.chat()` in [llm.py](backend/src/CITation/llm.py), which reads the
-model's `supported_parameters` from `/models` once per process and drops any
-of `temperature`, `top_p` and `max_tokens` the model doesn't support. For
-models that reason by default it also drops `max_tokens`, because reasoning
-tokens count against that cap and a small one (such as the 200 used for
-relevance scoring) can leave an empty answer. If `/models` can't be fetched,
-requests go out unchanged and a warning is logged.
+Start it with `make grobid` or install/start Docker before running
+`make dev`.
 
+### OpenAlex requests return 429 errors
 
-## Deployment
+Set `OPENALEX_API_KEY` to use a dedicated request budget. Without a key,
+OpenAlex uses a small daily allowance shared by the current IP address.
+Citadel disables OpenAlex for the remainder of the run after the first `429`
+and continues with available Semantic Scholar data.
 
-For a web-facing server, build the frontend in production mode and let the
-FastAPI app serve it alongside the API:
+### Cached data is stale
+
+Clear the cache after changing prompts, external data, or service versions:
 
 ```bash
-npm run build      # writes ./build
-uv run fastapi run --port 8001 # serves UI + API on http://0.0.0.0:8001
+make clear-cache
 ```
 
-The backend serves the first build it finds among `$FRONTEND_BUILD_DIR`, the
-repo-root `build/`, and `backend/src/CITation/build/`. If none exists it runs
-API-only, which is what you want in development. The WebSocket uses `wss://`
-when the page is loaded over HTTPS and `ws://` otherwise.
+Citadel caches only successful raw responses. Parsing, enrichment, scoring, and
+anomaly detection still run for every analysis.
 
+## Architecture
 
-## API
+- **Backend:** The FastAPI package is in
+  [`backend/src/CITation/`](backend/src/CITation/), with entry point
+  `CITation.main:app`.
+- **Pipeline:** PDF extraction and enrichment live in
+  [`backend/src/CITation/data/`](backend/src/CITation/data/); anomaly
+  detection lives in
+  [`backend/src/CITation/anomalies/`](backend/src/CITation/anomalies/).
+- **Frontend:** The React application is in [`src/`](src/). PDF rendering and
+  visualizations are under [`src/components/`](src/components/).
+- **GROBID:** Handles reference extraction, citation locations, statistical
+  expressions, and missing abstracts when available.
+- **Cache:** External responses are stored in a local SQLite database at
+  `.cache/citadel/cache.sqlite3`.
 
-- `WebSocket /ws/process_pdf` — main pipeline. The client sends paper metadata
-  (JSON), file metadata (JSON), then PDF bytes. The server streams `info`
-  progress events and a final `end` event with `{citations, authors, venues,
-  anomalous, authorGraph}`.
-- `POST /api/extract_metadata` — pre-fills the upload form. Accepts a PDF
-  multipart upload, reads the first two pages with PyMuPDF, and asks
-  the CreateAI model (JSON mode) for `{title, authors, year}`. The frontend calls
-  this as soon as a PDF is dropped so the user reviews/edits rather than
-  retypes manuscript metadata; fields stay editable and a warning surfaces if
-  extraction fails.
-- `POST /api/extract_abstract` — single-PDF abstract extraction via GROBID.
-  Requires GROBID.
-- `POST /api/extract_abstracts` — batch version.
+## API overview
 
-## Anomaly Anchors
+The backend exposes:
 
-Anomaly payloads now include explicit anchor metadata so the frontend can
-resolve each issue to the exact citation marker or statistical expression in
-the rendered PDF, instead of relying on page-only navigation.
+- `WebSocket /ws/process_pdf` — processes an uploaded PDF and streams progress
+  plus the final citations, graph data, and anomalies.
+- `POST /api/extract_metadata` — extracts the title, authors, and year from
+  the first two PDF pages for the upload form.
+- `POST /api/extract_abstract` — extracts one PDF abstract through GROBID.
+- `POST /api/extract_abstracts` — extracts abstracts from a batch of PDFs.
 
-- Citation anomalies expose `anchors`, where each anchor represents one
-  detected in-text marker occurrence with `{page, marker_bbox, page_width,
-  page_height, ref_label, sentence}`.
-- Citation records returned from `WebSocket /ws/process_pdf` expose
-  `cite_positions`, one entry per in-text `[N]` marker. The PDF viewer uses
-  these to draw marker-level overlays and associate them with issue IDs.
-- When GROBID coordinates are missing, the frontend falls back to the anchor
-  sentence and marker label to resolve the highlight in the PDF text layer.
-- The anomalies list and detail card now derive their page label from every
-  anchor of the issue: a single page renders as `Page: N`, multiple pages as
-  `Pages: i, j, k, …`. This also fixes a bug where a paragraph that cited
-  several references on different pages could show the wrong page for one of
-  them — `assign_scores_to_enriched_papers` previously rebuilt each mention
-  dict from a text-only assessment lookup, which dropped `occurrences` and
-  let one ref's page overwrite another's. The lookup is now keyed by
-  `(ref, excerpt)` and the original mention (including its `occurrences`) is
-  preserved.
-- Multi-ref groups like `[22,30,32]` are now parsed correctly. GROBID emits
-  these as three sibling `<ref>` tags whose visible labels are `"[22,"`,
-  `"30,"`, and `"32]"`. The previous `_extract_numeric_label` used
-  `re.fullmatch(r"\[?(\d+)\]?", …)`, which failed on the first two (trailing
-  comma) and fell back to GROBID's `target="#b…"` attribute — that mapping is
-  off-by-one in some papers, so marker "22" was being bucketed under
-  `mentions[21]` and surfaced as a stray anchor on page 2. The label parser
-  now uses `re.match(r"\[?(\d+)", …)` (leading digit run), so each marker in
-  a list binds to the visible number; author-year style labels like
-  `"Smith 2020 [5]"` still skip the visible-label path because they don't
-  start with `[` or a digit.
-- The anomalies list is sorted by **page-then-category**: items are ordered
-  by the earliest page they appear on, then within a page by category
-  severity (`testFailure` → `selfCitation` → `citationRing` → `unreferenced`
-  → `lowRelevancy`). Issues with no page (e.g. unreferenced bibliography
-  entries) sink to the bottom; insertion order from the pipeline breaks ties.
-- `ref_id` (which becomes `cite_number` shown in the UI) is recovered
-  through a three-step fallback when the `<biblStruct>` has no `<label>`
-  element: first the leading `[N]` of `<note type="raw_reference">`,
-  then a `xml:id → PDF label` map harvested from the fulltext endpoint's
-  `<ref type="bibr" target="#bN">[K]</ref>` markers, and only finally
-  `enumerate(..., 1)`. GROBID can drop a non-publication entry (e.g. a
-  software citation like
-  `[1] 2008-2026. GROBID. https://github.com/kermitt2/grobid…`) from the
-  bibl list and also omit `<label>` *and* strip the `[N]` prefix from the
-  raw reference text — that combination defeats both the label and the
-  raw-reference fallbacks, so the fulltext label map is what keeps
-  `cite_number` aligned with the source PDF numbering. The pipeline now
-  issues the fulltext call before `processReferences` and threads the map
-  through `extract_references_with_grobid(..., label_map=…)`.
-
+See http://localhost:8001/docs while the backend is running for interactive
+request details.
 
 ## Result cache
 
-Results from external services are cached on disk, so re-running a paper
-(or a paper that shares references with an earlier one) skips most network
-and model work. On `backend/tests/data/sample.pdf` (58 references), the
-three GROBID calls plus PDF→markdown take ~126 s cold and ~0.05 s cached.
+The cache reduces repeated network and model calls across runs and papers:
 
-What is cached, in [cache.py](backend/src/CITation/cache.py) (a single
-SQLite file, `.cache/citadel/cache.sqlite3`):
+| Namespace | Cached data | Lifetime |
+|---|---|---|
+| `grobid` | GROBID TEI XML | Indefinite |
+| `markdown` | PDF-to-markdown output | Indefinite |
+| `llm` | LLM reply text | Indefinite |
+| `s2` | Semantic Scholar searches and details | 30 days by default |
+| `s2_paper` | Individual Semantic Scholar paper records | 30 days by default |
+| `openalex` | OpenAlex searches and lookups | 30 days by default |
 
-| Namespace  | What                                                | Key                                      | Expires |
-|------------|-----------------------------------------------------|------------------------------------------|---------|
-| `grobid`   | TEI XML from every GROBID endpoint                  | endpoint + params + PDF content hash     | never   |
-| `markdown` | PDF→markdown output, per converter                  | PDF content hash + olmocr/pymupdf4llm    | never   |
-| `llm`      | LLM reply text (`llm.chat`)                         | model + messages + params actually sent  | never   |
-| `s2`       | Semantic Scholar title search / paper details       | URL + params                             | 30 days |
-| `s2_paper` | One paper from S2 `/paper/batch`, cached per paper  | S2 id + requested fields                 | 30 days |
-| `openalex` | OpenAlex search, DOI batch, and work lookups        | URL + params                             | 30 days |
+Failed requests are not cached. Clear the full cache with
+`make clear-cache`, or one namespace with, for example,
+`make clear-cache NS=grobid`.
 
-Design notes:
+## Testing and linting
 
-- **Only raw responses are cached.** Parsing, enrichment merging, scoring and
-  anomaly detection always re-run, so code fixes apply to papers that are
-  already cached. A changed prompt, model or request parameter is
-  automatically a miss.
-- **Failures are never cached.** Only successful responses are stored
-  (plus GROBID's 204 "no references" and Semantic Scholar's 404 "no match").
-  Empty LLM replies, olmocr failures, 429s, 5xxs and timeouts are retried on
-  the next run.
-- **S2 batch lookups are cached per paper**, so second-hop references shared
-  between manuscripts are fetched only once.
-- **Rate limiting only applies to real network calls.** The old fixed 0.5 s
-  sleeps after every Semantic Scholar / OpenAlex call are replaced by a
-  per-host minimum interval (`request_delay`), so cache hits don't wait.
-- API keys are not part of cache keys, and nothing secret is stored.
-- `llm.chat()` now returns the reply text instead of the raw completion
-  object.
-- Each run logs per-namespace hit counts (`Cache: grobid 3/3 hits, …`) and
-  records them in `outputs/debug/pipeline_summary.json`.
-
-Controls: `make clear-cache` empties everything, and
-`make clear-cache NS=llm` (or any namespace above) clears one source. For
-example, clear `grobid` after upgrading GROBID. Set `CITADEL_CACHE=0` to
-bypass the cache, `CITADEL_CACHE_DIR` to move it, and
-`CITADEL_CACHE_TTL_DAYS` to change how long Semantic Scholar and OpenAlex
-entries are kept.
-
-
-## OpenAlex
-
-OpenAlex is the fallback to Semantic Scholar when enriching cited papers: it
-supplies metadata when S2 can't find a paper, ORCIDs when S2's authors lack
-them, and the reference list (plus second-hop reference details) when S2 has
-none.
-
-- **API key.** Set `OPENALEX_API_KEY` (recommended). Without it, requests count
-  against a free daily budget shared by everyone on your IP address; once that
-  is used up OpenAlex answers every request with 429 until midnight UTC. The
-  key is sent as the `api_key` query parameter and is not part of cache keys
-  (`cache.request(..., secret_params=...)`), so adding or changing it doesn't
-  invalidate cached responses.
-- **429 stops OpenAlex for the run.** The first 429 disables OpenAlex for the
-  rest of that pipeline run (`PaperProcessor.openalex_unavailable`) and logs a
-  warning, instead of retrying every call three times. The next run tries
-  again. Previously an exhausted budget added ~26 s of failing calls and
-  sleeps to every run of a 38-reference paper; it now costs one request.
-  Affected papers fall back to Semantic Scholar data only, so they may lack
-  ORCIDs or second-hop references for that run.
-- **Second-hop chunking fix.** OpenAlex reference lists were split with
-  `refs[i:i+100] for i in range(0, len(refs), 25)`, so chunks overlapped, and
-  each request returned only OpenAlex's default 25 results per page. Second-hop
-  references from OpenAlex therefore had duplicates and gaps. Chunks are now
-  disjoint (`OPENALEX_CHUNK_SIZE`, 100 ids) and each request sets `per-page` to
-  the chunk size. Because the request shape changed, these lookups are fetched
-  again once (old cache entries for them are simply unused).
-- `retry_api_call` no longer sleeps between attempts; `cache.request` already
-  enforces the per-host `request_delay` for real network calls, so the sleep
-  only delayed cache hits and fast failures.
-
-## Second-hop references
-
-For every cited paper, the pipeline also fetches that paper's own references
-(the "second hop") from Semantic Scholar or OpenAlex and adds them to the
-citation graph with `hop: 2`. When neither source has data for one of those
-references, `_merge_ref_data` returns an empty record. Previously
-`assign_entity_keys_with_refs` then crashed the whole WebSocket run with
-`KeyError: 'venue'`. Empty records are now dropped before keys are assigned,
-since they would only add blank nodes to the graph. Partial records get
-`None` for a missing `venue`, `year` or `doi` instead of raising an error.
-
-
-## Tests
+Run backend tests:
 
 ```bash
 uv run pytest
 ```
 
-Backend tests live in [backend/tests/](backend/tests/). Mark slow tests with
-`@pytest.mark.slow`.
+Build the frontend with warnings treated as errors:
 
-## Frontend lint
+```bash
+CI=true npm run build
+```
 
-The frontend builds with no ESLint warnings, so `CI=true npm run build` (which
-treats warnings as errors) passes. To check without building:
+Or run ESLint directly:
 
 ```bash
 npx eslint --resolve-plugins-relative-to node_modules/react-scripts src
 ```
 
-Hook dependencies follow `react-hooks/exhaustive-deps`. Helpers that an effect
-calls are either pure module-level functions (such as `generateLegendData` in
-`floatPanel.js`) or wrapped in `useCallback` with their real inputs (such as
-`drawGraph` in `authorGraph.js` and `adjacencyMatrix.js`). Don't silence the
-rule with `eslint-disable`. A missing dependency means stale data on screen.
+## Project layout
 
-Bug fixes from the lint cleanup:
+```text
+backend/src/CITation/  FastAPI backend and integrated processing pipeline
+backend/tests/        Backend tests
+src/                  React frontend
+public/               Frontend static files
+known_pdfs/           Example PDFs
+backend_scripts/      Legacy standalone pipeline
+```
 
-- **Stale adjacency matrix.** `VisContainer` rebuilt the adjacency-matrix data
-  only when `authorGraphDataRaw` or `author` changed, but that data also filters
-  on `citation`. New citation data left the matrix out of date. It now rebuilds
-  when citations change too.
-- **Late author-graph redraws.** `AuthorGraph` draws after a 400 ms delay, and
-  that timer was never cancelled. If the data changed or the component unmounted
-  within the delay, an old draw could still fire. The timer is now cleared when
-  the effect re-runs or the component unmounts.
-
-## Legacy scripts
-
-The top-level `*.py` files (`statcheck.py`, `synthetic.py`, `stackinggraph.py`,
-`pubmedPaperExtraction.py`, `florMatrix.py`) and [backend_scripts/](backend_scripts/)
-are earlier standalone tools that predate the integrated FastAPI pipeline.
-They are kept for reference but are not part of the running application.
-See [backend_scripts/README.md](backend_scripts/README.md) for the historical
-script-by-script pipeline.
+The top-level Python scripts and [`backend_scripts/`](backend_scripts/) are
+older standalone experiments that predate the integrated web application.
+They are kept for reference and are not required to run Citadel. See the
+[legacy pipeline documentation](backend_scripts/README.md) for those scripts.
