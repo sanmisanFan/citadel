@@ -4,7 +4,6 @@ import "./toolbar.css";
 
 export const ToolBar = ({ setPdfScale, currentPage }) => {
     const [zoom, setZoom] = useState(1);
-    const [isHighlightPen, setIsHighlightPen] = useState(false);
 
     const zoomIn = () => {
         if (zoom) {

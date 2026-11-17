@@ -2,7 +2,7 @@ import { Card } from 'antd';
 
 import "./style.css";
 
-export const AnomalousLegendCard = ({}) => {
+export const AnomalousLegendCard = () => {
   // Sample data for the tree-style list (replace with your actual data)
   const legendData = [
     {

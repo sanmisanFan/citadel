@@ -1,7 +1,60 @@
 import { useState, useEffect } from "react";
-import { Tag, Collapse } from 'antd';
 
-const { Panel } = Collapse;
+// Helper function to capitalize the first letter of a string
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
+// Dynamically generate legend data based on anomalous and anomalousColorScheme
+const generateLegendData = (anomalous, anomalousColorScheme) => {
+  const legend = {};
+
+  anomalous.forEach((issue) => {
+    const issueType = issue.name; // 'citation', 'statistic', 'other'
+    const issueCategory = issue.category.name; // e.g., 'lowRelevancy', 'retractedPaper', 'testFailure', 'valueInconsistency', 'noRef'
+    const issueCategoryDisplayName = issue.category.displayName;
+    const issueFilter = issue.filter
+
+    if (!legend[issueType]) {
+      legend[issueType] = {
+        label: capitalizeFirstLetter(issueType) + (issueType === "other" ? " Anomalies" : " Issues"), // Make label more user friendly
+        color: anomalousColorScheme[issueType].baseColor,
+        children: [],
+        filter: false, // Initialize parent filter to false
+        typeName: issueType,
+      };
+    }
+
+    const existingChild = legend[issueType].children.find(child => child.label === issueCategoryDisplayName);
+
+    if (!existingChild) {
+      legend[issueType].children.push({
+        label: issueCategoryDisplayName,
+        color: anomalousColorScheme[issueType].category[issueCategory].baseColor,
+        count: 1,
+        categoryName: issueCategory,
+        typeName: issueType,
+        filter: issueFilter
+      });
+    } else {
+      existingChild.count++;
+      existingChild.filter = issueFilter
+    }
+  });
+
+  //check if all children are filtered under same parent
+  for (const typeName in legend) {
+    const parent = legend[typeName];
+    if (parent.children.every(child => child.filter)) {
+      parent.filter = true;
+    } else {
+      parent.filter = false;
+    }
+  }
+
+  // Convert the legend object to an array for rendering
+  return Object.values(legend);
+};
 
 export const FloatingPanel = ({ currentPage, anomalous, anomalousColorScheme, setAnomalous }) => {
   const [isLegendOpen, setIsLegendOpen] = useState(true);
@@ -10,66 +63,10 @@ export const FloatingPanel = ({ currentPage, anomalous, anomalousColorScheme, se
     setIsLegendOpen(!isLegendOpen);
   };
 
-  // Dynamically generate legend data based on anomalous and anomalousColorScheme
-  const generateLegendData = () => {
-    const legend = {};
-
-    anomalous.forEach((issue) => {
-      const issueType = issue.name; // 'citation', 'statistic', 'other'
-      const issueCategory = issue.category.name; // e.g., 'lowRelevancy', 'retractedPaper', 'testFailure', 'valueInconsistency', 'noRef'
-      const issueCategoryDisplayName = issue.category.displayName;
-      const issueFilter = issue.filter
-
-      if (!legend[issueType]) {
-        legend[issueType] = {
-          label: capitalizeFirstLetter(issueType) + (issueType === "other" ? " Anomalies" : " Issues"), // Make label more user friendly
-          color: anomalousColorScheme[issueType].baseColor,
-          children: [],
-          filter: false, // Initialize parent filter to false
-          typeName: issueType,
-        };
-      }
-
-      const existingChild = legend[issueType].children.find(child => child.label === issueCategoryDisplayName);
-
-      if (!existingChild) {
-        legend[issueType].children.push({
-          label: issueCategoryDisplayName,
-          color: anomalousColorScheme[issueType].category[issueCategory].baseColor,
-          count: 1,
-          categoryName: issueCategory,
-          typeName: issueType,
-          filter: issueFilter
-        });
-      } else {
-        existingChild.count++;
-        existingChild.filter = issueFilter
-      }
-    });
-
-    //check if all children are filtered under same parent
-    for (const typeName in legend) {
-      const parent = legend[typeName];
-      if (parent.children.every(child => child.filter)) {
-        parent.filter = true;
-      } else {
-        parent.filter = false;
-      }
-    }
-
-    // Convert the legend object to an array for rendering
-    return Object.values(legend);
-  };
-
-  // Helper function to capitalize the first letter of a string
-  const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
-
   const [legendData, setLegendData] = useState([]);
 
   useEffect(() => {
-    setLegendData(generateLegendData());
+    setLegendData(generateLegendData(anomalous, anomalousColorScheme));
   }, [anomalous, anomalousColorScheme]);
 
     const handleLegendClick = (typeName, categoryName = null) => {
@@ -91,7 +88,7 @@ export const FloatingPanel = ({ currentPage, anomalous, anomalousColorScheme, se
                 return anomalousObj;
             });
         });
-        setLegendData(generateLegendData()); //update the legend data
+        setLegendData(generateLegendData(anomalous, anomalousColorScheme)); //update the legend data
     };
 
   const renderTree = (data) => {

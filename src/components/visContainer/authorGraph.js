@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
 const AuthorGraph = ({ 
@@ -10,7 +10,7 @@ const AuthorGraph = ({
 }) => {
   const canvasRef = useRef(null);
 
-  const drawGraph = () => {
+  const drawGraph = useCallback(() => {
     console.log(author);
     const { scrollWidth, scrollHeight } = canvasRef.current;
     const nodeRedius = 8;
@@ -168,14 +168,12 @@ const AuthorGraph = ({
           const dy = d.target.y - d.source.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           const offsetX = (dx * nodeRedius) / dist;
-          const offsetY = (dy * nodeRedius) / dist;
           return d.source.x + offsetX;
         })
         .attr("y1", (d) => {
           const dx = d.target.x - d.source.x;
           const dy = d.target.y - d.source.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          const offsetX = (dx * nodeRedius) / dist;
           const offsetY = (dy * nodeRedius) / dist;
           return d.source.y + offsetY;
         })
@@ -184,14 +182,12 @@ const AuthorGraph = ({
           const dy = d.source.y - d.target.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           const offsetX = (dx * nodeRedius) / dist;
-          const offsetY = (dy * nodeRedius) / dist;
           return d.target.x + offsetX;
         })
         .attr("y2", (d) => {
           const dx = d.source.x - d.target.x;
           const dy = d.source.y - d.target.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          const offsetX = (dx * nodeRedius) / dist;
           const offsetY = (dy * nodeRedius) / dist;
           return d.target.y + offsetY;
         });
@@ -206,7 +202,7 @@ const AuthorGraph = ({
         return `M${dx},${dy} A${radius},${radius} 0 1,1 ${dx - 0.01},${dy}`;
       });
     });
-  };
+  }, [graphData, author, authorID, graphSource]);
 
   const clearCanvas = () => {
     const rootGroup = d3.select(canvasRef.current).select("g#root-group");
@@ -216,10 +212,11 @@ const AuthorGraph = ({
   useEffect(() => {
     clearCanvas();
     if (graphData === null) return;
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       drawGraph();
     }, 400);
-  }, [graphData, author]);
+    return () => clearTimeout(timer);
+  }, [graphData, drawGraph]);
 
   return (
     <div ref={canvasRef} style={{ height: "100%" }}>

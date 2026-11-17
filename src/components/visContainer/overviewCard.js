@@ -1,5 +1,5 @@
-import { useEffect, useCallback, useState } from "react";
-import { Card, Radio, Flex, Badge, Tag, Tooltip, Descriptions, Typography, Modal, List, Button, Popover } from 'antd';
+import { useState } from "react";
+import { Card, Radio, Flex, Tooltip, Descriptions, Typography, Modal, List, Button, Popover } from 'antd';
 
 import AuthorGraph from "./authorGraph";
 import AdjacencyMatrixPanel from "./adjacencyMatrix.js";

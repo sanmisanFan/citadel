@@ -1,10 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
 const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
     const canvasRef = useRef(null);
 
-    const drawGraph = () => {
+    const drawGraph = useCallback(() => {
         if (!graphData || !graphData.nodes || !graphData.links || graphData.nodes.length === 0) {
             return; // Exit if data is invalid or empty
         }
@@ -136,7 +136,7 @@ const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
             .attr("class", "row")
             .attr("transform", (d, i) => `translate(0,${yScale(d)})`);
 
-        const cells = rows.selectAll(".cell")
+        rows.selectAll(".cell")
             .data(source => nodeOrder.map(target => ({ source, target })))
             .enter().append("rect")
             .attr("class", "cell")
@@ -203,7 +203,7 @@ const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
             .style("font-size", "0.7rem")
             .style("pointer-events", "none");
 
-    };
+    }, [graphData, citation]);
 
     const clearCanvas = () => {
         const rootGroup = d3.select(canvasRef.current).select("g#root-group");
@@ -214,7 +214,7 @@ const AdjacencyMatrixPanel = ({ graphData, author, citation }) => {
         if (graphData === null || !citation) return;
         clearCanvas();
         drawGraph();
-    }, [graphData, author, citation]);
+    }, [graphData, author, citation, drawGraph]);
 
     return (
         <div ref={canvasRef} style={{ height: "100%" }}>

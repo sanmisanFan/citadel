@@ -1,9 +1,8 @@
-import { useEffect, useCallback, useState, useRef } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { Card, Empty } from 'antd';
 import { pdfjs } from "react-pdf";
 
 import { ContentCard } from "./contentCard";
-import { AnomalousLegendCard } from "./anomalousLegendCard";
 import { OverviewCard } from "./overviewCard";
 import { AnomalousListCard } from "./anomalousList";
 
@@ -39,7 +38,7 @@ export const VisContainer = ({
     const [authorGraphData, setAuthorGraphData] = useState(null);
     const [adjacencyMatrixData, setAdjacencyMatrixData] = useState(null);
 
-    const authorGraphDataProcess = () => {
+    const authorGraphDataProcess = useCallback(() => {
         if (!authorGraphDataRaw || !author) return null;
         if (!authorGraphDataRaw.nodes || !authorGraphDataRaw.links) return null;
 
@@ -64,9 +63,9 @@ export const VisContainer = ({
 
         //console.log(authorGraphDataRaw_);
         return (authorGraphDataRaw_);
-    };
+    }, [authorGraphDataRaw, author]);
 
-    const adjacencyMatrixDataProcess = () => {
+    const adjacencyMatrixDataProcess = useCallback(() => {
         if (!authorGraphDataRaw || !author || !citation) return null;
         if (!authorGraphDataRaw.nodes || !authorGraphDataRaw.links) return null;
 
@@ -75,7 +74,6 @@ export const VisContainer = ({
 
         // Map each author with their citations and filter the authors with hop in citation other than 1
         authorGraphDataRaw_.nodes = authorGraphDataRaw_.nodes.filter(node => {
-            const authorData = author.find((a) => a.id === node.id);
             const citationData = citation.find((c) => c.author.includes(node.id));
 
             return citationData && citationData.hop === 1;
@@ -95,12 +93,15 @@ export const VisContainer = ({
         });
         //console.log(authorGraphDataRaw_);
         return (authorGraphDataRaw_);
-    };
+    }, [authorGraphDataRaw, author, citation]);
 
     useEffect(() => {
         setAuthorGraphData(authorGraphDataProcess());
+    }, [authorGraphDataProcess]);
+
+    useEffect(() => {
         setAdjacencyMatrixData(adjacencyMatrixDataProcess());
-    }, [authorGraphDataRaw, author]);
+    }, [adjacencyMatrixDataProcess]);
 
     return (
         <div
