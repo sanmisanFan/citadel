@@ -50,17 +50,25 @@ This installs Python and JS dependencies (re-running only when the lockfiles
 change), creates `.env` from [.env.example](.env.example) for your API keys,
 starts GROBID in Docker if Docker is available and waits until it's ready
 (up to `GROBID_WAIT` seconds, default 180), clears any leftover production
-build so `:8000` only serves the API, and runs the backend (`:8000`) and
+build so `:8001` only serves the API, and runs the backend (`:8001`) and
 frontend (`:3000`) together with hot reload. **Open the app at
-http://localhost:3000.** Port 8000 is the API only. Opening it in a browser
+http://localhost:3000.** Port 8001 is the API only. Opening it in a browser
 (e.g. from VS Code's "port is live" prompt) shows a link to `:3000` and
 `/docs` instead of a bare 404. VS Code Remote users can add
 `"remote.portsAttributes": {"3000": {"onAutoForward": "openBrowser"},
-"8000": {"onAutoForward": "silent"}, "8070": {"onAutoForward": "silent"}}`
+"8001": {"onAutoForward": "silent"}, "8070": {"onAutoForward": "silent"}}`
 to `.vscode/settings.json` so the auto-forward prompt opens the UI rather
 than the API. Ctrl-C stops both;
-`make stop` stops GROBID. `make serve` runs the production build on `:8000`,
+`make stop` stops GROBID. `make serve` runs the production build on `:8001`,
 and `make help` lists everything else.
+
+The API runs on **port 8001**, not FastAPI's default 8000. On a shared host
+another user's service can already hold 8000; the backend then fails to start
+while the frontend keeps sending requests to that other service, which shows up
+as "Couldn't auto-fill metadata" and failed analyses. If 8001 is also taken,
+pick another port with `make dev BACKEND_PORT=8002` (or set `BACKEND_PORT` in
+`.env`); the frontend follows it via `REACT_APP_BACKEND_URL`, which defaults to
+`localhost:$BACKEND_PORT`.
 
 API keys can go in `.env` or be exported in your shell.
 
@@ -101,14 +109,14 @@ available the backend silently falls back to `pymupdf4llm`.
 In separate terminals:
 
 ```bash
-# Backend (FastAPI, http://localhost:8000)
-uv run fastapi dev backend/src/CITation/main.py
+# Backend (FastAPI, http://localhost:8001)
+uv run fastapi dev backend/src/CITation/main.py --port 8001
 
 # Frontend (React, http://localhost:3000)
 npm start
 ```
 
-The frontend talks to the backend at `localhost:8000` by default; override with
+The frontend talks to the backend at `localhost:8001` by default; override with
 the `REACT_APP_BACKEND_URL` env var when starting `npm start` (e.g.
 `REACT_APP_BACKEND_URL=localhost:9000 npm start`). CORS is configured for
 `localhost:3000` only.
@@ -144,7 +152,7 @@ FastAPI app serve it alongside the API:
 
 ```bash
 npm run build      # writes ./build
-uv run fastapi run # serves UI + API on http://0.0.0.0:8000
+uv run fastapi run --port 8001 # serves UI + API on http://0.0.0.0:8001
 ```
 
 The backend serves the first build it finds among `$FRONTEND_BUILD_DIR`, the

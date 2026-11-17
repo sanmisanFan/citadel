@@ -2,7 +2,7 @@
 # Citadel app
 #
 #   make dev     install deps if needed, start GROBID, run backend + frontend
-#   make serve   production build served by FastAPI on :8000
+#   make serve   production build served by FastAPI on :$(BACKEND_PORT) (8001)
 #   make help    list all targets
 #
 # API keys are read from the environment or from a .env file (KEY=value lines,
@@ -16,6 +16,10 @@ GROBID_URL       ?= http://localhost:8070
 GROBID_IMAGE     ?= lfoppiano/grobid:0.8.0
 GROBID_CONTAINER ?= citadel-grobid
 GROBID_WAIT      ?= 180
+# 8001, not FastAPI's default 8000, which other services on shared hosts often hold.
+BACKEND_PORT     ?= 8001
+# Where the dev frontend sends API calls (exported to `npm start`).
+REACT_APP_BACKEND_URL ?= localhost:$(BACKEND_PORT)
 
 .DEFAULT_GOAL := help
 
@@ -26,8 +30,8 @@ run: dev
 help:
 	@echo "Citadel targets:"
 	@echo "  make setup        install Python + JS deps, create .env"
-	@echo "  make dev          backend (:8000) + frontend (:3000) with hot reload"
-	@echo "  make serve        build frontend, serve everything from FastAPI (:8000)"
+	@echo "  make dev          backend (:$(BACKEND_PORT)) + frontend (:3000) with hot reload"
+	@echo "  make serve        build frontend, serve everything from FastAPI (:$(BACKEND_PORT))"
 	@echo "  make test         run backend tests"
 	@echo "  make grobid       start GROBID and wait until ready (also done by dev/serve)"
 	@echo "  make stop         stop the GROBID container"
@@ -77,7 +81,7 @@ grobid:
 	done; \
 	echo " not ready after $(GROBID_WAIT)s (see: docker logs $(GROBID_CONTAINER))"; exit 1
 
-# Remove production builds so the dev backend doesn't serve a stale UI on :8000.
+# Remove production builds so the dev backend doesn't serve a stale UI on :$(BACKEND_PORT).
 clean-build:
 	rm -rf build backend/src/CITation/build
 
@@ -93,7 +97,7 @@ dev: setup check-env grobid
 	@$(MAKE) --no-print-directory -j2 backend frontend
 
 backend: .venv/.uv-synced clean-build
-	uv run fastapi dev backend/src/CITation/main.py
+	uv run fastapi dev backend/src/CITation/main.py --port $(BACKEND_PORT)
 
 frontend: node_modules/.npm-installed
 	npm start
@@ -102,7 +106,7 @@ build: node_modules/.npm-installed
 	npm run build
 
 serve: setup check-env grobid build
-	uv run fastapi run
+	uv run fastapi run --port $(BACKEND_PORT)
 
 test: .venv/.uv-synced
 	uv run pytest

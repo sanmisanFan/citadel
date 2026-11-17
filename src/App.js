@@ -20,7 +20,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 
 // In production the backend serves the frontend, so use same-origin URLs.
 // In development, point at the backend (override with REACT_APP_BACKEND_URL).
-const URL = process.env.NODE_ENV === "production" ? "" : (process.env.REACT_APP_BACKEND_URL || "localhost:8000");
+const URL = process.env.NODE_ENV === "production" ? "" : (process.env.REACT_APP_BACKEND_URL || "localhost:8001");
 export const API_URL = URL === '' ? '' : `http://${URL}`;
 
 const WS_PROTOCOL = window.location.protocol === "https:" ? "wss" : "ws";
