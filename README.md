@@ -352,6 +352,32 @@ uv run pytest
 Backend tests live in [backend/tests/](backend/tests/). Mark slow tests with
 `@pytest.mark.slow`.
 
+## Frontend lint
+
+The frontend builds with no ESLint warnings, so `CI=true npm run build` (which
+treats warnings as errors) passes. To check without building:
+
+```bash
+npx eslint --resolve-plugins-relative-to node_modules/react-scripts src
+```
+
+Hook dependencies follow `react-hooks/exhaustive-deps`. Helpers that an effect
+calls are either pure module-level functions (such as `generateLegendData` in
+`floatPanel.js`) or wrapped in `useCallback` with their real inputs (such as
+`drawGraph` in `authorGraph.js` and `adjacencyMatrix.js`). Don't silence the
+rule with `eslint-disable`. A missing dependency means stale data on screen.
+
+Bug fixes from the lint cleanup:
+
+- **Stale adjacency matrix.** `VisContainer` rebuilt the adjacency-matrix data
+  only when `authorGraphDataRaw` or `author` changed, but that data also filters
+  on `citation`. New citation data left the matrix out of date. It now rebuilds
+  when citations change too.
+- **Late author-graph redraws.** `AuthorGraph` draws after a 400 ms delay, and
+  that timer was never cancelled. If the data changed or the component unmounted
+  within the delay, an old draw could still fire. The timer is now cleared when
+  the effect re-runs or the component unmounts.
+
 ## Legacy scripts
 
 The top-level `*.py` files (`statcheck.py`, `synthetic.py`, `stackinggraph.py`,
