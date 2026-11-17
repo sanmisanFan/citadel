@@ -219,7 +219,7 @@ function App() {
                             <div className="upload-header">
                                 <Title level={1} className="brand-title">CITADEL</Title>
                                 <Text type="secondary" className="brand-subtitle">
-                                    Citation Analysis &amp; Anomaly Detection for Academic Papers
+                                    Citation Analysis &amp; Deterministic Evaluation Layer
                                 </Text>
                             </div>
 
