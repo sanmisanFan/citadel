@@ -15,10 +15,11 @@ export
 GROBID_URL       ?= http://localhost:8070
 GROBID_IMAGE     ?= lfoppiano/grobid:0.8.0
 GROBID_CONTAINER ?= citadel-grobid
+GROBID_WAIT      ?= 180
 
 .DEFAULT_GOAL := help
 
-.PHONY: help setup dev run backend frontend build serve test grobid grobid-stop stop check-env
+.PHONY: help setup dev run backend frontend build clean-build serve test grobid grobid-stop stop check-env
 
 run: dev
 
@@ -28,7 +29,7 @@ help:
 	@echo "  make dev          backend (:8000) + frontend (:3000) with hot reload"
 	@echo "  make serve        build frontend, serve everything from FastAPI (:8000)"
 	@echo "  make test         run backend tests"
-	@echo "  make grobid       start the GROBID container (also done by dev/serve)"
+	@echo "  make grobid       start GROBID and wait until ready (also done by dev/serve)"
 	@echo "  make stop         stop the GROBID container"
 
 setup: .venv/.uv-synced node_modules/.npm-installed .env
@@ -52,18 +53,32 @@ check-env:
 	@test -n "$$OPENAI_API_KEY" || { echo "OPENAI_API_KEY is not set (add it to .env)"; exit 1; }
 	@test -n "$$S2_API_KEY" || { echo "S2_API_KEY is not set (add it to .env)"; exit 1; }
 
-# GROBID is optional: skip with a warning if Docker isn't available.
+# GROBID is optional: skip with a warning if Docker isn't available. Otherwise
+# start the container if needed and block until it answers /api/isalive.
 grobid:
 	@if curl -sf $(GROBID_URL)/api/isalive >/dev/null 2>&1; then \
-		echo "GROBID is running at $(GROBID_URL)"; \
-	elif ! docker info >/dev/null 2>&1; then \
-		echo "WARNING: Docker not available, running without GROBID (reference extraction will be degraded)"; \
-	elif [ -n "$$(docker ps -q -f name=^$(GROBID_CONTAINER)$$)" ]; then \
-		echo "GROBID container is starting up"; \
-	else \
-		docker run -d --rm --name $(GROBID_CONTAINER) -p 8070:8070 $(GROBID_IMAGE) >/dev/null && \
-		echo "Started GROBID (stop it with: make stop)"; \
-	fi
+		echo "GROBID is ready at $(GROBID_URL)"; exit 0; \
+	fi; \
+	if ! docker info >/dev/null 2>&1; then \
+		echo "WARNING: Docker not available, running without GROBID (reference extraction will be degraded)"; exit 0; \
+	fi; \
+	if [ -z "$$(docker ps -q -f name=^$(GROBID_CONTAINER)$$)" ]; then \
+		echo "Starting GROBID (stop it with: make stop)"; \
+		docker run -d --rm --name $(GROBID_CONTAINER) -p 8070:8070 $(GROBID_IMAGE) >/dev/null || exit 1; \
+	fi; \
+	printf "Waiting for GROBID at $(GROBID_URL) "; \
+	i=0; while [ $$i -lt $(GROBID_WAIT) ]; do \
+		if curl -sf $(GROBID_URL)/api/isalive >/dev/null 2>&1; then echo " ready"; exit 0; fi; \
+		if [ -z "$$(docker ps -q -f name=^$(GROBID_CONTAINER)$$)" ]; then \
+			echo " container exited during startup"; exit 1; \
+		fi; \
+		printf "."; sleep 1; i=$$((i+1)); \
+	done; \
+	echo " not ready after $(GROBID_WAIT)s (see: docker logs $(GROBID_CONTAINER))"; exit 1
+
+# Remove production builds so the dev backend doesn't serve a stale UI on :8000.
+clean-build:
+	rm -rf build backend/src/CITation/build
 
 grobid-stop stop:
 	@docker stop $(GROBID_CONTAINER) >/dev/null 2>&1 && echo "Stopped GROBID" || echo "GROBID container not running"
@@ -71,7 +86,7 @@ grobid-stop stop:
 dev: setup check-env grobid
 	@$(MAKE) --no-print-directory -j2 backend frontend
 
-backend: .venv/.uv-synced
+backend: .venv/.uv-synced clean-build
 	uv run fastapi dev backend/src/CITation/main.py
 
 frontend: node_modules/.npm-installed

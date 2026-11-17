@@ -44,8 +44,10 @@ make dev
 
 This installs Python and JS dependencies (re-running only when the lockfiles
 change), creates `.env` from [.env.example](.env.example) for your API keys,
-starts GROBID in Docker if Docker is available, and runs the backend
-(`:8000`) and frontend (`:3000`) together with hot reload. Ctrl-C stops both;
+starts GROBID in Docker if Docker is available and waits until it's ready
+(up to `GROBID_WAIT` seconds, default 180), clears any leftover production
+build so `:8000` only serves the API, and runs the backend (`:8000`) and
+frontend (`:3000`) together with hot reload. Ctrl-C stops both;
 `make stop` stops GROBID. `make serve` runs the production build on `:8000`,
 and `make help` lists everything else.
 
