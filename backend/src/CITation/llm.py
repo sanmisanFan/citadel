@@ -9,6 +9,8 @@ import os
 
 from openai import OpenAI
 
+from . import cache
+
 TOKEN_ENV = "CREATEAI_SERVICE_TOKEN"
 DEFAULT_BASE_URL = "https://api-main.aiml.asu.edu/v1"
 
@@ -58,12 +60,16 @@ def _model_info(client: OpenAI, model: str) -> dict | None:
     return _model_info_cache.get(model)
 
 
-def chat(client: OpenAI, **kwargs):
-    """`client.chat.completions.create` adapted to the configured model.
+def chat(client: OpenAI, **kwargs) -> str | None:
+    """Run a chat completion with the configured model; return the reply text.
 
     Drops sampling params (temperature, top_p) the model doesn't accept, and
     drops `max_tokens` for models that reason by default, since reasoning
     tokens count against it and a small cap leaves an empty answer.
+
+    Replies are cached (see cache.py), keyed on the exact request sent: model,
+    messages and remaining params. A changed prompt or model is a miss. Empty
+    replies and errors are not cached.
     """
     kwargs.setdefault("model", MODEL)
     info = _model_info(client, kwargs["model"])
@@ -73,4 +79,13 @@ def chat(client: OpenAI, **kwargs):
                 kwargs.pop(param)
         if info["reasoning"]:
             kwargs.pop("max_tokens", None)
-    return client.chat.completions.create(**kwargs)
+
+    key = cache.make_key(kwargs)
+    hit = cache.get("llm", key)
+    if hit is not cache.MISSING:
+        return hit
+    response = client.chat.completions.create(**kwargs)
+    text = response.choices[0].message.content
+    if text and text.strip():
+        cache.put("llm", key, text)
+    return text

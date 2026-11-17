@@ -45,3 +45,5 @@ fetch_pubmed
 
 # Session intermediate data (per-run debug artifacts)
 outputs/
+
+.cache/

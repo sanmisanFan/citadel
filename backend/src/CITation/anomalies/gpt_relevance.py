@@ -33,14 +33,13 @@ Score: [number]
 Explanation: [Your detailed 2-3 sentence analysis, including key evidence and reasoning]
 """
     # why not return the data as a json or something to make parsing easier later?
-    response = llm.chat(
+    return llm.chat(
         client,
         messages=[{"role": "user", "content": prompt}],
         max_tokens=200,
         temperature=0.2,
         top_p=0.95,
     )
-    return response.choices[0].message.content
 
 
 def process_citation_mentions(citation_mentions, enriched, client):

@@ -19,7 +19,7 @@ GROBID_WAIT      ?= 180
 
 .DEFAULT_GOAL := help
 
-.PHONY: help setup dev run backend frontend build clean-build serve test grobid grobid-stop stop check-env
+.PHONY: help setup dev run backend frontend build clean-build serve test grobid grobid-stop stop check-env clear-cache
 
 run: dev
 
@@ -31,6 +31,7 @@ help:
 	@echo "  make test         run backend tests"
 	@echo "  make grobid       start GROBID and wait until ready (also done by dev/serve)"
 	@echo "  make stop         stop the GROBID container"
+	@echo "  make clear-cache  empty the result cache (NS=grobid|s2|s2_paper|openalex|llm|markdown for one source)"
 
 setup: .venv/.uv-synced node_modules/.npm-installed .env
 
@@ -79,6 +80,11 @@ grobid:
 # Remove production builds so the dev backend doesn't serve a stale UI on :8000.
 clean-build:
 	rm -rf build backend/src/CITation/build
+
+# Empty the external-service result cache (see backend/src/CITation/cache.py).
+# NS=<namespace> clears one source only, e.g. `make clear-cache NS=llm`.
+clear-cache: .venv/.uv-synced
+	@uv run python -c "import sys; from CITation import cache; ns = sys.argv[1] or None; print(f'Deleted {cache.clear(ns)} cached entries', f'from {ns}' if ns else '')" "$(NS)"
 
 grobid-stop stop:
 	@docker stop $(GROBID_CONTAINER) >/dev/null 2>&1 && echo "Stopped GROBID" || echo "GROBID container not running"

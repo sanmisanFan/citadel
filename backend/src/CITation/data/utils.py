@@ -2,6 +2,8 @@ from pathlib import Path
 from pymupdf4llm import to_markdown
 import fitz  # PyMuPDF
 
+from .. import cache
+
 
 def pdf_to_str(content) -> str:
     """Converts PDF bytes to plain text via PyMuPDF.
@@ -51,19 +53,33 @@ def pdf_to_md_cascading(content) -> str:
 
     olmocr generally produces higher-fidelity markdown (especially for OCR-heavy
     PDFs) but requires the CLI to be installed; pymupdf4llm is always available.
+
+    Results are cached per (PDF content, converter), so a PDF is converted at
+    most once by each converter. An olmocr failure isn't cached and is retried
+    next time.
     """
     from .olmocr import is_olmocr_available, pdf_to_md_str_olmocr
 
     if is_olmocr_available():
+        key = cache.make_key(content, "olmocr")
+        md = cache.get("markdown", key)
+        if md is not cache.MISSING:
+            return md
         try:
             md = pdf_to_md_str_olmocr(content)
             if md.strip():
+                cache.put("markdown", key, md)
                 return md
             print("DEBUG: olmocr returned empty markdown, falling back to pymupdf4llm")
         except Exception as e:
             print(f"DEBUG: olmocr failed ({e}), falling back to pymupdf4llm")
 
-    return pdf_to_md_str(content)
+    key = cache.make_key(content, "pymupdf4llm")
+    md = cache.get("markdown", key)
+    if md is cache.MISSING:
+        md = pdf_to_md_str(content)
+        cache.put("markdown", key, md)
+    return md
 
 
 def get_openalex_authors(openalex):

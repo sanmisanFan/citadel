@@ -220,13 +220,12 @@ Example:
 """
 
     try:
-        response = llm.chat(
+        gpt_output = llm.chat(
             gpt_client,
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},
             temperature=0,
         )
-        gpt_output = response.choices[0].message.content
         print("DEBUG: Received GPT response:", gpt_output)
         result = json.loads(gpt_output)
         if "authors" in result:

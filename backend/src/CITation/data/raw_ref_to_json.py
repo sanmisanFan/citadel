@@ -1,7 +1,7 @@
 import requests
 from time import sleep
 import os
-from .. import llm
+from .. import cache, llm
 import json
 from .utils import get_openalex_authors, get_openalex_refs
 from typing import Literal
@@ -89,13 +89,13 @@ If you cannot find the abstract, return exactly: NOT_FOUND
 Do not include any other text, explanations, or formatting."""
 
         try:
-            response = llm.chat(
+            result = llm.chat(
                 self.gpt_client,
                 messages=[{"role": "user", "content": prompt}],
                 max_tokens=500,
                 temperature=0.1,
             )
-            result = response.choices[0].message.content.strip()
+            result = (result or "").strip()
 
             if result == "NOT_FOUND" or len(result) < 50:
                 print(f"DEBUG: GPT fallback could not find abstract for: {title}")
@@ -126,11 +126,16 @@ Do not include any other text, explanations, or formatting."""
             "limit": 1,
         }
         try:
-            response = requests.get(
+            response = cache.request(
+                "s2",
+                "GET",
                 search_url,
                 params=params,
                 headers={"x-api-key": self.s2_api_key},
                 timeout=15,
+                max_age=cache.API_TTL,
+                cache_statuses=(200, 404),  # 404 = no title match
+                min_interval=self.request_delay,
             )
             print(
                 "DEBUG: Semantic Scholar search response status:", response.status_code
@@ -156,11 +161,16 @@ Do not include any other text, explanations, or formatting."""
         )
         print(f"DEBUG: Fetching Semantic Scholar details for paper ID: {paper_id}")
         try:
-            response = requests.get(
+            response = cache.request(
+                "s2",
+                "GET",
                 f"{SEMANTIC_SCHOLAR_URL}/paper/{paper_id}",
                 params={"fields": fields},
                 headers={"x-api-key": self.s2_api_key},
                 timeout=15,
+                max_age=cache.API_TTL,
+                cache_statuses=(200, 404),
+                min_interval=self.request_delay,
             )
             print("DEBUG: Semantic Scholar API response status:", response.status_code)
             response.raise_for_status()
@@ -177,6 +187,51 @@ Do not include any other text, explanations, or formatting."""
             print(f"DEBUG: API request failed for paper ID {paper_id}: {e}")
             return None
 
+    def _s2_batch(self, ids, fields, timeout=30):
+        """POST /paper/batch with a per-paper cache.
+
+        Each id is cached on its own (with `fields`), so a paper fetched for
+        one manuscript is reused by any later batch that includes it. Only
+        uncached ids go over the network, in chunks of 500 (the S2 limit).
+        Returns a list aligned with `ids`, with None where S2 has no such
+        paper. Raises requests exceptions if a request fails.
+        """
+        found = {}
+        missing = []
+        for pid in ids:
+            hit = cache.get("s2_paper", cache.make_key(pid, fields), cache.API_TTL)
+            if hit is cache.MISSING:
+                missing.append(pid)
+            else:
+                found[pid] = hit
+        if ids:
+            print(
+                f"DEBUG: S2 batch: {len(ids) - len(missing)}/{len(ids)} papers cached"
+            )
+
+        for i in range(0, len(missing), 500):
+            chunk = missing[i : i + 500]
+            response = cache.request(
+                None,  # cached per paper below, not per request
+                "POST",
+                f"{SEMANTIC_SCHOLAR_URL}/paper/batch",
+                params={"fields": fields},
+                data=json.dumps({"ids": chunk}),
+                headers={
+                    "x-api-key": self.s2_api_key,
+                    "Content-Type": "application/json",
+                },
+                timeout=timeout,
+                min_interval=self.request_delay,
+            )
+            print("DEBUG: Semantic Scholar API response status:", response.status_code)
+            response.raise_for_status()
+            for pid, paper in zip(chunk, response.json()):
+                found[pid] = paper
+                cache.put("s2_paper", cache.make_key(pid, fields), paper)
+
+        return [found.get(pid) for pid in ids]
+
     # for multiple papers
     def get_s2_multi_paper_details(self, refs):
         fields = (
@@ -191,21 +246,8 @@ Do not include any other text, explanations, or formatting."""
         )
 
         try:
-            response = requests.post(
-                f"{SEMANTIC_SCHOLAR_URL}/paper/batch",
-                params={"fields": fields},
-                data=json.dumps({"ids": ids}),
-                headers={
-                    "x-api-key": self.s2_api_key,
-                    "Content-Type": "application/json",
-                },
-                timeout=15,
-            )
-            print("DEBUG: Semantic Scholar API response status:", response.status_code)
-            response.raise_for_status()
-            data = response.json()
-            return data
-        except requests.exceptions.RequestException as e:
+            return self._s2_batch(ids, fields, timeout=15)
+        except (requests.exceptions.RequestException, ValueError) as e:
             print(f"DEBUG: API request failed for paper ID {','.join(ids)}: {e}")
             return None
 
@@ -261,18 +303,7 @@ Do not include any other text, explanations, or formatting."""
         for i in range(0, len(ids), batch_size):
             batch_ids = ids[i:i + batch_size]
             try:
-                response = requests.post(
-                    f"{SEMANTIC_SCHOLAR_URL}/paper/batch",
-                    params={"fields": fields},
-                    data=json.dumps({"ids": batch_ids}),
-                    headers={
-                        "x-api-key": self.s2_api_key,
-                        "Content-Type": "application/json",
-                    },
-                    timeout=30,
-                )
-                response.raise_for_status()
-                data = response.json()
+                data = self._s2_batch(batch_ids, fields, timeout=30)
 
                 # Map results back to ref_ids
                 for j, paper_data in enumerate(data):
@@ -285,10 +316,7 @@ Do not include any other text, explanations, or formatting."""
                         results[ref_id] = paper_data
                         print(f"DEBUG: Found paper for ref {ref_id} via batch lookup")
 
-                if i + batch_size < len(ids):
-                    sleep(self.request_delay)
-
-            except requests.exceptions.RequestException as e:
+            except (requests.exceptions.RequestException, ValueError) as e:
                 print(f"DEBUG: Batch lookup failed: {e}")
                 # Continue with what we have
 
@@ -299,7 +327,15 @@ Do not include any other text, explanations, or formatting."""
         params = {"filter": f"title.search:{title}", "per-page": 1}
         print(f"DEBUG: Fetching OpenAlex details for title: {title}")
         try:
-            response = requests.get(OPENALEX_URL, params=params, timeout=15)
+            response = cache.request(
+                "openalex",
+                "GET",
+                OPENALEX_URL,
+                params=params,
+                timeout=15,
+                max_age=cache.API_TTL,
+                min_interval=self.request_delay,
+            )
             response.raise_for_status()
             data = response.json()
             if "results" in data and len(data["results"]) > 0:
@@ -355,7 +391,15 @@ Do not include any other text, explanations, or formatting."""
             }
 
             try:
-                response = requests.get(OPENALEX_URL, params=params, timeout=30)
+                response = cache.request(
+                    "openalex",
+                    "GET",
+                    OPENALEX_URL,
+                    params=params,
+                    timeout=30,
+                    max_age=cache.API_TTL,
+                    min_interval=self.request_delay,
+                )
                 response.raise_for_status()
                 data = response.json()
 
@@ -369,9 +413,6 @@ Do not include any other text, explanations, or formatting."""
                             ref_id = doi_to_ref[clean_work_doi]
                             results[ref_id] = work
                             print(f"DEBUG: Found OpenAlex data for ref {ref_id} via batch DOI lookup")
-
-                if i + batch_size < len(dois):
-                    sleep(self.request_delay)
 
             except Exception as e:
                 print(f"DEBUG: OpenAlex batch DOI lookup failed: {e}")
@@ -522,7 +563,6 @@ Do not include any other text, explanations, or formatting."""
             # Check if we already have S2 data from batch lookup
             ref_id = paper.get("ref_id")
             s2_data = batch_results.get(ref_id)
-            made_individual_api_call = False
 
             # Fall back to title search if batch lookup didn't find it
             if s2_data:
@@ -533,11 +573,9 @@ Do not include any other text, explanations, or formatting."""
                 )
                 # this gets the paper id from semantic scholar, but we need to hit their API again for the rest of the metadata.
                 paper_id = self.search_paper(title)
-                made_individual_api_call = True
 
                 if paper_id:
                     print(f"DEBUG: Found paper ID {paper_id} for paper {i}")
-                    sleep(self.request_delay)
                     s2_data = self.retry_api_call(self.get_paper_details, paper_id)
                 else:
                     print(
@@ -572,7 +610,6 @@ Do not include any other text, explanations, or formatting."""
                 else:
                     # Fall back to title search if not in batch results
                     openalex_data = self.get_paper_details_openalex(title)
-                    made_individual_api_call = True
 
                 if openalex_data:
                     if need_openalex_for_authors:
@@ -600,10 +637,6 @@ Do not include any other text, explanations, or formatting."""
                 enriched_paper = self._format_gpt_only(paper)
                 enriched_paper["is_artificial"] = False
                 enriched.append(enriched_paper)
-
-            # Only sleep if we made individual API calls (not batch)
-            if made_individual_api_call:
-                sleep(self.request_delay)
         return enriched
 
     def _format_gpt_only(self, paper):
@@ -878,7 +911,14 @@ Do not include any other text, explanations, or formatting."""
             if i != len(work_ids) - 1:
                 url += "|"
         try:
-            response = requests.get(url, timeout=15)
+            response = cache.request(
+                "openalex",
+                "GET",
+                url,
+                timeout=15,
+                max_age=cache.API_TTL,
+                min_interval=self.request_delay,
+            )
             response.raise_for_status()
             data = response.json()
             print(f"DEBUG: Received OpenAlex work details for {url}:", data)
@@ -1224,6 +1264,4 @@ Do not include any other text, explanations, or formatting."""
                     enriched_refs.append(merged)
             else:
                 print(f"DEBUG: Semantic Scholar failed for {refs}, skipping reference.")
-
-            sleep(self.request_delay)
         return enriched_refs

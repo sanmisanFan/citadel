@@ -224,6 +224,54 @@ the rendered PDF, instead of relying on page-only navigation.
   through `extract_references_with_grobid(..., label_map=…)`.
 
 
+## Result cache
+
+Results from external services are cached on disk, so re-running a paper
+(or a paper that shares references with an earlier one) skips most network
+and model work. On `backend/tests/data/sample.pdf` (58 references), the
+three GROBID calls plus PDF→markdown take ~126 s cold and ~0.05 s cached.
+
+What is cached, in [cache.py](backend/src/CITation/cache.py) (a single
+SQLite file, `.cache/citadel/cache.sqlite3`):
+
+| Namespace  | What                                                | Key                                      | Expires |
+|------------|-----------------------------------------------------|------------------------------------------|---------|
+| `grobid`   | TEI XML from every GROBID endpoint                  | endpoint + params + PDF content hash     | never   |
+| `markdown` | PDF→markdown output, per converter                  | PDF content hash + olmocr/pymupdf4llm    | never   |
+| `llm`      | LLM reply text (`llm.chat`)                         | model + messages + params actually sent  | never   |
+| `s2`       | Semantic Scholar title search / paper details       | URL + params                             | 30 days |
+| `s2_paper` | One paper from S2 `/paper/batch`, cached per paper  | S2 id + requested fields                 | 30 days |
+| `openalex` | OpenAlex search, DOI batch, and work lookups        | URL + params                             | 30 days |
+
+Design notes:
+
+- **Only raw responses are cached.** Parsing, enrichment merging, scoring and
+  anomaly detection always re-run, so code fixes apply to papers that are
+  already cached. A changed prompt, model or request parameter is
+  automatically a miss.
+- **Failures are never cached.** Only successful responses are stored
+  (plus GROBID's 204 "no references" and Semantic Scholar's 404 "no match").
+  Empty LLM replies, olmocr failures, 429s, 5xxs and timeouts are retried on
+  the next run.
+- **S2 batch lookups are cached per paper**, so second-hop references shared
+  between manuscripts are fetched only once.
+- **Rate limiting only applies to real network calls.** The old fixed 0.5 s
+  sleeps after every Semantic Scholar / OpenAlex call are replaced by a
+  per-host minimum interval (`request_delay`), so cache hits don't wait.
+- API keys are not part of cache keys, and nothing secret is stored.
+- `llm.chat()` now returns the reply text instead of the raw completion
+  object.
+- Each run logs per-namespace hit counts (`Cache: grobid 3/3 hits, …`) and
+  records them in `outputs/debug/pipeline_summary.json`.
+
+Controls: `make clear-cache` empties everything, and
+`make clear-cache NS=llm` (or any namespace above) clears one source. For
+example, clear `grobid` after upgrading GROBID. Set `CITADEL_CACHE=0` to
+bypass the cache, `CITADEL_CACHE_DIR` to move it, and
+`CITADEL_CACHE_TTL_DAYS` to change how long Semantic Scholar and OpenAlex
+entries are kept.
+
+
 ## Second-hop references
 
 For every cited paper, the pipeline also fetches that paper's own references

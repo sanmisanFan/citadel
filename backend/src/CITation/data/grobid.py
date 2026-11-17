@@ -14,6 +14,7 @@ import requests
 import xml.etree.ElementTree as ET
 from typing import Tuple
 from .datatypes import ParsedReference
+from .. import cache
 
 GROBID_URL = os.getenv("GROBID_URL", "http://localhost:8070")
 GROBID_TIMEOUT = 120  # seconds, PDF processing can be slow
@@ -71,11 +72,14 @@ def extract_references_with_grobid(
     url = f"{GROBID_URL}/api/processReferences"
 
     try:
-        response = requests.post(
+        response = cache.request(
+            "grobid",
+            "POST",
             url,
             files={"input": ("paper.pdf", pdf_content, "application/pdf")},
             data={"consolidateCitations": "1", "includeRawCitations": "1"},
             timeout=GROBID_TIMEOUT,
+            cache_statuses=(200, 204),
         )
 
         if response.status_code == 204:
@@ -339,11 +343,14 @@ def extract_citation_mentions_with_grobid(
     url = f"{GROBID_URL}/api/processFulltextDocument"
 
     try:
-        response = requests.post(
+        response = cache.request(
+            "grobid",
+            "POST",
             url,
             files={"input": ("paper.pdf", pdf_content, "application/pdf")},
             data={"consolidateCitations": "0", "teiCoordinates": ["ref", "p"]},
             timeout=GROBID_TIMEOUT,
+            cache_statuses=(200, 204),
         )
 
         if response.status_code != 200:
@@ -582,7 +589,9 @@ def extract_formula_coordinates_with_grobid(pdf_content: bytes) -> list[dict]:
     url = f"{GROBID_URL}/api/processFulltextDocument"
 
     try:
-        response = requests.post(
+        response = cache.request(
+            "grobid",
+            "POST",
             url,
             files={"input": ("paper.pdf", pdf_content, "application/pdf")},
             data={
@@ -590,6 +599,7 @@ def extract_formula_coordinates_with_grobid(pdf_content: bytes) -> list[dict]:
                 "includeRawAffiliations": "0",
             },
             timeout=GROBID_TIMEOUT,
+            cache_statuses=(200, 204),
         )
 
         if response.status_code != 200:
@@ -708,10 +718,13 @@ def extract_abstract_with_grobid(pdf_content: bytes) -> dict | None:
     url = f"{GROBID_URL}/api/processHeaderDocument"
 
     try:
-        response = requests.post(
+        response = cache.request(
+            "grobid",
+            "POST",
             url,
             files={"input": ("paper.pdf", pdf_content, "application/pdf")},
             timeout=GROBID_TIMEOUT,
+            cache_statuses=(200, 204),
         )
 
         print(f"DEBUG grobid: Header extraction status: {response.status_code}")
@@ -841,11 +854,14 @@ def extract_abstract_with_fulltext(pdf_content: bytes) -> dict | None:
     url = f"{GROBID_URL}/api/processFulltextDocument"
 
     try:
-        response = requests.post(
+        response = cache.request(
+            "grobid",
+            "POST",
             url,
             files={"input": ("paper.pdf", pdf_content, "application/pdf")},
             data={"consolidateHeader": "1"},
             timeout=GROBID_TIMEOUT,
+            cache_statuses=(200, 204),
         )
 
         if response.status_code != 200:

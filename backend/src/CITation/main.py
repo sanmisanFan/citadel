@@ -31,7 +31,7 @@ from .data.grobid import (
     extract_formula_coordinates_with_grobid,
     extract_abstract_with_grobid,
 )
-from . import llm
+from . import cache, llm
 
 import os
 import sys
@@ -232,6 +232,7 @@ async def process_pdf_ws(ws: WebSocket):
         # debugging: track API calls and timing
         global pipeline_tracker
         pipeline_tracker = PipelineTracker()
+        cache.reset_stats()
 
         progress_q: asyncio.Queue = asyncio.Queue()
         loop = asyncio.get_running_loop()
@@ -435,6 +436,19 @@ async def process_pdf_ws(ws: WebSocket):
             {"anomalies": len(anomalous_data.get("identifiedIssue", []))},
         )
 
+        cache_stats = cache.stats()
+        pipeline_tracker.record("cache", 0, cache_stats)
+        print(
+            "Cache: "
+            + (
+                ", ".join(
+                    f"{ns} {c['hits']}/{c['hits'] + c['misses']} hits"
+                    for ns, c in cache_stats.items()
+                )
+                or ("no lookups" if cache.ENABLED else "disabled")
+            )
+        )
+
         # debugging: save debug outputs including pipeline summary
         await asyncio.to_thread(
             save_debug_outputs,
@@ -477,13 +491,13 @@ def _extract_metadata_with_gpt(gpt_client, first_page_text: str) -> dict:
         "First-page text:\n-----\n"
         f"{first_page_text[:6000]}\n-----"
     )
-    response = llm.chat(
+    content = llm.chat(
         gpt_client,
         messages=[{"role": "user", "content": prompt}],
         response_format={"type": "json_object"},
         temperature=0,
     )
-    result = json.loads(response.choices[0].message.content)
+    result = json.loads(content)
     return {
         "title": result.get("title") or "",
         "authors": [
