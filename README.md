@@ -30,15 +30,35 @@ The Python package is `CITation`; the FastAPI app is `CITation.main:app`.
 
 ## Prerequisites
 
+Tools:
+
 - Python ≥ 3.11 with [`uv`](https://docs.astral.sh/uv/)
-- Node.js (for the React frontend)
-- `CREATEAI_SERVICE_TOKEN` set in the environment: a service token for an
+- Node.js ≥ 18 with npm (for the React frontend; `react-scripts` 5)
+- GNU Make (for `make dev` and the other shortcuts; the [manual steps](#setup)
+  work without it)
+- Docker, to run GROBID locally. Technically optional, but strongly
+  recommended: without GROBID, references are extracted by converting the PDF
+  to markdown and parsing it with the LLM, which is slower and less accurate.
+
+API keys (in `.env` or exported in your shell):
+
+- `CREATEAI_SERVICE_TOKEN` (required): a service token for an
   [ASU CreateAI](https://docs.aiml.asu.edu/) project. All LLM calls go through
   CreateAI's OpenAI-compatible API (`CREATEAI_BASE_URL`, default
   `https://api-main.aiml.asu.edu/v1`) using `CREATEAI_MODEL` (default
   `openai/gpt6_1_sol`, GPT‑6.1 Sol). See [LLM model selection](#llm-model-selection).
-- `S2_API_KEY` set in the environment ([Semantic Scholar API key](https://www.semanticscholar.org/product/api))
-- Docker (optional, to run GROBID locally)
+- `S2_API_KEY` (required): a [Semantic Scholar API key](https://www.semanticscholar.org/product/api).
+- `OPENALEX_API_KEY` (recommended): an [OpenAlex](https://openalex.org/) API
+  key. Without it, OpenAlex requests share a small free daily budget with
+  everyone on your IP address, and once it runs out the pipeline loses
+  OpenAlex metadata, ORCIDs and second-hop references until midnight UTC. See
+  [OpenAlex](#openalex).
+
+Free ports:
+
+- `3000` (frontend), `8001` (API) and `8070` (GROBID). If 8001 is taken, use
+  `make dev BACKEND_PORT=<port>`. To move GROBID, set `GROBID_URL`; note that
+  `make grobid` still publishes the container on 8070.
 
 ## Quick start
 
