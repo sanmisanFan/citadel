@@ -89,8 +89,8 @@ If you cannot find the abstract, return exactly: NOT_FOUND
 Do not include any other text, explanations, or formatting."""
 
         try:
-            response = self.gpt_client.chat.completions.create(
-                model=llm.MODEL,
+            response = llm.chat(
+                self.gpt_client,
                 messages=[{"role": "user", "content": prompt}],
                 max_tokens=500,
                 temperature=0.1,

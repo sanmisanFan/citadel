@@ -477,8 +477,8 @@ def _extract_metadata_with_gpt(gpt_client, first_page_text: str) -> dict:
         "First-page text:\n-----\n"
         f"{first_page_text[:6000]}\n-----"
     )
-    response = gpt_client.chat.completions.create(
-        model=llm.MODEL,
+    response = llm.chat(
+        gpt_client,
         messages=[{"role": "user", "content": prompt}],
         response_format={"type": "json_object"},
         temperature=0,

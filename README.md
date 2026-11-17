@@ -35,7 +35,8 @@ The Python package is `CITation`; the FastAPI app is `CITation.main:app`.
 - `CREATEAI_SERVICE_TOKEN` set in the environment: a service token for an
   [ASU CreateAI](https://docs.aiml.asu.edu/) project. All LLM calls go through
   CreateAI's OpenAI-compatible API (`CREATEAI_BASE_URL`, default
-  `https://api-main.aiml.asu.edu/v1`) using `CREATEAI_MODEL` (default `openai/gpt4o`).
+  `https://api-main.aiml.asu.edu/v1`) using `CREATEAI_MODEL` (default
+  `openai/gpt6_1_sol`, GPT‑6.1 Sol). See [LLM model selection](#llm-model-selection).
 - `S2_API_KEY` set in the environment ([Semantic Scholar API key](https://www.semanticscholar.org/product/api))
 - Docker (optional, to run GROBID locally)
 
@@ -104,6 +105,29 @@ The frontend talks to the backend at `localhost:8000` by default; override with
 the `REACT_APP_BACKEND_URL` env var when starting `npm start` (e.g.
 `REACT_APP_BACKEND_URL=localhost:9000 npm start`). CORS is configured for
 `localhost:3000` only.
+
+
+## LLM model selection
+
+The default model is GPT‑6.1 Sol (`openai/gpt6_1_sol`), chosen for stronger
+reference parsing and citation-relevance scoring. The previous default,
+`openai/gpt4o`, is no longer offered by CreateAI. Set `CREATEAI_MODEL` to use
+another model. To see which IDs your token can use, run:
+
+```bash
+curl -s -H "Authorization: Bearer $CREATEAI_SERVICE_TOKEN" \
+  https://api-main.aiml.asu.edu/v1/models
+```
+
+Models accept different request parameters. GPT‑6.x models, for example,
+reject `temperature` and `top_p`. Every LLM call therefore goes through
+`llm.chat()` in [llm.py](backend/src/CITation/llm.py), which reads the
+model's `supported_parameters` from `/models` once per process and drops any
+of `temperature`, `top_p` and `max_tokens` the model doesn't support. For
+models that reason by default it also drops `max_tokens`, because reasoning
+tokens count against that cap and a small one (such as the 200 used for
+relevance scoring) can leave an empty answer. If `/models` can't be fetched,
+requests go out unchanged and a warning is logged.
 
 
 ## Deployment

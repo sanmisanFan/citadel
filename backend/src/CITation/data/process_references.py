@@ -220,8 +220,8 @@ Example:
 """
 
     try:
-        response = gpt_client.chat.completions.create(
-            model=llm.MODEL,
+        response = llm.chat(
+            gpt_client,
             messages=[{"role": "user", "content": prompt}],
             response_format={"type": "json_object"},
             temperature=0,
