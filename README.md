@@ -51,7 +51,14 @@ change), creates `.env` from [.env.example](.env.example) for your API keys,
 starts GROBID in Docker if Docker is available and waits until it's ready
 (up to `GROBID_WAIT` seconds, default 180), clears any leftover production
 build so `:8000` only serves the API, and runs the backend (`:8000`) and
-frontend (`:3000`) together with hot reload. Ctrl-C stops both;
+frontend (`:3000`) together with hot reload. **Open the app at
+http://localhost:3000.** Port 8000 is the API only. Opening it in a browser
+(e.g. from VS Code's "port is live" prompt) shows a link to `:3000` and
+`/docs` instead of a bare 404. VS Code Remote users can add
+`"remote.portsAttributes": {"3000": {"onAutoForward": "openBrowser"},
+"8000": {"onAutoForward": "silent"}, "8070": {"onAutoForward": "silent"}}`
+to `.vscode/settings.json` so the auto-forward prompt opens the UI rather
+than the API. Ctrl-C stops both;
 `make stop` stops GROBID. `make serve` runs the production build on `:8000`,
 and `make help` lists everything else.
 

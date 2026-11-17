@@ -8,7 +8,7 @@ from fastapi import (
     UploadFile,
     Form,
 )
-from fastapi.responses import JSONResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from .data.utils import pdf_to_md_cascading, pdf_first_pages_text
@@ -683,3 +683,13 @@ if _frontend_build is not None:
         SPAStaticFiles(directory=_frontend_build),
         name="ReviewerApp-demo",
     )
+else:
+    # API-only (development): editors like VS Code offer to open this port in
+    # a browser, so point people at the React dev server instead of a 404.
+    @app.get("/", include_in_schema=False)
+    async def dev_root():
+        return HTMLResponse(
+            "<p>This is the Citadel API (development mode). "
+            'Open the app at <a href="http://localhost:3000">http://localhost:3000</a>. '
+            'API docs are at <a href="/docs">/docs</a>.</p>'
+        )
