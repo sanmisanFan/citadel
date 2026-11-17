@@ -17,7 +17,6 @@ networks. Upload a PDF to:
 - Python 3.11 or newer
 - [`uv`](https://docs.astral.sh/uv/)
 - Node.js 18 or newer and npm
-- GNU Make
 - Docker (optional, but strongly recommended for GROBID)
 
 Without Docker, Citadel can still run, but PDF reference extraction is slower
