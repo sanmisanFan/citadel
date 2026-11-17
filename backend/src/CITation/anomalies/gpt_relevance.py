@@ -1,5 +1,8 @@
+from .. import llm
+
+
 def assess_citation_relevance(citation_key, context_text, summary_text, client):
-    """Assesses relevance using GPT-4 Turbo with explicit reasoning."""
+    """Assesses relevance using an LLM with explicit reasoning."""
     prompt = f"""
 You are an expert academic researcher. Your task is to evaluate the contextual relevance of the citation {citation_key} in the provided text excerpt, and to clearly explain your reasoning.
 
@@ -31,8 +34,7 @@ Explanation: [Your detailed 2-3 sentence analysis, including key evidence and re
 """
     # why not return the data as a json or something to make parsing easier later?
     response = client.chat.completions.create(
-        #model="gpt-4-turbo-preview",
-        model="gpt-4o",
+        model=llm.MODEL,
         messages=[{"role": "user", "content": prompt}],
         max_tokens=200,
         temperature=0.2,

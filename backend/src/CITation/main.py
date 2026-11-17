@@ -31,7 +31,7 @@ from .data.grobid import (
     extract_formula_coordinates_with_grobid,
     extract_abstract_with_grobid,
 )
-from openai import OpenAI
+from . import llm
 
 import os
 import sys
@@ -146,7 +146,7 @@ def extract_references_grobid_with_fallback(
 
     Args:
         pdf_content: Raw PDF bytes
-        gpt_client: OpenAI client for GPT parsing fallback
+        gpt_client: CreateAI (OpenAI-compatible) client for LLM parsing fallback
         progress_fn: Function to report progress
 
     Returns:
@@ -205,8 +205,8 @@ def extract_references_grobid_with_fallback(
     return parsed_refs, reference_mentions, md_text
 
 
-if "OPENAI_API_KEY" not in os.environ:
-    print("ERROR: $OPENAI_API_KEY not set!")
+if not llm.has_token():
+    print(f"ERROR: ${llm.TOKEN_ENV} not set!")
     sys.exit(1)
 
 app = FastAPI()
@@ -255,8 +255,8 @@ async def process_pdf_ws(ws: WebSocket):
         # TODO: eventually make this a wrapper for other LLMs and expose functions
         # for each type of call the pipeline makes
         missing_key = None
-        if "OPENAI_API_KEY" not in os.environ:
-            missing_key = "OPENAI_API_KEY"
+        if not llm.has_token():
+            missing_key = llm.TOKEN_ENV
         elif not os.getenv("S2_API_KEY"):
             missing_key = "S2_API_KEY (Semantic Scholar)"
         if missing_key:
@@ -271,7 +271,7 @@ async def process_pdf_ws(ws: WebSocket):
                 code=1011, reason=f"Backend missing {missing_key}."
             )
 
-        gpt_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        gpt_client = llm.make_client()
 
         # Try grobid first, fall back to markdown+GPT
         # Markdown is only created if needed (grobid fallback); pdf_to_md_cascading
@@ -478,7 +478,7 @@ def _extract_metadata_with_gpt(gpt_client, first_page_text: str) -> dict:
         f"{first_page_text[:6000]}\n-----"
     )
     response = gpt_client.chat.completions.create(
-        model="gpt-4o-mini",
+        model=llm.MODEL,
         messages=[{"role": "user", "content": prompt}],
         response_format={"type": "json_object"},
         temperature=0,
@@ -513,7 +513,7 @@ async def extract_paper_metadata(file: UploadFile = File(...)):
     if not first_page_text.strip():
         return {"title": "", "authors": [], "year": None}
 
-    gpt_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    gpt_client = llm.make_client()
     try:
         metadata = await asyncio.to_thread(
             _extract_metadata_with_gpt, gpt_client, first_page_text

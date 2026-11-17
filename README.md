@@ -32,7 +32,10 @@ The Python package is `CITation`; the FastAPI app is `CITation.main:app`.
 
 - Python ≥ 3.11 with [`uv`](https://docs.astral.sh/uv/)
 - Node.js (for the React frontend)
-- `OPENAI_API_KEY` set in the environment
+- `CREATEAI_SERVICE_TOKEN` set in the environment: a service token for an
+  [ASU CreateAI](https://docs.aiml.asu.edu/) project. All LLM calls go through
+  CreateAI's OpenAI-compatible API (`CREATEAI_BASE_URL`, default
+  `https://api-main.aiml.asu.edu/v1`) using `CREATEAI_MODEL` (default `openai/gpt4o`).
 - `S2_API_KEY` set in the environment ([Semantic Scholar API key](https://www.semanticscholar.org/product/api))
 - Docker (optional, to run GROBID locally)
 
@@ -127,7 +130,7 @@ when the page is loaded over HTTPS and `ws://` otherwise.
   anomalous, authorGraph}`.
 - `POST /api/extract_metadata` — pre-fills the upload form. Accepts a PDF
   multipart upload, reads the first two pages with PyMuPDF, and asks
-  `gpt-4o-mini` (JSON mode) for `{title, authors, year}`. The frontend calls
+  the CreateAI model (JSON mode) for `{title, authors, year}`. The frontend calls
   this as soon as a PDF is dropped so the user reviews/edits rather than
   retypes manuscript metadata; fields stay editable and a warning surfaces if
   extraction fails.

@@ -3,6 +3,7 @@ from pathlib import Path
 from markdown_it import MarkdownIt
 import json
 from .datatypes import ParsedReference
+from .. import llm
 
 # I think this can be replaced with one call to grobid https://grobid.readthedocs.io/en/update-documentation/getting_started/
 # we can keep this as a fallback if grobid is not available, but this isn't nearly as reliable
@@ -199,7 +200,7 @@ def parse_reference_with_gpt(gpt_client, ref_text: str) -> ParsedReference | Non
     prompt = f"""
 Parse this academic reference into JSON format with the following keys: authors (array), title, venue, raw_venue, year, pages, arxiv_id, doi and abstract.
 If the venue name in the reference appears abbreviated, expand it to its full name and save the expanded version in "venue",
-while preserving the original text in "raw_venue". Use the DOI or axiv link to extract the abstract for the reference. If you are unable to find the abstract using the DOI, search for it using the title in Google Scholar. If you are still unable to find the abstract, leave it as `null`. DO NOT summarize the paper, return only the abstract verbatim. Handle incomplete information using null for missing fields.
+while preserving the original text in "raw_venue". Always set "abstract" to null; abstracts are looked up separately. Handle incomplete information using null for missing fields.
 
 Reference: "{ref_text}"
 
@@ -219,12 +220,13 @@ Example:
 """
 
     try:
-        response = gpt_client.responses.create(
-            model="gpt-4o-mini",
-            tools=[{"type": "web_search"}],
-            input=f"{prompt}\n\nReturn ONLY valid JSON as a plain text string without formatting.",
+        response = gpt_client.chat.completions.create(
+            model=llm.MODEL,
+            messages=[{"role": "user", "content": prompt}],
+            response_format={"type": "json_object"},
+            temperature=0,
         )
-        gpt_output = response.output_text
+        gpt_output = response.choices[0].message.content
         print("DEBUG: Received GPT response:", gpt_output)
         result = json.loads(gpt_output)
         if "authors" in result:

@@ -47,10 +47,10 @@ node_modules/.npm-installed: package.json package-lock.json
 
 .env:
 	@cp .env.example .env
-	@echo "Created .env: fill in OPENAI_API_KEY and S2_API_KEY, then re-run make."
+	@echo "Created .env: fill in CREATEAI_SERVICE_TOKEN and S2_API_KEY, then re-run make."
 
 check-env:
-	@test -n "$$OPENAI_API_KEY" || { echo "OPENAI_API_KEY is not set (add it to .env)"; exit 1; }
+	@test -n "$$CREATEAI_SERVICE_TOKEN" || { echo "CREATEAI_SERVICE_TOKEN is not set (add it to .env)"; exit 1; }
 	@test -n "$$S2_API_KEY" || { echo "S2_API_KEY is not set (add it to .env)"; exit 1; }
 
 # GROBID is optional: skip with a warning if Docker isn't available. Otherwise

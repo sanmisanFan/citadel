@@ -1,8 +1,7 @@
 import pytest
 from pathlib import Path
 from CITation.data.utils import pdf_to_md_str
-from openai import OpenAI
-import os
+from CITation import llm
 import json
 from CITation.data.process_references import process_markdown_string
 
@@ -63,8 +62,8 @@ def test_paper_metadata():
 
 @pytest.fixture(scope="session")
 def gpt_client():
-    if "OPENAI_API_KEY" not in os.environ:
+    if not llm.has_token():
         raise ValueError(
-            "Cannot run tests without valid OpenAI API key. Please set $OPENAI_API_KEY first."
+            f"Cannot run tests without a CreateAI token. Please set ${llm.TOKEN_ENV} first."
         )
-    return OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    return llm.make_client()

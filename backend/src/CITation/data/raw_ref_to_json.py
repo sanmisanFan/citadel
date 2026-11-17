@@ -1,7 +1,7 @@
 import requests
 from time import sleep
 import os
-from openai import OpenAI
+from .. import llm
 import json
 from .utils import get_openalex_authors, get_openalex_refs
 from typing import Literal
@@ -70,61 +70,10 @@ class PaperProcessor:
             "D. Vader": "Darth Vader",
         }
 
-    def fetch_abstract_with_web_search(self, title: str, doi: str = None) -> str | None:
+    def fetch_abstract_with_gpt(self, title: str, doi: str = None) -> str | None:
         """
-        Use OpenAI web search to find the abstract for a paper.
-
-        Args:
-            title: Paper title
-            doi: Optional DOI
-
-        Returns:
-            Abstract text or None if not found
-        """
-        if not self.gpt_client:
-            return None
-
-        identifier = f'"{title}"'
-        if doi:
-            identifier += f" DOI:{doi}"
-
-        prompt = f"""Search for the academic paper: {identifier}
-
-Find and return ONLY the paper's abstract. Do not include the title, authors, or any other information.
-If you cannot find the abstract, return exactly: NOT_FOUND"""
-
-        try:
-            # Use the Responses API with web search tool
-            response = self.gpt_client.responses.create(
-                model="gpt-4o-mini",
-                tools=[{"type": "web_search_preview"}],
-                input=prompt,
-            )
-
-            # Extract text from response
-            result = ""
-            for item in response.output:
-                if item.type == "message":
-                    for content in item.content:
-                        if content.type == "output_text":
-                            result = content.text.strip()
-                            break
-
-            if not result or result == "NOT_FOUND" or len(result) < 50:
-                print(f"DEBUG: Web search could not find abstract for: {title}")
-                return None
-
-            print(f"DEBUG: Web search found abstract for: {title}")
-            return result
-
-        except Exception as e:
-            print(f"DEBUG: Web search abstract fetch failed for {title}: {e}")
-            # Fall back to regular GPT (from training data)
-            return self._fetch_abstract_with_gpt_fallback(title, doi)
-
-    def _fetch_abstract_with_gpt_fallback(self, title: str, doi: str = None) -> str | None:
-        """
-        Fallback: Use GPT training data to find abstract (less reliable).
+        Last resort: ask the LLM for the abstract from its training data.
+        Less reliable than S2/OpenAlex (CreateAI has no hosted web search tool).
         """
         if not self.gpt_client:
             return None
@@ -141,7 +90,7 @@ Do not include any other text, explanations, or formatting."""
 
         try:
             response = self.gpt_client.chat.completions.create(
-                model="gpt-4o-mini",
+                model=llm.MODEL,
                 messages=[{"role": "user", "content": prompt}],
                 max_tokens=500,
                 temperature=0.1,
@@ -739,11 +688,11 @@ Do not include any other text, explanations, or formatting."""
             if s2_tldr:
                 abstract = s2_tldr.get("text", None)
 
-        # Web search fallback for abstract if still not found
+        # LLM fallback for abstract if still not found
         if not abstract:
             title = s2.get("title", parsed.get("title"))
             doi = s2.get("externalIds", {}).get("DOI", parsed.get("doi"))
-            abstract = self.fetch_abstract_with_web_search(title, doi)
+            abstract = self.fetch_abstract_with_gpt(title, doi)
 
         merged = {
             "title": s2.get("title", parsed.get("title")),
@@ -802,10 +751,10 @@ Do not include any other text, explanations, or formatting."""
                 except Exception as e:
                     print(f"DEBUG: Failed to reconstruct OpenAlex abstract: {e}")
 
-        # Web search fallback if still no abstract
+        # LLM fallback if still no abstract
         if not abstract:
             doi = openalex.get("doi", parsed.get("doi"))
-            abstract = self.fetch_abstract_with_web_search(title, doi)
+            abstract = self.fetch_abstract_with_gpt(title, doi)
 
         merged = {
             "title": title,
