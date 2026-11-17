@@ -18,11 +18,13 @@ const { Dragger } = Upload;
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-const URL = process.env.NODE_ENV === "production" ? "" : (process.env.BACKEND_URL) ? process.env.BACKEND_URL : "localhost:8000";
-export const API_URL = URL === '' ? `${URL}` : `http://${URL}`;
+// In production the backend serves the frontend, so use same-origin URLs.
+// In development, point at the backend (override with REACT_APP_BACKEND_URL).
+const URL = process.env.NODE_ENV === "production" ? "" : (process.env.REACT_APP_BACKEND_URL || "localhost:8000");
+export const API_URL = URL === '' ? '' : `http://${URL}`;
 
-// will break if not running on SSL secured connection in production
-export const WS_URL = URL === '' ? `wss://${window.location.host}` : `ws://${URL}`;
+const WS_PROTOCOL = window.location.protocol === "https:" ? "wss" : "ws";
+export const WS_URL = URL === '' ? `${WS_PROTOCOL}://${window.location.host}` : `ws://${URL}`;
 
 function App() {
     // global init

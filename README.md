@@ -36,6 +36,23 @@ The Python package is `CITation`; the FastAPI app is `CITation.main:app`.
 - `S2_API_KEY` set in the environment ([Semantic Scholar API key](https://www.semanticscholar.org/product/api))
 - Docker (optional, to run GROBID locally)
 
+## Quick start
+
+```bash
+make dev
+```
+
+This installs Python and JS dependencies (re-running only when the lockfiles
+change), creates `.env` from [.env.example](.env.example) for your API keys,
+starts GROBID in Docker if Docker is available, and runs the backend
+(`:8000`) and frontend (`:3000`) together with hot reload. Ctrl-C stops both;
+`make stop` stops GROBID. `make serve` runs the production build on `:8000`,
+and `make help` lists everything else.
+
+API keys can go in `.env` or be exported in your shell.
+
+The sections below describe the manual equivalent.
+
 ## Setup
 
 Install Python and JS dependencies:
@@ -79,13 +96,25 @@ npm start
 ```
 
 The frontend talks to the backend at `localhost:8000` by default; override with
-the `BACKEND_URL` env var when starting `npm start`. CORS is configured for
+the `REACT_APP_BACKEND_URL` env var when starting `npm start` (e.g.
+`REACT_APP_BACKEND_URL=localhost:9000 npm start`). CORS is configured for
 `localhost:3000` only.
 
 
 ## Deployment
-If you're deploying this on a web-facing server, you should have the frontend built in production mode and served by the Python API. To do this, first run
-`npm run build`, then copy the resulting build folder into `backend/src/CITation`. Then run `uv run fastapi run`.
+
+For a web-facing server, build the frontend in production mode and let the
+FastAPI app serve it alongside the API:
+
+```bash
+npm run build      # writes ./build
+uv run fastapi run # serves UI + API on http://0.0.0.0:8000
+```
+
+The backend serves the first build it finds among `$FRONTEND_BUILD_DIR`, the
+repo-root `build/`, and `backend/src/CITation/build/`. If none exists it runs
+API-only, which is what you want in development. The WebSocket uses `wss://`
+when the page is loaded over HTTPS and `ws://` otherwise.
 
 
 ## API

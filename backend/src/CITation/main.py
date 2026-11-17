@@ -658,8 +658,28 @@ class SPAStaticFiles(StaticFiles):
             raise ex
 
 
-app.mount(
-    "/",
-    SPAStaticFiles(directory=f"{this_dir}/build"),
-    name="ReviewerApp-demo",
-)
+def _find_frontend_build() -> Path | None:
+    """Locate the production React build, if one exists.
+
+    Checked in order: $FRONTEND_BUILD_DIR, the repo-root ``build/`` that
+    ``npm run build`` produces, and a ``build/`` copied next to this module.
+    """
+    candidates = []
+    if env_dir := os.environ.get("FRONTEND_BUILD_DIR"):
+        candidates.append(Path(env_dir))
+    candidates += [this_dir.parents[2] / "build", this_dir / "build"]
+    for candidate in candidates:
+        if (candidate / "index.html").is_file():
+            return candidate
+    return None
+
+
+# Serve the built frontend when available. In development the React dev
+# server (`npm start`) serves the UI instead, so no build is required.
+_frontend_build = _find_frontend_build()
+if _frontend_build is not None:
+    app.mount(
+        "/",
+        SPAStaticFiles(directory=_frontend_build),
+        name="ReviewerApp-demo",
+    )
