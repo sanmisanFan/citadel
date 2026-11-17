@@ -1,5 +1,4 @@
 import requests
-from time import sleep
 import os
 from .. import cache, llm
 import json
@@ -50,6 +49,13 @@ class PaperProcessor:
             self.s2_api_key = os.getenv("S2_API_KEY")
         else:
             raise ValueError("No Semantic Scholar API key was provided.")
+
+        # Optional. Without a key, OpenAlex requests draw on a small free daily
+        # budget shared by everyone on this IP address.
+        openalex_key = os.getenv("OPENALEX_API_KEY", "").strip()
+        self.openalex_auth = {"api_key": openalex_key} if openalex_key else None
+        # Set once OpenAlex answers 429; later OpenAlex calls in this run are skipped.
+        self.openalex_unavailable = False
 
         self.author_map = {}  # (identifier_type, identifier) -> {"author": dict, "key": str}
         self.author_counter = 1
@@ -323,21 +329,45 @@ Do not include any other text, explanations, or formatting."""
         print(f"DEBUG: Batch lookup found {len(results)}/{len(ids)} papers")
         return results
 
+    def _openalex_get(self, params, timeout=15):
+        """GET OpenAlex /works through the cache and return the JSON body.
+
+        Sends OPENALEX_API_KEY when set (kept out of the cache key). Once
+        OpenAlex answers 429 (rate limit or exhausted daily budget), it is
+        skipped for the rest of this run, so failing calls aren't retried
+        dozens of times; the next run tries again. Returns None in that case.
+        Other HTTP errors raise, as before.
+        """
+        if self.openalex_unavailable:
+            return None
+        response = cache.request(
+            "openalex",
+            "GET",
+            OPENALEX_URL,
+            params=params,
+            secret_params=self.openalex_auth,
+            timeout=timeout,
+            max_age=cache.API_TTL,
+            min_interval=self.request_delay,
+        )
+        if response.status_code == 429:
+            self.openalex_unavailable = True
+            hint = "" if self.openalex_auth else " Set OPENALEX_API_KEY to use your own budget."
+            print(
+                "WARNING: OpenAlex refused the request (429), skipping OpenAlex for "
+                f"the rest of this run.{hint} Response: {response.text[:200]}"
+            )
+            return None
+        response.raise_for_status()
+        return response.json()
+
     def get_paper_details_openalex(self, title):
         params = {"filter": f"title.search:{title}", "per-page": 1}
         print(f"DEBUG: Fetching OpenAlex details for title: {title}")
         try:
-            response = cache.request(
-                "openalex",
-                "GET",
-                OPENALEX_URL,
-                params=params,
-                timeout=15,
-                max_age=cache.API_TTL,
-                min_interval=self.request_delay,
-            )
-            response.raise_for_status()
-            data = response.json()
+            data = self._openalex_get(params)
+            if data is None:
+                return None
             if "results" in data and len(data["results"]) > 0:
                 print("DEBUG: Received OpenAlex data:", data["results"][0])
                 return data["results"][0]
@@ -391,17 +421,9 @@ Do not include any other text, explanations, or formatting."""
             }
 
             try:
-                response = cache.request(
-                    "openalex",
-                    "GET",
-                    OPENALEX_URL,
-                    params=params,
-                    timeout=30,
-                    max_age=cache.API_TTL,
-                    min_interval=self.request_delay,
-                )
-                response.raise_for_status()
-                data = response.json()
+                data = self._openalex_get(params, timeout=30)
+                if data is None:
+                    break
 
                 for work in data.get("results", []):
                     # Extract DOI from the work and map back to ref_id
@@ -876,7 +898,8 @@ Do not include any other text, explanations, or formatting."""
                 return result
             attempts += 1
             print(f"DEBUG: Retry attempt {attempts} for API call with args: {args}")
-            sleep(self.request_delay)
+            # No sleep here: cache.request already spaces out real network calls
+            # per host (request_delay), and cached answers need no wait.
         return None
 
     def process_papers(self, parsed, ref_mentions):
@@ -902,29 +925,23 @@ Do not include any other text, explanations, or formatting."""
         return enriched, entity_keys
 
     def get_openalex_work_details(self, work_ids):
-        """Fetch details for multiple openalex works by ID."""
-        # can batch with ?filter=ids.openalex:{id1}|{id2}|{id3}...
-        url = f"{OPENALEX_URL}?filter=ids.openalex:"
-        for i, x in enumerate(work_ids):
-            work_id_short = x.split("/")[-1]
-            url += str(work_id_short)
-            if i != len(work_ids) - 1:
-                url += "|"
+        """Fetch details for up to OPENALEX_CHUNK_SIZE OpenAlex works by ID."""
+        # One request: ?filter=ids.openalex:{id1}|{id2}|... (OpenAlex allows
+        # up to 100 OR'd values). per-page must cover them all; the default
+        # page size is 25, which silently dropped the rest of the chunk.
+        short_ids = [x.split("/")[-1] for x in work_ids]
+        params = {
+            "filter": "ids.openalex:" + "|".join(short_ids),
+            "per-page": len(short_ids),
+        }
         try:
-            response = cache.request(
-                "openalex",
-                "GET",
-                url,
-                timeout=15,
-                max_age=cache.API_TTL,
-                min_interval=self.request_delay,
-            )
-            response.raise_for_status()
-            data = response.json()
-            print(f"DEBUG: Received OpenAlex work details for {url}:", data)
+            data = self._openalex_get(params)
+            if data is None:
+                return None
+            print(f"DEBUG: Received {len(data['results'])} OpenAlex works for {len(short_ids)} ids")
             return data["results"]
         except Exception as e:
-            print(f"DEBUG: Error fetching OpenAlex work details for {url}: {e}")
+            print(f"DEBUG: Error fetching OpenAlex work details for {len(short_ids)} ids: {e}")
             return None
 
     def _merge_ref_authors(
@@ -1238,7 +1255,8 @@ Do not include any other text, explanations, or formatting."""
         refs = [x for x in refs if x is not None]
         if ref_source == "openalex":
             chunks = [
-                refs[i : i + OPENALEX_CHUNK_SIZE] for i in range(0, len(refs), 25)
+                refs[i : i + OPENALEX_CHUNK_SIZE]
+                for i in range(0, len(refs), OPENALEX_CHUNK_SIZE)
             ]
             for chunk in chunks:
                 details = self.retry_api_call(self.get_openalex_work_details, chunk)
@@ -1250,7 +1268,7 @@ Do not include any other text, explanations, or formatting."""
                         )
                         enriched_refs.append(merged)
                 else:
-                    print(f"DEBUG: OpenAlex failed for {refs}, skipping references.")
+                    print(f"DEBUG: OpenAlex failed for {len(chunk)} references of {title!r}, skipping them.")
 
         if ref_source == "s2":
             # TODO: retry_api_call needs to be patched for when it 404s

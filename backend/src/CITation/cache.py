@@ -184,6 +184,7 @@ def request(
     url: str,
     *,
     params=None,
+    secret_params=None,
     data=None,
     json_body=None,
     files=None,
@@ -196,8 +197,9 @@ def request(
     """HTTP request whose response is cached under namespace `ns`.
 
     Only responses with a status in `cache_statuses` are stored, so transient
-    failures (429, 5xx, timeouts) are always retried. `headers` are not part of
-    the key, so API keys never reach the cache. `ns=None` skips the cache but
+    failures (429, 5xx, timeouts) are always retried. `headers` and
+    `secret_params` (query params such as an API key, sent along with `params`)
+    are not part of the key, so API keys never reach the cache. `ns=None` skips the cache but
     still applies `min_interval`, the per-host rate limit, which only applies
     to real network calls: cache hits return immediately.
 
@@ -217,7 +219,7 @@ def request(
         r = requests.request(
             method,
             url,
-            params=params,
+            params={**(params or {}), **secret_params} if secret_params else params,
             data=data,
             json=json_body,
             files=files,

@@ -272,6 +272,37 @@ bypass the cache, `CITADEL_CACHE_DIR` to move it, and
 entries are kept.
 
 
+## OpenAlex
+
+OpenAlex is the fallback to Semantic Scholar when enriching cited papers: it
+supplies metadata when S2 can't find a paper, ORCIDs when S2's authors lack
+them, and the reference list (plus second-hop reference details) when S2 has
+none.
+
+- **API key.** Set `OPENALEX_API_KEY` (recommended). Without it, requests count
+  against a free daily budget shared by everyone on your IP address; once that
+  is used up OpenAlex answers every request with 429 until midnight UTC. The
+  key is sent as the `api_key` query parameter and is not part of cache keys
+  (`cache.request(..., secret_params=...)`), so adding or changing it doesn't
+  invalidate cached responses.
+- **429 stops OpenAlex for the run.** The first 429 disables OpenAlex for the
+  rest of that pipeline run (`PaperProcessor.openalex_unavailable`) and logs a
+  warning, instead of retrying every call three times. The next run tries
+  again. Previously an exhausted budget added ~26 s of failing calls and
+  sleeps to every run of a 38-reference paper; it now costs one request.
+  Affected papers fall back to Semantic Scholar data only, so they may lack
+  ORCIDs or second-hop references for that run.
+- **Second-hop chunking fix.** OpenAlex reference lists were split with
+  `refs[i:i+100] for i in range(0, len(refs), 25)`, so chunks overlapped, and
+  each request returned only OpenAlex's default 25 results per page. Second-hop
+  references from OpenAlex therefore had duplicates and gaps. Chunks are now
+  disjoint (`OPENALEX_CHUNK_SIZE`, 100 ids) and each request sets `per-page` to
+  the chunk size. Because the request shape changed, these lookups are fetched
+  again once (old cache entries for them are simply unused).
+- `retry_api_call` no longer sleeps between attempts; `cache.request` already
+  enforces the per-host `request_delay` for real network calls, so the sleep
+  only delayed cache hits and fast failures.
+
 ## Second-hop references
 
 For every cited paper, the pipeline also fetches that paper's own references

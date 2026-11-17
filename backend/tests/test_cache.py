@@ -136,3 +136,70 @@ def test_s2_batch_caches_per_paper_across_batches(monkeypatch):
     assert len(http.calls) == 2
     proc._s2_batch(["a"], "title,year")
     assert len(http.calls) == 3
+
+
+def test_secret_params_are_sent_but_not_part_of_the_key(monkeypatch):
+    http = FakeHTTP()
+    monkeypatch.setattr(cache.requests, "request", http)
+
+    cache.request("ns", "GET", "https://x.test/a", params={"q": 1}, secret_params={"api_key": "k1"})
+    cache.request("ns", "GET", "https://x.test/a", params={"q": 1}, secret_params={"api_key": "k2"})
+
+    assert len(http.calls) == 1
+    assert http.calls[0]["params"] == {"q": 1, "api_key": "k1"}
+
+
+def _openalex_processor(monkeypatch, http, key=None):
+    from CITation.data.raw_ref_to_json import PaperProcessor
+
+    monkeypatch.setenv("S2_API_KEY", "test")
+    if key:
+        monkeypatch.setenv("OPENALEX_API_KEY", key)
+    else:
+        monkeypatch.delenv("OPENALEX_API_KEY", raising=False)
+    monkeypatch.setattr(cache.requests, "request", http)
+    return PaperProcessor(request_delay=0)
+
+
+def test_openalex_429_skips_openalex_for_rest_of_run(monkeypatch):
+    http = FakeHTTP(status=429, body_fn=lambda **kw: {"error": "Insufficient budget"})
+    proc = _openalex_processor(monkeypatch, http)
+
+    assert proc.retry_api_call(proc.get_openalex_work_details, ["W1", "W2"]) is None
+    assert proc.get_paper_details_openalex("Some title") is None
+    assert len(http.calls) == 1  # no retries, no further OpenAlex calls
+
+    # A new run (new processor) tries again.
+    proc2 = _openalex_processor(monkeypatch, http)
+    proc2.get_paper_details_openalex("Some title")
+    assert len(http.calls) == 2
+
+
+def test_openalex_api_key_is_sent(monkeypatch):
+    http = FakeHTTP(body_fn=lambda **kw: {"results": []})
+    proc = _openalex_processor(monkeypatch, http, key="secret")
+
+    proc.get_paper_details_openalex("Some title")
+    assert http.calls[0]["params"]["api_key"] == "secret"
+
+
+def test_openalex_second_hop_chunks_do_not_overlap(monkeypatch):
+    from CITation.data import raw_ref_to_json as r2j
+
+    def body(params, **kw):
+        ids = params["filter"].removeprefix("ids.openalex:").split("|")
+        return {"results": [{"id": f"https://openalex.org/{i}", "title": i} for i in ids]}
+
+    http = FakeHTTP(body_fn=body)
+    proc = _openalex_processor(monkeypatch, http)
+    monkeypatch.setattr(r2j, "OPENALEX_CHUNK_SIZE", 3)
+    refs = [f"https://openalex.org/W{i}" for i in range(7)]
+
+    out = proc.process_second_hops(
+        {"is_artificial": False, "references": refs, "ref_source": "openalex", "title": "P"}
+    )
+
+    sent = [c["params"]["filter"].removeprefix("ids.openalex:").split("|") for c in http.calls]
+    assert sent == [["W0", "W1", "W2"], ["W3", "W4", "W5"], ["W6"]]
+    assert [c["params"]["per-page"] for c in http.calls] == [3, 3, 1]
+    assert [r["title"] for r in out] == [f"W{i}" for i in range(7)]
