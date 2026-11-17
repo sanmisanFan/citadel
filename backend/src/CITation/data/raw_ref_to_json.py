@@ -981,6 +981,10 @@ Do not include any other text, explanations, or formatting."""
             enriched_refs = data.get("enriched_references", None)
             if enriched_refs is None:
                 continue
+            # _merge_ref_data returns {} when neither Semantic Scholar nor
+            # OpenAlex had the paper; those carry no data to key or graph.
+            enriched_refs = [ref for ref in enriched_refs if ref]
+            data["enriched_references"] = enriched_refs
             for ref in enriched_refs:
                 new_authors = []
                 for author in ref.get("authors", []):
@@ -1065,7 +1069,7 @@ Do not include any other text, explanations, or formatting."""
                         venue_counter += 1
                     ref["venue"] = v_key
 
-                ext_ids = ref.get("external_ids", {})
+                ext_ids = ref.get("external_ids") or {}
                 doi = ext_ids.get("DOI")
                 openalex_id = ext_ids.get("OpenAlex")
                 s2_id = ref.get("semantic_scholar_id")
@@ -1096,14 +1100,14 @@ Do not include any other text, explanations, or formatting."""
                     entity_keys["citations"][citation_key] = {
                         "title": ref.get("title", ""),
                         "author": ref["authors"],
-                        "venue": ref["venue"],
-                        "year": ref["year"],
+                        "venue": ref.get("venue"),
+                        "year": ref.get("year"),
                         "citation_count": ref.get("citation_count", 0),
                         "fields_of_study": ref.get("fields_of_study", []),
                         "external_ids": ref.get("external_ids", {}),
                         "semantic_scholar_id": ref.get("semantic_scholar_id"),
                         "arxiv_id": ref.get("arxiv_id"),
-                        "doi": ref["doi"],
+                        "doi": ref.get("doi"),
                         "hop": 2,
                     }
                     if doi:

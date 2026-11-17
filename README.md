@@ -224,6 +224,18 @@ the rendered PDF, instead of relying on page-only navigation.
   through `extract_references_with_grobid(..., label_map=…)`.
 
 
+## Second-hop references
+
+For every cited paper, the pipeline also fetches that paper's own references
+(the "second hop") from Semantic Scholar or OpenAlex and adds them to the
+citation graph with `hop: 2`. When neither source has data for one of those
+references, `_merge_ref_data` returns an empty record. Previously
+`assign_entity_keys_with_refs` then crashed the whole WebSocket run with
+`KeyError: 'venue'`. Empty records are now dropped before keys are assigned,
+since they would only add blank nodes to the graph. Partial records get
+`None` for a missing `venue`, `year` or `doi` instead of raising an error.
+
+
 ## Tests
 
 ```bash
