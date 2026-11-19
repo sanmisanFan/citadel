@@ -2,7 +2,7 @@
 # Citadel app
 #
 #   make dev     install deps if needed, start GROBID, run backend + frontend
-#   make serve   production build served by FastAPI on :$(BACKEND_PORT) (8001)
+#   make serve   production build served by FastAPI on :$(BACKEND_PORT) (18081)
 #   make help    list all targets
 #
 # API keys are read from the environment or from a .env file (KEY=value lines,
@@ -16,8 +16,7 @@ GROBID_URL       ?= http://localhost:8070
 GROBID_IMAGE     ?= lfoppiano/grobid:0.8.0
 GROBID_CONTAINER ?= citadel-grobid
 GROBID_WAIT      ?= 180
-# 8001, not FastAPI's default 8000, which other services on shared hosts often hold.
-BACKEND_PORT     ?= 8001
+BACKEND_PORT     ?= 18081
 # Where the dev frontend sends API calls (exported to `npm start`).
 REACT_APP_BACKEND_URL ?= localhost:$(BACKEND_PORT)
 
@@ -61,25 +60,7 @@ check-env:
 # GROBID is optional: skip with a warning if Docker isn't available. Otherwise
 # start the container if needed and block until it answers /api/isalive.
 grobid:
-	@if curl -sf $(GROBID_URL)/api/isalive >/dev/null 2>&1; then \
-		echo "GROBID is ready at $(GROBID_URL)"; exit 0; \
-	fi; \
-	if ! docker info >/dev/null 2>&1; then \
-		echo "WARNING: Docker not available, running without GROBID (reference extraction will be degraded)"; exit 0; \
-	fi; \
-	if [ -z "$$(docker ps -q -f name=^$(GROBID_CONTAINER)$$)" ]; then \
-		echo "Starting GROBID (stop it with: make stop)"; \
-		docker run -d --rm --name $(GROBID_CONTAINER) -p 8070:8070 $(GROBID_IMAGE) >/dev/null || exit 1; \
-	fi; \
-	printf "Waiting for GROBID at $(GROBID_URL) "; \
-	i=0; while [ $$i -lt $(GROBID_WAIT) ]; do \
-		if curl -sf $(GROBID_URL)/api/isalive >/dev/null 2>&1; then echo " ready"; exit 0; fi; \
-		if [ -z "$$(docker ps -q -f name=^$(GROBID_CONTAINER)$$)" ]; then \
-			echo " container exited during startup"; exit 1; \
-		fi; \
-		printf "."; sleep 1; i=$$((i+1)); \
-	done; \
-	echo " not ready after $(GROBID_WAIT)s (see: docker logs $(GROBID_CONTAINER))"; exit 1
+	@python3 scripts/run_dev.py
 
 # Remove production builds so the dev backend doesn't serve a stale UI on :$(BACKEND_PORT).
 clean-build:
@@ -93,8 +74,8 @@ clear-cache: .venv/.uv-synced
 grobid-stop stop:
 	@docker stop $(GROBID_CONTAINER) >/dev/null 2>&1 && echo "Stopped GROBID" || echo "GROBID container not running"
 
-dev: setup check-env grobid
-	@$(MAKE) --no-print-directory -j2 backend frontend
+dev: setup check-env
+	@.venv/bin/python scripts/run_dev.py "$(MAKE_COMMAND)"
 
 backend: .venv/.uv-synced clean-build
 	uv run fastapi dev backend/src/CITation/main.py --port $(BACKEND_PORT)
